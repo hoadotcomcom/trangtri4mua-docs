@@ -237,10 +237,22 @@
       ],
       "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
       "windowDevicePixelRatio": 1,
-      "screenshotFileSizeBytes": 246998,
-      "screenshotSha256": "2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90",
+      "screenshotFileSizeBytes": 207900,
+      "screenshotSha256": "f53bc2bba8dba9bd0b8a018885356d9efa46a4dc5992d1435d2f4e2ad24e4049",
       "screenshotRasterDimensions": "1192x604",
-      "imageDecodeStatus": "all_6_decoded_complete"
+      "imageDecodeStatus": "all_6_decoded_complete",
+      "renderedSlotCssWidth": "379.33px",
+      "renderedSlotCssHeight": "288px",
+      "selectedCandidateTier": "600w",
+      "physicalDensityRatio": "1.58x (600 / 379.33, >= 100% physical resolution, zero upscaling)",
+      "selectedFiles": [
+        "qua-chau-sequin-do-bac-600x800.webp",
+        "ong-gia-3-mau-600x520.webp",
+        "canh-thong-pe-600x800.webp",
+        "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+        "nha-go-co-den-trang-tri-600x600.webp",
+        "hop-qua-trau-600x800.webp"
+      ]
     },
     {
       "config": "Desktop 1440px DPR2",
@@ -251,7 +263,7 @@
       "sourceAspect": "1:1",
       "cropBehavior": "object-fit: cover centers image into desktop card, zero distortion",
       "selectedTier": "600w desktop tier",
-      "totalEncodedBytes": 639974,
+      "totalEncodedBytes": 874148,
       "files": [
         {
           "name": "qua-chau-sequin-do-bac-600x800.webp",
@@ -280,10 +292,22 @@
       ],
       "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
       "windowDevicePixelRatio": 2,
-      "screenshotFileSizeBytes": 619750,
-      "screenshotSha256": "f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330",
+      "screenshotFileSizeBytes": 636520,
+      "screenshotSha256": "3037372728ebf9322449ff82e4534414c78623d0427107ac0af328e6ebc4900e",
       "screenshotRasterDimensions": "2384x1208",
-      "imageDecodeStatus": "all_6_decoded_complete"
+      "imageDecodeStatus": "all_6_decoded_complete",
+      "renderedSlotCssWidth": "379.33px",
+      "renderedSlotCssHeight": "288px",
+      "selectedCandidateTier": "768w",
+      "physicalDensityRatio": "1.01x (768 / 758.66, >= 100% physical resolution, zero upscaling)",
+      "selectedFiles": [
+        "qua-chau-sequin-do-bac-768x1024.webp",
+        "ong-gia-3-mau-768x665.webp",
+        "canh-thong-pe-768x1024.webp",
+        "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+        "nha-go-co-den-trang-tri-768x768.webp",
+        "hop-qua-trau-768x1024.webp"
+      ]
     }
   ]
 }

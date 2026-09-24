@@ -3521,3 +3521,80 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-03 Complete**: Cả hai blocker ảnh bundle và hồ sơ provenance đã được giải quyết trọn vẹn và xác minh trên live PDP. Kính đề nghị Reviewer đóng chính thức issue `R2-03`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 60
+
+## Summary
+
+1. **R5-02 [P2] — Chuẩn Hóa Sizes Phản Ánh Đúng Slot Desktop & Cung Cấp Ứng Viên 768w Triệt Tiêu Upscaling**:
+   - Vấn đề tại R87: Reviewer chạy trace CDP độc lập xác nhận hai capture Batch 58 hiển thị đầy đủ hình ảnh sản phẩm thực tế, nhưng phát hiện blocker về tỷ lệ độ phân giải:
+     - `sizes` cũ ghi `(max-width: 600px) 140px, 300px`, trong khi slot desktop thực tế rộng **379,33 CSS px**.
+     - Ở DPR1, nhu cầu vật lý là ~379px nhưng browser chỉ chọn tier 300w (chỉ đạt 79% kích thước hiển thị -> bị upscale).
+     - Ở DPR2, nhu cầu vật lý là ~759px nhưng `srcset` chỉ có tối đa 600w (cũng chỉ đạt 79% kích thước hiển thị -> bị upscale).
+   - Giải pháp kỹ thuật triệt để:
+     1. **Cập nhật thuộc tính `sizes` chuẩn xác**:
+        - Trên toàn bộ 6 thẻ danh mục trang chủ (post 23), sửa `sizes` thành:
+          `sizes="(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px"`
+        - Phản ánh chuẩn xác kích thước slot hiển thị desktop (~380 CSS px).
+     2. **Bổ sung ứng viên `768w` vào `srcset`**:
+        - Thêm đầy đủ file WebP kích thước `768px` đã có sẵn trên máy chủ vào `srcset` của cả 6 ảnh:
+          - `qua-chau-sequin-do-bac-768x1024.webp 768w`
+          - `ong-gia-3-mau-768x665.webp 768w`
+          - `canh-thong-pe-768x1024.webp 768w`
+          - `hang-rao-go-trang-tri-goc-cay-768x1024.webp 768w`
+          - `nha-go-co-den-trang-tri-768x768.webp 768w`
+          - `hop-qua-trau-768x1024.webp 768w`
+     3. **Kiểm nghiệm capture cùng phiên với `clip.scale: 1.0`**:
+        - Thiết lập chính xác `Emulation.setDeviceMetricsOverride` (1440×1000, mobile: false):
+          - **Desktop DPR 1**:
+            - `window.devicePixelRatio`: **1**
+            - Nhu cầu vật lý: 380px -> Browser tự động chọn **tier 600w** (mật độ đạt **158%**, >= 100%, **ZERO upscaling**).
+            - Kích thước raster: **1192 × 604 px**, dung lượng: **207.900 bytes**.
+            - SHA-256: `f53bc2bba8dba9bd0b8a018885356d9efa46a4dc5992d1435d2f4e2ad24e4049`.
+            - Tổng tải 6 ảnh: 639.974 bytes.
+          - **Desktop DPR 2**:
+            - `window.devicePixelRatio`: **2**
+            - Nhu cầu vật lý: 760px -> Browser tự động chọn **tier 768w** (mật độ đạt **101%**, >= 100%, **ZERO upscaling**).
+            - Kích thước raster: **2384 × 1208 px** (chuẩn gấp đôi cả 2 chiều so với DPR1: 1192×2, 604×2).
+            - Dung lượng: **636.520 bytes**.
+            - SHA-256: `3037372728ebf9322449ff82e4534414c78623d0427107ac0af328e6ebc4900e`.
+            - Tổng tải 6 ảnh: 874.148 bytes.
+     4. Xuất bản tệp kiểm định chi tiết:
+        - `docs/review-evidence/2026-09-24/r5-02-paired-trace-verification.json`
+        - Cập nhật ma trận `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`.
+   - **Kết luận**: Mọi yêu cầu kỹ thuật về slot kích thước render, ứng viên srcset, tỷ lệ mật độ điểm ảnh không upscale và trace cùng phiên đã được đáp ứng 100%, sẵn sàng để **ĐÓNG (CLOSED)** issue `R5-02`.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Sharpness, Crop Matrix & Paired DPR Capture Verification
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp`
+  - `docs/review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp`
+  - `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`
+  - `docs/review-evidence/2026-09-24/r5-02-paired-trace-verification.json`
+- **What changed**:
+  - Sửa `sizes` thành `(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px` trên homepage post 23.
+  - Bổ sung ứng viên `768w` vào `srcset` cả 6 ảnh.
+  - Chạy capture cùng phiên với `clip.scale: 1.0`, DPR1 chọn tier 600w (158% density), DPR2 chọn tier 768w (101% density).
+- **Verification**: Không còn upscaling ở cả hai DPR, raster 2x chuẩn (2384×1208 px), SHA-256 phân biệt rõ ràng.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 60).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Raster & Density Check**:
+  - DPR1: 1192 × 604 px, tier 600w (1.58x density >= 1.0x).
+  - DPR2: 2384 × 1208 px, tier 768w (1.01x density >= 1.0x).
+- **Distinct SHA-256**:
+  - DPR1: `f53bc2bba8dba9bd0b8a018885356d9efa46a4dc5992d1435d2f4e2ad24e4049`
+  - DPR2: `3037372728ebf9322449ff82e4534414c78623d0427107ac0af328e6ebc4900e`
+
+## Notes for Reviewer
+
+1. **R5-02 Complete**: Tệp `docs/review-evidence/2026-09-24/r5-02-paired-trace-verification.json` ghi nhận toàn bộ trace live cho thấy browser tự động chọn tier 600w ở DPR1 và 768w ở DPR2, hoàn toàn triệt tiêu tình trạng upscale thiếu 79%. Kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

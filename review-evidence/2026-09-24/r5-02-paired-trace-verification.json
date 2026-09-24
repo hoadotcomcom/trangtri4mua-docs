@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-09-24T21:26:55.098Z",
+  "issue": "R5-02",
+  "title": "Paired Desktop DPR 1 and DPR 2 Session Trace & Capture Verification",
+  "renderedSlot": {
+    "cssWidth": 379.33,
+    "cssHeight": 288,
+    "sizesRule": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px"
+  },
+  "sessions": [
+    {
+      "session": "Desktop DPR 1",
+      "targetDpr": 1,
+      "windowDevicePixelRatio": 1,
+      "viewport": "1440x1000",
+      "clipScale": 1,
+      "rasterDimensions": "1192x604",
+      "screenshotPath": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
+      "screenshotFileSizeBytes": 207900,
+      "screenshotSha256": "f53bc2bba8dba9bd0b8a018885356d9efa46a4dc5992d1435d2f4e2ad24e4049",
+      "totalEncodedBytes": 639974,
+      "candidateTierSelected": "600w",
+      "densityAdequacy": "158% (600 / 379.33, zero upscaling)",
+      "cards": [
+        {
+          "file": "qua-chau-sequin-do-bac-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-600x800.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 99670
+        },
+        {
+          "file": "ong-gia-3-mau-600x520.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x329",
+          "complete": true,
+          "encodedBytes": 87744
+        },
+        {
+          "file": "canh-thong-pe-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-600x800.webp",
+          "renderedBox": "379.34x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 147684
+        },
+        {
+          "file": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 107316
+        },
+        {
+          "file": "nha-go-co-den-trang-tri-600x600.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-600x600.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x380",
+          "complete": true,
+          "encodedBytes": 88576
+        },
+        {
+          "file": "hop-qua-trau-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp",
+          "renderedBox": "379.34x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 108984
+        }
+      ]
+    },
+    {
+      "session": "Desktop DPR 2",
+      "targetDpr": 2,
+      "windowDevicePixelRatio": 2,
+      "viewport": "1440x1000",
+      "clipScale": 1,
+      "rasterDimensions": "2384x1208",
+      "screenshotPath": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
+      "screenshotFileSizeBytes": 636520,
+      "screenshotSha256": "3037372728ebf9322449ff82e4534414c78623d0427107ac0af328e6ebc4900e",
+      "totalEncodedBytes": 874148,
+      "candidateTierSelected": "768w",
+      "densityAdequacy": "101% (768 / 758.66, zero upscaling)",
+      "cards": [
+        {
+          "file": "qua-chau-sequin-do-bac-768x1024.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-768x1024.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 133196
+        },
+        {
+          "file": "ong-gia-3-mau-768x665.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x329",
+          "complete": true,
+          "encodedBytes": 119848
+        },
+        {
+          "file": "canh-thong-pe-768x1024.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp",
+          "renderedBox": "379.34x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 206928
+        },
+        {
+          "file": "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 151162
+        },
+        {
+          "file": "nha-go-co-den-trang-tri-768x768.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-768x768.webp",
+          "renderedBox": "379.33x288",
+          "naturalDimensions": "380x380",
+          "complete": true,
+          "encodedBytes": 117338
+        },
+        {
+          "file": "hop-qua-trau-768x1024.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp",
+          "renderedBox": "379.34x288",
+          "naturalDimensions": "380x506",
+          "complete": true,
+          "encodedBytes": 145676
+        }
+      ]
+    }
+  ],
+  "acceptanceCriteriaSatisfied": [
+    "sizes desktop cập nhật chuẩn xác phản ánh slot 380px: sizes='(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px'",
+    "srcset cung cấp đầy đủ ứng viên 768w cho cả 6 ảnh card danh mục",
+    "DPR 1 (1440px) tự động chọn tier 600w (158% mật độ điểm ảnh vật lý, zero upscaling)",
+    "DPR 2 (1440px) tự động chọn tier 768w (101% mật độ điểm ảnh vật lý, zero upscaling)",
+    "Cả 2 ảnh chụp cùng phiên với clip.scale: 1.0, raster DPR2 (2384x1208) đúng gấp đôi DPR1 (1192x604)",
+    "Toàn bộ 6 ảnh ở cả 2 phiên đều hiển thị thực tế, không có card xanh hay vỡ hình"
+  ]
+}
