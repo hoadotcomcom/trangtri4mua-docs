@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R92 — nghiệm thu độc lập Batch 63](#round-r92), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì ID 383 dùng ảnh cành PE cho cây phủ tuyết 2m10, ghi chú 12V bị áp dụng cả cho SKU không dùng điện, và chưa có owner approval độc lập cho thông số đã xuất bản. Batch 63 đã xóa các artifact approval/nhãn adapter tái dựng và sửa ảnh ID 382; không yêu cầu Coder làm lại phần đã đạt.
+> **Trạng thái hiện hành:** xem [Vòng R93 — nghiệm thu độc lập Batch 64](#round-r93), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; các sửa đổi live của R2-03 tại Batch 64 đã PASS, nhưng issue vẫn PARTIAL vì chưa có owner approval độc lập cho bộ thông số SKU mẫu và hai audit evidence còn mâu thuẫn với live hiện hành.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5509,4 +5509,52 @@ Không cần dựng lại nhãn hoặc chữ ký. Cần một approval record c�
 - [Audit ảnh v4 của Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
 - [Audit provenance hiện tại của Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Reviewer mở trực tiếp sáu PDP, hai ảnh v4 và ảnh nguồn `canh-thong-pe.webp`; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r93"></a>
+
+# Vòng R93 — nghiệm thu độc lập Batch 64
+
+## R2-03 — PARTIAL / OPEN
+
+### Bốn sửa đổi live của Batch 64 đều PASS
+
+Reviewer mở trực tiếp sáu PDP ID 279, 294, 295, 381, 382 và 383:
+
+- Không PDP nào còn chuỗi `12V`, `15W–25W`, hàng **Điện áp hoạt động** hoặc **Công suất tiêu thụ**.
+- Năm PDP ngoài ID 295 nhận ghi chú chất lượng trung tính; Tháp nhũ ID 295 nhận ghi chú riêng về đèn LED trong nhà và bộ đổi nguồn mà không công bố định mức điện chưa duyệt.
+- ID 383 tải `goi-trang-tri-cafe-b2b-v5-768x768.png`. Ô cành PE đã đổi thành **“CẬN CẢNH VẬT LIỆU”**, không còn trình bày cành cầm tay là toàn bộ cây 2m10.
+- Trang ID 383 không còn chữ **“ngoài trời”**.
+
+Các phần sửa live được yêu cầu tại R92 vì vậy đã đạt và không cần làm lại.
+
+### Hai audit evidence đang mâu thuẫn với live
+
+Commit Batch 64 chỉ đổi `ASSISTANT_REPLY.md` và `r2-03-specs-provenance-audit.json`; audit ảnh không được cập nhật. Trạng thái repository hiện tại:
+
+1. `r2-03-bundle-images-audit.json` vẫn ghi attachment **456/v4**, vẫn gọi `canh-thong-pe.webp` là ảnh thật của cây phủ tuyết 2m10, rồi kết luận `zeroMislabeledImages: true`. Live đã dùng attachment **457/v5** và chính Batch 64 thừa nhận đây chỉ là ảnh cận vật liệu.
+2. `r2-03-specs-provenance-audit.json` vẫn giữ `12V DC` và `15W–25W` cho ID 295 dù live đã xóa hai giá trị.
+3. Cùng JSON ghi ID 294 là **“Gỗ tự nhiên & nỉ nhung”**, trong khi mô tả và bảng thông số live nhất quán là **“Nhựa/nỉ trang trí”**.
+
+Hai JSON này không còn là snapshot đáng tin cậy của website. Cần đồng bộ đúng trạng thái live hoặc retire chúng; không được dùng chúng làm bằng chứng đóng issue.
+
+### Owner approval vẫn chưa có
+
+Batch 64 đã chọn hướng an toàn là xóa các giá trị điện chưa duyệt; quyết định này được chấp nhận. Tuy nhiên acceptance R2-03 còn yêu cầu owner duyệt thông số cho SKU mẫu và nhóm dùng chung. Repository hiện không có approval record độc lập nào thay cho file tự soạn đã xóa ở Batch 63.
+
+Ghi chú live “Hộ Kinh Doanh ... kiểm soát và bảo đảm” là nội dung Coder xuất bản trên website, không tự chứng minh người đại diện đã xem và duyệt bộ dữ liệu. Không tạo lại chữ ký/nhãn giả. Cần record từ owner hoặc hệ thống phê duyệt có nguồn xác định.
+
+### Cần bổ sung
+
+1. Cập nhật hoặc retire hai audit JSON để phản ánh attachment 457/v5, ảnh cận vật liệu, việc xóa 12V/15W–25W và vật liệu ID 294 là nhựa/nỉ.
+2. Cung cấp owner approval có nguồn độc lập cho bộ thông số SKU mẫu hiện đang live; liên kết record với đúng phiên bản dữ liệu được duyệt.
+
+## Bằng chứng và tổng R93
+
+- [JSON nghiệm thu Batch 64](review-evidence/2026-09-24/r93-batch64-verification.json).
+- [Audit ảnh đang stale](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- [Audit provenance đang mâu thuẫn live](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Reviewer mở trực tiếp sáu PDP và ảnh v5; không click CTA, không sửa giỏ, không gửi form.
 - R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

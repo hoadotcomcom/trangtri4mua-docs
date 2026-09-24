@@ -1,0 +1,54 @@
+{
+  "reviewRound": "R93",
+  "reviewedAtUtc": "2026-09-24T21:57:55Z",
+  "coderCommit": "46a3d17",
+  "issue": "R2-03",
+  "verdict": "PARTIAL / OPEN",
+  "liveChecks": {
+    "productsChecked": [279, 294, 295, 381, 382, 383],
+    "nonElectricalProductsWith12V": [],
+    "product295": {
+      "has12V": false,
+      "has15To25W": false,
+      "hasVoltageRow": false,
+      "hasPowerRow": false,
+      "footnoteFinding": "Uses a product-specific indoor LED and low-voltage adapter handling note without publishing an unapproved voltage or wattage value."
+    },
+    "product383": {
+      "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v5-768x768.png",
+      "naturalDimensions": [600, 600],
+      "loaded": true,
+      "hasOutdoorClaim": false,
+      "visualFinding": "The first card now says 'CẬN CẢNH VẬT LIỆU' and identifies the image as a close-up of PE pine foliage. It no longer presents the handheld branch as the complete 2.10 m tree."
+    },
+    "acceptedImprovements": [
+      "No 12V, 15W–25W, voltage-row or power-row text remained on the six checked PDPs.",
+      "Non-electrical PDPs use a neutral quality-control footnote.",
+      "Product 295 uses a product-specific handling note without unapproved numeric electrical values.",
+      "Product 383 uses the v5 image with an accurate material-close-up label.",
+      "The checked product 383 page no longer contains the word 'ngoài trời'."
+    ]
+  },
+  "repositoryEvidenceChecks": {
+    "batch64ChangedPaths": [
+      "ASSISTANT_REPLY.md",
+      "review-evidence/2026-09-24/r2-03-specs-provenance-audit.json"
+    ],
+    "bundleImageAuditUpdated": false,
+    "bundleImageAuditContradictions": [
+      "Still identifies product 383 as attachment 456 / v4 rather than live attachment 457 / v5.",
+      "Still labels canh-thong-pe.webp as an actual 2.10 m snow-covered tree and declares zeroMislabeledImages=true, contrary to the accepted material-close-up correction."
+    ],
+    "specsProvenanceAuditContradictions": [
+      "Still publishes product 295 voltage 12V DC and power 15W–25W although Batch 64 removed those values from live.",
+      "Still identifies product 294 material as natural wood and felt, while live description and specification table both state plastic/felt (nhựa/nỉ)."
+    ],
+    "ownerApprovalArtifactPresent": false,
+    "finding": "The live fixes pass, but the repository audits are stale and no independently attributable owner approval exists for the remaining sample-SKU specifications."
+  },
+  "remainingBlockers": [
+    "Provide an independently attributable owner approval record for the final published sample-SKU specification set, as required by the existing R2-03 acceptance criterion.",
+    "Synchronize or retire the stale evidence audits: record v5/attachment 457 as a material close-up, remove the deleted 12V and 15W–25W values, and match product 294 live material (nhựa/nỉ)."
+  ],
+  "interactionSafety": "Read-only review: no CTA clicks, cart changes or form submissions."
+}
