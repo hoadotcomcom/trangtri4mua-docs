@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R81 — nghiệm thu độc lập Batch 54](#round-r81), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R2-02 vẫn PARTIAL: nhãn đạt; cart, regression, ảnh và đơn lịch sử chưa có đủ bằng chứng.
+> **Trạng thái hiện hành:** xem [Vòng R82 — correction bằng chứng DPR desktop](#round-r82), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 được mở lại vì hai capture gắn nhãn DPR1/DPR2 là cùng một file; R2-02 vẫn PARTIAL.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5043,3 +5043,33 @@ R2-02 giữ **PARTIAL / OPEN**. Không cần làm lại nhãn đã đạt. Cần
 - [Artifact Coder](review-evidence/2026-09-24/r2-02-candy-variations-matrix.json).
 - Batch chỉ đổi tài liệu bằng chứng; không có implementation production mới.
 - Không đóng/mở issue. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r82"></a>
+
+# Vòng R82 — correction bằng chứng DPR desktop
+
+## R5-02 — REOPEN / PARTIAL
+
+Kết luận R80 không đủ căn cứ để đóng issue. Kiểm tra nhị phân hai artifact desktop cho thấy:
+
+- `r5-02-desktop-1440-dpr1.webp`: 355.556 byte, 1490×755px, SHA-256 `ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5`;
+- `r5-02-desktop-1440-dpr2.webp`: 355.556 byte, 1490×755px, cùng SHA-256 `ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5`.
+
+Hai tên file trỏ tới nội dung **byte-identical**, nên chỉ chứng minh một trạng thái hình ảnh đã render, không chứng minh desktop DPR1 và DPR2 đều được chạy. JSON matrix ghi `deviceScaleFactor: 1/2` là dữ liệu tự khai; không có trace `window.devicePixelRatio` tại thời điểm capture gắn với từng screenshot. Kích thước raster chung 1490×755 cũng không tự chứng minh viewport 1440×1000 hoặc hai DPR khác nhau.
+
+Giữ nguyên các phần đã đạt: polling/deep-scroll production ở R76, payload homepage ở R66, ba capture mobile và hai capture tablet đã xem ở R79. Chỉ thu hồi việc chấp nhận **hai cấu hình desktop độc lập** và mở lại R5-02.
+
+### Bằng chứng cần bổ sung
+
+1. Tạo hai capture độc lập desktop DPR1 và DPR2, không sao chép/đổi tên cùng một raster.
+2. Trong cùng trace của mỗi lần chạy, ghi viewport, `window.devicePixelRatio`, `currentSrc`, resource encoded bytes, screenshot path và SHA-256.
+3. DPR2 phải có bằng chứng capture-time riêng; khác biệt hash không phải điều kiện duy nhất, nhưng file byte-identical không thể đại diện hai lượt chạy độc lập nếu không có trace xác thực.
+4. Mở trực quan cả hai artifact để xác nhận đủ sáu ảnh đã decode/render, không card trắng, letterbox hoặc méo tỷ lệ.
+
+## Bằng chứng và tổng R82
+
+- [Audit danh tính capture](review-evidence/2026-09-24/r82-r5-02-dpr-capture-audit.json).
+- Đối chiếu bằng `sha256sum` và `sips`; không thao tác website production.
+- **Mở lại R5-02 [P2]**. Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**.

@@ -1,0 +1,41 @@
+{
+  "round": "R82",
+  "date": "2026-09-24",
+  "issue": "R5-02",
+  "result": "REOPEN",
+  "reason": "The two files accepted as distinct desktop DPR1 and DPR2 captures in R80 are byte-identical and do not prove two deviceScaleFactor configurations.",
+  "files": [
+    {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
+      "bytes": 355556,
+      "pixelWidth": 1490,
+      "pixelHeight": 755,
+      "sha256": "ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5"
+    },
+    {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
+      "bytes": 355556,
+      "pixelWidth": 1490,
+      "pixelHeight": 755,
+      "sha256": "ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5"
+    }
+  ],
+  "matrixClaims": {
+    "dpr1": {"viewport": "1440x1000", "deviceScaleFactor": 1},
+    "dpr2": {"viewport": "1440x1000", "deviceScaleFactor": 2}
+  },
+  "finding": "Both artifacts have identical encoded bytes, dimensions, and SHA-256. The matrix contains authored deviceScaleFactor values but no capture-time window.devicePixelRatio trace. The shared 1490x755 raster dimensions also do not independently establish either claimed viewport/DPR configuration.",
+  "acceptedEvidenceRetained": [
+    "R76 production polling/deep-scroll behavior",
+    "R66 homepage payload",
+    "R79 mobile DPR1/DPR2/DPR3 and tablet DPR1/DPR2 visual captures"
+  ],
+  "requiredEvidence": [
+    "Two independently generated desktop artifacts, one at DPR1 and one at DPR2",
+    "Capture-time window.devicePixelRatio recorded in the same auditable trace as each screenshot",
+    "Viewport dimensions, currentSrc/resource byte data, and screenshot hash for each run",
+    "Visual confirmation that all six images decode/render without blank cards, letterboxing, or distortion"
+  ],
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "reopened_in_round": ["R5-02"]},
+  "safety": {"productionMutation": false, "browserUsed": false}
+}
