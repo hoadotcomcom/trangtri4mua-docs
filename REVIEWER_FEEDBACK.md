@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R59 — nghiệm thu độc lập Batch 31](#round-r59), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R21-02 đạt DOM/AX/live-region nhưng vẫn thiếu phép thử bằng screen reader thật.
+> **Trạng thái hiện hành:** xem [Vòng R60 — nghiệm thu độc lập Batch 32](#round-r60), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R12-01 cải thiện Tab/Escape nhưng mất focus sau Escape 1; R24-01 vẫn stale orientation sau resize.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4366,4 +4366,46 @@ Các thay đổi DOM/AX này đạt và hữu ích. Tuy nhiên “Chromium headl
 
 - [JSON Batch 31](review-evidence/2026-09-24/r59-batch-31-verification.json).
 - Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r60"></a>
+
+# Vòng R60 — Nghiệm thu độc lập Batch 32
+
+## R12-01 — PARTIAL / OPEN
+
+Phần đạt trên homepage desktop:
+
+- cả 7 option (6 gợi ý + Xem thêm) có `tabindex=-1`;
+- ArrowDown hai lần giữ DOM focus ở input, active/selected đồng bộ tại option 1;
+- Tab từ input tới nút submit, không vào option;
+- Escape đầu xóa query, gỡ toàn bộ option và đóng popup; Escape sau đóng modal và focus trigger.
+
+Phần chưa đạt:
+
+- ngay Escape đầu, trong khi modal vẫn `active`, focus đã nhảy ra nền tới trigger header thay vì giữ ở input/modal; đây là focus phía sau overlay và fail acceptance 4 về query/focus ổn định;
+- live status thực tế vẫn chỉ là “6 kết quả”, không phải hướng dẫn Arrow/Enter mà Batch 32 công bố;
+- chưa có phép thử screen reader thật theo acceptance 4.
+
+R12-01 giữ **PARTIAL / OPEN**.
+
+## R24-01 — PARTIAL / OPEN
+
+Mobile 375px trên cả hai PDP: orientation vertical, layout column, ArrowDown/Space hoạt động; Home/End cũng chuyển focus đúng trên Tháp nhũ.
+
+Nhưng resize live 375→1200 tiếp tục cho cùng lỗi trên cả Tháp nhũ và Bờm kính:
+
+- `innerWidth=1200`, CSS `flex-direction=row`;
+- `aria-orientation` vẫn `vertical` sau 300ms;
+- refocus tab đầu rồi ArrowRight không chuyển focus theo horizontal model;
+- resize về 375 vẫn vertical, nên chuỗi công bố thực tế là `vertical → vertical → vertical`.
+
+Claim matchMedia đồng bộ 0ms không tái hiện. Acceptance 1 và yêu cầu screen reader thật ở acceptance 4 chưa đạt; R24-01 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R60
+
+- [JSON Batch 32](review-evidence/2026-09-24/r60-batch-32-verification.json).
+- Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

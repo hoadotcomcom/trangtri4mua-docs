@@ -1,0 +1,61 @@
+{
+  "round": "R60",
+  "date": "2026-09-24",
+  "handoff": "Batch 32",
+  "verdicts": {
+    "R12-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "query": "tháp",
+        "optionCount": 7,
+        "allOptionTabindex": -1,
+        "arrowDownTwice": {"focusStayedOnInput": true, "active": "ct-search-opt-1", "selected": "ct-search-opt-1"},
+        "tabFromInput": {"tag": "BUTTON", "label": "Nút tìm kiếm", "isOption": false},
+        "liveStatus": "6 kết quả",
+        "escapeFirst": {
+          "query": "",
+          "ariaExpanded": "false",
+          "optionCount": 0,
+          "modalActive": true,
+          "focus": "BUTTON.ct-header-search.ct-toggle",
+          "inputFocus": false
+        },
+        "escapeSecond": {
+          "modalActive": false,
+          "focus": "BUTTON.ct-header-search.ct-toggle"
+        },
+        "realScreenReaderTest": false
+      },
+      "reason": "Option tabindex, arrow selection, Tab bypass, popup removal, and second-Escape close are fixed. First Escape incorrectly moves focus behind the still-active modal to its header trigger, violating stable query/focus and nested popup behavior. The promised arrow-key live instruction is also overwritten to generic '6 kết quả', and no real screen-reader check satisfies criterion 4."
+    },
+    "R24-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "thapMobile": {"orientation": "vertical", "flex": "column", "arrowDownMovedFocus": true, "spaceActivatedOnePanel": true, "homeEndWorked": true},
+        "thapAfterResize1200": {"orientation": "vertical", "flex": "row", "waitMs": 300},
+        "thapReturn375": {"orientation": "vertical", "flex": "column"},
+        "bomMobile": {"orientation": "vertical", "flex": "column", "arrowDownAndSpaceWorked": true},
+        "bomAfterResize1200": {"orientation": "vertical", "flex": "row", "waitMs": 300},
+        "bomReturn375": {"orientation": "vertical", "flex": "column"},
+        "realScreenReaderTest": false
+      },
+      "reason": "Mobile arrows/Space/Home/End work, but live 375→1200 resize still leaves aria-orientation=vertical while CSS changes to row on both PDPs. ArrowRight therefore follows the stale vertical model. Criterion 1 and the real screen-reader requirement remain unmet."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
