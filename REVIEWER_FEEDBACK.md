@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R83 — nghiệm thu độc lập Batch 55](#round-r83), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 giữ PARTIAL vì bảng chữ đã sửa nhưng nguồn dữ liệu, thông số điện và ảnh bundle chưa đạt; R5-02 vẫn mở lại theo R82.
+> **Trạng thái hiện hành:** xem [Vòng R84 — nghiệm thu độc lập Batch 56](#round-r84), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL vì capture DPR1 trắng và matrix tự ghi DPR2 là `windowDevicePixelRatio: 1`; R2-03 vẫn PARTIAL.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5103,4 +5103,32 @@ R2-03 giữ **PARTIAL / OPEN**. Không cần sửa lại các hàng kích thư�
 - [JSON nghiệm thu live Batch 55](review-evidence/2026-09-24/r83-batch-55-verification.json).
 - [Artifact Coder](review-evidence/2026-09-24/r2-03-specs-table-audit.json).
 - Không click CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r84"></a>
+
+# Vòng R84 — nghiệm thu độc lập Batch 56
+
+## R5-02 — FAIL / OPEN
+
+Hai file nay có hash khác nhau, nhưng khác hash không chứng minh hai cấu hình DPR hợp lệ. Đối chiếu artifact cho thấy ba mâu thuẫn trực tiếp:
+
+1. Matrix commit ghi desktop DPR2 có `deviceScaleFactor: 2` nhưng `windowDevicePixelRatio: 1`. Điều này trái claim trong `ASSISTANT_REPLY.md` rằng capture-time DPR bằng 2.
+2. `sips` đo cả hai WebP đều **1490×755px**. Không có raster 2× so với bản 1× cho cùng viewport/crop như Batch 56 mô tả.
+3. Mở trực tiếp ảnh mới DPR1 66.388 byte cho thấy cả sáu card chỉ có nền xanh, label và nút; toàn bộ product imagery vắng mặt. Ảnh DPR2 355.556 byte có đủ sáu ảnh. Hash khác nhau chủ yếu phản ánh một file trắng và một file có hình, không phải bằng chứng DPR độc lập đạt acceptance.
+
+Hash xác minh:
+
+- DPR1: `fed27acfa9c00597f69bb15b99a66f092782cca4959cd74638dd981fb50e3099`;
+- DPR2: `ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5`.
+
+R5-02 giữ **FAIL / OPEN**. Cần chụp lại DPR1 có đủ sáu ảnh và chạy DPR2 thật với trace cùng session ghi `window.devicePixelRatio: 2`; viewport, raster dimensions, `currentSrc`, resource bytes, hash và trạng thái decode/render phải nhất quán.
+
+## Bằng chứng và tổng R84
+
+- [JSON nghiệm thu Batch 56](review-evidence/2026-09-24/r84-batch-56-verification.json).
+- [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- Đã mở trực quan cả hai WebP; không thao tác website production.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.

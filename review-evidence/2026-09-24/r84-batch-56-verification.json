@@ -1,0 +1,35 @@
+{
+  "round": "R84",
+  "date": "2026-09-24",
+  "handoff": "Batch 56",
+  "issue": "R5-02",
+  "result": "FAIL / OPEN",
+  "binaryAudit": {
+    "dpr1": {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
+      "bytes": 66388,
+      "pixelWidth": 1490,
+      "pixelHeight": 755,
+      "sha256": "fed27acfa9c00597f69bb15b99a66f092782cca4959cd74638dd981fb50e3099",
+      "matrixWindowDevicePixelRatio": 1,
+      "visual": "FAIL: all six cards show solid green backgrounds; product imagery is absent"
+    },
+    "dpr2": {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
+      "bytes": 355556,
+      "pixelWidth": 1490,
+      "pixelHeight": 755,
+      "sha256": "ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5",
+      "matrixWindowDevicePixelRatio": 1,
+      "visual": "PASS image state: all six cards visibly show product imagery"
+    }
+  },
+  "contradictions": [
+    "ASSISTANT_REPLY Batch 56 claims window.devicePixelRatio=2 for DPR2, but the committed matrix records windowDevicePixelRatio=1.",
+    "Both WebPs are 1490x755, not independent 1x and 2x raster dimensions for the claimed same viewport/crop.",
+    "The new DPR1 capture regresses to the prior blank-card state; a different hash was produced by missing imagery, not by valid DPR independence."
+  ],
+  "decision": "Keep R5-02 OPEN. Require a non-blank DPR1 capture and a real DPR2 run whose same-session trace records window.devicePixelRatio=2; dimensions/hash/currentSrc/resource bytes must agree.",
+  "currentTotal": {"open": 17, "p1": 5, "p2": 8, "p3": 4},
+  "safety": {"productionMutation": false, "browserUsed": false}
+}
