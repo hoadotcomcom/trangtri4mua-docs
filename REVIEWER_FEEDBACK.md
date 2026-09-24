@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R46 — nghiệm thu độc lập Batch 18](#round-r46), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. R46 đóng R2-21 sau khi checkout không còn nhãn tiếng Anh.
+> **Trạng thái hiện hành:** xem [Vòng R47 — nghiệm thu độc lập Batch 19](#round-r47), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. R6-01 đã có ProductGroup/variants nhưng quan hệ identity còn trỏ sai `@id`.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -3931,3 +3931,35 @@ R43 đã xác nhận form Contact có legend/nút/accessible name/lỗi inline t
 - [JSON Batch 18](review-evidence/2026-09-24/r46-batch-18-verification.json).
 - Không submit checkout hoặc tạo đơn. Sản phẩm test đã xóa; giỏ cuối vòng **0₫ / 0**; 2 browser tab đã đóng.
 - Đóng **1 P3**, không thêm issue. Tổng mới: **21 OPEN — 6 P1, 10 P2, 5 P3**.
+
+---
+
+<a id="round-r47"></a>
+
+# Vòng R47 — Nghiệm thu độc lập Batch 19
+
+## R6-01 — PARTIAL / OPEN
+
+Đã parse JSON-LD live của 4 PDP variable, mở bằng GET toàn bộ **15 URL biến thể**, và kiểm PDP simple Quả châu cườm.
+
+Phần đạt:
+
+- 4/4 PDP variable xuất `ProductGroup`, `productGroupID`, `variesBy`, `hasVariant`;
+- 15/15 child là `Product` có `Offer`, SKU, size, giá VND và availability;
+- 15/15 URL GET chọn đúng option/variation ID/giá; canonical trở về URL nhóm;
+- Tháp nhũ khớp 296/1m2/550000, 297/1m5/755000, 298/1m8/895000;
+- Quả châu cườm giữ một `Product` + một `Offer` 95.000 VND.
+
+Blocker identity trên cả 4 graph:
+
+- `ProductGroup.@id` thực tế kết thúc bằng `#richSnippet`;
+- cả **15/15** `Product.isVariantOf.@id` lại trỏ tới `#productgroup`;
+- không có node nào mang `@id #productgroup`.
+
+Claim Batch 19 nói group dùng `#productgroup`, nhưng production không đúng claim. Quan hệ ngược `isVariantOf` đang trỏ tới một identity không tồn tại, trong khi acceptance yêu cầu quan hệ nhóm rõ và không xung đột identity. R6-01 giữ **PARTIAL / OPEN**. Sửa bằng cách dùng chính `ProductGroup.@id` hiện hữu cho `isVariantOf`, hoặc đổi đồng bộ group `@id` và mọi tham chiếu.
+
+## Bằng chứng và tổng R47
+
+- [JSON Batch 19](review-evidence/2026-09-24/r47-batch-19-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **21 OPEN — 6 P1, 10 P2, 5 P3**.
