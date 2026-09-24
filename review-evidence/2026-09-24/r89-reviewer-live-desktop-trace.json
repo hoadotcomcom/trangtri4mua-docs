@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-09-24T21:31:21.556Z",
+  "reviewer": "independent live verification",
+  "sessions": [
+    {
+      "url": "https://trangtri4mua.com/",
+      "dpr": 1,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "grid": {
+        "x": 124,
+        "y": 1283.828125,
+        "width": 1192,
+        "height": 604
+      },
+      "images": [
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-600x800.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-300x300.webp 300w, /wp-content/uploads/2026/09/qua-chau-sequin-do-bac-600x800.webp 600w, /wp-content/uploads/2026/09/qua-chau-sequin-do-bac-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 99670
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp 300w, /wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp 600w, /wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            329
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 87744
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-600x800.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/canh-thong-pe-300x300.webp 300w, /wp-content/uploads/2026/09/canh-thong-pe-600x800.webp 600w, /wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.34375,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 147684
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp 300w, /wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp 600w, /wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 107316
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-600x600.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-300x300.webp 300w, /wp-content/uploads/2026/09/nha-go-co-den-trang-tri-600x600.webp 600w, /wp-content/uploads/2026/09/nha-go-co-den-trang-tri-768x768.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            380
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 88576
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp 300w, /wp-content/uploads/2026/09/hop-qua-trau-600x800.webp 600w, /wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.34375,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 108984
+        }
+      ],
+      "screenshot": {
+        "path": "review-evidence/2026-09-24/r89-reviewer-live-desktop-dpr1.webp",
+        "bytes": 196476,
+        "sha256": "45f828c623acb92c121b4d01c1e42378f5637273ff553bf0faec81498d1406a2"
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/",
+      "dpr": 2,
+      "viewport": [
+        1440,
+        1000
+      ],
+      "grid": {
+        "x": 124,
+        "y": 1283.828125,
+        "width": 1192,
+        "height": 604
+      },
+      "images": [
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-768x1024.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/qua-chau-sequin-do-bac-300x300.webp 300w, /wp-content/uploads/2026/09/qua-chau-sequin-do-bac-600x800.webp 600w, /wp-content/uploads/2026/09/qua-chau-sequin-do-bac-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 133196
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp 300w, /wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp 600w, /wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            329
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 119848
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/canh-thong-pe-300x300.webp 300w, /wp-content/uploads/2026/09/canh-thong-pe-600x800.webp 600w, /wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.34375,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 206928
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp 300w, /wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp 600w, /wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 151162
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-768x768.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/nha-go-co-den-trang-tri-300x300.webp 300w, /wp-content/uploads/2026/09/nha-go-co-den-trang-tri-600x600.webp 600w, /wp-content/uploads/2026/09/nha-go-co-den-trang-tri-768x768.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            380
+          ],
+          "rendered": [
+            379.328125,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 117338
+        },
+        {
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp",
+          "sizes": "(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px",
+          "srcset": "/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp 300w, /wp-content/uploads/2026/09/hop-qua-trau-600x800.webp 600w, /wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp 768w",
+          "complete": true,
+          "natural": [
+            380,
+            506
+          ],
+          "rendered": [
+            379.34375,
+            288
+          ],
+          "opacity": "1",
+          "visibility": "visible",
+          "encodedBodySize": 145676
+        }
+      ],
+      "screenshot": {
+        "path": "review-evidence/2026-09-24/r89-reviewer-live-desktop-dpr2.webp",
+        "bytes": 461488,
+        "sha256": "363e00338fdadf1f9e1ec392292eaabef4af19d15fd762a6eb916a46ced63137"
+      }
+    }
+  ]
+}

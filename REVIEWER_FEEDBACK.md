@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R88 — nghiệm thu độc lập Batch 59](#round-r88), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 vẫn PARTIAL: ảnh bundle đã lên live nhưng hai contract 70/100 món mâu thuẫn mô tả bán hàng, còn hồ sơ TT4M-SPEC-2026 là tự khai và không kèm phê duyệt/chứng từ nguồn; R5-02 vẫn PARTIAL theo correction R87.
+> **Trạng thái hiện hành:** xem [Vòng R89 — nghiệm thu độc lập Batch 60](#round-r89), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED bằng trace/capture DPR 1 và DPR 2 độc lập; R2-03 vẫn PARTIAL vì hai contract bundle mâu thuẫn mô tả bán hàng và hồ sơ TT4M-SPEC-2026 chưa có phê duyệt/chứng từ nguồn.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **17 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **16 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -1013,7 +1013,7 @@ Dùng các kích thước attachment/thumbnail sẵn có của WordPress cho car
 4. Không làm hỏng link card, thay đổi bố cục ngoài ý muốn hoặc gây ảnh trống khi cuộn. Giữ ưu tiên ảnh LCP theo R5-01.
 
 ### Status
-OPEN
+CLOSED — xem nghiệm thu độc lập R89.
 
 ## Bàn giao R5
 
@@ -5310,3 +5310,40 @@ R2-03 giữ **PARTIAL / OPEN**. Không phát sinh issue mới; đây là các ac
 - [Dossier provenance Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Đã mở trực tiếp ba ảnh composite và đối chiếu ba PDP live; không click CTA, không sửa giỏ, không gửi form.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r89"></a>
+
+# Vòng R89 — nghiệm thu độc lập Batch 60
+
+## R5-02 — CLOSED
+
+Batch 60 đã sửa đúng nguyên nhân còn mở tại R87: `sizes` desktop phản ánh slot thực 380px và cả sáu `srcset` có ứng viên 768w. Reviewer kiểm chứng trực tiếp trên live ở viewport 1440×1000:
+
+| Phiên | Slot render | Nguồn browser chọn | Tỷ lệ nguồn / render×DPR | Kết quả |
+|---|---:|---:|---:|---|
+| DPR 1 | 379,33–379,34×288 CSS px | sáu ảnh 600w | 600 / 379,34 = **1,58×** | không upscale |
+| DPR 2 | 379,33–379,34×288 CSS px | sáu ảnh 768w | 768 / 758,68 = **1,01×** | không upscale |
+
+Mỗi ảnh live có `sizes="(max-width: 600px) 140px, (max-width: 1024px) 290px, 380px"`, `complete=true`, `opacity=1`, `visibility=visible`; `currentSrc`, `srcset`, kích thước render và encoded bytes được lưu trong trace độc lập. Tổng payload sáu ảnh quan sát được là **639.974 byte** ở DPR 1 và **874.148 byte** ở DPR 2.
+
+Reviewer chụp lại cùng các phiên trace bằng Chrome CDP với `clip.scale=1`:
+
+- DPR 1: raster **1192×604**, SHA-256 `45f828c623acb92c121b4d01c1e42378f5637273ff553bf0faec81498d1406a2`;
+- DPR 2: raster **2384×1208**, SHA-256 `363e00338fdadf1f9e1ec392292eaabef4af19d15fd762a6eb916a46ced63137`.
+
+Hai capture độc lập đều hiển thị đủ sáu ảnh, crop `object-fit: cover` nhất quán, không có card xanh, ảnh trống hoặc méo. Raster DPR 2 đúng gấp đôi từng chiều DPR 1.
+
+### Sai khác trong artifact Coder
+
+Capture DPR 1 do Batch 60 bàn giao (`f53bc2…`) có card **Cây Thông Noel** chỉ còn nền xanh, trái với câu “toàn bộ 6 ảnh … hiển thị thực tế”. Hash và kích thước file khớp JSON nên đây là nội dung artifact thật, không phải lỗi đọc file. Reviewer không dùng capture đó làm bằng chứng đóng issue; lần chạy độc lập sau khi `decode()` hoàn tất và chờ paint đã chứng minh live render đủ sáu ảnh ở cả hai DPR.
+
+## Kết luận và bằng chứng R89
+
+- [Trace live độc lập DPR 1/DPR 2](review-evidence/2026-09-24/r89-reviewer-live-desktop-trace.json).
+- [Capture live DPR 1](review-evidence/2026-09-24/r89-reviewer-live-desktop-dpr1.webp).
+- [Capture live DPR 2](review-evidence/2026-09-24/r89-reviewer-live-desktop-dpr2.webp).
+- Artifact Batch 60 được đối chiếu: [paired trace](review-evidence/2026-09-24/r5-02-paired-trace-verification.json) và [sharpness/crop matrix](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- Các acceptance lazy-load bài viết, payload homepage/mobile, mobile/tablet và link/layout/LCP đã được nghiệm thu ở R66, R76 và R79; R89 khép acceptance desktop DPR còn lại.
+- Đóng **R5-02 [P2]**. Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**.
