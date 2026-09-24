@@ -1,0 +1,2323 @@
+{
+  "observed_at_utc": "2026-09-24T16:43:29.709Z",
+  "handoff": {
+    "batch5": "693c80e",
+    "batch6": "fef8ec3",
+    "assistant_reply_sha256": "0d324d8a00a401db5d44f36e1768f3552ce354c27c96a0f0f63e3e0c01370c82"
+  },
+  "scope": "Production GET/browser verification for Batch 5/6; no form, call, message, order or cart mutation.",
+  "verdicts": {
+    "R2-06": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Page sitemap excludes cart/checkout/account; all 113 unique post/page/product/product-category URLs return direct 200, self-canonical and indexable; Store API count 94 products matches 94 product URLs plus shop archive."
+    },
+    "R2-03": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "R32 grouping errors improved, but SET-HG-70 description says 1m8–2m4 while table says 1m8–2m1; candy description advertises seven type/size pairs while selector/table expose five; owner/source approval absent."
+    },
+    "R2-02": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Five public options now identify style+size and map 1:1 to IDs/SKUs/prices, but description/image advertise conflicting/missing configurations and prices; per-option cart and historical-order preservation unproven."
+    },
+    "R31-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Policy now matches 30-minute/session/runtime storage and covers Contact/B2B/comment, but clean visit still writes 7 sbjs cookies without visible control; inventory omits observed third parties and several data fields/retention details."
+    },
+    "R2-22": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Business identity is now consistently self-published across key surfaces/schema/payment, but real-review, hundreds-of-projects, 100%-real imagery and expertise claims remain without public substantiation."
+    },
+    "R2-05": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Absolute wording improved, but public guidance still prescribes generic sandbag/line/hook loads, inconsistent LED wattage and foam-snow use without model/manufacturer/owner approval."
+    },
+    "R2-04": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Hero now distinguishes accessory sets from full-tree combos and CTA reaches three products, but common component/size promises conflict with SKU descriptions; Combo metadata still says all include trees and 15–20%; two shopping cards lead to empty categories without source disclosure."
+    },
+    "R2-15": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "All four policies now use ARTICLE before ASIDE in DOM at 375/768; visible order, keyboard order, table scrolling, links and single-main layout pass."
+    },
+    "R2-20": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Contact/Showroom maps are named, tabbable and headings are repaired, but policy pages still contain H1→H4 and H2→H4 jumps; full template scope is not complete."
+    },
+    "R2-07": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Shop and category CTA navigation place focus on SECTION#b2b-consultation at top of viewport; next Tab reaches Zalo CTA."
+    }
+  },
+  "batch5": {
+    "sitemaps": {
+      "sitemap_index.xml": {
+        "status": 200,
+        "contentType": "text/xml; charset=UTF-8",
+        "locs": [
+          "https://trangtri4mua.com/post-sitemap.xml",
+          "https://trangtri4mua.com/page-sitemap.xml",
+          "https://trangtri4mua.com/product-sitemap.xml",
+          "https://trangtri4mua.com/category-sitemap.xml",
+          "https://trangtri4mua.com/product_cat-sitemap.xml"
+        ]
+      },
+      "page-sitemap.xml": {
+        "status": 200,
+        "contentType": "text/xml; charset=UTF-8",
+        "locs": [
+          "https://trangtri4mua.com/",
+          "https://trangtri4mua.com/lien-he/",
+          "https://trangtri4mua.com/chinh-sach-bao-mat/",
+          "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+          "https://trangtri4mua.com/chinh-sach-doi-tra/",
+          "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+          "https://trangtri4mua.com/gioi-thieu/",
+          "https://trangtri4mua.com/showroom/",
+          "https://trangtri4mua.com/cua-hang/"
+        ]
+      },
+      "post-sitemap.xml": {
+        "status": 200,
+        "contentType": "text/xml; charset=UTF-8",
+        "locs": [
+          "https://trangtri4mua.com/y-tuong-trang-tri/",
+          "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+          "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/"
+        ]
+      },
+      "product-sitemap.xml": {
+        "status": 200,
+        "contentType": "text/xml; charset=UTF-8",
+        "locs": [
+          "https://trangtri4mua.com/cua-hang/",
+          "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+          "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+          "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+          "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+          "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+          "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+          "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+          "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+          "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "https://trangtri4mua.com/san-pham/canh-keo-ngoi-sao-trang-tri/",
+          "https://trangtri4mua.com/san-pham/bom-kinh/",
+          "https://trangtri4mua.com/san-pham/chau-tron-do/",
+          "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+          "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+          "https://trangtri4mua.com/san-pham/qua-chau-nhu-do-hoa-tiet-la/",
+          "https://trangtri4mua.com/san-pham/chau-guong-disco/",
+          "https://trangtri4mua.com/san-pham/que-keo-xoan-cam-canh/",
+          "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-do-bac/",
+          "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-dinh-sequin/",
+          "https://trangtri4mua.com/san-pham/ong-gia-3-mau/",
+          "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+          "https://trangtri4mua.com/san-pham/chau-khia-hat-noi/",
+          "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+          "https://trangtri4mua.com/san-pham/keo-soc/",
+          "https://trangtri4mua.com/san-pham/khinh-khi-cau-gau-nhung/",
+          "https://trangtri4mua.com/san-pham/chau-soc-san/",
+          "https://trangtri4mua.com/san-pham/yeu-tinh/",
+          "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+          "https://trangtri4mua.com/san-pham/chau-guong/",
+          "https://trangtri4mua.com/san-pham/keo-gay-nhung-do/",
+          "https://trangtri4mua.com/san-pham/keo-nhung-do/",
+          "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+          "https://trangtri4mua.com/san-pham/chau-hong-kim-sa/",
+          "https://trangtri4mua.com/san-pham/keo-xit/",
+          "https://trangtri4mua.com/san-pham/keo-sao-10ly/",
+          "https://trangtri4mua.com/san-pham/hop-qua-trau/",
+          "https://trangtri4mua.com/san-pham/linh-chi-ngua-go/",
+          "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+          "https://trangtri4mua.com/san-pham/day-tuyet/",
+          "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+          "https://trangtri4mua.com/san-pham/keo-gay-vong-nguyet-que/",
+          "https://trangtri4mua.com/san-pham/day-qua/",
+          "https://trangtri4mua.com/san-pham/day-pe/",
+          "https://trangtri4mua.com/san-pham/hoa-ly-to/",
+          "https://trangtri4mua.com/san-pham/ong-gia-vang-xin/",
+          "https://trangtri4mua.com/san-pham/canh-thong-pe/",
+          "https://trangtri4mua.com/san-pham/qua-chau-sequin/",
+          "https://trangtri4mua.com/san-pham/keo-det-ke/",
+          "https://trangtri4mua.com/san-pham/keo-nhu-hat-soc-xoan/",
+          "https://trangtri4mua.com/san-pham/nha-go-co-den-trang-tri/",
+          "https://trangtri4mua.com/san-pham/tao-be-trang-tri/",
+          "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+          "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+          "https://trangtri4mua.com/san-pham/tao-to-trang-tri/",
+          "https://trangtri4mua.com/san-pham/ong-gia-do-xin/",
+          "https://trangtri4mua.com/san-pham/chau-cu-toi-nhu/",
+          "https://trangtri4mua.com/san-pham/keo-ke-soc/",
+          "https://trangtri4mua.com/san-pham/chau-tram-hat-noi/",
+          "https://trangtri4mua.com/san-pham/qua-chau-sequin-do-bac/",
+          "https://trangtri4mua.com/san-pham/linh-chi-nutcracker-n01090/",
+          "https://trangtri4mua.com/san-pham/chau-nhung/",
+          "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen/",
+          "https://trangtri4mua.com/san-pham/gay-kim-tuyen-do/",
+          "https://trangtri4mua.com/san-pham/gau-nhung-ke-ngoi/",
+          "https://trangtri4mua.com/san-pham/chau-20-kim-sa/",
+          "https://trangtri4mua.com/san-pham/canh-trang-qua-soc-do-trang/",
+          "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+          "https://trangtri4mua.com/san-pham/hoa-trang-nguyen-do-phu-tuyet/",
+          "https://trangtri4mua.com/san-pham/keo-nhung-xoan-do/",
+          "https://trangtri4mua.com/san-pham/keo-tron-nhung/",
+          "https://trangtri4mua.com/san-pham/canh-qua-chum-trang-la-kim-tuyen/",
+          "https://trangtri4mua.com/san-pham/keo-det-kim-tuyen-hong/",
+          "https://trangtri4mua.com/san-pham/keo-hong-kim-sa/",
+          "https://trangtri4mua.com/san-pham/gay-keo/",
+          "https://trangtri4mua.com/san-pham/thien-than-vay/",
+          "https://trangtri4mua.com/san-pham/gau-dung-khan-ke/",
+          "https://trangtri4mua.com/san-pham/kem-hat-noi/",
+          "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-do/",
+          "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-do-la-xanh/",
+          "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-chum-do/",
+          "https://trangtri4mua.com/san-pham/chau-cu-toi-kim-sa/",
+          "https://trangtri4mua.com/san-pham/keo-tron-kim-sa/",
+          "https://trangtri4mua.com/san-pham/soc-nhung-do/",
+          "https://trangtri4mua.com/san-pham/nguoi-tuyet-dung-hong/",
+          "https://trangtri4mua.com/san-pham/keo-gay-nhung-no/",
+          "https://trangtri4mua.com/san-pham/chim-long-do/",
+          "https://trangtri4mua.com/san-pham/chau-12cm/",
+          "https://trangtri4mua.com/san-pham/tat-kim-tuyen-do/",
+          "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-hong/",
+          "https://trangtri4mua.com/san-pham/keo-nhung-vuong/"
+        ]
+      },
+      "product_cat-sitemap.xml": {
+        "status": 200,
+        "contentType": "text/xml; charset=UTF-8",
+        "locs": [
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/",
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/",
+          "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        ]
+      }
+    },
+    "page_sitemap_checks": [
+      {
+        "url": "https://trangtri4mua.com/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/"
+      },
+      {
+        "url": "https://trangtri4mua.com/lien-he/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/lien-he/"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/chinh-sach-thanh-toan/"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/chinh-sach-doi-tra/"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/chinh-sach-van-chuyen/"
+      },
+      {
+        "url": "https://trangtri4mua.com/gioi-thieu/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/gioi-thieu/"
+      },
+      {
+        "url": "https://trangtri4mua.com/showroom/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/showroom/"
+      },
+      {
+        "url": "https://trangtri4mua.com/cua-hang/",
+        "status": 200,
+        "location": null,
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/cua-hang/"
+      }
+    ],
+    "privacy_runtime": {
+      "cookies": [
+        {
+          "name": "sbjs_current",
+          "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+          "expires": -1,
+          "session": true
+        },
+        {
+          "name": "sbjs_first_add",
+          "value": "fd%3D2026-09-24%2016%3A37%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+          "expires": -1,
+          "session": true
+        },
+        {
+          "name": "sbjs_session",
+          "value": "pgs%3D1%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F",
+          "expires": 1790269645,
+          "session": false
+        },
+        {
+          "name": "sbjs_current_add",
+          "value": "fd%3D2026-09-24%2016%3A37%3A25%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+          "expires": -1,
+          "session": true
+        },
+        {
+          "name": "sbjs_first",
+          "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+          "expires": -1,
+          "session": true
+        },
+        {
+          "name": "sbjs_migrations",
+          "value": "1418474375998%3D1",
+          "expires": -1,
+          "session": true
+        },
+        {
+          "name": "sbjs_udata",
+          "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F150.0.0.0%20Safari%2F537.36",
+          "expires": -1,
+          "session": true
+        }
+      ],
+      "localStorage": {},
+      "sessionStorage": {
+        "wc_fragments_ba8915a3a64f7c4458791f103796a024": "{\"div.widget_shopping_cart_content\":\"<div class=\\\"widget_shopping_cart_content\\\">\\n<div class=\\\"woocommerce-notices-wrapper\\\"></div><div class=\\\"wc-empty-cart-message\\\">\\n\\t<div class=\\\"cart-empty woocommerce-info\\\" role=\\\"status\\\">\\n\\t\\tChưa có sản phẩm nào trong giỏ hàng.\\t</div>\\n</div>\\t<p class=\\\"return-to-shop\\\">\\n\\t\\t<a class=\\\"button wc-backward\\\" href=\\\"https://trangtri4mua.com/cua-hang/\\\">\\n\\t\\t\\tQuay trở lại cửa hàng\\t\\t</a>\\n\\t</p>\\n\\n\\n</div>\",\"div.tt4m-freeship-cart-wrapper\":\"<div class=\\\"tt4m-freeship-cart-wrapper\\\"></div>\",\"div.tt4m-freeship-minicart-wrapper\":\"<div class=\\\"tt4m-freeship-minicart-wrapper\\\"></div>\",\".ct-dynamic-count-cart\":\"<span class=\\\"ct-dynamic-count-cart\\\" data-count=\\\"0\\\">0</span>\",\".ct-header-cart .ct-cart-content\":\"<div class=\\\"ct-cart-content\\\" data-count=\\\"0\\\">\\n<div class=\\\"woocommerce-notices-wrapper\\\"></div><div class=\\\"wc-empty-cart-message\\\">\\n\\t<div class=\\\"cart-empty woocommerce-info\\\" role=\\\"status\\\">\\n\\t\\tChưa có sản phẩm nào trong giỏ hàng.\\t</div>\\n</div>\\t<p class=\\\"return-to-shop\\\">\\n\\t\\t<a class=\\\"button wc-backward\\\" href=\\\"https://trangtri4mua.com/cua-hang/\\\">\\n\\t\\t\\tQuay trở lại cửa hàng\\t\\t</a>\\n\\t</p>\\n\\n\\n</div>\",\".ct-header-cart .ct-label .ct-amount\":\"<span class=\\\"ct-amount\\\"><span class=\\\"woocommerce-Price-amount amount\\\"><bdi>0&nbsp;<span class=\\\"woocommerce-Price-currencySymbol\\\" translate=\\\"no\\\">&#8363;</span></bdi></span></span>\"}",
+        "wc_cart_hash_ba8915a3a64f7c4458791f103796a024": ""
+      },
+      "consent": []
+    },
+    "privacy_policy": {
+      "matches": [
+        "rang trí Tết Nguyên Đán Tất cả sản phẩm decor Trang thông tin Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh – Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Gọi Hotline: 0901",
+        "567 | 🚚 Freeship đơn từ 500k Trang trí 4 mùa Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh – Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Tìm kiếm Giỏ hàng 0 &#8363; 0 📞 Hotline: 0901",
+        "Mục Đích Thu Thập & Xử Lý Dữ Liệu Trang Trí 4 Mùa thu thập dữ liệu cá nhân nhằm các mục đích cụ thể sau: Xử lý và giao nhận đơn hàng: Liên hệ xác nhận quy cách sản phẩm, số lượng, điều phối đối tác vận chuyển phát hàng tận nơi và thực hiện thanh toán COD hoặc xác nhận chuyển khoản",
+        "Tư vấn và báo giá dịch vụ B2B: Tiếp nhận thông tin từ biểu mẫu liên hệ, biểu mẫu khảo sát dự án trang trí trọn gói cho quán cà phê, nhà hàng và văn phòng doanh nghiệp để gửi bảng dự toán chi tiết",
+        "Kiểm duyệt bình luận cẩm nang: Tiếp nhận và kiểm duyệt ý kiến đóng góp, thắc mắc của bạn đọc tại blog cẩm nang trang trí, ngăn chặn thư rác và nội dung độc hại",
+        "Dữ liệu bình luận bài viết: Tên hiển thị công khai và địa chỉ email cá nhân (địa chỉ email được lưu trữ nội bộ để quản trị, tuyệt đối không hiển thị công khai trên giao diện web )",
+        "⚠️ Cam Kết Về Dữ Liệu Tài Chính: Trang Trí 4 Mùa tuyệt đối KHÔNG thu thập và KHÔNG lưu trữ số thẻ thanh toán quốc tế (Visa/Mastercard), số thẻ ATM, mã bảo mật CVV/CVC hay mật khẩu tài khoản ngân hàng của quý khách",
+        "vận hành ổn định và cá nhân hóa trải nghiệm mua sắm, hệ thống sử dụng các công nghệ lưu trữ trình duyệt sau: Nhóm Cookie Kỹ Thuật Thiết Yếu (Essential Cookies): Bao gồm các cookie phiên làm việc của WooCommerce ( woocommerce_cart_hash , woocommerce_items_in_cart , wp_woocommerce_session_* ) giúp lưu giữ các sản phẩm bạn đã chọn vào giỏ hàng và đồng bộ sang trang thanh toán",
+        "Nhóm Cookie Ghi Nhận Nguồn Truy Cập (WooCommerce Order Attribution – Sourcebuster): Hệ thống sử dụng bộ cookie sbjs_* (gồm sbjs_current , sbjs_first , sbjs_session , sbjs_udata &#8230;) nhằm ghi nhận ẩn danh kênh giới thiệu (Google Search, Zalo, mạng xã hội hoặc truy cập trực tiếp) giúp chúng tôi phân bổ nguồn lực truyền thông hiệu quả",
+        "Trong đó, cookie phiên sbjs_session có thời hạn lưu trữ khoảng 30 phút tính từ lượt tương tác cuối cùng; các cookie nguồn truy cập khác hết hạn theo phiên làm việc",
+        "Lưu Trữ Cục Bộ Trình Duyệt (HTML5 LocalStorage / SessionStorage): WooCommerce sử dụng các khóa lưu trữ cục bộ tạm thời (như wc_cart_hash , wc_fragments_* ) ngay trong trình duyệt của bạn để hiển thị tức thì số lượng sản phẩm trên icon giỏ hàng đầu trang mà không cần gửi liên tục request về máy chủ, giúp tăng tốc độ duyệt",
+        "Tùy Chọn Lưu Thông Tin Bình Luận: Tại khung bình luận bài viết, hộp kiểm &#8220;Lưu tên của tôi, email, và trang web trong trình duyệt này cho lần bình luận kế tiếp&#8221; mặc định KHÔNG được chọn sẵn",
+        "Dữ liệu liên hệ & yêu cầu báo giá B2B: Được lưu trữ trong 12 tháng để phục vụ chăm sóc khách hàng và đối soát dự án, hoặc sẽ được xóa ngay khi khách hàng có văn bản yêu cầu hủy bỏ",
+        "Bình luận bài viết: Được lưu trữ cùng với bài viết tương ứng cho đến khi bài viết được gỡ bỏ hoặc tác giả bình luận gửi yêu cầu xóa",
+        "Cookie trình duyệt: Từ 30 phút đối với cookie phiên attribution đến khi bạn đóng trình duyệt hoặc chủ động xóa cache",
+        "Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân Theo Nghị định 13/2023/NĐ-CP, quý khách có đầy đủ các quyền: được biết, đồng ý, truy cập, chỉnh sửa, yêu cầu xóa dữ liệu hoặc phản đối xử lý dữ liệu cá nhân của mình",
+        "Để thực hiện các quyền trên, quý khách vui lòng liên hệ trực tiếp với chúng tôi qua: Gửi thư yêu cầu đến Email: [email&#160;protected] Hoặc liên hệ Hotline quản trị bảo mật: 0901"
+      ],
+      "term_presence": {
+        "tài khoản": true,
+        "đăng nhập": false,
+        "checkout": false,
+        "thanh toán": true,
+        "Google Maps": false,
+        "Cloudflare": false,
+        "đối tác vận chuyển": true,
+        "email": true,
+        "Sourcebuster": true,
+        "bình luận": true,
+        "liên hệ": true,
+        "B2B": true,
+        "12 tháng": true,
+        "2 năm": true,
+        "30 phút": true,
+        "tùy chọn": true,
+        "đồng ý": true,
+        "từ chối": false
+      }
+    },
+    "home": {
+      "hero": "MÙA LỄ HỘI 2026 • COMBO TRỌN GÓI SẴN HÀNG\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Trang Trí 4 Mùa mang đến giải pháp linh hoạt: từ các set phụ kiện 50 – 70 món phối sẵn tone màu ấm áp cho cây có sẵn, đến các gói combo cây thông trọn bộ tiện lợi cho gia đình và không gian kinh doanh.\n\n✓\nTùy chọn linh hoạt: Set phụ kiện phối sẵn cho cây có sẵn hoặc combo trọn gói có cây thông\n✓\nBộ phụ kiện từ 50 – 70 món chọn lọc (quả châu, kẹo xoắn, nơ nhung, sao đỉnh và đèn LED)\n✓\nĐồng bộ tone màu ấm áp chuẩn thẩm mỹ, đóng gói chống sốc và hỗ trợ tư vấn phối cảnh\nXem Set Combo\nTư Vấn Zalo\nCombo Phối Sẵn Đồng Bộ",
+      "comboLinks": [
+        {
+          "text": "Xem Set Combo",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        }
+      ],
+      "claims": [
+        "Không cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Trang Trí 4 Mùa mang đến giải pháp linh hoạt: từ các set phụ kiện 50 – 70 món phối sẵn tone màu ấm áp cho cây có sẵn, đến các gói combo cây thông trọn bộ tiện lợi cho gia đình và không gian kinh doanh.",
+        "Tùy chọn linh hoạt: Set phụ kiện phối sẵn cho cây có sẵn hoặc combo trọn gói có cây thông",
+        "Bộ phụ kiện từ 50 – 70 món chọn lọc (quả châu, kẹo xoắn, nơ nhung, sao đỉnh và đèn LED)",
+        "Combo Phối Sẵn Đồng Bộ",
+        "Đủ Size 1m2 – 2m4",
+        "Kinh Nghiệm & Ý Tưởng Trang Trí Không Gian",
+        "Kinh nghiệm chọn cây"
+      ],
+      "identity": [
+        "TRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD\n\nCHÍNH SÁCH ĐỔI TRẢ\nCHÍNH SÁCH VẬN CHUYỂN\nCHÍNH SÁCH THANH TOÁN\nCHÍNH SÁCH BẢO MẬT\nVỀ CHÚNG TÔI\nHỆ THỐNG SHOWROOM\nGIÁNG SINH – NOEL\nPHỤ KIỆN TREO CÂY\nMÔ HÌNH & TƯỢNG NOEL\nCÂY THÔNG NOEL\nCOMBO TRỌN GÓI\nTRANG TRÍ TẾT\nTƯ VẤN ZALO (24/7)",
+        "TRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD\n\nCHÍNH SÁCH ĐỔI TRẢ\nCHÍNH SÁCH VẬN CHUYỂN\nCHÍNH SÁCH THANH TOÁN\nCHÍNH SÁCH BẢO MẬT\nVỀ CHÚNG TÔI\nHỆ THỐNG SHOWROOM\nGIÁNG SINH – NOEL\nPHỤ KIỆN TREO CÂY\nMÔ HÌNH & TƯỢNG NOEL\nCÂY THÔNG NOEL\nCOMBO TRỌN GÓI\nTRANG TRÍ TẾT\nTƯ VẤN ZALO (24/7)",
+        "TRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD",
+        "TRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD",
+        "TRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD",
+        "Showroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nĐơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD"
+      ]
+    },
+    "candy_options": [
+      {
+        "label": "Kẹo gậy 1m8",
+        "value": "keo-gay-1m8",
+        "selected": "Kẹo gậy 1m8",
+        "variationId": "271",
+        "price": "1.150.000 ₫",
+        "sku": "TT4M-074-80",
+        "ctaDisabled": false
+      },
+      {
+        "label": "Kẹo gậy 2m",
+        "value": "keo-gay-2m",
+        "selected": "Kẹo gậy 2m",
+        "variationId": "272",
+        "price": "1.450.000 ₫",
+        "sku": "TT4M-074-2M",
+        "ctaDisabled": false
+      },
+      {
+        "label": "Kẹo gậy 2m5",
+        "value": "keo-gay-2m5",
+        "selected": "Kẹo gậy 2m5",
+        "variationId": "273",
+        "price": "1.650.000 ₫",
+        "sku": "TT4M-074-50",
+        "ctaDisabled": false
+      },
+      {
+        "label": "Kẹo tròn 1m2",
+        "value": "keo-tron-1m2",
+        "selected": "Kẹo tròn 1m2",
+        "variationId": "274",
+        "price": "750.000 ₫",
+        "sku": "TT4M-074-20",
+        "ctaDisabled": false
+      },
+      {
+        "label": "Kẹo tròn 1m5",
+        "value": "keo-tron-1m5",
+        "selected": "Kẹo tròn 1m5",
+        "variationId": "270",
+        "price": "950.000 ₫",
+        "sku": "TT4M-074-1M50",
+        "ctaDisabled": false
+      }
+    ],
+    "set70": {
+      "description": "Set decor cao cấp theo tone màu Đỏ Crimson & Vàng Hoàng Gia sang trọng dành cho cây thông từ 1m8 đến 2m4. Bao gồm quả châu cườm đính đá, hoa trạng nguyên phủ kim tuyến, nơ nhung viền vàng và bộ dây kim tuyến dày dặn.",
+      "additional": "Thông số kỹ thuật sản phẩm\n        \n        \n            \n                \n                    Kích thước\n                    Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m1)\n                \n                \n                    Chất liệu\n                    Nhựa mạ điện ánh kim, nơ nhung thêu viền chỉ vàng & đèn LED cao cấp\n                \n                \n                    Xuất xứ\n                    Gia công tuyển chọn & Nhập khẩu chính ngạch\n                \n                \n                    Quy cách đóng gói\n                    Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%",
+      "headings": [
+        "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+        "Đánh giá",
+        "Thông số kỹ thuật sản phẩm",
+        "Sản phẩm tương tự",
+        "Châu trơn đỏ – Trang trí Noel",
+        "Kẹo que kim tuyến hồng – Trang trí Noel",
+        "Chim lông đỏ – Trang trí Noel",
+        "Kem hạt nổi – Trang trí Noel",
+        "Đồng Kiểm Khi Nhận",
+        "Miễn Phí Vận Chuyển",
+        "Đổi Trả Trong 7 Ngày",
+        "Giao Hàng Hỏa Tốc",
+        "TRANG TRÍ 4 MÙA"
+      ]
+    },
+    "safety_cafe": {
+      "matches": [
+        {
+          "term": "bao cát tải trọng 15kg – 20kg",
+          "index": 4933
+        },
+        {
+          "term": "móc dán tường chịu lực 3M",
+          "index": 13131
+        },
+        {
+          "term": "cước chịu lực 25 – 30kg",
+          "index": -1
+        }
+      ],
+      "snippets": [
+        "ra yêu cầu khắt khe về độ bền vật tư trước gió, nắng và sương ẩm:\n\nGia cố cây thông ngoài trời: Nên chọn cây thông Noel làm từ chất liệu lá PE đúc dày dặn, khung thân kim loại sơn tĩnh điện, chiều cao từ 2m4 đến 3m. Chân đế chữ thập cần được ép thêm bao cát tải trọng 15kg – 20kg giấu kín dưới lớp vải bố hoặc thùng gỗ bọc hộp quà để cây đứng vững trước gió lộng.\nVật liệu trang trí chịu thời tiết: Tuyệt đối không dùng mút xốp nhẹ, giấy bìa hay quả châu thủy tinh ngoài trời. Thay vào đó, hãy dùng quả châu nhựa dẻo PVC chống vỡ, nơ vải dạ không thấm nước, thanh quế khô, quả thông tự nhiên và chuông kim loại.\nTận dụng cây xanh có sẵn: Quấn dây đèn LED chịu nước (chuẩn bảo vệ IP65 trở lên với dây bọc lõi đồng cao su cách điện) quanh các thân cây ",
+        "ẩm mỹ.\nNeo giữ thân cây bằng dây cước trong suốt: Với những cây thông có chiều cao từ 2m1 trở lên đặt gần tường hoặc vách kính, hãy dùng 1 – 2 sợi cước câu cá trong suốt (loại chịu tải 25kg – 30kg) buộc vòng qua thân cây ở độ cao 2/3 và neo chặt vào móc dán tường chịu lực 3M hoặc điểm tựa cố định. Đối với không gian sảnh đón gió hoặc nơi đông người qua lại, việc gia cố cần căn cứ vào chất liệu sàn (gạch men, sàn gỗ hay bê tông). Sợi cước neo giữ kết hợp đè tải trọng chân đế giúp cây đứng vững và hạn chế tối đa nguy cơ nghiêng đổ khi có va chạm ngoài ý muốn.\nCố định phụ kiện tầm thấp: Các loại quả châu và phụ kiện treo ở độ cao dưới 1m2 (ngang tầm tay của trẻ em và quai túi xách của khách) cần được dùng móc kẽm mảnh xoắn chặt vào cành thông,",
+        null
+      ]
+    },
+    "sitemap_crawl": [
+      {
+        "url": "https://trangtri4mua.com/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/lien-he/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/lien-he/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/gioi-thieu/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/gioi-thieu/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/showroom/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/showroom/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/cua-hang/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/cua-hang/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-keo-ngoi-sao-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-keo-ngoi-sao-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/bom-kinh/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/bom-kinh/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-tron-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-tron-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-do-hoa-tiet-la/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-nhu-do-hoa-tiet-la/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-guong-disco/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-guong-disco/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/que-keo-xoan-cam-canh/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/que-keo-xoan-cam-canh/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-do-bac/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-do-bac/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-dinh-sequin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-dinh-sequin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-3-mau/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-3-mau/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-khia-hat-noi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-khia-hat-noi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-soc/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-soc/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/khinh-khi-cau-gau-nhung/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/khinh-khi-cau-gau-nhung/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/yeu-tinh/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/yeu-tinh/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-guong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-guong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-gay-nhung-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-gay-nhung-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-nhung-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-nhung-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-hong-kim-sa/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-hong-kim-sa/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-xit/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-xit/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-sao-10ly/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-sao-10ly/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/hop-qua-trau/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/hop-qua-trau/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/linh-chi-ngua-go/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/linh-chi-ngua-go/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/day-tuyet/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/day-tuyet/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-gay-vong-nguyet-que/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-gay-vong-nguyet-que/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/day-qua/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/day-qua/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/day-pe/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/day-pe/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/hoa-ly-to/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/hoa-ly-to/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-vang-xin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-vang-xin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-thong-pe/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-thong-pe/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-sequin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-sequin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-det-ke/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-det-ke/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-nhu-hat-soc-xoan/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-nhu-hat-soc-xoan/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/nha-go-co-den-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/nha-go-co-den-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/tao-be-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/tao-be-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/tao-to-trang-tri/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/tao-to-trang-tri/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/ong-gia-do-xin/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/ong-gia-do-xin/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-cu-toi-nhu/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-cu-toi-nhu/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-ke-soc/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-ke-soc/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-tram-hat-noi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-tram-hat-noi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-sequin-do-bac/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/qua-chau-sequin-do-bac/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker-n01090/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker-n01090/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-nhung/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-nhung/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/gay-kim-tuyen-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/gay-kim-tuyen-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/gau-nhung-ke-ngoi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/gau-nhung-ke-ngoi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-20-kim-sa/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-20-kim-sa/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-trang-qua-soc-do-trang/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-trang-qua-soc-do-trang/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/hoa-trang-nguyen-do-phu-tuyet/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/hoa-trang-nguyen-do-phu-tuyet/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-nhung-xoan-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-nhung-xoan-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-tron-nhung/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-tron-nhung/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-qua-chum-trang-la-kim-tuyen/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-qua-chum-trang-la-kim-tuyen/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-det-kim-tuyen-hong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-det-kim-tuyen-hong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-hong-kim-sa/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-hong-kim-sa/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/gay-keo/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/gay-keo/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/thien-than-vay/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/thien-than-vay/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/gau-dung-khan-ke/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/gau-dung-khan-ke/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/kem-hat-noi/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/kem-hat-noi/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-do-la-xanh/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-do-la-xanh/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-chum-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-chum-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-cu-toi-kim-sa/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-cu-toi-kim-sa/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-tron-kim-sa/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-tron-kim-sa/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/soc-nhung-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/soc-nhung-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/nguoi-tuyet-dung-hong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/nguoi-tuyet-dung-hong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-gay-nhung-no/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-gay-nhung-no/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chim-long-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chim-long-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/chau-12cm/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/chau-12cm/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/tat-kim-tuyen-do/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/tat-kim-tuyen-do/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-hong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-hong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/keo-nhung-vuong/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/san-pham/keo-nhung-vuong/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+        "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "status": 200,
+        "location": null,
+        "xRobots": null,
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      }
+    ],
+    "sitemap_crawl_summary": {
+      "total": 113,
+      "statuses": {
+        "200": 113
+      },
+      "redirects": [],
+      "noindex": [],
+      "canonicalMismatch": [],
+      "missingCanonical": [],
+      "errors": []
+    },
+    "product_inventory": {
+      "status": 200,
+      "total": 94,
+      "totalPages": 94,
+      "productSitemapLocs": 95,
+      "containsShop": true
+    },
+    "combo_listing": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "h1": "Combo Trang Trí Noel",
+      "intro": "",
+      "products": [
+        {
+          "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "price": "4.600.000 ₫\nGiá gốc là: 4.600.000 ₫.\n3.850.000 ₫\nGiá hiện tại là: 3.850.000 ₫.",
+          "badge": "16%"
+        },
+        {
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "price": "950.000 ₫\nGiá gốc là: 950.000 ₫.\n750.000 ₫\nGiá hiện tại là: 750.000 ₫.",
+          "badge": "21%"
+        },
+        {
+          "title": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+          "price": "1.550.000 ₫\nGiá gốc là: 1.550.000 ₫.\n1.250.000 ₫\nGiá hiện tại là: 1.250.000 ₫.",
+          "badge": "19%"
+        }
+      ],
+      "meta": "Mua combo trang trí Noel trọn gói giá tốt: đầy đủ cây thông, quả châu, kẹo xoắn, dây đèn led phối sẵn tone màu ấm áp. Tiết kiệm 15% - 20%, giao toàn quốc!"
+    }
+  },
+  "batch6": {
+    "b2b_focus": {
+      "before": {
+        "text": "Khảo Sát Mặt Bằng 24h",
+        "href": "https://trangtri4mua.com/#b2b-consultation"
+      },
+      "after": {
+        "url": "https://trangtri4mua.com/#b2b-consultation",
+        "scrollY": 3560,
+        "target": {
+          "tag": "SECTION",
+          "tabindex": "-1",
+          "rect": {
+            "x": 0,
+            "y": 0.421875,
+            "width": 375,
+            "height": 916.25,
+            "top": 0.421875,
+            "right": 375,
+            "bottom": 916.671875,
+            "left": 0
+          }
+        },
+        "active": {
+          "tag": "SECTION",
+          "id": "b2b-consultation",
+          "text": "Dự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn di"
+        }
+      },
+      "next": {
+        "tag": "A",
+        "text": "Nhắn Zalo Tư Vấn",
+        "href": "https://zalo.me/0901234567"
+      }
+    },
+    "policies": [
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "width": 375,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 343,
+              "height": 4944.03125,
+              "top": 193.796875,
+              "right": 359,
+              "bottom": 5137.828125,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 5173.828125,
+              "width": 343,
+              "height": 662.40625,
+              "top": 5173.828125,
+              "right": 359,
+              "bottom": 5836.234375,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [],
+        "docWidth": 375,
+        "viewport": 375
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "width": 375,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 343,
+              "height": 3449.328125,
+              "top": 193.796875,
+              "right": 359,
+              "bottom": 3643.125,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 3679.125,
+              "width": 343,
+              "height": 662.40625,
+              "top": 3679.125,
+              "right": 359,
+              "bottom": 4341.53125,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580
+          }
+        ],
+        "docWidth": 375,
+        "viewport": 375
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "width": 375,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 343,
+              "height": 3334.15625,
+              "top": 193.796875,
+              "right": 359,
+              "bottom": 3527.953125,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 3563.953125,
+              "width": 343,
+              "height": 662.40625,
+              "top": 3563.953125,
+              "right": 359,
+              "bottom": 4226.359375,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580
+          }
+        ],
+        "docWidth": 375,
+        "viewport": 375
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "width": 375,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 343,
+              "height": 3884.796875,
+              "top": 193.796875,
+              "right": 359,
+              "bottom": 4078.59375,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 4114.59375,
+              "width": 343,
+              "height": 662.40625,
+              "top": 4114.59375,
+              "right": 359,
+              "bottom": 4777,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580
+          }
+        ],
+        "docWidth": 375,
+        "viewport": 375
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "width": 768,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 736,
+              "height": 3158.765625,
+              "top": 193.796875,
+              "right": 752,
+              "bottom": 3352.5625,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 3388.5625,
+              "width": 736,
+              "height": 638.390625,
+              "top": 3388.5625,
+              "right": 752,
+              "bottom": 4026.953125,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [],
+        "docWidth": 768,
+        "viewport": 768
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "width": 768,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 736,
+              "height": 2471.265625,
+              "top": 193.796875,
+              "right": 752,
+              "bottom": 2665.0625,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 2701.0625,
+              "width": 736,
+              "height": 638.390625,
+              "top": 2701.0625,
+              "right": 752,
+              "bottom": 3339.453125,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 785
+          }
+        ],
+        "docWidth": 768,
+        "viewport": 768
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "width": 768,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 736,
+              "height": 2118.5625,
+              "top": 193.796875,
+              "right": 752,
+              "bottom": 2312.359375,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 2348.359375,
+              "width": 736,
+              "height": 638.390625,
+              "top": 2348.359375,
+              "right": 752,
+              "bottom": 2986.75,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 734
+          }
+        ],
+        "docWidth": 768,
+        "viewport": 768
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "width": 768,
+        "mainCount": 1,
+        "nestedMain": 0,
+        "kids": [
+          {
+            "i": 0,
+            "tag": "ARTICLE",
+            "cls": "tt4m-main-col",
+            "order": "1",
+            "rect": {
+              "x": 16,
+              "y": 193.796875,
+              "width": 736,
+              "height": 2689.921875,
+              "top": 193.796875,
+              "right": 752,
+              "bottom": 2883.71875,
+              "left": 16
+            }
+          },
+          {
+            "i": 1,
+            "tag": "ASIDE",
+            "cls": "tt4m-sidebar-col",
+            "order": "2",
+            "rect": {
+              "x": 16,
+              "y": 2919.71875,
+              "width": 736,
+              "height": 638.390625,
+              "top": 2919.71875,
+              "right": 752,
+              "bottom": 3558.109375,
+              "left": 16
+            }
+          }
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 734
+          }
+        ],
+        "docWidth": 768,
+        "viewport": 768
+      }
+    ],
+    "policy_keyboard": {
+      "first": {
+        "tag": "A",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main"
+      },
+      "afterEnter": {
+        "tag": "MAIN",
+        "id": "main",
+        "scrollY": 111
+      },
+      "next": {
+        "tag": "A",
+        "text": "cskh@trangtri4mua.com",
+        "rect": {
+          "x": 40,
+          "y": 4748.1875,
+          "width": 181.8125,
+          "height": 19,
+          "top": 4748.1875,
+          "right": 221.8125,
+          "bottom": 4767.1875,
+          "left": 40
+        },
+        "insideArticle": true,
+        "insideAside": false
+      }
+    },
+    "maps": [
+      {
+        "url": "https://trangtri4mua.com/lien-he/",
+        "mainCount": 1,
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Liên Hệ"
+          },
+          {
+            "tag": "H2",
+            "text": "Gửi Yêu Cầu Tư Vấn & Báo Giá"
+          },
+          {
+            "tag": "H2",
+            "text": "Bản Đồ Chỉ Đường Đến Showroom"
+          },
+          {
+            "tag": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "tag": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "tag": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "tag": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "tag": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "iframes": [
+          {
+            "title": "Bản đồ chỉ đường đến showroom Trang Trí 4 Mùa Thảo Điền",
+            "aria": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 125,
+              "y": 1569.078125,
+              "width": 1190,
+              "height": 378,
+              "top": 1569.078125,
+              "right": 1315,
+              "bottom": 1947.078125,
+              "left": 125
+            }
+          }
+        ],
+        "mapFocus": {
+          "tag": "IFRAME",
+          "title": "Bản đồ chỉ đường đến showroom Trang Trí 4 Mùa Thảo Điền"
+        },
+        "afterTab": {
+          "tag": "A",
+          "text": "0901.234.567",
+          "href": "tel:0901234567"
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/showroom/",
+        "mainCount": 1,
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Cửa Hàng & Showroom"
+          },
+          {
+            "tag": "H2",
+            "text": "1. Trải Nghiệm Thực Tế Tại Showroom"
+          },
+          {
+            "tag": "H3",
+            "text": "Không Gian Cây Thông Đủ Kích Cỡ"
+          },
+          {
+            "tag": "H3",
+            "text": "Phụ Kiện Bày Trí Theo Tone Màu Chuẩn"
+          },
+          {
+            "tag": "H3",
+            "text": "Bàn Phối Thử Phụ Kiện Trực Tiếp"
+          },
+          {
+            "tag": "H3",
+            "text": "Nhận Hàng Trực Tiếp (Local Pickup)"
+          },
+          {
+            "tag": "H2",
+            "text": "2. Tiện Ích Dành Cho Khách Hàng Ghé Thăm"
+          },
+          {
+            "tag": "H3",
+            "text": "Bãi Đỗ Xe Ô Tô & Xe Máy Thuận Tiện"
+          },
+          {
+            "tag": "H3",
+            "text": "Thanh Toán Linh Hoạt Không Phụ Phí"
+          },
+          {
+            "tag": "H3",
+            "text": "Đóng Gói Chống Sốc Chuyên Nghiệp"
+          },
+          {
+            "tag": "H3",
+            "text": "Không Gian Trải Nghiệm Thân Thiện"
+          },
+          {
+            "tag": "H2",
+            "text": "3. Thông Tin Địa Chỉ & Giờ Mở Cửa"
+          },
+          {
+            "tag": "H3",
+            "text": "Hệ Thống Showroom & Kho Trung Tâm TP. Hồ Chí Minh"
+          },
+          {
+            "tag": "H2",
+            "text": "4. Bản Đồ Vị Trí & Hướng Dẫn Di Chuyển"
+          },
+          {
+            "tag": "H3",
+            "text": "Bạn Cần Khảo Sát Không Gian Hoặc Báo Giá Dự Án Decor?"
+          },
+          {
+            "tag": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "tag": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "tag": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "tag": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "tag": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "iframes": [
+          {
+            "title": "Bản đồ vị trí showroom Trang Trí 4 Mùa Thảo Điền",
+            "aria": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 125,
+              "y": 1753.46875,
+              "width": 1190,
+              "height": 378,
+              "top": 1753.46875,
+              "right": 1315,
+              "bottom": 2131.46875,
+              "left": 125
+            }
+          }
+        ],
+        "mapFocus": {
+          "tag": "IFRAME",
+          "title": "Bản đồ vị trí showroom Trang Trí 4 Mùa Thảo Điền"
+        },
+        "afterTab": {
+          "tag": "A",
+          "text": "Nhận Tư Vấn Dự Án Qua Zalo",
+          "href": "https://zalo.me/0901234567"
+        }
+      }
+    ],
+    "policy_headings": [
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Chính Sách Bảo Mật"
+          },
+          {
+            "tag": "H4",
+            "text": "Cam Kết Bảo Vệ Quyền Riêng Tư"
+          },
+          {
+            "tag": "H2",
+            "text": "1. Mục Đích Thu Thập & Xử Lý Dữ Liệu"
+          },
+          {
+            "tag": "H2",
+            "text": "2. Phạm Vi Dữ Liệu Thu Thập"
+          },
+          {
+            "tag": "H2",
+            "text": "3. Quy Định Về Cookie, Attribution & Lưu Trữ Cục Bộ Trình Duyệt"
+          },
+          {
+            "tag": "H2",
+            "text": "4. Thời Gian Lưu Trữ Thông Tin"
+          },
+          {
+            "tag": "H2",
+            "text": "5. Các Đơn Vị Được Tiếp Cận Dữ Liệu"
+          },
+          {
+            "tag": "H2",
+            "text": "6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân"
+          },
+          {
+            "tag": "H3",
+            "text": "Ban Quản Trị Dữ Liệu & Bảo Mật Thông Tin"
+          },
+          {
+            "tag": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "tag": "H4",
+            "text": "Hỗ Trợ Mua Hàng & Dữ Liệu"
+          }
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Chính Sách Vận Chuyển"
+          },
+          {
+            "tag": "H4",
+            "text": "Miễn Phí Vận Chuyển Toàn Quốc Cho Đơn Hàng Từ 500.000đ"
+          },
+          {
+            "tag": "H2",
+            "text": "1. Biểu Phí Vận Chuyển Chi Tiết & Thời Gian Giao Hàng"
+          },
+          {
+            "tag": "H2",
+            "text": "2. Quy Chuẩn Đóng Gói Bảo Vệ Hàng Dễ Vỡ"
+          },
+          {
+            "tag": "H2",
+            "text": "3. Quyền Lợi Đồng Kiểm Mở Hộp Khi Nhận Hàng (COD)"
+          },
+          {
+            "tag": "H4",
+            "text": "Mở Hộp Kiểm Tra Trước Khi Trả Tiền"
+          },
+          {
+            "tag": "H4",
+            "text": "Từ Chối Nhận Miễn Phí Nếu Nứt Vỡ"
+          },
+          {
+            "tag": "H2",
+            "text": "4. Khuyến Nghị Đặt Hàng Mùa Cao Điểm Lễ Hội"
+          },
+          {
+            "tag": "H3",
+            "text": "Bạn Cần Tra Cứu Vận Đơn Hoặc Cần Giao Hỏa Tốc?"
+          },
+          {
+            "tag": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "tag": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          }
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Chính Sách Đổi Trả"
+          },
+          {
+            "tag": "H4",
+            "text": "Đổi Mới 1-1 Trong 7 Ngày"
+          },
+          {
+            "tag": "H4",
+            "text": "Miễn Phí 100% Cước Đổi Trả Lỗi"
+          },
+          {
+            "tag": "H4",
+            "text": "Thu Hồi Tận Nhà Thuận Tiện"
+          },
+          {
+            "tag": "H4",
+            "text": "Hoàn Tiền Nhanh Trong 1 – 2 Ngày"
+          },
+          {
+            "tag": "H2",
+            "text": "1. Điều Kiện Áp Dụng Đổi Trả Sản Phẩm"
+          },
+          {
+            "tag": "H4",
+            "text": "Lưu Ý Quan Trọng Khi Nhận Hàng"
+          },
+          {
+            "tag": "H2",
+            "text": "2. Quy Trình 3 Bước Đổi Trả Tận Nơi"
+          },
+          {
+            "tag": "H4",
+            "text": "Bước 1: Tiếp Nhận Thông Tin Khiếu Nại"
+          },
+          {
+            "tag": "H4",
+            "text": "Bước 2: Xác Nhận & Điều Phối Lấy Hàng"
+          },
+          {
+            "tag": "H4",
+            "text": "Bước 3: Gửi Hàng Mới Hoặc Hoàn Tiền"
+          },
+          {
+            "tag": "H2",
+            "text": "3. Phân Định Chi Phí Vận Chuyển Khi Đổi Trả"
+          },
+          {
+            "tag": "H3",
+            "text": "Bạn Cần Hỗ Trợ Đổi Hàng Hoặc Giải Quyết Sự Cố?"
+          },
+          {
+            "tag": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "tag": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          }
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Chính Sách Thanh Toán"
+          },
+          {
+            "tag": "H2",
+            "text": "1. Bảng Tổng Hợp Phương Thức Thanh Toán"
+          },
+          {
+            "tag": "H2",
+            "text": "2. Chi Tiết Các Hình Thức Thanh Toán & Quy Trình"
+          },
+          {
+            "tag": "H3",
+            "text": "1. Thanh Toán Khi Nhận Hàng (COD – Cash On Delivery)"
+          },
+          {
+            "tag": "H3",
+            "text": "2. Thanh Toán Chuyển Khoản Ngân Hàng Napas247 (VietQR)"
+          },
+          {
+            "tag": "H4",
+            "text": "Thông Tin Đơn Vị Thụ Hưởng & Doanh Nghiệp Bán Hàng"
+          },
+          {
+            "tag": "H3",
+            "text": "3. Thanh Toán Trực Tiếp Tại Showroom"
+          },
+          {
+            "tag": "H3",
+            "text": "4. Quy Trình Xuất Hóa Đơn Điện Tử Giá Trị Gia Tăng (VAT)"
+          },
+          {
+            "tag": "H3",
+            "text": "Bạn Cần Hỗ Trợ Xác Nhận Thanh Toán Hoặc Xuất Hóa Đơn VAT?"
+          },
+          {
+            "tag": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "tag": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          }
+        ]
+      }
+    ],
+    "b2b_category_focus": {
+      "url": "https://trangtri4mua.com/#b2b-consultation",
+      "active": {
+        "tag": "SECTION",
+        "id": "b2b-consultation"
+      },
+      "targetTop": 0.421875
+    }
+  },
+  "post_r34_buy_now_recheck": {
+    "scriptUrl": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790267299",
+    "handler": "function handleInstantCheckout(e) {\n\t\t\tif (e) e.preventDefault();\n\n\t\t\tvar triggerBtn = e ? e.currentTarget : stickyBuyBtn;\n\t\t\tif (triggerBtn && triggerBtn.classList.contains('is-loading')) return;\n\n\t\t\tif (!validateVariations()) return;\n\n\t\t\t// Visual button feedback & anti-duplicate lock\n\t\t\tvar originalHtml = '';\n\t\t\tif (triggerBtn) {\n\t\t\t\ttriggerBtn.classList.add('is-loading');\n\t\t\t\toriginalHtml = triggerBtn.innerHTML;\n\t\t\t\ttriggerBtn.innerHTML = '<span class=\"tt4m-spinner\"></span> Đang chuyển...';\n\t\t\t}\n\n\t\t\t// Atomic Server-Side Redirect: Inject tt4m_buy_now hidden field into cart form\n\t\t\tvar cartForm = document.querySelector('form.cart');\n\t\t\tvar flag = null;\n\t\t\tif (cartForm) {\n\t\t\t\tflag = cartForm.querySelector('input[name=\"tt4m_buy_now\"]');\n\t\t\t\tif (!flag) {\n\t\t\t\t\tflag = document.createElement('input');\n\t\t\t\t\tflag.type = 'hidden';\n\t\t\t\t\tflag.name = 'tt4m_buy_now';\n\t\t\t\t\tflag.value = '1';\n\t\t\t\t\tcartForm.appendChild(flag);\n\t\t\t\t} else {\n\t\t\t\t\tflag.value = '1';\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tvar redirected = false;\n\t\t\tfunction goToCheckout() {\n\t\t\t\tif (redirected) return;\n\t\t\t\tredirected = true;\n\t\t\t\twindow.location.href = TT4M.checkoutUrl;\n\t\t\t}\n\n\t\t\t// Reset handler on request failure, abort, or error\n\t\t\tfunction resetPurchaseState(errorMessage) {\n\t\t\t\tif (redirected) return;\n\n\t\t\t\tif (triggerBtn) {\n\t\t\t\t\ttriggerBtn.classList.remove('is-loading');\n\t\t\t\t\ttriggerBtn.innerHTML = originalHtml || '<span>Mua ngay</span>';\n\t\t\t\t}\n\t\t\t\tif (mainAtc) {\n\t\t\t\t\tmainAtc.classList.remove('is-loading', 'loading');\n\t\t\t\t}\n\t\t\t\tif (stickyBuyBtn && stickyBuyBtn !== triggerBtn) {\n\t\t\t\t\tstickyBuyBtn.classList.remove('is-loading');\n\t\t\t\t}\n\t\t\t\tif (flag) {\n\t\t\t\t\tflag.value = '0';\n\t\t\t\t}\n\n\t\t\t\tif (window.jQuery) {\n\t\t\t\t\twindow.jQuery(document.body).off('added_to_cart.tt4m_buy');\n\t\t\t\t\twindow.jQuery(document).off('ajaxError.tt4m_buy');\n\t\t\t\t}\n\n",
+    "handler_has_4000_timer": false,
+    "slow_abort_recheck": {
+      "events": [
+        {
+          "t": 350,
+          "type": "ready"
+        },
+        {
+          "t": 385,
+          "type": "clicked"
+        },
+        {
+          "t": 482,
+          "type": "held"
+        },
+        {
+          "t": 6985,
+          "type": "aborted"
+        }
+      ],
+      "state": {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "h1": "Tháp nhũ điện – Trang trí Noel",
+        "empty": false,
+        "cart": [
+          "Giỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng",
+          "Giỏ hàng0 ₫\n\t\n\t\t0"
+        ]
+      }
+    },
+    "note": "Sau deploy Batch 6, request abort 6.5s ở main PDP không còn tự điều hướng; chưa kiểm đủ success/sticky/double-click/cart-existing nên R4-01 vẫn OPEN.",
+    "whole_script_contains_4000_elsewhere": true
+  },
+  "cleanup": {
+    "cart": {
+      "cart": [
+        "Giỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng",
+        "Giỏ hàng0 ₫\n\t\n\t\t0"
+      ],
+      "cookies": []
+    },
+    "browser_closed": true
+  },
+  "limitations": [
+    "Không xác minh đơn lịch sử, owner approval, vật liệu/nhãn nhà cung cấp, giấy đăng ký/MST, tài khoản ngân hàng hoặc retention backend.",
+    "Không gửi Contact/comment, không gọi/Zalo, không đặt đơn, không thêm giỏ; option product 269 chỉ kiểm selector/ID/SKU/giá.",
+    "Cookie/storage quan sát trên profile đã clear; không có control hiển thị để chạy accept/reject/change-choice."
+  ]
+}

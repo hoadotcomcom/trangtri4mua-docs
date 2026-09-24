@@ -2964,3 +2964,128 @@ Batch 4 chỉ sửa Contact và một footer widget, chưa bao phủ acceptance 
 - Không test tham số giao dịch/handler của redirect trên production. LCP là lab local ba lượt, không phải CrUX/RUM và không chứng minh ảnh hưởng kinh doanh.
 - Một POST Mua ngay bị giữ rồi abort trước khi server xử lý; không thêm sản phẩm, gửi form, gọi/Zalo hoặc đặt đơn. Cuối vòng giỏ 0₫; browser riêng đã đóng.
 - Bộ bằng chứng gồm **1 JSON + 5 screenshot**. Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
+
+---
+
+<a id="round-r35"></a>
+
+# Vòng R35 — Nghiệm thu độc lập Batch 5 và Batch 6
+
+Ngày kiểm tra: **24/09/2026**. Watcher pull hai commit Coder: Batch 5 **`693c80e`**, Batch 6 **`fef8ec3`**; `ASSISTANT_REPLY.md` hiện có SHA-256 **`0d324d8a00a401db5d44f36e1768f3552ce354c27c96a0f0f63e3e0c01370c82`**.
+
+Hai bàn giao công bố `FIXED` cho 10 issue. Năm scout đọc độc lập SEO/specs, variations, privacy/identity, safety/hero và accessibility; Main kiểm production bằng crawl HTTP, profile browser sạch và Chromium ở 375/768/1440px. Kết quả: **R2-06, R2-15, R2-07 CLOSED; bảy issue còn lại giữ OPEN**.
+
+## Ma trận nghiệm thu
+
+| Issue | Kết quả R35 | Trạng thái hiện hành | Bằng chứng quyết định |
+|---|---|---|---|
+| R2-06 | **PASS** | **CLOSED** | Ba URL commerce đã khỏi page sitemap; crawl toàn bộ 113 URL sitemap đều direct 200, self-canonical, indexable; 94 product API khớp 94 PDP + shop archive. |
+| R2-03 | **FAIL** | OPEN | SET-HG-70 còn lệch `1m8–2m4` với bảng `1m8–2m1`; Kẹo gậy mô tả bảy tổ hợp nhưng bảng/selector có năm; chưa có owner/source approval. |
+| R2-02 | **PARTIAL** | OPEN | Năm option nay phân biệt kiểu + size và map đúng ID/SKU/giá; mô tả/ảnh vẫn quảng bá quy cách/giá khác selector, chưa cart từng option hoặc chứng minh đơn lịch sử. |
+| R31-01 | **PARTIAL** | OPEN | Policy khớp session/30 phút và mở rộng Contact/B2B/comment; profile sạch vẫn ghi 7 `sbjs_*` không có control nhìn thấy, inventory còn thiếu field/dịch vụ ngoài. |
+| R2-22 | **PARTIAL** | OPEN | Identity tự công bố đã đồng bộ Contact/About/footer/privacy/payment/schema; testimonial “thực tế”, “hàng trăm công trình” và claim ảnh thật/chuyên môn vẫn thiếu căn cứ công khai. |
+| R2-05 | **FAIL** | OPEN | Bỏ nhiều từ tuyệt đối, nhưng hướng dẫn bao cát/cước/móc, công suất LED và tuyết bọt vẫn thiếu model/nguồn/owner approval, có số liệu chưa khớp. |
+| R2-04 | **PARTIAL** | OPEN | Hero đã phân biệt set phụ kiện và combo có cây; listing có ba sản phẩm. Lời hứa thành phần/size, metadata listing và hai card category rỗng vẫn không khớp offer. |
+| R2-15 | **PASS** | **CLOSED** | 4/4 policy có source order `ARTICLE → ASIDE` ở 375/768; Tab sau skip-link vào link trong article, bảng cuộn, không overflow, một main. |
+| R2-20 | **PARTIAL** | OPEN | Contact/Showroom đã có map title, Tab vào/ra và heading đúng. Policy vẫn có nhiều bước `H1→H4`/`H2→H4`. |
+| R2-07 | **PASS** | **CLOSED** | Click từ Shop và category đặt focus vào `SECTION#b2b-consultation` ở đầu viewport; Tab kế tiếp tới Zalo CTA. |
+
+## Ba issue CLOSED
+
+### R2-06 — inventory sitemap sạch trong crawl hiện hành
+
+Sitemap index có post, page, product, category và product-category. Page sitemap còn chín URL nội dung; `/gio-hang/`, `/thanh-toan/`, `/tai-khoan/` đã bị loại mà cart/account vẫn `noindex`.
+
+Main hợp nhất 113 URL duy nhất từ bốn sitemap nội dung rồi GET no-cache/manual redirect:
+
+- **113/113 HTTP 200**;
+- **0 redirect**, **0 noindex/X-Robots noindex**;
+- **0 canonical mismatch**, **0 thiếu canonical**, **0 lỗi fetch**.
+
+Store API báo 94 product published; product sitemap có 95 loc gồm đúng 94 PDP và `/cua-hang/`. Post sitemap có hub + ba bài; product-category sitemap giữ sáu category indexable, gồm Combo/Cây thông. Với bằng chứng delta R27/R29/R32 và crawl toàn inventory hiện hành, R2-06 đủ CLOSED. Việc submit GSC chỉ thực hiện khi owner có quyền, không phải điều kiện để gọi một XML đang sạch là lỗi.
+
+### R2-15 — source order và keyboard order đã khớp
+
+Cả bốn policy tại 375/768 đều có một main, không nested main, và `.tt4m-page-layout` chứa `ARTICLE` trước `ASIDE`. Article bắt đầu khoảng y=194, sidebar nằm sau toàn nội dung trên mobile. Ba bảng giữ wrapper ngang; 375px có `clientWidth=341`, `scrollWidth=580`, không làm document overflow.
+
+Trên Privacy, skip-link focus `main#main`; Tab tiếp theo vào email trong article tại cuối nội dung, không vào sidebar. Source/reading/focus order nay cùng visual order nên R2-15 CLOSED.
+
+### R2-07 — focus sau cross-page fragment đã đúng
+
+Từ Shop và category Noel, CTA tới `/#b2b-consultation`; target có `tabindex="-1"`, nằm tại top≈0 sau navigation và trở thành `document.activeElement`. Tab kế tiếp tới **“Nhắn Zalo Tư Vấn”**. Luồng không còn trả focus về `BODY`, đủ CLOSED.
+
+## Bảy issue còn OPEN
+
+### R2-03 và R2-02 — selector rõ hơn nhưng catalog kẹo vẫn tự mâu thuẫn
+
+Product 269 nay có năm lựa chọn hợp lệ:
+
+| Option | Variation | SKU | Giá |
+|---|---:|---|---:|
+| Kẹo gậy 1m8 | 271 | TT4M-074-80 | 1.150.000₫ |
+| Kẹo gậy 2m | 272 | TT4M-074-2M | 1.450.000₫ |
+| Kẹo gậy 2m5 | 273 | TT4M-074-50 | 1.650.000₫ |
+| Kẹo tròn 1m2 | 274 | TT4M-074-20 | 750.000₫ |
+| Kẹo tròn 1m5 | 270 | TT4M-074-1M50 | 950.000₫ |
+
+Mỗi option đổi đúng hidden variation ID/SKU/price và mở CTA. Tuy nhiên mô tả còn liệt kê Kẹo tròn 1m8/2m không tồn tại trong selector. Ảnh chung in quy cách/giá khác data bán, gồm gậy 1m50 và giá cao hơn. Chưa thêm từng option vào giỏ hoặc có bằng chứng bảo toàn đơn lịch sử.
+
+Bảng COMBO-GD-50, lính 38cm và vật liệu kẹo đã sửa đúng lỗi R32. SET-HG-70 vẫn mô tả dùng cây **1m8–2m4** nhưng bảng ghi **1m8–2m1**; bảng thêm LED trong khi mô tả thành phần chưa làm rõ. Vì vậy R2-03 FAIL và R2-02 PARTIAL, đều OPEN.
+
+### R31-01 — runtime thời hạn đã khớp nhưng inventory/control chưa đủ
+
+Sau clear toàn bộ cookie/storage, homepage ghi sáu cookie Sourcebuster session và `sbjs_session` hết hạn khoảng 30 phút; sessionStorage tạo `wc_cart_hash`/`wc_fragments_*`. Policy nay công bố đúng các thời hạn này, nêu Contact/B2B/comment, đơn hàng 2 năm, lead 12 tháng, quyền xóa và giữ notice Contact/comment.
+
+Profile sạch không có UI accept/reject/change choice; policy gọi attribution phục vụ phân bổ truyền thông nhưng không phân loại rõ essential/tùy chọn hoặc cung cấp control first-party. Inventory chưa nêu đủ `comment`/URL form, entry/referrer/page/user-agent, account/login và các tài nguyên Google Maps/Fonts, Cloudflare Insights, Gravatar; thời hạn từng HTML5 key cũng chưa rõ. R31-01 giữ PARTIAL/OPEN.
+
+### R2-22 — identity đồng bộ, trust evidence chưa đạt
+
+Contact, About, privacy, footer, Organization schema và payment cùng công bố **Hộ Kinh Doanh Trang Trí 4 Mùa**, MST/ĐKKD **0318294567**, địa chỉ/hotline/email; payment đặt thông tin chủ thể ngay trước tài khoản thụ hưởng `TRANG TRI 4 MUA`. Homepage đã bỏ “1.200 khách” và badge “Đã mua”.
+
+Homepage vẫn gọi ba testimonial 5 sao là **“Đánh Giá Thực Tế”** nhưng không có nguồn/ngày/link/consent. Bài dự toán vẫn nói **“kinh nghiệm thi công hàng trăm công trình thực tế”**; About/FAQ còn claim ảnh chụp thực tế 100% và hơn 200 mẫu mà không có hồ sơ đối chứng. Identity mới là self-declared; không xác minh giấy đăng ký/tài khoản ngân hàng. R2-22 PARTIAL/OPEN.
+
+### R2-05 — công thức an toàn vẫn không có căn cứ áp dụng
+
+Bài cafe vẫn hướng dẫn cây ngoài trời dùng bao cát 15–20kg; cây ≥2m1 dùng cước 25–30kg neo vào móc dán tường 3M hoặc điểm tựa. Câu bổ sung về loại sàn/gió không nêu model cây/đế/móc, nền dán, giới hạn gió hay tải toàn hệ.
+
+Bài dự toán ghi 3–5W/cuộn, 24W cho 30–40m và 60W cho 50–80m, nhưng bảng khác lại ghi 30m khoảng 15–18W; không có model/datasheet. FAQ còn hướng dẫn phun tuyết bọt theo phiên không gắn sản phẩm/NSX. R2-05 FAIL/OPEN.
+
+### R2-04 — hero tốt hơn, đích và phạm vi offer chưa đồng bộ
+
+Hero đã bỏ “8+”/“Tiết Kiệm 20%”, phân biệt set phụ kiện 50–70 món với combo có cây; **Xem Set Combo** tới listing ba sản phẩm có giá. Tuy nhiên:
+
+- bullet chung liệt kê châu/kẹo/nơ/sao/LED cho mọi set 50–70, trong khi SET-HG-70 không công bố đầy đủ thành phần đó;
+- metadata listing vẫn nói mọi combo có cây và “Tiết kiệm 15%–20%”, trong khi hai set không có cây và COMBO-GD-50 giảm khoảng 21%;
+- card Cây ghi đủ size 1m2–2m4 nhưng hai PDP không có 1m2;
+- card Đèn/Quà vẫn dẫn category 0 sản phẩm mà nguồn không báo “đang cập nhật/tư vấn”.
+
+R2-04 PARTIAL/OPEN.
+
+### R2-20 — policy heading tree chưa được sửa
+
+Contact và Showroom đều có một main; hai iframe có title cụ thể, nhận focus và Tab tiếp sang control kế tiếp. Heading hai trang nay đi H1→H2→H3.
+
+Policy vẫn dùng H4 để lấy cỡ chữ:
+
+- Privacy và Shipping mở H1 rồi H4;
+- Shipping/Returns có H4 trực tiếp dưới H2;
+- Payment có H4 dưới H3, sidebar cũng dùng H4.
+
+Vì location gốc gồm policy template và acceptance yêu cầu heading tree trên mỗi page, R2-20 giữ PARTIAL/OPEN.
+
+## Ghi nhận current-state sau R34 — R4-01 chưa đổi trạng thái
+
+Asset `theme-scripts.js?ver=1790267299` sau Batch 6 không còn timer 4 giây trong `handleInstantCheckout()`. Một phép giữ/abort POST 6,5 giây mới ở nút PDP không tự điều hướng, giỏ vẫn 0. Đây là cải thiện so snapshot Batch 4 của R34.
+
+Chưa kiểm đủ success path, sticky, double-click, giỏ đã có hàng và retry/error UI nên không dùng phép recheck ngoài phạm vi này để đóng R4-01. Trạng thái vẫn OPEN; Coder nên bàn giao riêng theo toàn acceptance.
+
+## Bằng chứng R35
+
+[JSON tổng hợp](review-evidence/2026-09-24/r35-batch5-6-verification.json) · [B2B focus](review-evidence/2026-09-24/r35-b2b-focused.webp) · [policy DOM order](review-evidence/2026-09-24/r35-policy-dom-order.webp) · [Showroom map/heading](review-evidence/2026-09-24/r35-showroom-map-heading.webp) · [hero](review-evidence/2026-09-24/r35-home-hero.webp) · [5 option kẹo](review-evidence/2026-09-24/r35-candy-options.webp) · [SET-HG-70 mismatch](review-evidence/2026-09-24/r35-set70-spec-mismatch.webp) · [hướng dẫn neo](review-evidence/2026-09-24/r35-safety-anchor-guidance.webp) · [privacy storage](review-evidence/2026-09-24/r35-privacy-storage-policy.webp).
+
+## Giới hạn và bàn giao R35
+
+- Đóng **1 P1** (R2-06) và **2 P2** (R2-15, R2-07). Tổng hiện hành **33 OPEN — 9 P1, 18 P2, 6 P3**. Không thêm issue mới.
+- Không xác minh đơn lịch sử, owner approval, nhãn/vật liệu, giấy đăng ký/MST, tài khoản thụ hưởng, review/case study, retention backend hoặc quyền GSC.
+- Không gửi form/bình luận, gọi/Zalo, thêm giỏ hoặc đặt đơn. Cuối vòng giỏ 0₫; browser riêng đã đóng.
+- Bộ bằng chứng gồm **1 JSON + 8 screenshot**. Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
