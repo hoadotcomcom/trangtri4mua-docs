@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R30 — chủ thể doanh nghiệp, tác giả và tín hiệu tin cậy](#round-r30), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **41 OPEN — 10 P1, 25 P2, 6 P3**. R30 không thêm issue; nâng R2-22 từ P2 lên P1 vì website hướng dẫn chuyển khoản/cam kết hợp đồng và VAT nhưng chưa công bố chủ thể pháp lý của bên bán. R29 đã được đính chính: URL `noindex` vắng sitemap là hệ quả dự kiến, không phải lỗi R2-06 độc lập.
+> **Trạng thái hiện hành:** xem [Vòng R31 — luồng dữ liệu cá nhân, cookie và thông báo tại điểm thu thập](#round-r31), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **42 OPEN — 11 P1, 25 P2, 6 P3**. R31 thêm R31-01 P1 vì policy chỉ mô tả dữ liệu đơn hàng trong khi first visit ghi attribution cookies và các form công khai thu thập thêm dữ liệu nhưng chưa nối tới notice tương ứng.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -1542,6 +1542,7 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-SEARCH-NEW-SKU | Search cũ mới thử “tháp nhũ”, chưa kiểm SKU/tên/intent của năm sản phẩm mới | DONE | [R28](#round-r28): 7 query HTTP, 5 luồng live→full search, 2 mobile, một lần Tab/Enter mở PDP; mở rộng R2-14, không thêm issue trùng. |
 | Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R29](#round-r29): hai category 200 có 3/2 sản phẩm, metadata/schema riêng nhưng vẫn `nofollow, noindex` và không canonical; thêm R29-01. Việc vắng sitemap là hệ quả đúng của `noindex`, chỉ recheck R2-06 sau khi term indexable. |
 | Q-BUSINESS-IDENTITY | Chưa tái kiểm tra NAP, chủ thể nhận tiền, Organization và author chain theo hệ thống | DONE | [R30](#round-r30): 8 trang doanh nghiệp/chính sách + 3 bề mặt editorial; giữ R2-10/R2-12/R2-16 OPEN, nâng R2-22 lên P1. Không xác minh offline hoặc giao dịch. |
+| Q-PRIVACY-DATA-FLOWS | Chưa đối chiếu policy với form công khai, cookie/storage first visit và notice tại điểm thu thập | DONE | [R31](#round-r31): browser first visit ghi 7 cookie `sbjs_*`; Contact/comment chưa có link policy trong form, còn checkout có notice/link. Thêm R31-01; không đưa kết luận pháp lý hoặc coi checkbox bình luận là consent toàn site. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
 | Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
@@ -2598,4 +2599,83 @@ Theo [hướng dẫn chính thức của Rank Math](https://rankmath.com/kb/url-
 - Không kiểm hồ sơ đăng ký doanh nghiệp, MST, quyền sở hữu showroom/tài khoản, khả năng xuất VAT, số khách hàng hoặc hoạt động hotline/email. Đây là khoảng trống cần owner cung cấp nguồn xác nhận, không phải kết luận gian dối.
 - Không audit lại toàn bộ pháp lý/nội dung chính sách; không đưa ý kiến pháp lý. R30 kiểm sự nhất quán, khả năng nhận diện chủ thể và mối liên kết nội dung/schema.
 - Bộ bằng chứng gồm **4 JSON + 5 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.
+
+---
+
+<a id="round-r31"></a>
+
+# Vòng R31 — Luồng dữ liệu cá nhân, cookie và thông báo tại điểm thu thập
+
+Ngày kiểm tra: **24/09/2026**, timestamp chi tiết trong JSON. Đầu vòng `main` bằng `origin/main`; `ASSISTANT_REPLY.md` vẫn SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**, không có bàn giao Coder mới.
+
+Hai scout đọc độc lập HTML form và mã WooCommerce liên quan; Main kiểm lại bằng Chromium thật, cookie jar, DOM sau hydrate và chính sách công khai. Kết luận dưới đây dựa trên bằng chứng runtime của Main; kết quả scout chỉ hỗ trợ kiểm tra chéo.
+
+## Phạm vi và phương pháp
+
+- Fresh visit homepage sau khi xóa cookie, `localStorage` và `sessionStorage`; lặp lại lần hai để xác nhận.
+- Form Liên hệ, bình luận bài chọn size, Tài khoản và checkout. Không gửi form, bình luận, đăng nhập hoặc đặt đơn.
+- Để đọc checkout thật, thêm **Bờm kính Noel** vào giỏ trong browser cô lập, không nhập dữ liệu và không đặt hàng; sau đó xóa sản phẩm, quay lại `/gio-hang/` và xác nhận link giỏ hiển thị **0 ₫**.
+- Đọc nội dung policy, script/config `sourcebuster` + `wc-order-attribution`, tài nguyên runtime và link notice trong từng form. Không suy diễn nghĩa vụ pháp lý từ checklist kỹ thuật.
+
+## Phần đang hoạt động đúng — giữ nguyên
+
+- Checkout đặt notice ngay trong form: “Thông tin đặt hàng ... chỉ sử dụng cho mục đích xác nhận, giao hàng”, kèm link **Chính sách bảo mật** trước bước đặt hàng.
+- Form bình luận nói email không hiển thị công khai; checkbox lưu tên/email/website trong trình duyệt tồn tại, **không được chọn sẵn**. Giữ lựa chọn này tách biệt, không biến nó thành consent tổng quát.
+- Form đăng nhập dùng `autocomplete="username"` và `autocomplete="current-password"`; policy vẫn truy cập được từ footer.
+- Fresh visit chưa ghi `localStorage`/`sessionStorage` trong snapshot đầu. Không gộp mọi storage vào một kết luận thiếu consent và không yêu cầu banner cho dữ liệu thiết yếu chỉ vì có cookie.
+
+## R31-01 — P1 OPEN: Policy và notice chưa bao phủ các luồng dữ liệu đang chạy
+
+### Problem
+
+Policy hiện tuyên bố dữ liệu cá nhân “chỉ” dùng cho xử lý đơn hàng, giao nhận và chăm sóc khách hàng; phạm vi/thời hạn cũng chỉ mô tả dữ liệu đơn hàng. Trong khi đó:
+
+1. Fresh visit homepage, trước bất kỳ thao tác đồng ý nào, browser ghi **7 cookie `sbjs_*`**. Giá trị quan sát chứa entry page/referrer, source/campaign mặc định, số trang/lượt truy cập và user agent. Config runtime đặt `allowTracking: true`; hai lần tải sạch đều không tìm thấy UI cookie/consent đang hiển thị.
+2. Form Liên hệ thu thập tên, email bắt buộc, điện thoại/Zalo tùy chọn và nội dung yêu cầu; form bình luận thu thập tên, email, website tùy chọn và nội dung. Hai form không có notice/link policy trong chính form. Policy chưa phân biệt tư vấn trước mua, bình luận công khai/lưu phía server, attribution hoặc dữ liệu trình duyệt.
+
+Đây là khoảng trống minh bạch và khả năng kiểm soát quan sát được, **không phải kết luận website vi phạm pháp luật**. Không khẳng định IP thực được lưu: snapshot `sbjs_udata` ghi `uip=(none)`.
+
+### Why it matters
+
+Khách chỉ đọc nội dung đã phát sinh dữ liệu attribution nhưng policy không giúp nhận diện mục đích, nhóm dữ liệu, thời hạn hoặc cách quản lý. Người gửi Contact/comment khó nối dữ liệu của luồng đang dùng với phạm vi xử lý và thời hạn công bố; checkbox “lưu trong trình duyệt” của comment có thể bị hiểu nhầm là lựa chọn dữ liệu duy nhất dù không điều khiển attribution toàn site hay xử lý bình luận phía server.
+
+### Evidence
+
+[Cookie/policy runtime](review-evidence/2026-09-24/r31-cookie-policy-runtime.json) · [ma trận form](review-evidence/2026-09-24/r31-public-forms.json) · [first visit không có consent UI](review-evidence/2026-09-24/r31-home-first-visit.webp) · [Contact](review-evidence/2026-09-24/r31-contact-form.webp) · [comment](review-evidence/2026-09-24/r31-comment-form.webp) · [checkout đối chứng](review-evidence/2026-09-24/r31-checkout-privacy.webp) · [Tài khoản](review-evidence/2026-09-24/r31-account-page.webp).
+
+### Recommended solution
+
+Owner lập inventory thực tế cho từng luồng: Contact, comment, tài khoản/checkout, WooCommerce attribution, cart/storage và dịch vụ ngoài; xác nhận mục đích, trường dữ liệu, bên tiếp cận, thời hạn/điều kiện xóa và cơ chế kiểm soát. Cập nhật policy theo inventory đã xác nhận, rồi:
+
+- đặt notice ngắn + link policy sát nút gửi Contact/comment; nói rõ phần bình luận nào công khai và giữ checkbox lưu trình duyệt không chọn sẵn;
+- phân loại attribution/storage theo mục đích thật. Nếu là tùy chọn, không ghi trước lựa chọn và nối control nhìn thấy với `allowTracking`; nếu owner xác định là thiết yếu, giải thích cụ thể thay vì dựng checkbox hình thức;
+- nêu nhóm cookie/storage, dữ liệu nguồn truy cập/trình duyệt, thời hạn thực và cách thay đổi/xóa; không tái dùng thời hạn 2 năm của đơn hàng cho lead/comment khi chưa xác nhận.
+
+Không bắt buộc một banner cho mọi cookie và không coi việc thêm checkbox consent vào từng form là đủ nếu policy/inventory vẫn sai phạm vi.
+
+### Acceptance criteria
+
+1. Trên profile sạch, hành vi cookie/storage trước và sau lựa chọn khớp phân loại đã công bố; control tùy chọn thực sự bật/tắt cơ chế tracking, giữ trạng thái và có thể đổi lại.
+2. Policy liệt kê đúng các luồng quan sát được, nhóm dữ liệu, mục đích, bên tiếp cận, thời hạn/điều kiện xóa và kênh thực thi quyền; không còn dùng câu “chỉ” theo phạm vi đơn hàng nếu hệ thống vẫn xử lý attribution/lead/comment.
+3. Contact và comment có notice/link ngay tại điểm gửi. Comment nói rõ dữ liệu nào công khai/lưu server; checkbox lưu trình duyệt vẫn không chọn sẵn và không đại diện cho consent toàn site.
+4. Checkout notice/link hiện có vẫn hoạt động; login/checkout regression test không làm hỏng autocomplete, tạo phiên, giỏ hoặc đặt hàng.
+5. Browser test trên profile mới chứng minh trạng thái default, accept/reject/change choice (nếu áp dụng), cookie jar và storage; lưu ảnh + JSON/network evidence. Không nghiệm thu chỉ từ nội dung banner hoặc cấu hình admin.
+
+### Phân ranh
+
+- **R2-21** tiếp tục sở hữu ngôn ngữ demo/validation của Contact; **R16-01** sở hữu liên kết lỗi với trường; **R2-22** sở hữu định danh chủ thể doanh nghiệp. R31-01 chỉ sở hữu inventory, policy, notice và control của luồng dữ liệu.
+- Tài nguyên Google Fonts/Maps/Cloudflare được đưa vào bước inventory, nhưng R31 không tự kết luận mỗi tài nguyên đặt cookie hay chia sẻ một trường dữ liệu cụ thể khi chưa có network/policy của nhà cung cấp.
+- Cookie giỏ hàng phát sinh trong ca checkout không phải bằng chứng first visit; sản phẩm thử đã được xóa. Không mở issue riêng cho cart storage trong vòng này.
+
+### Status
+
+OPEN
+
+## Giới hạn và bàn giao R31
+
+- Thêm **1 P1**, tổng hiện hành **42 OPEN — 11 P1, 25 P2, 6 P3**. Không đóng hoặc đổi mức issue cũ.
+- Đây là review kỹ thuật minh bạch dữ liệu, không phải tư vấn pháp lý, kiểm toán bảo mật hay kiểm kê backend hoàn chỉnh. Không kiểm database, log, email, retention thực, request body của dịch vụ ngoài hoặc mọi `Set-Cookie`.
+- Không gửi dữ liệu cá nhân, form, bình luận hay đơn hàng. Chỉ thêm/xóa một sản phẩm trong browser cô lập để đọc notice checkout; đã xác nhận giỏ trở về 0 ₫.
+- Bộ bằng chứng gồm **2 JSON + 5 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.

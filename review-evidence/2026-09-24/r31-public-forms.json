@@ -1,0 +1,686 @@
+{
+  "observed_at_utc": "2026-09-24T15:25:34.605Z",
+  "forms": {
+    "contact": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "action": "https://trangtri4mua.com/lien-he/",
+      "method": "post",
+      "legend": [
+        "Contact Form Demo"
+      ],
+      "text": "Contact Form Demo\nHọ và tên đệm\nTên\nĐịa chỉ Email\nSố điện thoại / Zalo\nNội dung yêu cầu (Diện tích, phong cách, ngân sách...)\nSubmit Form",
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "__fluent_form_embded_post_id",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "[hidden]"
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "_fluentform_1_fluentformnonce",
+          "id": "_fluentform_1_fluentformnonce",
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "[hidden]"
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "_wp_http_referer",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "[hidden]"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "names[first_name]",
+          "id": "ff_1_names_first_name_",
+          "label": "Họ và tên đệm",
+          "required": "false",
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "names[last_name]",
+          "id": "ff_1_names_last_name_",
+          "label": "Tên",
+          "required": "false",
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "email",
+          "id": "ff_1_email",
+          "label": "Địa chỉ Email",
+          "required": "true",
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "subject",
+          "id": "ff_1_subject",
+          "label": "Số điện thoại / Zalo",
+          "required": "false",
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "name": "message",
+          "id": "ff_1_message",
+          "label": "Nội dung yêu cầu (Diện tích, phong cách, ngân sách...)",
+          "required": "true",
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "name": null,
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "Submit Form"
+        }
+      ],
+      "links": [],
+      "checks": [],
+      "privacyNearby": [
+        {
+          "text": "Chính Sách Bảo Mật",
+          "href": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+          "insideForm": false
+        }
+      ]
+    },
+    "comment": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "action": "https://trangtri4mua.com/wp-comments-post.php",
+      "method": "post",
+      "text": "Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu *\n\nTên\n *\n\nEmail\n *\n\nTrang web\n\nViết bình luận\n *\n\nLưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.\n\nGửi bình luận",
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "author",
+          "id": "author",
+          "label": "Tên  *",
+          "required": true,
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "email",
+          "id": "email",
+          "label": "Email  *",
+          "required": true,
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "url",
+          "id": "url",
+          "label": "Trang web",
+          "required": null,
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "name": "comment",
+          "id": "comment",
+          "label": "Viết bình luận *",
+          "required": true,
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "name": "wp-comment-cookies-consent",
+          "id": "wp-comment-cookies-consent",
+          "label": "Lưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.",
+          "required": null,
+          "autocomplete": null,
+          "value": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "name": "submit",
+          "id": "submit",
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "Gửi bình luận"
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "comment_post_ID",
+          "id": "comment_post_ID",
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "[hidden]"
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "comment_parent",
+          "id": "comment_parent",
+          "label": null,
+          "required": null,
+          "autocomplete": null,
+          "value": "[hidden]"
+        }
+      ],
+      "links": [],
+      "privacyNearby": [
+        {
+          "text": "Chính Sách Bảo Mật",
+          "href": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+          "insideForm": false
+        }
+      ]
+    },
+    "account": {
+      "url": "https://trangtri4mua.com/tai-khoan/",
+      "title": "Tài Khoản - Trang trí 4 mùa",
+      "forms": [
+        {
+          "action": "https://trangtri4mua.com/",
+          "method": "get",
+          "class": "ct-search-form",
+          "text": "Không có kết quả",
+          "fields": [
+            {
+              "tag": "INPUT",
+              "type": "search",
+              "name": "s",
+              "id": null,
+              "label": null,
+              "required": null,
+              "autocomplete": "off",
+              "value": null
+            },
+            {
+              "tag": "BUTTON",
+              "type": "submit",
+              "name": null,
+              "id": null,
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": ""
+            }
+          ],
+          "links": []
+        },
+        {
+          "action": "https://trangtri4mua.com/tai-khoan/",
+          "method": "post",
+          "class": "woocommerce-form woocommerce-form-login login",
+          "text": "Tên tài khoản hoặc địa chỉ email *\nBắt buộc\n\nMật khẩu *\nBắt buộc\n\n Ghi nhớ mật khẩu\nĐăng nhập\n\nQuên mật khẩu?",
+          "fields": [
+            {
+              "tag": "INPUT",
+              "type": "text",
+              "name": "username",
+              "id": "username",
+              "label": "Tên tài khoản hoặc địa chỉ email *Bắt buộc",
+              "required": true,
+              "autocomplete": "username",
+              "value": null
+            },
+            {
+              "tag": "INPUT",
+              "type": "password",
+              "name": "password",
+              "id": "password",
+              "label": "Mật khẩu *Bắt buộc",
+              "required": true,
+              "autocomplete": "current-password",
+              "value": null
+            },
+            {
+              "tag": "BUTTON",
+              "type": "button",
+              "name": null,
+              "id": null,
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": ""
+            },
+            {
+              "tag": "INPUT",
+              "type": "checkbox",
+              "name": "rememberme",
+              "id": "rememberme",
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": null
+            },
+            {
+              "tag": "INPUT",
+              "type": "hidden",
+              "name": "woocommerce-login-nonce",
+              "id": "woocommerce-login-nonce",
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": null
+            },
+            {
+              "tag": "INPUT",
+              "type": "hidden",
+              "name": "_wp_http_referer",
+              "id": null,
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": null
+            },
+            {
+              "tag": "BUTTON",
+              "type": "submit",
+              "name": "login",
+              "id": null,
+              "label": null,
+              "required": null,
+              "autocomplete": null,
+              "value": "Đăng nhập"
+            }
+          ],
+          "links": [
+            {
+              "text": "Quên mật khẩu?",
+              "href": "https://trangtri4mua.com/tai-khoan/lost-password/"
+            }
+          ]
+        }
+      ],
+      "privacyLinks": [
+        {
+          "text": "Chính Sách Bảo Mật",
+          "href": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+        }
+      ]
+    },
+    "checkout": {
+      "url": "https://trangtri4mua.com/thanh-toan/",
+      "found": true,
+      "text": "Thông tin thanh toán\n\nSố điện thoại nhận hàng *\n\nHọ và tên người nhận *\n\nĐịa chỉ nhận hàng chi tiết *\n\nTỉnh / Thành phố *\n\nPhường / Xã, Quận / Huyện *\n\n Tạo tài khoản mới?\n\n Giao hàng đến một địa chỉ khác?\n\nGhi chú đơn hàng (nếu có) (tuỳ chọn)\n\nĐơn hàng của bạn\nSẢN PHẨM\tTẠM TÍNH\n\nBờm kính Noel - Trang trí Noel\n  × 1\t10.000 ₫\nTạm tính\t10.000 ₫\n\nShipment\nFlat rate\nFree shipping\nGiao tại cửa hàng\n\nTổng\t10.000 ₫\nChuyển khoản qua VietQR\nXác nhận tự động 24/7\n\nMã VietQR thanh toán tự động (kèm số tài khoản và nội dung đơn hàng) sẽ hiển thị ngay sau khi quý khách bấm hoàn tất đơn.\n\nQuý khách chỉ cần mở ứng dụng ngân hàng bất kỳ để quét mã xác nhận nhanh chóng, an toàn và hoàn toàn không mất phí giao dịch.\n\nThanh toán khi nhận hàng (COD)\nĐồng kiểm khi nhận\n\nThông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật.\n\nĐặt hàng ngay (Đồng kiểm khi nhận)\nThông tin đặt hàng được bảo mật. Quý khách luôn được quyền đồng kiểm tra hàng trước khi thanh toán COD.\nĐồng kiểm khi nhận\nFreeship từ 500k\nĐổi trả trong 7 ngày\nHotline 0901.234.567",
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_source_type",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_referrer",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_campaign",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_source",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_medium",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_content",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_id",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_term",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_source_platform",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_creative_format",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_utm_marketing_tactic",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_session_entry",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_session_start_time",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_session_pages",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_session_count",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "wc_order_attribution_user_agent",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "tel",
+          "name": "billing_phone",
+          "id": "billing_phone",
+          "label": "Số điện thoại nhận hàng *",
+          "required": "true",
+          "autocomplete": "tel"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "billing_first_name",
+          "id": "billing_first_name",
+          "label": "Họ và tên người nhận *",
+          "required": "true",
+          "autocomplete": "name"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "billing_address_1",
+          "id": "billing_address_1",
+          "label": "Địa chỉ nhận hàng chi tiết *",
+          "required": "true",
+          "autocomplete": "address-line1"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "billing_city",
+          "id": "billing_city",
+          "label": "Tỉnh / Thành phố *",
+          "required": "true",
+          "autocomplete": "section-billing billing address-level2"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "billing_state",
+          "id": "billing_state",
+          "label": "Phường / Xã, Quận / Huyện *",
+          "required": "true",
+          "autocomplete": "section-billing billing address-level1"
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "name": "createaccount",
+          "id": "createaccount",
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "checkbox",
+          "name": "ship_to_different_address",
+          "id": "ship-to-different-address-checkbox",
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "tel",
+          "name": "shipping_phone",
+          "id": "shipping_phone",
+          "label": "Số điện thoại người nhận *",
+          "required": "true",
+          "autocomplete": "section-shipping shipping tel"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "shipping_first_name",
+          "id": "shipping_first_name",
+          "label": "Họ và tên người nhận *",
+          "required": "true",
+          "autocomplete": "section-shipping shipping given-name"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "shipping_address_1",
+          "id": "shipping_address_1",
+          "label": "Địa chỉ nhận hàng chi tiết *",
+          "required": "true",
+          "autocomplete": "section-shipping shipping address-line1"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "shipping_city",
+          "id": "shipping_city",
+          "label": "Tỉnh / Thành phố *",
+          "required": "true",
+          "autocomplete": "section-shipping shipping address-level2"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "shipping_state",
+          "id": "shipping_state",
+          "label": "Phường / Xã, Quận / Huyện *",
+          "required": "true",
+          "autocomplete": "section-shipping shipping address-level1"
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "name": "order_comments",
+          "id": "order_comments",
+          "label": "Ghi chú đơn hàng (nếu có) (tuỳ chọn)",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "shipping_method[0]",
+          "id": "shipping_method_0_flat_rate1",
+          "label": "Flat rate",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "shipping_method[0]",
+          "id": "shipping_method_0_free_shipping2",
+          "label": "Free shipping",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "shipping_method[0]",
+          "id": "shipping_method_0_local_pickup3",
+          "label": "Giao tại cửa hàng",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "payment_method",
+          "id": "payment_method_bacs",
+          "label": "Chuyển khoản qua VietQRXác nhận tự động 24/7",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "name": "payment_method",
+          "id": "payment_method_cod",
+          "label": "Thanh toán khi nhận hàng (COD)Đồng kiểm khi nhận",
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "name": "woocommerce_checkout_place_order",
+          "id": "place_order",
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "woocommerce-process-checkout-nonce",
+          "id": "woocommerce-process-checkout-nonce",
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        },
+        {
+          "tag": "INPUT",
+          "type": "hidden",
+          "name": "_wp_http_referer",
+          "id": null,
+          "label": null,
+          "required": null,
+          "autocomplete": null
+        }
+      ],
+      "privacyLinks": [
+        {
+          "text": "Chính sách bảo mật",
+          "href": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+        }
+      ],
+      "privacyText": [
+        "Thông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật.",
+        "Thông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật."
+      ]
+    }
+  }
+}

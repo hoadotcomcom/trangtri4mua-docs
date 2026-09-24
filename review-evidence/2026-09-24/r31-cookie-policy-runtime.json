@@ -1,0 +1,263 @@
+{
+  "observed_at_utc": "2026-09-24T15:29:53.237Z",
+  "scope": {
+    "site": "https://trangtri4mua.com",
+    "method": "managed Chromium; fresh-cookie reload; DOM and cookie jar inspection; no form/comment/order submitted"
+  },
+  "first_visit": {
+    "url": "https://trangtri4mua.com/",
+    "cookies": [
+      {
+        "name": "sbjs_migrations",
+        "value": "1418474375998%3D1",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 32,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_current_add",
+        "value": "fd%3D2026-09-24%2015%3A25%3A15%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 117,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_first",
+        "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 248,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_current",
+        "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 250,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_first_add",
+        "value": "fd%3D2026-09-24%2015%3A25%3A15%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 115,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_session",
+        "value": "pgs%3D1%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": 1790265315,
+        "size": 67,
+        "httpOnly": false,
+        "secure": false,
+        "session": false,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      },
+      {
+        "name": "sbjs_udata",
+        "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F150.0.0.0%20Safari%2F537.36",
+        "domain": ".trangtri4mua.com",
+        "path": "/",
+        "expires": -1,
+        "size": 218,
+        "httpOnly": false,
+        "secure": false,
+        "session": true,
+        "priority": "Medium",
+        "sourceScheme": "Secure"
+      }
+    ],
+    "storage": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "consentUi": []
+  },
+  "repeat_confirmation": {
+    "cookies": [
+      {
+        "name": "sbjs_session",
+        "value": "pgs%3D1%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F",
+        "expires": 1790265538,
+        "session": false
+      },
+      {
+        "name": "sbjs_migrations",
+        "value": "1418474375998%3D1",
+        "expires": -1,
+        "session": true
+      },
+      {
+        "name": "sbjs_first_add",
+        "value": "fd%3D2026-09-24%2015%3A28%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+        "expires": -1,
+        "session": true
+      },
+      {
+        "name": "sbjs_first",
+        "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+        "expires": -1,
+        "session": true
+      },
+      {
+        "name": "sbjs_current",
+        "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+        "expires": -1,
+        "session": true
+      },
+      {
+        "name": "sbjs_current_add",
+        "value": "fd%3D2026-09-24%2015%3A28%3A58%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+        "expires": -1,
+        "session": true
+      },
+      {
+        "name": "sbjs_udata",
+        "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F150.0.0.0%20Safari%2F537.36",
+        "expires": -1,
+        "session": true
+      }
+    ],
+    "consentUi": []
+  },
+  "site_config": {
+    "scripts": [
+      {
+        "id": "sourcebuster-js-js",
+        "src": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.1.2",
+        "text": null
+      },
+      {
+        "id": "wc-order-attribution-js-extra",
+        "src": null,
+        "text": "\nvar wc_order_attribution = {\"params\":{\"lifetime\":1.0e-5,\"session\":30,\"base64\":false,\"ajaxurl\":\"https://trangtri4mua.com/wp-admin/admin-ajax.php\",\"prefix\":\"wc_order_attribution_\",\"allowTracking\":true},\"fields\":{\"source_type\":\"current.typ\",\"referrer\":\"current_add.rf\",\"utm_campaign\":\"current.cmp\",\"utm_source\":\"current.src\",\"utm_medium\":\"current.mdm\",\"utm_content\":\"current.cnt\",\"utm_id\":\"current.id\",\"utm_term\":\"current.trm\",\"utm_source_platform\":\"current.plt\",\"utm_creative_format\":\"current.fmt\",\"utm_marketing_tactic\":\"current.tct\",\"session_entry\":\"current_add.ep\",\"session_start_time\":\"current_add.fd\",\"session_pages\":\"session.pgs\",\"session_count\":\"udata.vst\",\"user_agent\":\"udata.uag\"}};\n//# sourceURL=wc-order-attribution-js-extra\n"
+      },
+      {
+        "id": "wc-order-attribution-js",
+        "src": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.1.2",
+        "text": null
+      },
+      {
+        "id": null,
+        "src": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+        "text": null
+      }
+    ],
+    "resources": [
+      "https://fonts.googleapis.com/css2?family=Be%20Vietnam%20Pro:wght@400;500;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap",
+      "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.1.2",
+      "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.1.2",
+      "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+    ]
+  },
+  "policy": {
+    "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+    "title": "Chính Sách Bảo Mật Thông Tin Khách Hàng | Trang Trí 4 Mùa",
+    "text": "Chính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách Thanh Toán\nHỗ Trợ Mua Hàng 24/7\n\nHotline: 0901.234.567\n\nZalo CSKH: 0901.234.567\n\nEmail: cskh@trangtri4mua.com\n\nShowroom: 123 Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\n\nGiờ mở cửa: 08:00 – 21:00 hàng ngày\n\n💬 Chat Zalo Hỗ Trợ\n\nTrang Trí 4 Mùa tôn trọng và cam kết bảo vệ dữ liệu cá nhân của quý khách hàng. Chính sách bảo mật này giải thích rõ ràng cách thức chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân theo đúng quy định của Luật An toàn thông tin mạng và Nghị định số 13/2023/NĐ-CP của Chính phủ về Bảo vệ dữ liệu cá nhân.\n\nCam Kết Bảo Mật Dữ Liệu\n\nDữ liệu cá nhân của bạn chỉ được sử dụng nhằm mục đích xử lý đơn hàng, điều phối giao nhận bưu phẩm và chăm sóc khách hàng. Chúng tôi cam kết tuyệt đối KHÔNG mua bán, KHÔNG chia sẻ thông tin cho bên thứ ba trái phép.\n\n1. Mục Đích Thu Thập Dữ Liệu\nXử lý và xác nhận đơn hàng: Liên hệ xác nhận mẫu mã, số lượng và địa chỉ giao hàng.\nĐiều phối giao nhận: Chuyển giao thông tin cần thiết cho đối tác vận chuyển (GHN, GHTK, Viettel Post, Grab) để phát hàng tận nơi.\nChăm sóc và bảo hành: Hướng dẫn lắp đặt, hỗ trợ kích hoạt chính sách đổi trả 7 ngày và giải quyết khiếu nại.\nHóa đơn doanh nghiệp: Xuất hóa đơn điện tử GTGT (VAT) đối với các đơn hàng B2B hoặc khách hàng có nhu cầu.\n2. Phạm Vi Dữ Liệu Thu Thập\n\nThông tin thu thập bao gồm:\n\nHọ và tên người nhận hàng.\nSố điện thoại liên lạc (dùng xác nhận đơn và điều phối giao bưu phẩm).\nĐịa chỉ giao nhận chi tiết (Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố).\nĐịa chỉ email (tùy chọn, nhận thông báo đơn hàng hoặc file hóa đơn VAT điện tử).\nThông tin doanh nghiệp (Tên công ty, MST, Địa chỉ công ty) — chỉ thu thập khi quý khách yêu cầu xuất hóa đơn VAT.\n\n⚠️ Cam Kết Về Dữ Liệu Tài Chính: Trang Trí 4 Mùa tuyệt đối KHÔNG thu thập và KHÔNG lưu trữ số thẻ ngân hàng, số CVV/CVC, mật khẩu Internet Banking hay mã xác thực OTP của quý khách. Mọi giao dịch trực tuyến đều được thực hiện bảo mật qua cổng thanh toán mã hóa của Ngân hàng.\n\n3. Thời Gian Lưu Trữ Thông Tin\n\nDữ liệu đơn hàng được lưu trữ nội bộ an toàn nhằm mục đích tra cứu lịch sử mua hàng, phục vụ đối soát bảo hành đổi trả trong thời hạn tối đa 2 năm hoặc cho đến khi khách hàng có văn bản yêu cầu hủy bỏ.\n\n4. Các Đơn Vị Được Tiếp Cận Dữ Liệu\nNhân viên xử lý đơn hàng và đóng gói kho của Trang Trí 4 Mùa.\nĐơn vị cung cấp dịch vụ vận chuyển chính thức nhằm phục vụ công tác phát hàng.\nCơ quan quản lý nhà nước có thẩm quyền khi có yêu cầu bằng văn bản theo đúng trình tự pháp luật Việt Nam.\n5. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân\n\nQuý khách có toàn quyền kiểm tra, cập nhật hoặc yêu cầu xóa bỏ vĩnh viễn thông tin cá nhân của mình trên hệ thống bất cứ lúc nào:\n\n• Gửi yêu cầu qua Email: cskh@trangtri4mua.com\n• Hoặc liên hệ trực tiếp Hotline/Zalo: 0901.234.567\n\nBan Quản Trị Dữ Liệu & Bảo Mật\n\nMọi câu hỏi hoặc khiếu nại về an toàn thông tin cá nhân, vui lòng liên hệ trực tiếp bộ phận Quản trị Bảo mật:\n\n📧 Email: cskh@trangtri4mua.com 📞 Hotline: 0901.234.567",
+    "keyword_hits": [
+      {
+        "term": "cookie",
+        "found": false
+      },
+      {
+        "term": "cookies",
+        "found": false
+      },
+      {
+        "term": "referrer",
+        "found": false
+      },
+      {
+        "term": "utm",
+        "found": false
+      },
+      {
+        "term": "campaign",
+        "found": false
+      },
+      {
+        "term": "user agent",
+        "found": false
+      },
+      {
+        "term": "trình duyệt",
+        "found": false
+      },
+      {
+        "term": "bình luận",
+        "found": false
+      },
+      {
+        "term": "liên hệ",
+        "found": true
+      },
+      {
+        "term": "website",
+        "found": false
+      }
+    ]
+  },
+  "comment_cookie_choice": {
+    "present": true,
+    "checked": false,
+    "defaultChecked": false,
+    "required": false,
+    "label": "Lưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.",
+    "formPrivacyLinks": []
+  },
+  "checkout_positive_control": {
+    "notice": [
+      "Thông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật.",
+      "Thông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật."
+    ],
+    "links": [
+      {
+        "text": "Chính sách bảo mật",
+        "href": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+      }
+    ]
+  },
+  "cleanup": {
+    "cart_url": "https://trangtri4mua.com/gio-hang/",
+    "observed_accessible_link": "Giỏ hàng 0 ₫",
+    "cart_rows": 0
+  },
+  "limitations": [
+    "Không kết luận pháp lý.",
+    "Không suy diễn cookie thứ ba từ tên tài nguyên.",
+    "Không gửi form, bình luận hay đơn hàng; chỉ thêm rồi xóa một sản phẩm để đọc checkout."
+  ]
+}
