@@ -1,0 +1,30 @@
+{
+  "round": "R73",
+  "date": "2026-09-24",
+  "handoff": "Batch 45",
+  "issue": "R26-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "artifact": "review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json",
+  "artifactAccepted": {
+    "closeButton": "Homepage and PDP records show focus entered BUTTON.ct-toggle-close and returned to a BUTTON claimed to be the trigger.",
+    "escapeAndBackdropFocus": "Both templates record isSameAsTrigger=true after the stated close actions."
+  },
+  "artifactGaps": [
+    "Backdrop and Escape records contain only focus equality; they do not record an open state or prove the drawer became closed (aria-expanded=false, aria-hidden, is-active, or inert).",
+    "No Tab/Shift+Tab sequence proves focus containment or the next Tab position after restoration.",
+    "No repeated-cycle trace records inert cleanup, handler duplication, trigger removal fallback, or search-modal regression.",
+    "The handoff claims dialog semantics, but the committed artifact contains no role, aria-modal, aria-controls, aria-expanded, or close-label fields.",
+    "No actual screen-reader run, transcript, speech log, or named AT/browser combination is supplied; DOM ARIA strings are not the acceptance-required screen-reader check."
+  ],
+  "independentPdpCheck": {
+    "viewport": "375x812",
+    "open": {"triggerAriaExpanded": "true", "drawerRole": "dialog", "drawerAriaModal": "true", "drawerInert": false, "activeTag": "BUTTON", "activeClass": "ct-toggle-close", "focusInsideDrawer": true},
+    "syntheticBackdropProbe": {"triggerAriaExpanded": "true", "drawerInert": false, "closed": false, "note": "A DOM click() probe did not close the drawer; this is not treated as a conclusive pointer failure, but it also cannot validate the artifact's backdrop claim."},
+    "escapeProbeLimitation": "The subsequent sequence did not re-prove an open state before Escape and is excluded from the verdict.",
+    "tabsClosed": true
+  },
+  "decision": "Keep R26-01 PARTIAL/OPEN. Provide full state transitions for each close path, Tab containment/continuation, repeated inert/handler checks, search regression, and one named screen-reader run.",
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"cartMutation": false, "formSubmitted": false, "externalLinkActivated": false, "browserTabsClosed": true}
+}

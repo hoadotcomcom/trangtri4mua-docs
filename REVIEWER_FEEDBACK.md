@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R72 — nghiệm thu độc lập Batch 44](#round-r72), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R31-01 CLOSED; R5-02 vẫn FAIL vì bốn ảnh live vẫn trắng sau scroll dù script mới đã deploy.
+> **Trạng thái hiện hành:** xem [Vòng R73 — nghiệm thu độc lập Batch 45](#round-r73), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: artifact chưa chứng minh trạng thái đóng, Tab/inert lặp hoặc kiểm thử screen reader.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4782,3 +4782,33 @@ Policy live đã liệt kê checkout, Contact/B2B, comment, account, VAT; cookie
 - [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
 - Không click CTA/card, không thêm giỏ, không gửi form, không đăng nhập hoặc tạo đơn; bốn browser tab đã đóng.
 - Đóng **R31-01 [P1]**; R5-02 giữ OPEN. Tổng còn **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r73"></a>
+
+# Vòng R73 — Nghiệm thu độc lập Batch 45
+
+## R26-01 — PARTIAL / OPEN
+
+Artifact mới bổ sung hai template và ba nhãn đường đóng. Phần nút đóng có open state cho thấy focus vào `BUTTON.ct-toggle-close`, rồi `isSameAsTrigger=true`; phần này phù hợp cải thiện đã thấy từ R43.
+
+Tuy nhiên artifact chưa đủ các acceptance còn thiếu:
+
+- record backdrop và Escape chỉ có `isSameAsTrigger=true`; không có open state hoặc trạng thái panel sau action (`aria-expanded=false`, `aria-hidden`, mất `is-active`, `inert=true`), nên chưa chứng minh drawer thực sự đóng;
+- không có chuỗi Tab/Shift+Tab để chứng minh focus containment và Tab tiếp tục đúng vị trí sau restore;
+- không có trace mở/đóng lặp để kiểm inert, handler cạnh tranh hoặc fallback khi trigger bị gỡ;
+- không có regression modal tìm kiếm desktop;
+- handoff mô tả `role`, `aria-modal`, `aria-controls`, `aria-expanded` và close label, nhưng JSON commit không chứa các trường này;
+- quan trọng nhất, không có lượt chạy screen reader thực tế, tên tổ hợp AT/browser, transcript hoặc speech log. Đọc attribute DOM không thay thế acceptance “kiểm bổ sung một screen reader”.
+
+Probe độc lập trên PDP 375×812 xác nhận phần mở đạt: `aria-expanded=true`, drawer `role=dialog`, `aria-modal=true`, bỏ inert và focus nằm trong nút đóng. Một DOM `click()` lên backdrop không đóng panel (`aria-expanded` vẫn true); vì đây là synthetic event, Reviewer không dùng nó để kết luận pointer path hỏng, nhưng nó cũng không thể bù khoảng trống artifact.
+
+R26-01 giữ **PARTIAL / OPEN**. Bàn giao tiếp theo cần trace trạng thái trước/sau cho từng đường đóng, chuỗi Tab/Shift+Tab, ít nhất hai vòng liên tiếp với inert/handler, regression search và một lượt screen reader có thể audit.
+
+## Bằng chứng và tổng R73
+
+- [JSON Batch 45](review-evidence/2026-09-24/r73-batch-45-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
+- Không click link/CTA thương mại, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
