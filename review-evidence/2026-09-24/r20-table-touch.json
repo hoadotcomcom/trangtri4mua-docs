@@ -1,0 +1,2025 @@
+{
+  "method": "CDP Input.dispatchTouchEvent, vuốt trái; không gán scrollLeft để tạo kết quả",
+  "runs": [
+    {
+      "timestamp": "2026-09-24T13:34:36.928Z",
+      "page": "size",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "width": 375,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Phân loại kích thước",
+              "Chiều cao trần đề xuất",
+              "Diện tích phòng",
+              "Đường kính chân tán",
+              "Vị trí & Không gian phù hợp"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 941
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 570,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Vị trí & Không gian phù hợp",
+              "left": 711.875,
+              "right": 942.265625
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 2,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Phân loại kích thước",
+              "Chiều cao trần đề xuất",
+              "Diện tích phòng",
+              "Đường kính chân tán",
+              "Vị trí & Không gian phù hợp"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 941
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 570,
+            "maxScroll": 570,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Vị trí & Không gian phù hợp",
+              "left": 141.875,
+              "right": 372.265625
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 1,
+          "before": {
+            "index": 1,
+            "headers": [
+              "Tiêu chí so sánh",
+              "Thông lá PVC truyền thống",
+              "Thông lá đúc PE cao cấp (Real Touch)",
+              "Thông phủ tuyết Bắc Âu"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 895
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 524,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thông phủ tuyết Bắc Âu",
+              "left": 689.640625,
+              "right": 896.71875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 1,
+            "headers": [
+              "Tiêu chí so sánh",
+              "Thông lá PVC truyền thống",
+              "Thông lá đúc PE cao cấp (Real Touch)",
+              "Thông phủ tuyết Bắc Âu"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 895
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 524,
+            "maxScroll": 524,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thông phủ tuyết Bắc Âu",
+              "left": 165.640625,
+              "right": 372.71875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 2,
+          "before": {
+            "index": 2,
+            "headers": [
+              "Chiều cao cây",
+              "Số lượng quả châu",
+              "Chiều dài dây đèn LED",
+              "Phụ kiện điểm xuyết (Nơ, Kẹo, Chuông)",
+              "Kích thước đỉnh & Chân cây"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 1051
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 680,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Kích thước đỉnh & Chân cây",
+              "left": 819.796875,
+              "right": 1052.9375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 2,
+          "after": {
+            "index": 2,
+            "headers": [
+              "Chiều cao cây",
+              "Số lượng quả châu",
+              "Chiều dài dây đèn LED",
+              "Phụ kiện điểm xuyết (Nơ, Kẹo, Chuông)",
+              "Kích thước đỉnh & Chân cây"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 1051
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 680,
+            "maxScroll": 680,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Kích thước đỉnh & Chân cây",
+              "left": 139.796875,
+              "right": 372.9375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T13:34:40.291Z",
+      "page": "size",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "width": 768,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Phân loại kích thước",
+              "Chiều cao trần đề xuất",
+              "Diện tích phòng",
+              "Đường kính chân tán",
+              "Vị trí & Không gian phù hợp"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 941,
+              "scrollWidth": 940
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 941,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 193,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Vị trí & Không gian phù hợp",
+              "left": 719.875,
+              "right": 950.265625
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Phân loại kích thước",
+              "Chiều cao trần đề xuất",
+              "Diện tích phòng",
+              "Đường kính chân tán",
+              "Vị trí & Không gian phù hợp"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 941,
+              "scrollWidth": 940
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 941,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 193,
+            "maxScroll": 193,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Vị trí & Không gian phù hợp",
+              "left": 526.875,
+              "right": 757.265625
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 1,
+          "before": {
+            "index": 1,
+            "headers": [
+              "Tiêu chí so sánh",
+              "Thông lá PVC truyền thống",
+              "Thông lá đúc PE cao cấp (Real Touch)",
+              "Thông phủ tuyết Bắc Âu"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 895,
+              "scrollWidth": 895
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 895,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 147,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thông phủ tuyết Bắc Âu",
+              "left": 697.640625,
+              "right": 904.71875
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 1,
+            "headers": [
+              "Tiêu chí so sánh",
+              "Thông lá PVC truyền thống",
+              "Thông lá đúc PE cao cấp (Real Touch)",
+              "Thông phủ tuyết Bắc Âu"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 895,
+              "scrollWidth": 895
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 895,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 147,
+            "maxScroll": 147,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thông phủ tuyết Bắc Âu",
+              "left": 550.640625,
+              "right": 757.71875
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 2,
+          "before": {
+            "index": 2,
+            "headers": [
+              "Chiều cao cây",
+              "Số lượng quả châu",
+              "Chiều dài dây đèn LED",
+              "Phụ kiện điểm xuyết (Nơ, Kẹo, Chuông)",
+              "Kích thước đỉnh & Chân cây"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 1051,
+              "scrollWidth": 1051
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 1051,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 303,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Kích thước đỉnh & Chân cây",
+              "left": 827.796875,
+              "right": 1060.9375
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 2,
+            "headers": [
+              "Chiều cao cây",
+              "Số lượng quả châu",
+              "Chiều dài dây đèn LED",
+              "Phụ kiện điểm xuyết (Nơ, Kẹo, Chuông)",
+              "Kích thước đỉnh & Chân cây"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 1051,
+              "scrollWidth": 1051
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 1051,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 303,
+            "maxScroll": 303,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Kích thước đỉnh & Chân cây",
+              "left": 524.796875,
+              "right": 757.9375
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T13:34:50.910Z",
+      "page": "budget",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "width": 375,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Kích thước cây",
+              "Chất liệu & Dáng cây",
+              "Quy cách chân đế",
+              "Khoảng giá tham khảo (VNĐ)",
+              "Không gian phù hợp"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 916
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 545,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Không gian phù hợp",
+              "left": 740.28125,
+              "right": 917.28125
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 2,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Kích thước cây",
+              "Chất liệu & Dáng cây",
+              "Quy cách chân đế",
+              "Khoảng giá tham khảo (VNĐ)",
+              "Không gian phù hợp"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 916
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 545,
+            "maxScroll": 545,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Không gian phù hợp",
+              "left": 195.28125,
+              "right": 372.28125
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 1,
+          "before": {
+            "index": 1,
+            "headers": [
+              "Hạng mục phụ kiện",
+              "Quy cách đóng gói",
+              "Chất liệu & Đặc tính",
+              "Đơn giá thị trường (VNĐ)",
+              "Định lượng khuyên dùng"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 937
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 566,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Định lượng khuyên dùng",
+              "left": 733.953125,
+              "right": 938.9375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 2,
+          "after": {
+            "index": 1,
+            "headers": [
+              "Hạng mục phụ kiện",
+              "Quy cách đóng gói",
+              "Chất liệu & Đặc tính",
+              "Đơn giá thị trường (VNĐ)",
+              "Định lượng khuyên dùng"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 937
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 566,
+            "maxScroll": 566,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Định lượng khuyên dùng",
+              "left": 167.953125,
+              "right": 372.9375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 2,
+          "before": {
+            "index": 2,
+            "headers": [
+              "Loại thiết bị chiếu sáng",
+              "Thông số kỹ thuật",
+              "Tiêu chuẩn an toàn",
+              "Đơn giá tham khảo (VNĐ)",
+              "Định lượng sử dụng"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 929
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 558,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Định lượng sử dụng",
+              "left": 760.6875,
+              "right": 930.421875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 2,
+          "after": {
+            "index": 2,
+            "headers": [
+              "Loại thiết bị chiếu sáng",
+              "Thông số kỹ thuật",
+              "Tiêu chuẩn an toàn",
+              "Đơn giá tham khảo (VNĐ)",
+              "Định lượng sử dụng"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 929
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 558,
+            "maxScroll": 558,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Định lượng sử dụng",
+              "left": 202.6875,
+              "right": 372.421875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 3,
+          "before": {
+            "index": 3,
+            "headers": [
+              "Hạng mục vật tư",
+              "Quy cách & Kích thước",
+              "Chất liệu & Gia công",
+              "Đơn giá thị trường (VNĐ)",
+              "Công dụng chính"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 901
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 530,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Công dụng chính",
+              "left": 748.03125,
+              "right": 902.953125
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 3,
+            "headers": [
+              "Hạng mục vật tư",
+              "Quy cách & Kích thước",
+              "Chất liệu & Gia công",
+              "Đơn giá thị trường (VNĐ)",
+              "Công dụng chính"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 901
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 530,
+            "maxScroll": 530,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Công dụng chính",
+              "left": 218.03125,
+              "right": 372.953125
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 4,
+          "before": {
+            "index": 4,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 552.625,
+              "right": 704.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 4,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 332,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 220.625,
+              "right": 372.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 5,
+          "before": {
+            "index": 5,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 552.625,
+              "right": 704.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 5,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 332,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 220.625,
+              "right": 372.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 6,
+          "before": {
+            "index": 6,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 552.625,
+              "right": 704.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 6,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 703
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 332,
+            "maxScroll": 332,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 220.625,
+              "right": 372.1875
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T13:34:55.463Z",
+      "page": "budget",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "width": 768,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Kích thước cây",
+              "Chất liệu & Dáng cây",
+              "Quy cách chân đế",
+              "Khoảng giá tham khảo (VNĐ)",
+              "Không gian phù hợp"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 916,
+              "scrollWidth": 915
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 916,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 168,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Không gian phù hợp",
+              "left": 748.28125,
+              "right": 925.28125
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Kích thước cây",
+              "Chất liệu & Dáng cây",
+              "Quy cách chân đế",
+              "Khoảng giá tham khảo (VNĐ)",
+              "Không gian phù hợp"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 916,
+              "scrollWidth": 915
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 916,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 168,
+            "maxScroll": 168,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Không gian phù hợp",
+              "left": 580.28125,
+              "right": 757.28125
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 1,
+          "before": {
+            "index": 1,
+            "headers": [
+              "Hạng mục phụ kiện",
+              "Quy cách đóng gói",
+              "Chất liệu & Đặc tính",
+              "Đơn giá thị trường (VNĐ)",
+              "Định lượng khuyên dùng"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 937,
+              "scrollWidth": 937
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 937,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 189,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Định lượng khuyên dùng",
+              "left": 741.953125,
+              "right": 946.9375
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 1,
+            "headers": [
+              "Hạng mục phụ kiện",
+              "Quy cách đóng gói",
+              "Chất liệu & Đặc tính",
+              "Đơn giá thị trường (VNĐ)",
+              "Định lượng khuyên dùng"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 937,
+              "scrollWidth": 937
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 937,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 189,
+            "maxScroll": 189,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Định lượng khuyên dùng",
+              "left": 552.953125,
+              "right": 757.9375
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 2,
+          "before": {
+            "index": 2,
+            "headers": [
+              "Loại thiết bị chiếu sáng",
+              "Thông số kỹ thuật",
+              "Tiêu chuẩn an toàn",
+              "Đơn giá tham khảo (VNĐ)",
+              "Định lượng sử dụng"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 929,
+              "scrollWidth": 928
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 929,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 181,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Định lượng sử dụng",
+              "left": 768.6875,
+              "right": 938.421875
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 2,
+            "headers": [
+              "Loại thiết bị chiếu sáng",
+              "Thông số kỹ thuật",
+              "Tiêu chuẩn an toàn",
+              "Đơn giá tham khảo (VNĐ)",
+              "Định lượng sử dụng"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 929,
+              "scrollWidth": 928
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 929,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 181,
+            "maxScroll": 181,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Định lượng sử dụng",
+              "left": 587.6875,
+              "right": 757.421875
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 3,
+          "before": {
+            "index": 3,
+            "headers": [
+              "Hạng mục vật tư",
+              "Quy cách & Kích thước",
+              "Chất liệu & Gia công",
+              "Đơn giá thị trường (VNĐ)",
+              "Công dụng chính"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 901,
+              "scrollWidth": 901
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 901,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 153,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Công dụng chính",
+              "left": 756.03125,
+              "right": 910.953125
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 1,
+          "after": {
+            "index": 3,
+            "headers": [
+              "Hạng mục vật tư",
+              "Quy cách & Kích thước",
+              "Chất liệu & Gia công",
+              "Đơn giá thị trường (VNĐ)",
+              "Công dụng chính"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 901,
+              "scrollWidth": 901
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 901,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 153,
+            "maxScroll": 153,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Công dụng chính",
+              "left": 603.03125,
+              "right": 757.953125
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 4,
+          "before": {
+            "index": 4,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 0,
+          "after": {
+            "index": 4,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 5,
+          "before": {
+            "index": 5,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 0,
+          "after": {
+            "index": 5,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        },
+        {
+          "index": 6,
+          "before": {
+            "index": 6,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 0,
+          "after": {
+            "index": 6,
+            "headers": [
+              "Hạng mục vật tư",
+              "Số lượng",
+              "Quy cách & Chất liệu",
+              "Đơn giá dự toán",
+              "Thành tiền (VNĐ)"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Thành tiền (VNĐ)",
+              "left": 605.921875,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T13:34:58.410Z",
+      "page": "cafe",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "width": 375,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Gói dự toán",
+              "Quy mô mặt bằng",
+              "Hạng mục vật tư chi tiết",
+              "Chi phí dự toán"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 665
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 0,
+            "maxScroll": 294,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Chi phí dự toán",
+              "left": 515.140625,
+              "right": 666.359375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "attempts": 1,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Gói dự toán",
+              "Quy mô mặt bằng",
+              "Hạng mục vật tư chi tiết",
+              "Chi phí dự toán"
+            ],
+            "table": {
+              "display": "block",
+              "overflowX": "auto",
+              "clientWidth": 371,
+              "scrollWidth": 665
+            },
+            "wrapper": {
+              "clientWidth": 373,
+              "scrollWidth": 373,
+              "overflowX": "auto"
+            },
+            "scroller": "table",
+            "scrollLeft": 294,
+            "maxScroll": 294,
+            "scrollerRect": {
+              "x": 1,
+              "right": 374,
+              "width": 373
+            },
+            "lastHeader": {
+              "text": "Chi phí dự toán",
+              "left": 221.140625,
+              "right": 372.359375
+            },
+            "gesture": {
+              "x": 345,
+              "y": 90,
+              "endX": 30,
+              "hitScroller": true
+            },
+            "documentWidth": 375,
+            "viewportWidth": 375
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T13:34:59.191Z",
+      "page": "cafe",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "width": 768,
+      "rows": [
+        {
+          "index": 0,
+          "before": {
+            "index": 0,
+            "headers": [
+              "Gói dự toán",
+              "Quy mô mặt bằng",
+              "Hạng mục vật tư chi tiết",
+              "Chi phí dự toán"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Chi phí dự toán",
+              "left": 606.265625,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "attempts": 0,
+          "after": {
+            "index": 0,
+            "headers": [
+              "Gói dự toán",
+              "Quy mô mặt bằng",
+              "Hạng mục vật tư chi tiết",
+              "Chi phí dự toán"
+            ],
+            "table": {
+              "display": "table",
+              "overflowX": "visible",
+              "clientWidth": 748,
+              "scrollWidth": 748
+            },
+            "wrapper": {
+              "clientWidth": 748,
+              "scrollWidth": 748,
+              "overflowX": "auto"
+            },
+            "scroller": "wrapper",
+            "scrollLeft": 0,
+            "maxScroll": 0,
+            "scrollerRect": {
+              "x": 9,
+              "right": 759,
+              "width": 750
+            },
+            "lastHeader": {
+              "text": "Chi phí dự toán",
+              "left": 606.265625,
+              "right": 757.5
+            },
+            "gesture": {
+              "x": 734,
+              "y": 90,
+              "endX": 34,
+              "hitScroller": true
+            },
+            "documentWidth": 768,
+            "viewportWidth": 768
+          },
+          "endReached": true,
+          "lastHeaderVisible": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-09-24T11:42:36.096Z",
+  "mobile375": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": [
+      375,
+      812
+    ],
+    "scroll": [
+      2428,
+      375
+    ],
+    "bar": {
+      "x": 0,
+      "y": 751,
+      "width": 375,
+      "height": 61,
+      "top": 751,
+      "right": 375,
+      "bottom": 812,
+      "left": 0
+    },
+    "floating": {
+      "x": 317,
+      "y": 578,
+      "width": 46,
+      "height": 150,
+      "top": 578,
+      "right": 363,
+      "bottom": 728,
+      "left": 317
+    },
+    "buttons": [
+      {
+        "text": "Zalo",
+        "label": "Tư vấn nhanh qua Zalo",
+        "box": {
+          "x": 12,
+          "y": 760,
+          "width": 50,
+          "height": 44,
+          "top": 760,
+          "right": 62,
+          "bottom": 804,
+          "left": 12
+        }
+      },
+      {
+        "text": "Thêm giỏ",
+        "label": "Thêm vào giỏ hàng",
+        "box": {
+          "x": 70,
+          "y": 760,
+          "width": 128.21875,
+          "height": 44,
+          "top": 760,
+          "right": 198.21875,
+          "bottom": 804,
+          "left": 70
+        }
+      },
+      {
+        "text": "Mua ngay",
+        "label": "Mua ngay",
+        "box": {
+          "x": 206.21875,
+          "y": 760,
+          "width": 156.78125,
+          "height": 44,
+          "top": 760,
+          "right": 363,
+          "bottom": 804,
+          "left": 206.21875
+        }
+      }
+    ]
+  },
+  "mobile430": {
+    "viewport": [
+      430,
+      932
+    ],
+    "bar": {
+      "x": 0,
+      "y": 871,
+      "width": 430,
+      "height": 61,
+      "top": 871,
+      "right": 430,
+      "bottom": 932,
+      "left": 0
+    },
+    "floating": {
+      "x": 372,
+      "y": 698,
+      "width": 46,
+      "height": 150,
+      "top": 698,
+      "right": 418,
+      "bottom": 848,
+      "left": 372
+    },
+    "scrollWidth": 430
+  },
+  "cartAfterCleanup": "Giỏ Hàng\n“Tháp nhũ điện - Trang trí Noel” đã xóa.\nKhôi phục?\nChưa có sản phẩm nào trong giỏ hàng.\n\nQuay trở lại cửa hàng"
+}

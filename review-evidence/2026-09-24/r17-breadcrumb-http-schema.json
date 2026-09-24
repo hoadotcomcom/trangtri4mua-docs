@@ -1,0 +1,363 @@
+{
+  "pages": [
+    {
+      "utc": "2026-09-24T13:13:47Z",
+      "requested": "https://trangtri4mua.com/cua-hang/",
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/cua-hang/",
+      "visibleMarkup": [
+        {
+          "text": "Trang chủ Cửa Hàng",
+          "links": [
+            {
+              "text": "Trang chủ",
+              "url": "https://trangtri4mua.com/"
+            }
+          ],
+          "current": "Cửa Hàng"
+        }
+      ],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/cua-hang/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/cua-hang/",
+                "name": "Cửa Hàng"
+              }
+            }
+          ]
+        },
+        {
+          "id": null,
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Trang chủ",
+                "@id": "https://trangtri4mua.com/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Cửa Hàng",
+                "@id": "https://trangtri4mua.com/cua-hang/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-24T13:13:47Z",
+      "requested": "https://trangtri4mua.com/cua-hang/page/2/",
+      "url": "https://trangtri4mua.com/cua-hang/page/2/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/cua-hang/page/2/",
+      "visibleMarkup": [
+        {
+          "text": "Trang chủ Cửa Hàng",
+          "links": [
+            {
+              "text": "Trang chủ",
+              "url": "https://trangtri4mua.com/"
+            }
+          ],
+          "current": "Cửa Hàng"
+        }
+      ],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/cua-hang/page/2/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/cua-hang/",
+                "name": "Cửa Hàng"
+              }
+            }
+          ]
+        },
+        {
+          "id": null,
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Trang chủ",
+                "@id": "https://trangtri4mua.com/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Cửa Hàng",
+                "@id": "https://trangtri4mua.com/cua-hang/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-24T13:13:49Z",
+      "requested": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "visibleMarkup": [
+        {
+          "text": "Trang chủ Trang Trí Theo Mùa Trang Trí Giáng Sinh - Noel",
+          "links": [
+            {
+              "text": "Trang chủ",
+              "url": "https://trangtri4mua.com/"
+            },
+            {
+              "text": "Trang Trí Theo Mùa",
+              "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+            }
+          ],
+          "current": "Trang Trí Giáng Sinh - Noel"
+        }
+      ],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+                "name": "Trang Trí Giáng Sinh - Noel"
+              }
+            }
+          ]
+        },
+        {
+          "id": null,
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "name": "Trang chủ",
+                "@id": "https://trangtri4mua.com/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "name": "Trang Trí Theo Mùa",
+                "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "name": "Trang Trí Giáng Sinh - Noel",
+                "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-24T13:13:49Z",
+      "requested": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "visibleMarkup": [
+        {
+          "text": "Trang chủ Trang Trí Theo Mùa Trang Trí Giáng Sinh - Noel Phụ Kiện Treo Cây Noel Tháp nhũ điện – Trang trí Noel",
+          "links": [
+            {
+              "text": "Trang chủ",
+              "url": "https://trangtri4mua.com/"
+            },
+            {
+              "text": "Trang Trí Theo Mùa",
+              "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+            },
+            {
+              "text": "Trang Trí Giáng Sinh - Noel",
+              "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+            },
+            {
+              "text": "Phụ Kiện Treo Cây Noel",
+              "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+            }
+          ],
+          "current": "Tháp nhũ điện – Trang trí Noel"
+        }
+      ],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+                "name": "Phụ Kiện Treo Cây Noel"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "item": {
+                "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+                "name": "Tháp nhũ điện &#8211; Trang trí Noel"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-24T13:13:50Z",
+      "requested": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "visibleMarkup": [],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+                "name": "Hướng Dẫn &amp; Kinh Nghiệm"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "3",
+              "item": {
+                "@id": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+                "name": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "utc": "2026-09-24T13:13:50Z",
+      "requested": "https://trangtri4mua.com/lien-he/",
+      "url": "https://trangtri4mua.com/lien-he/",
+      "status": 200,
+      "canonical": "https://trangtri4mua.com/lien-he/",
+      "visibleMarkup": [],
+      "schema": [
+        {
+          "id": "https://trangtri4mua.com/lien-he/#breadcrumb",
+          "items": [
+            {
+              "@type": "ListItem",
+              "position": "1",
+              "item": {
+                "@id": "https://trangtri4mua.com",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": "2",
+              "item": {
+                "@id": "https://trangtri4mua.com/lien-he/",
+                "name": "Liên Hệ"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "additionalParents": [
+    {
+      "utc": "2026-09-24T13:13:51Z",
+      "requested": "https://trangtri4mua.com/",
+      "url": "https://trangtri4mua.com/",
+      "status": 200
+    },
+    {
+      "utc": "2026-09-24T13:13:53Z",
+      "requested": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/",
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/",
+      "status": 200
+    },
+    {
+      "utc": "2026-09-24T13:13:54Z",
+      "requested": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+      "status": 200
+    },
+    {
+      "utc": "2026-09-24T13:13:56Z",
+      "requested": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+      "url": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+      "status": 200
+    }
+  ]
+}

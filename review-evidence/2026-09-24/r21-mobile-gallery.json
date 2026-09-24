@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-09-24T13:40:07.876Z",
+  "before": {
+    "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+    "activeThumb": 0,
+    "flexy": "no",
+    "transform": null,
+    "images": [
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "complete": true,
+        "naturalWidth": 321,
+        "x": 25.5,
+        "y": 10.984375,
+        "width": 324
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-600x708.webp",
+        "complete": true,
+        "naturalWidth": 321,
+        "x": 359.5,
+        "y": 10.984375,
+        "width": 324
+      },
+      {
+        "src": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "x": 693.5,
+        "y": 10.984375,
+        "width": 324
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "class": "flexy-arrow-prev",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "SPAN",
+        "class": "flexy-arrow-next",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "active",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "",
+        "role": null,
+        "tabindex": null
+      }
+    ],
+    "lightboxes": [
+      {
+        "class": "ct-panel",
+        "ariaHidden": null,
+        "display": "none"
+      },
+      {
+        "class": "ct-panel ct-header",
+        "ariaHidden": null,
+        "display": "none"
+      }
+    ]
+  },
+  "afterThumb2": {
+    "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+    "activeThumb": 1,
+    "flexy": "",
+    "transform": null,
+    "images": [
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "complete": true,
+        "naturalWidth": 321,
+        "x": -272.4110107421875,
+        "y": 10.984375,
+        "width": 324
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-600x708.webp",
+        "complete": true,
+        "naturalWidth": 321,
+        "x": 61.5889892578125,
+        "y": 10.984375,
+        "width": 324
+      },
+      {
+        "src": "",
+        "complete": false,
+        "naturalWidth": 0,
+        "x": -606.4110107421875,
+        "y": 10.984375,
+        "width": 324
+      }
+    ],
+    "controls": [
+      {
+        "tag": "SPAN",
+        "class": "flexy-arrow-prev",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "SPAN",
+        "class": "flexy-arrow-next",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "active",
+        "role": null,
+        "tabindex": null
+      },
+      {
+        "tag": "LI",
+        "class": "",
+        "role": null,
+        "tabindex": null
+      }
+    ],
+    "lightboxes": [
+      {
+        "class": "ct-panel",
+        "ariaHidden": null,
+        "display": "none"
+      },
+      {
+        "class": "ct-panel ct-header",
+        "ariaHidden": null,
+        "display": "none"
+      }
+    ]
+  }
+}

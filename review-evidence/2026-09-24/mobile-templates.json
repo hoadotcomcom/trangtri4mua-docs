@@ -1,0 +1,86 @@
+[
+  {
+    "path": "/gioi-thieu/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Giới Thiệu",
+    "forms": [],
+    "productCount": 0,
+    "imgs": [],
+    "endText": "iệm\nHệ Thống Showroom & Kho Trung Tâm TP. Hồ Chí Minh\n\nĐịa chỉ: 123 Đường Xuân Thủy, Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh\n\nGiờ mở cửa: 08:00 – 21:00 hàng ngày (mở cửa liên tục Thứ Bảy, Chủ Nhật và ngày lễ)\n\nHotline tư vấn: 0901.234.567\n\nZalo tư vấn & Báo giá sỉ: 0901.234.567\n\nEmail chăm sóc khách hàng: cskh@trangtri4mua.com\n\nKhám Phá Bộ Sưu Tập Mới Hoặc Nhận Báo Giá Dự Án\n\nKính mời quý khách ghé thăm showroom để trực tiếp trải nghiệm hoặc liên hệ chuyên viên qua hotline 0901.234.567 để nhận catalogue mẫu decor chi tiết:\n\nXem Tất Cả Sản Phẩm Nhận Báo Giá Sỉ Qua Zalo Tham Quan Showroom"
+  },
+  {
+    "path": "/showroom/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Cửa Hàng & Showroom",
+    "forms": [],
+    "productCount": 0,
+    "imgs": [],
+    "endText": "Đồ Vị Trí & Hướng Dẫn Di Chuyển\n\nShowroom nằm trên mặt tiền đường Xuân Thủy sầm uất tại Thảo Điền, cách Cầu Sài Gòn chỉ 5 phút di chuyển. Từ trung tâm Quận 1 hoặc Bình Thạnh, quý khách đi qua Cầu Sài Gòn rồi rẽ vào đường Trần Não hoặc đường Quốc Hương / Xuân Thủy rất thuận tiện.\n\nBạn Cần Khảo Sát Không Gian Hoặc Báo Giá Dự Án Decor?\n\nĐối với khách hàng cơ quan, quán cafe, chuỗi bán lẻ hoặc nhà hàng cần trang trí diện tích lớn, đội ngũ chuyên viên của Trang Trí 4 Mùa sẵn sàng đến tận nơi khảo sát mặt bằng và lên phối cảnh demo chi tiết:\n\nNhận Tư Vấn Dự Án Qua Zalo Hotline Kỹ Thuật: 0901.234.567"
+  },
+  {
+    "path": "/y-tuong-trang-tri/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Cẩm Nang Trang Trí Không Gian",
+    "forms": [],
+    "productCount": 0,
+    "imgs": [],
+    "endText": "ng?\n\nCó. Đội ngũ chuyên viên của Trang Trí 4 Mùa luôn sẵn sàng dựa trên diện tích mặt bằng thực tế, phong cách thiết kế và ngân sách của bạn để lên danh sách vật tư bóc tách chuẩn xác nhất, giúp quán sở hữu góc chụp hình ấm áp, thu hút khách hàng mà không bị lãng phí chi phí phụ kiện thừa.\n\n2\nThời gian giao phụ kiện và cây thông Noel là bao lâu? Có giao hỏa tốc không?\n3\nCác phụ kiện trang trí Noel có tái sử dụng được cho những năm sau không?\n4\nChính sách bảo hành và đổi trả nếu sản phẩm bị hư hỏng khi vận chuyển?\n5\nTrang Trí 4 Mùa có xuất hóa đơn GTGT (VAT) cho doanh nghiệp và quán cafe không?"
+  },
+  {
+    "path": "/category/y-tuong-trang-tri/noel/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Danh mục Ý Tưởng Trang Trí Noel",
+    "forms": [],
+    "productCount": 0,
+    "imgs": [],
+    "endText": " TRÍ NOEL\nHướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần\n\nCẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.\n\nED4F7BTHÁNG 9 24, 2026\nHƯỚNG DẪN & KINH NGHIỆM, Ý TƯỞNG TRANG TRÍ NOEL\n10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026\n\nCẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.\n\nED4F7BTHÁNG 9 24, 2026"
+  },
+  {
+    "path": "/the/cay-thong-noel/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "cây thông noel",
+    "forms": [
+      {
+        "id": "",
+        "action": "https://trangtri4mua.com/the/cay-thong-noel/",
+        "method": "get"
+      }
+    ],
+    "productCount": 1,
+    "firstProductTop": 1125.640625,
+    "imgs": [],
+    "endText": "9\nTrang Trí Giáng Sinh - Noel\n89\nPhụ Kiện Treo Cây Noel\n66\nMô Hình & Tượng Noel\n23\nTrang Trí Theo Mùa\n89\nCây Thông Noel\n0\nVòng Nguyệt Quế & Treo Cửa\n0\nĐèn & Nến Trang Trí Noel\n0\nDecal Dán Kính Noel\n0\nCombo Trang Trí Noel\n0\nQuà Tặng Giáng Sinh\n0\nSắp xếp mặc định\nSắp xếp theo mức độ phổ biến\nSắp xếp theo xếp hạng trung bình\nSắp xếp theo mới nhất\nSắp xếp theo giá: thấp đến cao\nSắp xếp theo giá: cao đến thấp\nTháp nhũ điện\nFreeship từ 500k\nĐồng kiểm\n550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫\nChọn mẫu\nSản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm"
+  },
+  {
+    "path": "/cua-hang/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Cửa Hàng",
+    "forms": [
+      {
+        "id": "",
+        "action": "https://trangtri4mua.com/cua-hang/",
+        "method": "get"
+      }
+    ],
+    "productCount": 16,
+    "firstProductTop": 1312.546875,
+    "imgs": [],
+    "endText": "n 195.000 ₫\nChọn mẫu\nSản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm\nChâu gương disco\nGiao hỏa tốc\nĐồng kiểm\nĐọc tiếp\nChâu hồng kim sa\nGiao hỏa tốc\nĐồng kiểm\n225.000 ₫\n–\n355.000 ₫\nKhoảng giá: từ 225.000 ₫ đến 355.000 ₫\nChọn mẫu\nSản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm\nChậu kẹo 12cm\nGiao hỏa tốc\nĐồng kiểm\n125.000 ₫\nThêm giỏ\nChâu khía hạt nổi\nGiao hỏa tốc\nĐồng kiểm\n75.000 ₫\n–\n115.000 ₫\nKhoảng giá: từ 75.000 ₫ đến 115.000 ₫\nChọn mẫu\nSản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm\nTIẾP THEO"
+  },
+  {
+    "path": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Combo Trang Trí Noel",
+    "forms": [],
+    "productCount": 0,
+    "imgs": [],
+    "endText": "\nDecal Dán Kính Noel\n0\nCombo Trang Trí Noel\n0\nQuà Tặng Giáng Sinh\n0\n🎁\nĐang Cập Nhật Mẫu Mã Cho Mùa Lễ Hội 2026\n\nDanh mục này đang được Trang Trí 4 Mùa chuẩn bị thêm nhiều mẫu mới độc đáo và tinh tế. Quý khách có thể xem các danh mục đang có sẵn hàng bên dưới hoặc nhắn tin trực tiếp qua Zalo để nhận catalog và tư vấn báo giá ngay.\n\nGợi ý danh mục sẵn kho giao ngay:\nTrang Trí Giáng Sinh - Noel\n(89)\nPhụ Kiện Treo Cây Noel\n(66)\nMô Hình & Tượng Noel\n(23)\nTrang Trí Theo Mùa\n(89)\n← Xem tất cả sản phẩm\nTư vấn chọn mẫu qua Zalo (24/7)\nHoặc gọi trực tiếp: 📞 0901.234.567\n(Hỗ trợ 8h00 - 22h00 hàng ngày)"
+  }
+]

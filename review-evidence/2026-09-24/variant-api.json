@@ -1,0 +1,302 @@
+[
+  {
+    "id": 269,
+    "status": 200,
+    "name": "Kẹo gậy trang trí Noel &#8211; Trang trí Noel",
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Kích thước",
+        "taxonomy": "pa_kich-thuoc",
+        "has_variations": true,
+        "terms": [
+          {
+            "id": 78,
+            "name": "1m50",
+            "slug": "1m50"
+          },
+          {
+            "id": 80,
+            "name": "20",
+            "slug": "20"
+          },
+          {
+            "id": 43,
+            "name": "2m",
+            "slug": "2m"
+          },
+          {
+            "id": 134,
+            "name": "50",
+            "slug": "50"
+          },
+          {
+            "id": 79,
+            "name": "80",
+            "slug": "80"
+          }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "id": 270,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "1m50"
+          }
+        ]
+      },
+      {
+        "id": 271,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "80"
+          }
+        ]
+      },
+      {
+        "id": 272,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "2m"
+          }
+        ]
+      },
+      {
+        "id": 273,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "50"
+          }
+        ]
+      },
+      {
+        "id": 274,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "status": 200,
+    "name": "Quả châu nhũ vàng &#8211; Trang trí Noel",
+    "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Kích thước",
+        "taxonomy": "pa_kich-thuoc",
+        "has_variations": true,
+        "terms": [
+          {
+            "id": 54,
+            "name": "1m8",
+            "slug": "8"
+          },
+          {
+            "id": 75,
+            "name": "phi8",
+            "slug": "phi8"
+          }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "id": 256,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "phi8"
+          }
+        ]
+      },
+      {
+        "id": 257,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 237,
+    "status": 200,
+    "name": "Quả châu nhũ vân lưới &#8211; Trang trí Noel",
+    "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Kích thước",
+        "taxonomy": "pa_kich-thuoc",
+        "has_variations": true,
+        "terms": [
+          {
+            "id": 72,
+            "name": "6",
+            "slug": "6"
+          },
+          {
+            "id": 71,
+            "name": "phi6",
+            "slug": "phi6"
+          }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "id": 238,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "phi6"
+          }
+        ]
+      },
+      {
+        "id": 239,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "status": 200,
+    "name": "Tượng người tuyết mũ đỏ &#8211; Trang trí Noel",
+    "url": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Kích thước",
+        "taxonomy": "pa_kich-thuoc",
+        "has_variations": true,
+        "terms": [
+          {
+            "id": 66,
+            "name": "1m",
+            "slug": "1m"
+          },
+          {
+            "id": 67,
+            "name": "2",
+            "slug": "2"
+          },
+          {
+            "id": 134,
+            "name": "50",
+            "slug": "50"
+          },
+          {
+            "id": 65,
+            "name": "80cm",
+            "slug": "80cm"
+          }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "id": 224,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "80cm"
+          }
+        ]
+      },
+      {
+        "id": 225,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "1m"
+          }
+        ]
+      },
+      {
+        "id": 226,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "2"
+          }
+        ]
+      },
+      {
+        "id": 227,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "50"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "status": 200,
+    "name": "Ông già Noel 1m8 &#8211; Trang trí Noel",
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Kích thước",
+        "taxonomy": "pa_kich-thuoc",
+        "has_variations": true,
+        "terms": [
+          {
+            "id": 42,
+            "name": "1m8",
+            "slug": "1m8"
+          },
+          {
+            "id": 54,
+            "name": "1m8",
+            "slug": "8"
+          }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "id": 178,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "1m8"
+          }
+        ]
+      },
+      {
+        "id": 179,
+        "attributes": [
+          {
+            "name": "Kích thước",
+            "value": "8"
+          }
+        ]
+      }
+    ]
+  }
+]

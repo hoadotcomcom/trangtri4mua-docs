@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-09-24T11:41:19.732Z",
+  "before": {
+    "price": "895.000 ₫",
+    "cart": "\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n",
+    "disabled": false
+  },
+  "delayed": 1,
+  "events": [
+    {
+      "event": "request",
+      "ms": 9,
+      "method": "POST",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes"
+    },
+    {
+      "event": "hold-post",
+      "ms": 9
+    },
+    {
+      "event": "request",
+      "ms": 4049,
+      "method": "GET",
+      "url": "https://trangtri4mua.com/thanh-toan/"
+    },
+    {
+      "event": "response",
+      "ms": 4888,
+      "url": "https://trangtri4mua.com/thanh-toan/",
+      "status": 302,
+      "location": "https://trangtri4mua.com/gio-hang/"
+    },
+    {
+      "event": "request",
+      "ms": 4888,
+      "method": "GET",
+      "url": "https://trangtri4mua.com/gio-hang/"
+    },
+    {
+      "event": "response",
+      "ms": 5986,
+      "url": "https://trangtri4mua.com/gio-hang/",
+      "status": 200
+    },
+    {
+      "event": "navigation",
+      "ms": 5989,
+      "url": "https://trangtri4mua.com/gio-hang/"
+    },
+    {
+      "event": "release-post",
+      "ms": 6011
+    }
+  ],
+  "url": "https://trangtri4mua.com/gio-hang/",
+  "text": "Giỏ Hàng\nChưa có sản phẩm nào trong giỏ hàng.\n\nQuay trở lại cửa hàng"
+}

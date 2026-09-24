@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-09-24T13:43:43.837Z",
+  "state": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "images": 1,
+    "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp",
+    "sourceWidth": "900",
+    "sourceHeight": "1200",
+    "objectFit": "cover",
+    "aspectRatio": "3 / 4",
+    "width": 623.03125,
+    "height": 830.703125,
+    "arrows": 0,
+    "thumbnails": 0,
+    "links": 0,
+    "buttons": 0
+  },
+  "loadedDesktop": {
+    "timestamp": "2026-09-24T13:45:15.433Z",
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "complete": true,
+    "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp",
+    "width": 623.03125,
+    "height": 830.703125,
+    "objectFit": "cover",
+    "aspectRatio": "3 / 4"
+  }
+}

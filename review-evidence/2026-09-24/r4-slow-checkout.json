@@ -1,0 +1,33 @@
+{
+  "delayed": 1,
+  "events": [
+    {
+      "event": "click",
+      "ms": 1
+    },
+    {
+      "event": "hold-post",
+      "ms": 11,
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes"
+    },
+    {
+      "event": "release-post",
+      "ms": 6013
+    },
+    {
+      "event": "navigation",
+      "ms": 6956,
+      "url": "https://trangtri4mua.com/gio-hang/"
+    }
+  ],
+  "url": "https://trangtri4mua.com/gio-hang/",
+  "text": "Giỏ Hàng\nChưa có sản phẩm nào trong giỏ hàng.\n\nQuay trở lại cửa hàng",
+  "afterReload": {
+    "url": "https://trangtri4mua.com/gio-hang/",
+    "text": "Giỏ Hàng\nĐơn hàng của quý khách đã đủ điều kiện được miễn phí giao hàng toàn quốc\nTháp nhũ điện - Trang trí Noel - 1m8\nTháp nhũ điện - Trang trí Noel - 1m8 số lượng\n×\n895.000 ₫\nTháp nhũ điện - Trang trí Noel - 1m8 số lượng\n895.000 ₫\nÁp dụng mã ưu đãi\nCập nhật giỏ hàng\nTổng cộng giỏ hàng\n895.000 ₫\n\n\nShipment\nFlat rate\nFree shipping\nGiao tại cửa hàng\n\nCác tùy chọn vận chuyển sẽ được cập nhật trong quá trình thanh toán.\n\nTính phí vận chuyển\n\n\n895.000 ₫\nTiến hành thanh toán",
+    "quantities": [
+      "1",
+      "1"
+    ]
+  }
+}

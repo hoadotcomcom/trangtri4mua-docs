@@ -1,0 +1,1282 @@
+[
+  {
+    "id": 295,
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "1m2",
+          "label": "1m2"
+        },
+        {
+          "value": "5",
+          "label": "1m5"
+        },
+        {
+          "value": "8",
+          "label": "1m8"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 296,
+        "sku": "TT4M-089-1m2",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m2"
+        },
+        "price": 550000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 297,
+        "sku": "TT4M-089-5",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "5"
+        },
+        "price": 755000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 298,
+        "sku": "TT4M-089-8",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8"
+        },
+        "price": 895000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Tháp nhũ điện là cây thông Noel dạng tháp phủ nhũ lấp lánh, tích hợp sẵn đèn điện nên chỉ cần cắm nguồn là sáng, không phải quấn đèn dây như cây thông thường. Kiểu tháp gọn nên đặt được ở nhiều vị trí: cạnh cửa, góc phòng, quầy lễ tân hay hai bên sảnh. Kích thước và giá: – 1m2: 550.000đ – 1m5: 755.000đ – 1m8: 895.000đ Kiểu dáng: tháp cây thông phủ nhũ, có đèn điện Chất liệu: khung kim loại phủ nhũ Tháp nhũ đẹp nhất khi đặt đối xứng hai bên cổng hoặc cạnh cây thông chính làm phụ. Có thể phối thêm tuần lộc nhũ vàng và hộp quà giả dưới chân. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      296,
+      297,
+      298
+    ]
+  },
+  {
+    "id": 288,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-3-mau/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "30cm",
+          "label": "30cm"
+        },
+        {
+          "value": "45cm",
+          "label": "45cm"
+        },
+        {
+          "value": "60cm",
+          "label": "60cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 289,
+        "sku": "TT4M-085-60cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "60cm"
+        },
+        "price": 685000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 290,
+        "sku": "TT4M-085-45cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 450000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 291,
+        "sku": "TT4M-085-30cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "30cm"
+        },
+        "price": 255000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Ông già Noel 3 mẫu là bộ sưu tập tượng ông già với ba kiểu dáng khác nhau, có đủ ba size để bạn chọn theo không gian trưng bày. Đây là nhân vật trang trí cơ bản mà góc Giáng sinh nào cũng cần: đặt dưới gốc cây thông, trên kệ, bàn tiệc hay quầy thu ngân đều hợp. Size 30cm: 255.000đ Size 45cm: 450.000đ Size 60cm: 685.000đ Chất liệu: nhựa/nỉ trang trí, tạo hình đứng Size 30cm hợp đặt bàn và kệ, 45cm đặt gốc cây thông vừa vặn, còn 60cm đủ tầm cho sảnh và cửa hàng nhỏ. Ba mẫu khác nhau cho phép bạn trưng theo nhóm mà không bị trùng lặp. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      289,
+      290,
+      291
+    ]
+  },
+  {
+    "id": 280,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "45cm",
+          "label": "45cm"
+        },
+        {
+          "value": "60cm",
+          "label": "60cm"
+        },
+        {
+          "value": "90cm",
+          "label": "90cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 281,
+        "sku": "TT4M-080-45cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 555000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 282,
+        "sku": "TT4M-080-60cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "60cm"
+        },
+        "price": 995000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 283,
+        "sku": "TT4M-080-90cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "90cm"
+        },
+        "price": 1895,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Ông già trắng xịn là mô hình ông già Noel đứng tông trắng, khác với bộ đồ đỏ truyền thống. Tông trắng tinh tế này cực kỳ hợp với cây thông phủ tuyết, trang trí phong cách Bắc Âu hoặc không gian tông sáng, có ba kích thước để chọn. Kích thước và giá: – 45cm: 555.000đ – 60cm: 995.000đ – 90cm: 1.895.000đ Kiểu dáng: ông già Noel đứng tông trắng Chất liệu: vải nhung, lông giả trên khung đứng Size 45cm đặt quầy, kệ; 60cm đặt cạnh cây thông trong nhà; 90cm hợp sảnh, cửa hàng. Phối cùng châu bạc, hoa trạng nguyên phủ tuyết và đèn trắng cho tông trắng – bạc đồng nhất. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      281,
+      282,
+      283
+    ]
+  },
+  {
+    "id": 269,
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "1m50",
+          "label": "1m50"
+        },
+        {
+          "value": "20",
+          "label": "20"
+        },
+        {
+          "value": "2m",
+          "label": "2m"
+        },
+        {
+          "value": "50",
+          "label": "50"
+        },
+        {
+          "value": "80",
+          "label": "80"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 270,
+        "sku": "TT4M-074-1m50",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m50"
+        },
+        "price": 950000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 271,
+        "sku": "TT4M-074-80",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "80"
+        },
+        "price": 1150,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 272,
+        "sku": "TT4M-074-2m",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "2m"
+        },
+        "price": 1450,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 273,
+        "sku": "TT4M-074-50",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "50"
+        },
+        "price": 1650,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 274,
+        "sku": "TT4M-074-20",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "20"
+        },
+        "price": 750000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Kẹo gậy trang trí Noel là mô hình kẹo cỡ lớn dùng dựng trang trí ngoài trời, sảnh, cổng hay sân khấu, gồm hai kiểu: kẹo gậy cong và kẹo tròn. Đây là hạng mục trang trí chuyên nghiệp cho cửa hàng, trung tâm thương mại, quán cà phê muốn làm góc check-in Giáng sinh. Bảng size và giá kẹo gậy: – 1m80: 1.150.000đ – 2m: 1.450.000đ – 2m50: 1.650.000đ Bảng size và giá kẹo tròn: – 1m20: 750.000đ – 1m50: 950.000đ – 1m80: 1.150.000đ – 2m: 1.450.000đ Chất liệu: nhựa composite sơn màu Dựng hai gậy kẹo hai bên cổng hoặc cây thông lớn là có ngay cổng chào Giáng sinh. Kẹo tròn hợp đặt xen kẽ tạo nhịp. Shop giao hàng toàn quốc, hàng cồng kềnh đóng kiện kỹ.",
+    "apiVariationIds": [
+      270,
+      271,
+      272,
+      273,
+      274
+    ]
+  },
+  {
+    "id": 261,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "45cm",
+          "label": "45cm"
+        },
+        {
+          "value": "90cm",
+          "label": "90cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 262,
+        "sku": "TT4M-068-45cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 555000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 263,
+        "sku": "TT4M-068-90cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "90cm"
+        },
+        "price": 1895,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Ông già gôn xịn là mô hình ông già Noel đứng với tạo hình chỉn chu, có hai kích thước để chọn theo không gian. Size nhỏ đặt bàn, quầy, kệ; size lớn đặt sàn cạnh cây thông hay cửa ra vào đều tạo điểm nhấn Giáng sinh rõ ràng. Kích thước và giá: – 45cm: 555.000đ – 90cm: 1.895.000đ Kiểu dáng: ông già Noel đứng Chất liệu: vải nhung, lông giả trên khung đứng Size 45cm hợp đặt quầy thu ngân, kệ trưng bày hay bàn tiệc; size 90cm nên đặt dưới sàn cạnh cây thông, cổng quà. Phối cùng hộp quà giả và tuần lộc nhỏ cho góc trang trí hoàn chỉnh. Shop giao hàng toàn quốc, đóng thùng cẩn thận.",
+    "apiVariationIds": [
+      262,
+      263
+    ]
+  },
+  {
+    "id": 255,
+    "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "8",
+          "label": "1m8"
+        },
+        {
+          "value": "phi8",
+          "label": "phi8"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 256,
+        "sku": "TT4M-064-phi8",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "phi8"
+        },
+        "price": 195000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 257,
+        "sku": "TT4M-064-8",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8"
+        },
+        "price": 195000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Quả châu nhũ vàng là hộp 6 quả châu treo cây thông đường kính phi 8, bề mặt phủ nhũ vàng lấp lánh. Đây là món phụ kiện nền không thể thiếu cho cây thông tone vàng – champagne, hoặc để xen kẽ làm điểm sáng cho cây tone đỏ truyền thống. Kích thước: phi 8cm Quy cách: hộp 6 quả Giá: 195.000đ/hộp Chất liệu: nhựa nhẹ phủ nhũ Châu nhũ vàng phản quang đẹp dưới đèn led ấm, treo rải đều quanh cây sẽ tạo lớp nền sáng trước khi bạn thêm kẹo, nơ và cành cắm. Hộp 6 quả tiện tính toán số lượng theo độ cao cây: cây 1m5 – 1m8 nên dùng vài hộp để cây đủ dày. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      256,
+      257
+    ]
+  },
+  {
+    "id": 242,
+    "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "22x20x121cm",
+          "label": "22x20x121cm"
+        },
+        {
+          "value": "24cm",
+          "label": "24cm"
+        },
+        {
+          "value": "60cm",
+          "label": "60cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 243,
+        "sku": "TT4M-054-24cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "24cm"
+        },
+        "price": 110000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 244,
+        "sku": "TT4M-054-60cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "60cm"
+        },
+        "price": 350000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 245,
+        "sku": "TT4M-054-22x20x121cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "22x20x121cm"
+        },
+        "price": 1700000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Lính chì Nutcracker là mô hình trang trí Noel kinh điển từ câu chuyện Kẹp hạt dẻ, với trang phục lính gác sặc sỡ và dáng đứng nghiêm. Shop có nhiều mẫu mã và size để bạn chọn theo không gian bày trí. Kích thước và giá: 24cm: 110.000đ 60cm: 350.000đ 22x20x121cm: 1.700.000đ Chất liệu: gỗ, nhựa sơn màu trang trí Size 24cm hợp đặt kệ, bàn hay tiểu cảnh máng cỏ; size 60cm đặt dưới gốc cây thông, hai bên cửa ra vào; mẫu 1m21 là điểm nhấn sảnh, cửa hàng, khách sạn hay góc chụp ảnh Noel. Nên đặt lính chì theo cặp hai bên cửa hoặc gốc cây để tạo cảm giác cân đối. Mô hình để nơi khô ráo, tránh nắng mưa trực tiếp để lớp sơn bền màu. Shop giao hàng toàn quốc, đóng thùng chống sốc cho cả size lớn.",
+    "apiVariationIds": [
+      243,
+      244,
+      245
+    ]
+  },
+  {
+    "id": 237,
+    "url": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "phi6",
+          "label": "phi6"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 238,
+        "sku": "TT4M-051-phi6",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "phi6"
+        },
+        "price": 125000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 239,
+        "sku": "TT4M-051-6",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "6"
+        },
+        "price": 125000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Quả châu nhũ vân lưới là bộ châu trang trí cây thông Noel phủ nhũ với vân lưới nổi trên bề mặt, gồm tông đỏ và bạc trong cùng hộp. Kết cấu vân lưới giúp châu bắt sáng đẹp hơn châu nhũ phẳng khi đèn led chiếu vào. Kích thước: phi 6cm Giá: 125.000đ/hộp Màu sắc: đỏ và bạc Chất liệu: nhựa phủ nhũ vân lưới Cặp màu đỏ bạc rất dễ phối: đỏ giữ nét Giáng sinh truyền thống, bạc thêm vẻ lạnh mát của tuyết mùa đông. Bạn nên treo xen kẽ hai màu đều khắp cây, sau đó điểm thêm nơ đỏ hoặc dây kim tuyến bạc cho đồng bộ. Bộ châu cũng hợp trang trí vòng nguyệt quế và dây thông quanh cửa. Shop giao hàng toàn quốc, đóng hộp cẩn thận để lớp nhũ và vân lưới không bị trầy xước trong quá trình vận chuyển đến tay bạn.",
+    "apiVariationIds": [
+      238,
+      239
+    ]
+  },
+  {
+    "id": 229,
+    "url": "https://trangtri4mua.com/san-pham/khinh-khi-cau-gau-nhung/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "36x12cm",
+          "label": "36x12cm"
+        },
+        {
+          "value": "55x22cm",
+          "label": "55x22cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 230,
+        "sku": "TT4M-045-55x22cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "55x22cm"
+        },
+        "price": 585000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 231,
+        "sku": "TT4M-045-36x12cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "36x12cm"
+        },
+        "price": 325000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Khinh khí cầu gấu nhung là mô hình treo trang trí Noel hình khinh khí cầu nhung kẻ đỏ xanh, trong giỏ chở chú gấu teddy. Đây là kiểu trang trí treo trần hoặc treo cành lớn, tạo điểm nhấn khác biệt so với châu và nơ thông thường. Kích thước và giá: 55x22cm: 585.000đ 36x12cm: 325.000đ Chất liệu: nhung kẻ phủ ngoài, gấu teddy nhồi bông trong giỏ Size 55cm hợp treo trần sảnh, góc chụp ảnh hay cây thông lớn; size 36cm vừa vặn treo cây thông gia đình hoặc trước cửa hàng. Tông kẻ đỏ xanh cổ điển dễ phối cùng châu đỏ, nơ kẻ và đèn led vàng. Khi treo bạn nên chọn điểm chắc chắn vì mô hình có trọng lượng hơn phụ kiện nhựa thường. Shop giao hàng toàn quốc, đóng thùng cẩn thận để khinh khí cầu và gấu không bị xẹp méo.",
+    "apiVariationIds": [
+      230,
+      231
+    ]
+  },
+  {
+    "id": 223,
+    "url": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "1m",
+          "label": "1m"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "50",
+          "label": "50"
+        },
+        {
+          "value": "80cm",
+          "label": "80cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 224,
+        "sku": "TT4M-043-80cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "80cm"
+        },
+        "price": 550000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 225,
+        "sku": "TT4M-043-1m",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m"
+        },
+        "price": 850000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 226,
+        "sku": "TT4M-043-2",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "2"
+        },
+        "price": 1250000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 227,
+        "sku": "TT4M-043-50",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "50"
+        },
+        "price": 1750000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Tượng người tuyết mũ đỏ là mô hình trang trí cỡ lớn với chi tiết mũ cao đỏ đội bông tuyết quen thuộc. Đây là kiểu tượng đặt sàn, hợp trưng ở sảnh nhà, cửa hàng, quán cafe hay cạnh gốc cây thông để tạo tiểu cảnh Giáng sinh. Size 80cm: 550.000đ Size 1m: 850.000đ Size 1m2: 1.250.000đ Size 1m50: 1.750.000đ Chất liệu: nhựa/xốp tạo hình, phủ lớp trang trí ngoài Với không gian nhà ở, size 80cm – 1m là vừa vặn; cửa hàng hay sảnh rộng nên chọn 1m2 trở lên để tượng đủ tầm nhìn. Đặt cạnh ông già Noel, hộp quà giả và đèn led sẽ thành một góc chụp ảnh Noel hoàn chỉnh. Shop giao hàng toàn quốc, đóng gói chống sốc cẩn thận cho hàng cỡ lớn.",
+    "apiVariationIds": [
+      224,
+      225,
+      226,
+      227
+    ]
+  },
+  {
+    "id": 217,
+    "url": "https://trangtri4mua.com/san-pham/chau-khia-hat-noi/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "10cm",
+          "label": "10cm"
+        },
+        {
+          "value": "8cm",
+          "label": "8cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 218,
+        "sku": "TT4M-039-8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8cm"
+        },
+        "price": 75000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 219,
+        "sku": "TT4M-039-10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "10cm"
+        },
+        "price": 115000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Châu khía hạt nổi là quả châu trang trí cây thông Noel tông đỏ, bề mặt khía gờ cạnh và đính hạt nổi trông như viên kẹo. Kiểu dáng lạ giúp cây thông có thêm chất liệu bề mặt, không bị phẳng đơn điệu như khi chỉ treo châu trơn. Kích thước và giá: 8cm: 75.000đ/quả 10cm: 115.000đ/quả Màu sắc: đỏ Chất liệu: nhựa đúc khía, đính hạt nổi Châu khía nên treo xen giữa châu trơn và châu nhũ để tạo nhịp cho cây thông; size 10cm nổi bật hợp cây cao, size 8cm vừa vặn cây tầm trung. Tông đỏ kẹo của châu rất hợp concept Giáng sinh ngọt ngào khi đi cùng que kẹo xoắn, nơ đỏ và đèn led vàng. Shop giao hàng toàn quốc, đóng gói chống va đập để hạt nổi và gờ khía không bị sứt mẻ.",
+    "apiVariationIds": [
+      218,
+      219
+    ]
+  },
+  {
+    "id": 203,
+    "url": "https://trangtri4mua.com/san-pham/keo-soc/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "10cm",
+          "label": "10cm"
+        },
+        {
+          "value": "6cm",
+          "label": "6cm"
+        },
+        {
+          "value": "8cm",
+          "label": "8cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 204,
+        "sku": "TT4M-028-6cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "6cm"
+        },
+        "price": 155000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 205,
+        "sku": "TT4M-028-8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8cm"
+        },
+        "price": 65000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 206,
+        "sku": "TT4M-028-10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "10cm"
+        },
+        "price": 75000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Kẹo sọc là phụ kiện treo cây thông họa tiết sọc xoắn, có hai phối màu đỏ trắng và hồng trắng quen thuộc của kẹo Giáng sinh. Sản phẩm có nhiều size để bạn chọn theo độ cao cây thông hoặc nhu cầu trang trí. Kẹo sọc 6cm (hộp 4 cái): 155.000đ Size 8cm: 65.000đ Size 10cm: 75.000đ Chất liệu: nhựa xốp bọc ngoài, nhẹ dễ treo Hai tone màu cho phép bạn trang trí theo hai hướng: đỏ trắng cho cây thông truyền thống, hồng trắng cho cây pastel hoặc góc trang trí cho bé gái. Trộn nhiều size trên cùng cây sẽ tạo nhịp điệu đẹp hơn là dùng một cỡ duy nhất. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      204,
+      205,
+      206
+    ]
+  },
+  {
+    "id": 191,
+    "url": "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "15cm",
+          "label": "15cm"
+        },
+        {
+          "value": "20cm",
+          "label": "20cm"
+        },
+        {
+          "value": "30cm",
+          "label": "30cm"
+        },
+        {
+          "value": "35cm",
+          "label": "35cm"
+        },
+        {
+          "value": "45cm",
+          "label": "45cm"
+        },
+        {
+          "value": "50cm",
+          "label": "50cm"
+        },
+        {
+          "value": "55cm",
+          "label": "55cm"
+        },
+        {
+          "value": "75cm",
+          "label": "75cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 192,
+        "sku": "TT4M-024-15cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "15cm"
+        },
+        "price": 35000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 193,
+        "sku": "TT4M-024-20cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "20cm"
+        },
+        "price": 45000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 194,
+        "sku": "TT4M-024-30cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "30cm"
+        },
+        "price": 85000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 195,
+        "sku": "TT4M-024-35cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "35cm"
+        },
+        "price": 95000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 196,
+        "sku": "TT4M-024-45cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 135000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 197,
+        "sku": "TT4M-024-50cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "50cm"
+        },
+        "price": 165000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 198,
+        "sku": "TT4M-024-55cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "55cm"
+        },
+        "price": 195000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 199,
+        "sku": "TT4M-024-75cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "75cm"
+        },
+        "price": 495000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Nai tuần lộc trang trí là mô hình linh vật Giáng sinh kinh điển, gắn liền với hình ảnh xe trượt tuyết của ông già Noel. Shop có đủ dải size từ nhỏ để bàn đến lớn đặt sàn, dễ chọn theo diện tích và ngân sách. Kích thước và giá: 15cm: 35.000đ 20cm: 45.000đ 30cm: 85.000đ 35cm: 95.000đ 45cm: 135.000đ 50cm: 165.000đ 55cm: 195.000đ 75cm: 495.000đ Nai đôi: 115.000đ Chất liệu: nhựa, lông phủ ngoài, khung định hình Size 15-20cm hợp đặt trên bàn, kệ hay treo cảnh mini; size 45cm trở lên nên đặt dưới gốc cây thông, sảnh hoặc cửa hàng. Nai đôi là lựa chọn gọn để dựng tiểu cảnh cùng ông già Noel và hộp quà. Shop giao hàng toàn quốc, đóng thùng chống méo gạc khi vận chuyển.",
+    "apiVariationIds": [
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199
+    ]
+  },
+  {
+    "id": 185,
+    "url": "https://trangtri4mua.com/san-pham/chau-hong-kim-sa/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "10cm",
+          "label": "10cm"
+        },
+        {
+          "value": "8cm",
+          "label": "8cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 186,
+        "sku": "TT4M-020-8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8cm"
+        },
+        "price": 225000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 187,
+        "sku": "TT4M-020-10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "10cm"
+        },
+        "price": 355000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Châu hồng kim sa là bộ quả châu treo cây thông màu hồng, bề mặt phủ kim sa mịn nên bắt đèn LED rất đẹp. Màu hồng phù hợp với cây thông phong cách ngọt ngào, shop thời trang, tiệm bánh hay góc trang trí cho bé gái, khác với tông đỏ – vàng truyền thống. Kích thước và giá: – Châu 8cm: 225.000đ/hộp – Châu 10cm: 355.000đ/hộp Chất liệu: nhựa nhẹ phủ kim sa, khó vỡ Màu sắc: hồng kim sa Châu 8cm hợp cây thông 1m2 – 1m5, châu 10cm nên dùng cho cây từ 1m8 trở lên hoặc treo rải ở tầng dưới làm điểm nhấn. Phối cùng châu trắng, nơ bạc và đèn trắng cho tông pastel hài hòa. Shop giao hàng toàn quốc, đóng gói chống vỡ.",
+    "apiVariationIds": [
+      186,
+      187
+    ]
+  },
+  {
+    "id": 177,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "8",
+          "label": "1m8"
+        },
+        {
+          "value": "1m8",
+          "label": "1m8"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 178,
+        "sku": "TT4M-014-1m8",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m8"
+        },
+        "price": 2250000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 179,
+        "sku": "TT4M-014-8",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8"
+        },
+        "price": 2250000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Mô hình ông già Noel cao 1m8 là điểm nhấn trang trí cỡ lớn cho mùa Giáng sinh: ông già mặc bộ đồ đỏ truyền thống, đứng thẳng với tư thế chào mừng. Chiều cao ngang người thật nên đặt ở sảnh khách sạn, cửa hàng, quán cà phê hay cạnh cây thông trong nhà đều tạo góc chụp ảnh đẹp. Kích thước: cao 1m8 Giá: 2.250.000đ Chất liệu: khung đứng, bên ngoài vải nhung và lông giả Kiểu dáng: ông già Noel đứng, tư thế chào Nên đặt ông già cạnh cây thông hoặc cổng quà để khách dễ chụp hình. Khu vực đặt cần bằng phẳng, tránh nơi ẩm ướt. Shop giao hàng toàn quốc, hàng cồng kềnh được đóng thùng kỹ trước khi gửi.",
+    "apiVariationIds": [
+      178,
+      179
+    ]
+  },
+  {
+    "id": 172,
+    "url": "https://trangtri4mua.com/san-pham/keo-nhung-do/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "35cm",
+          "label": "35cm"
+        },
+        {
+          "value": "52cm",
+          "label": "52cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 173,
+        "sku": "TT4M-011-52cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "52cm"
+        },
+        "price": 395000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 174,
+        "sku": "TT4M-011-35cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "35cm"
+        },
+        "price": 255000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Kẹo nhung đỏ là mô hình viên kẹo lớn bọc vải nhung đỏ mận, hai đầu vặn kiểu kẹo bọc giấy truyền thống. Bề mặt nhung cho cảm giác ấm và sang, khác hẳn các loại kẹo nhựa cứng. Treo lên cây thông lớn, đặt dưới gốc cây hay xếp thành hàng trên quầy đều bắt mắt. Kích thước và giá: – 35cm: 255.000đ – 52cm: 395.000đ Chất liệu: lõi nhẹ bọc vải nhung đỏ Màu sắc: đỏ mận Size 52cm hợp đặt gốc cây hoặc trang trí sảnh, cửa hàng; size 35cm treo cây thông từ 1m5 trở lên là cân đối. Phối cùng gậy kẹo, châu nhung và nơ đỏ cho bộ trang trí đồng tông. Shop giao hàng toàn quốc, đóng thùng cẩn thận.",
+    "apiVariationIds": [
+      173,
+      174
+    ]
+  },
+  {
+    "id": 169,
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-nhung-do/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "41cm",
+          "label": "41cm"
+        },
+        {
+          "value": "52cm",
+          "label": "52cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 170,
+        "sku": "TT4M-010-52cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "52cm"
+        },
+        "price": 355000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 171,
+        "sku": "TT4M-010-41cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "41cm"
+        },
+        "price": 255000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Kẹo gậy nhung đỏ lấy cảm hứng từ cây kẹo gậy candy cane quen thuộc của mùa Giáng sinh, nhưng phủ nhung đỏ mềm nên nhìn ấm áp và nổi bật hơn. Với chiều dài tới 52cm, đây là món phụ kiện cỡ lớn, hợp treo cây thông cao, cắm vào vòng nguyệt quế cửa, hay dựng trang trí góc chụp ảnh Noel. Size 41cm: 255.000đ/cái Size 52cm: 355.000đ/cái Chất liệu: nhung phủ ngoài, lõi giữ form cong Nên dùng theo cặp đối xứng hai bên cổng hoặc cắm chéo trên cây thông để tạo điểm nhấn. Phối cùng nơ đỏ, quả châu trắng và đèn led ấm là chuẩn tone Giáng sinh truyền thống. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      170,
+      171
+    ]
+  },
+  {
+    "id": 164,
+    "url": "https://trangtri4mua.com/san-pham/chau-guong/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "13x8cm",
+          "label": "13x8cm"
+        },
+        {
+          "value": "15x10cm",
+          "label": "15x10cm"
+        },
+        {
+          "value": "20x13cm",
+          "label": "20x13cm"
+        },
+        {
+          "value": "25x16cm",
+          "label": "25x16cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 165,
+        "sku": "TT4M-009-13x8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "13x8cm"
+        },
+        "price": 55000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 166,
+        "sku": "TT4M-009-15x10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "15x10cm"
+        },
+        "price": 75000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 167,
+        "sku": "TT4M-009-20x13cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "20x13cm"
+        },
+        "price": 135000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 168,
+        "sku": "TT4M-009-25x16cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "25x16cm"
+        },
+        "price": 195000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Châu gương là quả châu trang trí có bề mặt gương sáng bóng, phản chiếu ánh đèn và màu sắc xung quanh, tạo hiệu ứng lấp lánh rất bắt mắt trên cây thông Noel. Đây là món phụ kiện giúp cây thông trông đầy đặn và sang hơn hẳn châu thường. Kích thước và giá: 13x8cm: 55.000đ 15x10cm: 75.000đ 20x13cm: 135.000đ 25x16cm: 195.000đ Chất liệu: nhựa phủ gương bóng Size nhỏ hợp treo cây thông mini và cây để bàn, size lớn 20-25cm nên treo cây thông cao hoặc thả trần khu vực quầy, sảnh, cửa hàng. Châu gương phối đẹp với châu nhũ mờ và dây kim tuyến cùng tông. Shop giao hàng toàn quốc, đóng gói chống va đập cẩn thận.",
+    "apiVariationIds": [
+      165,
+      166,
+      167,
+      168
+    ]
+  },
+  {
+    "id": 160,
+    "url": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "10cm",
+          "label": "10cm"
+        },
+        {
+          "value": "8cm",
+          "label": "8cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 161,
+        "sku": "TT4M-007-8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8cm"
+        },
+        "price": 195000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 162,
+        "sku": "TT4M-007-10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "10cm"
+        },
+        "price": 295000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Châu sọc sẫn là hộp quả châu treo cây với họa tiết sọc tối màu, khác hẳn kiểu châu bóng đỏ truyền thống. Tone sẫn giúp cây thông trông trầm và sang hơn, rất hợp với phong cách trang trí hiện đại hoặc cây thông tone đỏ đô, xanh rêu. Size 8cm: 195.000đ/hộp Size 10cm: 295.000đ/hộp Chất liệu: nhựa nhẹ, bề mặt họa tiết sọc Quả châu nhẹ nên treo được cả trên cành thông nhỏ mà không sợ võng cành. Bạn có thể xen kẽ với châu nhũ vàng hoặc châu trơn cùng tone để cây không bị đơn điệu. Hộp nhiều quả tiện cho việc trang trí đồng bộ cả cây. Shop giao hàng toàn quốc, đóng hộp chống va đập cẩn thận.",
+    "apiVariationIds": [
+      161,
+      162
+    ]
+  },
+  {
+    "id": 153,
+    "url": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+    "status": 200,
+    "timestamp": "2026-09-24T12:04:43Z",
+    "controls": {
+      "attribute_pa_kich-thuoc": [
+        {
+          "value": "10cm",
+          "label": "10cm"
+        },
+        {
+          "value": "12cm",
+          "label": "12cm"
+        },
+        {
+          "value": "15cm",
+          "label": "15cm"
+        },
+        {
+          "value": "8cm",
+          "label": "8cm"
+        }
+      ]
+    },
+    "variations": [
+      {
+        "id": 154,
+        "sku": "TT4M-004-15cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "15cm"
+        },
+        "price": 255000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 155,
+        "sku": "TT4M-004-12cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "12cm"
+        },
+        "price": 125000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 156,
+        "sku": "TT4M-004-10cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "10cm"
+        },
+        "price": 95000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      },
+      {
+        "id": 157,
+        "sku": "TT4M-004-8cm",
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8cm"
+        },
+        "price": 75000,
+        "is_purchasable": true,
+        "active": true,
+        "visible": true
+      }
+    ],
+    "unselectable": [],
+    "description": "Kẹo hạt nổi là mẫu phụ kiện treo quen thuộc mỗi mùa Giáng sinh: thân kẹo phủ lớp hạt nổi lấp lánh, có sẵn màu đỏ và vàng, dưới ánh đèn led sẽ phản quang rất bắt mắt. Sản phẩm phù hợp treo cây thông, dây thông quanh cửa, hoặc kết hợp làm cụm trang trí bàn tiệc. Size 8cm: 75.000đ/quả Size 10cm: 95.000đ/quả Size 12cm: 125.000đ/cái Size 15cm: 255.000đ/cái Chất liệu: nhựa xốp phủ hạt nổi, bọc giấy trang trí Mẹo nhỏ: trộn nhiều size trên cùng một cây sẽ tạo chiều sâu, size lớn treo thấp, size nhỏ treo cao. Kẹo đỏ hợp tone truyền thống, kẹo vàng hợp cây phong cách champagne. Shop giao hàng toàn quốc.",
+    "apiVariationIds": [
+      154,
+      155,
+      156,
+      157
+    ]
+  }
+]

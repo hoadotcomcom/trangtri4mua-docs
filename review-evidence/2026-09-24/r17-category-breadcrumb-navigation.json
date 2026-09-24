@@ -1,0 +1,24 @@
+{
+  "post": {
+    "timestamp": "2026-09-24T13:12:59.092Z",
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "breadcrumbElements": 0,
+    "note": "Không có breadcrumb HTML trong trang bài viết mẫu; không thử click một control không tồn tại."
+  },
+  "keyboard": {
+    "timestamp": "2026-09-24T13:13:03.005Z",
+    "action": "Đặt focus công cụ vào link Noel rồi nhấn Enter, không phải toàn bộ hành trình Tab từ đầu trang",
+    "before": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+      "text": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "h1": "Trang Trí Giáng Sinh - Noel",
+      "current": "TRANG TRÍ GIÁNG SINH - NOEL",
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "navigationResponseStatus": 200
+    }
+  }
+}

@@ -1,0 +1,1312 @@
+[
+  {
+    "utc": "2026-09-24T14:02:19.052Z",
+    "test": {
+      "name": "r23-home-desktop",
+      "url": "https://trangtri4mua.com/",
+      "width": 1440,
+      "height": 1000,
+      "capture": true,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "home wp-singular page-template-default page page-id-23 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 7320.78125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "MÙA LỄ HỘI 2026 • TIẾT KIỆM 15% – 20%\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại Trang Trí 4 Mùa được thiế",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 6171.3125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/#main",
+      "scrollY": 3,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-btn-combo-primary",
+        "text": "Xem 8+ Set Combo",
+        "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 124,
+          "y": 750.46875,
+          "width": 212.03125,
+          "height": 48
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:01.567Z",
+    "test": {
+      "name": "r23-shop-desktop",
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "width": 1440,
+      "height": 1000,
+      "capture": false,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "archive post-type-archive post-type-archive-product wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-shop woocommerce woocommerce-page woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 4087
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/cua-hang/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "TRANG CHỦ\nCỬA HÀNG\nCửa Hàng\nMùa Lễ Hội 2026 · Đặt Sớm B2B\nMùa Decor Giáng Sinh 2026 — Đặt Sớm Giữ Mẫu & Nhận Ưu Đãi Dự Án Đến 15%\n\nSẵn kho hơn 500+ mẫu cây thông PE cao cấp, phụ kiện châu kính & đèn l",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 2954.25
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/cua-hang/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "TRANG CHỦ",
+        "href": "https://trangtri4mua.com/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 629.265625,
+          "y": 225.25,
+          "width": 82.875,
+          "height": 22.265625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:02.844Z",
+    "test": {
+      "name": "r23-category-desktop",
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "width": 1440,
+      "height": 1000,
+      "capture": false,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "archive tax-product_cat term-giang-sinh-noel term-17 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce woocommerce-page woocommerce-js woocommerce-archive",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 4060.03125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nTrang Trí Giáng Sinh - Noel\n\nĐồ trang trí Giáng Sinh – Noel đầy đủ nhất: phụ kiện treo cây thông, mô hình ông già Noel, tuần lộc, người tuyết, ",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 2927.28125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "TRANG CHỦ",
+        "href": "https://trangtri4mua.com/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 472.921875,
+          "y": 206.78125,
+          "width": 82.875,
+          "height": 22.265625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:04.190Z",
+    "test": {
+      "name": "r23-product-desktop",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "width": 1440,
+      "height": 1000,
+      "capture": false,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular product-template-default single single-product postid-295 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce woocommerce-page woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 3538.203125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL\nTHÁP NHŨ ĐIỆN – TRANG TRÍ NOEL\nTháp nhũ điện – Trang trí Noel\nCòn hàng tại kho TP.HCM — Đóng gói giao ngay\n\n550.000 ₫\n–\n",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 2325.515625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "TRANG CHỦ",
+        "href": "https://trangtri4mua.com/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 75,
+          "y": 216.78125,
+          "width": 82.875,
+          "height": 22.265625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:05.486Z",
+    "test": {
+      "name": "r23-post-desktop",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "width": 1440,
+      "height": 1000,
+      "capture": false,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular post-template-default single single-post postid-325 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 9334.875
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần\n\nCẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 8185.40625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "ct-meta-element-author",
+        "text": "ED4F7B",
+        "href": "https://trangtri4mua.com/author/ed4f7b/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 376,
+          "y": 410.96875,
+          "width": 48.53125,
+          "height": 15
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:06.790Z",
+    "test": {
+      "name": "r23-policy-desktop",
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "width": 1440,
+      "height": 1000,
+      "capture": false,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular page-template-default page page-id-13 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 3037.34375
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "Chính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách Thanh Toán\nHỗ Trợ Mua Hàng 24/7\n\nHotline: 0901.234.567\n\nZalo CSKH: 0901.234.567\n\nEmail: cs",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 1887.875
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "Chính Sách Đổi Trả",
+        "href": "/chinh-sach-doi-tra/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 145,
+          "y": 334.984375,
+          "width": 238,
+          "height": 45.921875
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:08.657Z",
+    "test": {
+      "name": "r23-contact-desktop",
+      "url": "https://trangtri4mua.com/lien-he/",
+      "width": 1440,
+      "height": 1000,
+      "capture": true,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular page-template-default page page-id-16 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nMiễn phí vận chuyển toàn quốc đơn từ 500.000đ\n|\nĐồng kiểm khi nhận hàng • Bảo đảm nguyên vẹn 100%\n|\nHotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)\nTrang Chủ\nCửa Hàng\nThe",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 3023.3125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/lien-he/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "Liên Hệ\n\nQuý khách cần tư vấn chọn mẫu sản phẩm, nhận báo giá trang trí trọn gói cho quán cafe / văn phòng hoặc hỗ trợ đơn hàng? Đội ngũ chuyên viên Trang Trí 4 Mùa luôn sẵn sàng phục vụ 24/7!\n\n🏢 Hệ ",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 155.5,
+          "width": 1440,
+          "height": 1873.84375
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/lien-he/#main",
+      "scrollY": 3,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "0901.234.567",
+        "href": "tel:0901234567",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 173,
+          "y": 651.875,
+          "width": 104.890625,
+          "height": 19
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:33.674Z",
+    "test": {
+      "name": "r23-home-mobile",
+      "url": "https://trangtri4mua.com/",
+      "width": 375,
+      "height": 812,
+      "capture": true,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "home wp-singular page-template-default page page-id-23 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nMÙA LỄ HỘI 2026 • TIẾT KIỆM 15% – 20%\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự ",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 10072.078125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "MÙA LỄ HỘI 2026 • TIẾT KIỆM 15% – 20%\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại Trang Trí 4 Mùa được thiế",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 110.796875,
+          "width": 375,
+          "height": 8072.3125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-btn-combo-primary",
+        "text": "Xem 8+ Set Combo",
+        "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 38.5,
+          "y": 596.53125,
+          "width": 144,
+          "height": 44
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:35.145Z",
+    "test": {
+      "name": "r23-product-mobile",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "width": 375,
+      "height": 812,
+      "capture": true,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular product-template-default single single-product postid-295 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce woocommerce-page woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nTRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL\nTHÁP NHŨ ĐIỆN – TRANG TRÍ NOEL\n",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 5119.34375
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL\nTHÁP NHŨ ĐIỆN – TRANG TRÍ NOEL\nTháp nhũ điện – Trang trí Noel\nCòn hàng tại kho TP.HCM — Đóng gói giao ngay\n\n550.000 ₫\n–\n",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 110.796875,
+          "width": 375,
+          "height": 2954.015625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#main",
+      "scrollY": 3,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "TRANG CHỦ",
+        "href": "https://trangtri4mua.com/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 22.5,
+          "y": 159.078125,
+          "width": 82.875,
+          "height": 22.265625
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 1,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  },
+  {
+    "utc": "2026-09-24T14:03:36.569Z",
+    "test": {
+      "name": "r23-policy-mobile",
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "width": 375,
+      "height": 812,
+      "capture": true,
+      "dir": "/Users/lehoa/orca/trangtri4mua-docs/review-evidence/2026-09-24"
+    },
+    "before": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "scrollY": 0,
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular page-template-default page page-id-13 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nChính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách T",
+        "href": null,
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 5266.046875
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "firstTab": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "text": "Chuyển đến phần nội dung",
+        "href": "#main",
+        "inMain": false,
+        "isMain": false,
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "afterEnter": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "MAIN",
+        "id": "main",
+        "className": "site-main hfeed",
+        "text": "Chính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách Thanh Toán\nHỗ Trợ Mua Hàng 24/7\n\nHotline: 0901.234.567\n\nZalo CSKH: 0901.234.567\n\nEmail: cs",
+        "href": null,
+        "inMain": true,
+        "isMain": true,
+        "rect": {
+          "x": 0,
+          "y": 110.796875,
+          "width": 375,
+          "height": 3266.28125
+        },
+        "hitAtCenter": false
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    },
+    "nextTab": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/#main",
+      "scrollY": 0,
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "",
+        "text": "Chính Sách Đổi Trả",
+        "href": "/chinh-sach-doi-tra/",
+        "inMain": true,
+        "isMain": false,
+        "rect": {
+          "x": 37,
+          "y": 262.078125,
+          "width": 301,
+          "height": 45.484375
+        },
+        "hitAtCenter": true
+      },
+      "skip": {
+        "href": "#main",
+        "count": 1,
+        "targetCount": 1
+      },
+      "mainCount": 2,
+      "viewport": {
+        "width": 375,
+        "height": 812
+      }
+    }
+  }
+]

@@ -1,0 +1,806 @@
+{
+  "collectionNote": "pagePathLinks là tập href chứa /page/; pagination loại các href add-to-cart, không kích hoạt bất kỳ link thêm giỏ nào.",
+  "navigations": [
+    {
+      "status": 200,
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price"
+    },
+    {
+      "status": 200,
+      "url": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price"
+    },
+    {
+      "status": 200,
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc"
+    }
+  ],
+  "states": [
+    {
+      "timestamp": "2026-09-24T12:56:47.384Z",
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "selected": "menu_order",
+      "selectedText": "Sắp xếp mặc định",
+      "products": [
+        {
+          "id": 292,
+          "title": "Bờm kính Noel",
+          "priceText": "10.000 ₫",
+          "amounts": [
+            10000
+          ]
+        },
+        {
+          "id": 233,
+          "title": "Cành kẹo ngôi sao trang trí",
+          "priceText": "75.000 ₫\nGiá gốc là: 75.000 ₫.\n64.000 ₫\nGiá hiện tại là: 64.000 ₫.",
+          "amounts": [
+            64000
+          ]
+        },
+        {
+          "id": 275,
+          "title": "Cành kẹo xịt cắm trang trí",
+          "priceText": "75.000 ₫",
+          "amounts": [
+            75000
+          ]
+        },
+        {
+          "id": 210,
+          "title": "Cành quả chùm trắng lá kim tuyến",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        },
+        {
+          "id": 267,
+          "title": "Cành thông PE cắm trang trí",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 215,
+          "title": "Cành trắng quả sọc đỏ trắng",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        },
+        {
+          "id": 201,
+          "title": "Cành trang trí quả chùm đỏ",
+          "priceText": "50.000 ₫",
+          "amounts": [
+            50000
+          ]
+        },
+        {
+          "id": 200,
+          "title": "Cành trang trí quả đỏ lá xanh",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 228,
+          "title": "Châu 20 kim sa",
+          "priceText": "255.000 ₫",
+          "amounts": [
+            255000
+          ]
+        },
+        {
+          "id": 175,
+          "title": "Châu củ tỏi kim sa",
+          "priceText": "95.000 ₫",
+          "amounts": [
+            95000
+          ]
+        },
+        {
+          "id": 253,
+          "title": "Châu củ tỏi nhũ",
+          "priceText": "85.000 ₫",
+          "amounts": [
+            85000
+          ]
+        },
+        {
+          "id": 164,
+          "title": "Châu gương",
+          "priceText": "55.000 ₫\n–\n195.000 ₫\nKhoảng giá: từ 55.000 ₫ đến 195.000 ₫",
+          "amounts": [
+            55000,
+            195000
+          ]
+        },
+        {
+          "id": 151,
+          "title": "Châu gương disco",
+          "amounts": []
+        },
+        {
+          "id": 185,
+          "title": "Châu hồng kim sa",
+          "priceText": "225.000 ₫\n–\n355.000 ₫\nKhoảng giá: từ 225.000 ₫ đến 355.000 ₫",
+          "amounts": [
+            225000,
+            355000
+          ]
+        },
+        {
+          "id": 184,
+          "title": "Chậu kẹo 12cm",
+          "priceText": "125.000 ₫",
+          "amounts": [
+            125000
+          ]
+        },
+        {
+          "id": 217,
+          "title": "Châu khía hạt nổi",
+          "priceText": "75.000 ₫\n–\n115.000 ₫\nKhoảng giá: từ 75.000 ₫ đến 115.000 ₫",
+          "amounts": [
+            75000,
+            115000
+          ]
+        }
+      ],
+      "pagination": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/"
+        }
+      ],
+      "currentPage": "1",
+      "pagePathLinks": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T12:56:50.199Z",
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price",
+      "selected": "price",
+      "selectedText": "Sắp xếp theo giá: thấp đến cao",
+      "products": [
+        {
+          "id": 151,
+          "title": "Châu gương disco",
+          "amounts": []
+        },
+        {
+          "id": 152,
+          "title": "Que kẹo xoắn cắm cành",
+          "amounts": []
+        },
+        {
+          "id": 159,
+          "title": "Châu trơn đỏ",
+          "amounts": []
+        },
+        {
+          "id": 234,
+          "title": "Quả châu nhũ đỏ họa tiết lá",
+          "amounts": []
+        },
+        {
+          "id": 240,
+          "title": "Ngôi sao nhũ đính sequin",
+          "amounts": []
+        },
+        {
+          "id": 250,
+          "title": "Hàng rào khúc gỗ trang trí gốc cây",
+          "amounts": []
+        },
+        {
+          "id": 254,
+          "title": "Hàng rào gỗ trang trí gốc cây",
+          "amounts": []
+        },
+        {
+          "id": 260,
+          "title": "Ngôi sao nhũ đỏ bạc",
+          "amounts": []
+        },
+        {
+          "id": 269,
+          "title": "Kẹo gậy trang trí Noel",
+          "priceText": "1.150 ₫\n–\n950.000 ₫\nKhoảng giá: từ 1.150 ₫ đến 950.000 ₫",
+          "amounts": [
+            1150,
+            950000
+          ]
+        },
+        {
+          "id": 261,
+          "title": "Ông già gôn xịn",
+          "priceText": "1.895 ₫\n–\n555.000 ₫\nKhoảng giá: từ 1.895 ₫ đến 555.000 ₫",
+          "amounts": [
+            1895,
+            555000
+          ]
+        },
+        {
+          "id": 280,
+          "title": "Ông già trắng xịn",
+          "priceText": "1.895 ₫\n–\n995.000 ₫\nKhoảng giá: từ 1.895 ₫ đến 995.000 ₫",
+          "amounts": [
+            1895,
+            995000
+          ]
+        },
+        {
+          "id": 247,
+          "title": "Táo bé trang trí",
+          "priceText": "8.000 ₫",
+          "amounts": [
+            8000
+          ]
+        },
+        {
+          "id": 251,
+          "title": "Táo to trang trí",
+          "priceText": "10.000 ₫",
+          "amounts": [
+            10000
+          ]
+        },
+        {
+          "id": 292,
+          "title": "Bờm kính Noel",
+          "priceText": "10.000 ₫",
+          "amounts": [
+            10000
+          ]
+        },
+        {
+          "id": 246,
+          "title": "Nhà gỗ có đèn trang trí",
+          "priceText": "30.000 ₫",
+          "amounts": [
+            30000
+          ]
+        },
+        {
+          "id": 191,
+          "title": "Nai tuần lộc trang trí",
+          "priceText": "35.000 ₫\n–\n495.000 ₫\nKhoảng giá: từ 35.000 ₫ đến 495.000 ₫",
+          "amounts": [
+            35000,
+            495000
+          ]
+        }
+      ],
+      "pagination": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price"
+        }
+      ],
+      "currentPage": "1",
+      "pagePathLinks": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T12:57:18.635Z",
+      "url": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price",
+      "selected": "price",
+      "selectedText": "Sắp xếp theo giá: thấp đến cao",
+      "products": [
+        {
+          "id": 207,
+          "title": "Hoa trạng nguyên đỏ phủ tuyết",
+          "priceText": "35.000 ₫",
+          "amounts": [
+            35000
+          ]
+        },
+        {
+          "id": 158,
+          "title": "Tất kim tuyến đỏ",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 163,
+          "title": "Kẹo que kim tuyến hồng",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 190,
+          "title": "Kẹo que kim tuyến đỏ",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 200,
+          "title": "Cành trang trí quả đỏ lá xanh",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 212,
+          "title": "Kẹo hồng kim sa",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 221,
+          "title": "Gậy kim tuyến đỏ",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 267,
+          "title": "Cành thông PE cắm trang trí",
+          "priceText": "45.000 ₫",
+          "amounts": [
+            45000
+          ]
+        },
+        {
+          "id": 201,
+          "title": "Cành trang trí quả chùm đỏ",
+          "priceText": "50.000 ₫",
+          "amounts": [
+            50000
+          ]
+        },
+        {
+          "id": 164,
+          "title": "Châu gương",
+          "priceText": "55.000 ₫\n–\n195.000 ₫\nKhoảng giá: từ 55.000 ₫ đến 195.000 ₫",
+          "amounts": [
+            55000,
+            195000
+          ]
+        },
+        {
+          "id": 233,
+          "title": "Cành kẹo ngôi sao trang trí",
+          "priceText": "75.000 ₫\nGiá gốc là: 75.000 ₫.\n64.000 ₫\nGiá hiện tại là: 64.000 ₫.",
+          "amounts": [
+            64000
+          ]
+        },
+        {
+          "id": 203,
+          "title": "Kẹo sọc",
+          "priceText": "65.000 ₫\n–\n155.000 ₫\nKhoảng giá: từ 65.000 ₫ đến 155.000 ₫",
+          "amounts": [
+            65000,
+            155000
+          ]
+        },
+        {
+          "id": 210,
+          "title": "Cành quả chùm trắng lá kim tuyến",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        },
+        {
+          "id": 215,
+          "title": "Cành trắng quả sọc đỏ trắng",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        },
+        {
+          "id": 232,
+          "title": "Châu trám hạt nổi",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        },
+        {
+          "id": 265,
+          "title": "Hoa ly to cắm trang trí",
+          "priceText": "65.000 ₫",
+          "amounts": [
+            65000
+          ]
+        }
+      ],
+      "pagination": [
+        {
+          "text": "TRƯỚC",
+          "href": "https://trangtri4mua.com/cua-hang/page/1/?orderby=price"
+        },
+        {
+          "text": "1",
+          "href": "https://trangtri4mua.com/cua-hang/page/1/?orderby=price"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price"
+        },
+        {
+          "text": "5",
+          "href": "https://trangtri4mua.com/cua-hang/page/5/?orderby=price"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        }
+      ],
+      "currentPage": "2",
+      "pagePathLinks": [
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=207"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=158"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=163"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=190"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=200"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=212"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=221"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=267"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=201"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=233"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=210"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=215"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=232"
+        },
+        {
+          "text": "Thêm giỏ",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price&add-to-cart=265"
+        },
+        {
+          "text": "TRƯỚC",
+          "href": "https://trangtri4mua.com/cua-hang/page/1/?orderby=price"
+        },
+        {
+          "text": "1",
+          "href": "https://trangtri4mua.com/cua-hang/page/1/?orderby=price"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price"
+        },
+        {
+          "text": "5",
+          "href": "https://trangtri4mua.com/cua-hang/page/5/?orderby=price"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-09-24T12:57:20.717Z",
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc",
+      "selected": "price-desc",
+      "selectedText": "Sắp xếp theo giá: cao đến thấp",
+      "products": [
+        {
+          "id": 285,
+          "title": "Ông già Noel lắc mông thổi kèn",
+          "priceText": "2.250.000 ₫",
+          "amounts": [
+            2250000
+          ]
+        },
+        {
+          "id": 177,
+          "title": "Ông già Noel 1m8",
+          "priceText": "2.250.000 ₫",
+          "amounts": [
+            2250000
+          ]
+        },
+        {
+          "id": 223,
+          "title": "Tượng người tuyết mũ đỏ",
+          "priceText": "550.000 ₫\n–\n1.750.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 1.750.000 ₫",
+          "amounts": [
+            550000,
+            1750000
+          ]
+        },
+        {
+          "id": 242,
+          "title": "Lính chì Nutcracker",
+          "priceText": "110.000 ₫\n–\n1.700.000 ₫\nKhoảng giá: từ 110.000 ₫ đến 1.700.000 ₫",
+          "amounts": [
+            110000,
+            1700000
+          ]
+        },
+        {
+          "id": 249,
+          "title": "Nai trắng tuyết điện",
+          "priceText": "1.250.000 ₫",
+          "amounts": [
+            1250000
+          ]
+        },
+        {
+          "id": 248,
+          "title": "Người tuyết trang trí",
+          "priceText": "1.250.000 ₫",
+          "amounts": [
+            1250000
+          ]
+        },
+        {
+          "id": 280,
+          "title": "Ông già trắng xịn",
+          "priceText": "1.895 ₫\n–\n995.000 ₫\nKhoảng giá: từ 1.895 ₫ đến 995.000 ₫",
+          "amounts": [
+            1895,
+            995000
+          ]
+        },
+        {
+          "id": 266,
+          "title": "Ông già vàng xịn 60cm",
+          "priceText": "995.000 ₫",
+          "amounts": [
+            995000
+          ]
+        },
+        {
+          "id": 269,
+          "title": "Kẹo gậy trang trí Noel",
+          "priceText": "1.150 ₫\n–\n950.000 ₫\nKhoảng giá: từ 1.150 ₫ đến 950.000 ₫",
+          "amounts": [
+            1150,
+            950000
+          ]
+        },
+        {
+          "id": 295,
+          "title": "Tháp nhũ điện",
+          "priceText": "550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫",
+          "amounts": [
+            550000,
+            895000
+          ]
+        },
+        {
+          "id": 236,
+          "title": "Lính chì Nutcracker N01090",
+          "priceText": "850.000 ₫",
+          "amounts": [
+            850000
+          ]
+        },
+        {
+          "id": 288,
+          "title": "Ông già Noel 3 mẫu",
+          "priceText": "255.000 ₫\n–\n685.000 ₫\nKhoảng giá: từ 255.000 ₫ đến 685.000 ₫",
+          "amounts": [
+            255000,
+            685000
+          ]
+        },
+        {
+          "id": 229,
+          "title": "Khinh khí cầu gấu nhung",
+          "priceText": "325.000 ₫\n–\n585.000 ₫\nKhoảng giá: từ 325.000 ₫ đến 585.000 ₫",
+          "amounts": [
+            325000,
+            585000
+          ]
+        },
+        {
+          "id": 261,
+          "title": "Ông già gôn xịn",
+          "priceText": "1.895 ₫\n–\n555.000 ₫\nKhoảng giá: từ 1.895 ₫ đến 555.000 ₫",
+          "amounts": [
+            1895,
+            555000
+          ]
+        },
+        {
+          "id": 252,
+          "title": "Ông già Noel đỏ",
+          "priceText": "555.000 ₫",
+          "amounts": [
+            555000
+          ]
+        },
+        {
+          "id": 191,
+          "title": "Nai tuần lộc trang trí",
+          "priceText": "35.000 ₫\n–\n495.000 ₫\nKhoảng giá: từ 35.000 ₫ đến 495.000 ₫",
+          "amounts": [
+            35000,
+            495000
+          ]
+        }
+      ],
+      "pagination": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price-desc"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price-desc"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price-desc"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price-desc"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price-desc"
+        }
+      ],
+      "currentPage": "1",
+      "pagePathLinks": [
+        {
+          "text": "2",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price-desc"
+        },
+        {
+          "text": "3",
+          "href": "https://trangtri4mua.com/cua-hang/page/3/?orderby=price-desc"
+        },
+        {
+          "text": "4",
+          "href": "https://trangtri4mua.com/cua-hang/page/4/?orderby=price-desc"
+        },
+        {
+          "text": "6",
+          "href": "https://trangtri4mua.com/cua-hang/page/6/?orderby=price-desc"
+        },
+        {
+          "text": "TIẾP THEO",
+          "href": "https://trangtri4mua.com/cua-hang/page/2/?orderby=price-desc"
+        }
+      ]
+    }
+  ]
+}

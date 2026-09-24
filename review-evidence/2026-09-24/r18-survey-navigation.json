@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-09-24T13:20:08.471Z",
+    "name": "shop",
+    "before": {
+      "source": "https://trangtri4mua.com/cua-hang/",
+      "text": "Khảo Sát Mặt Bằng 24h",
+      "href": "https://trangtri4mua.com/#b2b-consultation"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/#b2b-consultation",
+      "title": "Trang Chủ - Trang trí 4 mùa",
+      "h1": "Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng",
+      "hashTargetExists": false,
+      "scrollY": 0,
+      "activeTag": "BODY",
+      "activeId": "",
+      "forms": [
+        {
+          "id": "",
+          "role": "search",
+          "method": "get"
+        }
+      ],
+      "b2bBox": {
+        "top": 3486.015625,
+        "text": "Dự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn diện từ ý tưởng, khảo sát mặt bằng đến thi công hoàn thiện. Đồng bộ phong cách theo nhận diện thương hiệu với chi phí tối ưu.\n\n✓\nKhảo sát mặt bằng & tư vấn phối cảnh 3D thực tế: Đội ngũ thiết kế hỗ trợ tư vấn concept phù hợp với diện tích và luồng di chuyển của quán & văn phòng.\n✓\nBáo giá minh bạch, dự toán vật tư rõ ràng: Bóc tách chi tiết từng hạng mục cây thông, phụ kiện và ánh sáng, không phát sinh chi phí ngoài dự kiến.\n✓\nHóa đơn GTGT (VAT) điện tử & hợp đồng đầy đủ: Cung cấp chứng từ thanh toán hợp lệ, quy trình nghiệm thu và thanh toán thuận tiện cho doanh nghiệp.\n✓\nThi công đúng hẹn & hỗ trợ tháo dỡ sau lễ: Bàn giao đúng tiến độ, hỗ trợ thu gom và bảo quản phụ kiện gọn gàng sau mùa lễ hội.\nCần Tư Vấn & Dự Toán Chi Phí?\n\nGửi kích thước hoặc ảnh không gian qua Zalo để nhận phối cảnh gợi ý & dự toán chi phí chi tiết trong ngày.\n\nNhắn Zalo Tư Vấn\nGọi: 0901.234.567"
+      },
+      "navigationResponseStatus": 200
+    }
+  },
+  {
+    "timestamp": "2026-09-24T13:20:12.649Z",
+    "name": "category",
+    "before": {
+      "source": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "text": "Khảo Sát Mặt Bằng 24h",
+      "href": "https://trangtri4mua.com/#b2b-consultation"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/#b2b-consultation",
+      "title": "Trang Chủ - Trang trí 4 mùa",
+      "h1": "Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng",
+      "hashTargetExists": false,
+      "scrollY": 0,
+      "activeTag": "BODY",
+      "activeId": "",
+      "forms": [
+        {
+          "id": "",
+          "role": "search",
+          "method": "get"
+        }
+      ],
+      "b2bBox": {
+        "top": 3486.015625,
+        "text": "Dự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn diện từ ý tưởng, khảo sát mặt bằng đến thi công hoàn thiện. Đồng bộ phong cách theo nhận diện thương hiệu với chi phí tối ưu.\n\n✓\nKhảo sát mặt bằng & tư vấn phối cảnh 3D thực tế: Đội ngũ thiết kế hỗ trợ tư vấn concept phù hợp với diện tích và luồng di chuyển của quán & văn phòng.\n✓\nBáo giá minh bạch, dự toán vật tư rõ ràng: Bóc tách chi tiết từng hạng mục cây thông, phụ kiện và ánh sáng, không phát sinh chi phí ngoài dự kiến.\n✓\nHóa đơn GTGT (VAT) điện tử & hợp đồng đầy đủ: Cung cấp chứng từ thanh toán hợp lệ, quy trình nghiệm thu và thanh toán thuận tiện cho doanh nghiệp.\n✓\nThi công đúng hẹn & hỗ trợ tháo dỡ sau lễ: Bàn giao đúng tiến độ, hỗ trợ thu gom và bảo quản phụ kiện gọn gàng sau mùa lễ hội.\nCần Tư Vấn & Dự Toán Chi Phí?\n\nGửi kích thước hoặc ảnh không gian qua Zalo để nhận phối cảnh gợi ý & dự toán chi phí chi tiết trong ngày.\n\nNhắn Zalo Tư Vấn\nGọi: 0901.234.567"
+      },
+      "navigationResponseStatus": 200
+    }
+  }
+]

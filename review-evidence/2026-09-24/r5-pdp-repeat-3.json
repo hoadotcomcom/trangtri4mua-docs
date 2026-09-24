@@ -1,0 +1,732 @@
+{
+  "config": {
+    "network": {
+      "latencyMs": 150,
+      "downloadBytesPerSecond": 200000,
+      "uploadBytesPerSecond": 93750
+    },
+    "cpuSlowdown": 4,
+    "cacheDisabled": true
+  },
+  "result": {
+    "timestamp": "2026-09-24T11:50:36.623Z",
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "title": "Tháp nhũ điện - Trang trí Noel - Giá | Trang trí 4 mùa",
+    "viewport": [
+      375,
+      812
+    ],
+    "userAgent": "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+    "navigation": {
+      "name": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "entryType": "navigation",
+      "startTime": 0,
+      "duration": 4750.400000095367,
+      "navigationId": 7683,
+      "initiatorType": "navigation",
+      "deliveryType": "",
+      "nextHopProtocol": "h3",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "text/html",
+      "contentEncoding": "zstd",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 0.8000001907348633,
+      "domainLookupStart": 0.8000001907348633,
+      "domainLookupEnd": 0.8000001907348633,
+      "connectStart": 0.8000001907348633,
+      "secureConnectionStart": 0.8000001907348633,
+      "connectEnd": 0.8000001907348633,
+      "requestStart": 1.9000000953674316,
+      "responseStart": 1234.0999999046326,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 1234.0999999046326,
+      "responseEnd": 1409.0999999046326,
+      "transferSize": 34176,
+      "encodedBodySize": 33876,
+      "decodedBodySize": 169722,
+      "responseStatus": 200,
+      "serverTiming": [
+        {},
+        {},
+        {},
+        {}
+      ],
+      "unloadEventStart": 1261.4000000953674,
+      "unloadEventEnd": 1261.4000000953674,
+      "domInteractive": 3440.7000002861023,
+      "domContentLoadedEventStart": 3443.5,
+      "domContentLoadedEventEnd": 3458.9000000953674,
+      "domComplete": 4750.300000190735,
+      "loadEventStart": 4750.400000095367,
+      "loadEventEnd": 4750.400000095367,
+      "type": "navigate",
+      "redirectCount": 0,
+      "activationStart": 0,
+      "criticalCHRestart": 0,
+      "notRestoredReasons": null,
+      "confidence": {}
+    },
+    "paint": [
+      {
+        "name": "first-paint",
+        "entryType": "paint",
+        "startTime": 2392,
+        "duration": 0,
+        "navigationId": 7683,
+        "paintTime": 2383.5,
+        "presentationTime": 2392
+      },
+      {
+        "name": "first-contentful-paint",
+        "entryType": "paint",
+        "startTime": 2392,
+        "duration": 0,
+        "navigationId": 7683,
+        "paintTime": 2383.5,
+        "presentationTime": 2392
+      }
+    ],
+    "lcp": [
+      {
+        "startTime": 2392,
+        "size": 9696,
+        "url": "",
+        "element": "<h1 class=\"product_title entry-title\">Tháp nhũ điện – Trang trí Noel</h1>"
+      },
+      {
+        "startTime": 4760,
+        "size": 143117,
+        "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+        "element": "<img width=\"600\" height=\"800\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp\" alt=\"Tháp nhũ điện - cây thông trang trí Noel\" loading=\"lazy\" decoding=\"async\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp 900w\" sizes=\"auto, (max-width: 600px) 100vw, 600px\" itemprop=\"image\" class=\" wp-post-image\" style=\"aspect-ratio: 3/4;\" title=\"Thap Nhu Dien\">"
+      }
+    ],
+    "shifts": [
+      {
+        "startTime": 3247.7000002861023,
+        "value": 0.003398659627346777,
+        "hadRecentInput": false,
+        "sources": [
+          {
+            "node": "<div id=\"product-295\" class=\"product type-product post-295 status-publish first instock product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-cay-thong-noel product_tag-thap-trang-tri-co-den has-post-thumbnail shipping-taxable purchasable product-type-variable\">\n\n\t<div class=\"product-entry-wrapper is-width-constrained\"><div class=\"woocommerce-product-gallery\" data-gallery=\"default\"",
+            "previous": {
+              "x": 0,
+              "y": 290.921875,
+              "width": 375,
+              "height": 521.078125,
+              "top": 290.921875,
+              "right": 375,
+              "bottom": 812,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 294.984375,
+              "width": 375,
+              "height": 517.015625,
+              "top": 294.984375,
+              "right": 375,
+              "bottom": 812,
+              "left": 0
+            }
+          },
+          {
+            "node": "<div class=\"woocommerce-product-gallery\" data-gallery=\"default\" style=\"opacity: 1;\"><div class=\"ct-product-gallery-container\"><figure class=\"ct-media-container\" data-src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp\" data-width=\"900\" data-height=\"1200\"><img width=\"600\" height=\"800\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp\" alt=\"T",
+            "previous": {
+              "x": 19.5,
+              "y": 288.921875,
+              "width": 336,
+              "height": 445.328125,
+              "top": 288.921875,
+              "right": 355.5,
+              "bottom": 734.25,
+              "left": 19.5
+            },
+            "current": {
+              "x": 19.5,
+              "y": 292.984375,
+              "width": 336,
+              "height": 445.328125,
+              "top": 292.984375,
+              "right": 355.5,
+              "bottom": 738.3125,
+              "left": 19.5
+            }
+          },
+          {
+            "node": "<span class=\"last-item\" aria-current=\"page\" itemscope=\"\" itemprop=\"itemListElement\" itemtype=\"https://schema.org/ListItem\"><meta itemprop=\"position\" content=\"5\"><span itemprop=\"name\">Tháp nhũ điện – Trang trí Noel</span><meta itemprop=\"url\" content=\"https://trangtri4mua.com/san-pham/thap-nhu-dien/\"></span>",
+            "previous": {
+              "x": 22.5,
+              "y": 228.65625,
+              "width": 236,
+              "height": 22.265625,
+              "top": 228.65625,
+              "right": 258.5,
+              "bottom": 250.921875,
+              "left": 22.5
+            },
+            "current": {
+              "x": 22.5,
+              "y": 232.71875,
+              "width": 236.078125,
+              "height": 22.265625,
+              "top": 232.71875,
+              "right": 258.578125,
+              "bottom": 254.984375,
+              "left": 22.5
+            }
+          },
+          {
+            "node": "<span class=\"item-2\" itemscope=\"\" itemprop=\"itemListElement\" itemtype=\"https://schema.org/ListItem\"><meta itemprop=\"position\" content=\"4\"><a href=\"https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/\" itemprop=\"item\"><span itemprop=\"name\">Phụ Kiện Treo Cây Noel</span></a><meta itemprop=\"url\" content=\"https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh",
+            "previous": {
+              "x": 22.5,
+              "y": 206.125,
+              "width": 203.03125,
+              "height": 22.265625,
+              "top": 206.125,
+              "right": 225.53125,
+              "bottom": 228.390625,
+              "left": 22.5
+            },
+            "current": {
+              "x": 22.5,
+              "y": 209.171875,
+              "width": 202.984375,
+              "height": 22.265625,
+              "top": 209.171875,
+              "right": 225.484375,
+              "bottom": 231.4375,
+              "left": 22.5
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": [],
+    "resources": [
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/main.min.css?ver=2.1.57",
+        "type": "link",
+        "startTime": 1378.0999999046326,
+        "duration": 863.9000000953674,
+        "transferSize": 18278,
+        "encodedBodySize": 17978,
+        "decodedBodySize": 94500,
+        "responseEnd": 2242
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/woocommerce.min.css?ver=2.1.57",
+        "type": "link",
+        "startTime": 1378.4000000953674,
+        "duration": 759.0999999046326,
+        "transferSize": 12516,
+        "encodedBodySize": 12216,
+        "decodedBodySize": 63976,
+        "responseEnd": 2137.5
+      },
+      {
+        "name": "https://fonts.googleapis.com/css2?family=Be%20Vietnam%20Pro:wght@400;500;600;700&display=swap",
+        "type": "link",
+        "startTime": 1378.9000000953674,
+        "duration": 256.59999990463257,
+        "transferSize": 876,
+        "encodedBodySize": 576,
+        "decodedBodySize": 5280,
+        "responseEnd": 1635.5
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/page-title.min.css?ver=2.1.57",
+        "type": "link",
+        "startTime": 1379,
+        "duration": 157.2000002861023,
+        "transferSize": 817,
+        "encodedBodySize": 517,
+        "decodedBodySize": 1254,
+        "responseEnd": 1536.2000002861023
+      },
+      {
+        "name": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap",
+        "type": "link",
+        "startTime": 1379.0999999046326,
+        "duration": 262.80000019073486,
+        "transferSize": 1202,
+        "encodedBodySize": 902,
+        "decodedBodySize": 16251,
+        "responseEnd": 1641.9000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/variables.css?ver=1790241988",
+        "type": "link",
+        "startTime": 1379.7000002861023,
+        "duration": 451.09999990463257,
+        "transferSize": 4176,
+        "encodedBodySize": 3876,
+        "decodedBodySize": 15451,
+        "responseEnd": 1830.8000001907349
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/header-nav.css?ver=1790244718",
+        "type": "link",
+        "startTime": 1379.8000001907349,
+        "duration": 512,
+        "transferSize": 5129,
+        "encodedBodySize": 4829,
+        "decodedBodySize": 24174,
+        "responseEnd": 1891.8000001907349
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/components.css?ver=1790246833",
+        "type": "link",
+        "startTime": 1379.9000000953674,
+        "duration": 533.1999998092651,
+        "transferSize": 5061,
+        "encodedBodySize": 4761,
+        "decodedBodySize": 21369,
+        "responseEnd": 1913.0999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/single-product.css?ver=1790242322",
+        "type": "link",
+        "startTime": 1379.9000000953674,
+        "duration": 546.5,
+        "transferSize": 5745,
+        "encodedBodySize": 5445,
+        "decodedBodySize": 31280,
+        "responseEnd": 1926.4000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/product-cards.css?ver=1790242090",
+        "type": "link",
+        "startTime": 1379.9000000953674,
+        "duration": 576.6999998092651,
+        "transferSize": 5944,
+        "encodedBodySize": 5644,
+        "decodedBodySize": 27699,
+        "responseEnd": 1956.5999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/mobile-optimizations.css?ver=1790242457",
+        "type": "link",
+        "startTime": 1380,
+        "duration": 517.7000002861023,
+        "transferSize": 5699,
+        "encodedBodySize": 5399,
+        "decodedBodySize": 25546,
+        "responseEnd": 1897.7000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/style.css?ver=1790237453",
+        "type": "link",
+        "startTime": 1380.7000002861023,
+        "duration": 277.09999990463257,
+        "transferSize": 1461,
+        "encodedBodySize": 1161,
+        "decodedBodySize": 2914,
+        "responseEnd": 1657.8000001907349
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+        "type": "script",
+        "startTime": 1380.7000002861023,
+        "duration": 922.6999998092651,
+        "transferSize": 30933,
+        "encodedBodySize": 30633,
+        "decodedBodySize": 87553,
+        "responseEnd": 2303.4000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+        "type": "script",
+        "startTime": 1380.8000001907349,
+        "duration": 525.2999997138977,
+        "transferSize": 5181,
+        "encodedBodySize": 4881,
+        "decodedBodySize": 13577,
+        "responseEnd": 1906.0999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.1.2",
+        "type": "script",
+        "startTime": 1380.8000001907349,
+        "duration": 1559.6999998092651,
+        "transferSize": 3847,
+        "encodedBodySize": 3547,
+        "decodedBodySize": 9636,
+        "responseEnd": 2940.5
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.11.1.2",
+        "type": "script",
+        "startTime": 1380.9000000953674,
+        "duration": 1190.4000000953674,
+        "transferSize": 1493,
+        "encodedBodySize": 1193,
+        "decodedBodySize": 2673,
+        "responseEnd": 2571.300000190735
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1380.9000000953674,
+        "duration": 1199.1999998092651,
+        "transferSize": 1744,
+        "encodedBodySize": 1444,
+        "decodedBodySize": 4350,
+        "responseEnd": 2580.0999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1381.5999999046326,
+        "duration": 1587.9000000953674,
+        "transferSize": 4148,
+        "encodedBodySize": 3848,
+        "decodedBodySize": 13277,
+        "responseEnd": 2969.5
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.1.2",
+        "type": "script",
+        "startTime": 1381.7000002861023,
+        "duration": 1116.5,
+        "transferSize": 1133,
+        "encodedBodySize": 833,
+        "decodedBodySize": 1720,
+        "responseEnd": 2498.2000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1381.7000002861023,
+        "duration": 1204.5,
+        "transferSize": 1891,
+        "encodedBodySize": 1591,
+        "decodedBodySize": 4281,
+        "responseEnd": 2586.2000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1381.7000002861023,
+        "duration": 1364,
+        "transferSize": 1348,
+        "encodedBodySize": 1048,
+        "decodedBodySize": 2939,
+        "responseEnd": 2745.7000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/flexy.min.css?ver=2.1.57",
+        "type": "link",
+        "startTime": 1382.3000001907349,
+        "duration": 358.7999997138977,
+        "transferSize": 1533,
+        "encodedBodySize": 1233,
+        "decodedBodySize": 3773,
+        "responseEnd": 1741.0999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header.png",
+        "type": "img",
+        "startTime": 1382.5,
+        "duration": 808.5,
+        "transferSize": 14720,
+        "encodedBodySize": 14420,
+        "decodedBodySize": 14593,
+        "responseEnd": 2191
+      },
+      {
+        "name": "https://trangtri4mua.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "type": "script",
+        "startTime": 1410.4000000953674,
+        "duration": 268.59999990463257,
+        "transferSize": 961,
+        "encodedBodySize": 661,
+        "decodedBodySize": 1239,
+        "responseEnd": 1679
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/main.js?ver=2.1.57",
+        "type": "script",
+        "startTime": 1410.4000000953674,
+        "duration": 771,
+        "transferSize": 10011,
+        "encodedBodySize": 9711,
+        "decodedBodySize": 29847,
+        "responseEnd": 2181.4000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1410.5,
+        "duration": 967.3000001907349,
+        "transferSize": 5117,
+        "encodedBodySize": 4817,
+        "decodedBodySize": 15315,
+        "responseEnd": 2377.800000190735
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-includes/js/comment-reply.min.js?ver=7.1.2",
+        "type": "script",
+        "startTime": 1410.5,
+        "duration": 1319.2000002861023,
+        "transferSize": 1650,
+        "encodedBodySize": 1350,
+        "decodedBodySize": 2950,
+        "responseEnd": 2729.7000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1411.3000001907349,
+        "duration": 956.7999997138977,
+        "transferSize": 1450,
+        "encodedBodySize": 1150,
+        "decodedBodySize": 2439,
+        "responseEnd": 2368.0999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-includes/js/wp-util.min.js?ver=7.1.2",
+        "type": "script",
+        "startTime": 1411.3000001907349,
+        "duration": 1137.2999997138977,
+        "transferSize": 1054,
+        "encodedBodySize": 754,
+        "decodedBodySize": 1431,
+        "responseEnd": 2548.5999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=11.1.2",
+        "type": "script",
+        "startTime": 1411.3000001907349,
+        "duration": 1632.6999998092651,
+        "transferSize": 4688,
+        "encodedBodySize": 4388,
+        "decodedBodySize": 16627,
+        "responseEnd": 3044
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790244747",
+        "type": "script",
+        "startTime": 1411.3000001907349,
+        "duration": 1895.6999998092651,
+        "transferSize": 6592,
+        "encodedBodySize": 6292,
+        "decodedBodySize": 21963,
+        "responseEnd": 3307
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-includes/js/underscore.min.js?ver=1.13.8",
+        "type": "script",
+        "startTime": 1411.3000001907349,
+        "duration": 2022.1999998092651,
+        "transferSize": 7698,
+        "encodedBodySize": 7398,
+        "decodedBodySize": 19012,
+        "responseEnd": 3433.5
+      },
+      {
+        "name": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+        "type": "script",
+        "startTime": 1411.9000000953674,
+        "duration": 687.6999998092651,
+        "transferSize": 0,
+        "encodedBodySize": 0,
+        "decodedBodySize": 0,
+        "responseEnd": 2099.5999999046326
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/fonts/woo.woff2",
+        "type": "css",
+        "startTime": 2358.0999999046326,
+        "duration": 664.3000001907349,
+        "transferSize": 3060,
+        "encodedBodySize": 2760,
+        "decodedBodySize": 2760,
+        "responseEnd": 3022.4000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+        "type": "img",
+        "startTime": 2388,
+        "duration": 2359.7000002861023,
+        "transferSize": 175258,
+        "encodedBodySize": 174958,
+        "decodedBodySize": 174958,
+        "responseEnd": 4747.700000286102
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/100.957a1d57641c41d5237c.js",
+        "type": "script",
+        "startTime": 2396.4000000953674,
+        "duration": 564.8000001907349,
+        "transferSize": 1372,
+        "encodedBodySize": 1072,
+        "decodedBodySize": 2772,
+        "responseEnd": 2961.2000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/907.1ddadcf80aca9cb11200.js",
+        "type": "script",
+        "startTime": 2965.4000000953674,
+        "duration": 447.30000019073486,
+        "transferSize": 2391,
+        "encodedBodySize": 2091,
+        "decodedBodySize": 6481,
+        "responseEnd": 3412.7000002861023
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/93.da9cd5c0b5547a09f6f1.js",
+        "type": "script",
+        "startTime": 2969,
+        "duration": 696.8000001907349,
+        "transferSize": 6143,
+        "encodedBodySize": 5843,
+        "decodedBodySize": 15643,
+        "responseEnd": 3665.800000190735
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/74.95c89b75282af2b088a3.js",
+        "type": "script",
+        "startTime": 3490.5999999046326,
+        "duration": 228.80000019073486,
+        "transferSize": 494,
+        "encodedBodySize": 194,
+        "decodedBodySize": 407,
+        "responseEnd": 3719.4000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/cart-header-element-lazy.min.css?ver=2.1.57",
+        "type": "link",
+        "startTime": 3501.300000190735,
+        "duration": 269.59999990463257,
+        "transferSize": 1396,
+        "encodedBodySize": 1096,
+        "decodedBodySize": 3373,
+        "responseEnd": 3770.9000000953674
+      },
+      {
+        "name": "https://trangtri4mua.com/cdn-cgi/rum?",
+        "type": "xmlhttprequest",
+        "startTime": 4752.900000095367,
+        "duration": 158,
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "decodedBodySize": 0,
+        "responseEnd": 4910.900000095367
+      }
+    ],
+    "images": [
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header.png",
+        "loading": "auto",
+        "fetchpriority": "auto",
+        "natural": [
+          374,
+          92
+        ],
+        "rendered": [
+          0,
+          0
+        ],
+        "top": 0,
+        "complete": true
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header.png",
+        "loading": "auto",
+        "fetchpriority": "auto",
+        "natural": [
+          374,
+          92
+        ],
+        "rendered": [
+          176,
+          50
+        ],
+        "top": 49.796875,
+        "complete": true
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "natural": [
+          328,
+          437
+        ],
+        "rendered": [
+          328,
+          437
+        ],
+        "top": 295.984375,
+        "complete": true
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/soc-nhung-do-300x300.webp",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "natural": [
+          0,
+          0
+        ],
+        "rendered": [
+          0,
+          0
+        ],
+        "top": 0,
+        "complete": false
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-tron-do-300x300.webp",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "natural": [
+          0,
+          0
+        ],
+        "rendered": [
+          0,
+          0
+        ],
+        "top": 0,
+        "complete": false
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-hong-300x300.webp",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "natural": [
+          0,
+          0
+        ],
+        "rendered": [
+          0,
+          0
+        ],
+        "top": 0,
+        "complete": false
+      },
+      {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-nhung-do-300x300.webp",
+        "loading": "lazy",
+        "fetchpriority": "auto",
+        "natural": [
+          0,
+          0
+        ],
+        "rendered": [
+          0,
+          0
+        ],
+        "top": 0,
+        "complete": false
+      }
+    ],
+    "scrollWidth": 375
+  }
+}

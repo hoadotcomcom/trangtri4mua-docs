@@ -1,0 +1,152 @@
+{
+  "timestamp": "2026-09-24T13:27:26.152Z",
+  "url": "https://trangtri4mua.com/",
+  "method": "Focus DOM vào từng summary; Enter đổi trạng thái, Space đổi lại. Không phải hành trình Tab từ đầu trang.",
+  "rows": [
+    {
+      "index": 0,
+      "before": {
+        "open": true,
+        "summary": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼",
+        "renderedText": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼\nTất cả sản phẩm tại Trang Trí 4 Mùa đều là ảnh thật 100% được quay chụp trực tiếp tại kho và showroom. Quý khách luôn có quyền mở hộp kiểm tra đúng mẫu mã, màu sắc trước khi thanh toán tiền cho nhân viên giao hàng (COD).",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterEnter": {
+        "open": false,
+        "summary": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼",
+        "renderedText": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterSpace": {
+        "open": true,
+        "summary": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼",
+        "renderedText": "1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼\nTất cả sản phẩm tại Trang Trí 4 Mùa đều là ảnh thật 100% được quay chụp trực tiếp tại kho và showroom. Quý khách luôn có quyền mở hộp kiểm tra đúng mẫu mã, màu sắc trước khi thanh toán tiền cho nhân viên giao hàng (COD).",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "toggledEnter": true,
+      "restoredSpace": true
+    },
+    {
+      "index": 1,
+      "before": {
+        "open": false,
+        "summary": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼",
+        "renderedText": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterEnter": {
+        "open": true,
+        "summary": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼",
+        "renderedText": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼\nChúng tôi sử dụng quy trình đóng gói chống sốc chuyên dụng 3 lớp (màng xốp khí, mút định hình và thùng carton sóng 5 lớp). Trong trường hợp hiếm hoi bị nứt vỡ do vận chuyển, chúng tôi áp dụng chính sách 1 đổi 1 miễn phí hỏa tốc hoặc hoàn tiền ngay trong ngày.",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterSpace": {
+        "open": false,
+        "summary": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼",
+        "renderedText": "2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "toggledEnter": true,
+      "restoredSpace": true
+    },
+    {
+      "index": 2,
+      "before": {
+        "open": false,
+        "summary": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼",
+        "renderedText": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterEnter": {
+        "open": true,
+        "summary": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼",
+        "renderedText": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼\nCó. Trang Trí 4 Mùa hỗ trợ xuất hóa đơn điện tử VAT đầy đủ theo đúng quy định cho công ty, nhà hàng, quán cafe và khách sạn. Quý khách chỉ cần để lại thông tin mã số thuế khi đặt hàng hoặc nhắn tin Zalo cho tư vấn viên.",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterSpace": {
+        "open": false,
+        "summary": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼",
+        "renderedText": "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "toggledEnter": true,
+      "restoredSpace": true
+    },
+    {
+      "index": 3,
+      "before": {
+        "open": false,
+        "summary": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼",
+        "renderedText": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterEnter": {
+        "open": true,
+        "summary": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼",
+        "renderedText": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼\nKhu vực nội thành TP.HCM: Hỗ trợ giao hỏa tốc qua Ahamove/GrabExpress trong vòng 2h – 4h. Các tỉnh thành khác trên toàn quốc: Giao qua chuyển phát nhanh EMS / ViettelPost trong vòng 1 – 3 ngày làm việc.",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterSpace": {
+        "open": false,
+        "summary": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼",
+        "renderedText": "4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "toggledEnter": true,
+      "restoredSpace": true
+    },
+    {
+      "index": 4,
+      "before": {
+        "open": false,
+        "summary": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼",
+        "renderedText": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterEnter": {
+        "open": true,
+        "summary": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼",
+        "renderedText": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼\nQuý khách chỉ cần gửi hình ảnh mặt bằng hoặc diện tích không gian qua Zalo số 0901.234.567. Đội ngũ thiết kế sẽ lên danh sách bóc tách vật tư và gợi ý bố cục phù hợp ngân sách hoàn toàn miễn phí trong vòng 15 – 30 phút.",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "afterSpace": {
+        "open": false,
+        "summary": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼",
+        "renderedText": "5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼",
+        "focusOnSummary": true,
+        "viewportWidth": 375,
+        "documentWidth": 375
+      },
+      "toggledEnter": true,
+      "restoredSpace": true
+    }
+  ]
+}

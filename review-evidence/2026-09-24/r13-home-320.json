@@ -1,0 +1,838 @@
+{
+  "timestamp": "2026-09-24T12:45:29.586Z",
+  "label": "home-320",
+  "state": {
+    "url": "https://trangtri4mua.com/",
+    "viewport": {
+      "width": 320,
+      "height": 812,
+      "visualWidth": 320,
+      "scale": 1
+    },
+    "document": {
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "scrollX": 0,
+      "scrollY": 0
+    },
+    "controls": [
+      {
+        "tag": "A",
+        "text": "0901.234.567",
+        "label": null,
+        "className": "tt4m-topbar-phone",
+        "href": "tel:0901234567",
+        "rect": {
+          "x": 118.46875,
+          "y": 30.796875,
+          "width": 87.0625,
+          "height": 16,
+          "top": 30.796875,
+          "right": 205.53125,
+          "bottom": 46.796875,
+          "left": 118.46875
+        },
+        "clientWidth": 0,
+        "scrollWidth": 0,
+        "points": [
+          {
+            "x": 131.528125,
+            "y": 34.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 131.528125,
+            "y": 38.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 131.528125,
+            "y": 42.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 162,
+            "y": 34.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 162,
+            "y": 38.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 162,
+            "y": 42.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 192.471875,
+            "y": 34.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 192.471875,
+            "y": 38.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          },
+          {
+            "x": 192.471875,
+            "y": 42.796875,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-topbar-phone"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "label": null,
+        "className": "site-logo-container",
+        "href": "https://trangtri4mua.com/",
+        "rect": {
+          "x": 19.203125,
+          "y": 68.59375,
+          "width": 130.796875,
+          "height": 50,
+          "top": 68.59375,
+          "right": 150,
+          "bottom": 118.59375,
+          "left": 19.203125
+        },
+        "clientWidth": 131,
+        "scrollWidth": 131,
+        "points": [
+          {
+            "x": 38.822656249999994,
+            "y": 81.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 38.822656249999994,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 38.822656249999994,
+            "y": 106.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 84.6015625,
+            "y": 81.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 84.6015625,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 84.6015625,
+            "y": 106.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 130.38046874999998,
+            "y": 81.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 130.38046874999998,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          },
+          {
+            "x": 130.38046874999998,
+            "y": 106.09375,
+            "unobscured": true,
+            "hit": {
+              "tag": "IMG",
+              "className": "default-logo"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "Giỏ hàng\n0 ₫\n0",
+        "label": null,
+        "className": "ct-cart-item",
+        "href": "https://trangtri4mua.com/gio-hang/",
+        "rect": {
+          "x": 170,
+          "y": 75.453125,
+          "width": 66.796875,
+          "height": 36.265625,
+          "top": 75.453125,
+          "right": 236.796875,
+          "bottom": 111.71875,
+          "left": 170
+        },
+        "clientWidth": 65,
+        "scrollWidth": 65,
+        "points": [
+          {
+            "x": 180.01953125,
+            "y": 84.51953125,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "ct-cart-item"
+            }
+          },
+          {
+            "x": 180.01953125,
+            "y": 93.5859375,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "ct-cart-item"
+            }
+          },
+          {
+            "x": 180.01953125,
+            "y": 102.65234375,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "ct-cart-item"
+            }
+          },
+          {
+            "x": 203.3984375,
+            "y": 84.51953125,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": "woocommerce-Price-currencySymbol"
+            }
+          },
+          {
+            "x": 203.3984375,
+            "y": 93.5859375,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": "woocommerce-Price-currencySymbol"
+            }
+          },
+          {
+            "x": 203.3984375,
+            "y": 102.65234375,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": "ct-label "
+            }
+          },
+          {
+            "x": 226.77734375,
+            "y": 84.51953125,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": "ct-dynamic-count-cart"
+            }
+          },
+          {
+            "x": 226.77734375,
+            "y": 93.5859375,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": "ct-dynamic-count-cart"
+            }
+          },
+          {
+            "x": 226.77734375,
+            "y": 102.65234375,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "ct-cart-item"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "label": "Menu",
+        "className": "ct-header-trigger ct-toggle ",
+        "href": null,
+        "rect": {
+          "x": 256.796875,
+          "y": 71.59375,
+          "width": 44,
+          "height": 44,
+          "top": 71.59375,
+          "right": 300.796875,
+          "bottom": 115.59375,
+          "left": 256.796875
+        },
+        "clientWidth": 44,
+        "scrollWidth": 44,
+        "points": [
+          {
+            "x": 263.396875,
+            "y": 82.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 263.396875,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 263.396875,
+            "y": 104.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 278.796875,
+            "y": 82.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 278.796875,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "rect",
+              "className": "svg"
+            }
+          },
+          {
+            "x": 278.796875,
+            "y": 104.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 294.196875,
+            "y": 82.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 294.196875,
+            "y": 93.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          },
+          {
+            "x": 294.196875,
+            "y": 104.59375,
+            "unobscured": true,
+            "hit": {
+              "tag": "BUTTON",
+              "className": "ct-header-trigger ct-toggle "
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "Xem 8+ Set Combo",
+        "label": null,
+        "className": "tt4m-btn-combo-primary",
+        "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "rect": {
+          "x": 35.203125,
+          "y": 689.390625,
+          "width": 135.75,
+          "height": 44,
+          "top": 689.390625,
+          "right": 170.953125,
+          "bottom": 733.390625,
+          "left": 35.203125
+        },
+        "clientWidth": 136,
+        "scrollWidth": 136,
+        "points": [
+          {
+            "x": 55.565625,
+            "y": 700.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 55.565625,
+            "y": 711.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 55.565625,
+            "y": 722.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-btn-combo-primary"
+            }
+          },
+          {
+            "x": 103.078125,
+            "y": 700.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 103.078125,
+            "y": 711.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 103.078125,
+            "y": 722.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-btn-combo-primary"
+            }
+          },
+          {
+            "x": 150.590625,
+            "y": 700.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 150.590625,
+            "y": 711.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 150.590625,
+            "y": 722.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-btn-combo-primary"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "Tư Vấn Zalo",
+        "label": null,
+        "className": "tt4m-btn-combo-secondary",
+        "href": "https://zalo.me/0901234567",
+        "rect": {
+          "x": 180.953125,
+          "y": 689.390625,
+          "width": 103.84375,
+          "height": 44,
+          "top": 689.390625,
+          "right": 284.796875,
+          "bottom": 733.390625,
+          "left": 180.953125
+        },
+        "clientWidth": 102,
+        "scrollWidth": 102,
+        "points": [
+          {
+            "x": 196.5296875,
+            "y": 700.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 196.5296875,
+            "y": 711.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 196.5296875,
+            "y": 722.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-btn-combo-secondary"
+            }
+          },
+          {
+            "x": 232.875,
+            "y": 700.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 232.875,
+            "y": 711.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "SPAN",
+              "className": ""
+            }
+          },
+          {
+            "x": 232.875,
+            "y": 722.390625,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-btn-combo-secondary"
+            }
+          },
+          {
+            "x": 269.2203125,
+            "y": 700.390625,
+            "unobscured": false,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 269.2203125,
+            "y": 711.390625,
+            "unobscured": false,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 269.2203125,
+            "y": 722.390625,
+            "unobscured": false,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "label": "Gọi hotline tư vấn: 0901.234.567",
+        "className": "tt4m-floating-btn tt4m-btn-phone",
+        "href": "tel:0901234567",
+        "rect": {
+          "x": 262,
+          "y": 692,
+          "width": 46,
+          "height": 46,
+          "top": 692,
+          "right": 308,
+          "bottom": 738,
+          "left": 262
+        },
+        "clientWidth": 46,
+        "scrollWidth": 46,
+        "points": [
+          {
+            "x": 268.9,
+            "y": 703.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 268.9,
+            "y": 715,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 268.9,
+            "y": 726.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 285,
+            "y": 703.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 285,
+            "y": 715,
+            "unobscured": true,
+            "hit": {
+              "tag": "svg",
+              "className": "svg"
+            }
+          },
+          {
+            "x": 285,
+            "y": 726.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 703.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 715,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 726.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-phone"
+            }
+          }
+        ]
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "label": "Tư vấn nhanh qua Zalo",
+        "className": "tt4m-floating-btn tt4m-btn-zalo",
+        "href": "https://zalo.me/0901234567",
+        "rect": {
+          "x": 262,
+          "y": 746,
+          "width": 46,
+          "height": 46,
+          "top": 746,
+          "right": 308,
+          "bottom": 792,
+          "left": 262
+        },
+        "clientWidth": 46,
+        "scrollWidth": 46,
+        "points": [
+          {
+            "x": 268.9,
+            "y": 757.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          },
+          {
+            "x": 268.9,
+            "y": 769,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          },
+          {
+            "x": 268.9,
+            "y": 780.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          },
+          {
+            "x": 285,
+            "y": 757.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "svg",
+              "className": "svg"
+            }
+          },
+          {
+            "x": 285,
+            "y": 769,
+            "unobscured": true,
+            "hit": {
+              "tag": "path",
+              "className": "svg"
+            }
+          },
+          {
+            "x": 285,
+            "y": 780.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "svg",
+              "className": "svg"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 757.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 769,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          },
+          {
+            "x": 301.1,
+            "y": 780.5,
+            "unobscured": true,
+            "hit": {
+              "tag": "A",
+              "className": "tt4m-floating-btn tt4m-btn-zalo"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

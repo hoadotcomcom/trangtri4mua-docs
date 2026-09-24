@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-09-24T12:25:38.911Z",
+  "mode": "sticky",
+  "selector": ".tt4m-sticky-buy",
+  "aborted": 1,
+  "events": [
+    {
+      "event": "request",
+      "ms": 10,
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes",
+      "method": "POST"
+    },
+    {
+      "event": "abort-add-to-cart",
+      "ms": 10,
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes"
+    },
+    {
+      "event": "request-failed",
+      "ms": 11,
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes",
+      "error": "net::ERR_FAILED"
+    },
+    {
+      "event": "request",
+      "ms": 4020,
+      "url": "https://trangtri4mua.com/thanh-toan/",
+      "method": "GET"
+    },
+    {
+      "event": "response",
+      "ms": 4808,
+      "url": "https://trangtri4mua.com/thanh-toan/",
+      "status": 302,
+      "location": "https://trangtri4mua.com/gio-hang/"
+    },
+    {
+      "event": "request",
+      "ms": 4808,
+      "url": "https://trangtri4mua.com/gio-hang/",
+      "method": "GET"
+    },
+    {
+      "event": "response",
+      "ms": 5902,
+      "url": "https://trangtri4mua.com/gio-hang/",
+      "status": 200
+    },
+    {
+      "event": "abort-unexpected-post",
+      "ms": 5921,
+      "url": "https://trangtri4mua.com/cdn-cgi/rum?"
+    },
+    {
+      "event": "navigation",
+      "ms": 5921,
+      "url": "https://trangtri4mua.com/gio-hang/"
+    },
+    {
+      "event": "abort-unexpected-post",
+      "ms": 6176,
+      "url": "https://trangtri4mua.com/cdn-cgi/rum?"
+    }
+  ],
+  "snapshots": [
+    {
+      "ms": 0,
+      "state": {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "button": {
+          "text": "Mua ngay",
+          "className": "tt4m-sticky-buy",
+          "disabled": false,
+          "box": {
+            "x": 206.21875,
+            "y": 760,
+            "width": 156.78125,
+            "height": 44,
+            "top": 760,
+            "right": 363,
+            "bottom": 804,
+            "left": 206.21875
+          }
+        },
+        "atcClass": "single_add_to_cart_button button alt",
+        "price": "895.000 ₫",
+        "cart": "\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n",
+        "notices": [
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t",
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t"
+        ],
+        "main": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL\nTHÁP NHŨ ĐIỆN – TRANG TRÍ NOEL\nTháp nhũ điện – Trang trí Noel\nCòn hàng tại kho TP.HCM — Đóng gói giao ngay\n\n550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫\n\nĐơn hàng đủ điều kiện miễn phí vận chuyển toàn quốc (đơn từ 500.000₫)\nĐồng kiểm khi nhận hàng\n•\nGiao hỏa tốc 2h - 4h nội thành TP.HCM\n\nTháp cây thông phủ nhũ có đèn sẵn, cao 1m2 – 1m8, cắm điện là sáng cả góc Giáng sinh.\n\nKích thước\nChọn một tùy chọn\n1m2\n1m5\n1m8\nXóa\n895.000 ₫\nTháp nhũ điện - Trang trí Noel số lượng\nThêm vào giỏ hàng\nMua ngay\nTư vấn qua Zalo\nHỗ trợ nhanh 24/7\nHotline tư vấn\n0901.234.567\nCam kết dịch vụ từ Trang Trí 4 Mùa:\nĐồng kiểm COD mở hộp\n\nKiểm tra đúng mẫu, đúng chất lượng trước khi thanh toán\n\nĐổi trả 7 ngày nếu lỗi sản xuất\n\nĐổi mới 1-1 nhanh chóng nếu phát sinh lỗi kỹ thuật\n\nGiao hỏa tốc 2h - 4h nội thành\n\nHỗ trợ giao Grab/Ahamove tại TP.HCM theo yêu cầu\n\nXuất hóa đơn VAT cho công ty\n\nCung cấp hóa đơn điện tử đầy đủ cho doanh nghiệp & đoàn thể\n\nSKU: TT4M-089-8\nDANH MỤC: PHỤ KIỆN TREO CÂY NOEL, TRANG TRÍ GIÁNG SINH - NOEL\nTHẺ: CÂY THÔNG NOEL, THÁP TRANG TRÍ CÓ ĐÈN\nMÔ TẢ CHI TIẾT\nTHÔNG SỐ KỸ THUẬT\nĐÁNH GIÁ & HỎI ĐÁP (0)\n\nTháp nhũ điện là cây thông Noel dạng tháp phủ nhũ lấp lánh, tích hợp sẵn đèn điện nên chỉ cần cắm nguồn là sáng, không phải quấn đèn dây như cây thông thường. Kiểu tháp gọn nên đặt được ở nhiều vị trí: cạnh cửa, góc phòng, quầy lễ tân hay hai bên sảnh.\n\nKích thước và giá:\n– 1m2: 550.000đ\n– 1m"
+      }
+    },
+    {
+      "ms": 1510,
+      "state": {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "button": {
+          "text": "Đang chuyển...",
+          "className": "tt4m-sticky-buy is-loading",
+          "disabled": false,
+          "box": {
+            "x": 206.21875,
+            "y": 760,
+            "width": 156.78125,
+            "height": 44,
+            "top": 760,
+            "right": 363,
+            "bottom": 804,
+            "left": 206.21875
+          }
+        },
+        "atcClass": "single_add_to_cart_button button alt is-loading",
+        "price": "895.000 ₫",
+        "cart": "\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n",
+        "notices": [
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t",
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t"
+        ],
+        "main": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL\nTHÁP NHŨ ĐIỆN – TRANG TRÍ NOEL\nTháp nhũ điện – Trang trí Noel\nCòn hàng tại kho TP.HCM — Đóng gói giao ngay\n\n550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫\n\nĐơn hàng đủ điều kiện miễn phí vận chuyển toàn quốc (đơn từ 500.000₫)\nĐồng kiểm khi nhận hàng\n•\nGiao hỏa tốc 2h - 4h nội thành TP.HCM\n\nTháp cây thông phủ nhũ có đèn sẵn, cao 1m2 – 1m8, cắm điện là sáng cả góc Giáng sinh.\n\nKích thước\nChọn một tùy chọn\n1m2\n1m5\n1m8\nXóa\n895.000 ₫\nTháp nhũ điện - Trang trí Noel số lượng\nThêm vào giỏ hàng\nMua ngay\nTư vấn qua Zalo\nHỗ trợ nhanh 24/7\nHotline tư vấn\n0901.234.567\nCam kết dịch vụ từ Trang Trí 4 Mùa:\nĐồng kiểm COD mở hộp\n\nKiểm tra đúng mẫu, đúng chất lượng trước khi thanh toán\n\nĐổi trả 7 ngày nếu lỗi sản xuất\n\nĐổi mới 1-1 nhanh chóng nếu phát sinh lỗi kỹ thuật\n\nGiao hỏa tốc 2h - 4h nội thành\n\nHỗ trợ giao Grab/Ahamove tại TP.HCM theo yêu cầu\n\nXuất hóa đơn VAT cho công ty\n\nCung cấp hóa đơn điện tử đầy đủ cho doanh nghiệp & đoàn thể\n\nSKU: TT4M-089-8\nDANH MỤC: PHỤ KIỆN TREO CÂY NOEL, TRANG TRÍ GIÁNG SINH - NOEL\nTHẺ: CÂY THÔNG NOEL, THÁP TRANG TRÍ CÓ ĐÈN\nMÔ TẢ CHI TIẾT\nTHÔNG SỐ KỸ THUẬT\nĐÁNH GIÁ & HỎI ĐÁP (0)\n\nTháp nhũ điện là cây thông Noel dạng tháp phủ nhũ lấp lánh, tích hợp sẵn đèn điện nên chỉ cần cắm nguồn là sáng, không phải quấn đèn dây như cây thông thường. Kiểu tháp gọn nên đặt được ở nhiều vị trí: cạnh cửa, góc phòng, quầy lễ tân hay hai bên sảnh.\n\nKích thước và giá:\n– 1m2: 550.000đ\n– 1m"
+      }
+    },
+    {
+      "ms": 8067,
+      "state": {
+        "url": "https://trangtri4mua.com/gio-hang/",
+        "button": null,
+        "cart": "\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n",
+        "notices": [
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t",
+          "\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t",
+          "Chưa có sản phẩm nào trong giỏ hàng."
+        ],
+        "main": "Giỏ Hàng\nChưa có sản phẩm nào trong giỏ hàng.\n\nQuay trở lại cửa hàng"
+      }
+    }
+  ]
+}

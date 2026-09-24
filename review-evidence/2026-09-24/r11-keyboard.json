@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-09-24T12:34:20.361Z",
+  "trace": [
+    {
+      "step": "initial",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "ArrowDown",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "ArrowDown",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "ArrowUp",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-1",
+      "tag": "BUTTON",
+      "role": null,
+      "text": "",
+      "ariaLabel": "Nút tìm kiếm",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-2",
+      "tag": "A",
+      "role": "option",
+      "text": "Tháp nhũ điện – Trang trí Noel",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-3",
+      "tag": "A",
+      "role": "option",
+      "text": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-4",
+      "tag": "A",
+      "role": "option",
+      "text": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-5",
+      "tag": "A",
+      "role": "option",
+      "text": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-6",
+      "tag": "A",
+      "role": "option",
+      "text": "Gấu bò khăn kẻ – Trang trí Noel",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-7",
+      "tag": "A",
+      "role": "option",
+      "text": "Kẹo hạt nổi – Trang trí Noel",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-8",
+      "tag": "A",
+      "role": "option",
+      "text": "Xem thêm",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/search/tháp/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-9",
+      "tag": "BUTTON",
+      "role": null,
+      "text": "",
+      "ariaLabel": "Đóng cửa sổ tìm kiếm modal",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-10",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-11",
+      "tag": "BUTTON",
+      "role": null,
+      "text": "",
+      "ariaLabel": "Nút tìm kiếm",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "Tab-12",
+      "tag": "A",
+      "role": "option",
+      "text": "Tháp nhũ điện – Trang trí Noel",
+      "ariaLabel": null,
+      "href": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    }
+  ]
+}

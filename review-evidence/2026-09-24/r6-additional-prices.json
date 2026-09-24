@@ -1,0 +1,57 @@
+[
+  {
+    "id": 261,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+    "cardText": "Ông già gôn xịn ⚡ Giao hỏa tốc ✅ Đồng kiểm 1.895 ₫ – 555.000 ₫ Khoảng giá: từ 1.895 ₫ đến 555.000 ₫ Chọn mẫu Sản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm",
+    "timestamp": "2026-09-24T11:58:57Z",
+    "status": 200,
+    "description": "Ông già gôn xịn là mô hình ông già Noel đứng với tạo hình chỉn chu, có hai kích thước để chọn theo không gian. Size nhỏ đặt bàn, quầy, kệ; size lớn đặt sàn cạnh cây thông hay cửa ra vào đều tạo điểm nhấn Giáng sinh rõ ràng. Kích thước và giá: – 45cm: 555.000đ – 90cm: 1.895.000đ Kiểu dáng: ông già Noel đứng Chất liệu: vải nhung, lông giả trên khung đứng Size 45cm hợp đặt quầy thu ngân, kệ trưng bày hay bàn tiệc; size 90cm nên đặt dưới sàn cạnh cây thông, cổng quà. Phối cùng hộp quà giả và tuần lộc nhỏ cho góc trang trí hoàn chỉnh. Shop giao hàng toàn quốc, đóng thùng cẩn thận.",
+    "variations": [
+      {
+        "id": 262,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 555000
+      },
+      {
+        "id": 263,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "90cm"
+        },
+        "price": 1895
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "url": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+    "cardText": "Ông già trắng xịn ⚡ Giao hỏa tốc ✅ Đồng kiểm 1.895 ₫ – 995.000 ₫ Khoảng giá: từ 1.895 ₫ đến 995.000 ₫ Chọn mẫu Sản phẩm này có nhiều biến thể. Các tùy chọn có thể được chọn trên trang sản phẩm",
+    "timestamp": "2026-09-24T11:58:57Z",
+    "status": 200,
+    "description": "Ông già trắng xịn là mô hình ông già Noel đứng tông trắng, khác với bộ đồ đỏ truyền thống. Tông trắng tinh tế này cực kỳ hợp với cây thông phủ tuyết, trang trí phong cách Bắc Âu hoặc không gian tông sáng, có ba kích thước để chọn. Kích thước và giá: – 45cm: 555.000đ – 60cm: 995.000đ – 90cm: 1.895.000đ Kiểu dáng: ông già Noel đứng tông trắng Chất liệu: vải nhung, lông giả trên khung đứng Size 45cm đặt quầy, kệ; 60cm đặt cạnh cây thông trong nhà; 90cm hợp sảnh, cửa hàng. Phối cùng châu bạc, hoa trạng nguyên phủ tuyết và đèn trắng cho tông trắng – bạc đồng nhất. Shop giao hàng toàn quốc.",
+    "variations": [
+      {
+        "id": 281,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "45cm"
+        },
+        "price": 555000
+      },
+      {
+        "id": 282,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "60cm"
+        },
+        "price": 995000
+      },
+      {
+        "id": 283,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "90cm"
+        },
+        "price": 1895
+      }
+    ]
+  }
+]

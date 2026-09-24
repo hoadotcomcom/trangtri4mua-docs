@@ -1,0 +1,176 @@
+{
+  "utc": "2026-09-24T14:13:11.749Z",
+  "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+  "rows": [
+    {
+      "key": "ArrowRight",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "ArrowDown",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-additional_information",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "Enter",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-additional_information",
+          "id": ""
+        },
+        "selected": [
+          "#tab-additional_information"
+        ],
+        "visible": [
+          "tab-additional_information"
+        ]
+      }
+    },
+    {
+      "key": "ArrowUp",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-additional_information"
+        ],
+        "visible": [
+          "tab-additional_information"
+        ]
+      }
+    },
+    {
+      "key": " ",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-additional_information"
+        ],
+        "visible": [
+          "tab-additional_information"
+        ]
+      }
+    },
+    {
+      "key": "Enter",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "Tab",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": null,
+          "href": "tel:0901234567",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "key": "ArrowRight",
+      "code": "ArrowRight",
+      "keyCode": 39,
+      "role": "tab"
+    },
+    {
+      "key": "ArrowDown",
+      "code": "ArrowDown",
+      "keyCode": 40,
+      "role": "tab"
+    },
+    {
+      "key": "Enter",
+      "code": "Enter",
+      "keyCode": 13,
+      "role": "tab"
+    },
+    {
+      "key": "ArrowUp",
+      "code": "ArrowUp",
+      "keyCode": 38,
+      "role": "tab"
+    },
+    {
+      "key": " ",
+      "code": "Space",
+      "keyCode": 32,
+      "role": "tab"
+    },
+    {
+      "key": "Enter",
+      "code": "Enter",
+      "keyCode": 13,
+      "role": "tab"
+    },
+    {
+      "key": "Tab",
+      "code": "Tab",
+      "keyCode": 9,
+      "role": "tab"
+    }
+  ]
+}

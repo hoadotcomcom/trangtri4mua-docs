@@ -1,0 +1,169 @@
+{
+  "timestamp": "2026-09-24T12:07:08Z",
+  "catalogCount": 89,
+  "simpleCount": 69,
+  "variableCount": 20,
+  "variationCount": 60,
+  "quoteProductIds": [
+    260,
+    254,
+    250,
+    240,
+    234,
+    159,
+    152,
+    151
+  ],
+  "quoteCtaCount": 8,
+  "selectorChecks": [
+    {
+      "productId": 295,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 288,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 280,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 269,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 261,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 255,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 242,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 237,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 229,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 223,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 217,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 203,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 191,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 185,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 177,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {
+        "attribute_pa_kich-thuoc": [
+          "1m8"
+        ]
+      }
+    },
+    {
+      "productId": 172,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 169,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 164,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 160,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    },
+    {
+      "productId": 153,
+      "apiOnly": [],
+      "htmlOnly": [],
+      "unselectable": [],
+      "duplicateLabels": {}
+    }
+  ],
+  "limits": [
+    "Đối chiếu cấu trúc selector/HTML/API, chưa thử 60 lần chọn mua",
+    "Không xác nhận giá/tồn kho thực tế với owner",
+    "Không gửi tin Zalo hoặc tạo đơn"
+  ]
+}

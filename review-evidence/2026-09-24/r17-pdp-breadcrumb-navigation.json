@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-24T13:12:23.021Z",
+  "source": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+  "action": "page.click vào link cha cuối nav.ct-breadcrumbs",
+  "toolLimitation": "waitForNavigation timeout 30s; lần đọc trạng thái kế tiếp xác nhận đã đến đúng category. Không có response object từ lần click.",
+  "after": {
+    "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+    "h1": "Phụ Kiện Treo Cây Noel",
+    "breadcrumb": "TRANG CHỦ\nTRANG TRÍ THEO MÙA\nTRANG TRÍ GIÁNG SINH - NOEL\nPHỤ KIỆN TREO CÂY NOEL",
+    "navigationResponseStatus": 200,
+    "documentWidth": 375,
+    "viewportWidth": 375
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "utc": "2026-09-24T14:04:14.754Z",
+  "cases": [
+    {
+      "name": "r23-home-desktop",
+      "url": "https://trangtri4mua.com/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "Xem 8+ Set Combo",
+      "nextTabHref": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-shop-desktop",
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "TRANG CHỦ",
+      "nextTabHref": "https://trangtri4mua.com/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-category-desktop",
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "TRANG CHỦ",
+      "nextTabHref": "https://trangtri4mua.com/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-product-desktop",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "TRANG CHỦ",
+      "nextTabHref": "https://trangtri4mua.com/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-post-desktop",
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "ED4F7B",
+      "nextTabHref": "https://trangtri4mua.com/author/ed4f7b/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-policy-desktop",
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "Chính Sách Đổi Trả",
+      "nextTabHref": "/chinh-sach-doi-tra/",
+      "mainCount": 2
+    },
+    {
+      "name": "r23-contact-desktop",
+      "url": "https://trangtri4mua.com/lien-he/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "0901.234.567",
+      "nextTabHref": "tel:0901234567",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-home-mobile",
+      "url": "https://trangtri4mua.com/",
+      "viewport": [
+        375,
+        812
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "Xem 8+ Set Combo",
+      "nextTabHref": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-product-mobile",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "viewport": [
+        375,
+        812
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "TRANG CHỦ",
+      "nextTabHref": "https://trangtri4mua.com/",
+      "mainCount": 1
+    },
+    {
+      "name": "r23-policy-mobile",
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "viewport": [
+        375,
+        812
+      ],
+      "initialFocus": "BODY",
+      "uniqueSkipTarget": true,
+      "firstTabIsSkip": true,
+      "skipRect": {
+        "x": 4,
+        "y": 4,
+        "width": 230.796875,
+        "height": 47
+      },
+      "skipHitAtCenter": true,
+      "enterFocusesMain": true,
+      "nextTabInsideMain": true,
+      "nextTabText": "Chính Sách Đổi Trả",
+      "nextTabHref": "/chinh-sach-doi-tra/",
+      "mainCount": 2
+    }
+  ],
+  "scope": "Bàn phím Tab → Enter chỉ trên skip link #main → Tab. Không click/Enter control mua hàng/liên hệ. Mobile là viewport mô phỏng, không phải thiết bị thật/screen reader.",
+  "newIssues": [],
+  "openCounts": {
+    "total": 36,
+    "P1": 7,
+    "P2": 25,
+    "P3": 4
+  }
+}

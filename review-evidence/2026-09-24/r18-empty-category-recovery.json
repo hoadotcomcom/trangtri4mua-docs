@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-24T13:22:39.893Z",
+  "before": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+  "action": "Đặt focus công cụ vào Xem tất cả sản phẩm rồi Enter",
+  "toolLimitation": "waitForFunction polling 100ms timeout 20s; call đọc kế tiếp xác nhận đã tới cửa hàng. Không kết luận thời gian điều hướng.",
+  "after": {
+    "url": "https://trangtri4mua.com/cua-hang/",
+    "h1": "Cửa Hàng",
+    "ready": "complete",
+    "productCards": 16,
+    "navigationResponseStatus": 200,
+    "cart": "\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n"
+  }
+}

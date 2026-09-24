@@ -1,0 +1,61 @@
+{
+  "timestamp": "2026-09-24T12:28:59.342Z",
+  "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+  "viewport": {
+    "width": 375,
+    "height": 812,
+    "deviceScaleFactor": 1,
+    "isMobile": true,
+    "hasTouch": true
+  },
+  "trace": [
+    {
+      "step": "focus-select",
+      "focus": {
+        "tag": "SELECT",
+        "id": "pa_kich-thuoc",
+        "name": null,
+        "text": "Chọn một tùy chọn1m21m51m8"
+      },
+      "selection": "",
+      "price": "",
+      "atcClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed"
+    },
+    {
+      "step": "ArrowDown+Enter",
+      "focus": {
+        "tag": "SELECT",
+        "id": "pa_kich-thuoc",
+        "name": null,
+        "text": "Chọn một tùy chọn1m21m51m8"
+      },
+      "selection": "1m2",
+      "price": "550.000 ₫",
+      "atcClass": "single_add_to_cart_button button alt"
+    },
+    {
+      "step": "Tab-after-select",
+      "focus": {
+        "tag": "A",
+        "id": "",
+        "name": "Xóa tùy chọn",
+        "text": "Xóa"
+      },
+      "selection": "1m2",
+      "price": "550.000 ₫",
+      "atcClass": "single_add_to_cart_button button alt"
+    },
+    {
+      "step": "Shift+Tab-return",
+      "focus": {
+        "tag": "SELECT",
+        "id": "pa_kich-thuoc",
+        "name": null,
+        "text": "Chọn một tùy chọn1m21m51m8"
+      },
+      "selection": "1m2",
+      "price": "550.000 ₫",
+      "atcClass": "single_add_to_cart_button button alt"
+    }
+  ]
+}

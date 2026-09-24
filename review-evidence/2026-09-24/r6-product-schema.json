@@ -1,0 +1,583 @@
+[
+  {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "status": 200,
+    "timestamp": "2026-09-24T11:59:34Z",
+    "canonical": [
+      "https://trangtri4mua.com/san-pham/thap-nhu-dien/"
+    ],
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/#organization",
+            "name": "Trang trí 4 mùa",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://trangtri4mua.com/#logo",
+              "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "contentUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "caption": "Trang trí 4 mùa",
+              "inLanguage": "vi"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://trangtri4mua.com/#website",
+            "url": "https://trangtri4mua.com",
+            "name": "Trang trí 4 mùa",
+            "publisher": {
+              "@id": "https://trangtri4mua.com/#organization"
+            },
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+            "width": "900",
+            "height": "1200",
+            "caption": "Tháp nhũ điện - cây thông trang trí Noel",
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": "1",
+                "item": {
+                  "@id": "https://trangtri4mua.com",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "2",
+                "item": {
+                  "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+                  "name": "Phụ Kiện Treo Cây Noel"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "3",
+                "item": {
+                  "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+                  "name": "Tháp nhũ điện &#8211; Trang trí Noel"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemPage",
+            "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#webpage",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+            "name": "Tháp nhũ điện - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "datePublished": "2026-09-23T16:53:28+00:00",
+            "dateModified": "2026-09-24T10:13:20+00:00",
+            "isPartOf": {
+              "@id": "https://trangtri4mua.com/#website"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp"
+            },
+            "inLanguage": "vi",
+            "breadcrumb": {
+              "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Tháp nhũ điện - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "description": "Tháp cây thông phủ nhũ có đèn sẵn, cao 1m2 - 1m8, cắm điện là sáng cả góc Giáng sinh.",
+            "sku": "TT4M-089",
+            "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Phụ Kiện Treo Cây Noel",
+            "mainEntityOfPage": {
+              "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#webpage"
+            },
+            "image": [
+              {
+                "@type": "ImageObject",
+                "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+                "height": "1200",
+                "width": "900"
+              }
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "lowPrice": "550000",
+              "highPrice": "895000",
+              "offerCount": "3",
+              "priceCurrency": "VND",
+              "availability": "http://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "@id": "https://trangtri4mua.com/",
+                "name": "Trang trí 4 mùa",
+                "url": "https://trangtri4mua.com",
+                "logo": ""
+              },
+              "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/"
+            },
+            "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet"
+          }
+        ]
+      }
+    ],
+    "productNodes": [
+      {
+        "@type": "Product",
+        "name": "Tháp nhũ điện - Trang trí Noel - Giá | Trang trí 4 mùa",
+        "description": "Tháp cây thông phủ nhũ có đèn sẵn, cao 1m2 - 1m8, cắm điện là sáng cả góc Giáng sinh.",
+        "sku": "TT4M-089",
+        "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Phụ Kiện Treo Cây Noel",
+        "mainEntityOfPage": {
+          "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#webpage"
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+            "height": "1200",
+            "width": "900"
+          }
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "550000",
+          "highPrice": "895000",
+          "offerCount": "3",
+          "priceCurrency": "VND",
+          "availability": "http://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/",
+            "name": "Trang trí 4 mùa",
+            "url": "https://trangtri4mua.com",
+            "logo": ""
+          },
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/"
+        },
+        "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet"
+      }
+    ],
+    "variations": [
+      {
+        "id": 296,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m2"
+        },
+        "price": 550000,
+        "sku": "TT4M-089-1m2",
+        "inStock": true
+      },
+      {
+        "id": 297,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "5"
+        },
+        "price": 755000,
+        "sku": "TT4M-089-5",
+        "inStock": true
+      },
+      {
+        "id": 298,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "8"
+        },
+        "price": 895000,
+        "sku": "TT4M-089-8",
+        "inStock": true
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+    "status": 200,
+    "timestamp": "2026-09-24T11:59:34Z",
+    "canonical": [
+      "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/"
+    ],
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/#organization",
+            "name": "Trang trí 4 mùa",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://trangtri4mua.com/#logo",
+              "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "contentUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "caption": "Trang trí 4 mùa",
+              "inLanguage": "vi"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://trangtri4mua.com/#website",
+            "url": "https://trangtri4mua.com",
+            "name": "Trang trí 4 mùa",
+            "publisher": {
+              "@id": "https://trangtri4mua.com/#organization"
+            },
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp",
+            "width": "526",
+            "height": "702",
+            "caption": "Kẹo gậy trang trí Noel cỡ lớn - đồ trang trí Noel",
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": "1",
+                "item": {
+                  "@id": "https://trangtri4mua.com",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "2",
+                "item": {
+                  "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/",
+                  "name": "Mô Hình &amp; Tượng Noel"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "3",
+                "item": {
+                  "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+                  "name": "Kẹo gậy trang trí Noel &#8211; Trang trí Noel"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemPage",
+            "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#webpage",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+            "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "datePublished": "2026-09-23T16:53:26+00:00",
+            "dateModified": "2026-09-24T10:13:40+00:00",
+            "isPartOf": {
+              "@id": "https://trangtri4mua.com/#website"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp"
+            },
+            "inLanguage": "vi",
+            "breadcrumb": {
+              "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "description": "Mô hình kẹo gậy và kẹo tròn khổng lồ cao 1m2 - 2m5, dựng cổng, sảnh hay sân khấu đều hoành tráng.",
+            "sku": "TT4M-074",
+            "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Mô Hình &amp; Tượng Noel",
+            "mainEntityOfPage": {
+              "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#webpage"
+            },
+            "image": [
+              {
+                "@type": "ImageObject",
+                "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp",
+                "height": "702",
+                "width": "526"
+              }
+            ],
+            "offers": {
+              "@type": "AggregateOffer",
+              "lowPrice": "1150",
+              "highPrice": "950000",
+              "offerCount": "5",
+              "priceCurrency": "VND",
+              "availability": "http://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "@id": "https://trangtri4mua.com/",
+                "name": "Trang trí 4 mùa",
+                "url": "https://trangtri4mua.com",
+                "logo": ""
+              },
+              "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/"
+            },
+            "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet"
+          }
+        ]
+      }
+    ],
+    "productNodes": [
+      {
+        "@type": "Product",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Giá | Trang trí 4 mùa",
+        "description": "Mô hình kẹo gậy và kẹo tròn khổng lồ cao 1m2 - 2m5, dựng cổng, sảnh hay sân khấu đều hoành tráng.",
+        "sku": "TT4M-074",
+        "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Mô Hình &amp; Tượng Noel",
+        "mainEntityOfPage": {
+          "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#webpage"
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp",
+            "height": "702",
+            "width": "526"
+          }
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "1150",
+          "highPrice": "950000",
+          "offerCount": "5",
+          "priceCurrency": "VND",
+          "availability": "http://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/",
+            "name": "Trang trí 4 mùa",
+            "url": "https://trangtri4mua.com",
+            "logo": ""
+          },
+          "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/"
+        },
+        "@id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet"
+      }
+    ],
+    "variations": [
+      {
+        "id": 270,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "1m50"
+        },
+        "price": 950000,
+        "sku": "TT4M-074-1m50",
+        "inStock": true
+      },
+      {
+        "id": 271,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "80"
+        },
+        "price": 1150,
+        "sku": "TT4M-074-80",
+        "inStock": true
+      },
+      {
+        "id": 272,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "2m"
+        },
+        "price": 1450,
+        "sku": "TT4M-074-2m",
+        "inStock": true
+      },
+      {
+        "id": 273,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "50"
+        },
+        "price": 1650,
+        "sku": "TT4M-074-50",
+        "inStock": true
+      },
+      {
+        "id": 274,
+        "attributes": {
+          "attribute_pa_kich-thuoc": "20"
+        },
+        "price": 750000,
+        "sku": "TT4M-074-20",
+        "inStock": true
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+    "status": 200,
+    "timestamp": "2026-09-24T11:59:34Z",
+    "canonical": [
+      "https://trangtri4mua.com/san-pham/qua-chau-cuom/"
+    ],
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "schemas": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/#organization",
+            "name": "Trang trí 4 mùa",
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://trangtri4mua.com/#logo",
+              "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "contentUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/logo-header-150x99.png",
+              "caption": "Trang trí 4 mùa",
+              "inLanguage": "vi"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://trangtri4mua.com/#website",
+            "url": "https://trangtri4mua.com",
+            "name": "Trang trí 4 mùa",
+            "publisher": {
+              "@id": "https://trangtri4mua.com/#organization"
+            },
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+            "width": "900",
+            "height": "1200",
+            "caption": "Quả châu cườm - đồ trang trí Noel",
+            "inLanguage": "vi"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": "1",
+                "item": {
+                  "@id": "https://trangtri4mua.com",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "2",
+                "item": {
+                  "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+                  "name": "Phụ Kiện Treo Cây Noel"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": "3",
+                "item": {
+                  "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+                  "name": "Quả châu cườm &#8211; Trang trí Noel"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ItemPage",
+            "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#webpage",
+            "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+            "name": "Quả châu cườm - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "datePublished": "2026-09-23T16:53:27+00:00",
+            "dateModified": "2026-09-23T16:53:27+00:00",
+            "isPartOf": {
+              "@id": "https://trangtri4mua.com/#website"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp"
+            },
+            "inLanguage": "vi",
+            "breadcrumb": {
+              "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#breadcrumb"
+            }
+          },
+          {
+            "@type": "Product",
+            "name": "Quả châu cườm - Trang trí Noel - Giá | Trang trí 4 mùa",
+            "description": "Quả châu đính cườm hạt lấp lánh, phụ kiện treo cây thông sang và bắt đèn đẹp.",
+            "sku": "TT4M-079",
+            "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Phụ Kiện Treo Cây Noel",
+            "mainEntityOfPage": {
+              "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#webpage"
+            },
+            "image": [
+              {
+                "@type": "ImageObject",
+                "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+                "height": "1200",
+                "width": "900"
+              }
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "95000",
+              "priceCurrency": "VND",
+              "priceValidUntil": "2027-12-31",
+              "availability": "http://schema.org/InStock",
+              "itemCondition": "NewCondition",
+              "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+              "seller": {
+                "@type": "Organization",
+                "@id": "https://trangtri4mua.com/",
+                "name": "Trang trí 4 mùa",
+                "url": "https://trangtri4mua.com",
+                "logo": ""
+              }
+            },
+            "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#richSnippet"
+          }
+        ]
+      }
+    ],
+    "productNodes": [
+      {
+        "@type": "Product",
+        "name": "Quả châu cườm - Trang trí Noel - Giá | Trang trí 4 mùa",
+        "description": "Quả châu đính cườm hạt lấp lánh, phụ kiện treo cây thông sang và bắt đèn đẹp.",
+        "sku": "TT4M-079",
+        "category": "Trang Trí Theo Mùa &gt; Trang Trí Giáng Sinh - Noel &gt; Phụ Kiện Treo Cây Noel",
+        "mainEntityOfPage": {
+          "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#webpage"
+        },
+        "image": [
+          {
+            "@type": "ImageObject",
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+            "height": "1200",
+            "width": "900"
+          }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "95000",
+          "priceCurrency": "VND",
+          "priceValidUntil": "2027-12-31",
+          "availability": "http://schema.org/InStock",
+          "itemCondition": "NewCondition",
+          "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+          "seller": {
+            "@type": "Organization",
+            "@id": "https://trangtri4mua.com/",
+            "name": "Trang trí 4 mùa",
+            "url": "https://trangtri4mua.com",
+            "logo": ""
+          }
+        },
+        "@id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#richSnippet"
+      }
+    ],
+    "variations": []
+  }
+]

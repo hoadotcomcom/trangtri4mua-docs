@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-24T13:43:40.931Z",
+  "before": {
+    "activeThumb": 2,
+    "third": {
+      "x": 98,
+      "y": 11.046875,
+      "width": 619.03125,
+      "height": 825.375,
+      "top": 11.046875,
+      "right": 717.03125,
+      "bottom": 836.421875,
+      "left": 98
+    }
+  },
+  "after": {
+    "activeThumb": 1
+  },
+  "action": "Chọn thumbnail 3, chụp ảnh, bấm Previous"
+}

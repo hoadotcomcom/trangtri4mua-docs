@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-09-24T13:35:32.152Z",
+  "tables": 11,
+  "viewportStates": 22,
+  "overflowCases": 18,
+  "fittingCases": 4,
+  "allEndReached": true,
+  "allLastHeadersVisible": true,
+  "allNoDocumentOverflow": true,
+  "runs": [
+    {
+      "page": "size",
+      "width": 375,
+      "timestamp": "2026-09-24T13:34:36.928Z",
+      "tables": 3,
+      "scrollers": [
+        "table"
+      ]
+    },
+    {
+      "page": "size",
+      "width": 768,
+      "timestamp": "2026-09-24T13:34:40.291Z",
+      "tables": 3,
+      "scrollers": [
+        "wrapper"
+      ]
+    },
+    {
+      "page": "budget",
+      "width": 375,
+      "timestamp": "2026-09-24T13:34:50.910Z",
+      "tables": 7,
+      "scrollers": [
+        "table"
+      ]
+    },
+    {
+      "page": "budget",
+      "width": 768,
+      "timestamp": "2026-09-24T13:34:55.463Z",
+      "tables": 7,
+      "scrollers": [
+        "wrapper"
+      ]
+    },
+    {
+      "page": "cafe",
+      "width": 375,
+      "timestamp": "2026-09-24T13:34:58.410Z",
+      "tables": 1,
+      "scrollers": [
+        "table"
+      ]
+    },
+    {
+      "page": "cafe",
+      "width": 768,
+      "timestamp": "2026-09-24T13:34:59.191Z",
+      "tables": 1,
+      "scrollers": [
+        "wrapper"
+      ]
+    }
+  ]
+}

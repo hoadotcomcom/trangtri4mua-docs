@@ -1,0 +1,113 @@
+[
+  {
+    "timestamp": "2026-09-24T13:28:10.060Z",
+    "case": {
+      "name": "size",
+      "path": "/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "hash": "#bang-tra-cuu-kich-thuoc",
+      "keyboard": false
+    },
+    "method": "Click link mục lục",
+    "before": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "scrollY": 781,
+      "label": "2. Bảng tính kích thước cây thông theo chiều cao trần và diện tích phòng",
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/#bang-tra-cuu-kich-thuoc"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/#bang-tra-cuu-kich-thuoc",
+      "scrollY": 2937,
+      "heading": "2. Bảng tính kích thước cây thông theo chiều cao trần và diện tích phòng",
+      "tag": "H2",
+      "rect": {
+        "x": 22.5,
+        "y": 0.0625,
+        "width": 330,
+        "height": 52.09375
+      },
+      "targetHit": true,
+      "hitTag": "H2",
+      "viewportWidth": 375,
+      "documentWidth": 375,
+      "viewportHeight": 812,
+      "active": {
+        "tag": "BODY",
+        "id": ""
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-24T13:28:13.687Z",
+    "case": {
+      "name": "budget",
+      "path": "/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "hash": "#goi-quan-cafe",
+      "keyboard": true
+    },
+    "method": "Focus công cụ vào link rồi Enter",
+    "before": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "scrollY": 1132,
+      "label": "6.2 Gói quán cafe vừa và nhỏ (4.000.000₫ – 8.000.000₫)",
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/#goi-quan-cafe"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/#goi-quan-cafe",
+      "scrollY": 8188,
+      "heading": "6.2 Gói quán cafe vừa và nhỏ (4.000.000₫ – 8.000.000₫)",
+      "tag": "H3",
+      "rect": {
+        "x": 22.5,
+        "y": 67.71875,
+        "width": 330,
+        "height": 47.03125
+      },
+      "targetHit": true,
+      "hitTag": "H3",
+      "viewportWidth": 375,
+      "documentWidth": 375,
+      "viewportHeight": 812,
+      "active": {
+        "tag": "BODY",
+        "id": ""
+      }
+    }
+  },
+  {
+    "timestamp": "2026-09-24T13:28:16.282Z",
+    "case": {
+      "name": "cafe",
+      "path": "/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "hash": "#4-vi-tri-trong-tam",
+      "keyboard": false
+    },
+    "method": "Click link mục lục",
+    "before": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "scrollY": 471,
+      "label": "2. 4 Vị trí bài trí trọng tâm tạo cảm giác ấm cúng và góc chụp đẹp",
+      "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/#4-vi-tri-trong-tam"
+    },
+    "after": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/#4-vi-tri-trong-tam",
+      "scrollY": 4504,
+      "heading": "2. 4 Vị trí bài trí trọng tâm tạo cảm giác ấm cúng và góc chụp đẹp",
+      "tag": "H2",
+      "rect": {
+        "x": 22.5,
+        "y": 0.3125,
+        "width": 330,
+        "height": 52.09375
+      },
+      "targetHit": true,
+      "hitTag": "H2",
+      "viewportWidth": 375,
+      "documentWidth": 375,
+      "viewportHeight": 812,
+      "active": {
+        "tag": "BODY",
+        "id": ""
+      }
+    }
+  }
+]

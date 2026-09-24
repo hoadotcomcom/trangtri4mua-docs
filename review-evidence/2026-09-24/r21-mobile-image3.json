@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-09-24T13:41:24.978Z",
+  "url": "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+  "state": {
+    "activeThumb": 2,
+    "image": {
+      "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-3-454x1024.webp",
+      "complete": true,
+      "naturalWidth": 322,
+      "naturalHeight": 726,
+      "rect": {
+        "x": 40.5,
+        "y": 10.984375,
+        "width": 324,
+        "height": 432
+      },
+      "objectFit": "cover",
+      "aspectRatio": "3 / 4"
+    },
+    "galleryTabStops": 0
+  }
+}

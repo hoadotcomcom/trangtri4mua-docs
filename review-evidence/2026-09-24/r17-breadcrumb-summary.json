@@ -1,0 +1,284 @@
+[
+  {
+    "url": "https://trangtri4mua.com/cua-hang/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/cua-hang/",
+              "name": "Cửa Hàng"
+            }
+          }
+        ]
+      },
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "name": "Trang chủ",
+              "@id": "https://trangtri4mua.com/"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "name": "Cửa Hàng",
+              "@id": "https://trangtri4mua.com/cua-hang/"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/cua-hang/page/2/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/cua-hang/",
+              "name": "Cửa Hàng"
+            }
+          }
+        ]
+      },
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "name": "Trang chủ",
+              "@id": "https://trangtri4mua.com/"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "name": "Cửa Hàng",
+              "@id": "https://trangtri4mua.com/cua-hang/"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+              "name": "Trang Trí Giáng Sinh - Noel"
+            }
+          }
+        ]
+      },
+      {
+        "positions": [
+          1,
+          2,
+          3
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "name": "Trang chủ",
+              "@id": "https://trangtri4mua.com/"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "name": "Trang Trí Theo Mùa",
+              "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "name": "Trang Trí Giáng Sinh - Noel",
+              "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2,
+          3
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+              "name": "Phụ Kiện Treo Cây Noel"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+              "name": "Tháp nhũ điện &#8211; Trang trí Noel"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2,
+          3
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "name": "Hướng Dẫn &amp; Kinh Nghiệm"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "item": {
+              "@id": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+              "name": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://trangtri4mua.com/lien-he/",
+    "lists": [
+      {
+        "positions": [
+          1,
+          2
+        ],
+        "consecutive": true,
+        "items": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "item": {
+              "@id": "https://trangtri4mua.com",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "item": {
+              "@id": "https://trangtri4mua.com/lien-he/",
+              "name": "Liên Hệ"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

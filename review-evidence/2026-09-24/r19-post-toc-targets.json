@@ -1,0 +1,289 @@
+[
+  {
+    "utc": "2026-09-24T13:25:50Z",
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "status": 200,
+    "tocFound": true,
+    "tocTag": "nav",
+    "links": [
+      {
+        "label": "1. Quy tắc khoảng sáng trần (Clearance) và đường kính chân tán (Footprint)",
+        "href": "#quy-tac-khoang-sang-tran",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "1. Quy tắc khoảng sáng trần (Clearance) và đường kính chân tán (Footprint)"
+          }
+        ]
+      },
+      {
+        "label": "2. Bảng tính kích thước cây thông theo chiều cao trần và diện tích phòng",
+        "href": "#bang-tra-cuu-kich-thuoc",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "2. Bảng tính kích thước cây thông theo chiều cao trần và diện tích phòng"
+          }
+        ]
+      },
+      {
+        "label": "3. Phân biệt dáng cây: Dáng xòe truyền thống (Full Shape) và Dáng thon (Slim/Pencil)",
+        "href": "#phan-biet-dang-cay",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "3. Phân biệt dáng cây: Dáng xòe truyền thống (Full Shape) và Dáng thon (Slim/Pencil)"
+          }
+        ]
+      },
+      {
+        "label": "4. So sánh chi tiết chất liệu: Thông PVC, Thông cành đúc PE và Thông phủ tuyết",
+        "href": "#so-sanh-chat-lieu",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "4. So sánh chi tiết chất liệu: Thông PVC, Thông cành đúc PE và Thông phủ tuyết"
+          }
+        ]
+      },
+      {
+        "label": "5. Mẹo xử lý và chống rơi bột tuyết cho cây thông phủ tuyết",
+        "href": "#meo-chong-roi-tuyet",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "5. Mẹo xử lý và chống rơi bột tuyết cho cây thông phủ tuyết"
+          }
+        ]
+      },
+      {
+        "label": "6. Quy tắc định lượng phụ kiện: Số lượng quả châu và chiều dài dây đèn theo size cây",
+        "href": "#dinh-luong-phu-kien",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "6. Quy tắc định lượng phụ kiện: Số lượng quả châu và chiều dài dây đèn theo size cây"
+          }
+        ]
+      },
+      {
+        "label": "7. Phụ kiện trang trí gợi ý theo tỷ lệ cây",
+        "href": "#phu-kien-goi-y",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "7. Phụ kiện trang trí gợi ý theo tỷ lệ cây"
+          }
+        ]
+      },
+      {
+        "label": "8. Quy trình 5 bước đo đạc trước khi đặt mua cây thông Noel",
+        "href": "#checklist-chuan-bi",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "8. Quy trình 5 bước đo đạc trước khi đặt mua cây thông Noel"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utc": "2026-09-24T13:25:52Z",
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+    "status": 200,
+    "tocFound": true,
+    "tocTag": "nav",
+    "links": [
+      {
+        "label": "1. Nguyên tắc phân bổ ngân sách trang trí Noel thực tế",
+        "href": "#nguyen-tac-ngan-sach",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "1. Nguyên tắc phân bổ ngân sách trang trí Noel thực tế"
+          }
+        ]
+      },
+      {
+        "label": "2. Bóc tách chi phí cây thông Noel: Thân cây và chân đế",
+        "href": "#bang-gia-cay-thong",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "2. Bóc tách chi phí cây thông Noel: Thân cây và chân đế"
+          }
+        ]
+      },
+      {
+        "label": "3. Bóc tách chi phí phụ kiện treo: Quả châu, kẹo xoắn, nơ nhung và ngôi sao đỉnh",
+        "href": "#bang-gia-phu-kien-treo",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "3. Bóc tách chi phí phụ kiện treo: Quả châu, kẹo xoắn, nơ nhung và ngôi sao đỉnh"
+          }
+        ]
+      },
+      {
+        "label": "4. Bóc tách chi phí hệ thống chiếu sáng: Đèn LED dây, đèn rèm và bộ nguồn an toàn",
+        "href": "#bang-gia-chieu-sang",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "4. Bóc tách chi phí hệ thống chiếu sáng: Đèn LED dây, đèn rèm và bộ nguồn an toàn"
+          }
+        ]
+      },
+      {
+        "label": "5. Bóc tách chi phí tiểu cảnh chân cây: Hàng rào gỗ, thảm trải nhung và hộp quà",
+        "href": "#bang-gia-chan-cay",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "5. Bóc tách chi phí tiểu cảnh chân cây: Hàng rào gỗ, thảm trải nhung và hộp quà"
+          }
+        ]
+      },
+      {
+        "label": "6. Ba gói dự toán thực tế kèm danh mục vật tư chi tiết",
+        "href": "#goi-du-toan-thuc-te",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "6. Ba gói dự toán thực tế kèm danh mục vật tư chi tiết"
+          }
+        ]
+      },
+      {
+        "label": "6.1 Gói căn hộ gia đình (1.500.000₫ – 3.000.000₫)",
+        "href": "#goi-can-ho",
+        "targets": [
+          {
+            "tag": "h3",
+            "text": "6.1 Gói căn hộ gia đình (1.500.000₫ – 3.000.000₫)"
+          }
+        ]
+      },
+      {
+        "label": "6.2 Gói quán cafe vừa và nhỏ (4.000.000₫ – 8.000.000₫)",
+        "href": "#goi-quan-cafe",
+        "targets": [
+          {
+            "tag": "h3",
+            "text": "6.2 Gói quán cafe vừa và nhỏ (4.000.000₫ – 8.000.000₫)"
+          }
+        ]
+      },
+      {
+        "label": "6.3 Gói showroom và văn phòng công ty (12.000.000₫ – 25.000.000₫)",
+        "href": "#goi-showroom-cong-ty",
+        "targets": [
+          {
+            "tag": "h3",
+            "text": "6.3 Gói showroom và văn phòng công ty (12.000.000₫ – 25.000.000₫)"
+          }
+        ]
+      },
+      {
+        "label": "7. Kỹ thuật tháo dỡ và bảo quản phụ kiện để tái sử dụng nhiều năm",
+        "href": "#meo-bao-quan",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "7. Kỹ thuật tháo dỡ và bảo quản phụ kiện để tái sử dụng nhiều năm"
+          }
+        ]
+      },
+      {
+        "label": "8. Giải pháp tư vấn bóc tách và cung cấp vật tư tại Trang Trí 4 Mùa",
+        "href": "#dich-vu-trang-tri-4-mua",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "8. Giải pháp tư vấn bóc tách và cung cấp vật tư tại Trang Trí 4 Mùa"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utc": "2026-09-24T13:25:53Z",
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+    "status": 200,
+    "tocFound": true,
+    "tocTag": "div",
+    "links": [
+      {
+        "label": "1. Nguyên tắc bài trí Noel theo diện tích mặt bằng quán cafe",
+        "href": "#quy-mo-dien-tich",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "1. Nguyên tắc bài trí Noel theo diện tích mặt bằng quán cafe"
+          }
+        ]
+      },
+      {
+        "label": "2. 4 Vị trí bài trí trọng tâm tạo cảm giác ấm cúng và góc chụp đẹp",
+        "href": "#4-vi-tri-trong-tam",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "2. 4 Vị trí bài trí trọng tâm tạo cảm giác ấm cúng và góc chụp đẹp"
+          }
+        ]
+      },
+      {
+        "label": "3. Bảng dự toán chi phí trang trí Noel thực tế theo 3 mức ngân sách",
+        "href": "#du-toan-chi-phi",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "3. Bảng dự toán chi phí trang trí Noel thực tế theo 3 mức ngân sách"
+          }
+        ]
+      },
+      {
+        "label": "4. Quy chuẩn an toàn điện và kỹ thuật cố định vật tư chống ngã đổ",
+        "href": "#an-toan-thi-cong",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "4. Quy chuẩn an toàn điện và kỹ thuật cố định vật tư chống ngã đổ"
+          }
+        ]
+      },
+      {
+        "label": "5. Danh mục phụ kiện và vật tư trang trí gợi ý cho quán cafe",
+        "href": "#vat-tu-goi-y",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "5. Danh mục phụ kiện và vật tư trang trí gợi ý cho quán cafe"
+          }
+        ]
+      },
+      {
+        "label": "6. Dịch vụ cung ứng vật tư giá sỉ và hỗ trợ chuỗi F&B",
+        "href": "#chinh-sach-b2b",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "6. Dịch vụ cung ứng vật tư giá sỉ và hỗ trợ chuỗi F&B"
+          }
+        ]
+      },
+      {
+        "label": "7. Câu hỏi thường gặp khi bài trí Giáng Sinh cho quán cafe",
+        "href": "#cau-hoi-thuong-gap",
+        "targets": [
+          {
+            "tag": "h2",
+            "text": "7. Câu hỏi thường gặp khi bài trí Giáng Sinh cho quán cafe"
+          }
+        ]
+      }
+    ]
+  }
+]

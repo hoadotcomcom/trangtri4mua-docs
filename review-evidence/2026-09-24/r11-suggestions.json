@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-09-24T12:33:50.951Z",
+  "events": [
+    {
+      "event": "request",
+      "ms": 345,
+      "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=th%C3%A1p",
+      "method": "GET"
+    },
+    {
+      "event": "response",
+      "ms": 1252,
+      "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=th%C3%A1p",
+      "status": 200
+    }
+  ],
+  "state": {
+    "url": "https://trangtri4mua.com/",
+    "query": "tháp",
+    "expanded": "true",
+    "activeDescendant": null,
+    "status": "<div class=\"screen-reader-text\" id=\"ct-search-status-bf7\" aria-live=\"polite\" role=\"status\">Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó.</div>",
+    "form": "<form role=\"search\" method=\"get\" class=\"ct-search-form ct-has-dropdown\" data-form-controls=\"inside\" data-taxonomy-filter=\"false\" data-submit-button=\"icon\" action=\"https://trangtri4mua.com/\" data-live-results=\"thumbs\">\n\n\t<div class=\"ct-search-form-inner ct-pseudo-input\">\n\t\t\n\t\t\t<input type=\"search\" class=\"modal-field\" placeholder=\"Tìm cây thông, phụ kiện Noel, mô hình, đồ Tết...\" value=\"\" name=\"s\" autocomplete=\"off\" title=\"Tìm kiếm cho\" aria-label=\"Tìm kiếm cho\" role=\"combobox\" aria-autocomplete=\"list\" aria-controls=\"ct-search-results-bf7\" aria-describedby=\"ct-search-status-bf7\" aria-expanded=\"true\">\n\n\t\t\t\n\t\t\n\t\t<button type=\"submit\" class=\"wp-element-button\" aria-label=\"Nút tìm kiếm\">\n\t\t\t<svg class=\"ct-icon ct-search-button-content\" aria-hidden=\"true\" width=\"15\" height=\"15\" viewBox=\"0 0 15 15\"><path d=\"M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z\"></path></svg>\n\t\t\t<span class=\"ct-ajax-loader\">\n\t\t\t\t<svg viewBox=\"0 0 24 24\">\n\t\t\t\t\t<circle cx=\"12\" cy=\"12\" r=\"10\" opacity=\"0.2\" fill=\"none\" stroke=\"currentColor\" stroke-miterlimit=\"10\" stroke-width=\"2\"></circle>\n\n\t\t\t\t\t<path d=\"m12,2c5.52,0,10,4.48,10,10\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-miterlimit=\"10\" stroke-width=\"2\">\n\t\t\t\t\t\t<animateTransform attributeName=\"transform\" attributeType=\"XML\" type=\"rotate\" dur=\"0.6s\" from=\"0 12 12\" to=\"360 12 12\" repeatCount=\"indefinite\" begin=\"indefinite\"></animateTransform>\n\t\t\t\t\t</path>\n\t\t\t\t</svg>\n\t\t\t</span>\n\t\t</button>\n\n\t\t\n\t\t\n\t\t\n\n\t\t\t</div>\n\n\t\t\t<div class=\"screen-reader-text\" id=\"ct-search-status-bf7\" aria-live=\"polite\" role=\"status\">Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó.</div>\n\t\n<div id=\"ct-search-results-bf7\" class=\"ct-search-results ct-fade-leave ct-fade-enter-active\" role=\"listbox\" aria-label=\"Kết quả tìm kiếm\"><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/san-pham/thap-nhu-dien/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>Tháp nhũ điện – Trang trí Noel</span></a><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian</span></a><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026</span></a><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &amp; Chiều Cao Trần</span></a><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/san-pham/gau-bo-khan-ke/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/gau-bo-khan-ke-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>Gấu bò khăn kẻ – Trang trí Noel</span></a><a class=\"ct-search-item\" role=\"option\" href=\"https://trangtri4mua.com/san-pham/keo-hat-noi/\"><span class=\"ct-media-container\"><img src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/keo-hat-noi-1-150x150.webp\" style=\"aspect-ratio: 1 / 1;\"></span><span>Kẹo hạt nổi – Trang trí Noel</span></a><a class=\"ct-search-more\" role=\"option\" href=\"https://trangtri4mua.com/search/tháp/\">Xem thêm</a></div></form>",
+    "links": [
+      {
+        "text": "Tháp nhũ điện – Trang trí Noel",
+        "href": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+        "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+        "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+        "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "Gấu bò khăn kẻ – Trang trí Noel",
+        "href": "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "Kẹo hạt nổi – Trang trí Noel",
+        "href": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+        "role": "option",
+        "id": ""
+      },
+      {
+        "text": "Xem thêm",
+        "href": "https://trangtri4mua.com/search/th%C3%A1p/",
+        "role": "option",
+        "id": ""
+      }
+    ],
+    "focus": "<input type=\"search\" class=\"modal-field\" placeholder=\"Tìm cây thông, phụ kiện Noel, mô hình, đồ Tết...\" value=\"\" name=\"s\" autocomplete=\"off\" title=\"Tìm kiếm cho\" aria-label=\"Tìm kiếm cho\" role=\"combobox\" aria-autocomplete=\"list\" aria-controls=\"ct-search-results-bf7\" aria-describedby=\"ct-search-status-bf7\" aria-expanded=\"true\">"
+  }
+}

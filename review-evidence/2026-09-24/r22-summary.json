@@ -1,0 +1,80 @@
+{
+  "utc": "2026-09-24T13:57:54Z",
+  "replySha256": "81e73edf3d0abb9f7f052fcc6009b00d77255704286a45c814fbb69a5e7d9e96",
+  "pageCount": 9,
+  "imageNodes": 88,
+  "inertTemplateImageNodes": 11,
+  "missingAlt": 0,
+  "emptyAlt": 0,
+  "linkOccurrences": 32,
+  "uniqueDestinations": 21,
+  "httpStatuses": {
+    "200": 21
+  },
+  "sourceLinkCounts": {
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/": 8,
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/": 8,
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/": 16
+  },
+  "destinationTypes": {
+    "/san-pham/": 13,
+    "/danh-muc/": 5,
+    "/y-tuong-trang-tri/": 3
+  },
+  "emptyCategoryEdges": [
+    {
+      "source": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "anchor": "bộ sưu tập cây thông Noel",
+      "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "resolved": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "context": "Đặt mua cây sớm từ tháng 10 đến đầu tháng 11: Đặt hàng sớm tại bộ sưu tập cây thông Noel giúp bạn thoải mái chọn lựa các mẫu cây tán đẹp, đủ size và nhận hàng trước mùa cao điểm vận chuyển lễ hội."
+    },
+    {
+      "source": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "anchor": "decal dán kính Noel",
+      "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/decal-dan-kinh-noel/",
+      "resolved": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/decal-dan-kinh-noel/",
+      "context": "Khai thác cửa kính và mặt tiền: Dán decal dán kính Noel tĩnh điện hai mặt màu trắng (hình bông tuyết, viền thông rủ, lời chúc Giáng Sinh) kết hợp treo 01 vòng nguyệt quế đường kính 45cm – 60cm ngay giữa cánh cửa chính. Cách làm này tạo dấu ấn lễ hội từ xa mà không tiêu tốn một centimet sàn nhà nào."
+    },
+    {
+      "source": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "anchor": "vòng nguyệt quế",
+      "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/",
+      "resolved": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/",
+      "context": "Khai thác cửa kính và mặt tiền: Dán decal dán kính Noel tĩnh điện hai mặt màu trắng (hình bông tuyết, viền thông rủ, lời chúc Giáng Sinh) kết hợp treo 01 vòng nguyệt quế đường kính 45cm – 60cm ngay giữa cánh cửa chính. Cách làm này tạo dấu ấn lễ hội từ xa mà không tiêu tốn một centimet sàn nhà nào."
+    },
+    {
+      "source": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "anchor": "cây thông Noel",
+      "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "resolved": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "context": "Gia cố cây thông ngoài trời: Nên chọn cây thông Noel làm từ chất liệu lá PE đúc dày dặn, khung thân kim loại sơn tĩnh điện, chiều cao từ 2m4 đến 3m. Chân đế chữ thập cần được ép thêm bao cát tải trọng 15kg – 20kg giấu kín dưới lớp vải bố hoặc thùng gỗ bọc hộp quà để cây đứng vững trước gió lộng."
+    }
+  ],
+  "crossPageFragments": [],
+  "newIssues": [
+    {
+      "id": "R22-01",
+      "priority": "P2",
+      "status": "OPEN",
+      "scope": "Nhãn card kẹo gậy trong bài dự toán mâu thuẫn loại/công dụng với PDP TT4M-074"
+    }
+  ],
+  "existingIssuesReconfirmed": [
+    "R2-04",
+    "R2-11"
+  ],
+  "openCounts": {
+    "total": 36,
+    "P1": 7,
+    "P2": 25,
+    "P3": 4
+  },
+  "runtimePages": [
+    "https://trangtri4mua.com/",
+    "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/"
+  ],
+  "earliestRuntimeUtc": "2026-09-24T13:50:28.754Z",
+  "redirectHopCount": 0
+}

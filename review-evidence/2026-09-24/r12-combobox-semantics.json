@@ -1,0 +1,40 @@
+{
+  "evidenceTimestamp": "2026-09-24T12:34:20.361Z",
+  "method": "Đối chiếu DOM và trace R11 đã lưu với WAI-ARIA APG; không kiểm tra live lại trong R12.",
+  "source": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+  "input": {
+    "role": "combobox",
+    "aria-autocomplete": "list",
+    "aria-controls": "ct-search-results-bf7",
+    "aria-expanded": "true"
+  },
+  "popupRole": "listbox",
+  "optionCountIncludingMore": 7,
+  "optionsWithIds": 0,
+  "arrowDownObservations": [
+    {
+      "step": "ArrowDown",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    },
+    {
+      "step": "ArrowDown",
+      "tag": "INPUT",
+      "role": "combobox",
+      "text": "",
+      "ariaLabel": "Tìm kiếm cho",
+      "href": null,
+      "insideModal": true,
+      "activeDescendant": null,
+      "expanded": "true"
+    }
+  ],
+  "tabReachesOption": true,
+  "scopeLimit": "Không kiểm thử screen reader; không kết luận vi phạm WCAG. APG nêu Up Arrow từ input là tùy chọn."
+}

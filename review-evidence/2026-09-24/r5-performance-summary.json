@@ -1,0 +1,148 @@
+{
+  "config": {
+    "network": {
+      "latencyMs": 150,
+      "downloadBytesPerSecond": 200000,
+      "uploadBytesPerSecond": 93750
+    },
+    "cpuSlowdown": 4,
+    "cacheDisabled": true,
+    "chrome": "153.0.8010.53",
+    "viewport": [
+      375,
+      812
+    ],
+    "dpr": 1,
+    "host": "Apple M3 / macOS",
+    "observation": "load + 8 giây, không cuộn/không tương tác"
+  },
+  "samples": [
+    {
+      "url": "https://trangtri4mua.com/",
+      "timestamp": "2026-09-24T11:48:31.076Z",
+      "ttfbMs": 1234.1000003814697,
+      "fcpMs": 2812,
+      "lcpMs": 5000,
+      "lcpUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-do.webp",
+      "observedResourceTransferBytes": 1235789,
+      "resourceCount": 45
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "timestamp": "2026-09-24T11:48:57.175Z",
+      "ttfbMs": 1114.9000000953674,
+      "fcpMs": 2436,
+      "lcpMs": 4632,
+      "lcpUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "observedResourceTransferBytes": 364510,
+      "resourceCount": 41
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "timestamp": "2026-09-24T11:50:11.789Z",
+      "ttfbMs": 1228.5,
+      "fcpMs": 2416,
+      "lcpMs": 4756,
+      "lcpUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "observedResourceTransferBytes": 364510,
+      "resourceCount": 41
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "timestamp": "2026-09-24T11:50:36.623Z",
+      "ttfbMs": 1234.0999999046326,
+      "fcpMs": 2392,
+      "lcpMs": 4760,
+      "lcpUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "observedResourceTransferBytes": 364510,
+      "resourceCount": 41
+    },
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "timestamp": "2026-09-24T11:49:26.924Z",
+      "ttfbMs": 1104.6999998092651,
+      "fcpMs": 2480,
+      "lcpMs": 2480,
+      "lcpUrl": "",
+      "observedResourceTransferBytes": 1073627,
+      "resourceCount": 37
+    }
+  ],
+  "pdpLcpMedianMs": 4756,
+  "postCards": [
+    {
+      "src": "/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+      "srcset": null,
+      "sizes": null,
+      "loading": null,
+      "width": null,
+      "height": null,
+      "box": {
+        "x": 58.890625,
+        "y": 8170.09375,
+        "width": 111.21875,
+        "height": 111.21875,
+        "top": 8170.09375,
+        "right": 170.109375,
+        "bottom": 8281.3125,
+        "left": 58.890625
+      }
+    },
+    {
+      "src": "/wp-content/uploads/2026/09/ngoi-sao-nhu-do-bac.webp",
+      "srcset": null,
+      "sizes": null,
+      "loading": null,
+      "width": null,
+      "height": null,
+      "box": {
+        "x": 204.890625,
+        "y": 8170.09375,
+        "width": 111.21875,
+        "height": 111.21875,
+        "top": 8170.09375,
+        "right": 316.109375,
+        "bottom": 8281.3125,
+        "left": 204.890625
+      }
+    },
+    {
+      "src": "/wp-content/uploads/2026/09/canh-thong-pe.webp",
+      "srcset": null,
+      "sizes": null,
+      "loading": null,
+      "width": null,
+      "height": null,
+      "box": {
+        "x": 58.890625,
+        "y": 8523.90625,
+        "width": 111.21875,
+        "height": 111.21875,
+        "top": 8523.90625,
+        "right": 170.109375,
+        "bottom": 8635.125,
+        "left": 58.890625
+      }
+    },
+    {
+      "src": "/wp-content/uploads/2026/09/day-tuyet.webp",
+      "srcset": null,
+      "sizes": null,
+      "loading": null,
+      "width": null,
+      "height": null,
+      "box": {
+        "x": 204.890625,
+        "y": 8523.90625,
+        "width": 111.21875,
+        "height": 111.21875,
+        "top": 8523.90625,
+        "right": 316.109375,
+        "bottom": 8635.125,
+        "left": 204.890625
+      }
+    }
+  ],
+  "postCardImageBytes": 909886,
+  "homeCategoryImageBytes": 945382
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "timestamp": "2026-09-24T13:14:32.273Z",
+    "requested": "https://trangtri4mua.com/shop/?orderby=price-desc",
+    "url": "https://trangtri4mua.com/cua-hang/",
+    "selected": "menu_order",
+    "selectedText": "Sắp xếp mặc định",
+    "ids": [
+      292,
+      233,
+      275,
+      210,
+      267,
+      215,
+      201,
+      200,
+      228,
+      175,
+      253,
+      164,
+      151,
+      185,
+      184,
+      217
+    ],
+    "canonical": "https://trangtri4mua.com/cua-hang/",
+    "navigationResponseStatus": 200
+  },
+  {
+    "timestamp": "2026-09-24T13:14:34.434Z",
+    "requested": "https://trangtri4mua.com/cua-hang/?orderby=price-desc",
+    "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc",
+    "selected": "price-desc",
+    "selectedText": "Sắp xếp theo giá: cao đến thấp",
+    "ids": [
+      285,
+      177,
+      223,
+      242,
+      249,
+      248,
+      280,
+      266,
+      269,
+      295,
+      236,
+      288,
+      229,
+      261,
+      252,
+      191
+    ],
+    "canonical": "https://trangtri4mua.com/cua-hang/",
+    "navigationResponseStatus": 200
+  }
+]

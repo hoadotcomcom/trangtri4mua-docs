@@ -1,0 +1,174 @@
+{
+  "utc": "2026-09-24T14:12:25.305Z",
+  "url": "https://trangtri4mua.com/san-pham/bom-kinh/",
+  "rows": [
+    {
+      "key": "ArrowRight",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "ArrowDown",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-reviews",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "Enter",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-reviews",
+          "id": ""
+        },
+        "selected": [
+          "#tab-reviews"
+        ],
+        "visible": [
+          "tab-reviews"
+        ]
+      }
+    },
+    {
+      "key": "ArrowUp",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-reviews"
+        ],
+        "visible": [
+          "tab-reviews"
+        ]
+      }
+    },
+    {
+      "key": " ",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-reviews"
+        ],
+        "visible": [
+          "tab-reviews"
+        ]
+      }
+    },
+    {
+      "key": "Enter",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": "tab",
+          "href": "#tab-description",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    },
+    {
+      "key": "Tab",
+      "state": {
+        "orientation": null,
+        "direction": "column",
+        "active": {
+          "role": null,
+          "href": "tel:0901234567",
+          "id": ""
+        },
+        "selected": [
+          "#tab-description"
+        ],
+        "visible": [
+          "tab-description"
+        ]
+      }
+    }
+  ],
+  "events": [],
+  "ax": [
+    {
+      "role": "tablist",
+      "name": "",
+      "properties": [
+        {
+          "name": "multiselectable",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "orientation",
+          "value": {
+            "type": "token",
+            "value": "horizontal"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tabpanel",
+      "name": "MÔ TẢ CHI TIẾT",
+      "properties": [
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 6470,
+                "idref": "tab-title-description",
+                "text": "MÔ TẢ CHI TIẾT"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

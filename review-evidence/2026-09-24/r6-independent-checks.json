@@ -1,0 +1,61 @@
+{
+  "/robots.txt": {
+    "url": "https://trangtri4mua.com/robots.txt",
+    "status": 200,
+    "sha256": "22c0e754330f325fdeafbade41af41c59e1575726e6884c61203fffb36fa7ac8",
+    "timestamp": "2026-09-24T11:56:01Z",
+    "text": "User-agent: *\nDisallow: /wp-content/uploads/wc-logs/\nDisallow: /wp-content/uploads/woocommerce_transient_files/\nDisallow: /wp-content/uploads/woocommerce_uploads/\nDisallow: /*?add-to-cart=\nDisallow: /*?*add-to-cart=\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n\nSitemap: https://trangtri4mua.com/sitemap_index.xml\n"
+  },
+  "/sitemap_index.xml": {
+    "url": "https://trangtri4mua.com/sitemap_index.xml",
+    "status": 200,
+    "sha256": "e4e31db8c15deb9206f436104a40ad00aa0bd5c85e2334e06815520fb4d84c99",
+    "timestamp": "2026-09-24T11:56:01Z",
+    "loc": [
+      "https://trangtri4mua.com/page-sitemap.xml",
+      "https://trangtri4mua.com/product-sitemap.xml",
+      "https://trangtri4mua.com/product_cat-sitemap.xml"
+    ]
+  },
+  "/post-sitemap.xml": {
+    "url": "https://trangtri4mua.com/post-sitemap.xml",
+    "status": 200,
+    "sha256": "d8a5dab7da370483a636ba8296b9974c64b42ae86a7f1098b51a36109d75f428",
+    "timestamp": "2026-09-24T11:56:01Z",
+    "loc": [
+      "https://trangtri4mua.com/y-tuong-trang-tri/",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-danh-trong.webp",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/ngoi-sao-nhu-do-bac.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/day-tuyet.webp",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-nhu-vang.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/ngoi-sao-nhu-do-bac.webp",
+      "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp"
+    ],
+    "pageLoc": [
+      "https://trangtri4mua.com/y-tuong-trang-tri/",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/"
+    ]
+  },
+  "/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790244747": {
+    "url": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790244747",
+    "status": 200,
+    "sha256": "95208420f6385ea2bdb3a0451a41297070d67cf20405091ebb386d8444d5e0de",
+    "timestamp": "2026-09-24T11:56:01Z",
+    "sameAsR2Script": true,
+    "timer4000Occurrences": [
+      "hanh-toan/',\n\t\tcartUrl: (window.TT4M_DATA && window.TT4M_DATA.cartUrl) ? window.TT4M_DATA.cartUrl : '/gio-hang/',\n\t\ttoastTimeout: 4000\n\t};\n\n\t/**\n\t * DOM Ready Helper\n\t */\n\tfunction onReady(fn) {\n\t\tif (doc",
+      "ction timer in case non-AJAX or slow response\n\t\t\tsetTimeout(function () {\n\t\t\t\tif (!redirected) {\n\t\t\t\t\tgoToCheckout();\n\t\t\t\t}\n\t\t\t}, 4000);\n\t\t}\n\n\t\tif (stickyBuyBtn) {\n\t\t\tstickyBuyBtn.addEventListener('click'"
+    ]
+  }
+}

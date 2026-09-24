@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-09-24T12:29:59.385Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000,
+    "deviceScaleFactor": 1,
+    "isMobile": false,
+    "hasTouch": false
+  },
+  "trace": [
+    {
+      "step": "after-Enter-open",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "INPUT",
+        "className": "modal-field",
+        "ariaLabel": "Tìm kiếm cho",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Tab-1",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "wp-element-button",
+        "ariaLabel": "Nút tìm kiếm",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Tab-2",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "ct-toggle-close",
+        "ariaLabel": "Đóng cửa sổ tìm kiếm modal",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Tab-3",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "INPUT",
+        "className": "modal-field",
+        "ariaLabel": "Tìm kiếm cho",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Tab-4",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "wp-element-button",
+        "ariaLabel": "Nút tìm kiếm",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Tab-5",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "ct-toggle-close",
+        "ariaLabel": "Đóng cửa sổ tìm kiếm modal",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Shift+Tab-1",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "wp-element-button",
+        "ariaLabel": "Nút tìm kiếm",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Shift+Tab-2",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "INPUT",
+        "className": "modal-field",
+        "ariaLabel": "Tìm kiếm cho",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Shift+Tab-3",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "ct-toggle-close",
+        "ariaLabel": "Đóng cửa sổ tìm kiếm modal",
+        "text": "",
+        "insideModal": true
+      },
+      "modal": {
+        "active": true,
+        "role": "dialog",
+        "ariaModal": "true",
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    },
+    {
+      "step": "Escape-close",
+      "url": "https://trangtri4mua.com/",
+      "focus": {
+        "tag": "BUTTON",
+        "className": "ct-header-search ct-toggle ",
+        "ariaLabel": "Tìm kiếm",
+        "text": "Tìm kiếm",
+        "insideModal": false
+      },
+      "modal": {
+        "active": false,
+        "role": "dialog",
+        "ariaModal": null,
+        "ariaLabel": "Modal tìm kiếm"
+      },
+      "query": ""
+    }
+  ]
+}

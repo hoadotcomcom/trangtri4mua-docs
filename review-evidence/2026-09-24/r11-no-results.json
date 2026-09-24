@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-24T12:35:52.983Z",
+  "events": [
+    {
+      "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=zzreviewnomatch20260924",
+      "status": 200,
+      "body": []
+    }
+  ],
+  "state": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "query": "zzreviewnomatch20260924",
+    "expanded": "false",
+    "status": "<div class=\"screen-reader-text\" id=\"ct-search-status-51f\" aria-live=\"polite\" role=\"status\">Không có kết quả</div>",
+    "links": [],
+    "visibleText": "Không có kết quả",
+    "focusTag": "INPUT"
+  },
+  "afterEscape": {
+    "modalActive": false,
+    "focusLabel": "Tìm kiếm",
+    "cart": "Giỏ hàng\n0 ₫\n0"
+  }
+}

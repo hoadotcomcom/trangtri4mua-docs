@@ -1,0 +1,38 @@
+{
+  "target": {
+    "text": "Tư Vấn Zalo",
+    "href": "https://zalo.me/0901234567",
+    "rect": {
+      "x": 180.953125,
+      "y": 689.390625,
+      "width": 103.84375,
+      "height": 44,
+      "top": 689.390625,
+      "right": 284.796875,
+      "bottom": 733.390625,
+      "left": 180.953125
+    }
+  },
+  "samples": [
+    {
+      "x": 232.875,
+      "y": 711.390625,
+      "hit": {
+        "tag": "SPAN",
+        "className": "",
+        "linkLabel": null,
+        "linkHref": "https://zalo.me/0901234567"
+      }
+    },
+    {
+      "x": 269.2203125,
+      "y": 711.390625,
+      "hit": {
+        "tag": "A",
+        "className": "tt4m-floating-btn tt4m-btn-phone",
+        "linkLabel": "Gọi hotline tư vấn: 0901.234.567",
+        "linkHref": "tel:0901234567"
+      }
+    }
+  ]
+}

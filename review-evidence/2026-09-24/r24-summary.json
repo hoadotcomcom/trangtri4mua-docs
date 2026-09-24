@@ -1,0 +1,534 @@
+{
+  "utc": "2026-09-24T14:13:51.707Z",
+  "cases": [
+    {
+      "name": "r24-thap-desktop",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "tabOrder": [
+        "#tab-description",
+        "#tab-additional_information",
+        "#tab-reviews"
+      ],
+      "allRecordedStatesSingleSelectionAndPanel": true,
+      "documentWidth": 1440,
+      "ax": [
+        {
+          "role": "tablist",
+          "name": "",
+          "properties": [
+            {
+              "name": "multiselectable",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "name": "orientation",
+              "value": {
+                "type": "token",
+                "value": "horizontal"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "MÔ TẢ CHI TIẾT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "controls",
+              "value": {
+                "type": "idrefList",
+                "value": "tab-reviews",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 2736,
+                    "idref": "tab-reviews"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "role": "tabpanel",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 2691,
+                    "idref": "tab-title-reviews",
+                    "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r24-thap-mobile",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "viewport": [
+        375,
+        812
+      ],
+      "tabOrder": [
+        "#tab-description",
+        "#tab-additional_information",
+        "#tab-reviews"
+      ],
+      "allRecordedStatesSingleSelectionAndPanel": true,
+      "documentWidth": 375,
+      "ax": [
+        {
+          "role": "tablist",
+          "name": "",
+          "properties": [
+            {
+              "name": "multiselectable",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "name": "orientation",
+              "value": {
+                "type": "token",
+                "value": "horizontal"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "MÔ TẢ CHI TIẾT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "controls",
+              "value": {
+                "type": "idrefList",
+                "value": "tab-reviews",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 4026,
+                    "idref": "tab-reviews"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "role": "tabpanel",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 3982,
+                    "idref": "tab-title-reviews",
+                    "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r24-bom-desktop",
+      "url": "https://trangtri4mua.com/san-pham/bom-kinh/",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "tabOrder": [
+        "#tab-description",
+        "#tab-reviews",
+        "#tab-additional_information"
+      ],
+      "allRecordedStatesSingleSelectionAndPanel": true,
+      "documentWidth": 1440,
+      "ax": [
+        {
+          "role": "tablist",
+          "name": "",
+          "properties": [
+            {
+              "name": "multiselectable",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "name": "orientation",
+              "value": {
+                "type": "token",
+                "value": "horizontal"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "MÔ TẢ CHI TIẾT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "controls",
+              "value": {
+                "type": "idrefList",
+                "value": "tab-additional_information",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 5351,
+                    "idref": "tab-additional_information"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "role": "tabpanel",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 5272,
+                    "idref": "tab-title-additional_information",
+                    "text": "THÔNG SỐ KỸ THUẬT"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "r24-bom-mobile",
+      "url": "https://trangtri4mua.com/san-pham/bom-kinh/",
+      "viewport": [
+        375,
+        812
+      ],
+      "tabOrder": [
+        "#tab-description",
+        "#tab-reviews",
+        "#tab-additional_information"
+      ],
+      "allRecordedStatesSingleSelectionAndPanel": true,
+      "documentWidth": 375,
+      "ax": [
+        {
+          "role": "tablist",
+          "name": "",
+          "properties": [
+            {
+              "name": "multiselectable",
+              "value": {
+                "type": "boolean",
+                "value": false
+              }
+            },
+            {
+              "name": "orientation",
+              "value": {
+                "type": "token",
+                "value": "horizontal"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "MÔ TẢ CHI TIẾT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "role": "tab",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "focusable",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "selected",
+              "value": {
+                "type": "booleanOrUndefined",
+                "value": true
+              }
+            },
+            {
+              "name": "controls",
+              "value": {
+                "type": "idrefList",
+                "value": "tab-additional_information",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 6552,
+                    "idref": "tab-additional_information"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "role": "tabpanel",
+          "name": "THÔNG SỐ KỸ THUẬT",
+          "properties": [
+            {
+              "name": "labelledby",
+              "value": {
+                "type": "nodeList",
+                "relatedNodes": [
+                  {
+                    "backendDOMNodeId": 6474,
+                    "idref": "tab-title-additional_information",
+                    "text": "THÔNG SỐ KỸ THUẬT"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "newIssue": {
+    "id": "R24-01",
+    "priority": "P3",
+    "status": "OPEN",
+    "scope": "Mobile tablist công bố horizontal dù dùng bố cục/phím dọc; Space không kích hoạt tab khác trong mô hình manual"
+  },
+  "openCounts": {
+    "total": 37,
+    "P1": 7,
+    "P2": 25,
+    "P3": 5
+  },
+  "limits": "Không gửi đánh giá, không mua hàng, không screen reader/thiết bị vật lý. Nội dung thông số vẫn theo issue R2-03."
+}
