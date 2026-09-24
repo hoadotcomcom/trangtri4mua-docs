@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R60 — nghiệm thu độc lập Batch 32](#round-r60), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R12-01 cải thiện Tab/Escape nhưng mất focus sau Escape 1; R24-01 vẫn stale orientation sau resize.
+> **Trạng thái hiện hành:** xem [Vòng R61 — nghiệm thu độc lập Batch 33](#round-r61), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn fail: scroll bài làm main thread treo; mobile DPR2 vẫn tải 600w/639.974 byte.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4408,4 +4408,35 @@ Claim matchMedia đồng bộ 0ms không tái hiện. Acceptance 1 và yêu cầ
 
 - [JSON Batch 32](review-evidence/2026-09-24/r60-batch-32-verification.json).
 - Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r61"></a>
+
+# Vòng R61 — Nghiệm thu độc lập Batch 33
+
+## R5-02 — FAIL / OPEN
+
+Phần đạt tại bài viết, mobile 375×812 DPR2, cache tắt, đầu trang:
+
+- bốn card nằm y≈8170/8524, render 111,22×111,22;
+- dùng URL thumbnail `300x300`, `loading=lazy`;
+- `currentSrc=""`, `complete=false`, `naturalWidth=0`;
+- không có resource request khớp bốn ảnh.
+
+Phần sau scroll không đạt. Hai phiên độc lập (DPR2 và DPR mặc định), gọi `scrollTo(0,7900)` hoặc mouse wheel đều làm page JavaScript thread không phản hồi; các evaluate tiếp theo timeout 10–30 giây. Vì vậy không có bằng chứng ảnh tải/hiển thị đúng khi tới gần card; đây là regression trực tiếp trong acceptance 1, không phải lý do để đóng issue.
+
+Claim homepage 375px/DPR2 chọn `300x300` và tổng 179 KB cũng sai với `currentSrc`/resource thực tế:
+
+- cả sáu card render 164,5×183 và khai báo `sizes="auto, (max-width: 600px) 165px, 300px"`;
+- browser DPR2 chọn sáu file 600w;
+- encoded bytes lần lượt 99.670 + 87.744 + 147.684 + 107.316 + 88.576 + 108.984 = **639.974 byte**.
+
+179 KB phù hợp nhiều khả năng là tổng file 300w ở DPR1, không phải kết quả DPR2 được công bố. Chỉ riêng mobile DPR2 đã phủ định claim và acceptance 3 còn yêu cầu ma trận mobile/tablet/desktop/DPR cao. R5-02 giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R61
+
+- [JSON Batch 33](review-evidence/2026-09-24/r61-batch-33-verification.json).
+- Không click card, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

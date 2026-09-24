@@ -1,0 +1,66 @@
+{
+  "round": "R61",
+  "date": "2026-09-24",
+  "handoff": "Batch 33",
+  "verdicts": {
+    "R5-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "observed": {
+        "articleMobileTopDpr2": {
+          "viewport": "375x812",
+          "cardY": [8170.094, 8170.094, 8523.906, 8523.906],
+          "cardBox": "111.219x111.219",
+          "src": [
+            "qua-chau-cuom-300x300.webp",
+            "ngoi-sao-nhu-do-bac-300x300.webp",
+            "canh-thong-pe-300x300.webp",
+            "day-tuyet-300x300.webp"
+          ],
+          "loading": ["lazy", "lazy", "lazy", "lazy"],
+          "currentSrc": ["", "", "", ""],
+          "complete": [false, false, false, false],
+          "naturalWidth": [0, 0, 0, 0],
+          "matchingResourceRequests": 0
+        },
+        "articleScroll": {
+          "attempts": 2,
+          "viewports": ["375x812 DPR2", "375x812 managed default DPR"],
+          "targetY": 7900,
+          "result": "The page JavaScript thread became unresponsive immediately after scrollTo/wheel; evaluate calls timed out at 10–30 seconds, so the claimed post-scroll loaded state was not observable. Tabs were closed through browser control."
+        },
+        "homepageMobileDpr2": {
+          "viewport": "375x812",
+          "renderedCardBox": "164.5x183",
+          "declaredSizes": "auto, (max-width: 600px) 165px, 300px",
+          "selectedWidths": [600, 600, 600, 600, 600, 600],
+          "selectedFiles": [
+            "qua-chau-sequin-do-bac-600x800.webp",
+            "ong-gia-3-mau-600x520.webp",
+            "canh-thong-pe-600x800.webp",
+            "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+            "nha-go-co-den-trang-tri-600x600.webp",
+            "hop-qua-trau-600x800.webp"
+          ],
+          "encodedBytes": [99670, 87744, 147684, 107316, 88576, 108984],
+          "totalEncodedBytes": 639974
+        }
+      },
+      "reason": "The top-of-article no-request state now passes. The required near-card state does not: two independent scroll attempts make the page main thread unresponsive. The DPR2 homepage claim is also false: currentSrc selects six 600w files totaling 639,974 encoded bytes, not six 300x300 files totaling 179 KB. Tablet/desktop/DPR matrix acceptance therefore cannot pass."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
