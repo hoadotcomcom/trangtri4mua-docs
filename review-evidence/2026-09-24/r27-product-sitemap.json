@@ -1,0 +1,149 @@
+{
+  "utc": "2026-09-24T14:53:53Z",
+  "url": "https://trangtri4mua.com/product-sitemap.xml",
+  "status": 200,
+  "count": 90,
+  "new_products": [
+    {
+      "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+      "entries": []
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "entries": []
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "entries": []
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+      "entries": []
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+      "entries": []
+    }
+  ],
+  "index": {
+    "status": 200,
+    "sitemaps": [
+      "https://trangtri4mua.com/page-sitemap.xml",
+      "https://trangtri4mua.com/product-sitemap.xml",
+      "https://trangtri4mua.com/product_cat-sitemap.xml"
+    ]
+  },
+  "repeat_checks": [
+    {
+      "utc": "2026-09-24T14:55:09Z",
+      "url": "https://trangtri4mua.com/product-sitemap.xml",
+      "status": 200,
+      "headers": {
+        "Date": "Thu, 24 Sep 2026 14:55:09 GMT",
+        "x-robots-tag": "noindex",
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+        "cf-cache-status": "DYNAMIC"
+      },
+      "count": 90,
+      "locs": [
+        "https://trangtri4mua.com/cua-hang/",
+        "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+        "https://trangtri4mua.com/san-pham/qua-chau-nhu-do-hoa-tiet-la/",
+        "https://trangtri4mua.com/san-pham/chau-guong-disco/",
+        "https://trangtri4mua.com/san-pham/que-keo-xoan-cam-canh/",
+        "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-do-bac/",
+        "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-dinh-sequin/",
+        "https://trangtri4mua.com/san-pham/chau-tron-do/",
+        "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+        "https://trangtri4mua.com/san-pham/keo-soc/",
+        "https://trangtri4mua.com/san-pham/khinh-khi-cau-gau-nhung/",
+        "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+        "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+        "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+        "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+        "https://trangtri4mua.com/san-pham/ong-gia-3-mau/",
+        "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+        "https://trangtri4mua.com/san-pham/chau-khia-hat-noi/",
+        "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+        "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+        "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+        "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+        "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+        "https://trangtri4mua.com/san-pham/chau-hong-kim-sa/",
+        "https://trangtri4mua.com/san-pham/bom-kinh/",
+        "https://trangtri4mua.com/san-pham/chau-soc-san/",
+        "https://trangtri4mua.com/san-pham/yeu-tinh/",
+        "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+        "https://trangtri4mua.com/san-pham/chau-guong/",
+        "https://trangtri4mua.com/san-pham/keo-gay-nhung-do/",
+        "https://trangtri4mua.com/san-pham/keo-nhung-do/",
+        "https://trangtri4mua.com/san-pham/keo-sao-10ly/",
+        "https://trangtri4mua.com/san-pham/hop-qua-trau/",
+        "https://trangtri4mua.com/san-pham/linh-chi-ngua-go/",
+        "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+        "https://trangtri4mua.com/san-pham/day-tuyet/",
+        "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+        "https://trangtri4mua.com/san-pham/keo-gay-vong-nguyet-que/",
+        "https://trangtri4mua.com/san-pham/day-qua/",
+        "https://trangtri4mua.com/san-pham/keo-xit/",
+        "https://trangtri4mua.com/san-pham/keo-det-ke/",
+        "https://trangtri4mua.com/san-pham/keo-nhu-hat-soc-xoan/",
+        "https://trangtri4mua.com/san-pham/day-pe/",
+        "https://trangtri4mua.com/san-pham/hoa-ly-to/",
+        "https://trangtri4mua.com/san-pham/ong-gia-vang-xin/",
+        "https://trangtri4mua.com/san-pham/canh-thong-pe/",
+        "https://trangtri4mua.com/san-pham/qua-chau-sequin/",
+        "https://trangtri4mua.com/san-pham/tao-to-trang-tri/",
+        "https://trangtri4mua.com/san-pham/ong-gia-do-xin/",
+        "https://trangtri4mua.com/san-pham/chau-cu-toi-nhu/",
+        "https://trangtri4mua.com/san-pham/nha-go-co-den-trang-tri/",
+        "https://trangtri4mua.com/san-pham/tao-be-trang-tri/",
+        "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+        "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+        "https://trangtri4mua.com/san-pham/chau-tram-hat-noi/",
+        "https://trangtri4mua.com/san-pham/canh-keo-ngoi-sao-trang-tri/",
+        "https://trangtri4mua.com/san-pham/qua-chau-sequin-do-bac/",
+        "https://trangtri4mua.com/san-pham/linh-chi-nutcracker-n01090/",
+        "https://trangtri4mua.com/san-pham/keo-ke-soc/",
+        "https://trangtri4mua.com/san-pham/chau-20-kim-sa/",
+        "https://trangtri4mua.com/san-pham/chau-nhung/",
+        "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen/",
+        "https://trangtri4mua.com/san-pham/gay-kim-tuyen-do/",
+        "https://trangtri4mua.com/san-pham/gau-nhung-ke-ngoi/",
+        "https://trangtri4mua.com/san-pham/hoa-trang-nguyen-do-phu-tuyet/",
+        "https://trangtri4mua.com/san-pham/keo-nhung-xoan-do/",
+        "https://trangtri4mua.com/san-pham/keo-tron-nhung/",
+        "https://trangtri4mua.com/san-pham/canh-qua-chum-trang-la-kim-tuyen/",
+        "https://trangtri4mua.com/san-pham/keo-det-kim-tuyen-hong/",
+        "https://trangtri4mua.com/san-pham/keo-hong-kim-sa/",
+        "https://trangtri4mua.com/san-pham/gay-keo/",
+        "https://trangtri4mua.com/san-pham/thien-than-vay/",
+        "https://trangtri4mua.com/san-pham/canh-trang-qua-soc-do-trang/",
+        "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+        "https://trangtri4mua.com/san-pham/gau-dung-khan-ke/",
+        "https://trangtri4mua.com/san-pham/kem-hat-noi/",
+        "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-do/",
+        "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-do-la-xanh/",
+        "https://trangtri4mua.com/san-pham/canh-trang-tri-qua-chum-do/",
+        "https://trangtri4mua.com/san-pham/chau-cu-toi-kim-sa/",
+        "https://trangtri4mua.com/san-pham/keo-tron-kim-sa/",
+        "https://trangtri4mua.com/san-pham/soc-nhung-do/",
+        "https://trangtri4mua.com/san-pham/nguoi-tuyet-dung-hong/",
+        "https://trangtri4mua.com/san-pham/keo-gay-nhung-no/",
+        "https://trangtri4mua.com/san-pham/chim-long-do/",
+        "https://trangtri4mua.com/san-pham/chau-12cm/",
+        "https://trangtri4mua.com/san-pham/tat-kim-tuyen-do/",
+        "https://trangtri4mua.com/san-pham/keo-que-kim-tuyen-hong/",
+        "https://trangtri4mua.com/san-pham/keo-nhung-vuong/"
+      ],
+      "new_products_present": {
+        "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/": false,
+        "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/": false,
+        "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/": false,
+        "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/": false,
+        "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,916 @@
+[
+  {
+    "utc": "2026-09-24T14:56:02.979Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+      "sku": "CT-PE-SNOW",
+      "width": 1440,
+      "height": 1000,
+      "options": [
+        {
+          "value": "1m5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "1m8",
+          "text": "1m8",
+          "selected": false
+        },
+        {
+          "value": "2m1",
+          "text": "2m1",
+          "selected": false
+        },
+        {
+          "value": "2m4",
+          "text": "2m4",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-SNOW",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m5",
+            "label": "1m5"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m5",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m8",
+            "label": "1m8"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m8",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m1",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m1",
+            "label": "2m1"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m1",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m4",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m4",
+            "label": "2m4"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m4",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-SNOW",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "850.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-ct-pe-snow-1440-selected.webp"
+  },
+  {
+    "utc": "2026-09-24T14:56:09.960Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+      "sku": "CT-PE-SNOW",
+      "width": 375,
+      "height": 812,
+      "options": [
+        {
+          "value": "1m5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "1m8",
+          "text": "1m8",
+          "selected": false
+        },
+        {
+          "value": "2m1",
+          "text": "2m1",
+          "selected": false
+        },
+        {
+          "value": "2m4",
+          "text": "2m4",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-SNOW",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m5",
+            "label": "1m5"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m5",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m8",
+            "label": "1m8"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m8",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m1",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m1",
+            "label": "2m1"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m1",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m4",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m4",
+            "label": "2m4"
+          },
+          "variationId": "373",
+          "price": "850.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m4",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": "373"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "sku": "CT-PE-SNOW",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "850.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "372",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-ct-pe-snow-375-selected.webp"
+  },
+  {
+    "utc": "2026-09-24T14:56:16.730Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+      "sku": "CT-CUOC-PINE",
+      "width": 1440,
+      "height": 1000,
+      "options": [
+        {
+          "value": "1m5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "1m8",
+          "text": "1m8",
+          "selected": false
+        },
+        {
+          "value": "2m1",
+          "text": "2m1",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-PINE",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m5",
+            "label": "1m5"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m5",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m8",
+            "label": "1m8"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m8",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m1",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m1",
+            "label": "2m1"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m1",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-PINE",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "750.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-ct-cuoc-pine-1440-selected.webp"
+  },
+  {
+    "utc": "2026-09-24T14:56:23.150Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+      "sku": "CT-CUOC-PINE",
+      "width": 375,
+      "height": 812,
+      "options": [
+        {
+          "value": "1m5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "1m8",
+          "text": "1m8",
+          "selected": false
+        },
+        {
+          "value": "2m1",
+          "text": "2m1",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-PINE",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m5",
+            "label": "1m5"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m5",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "1m8",
+            "label": "1m8"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "1m8",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 2m1",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-150",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "2m1",
+            "label": "2m1"
+          },
+          "variationId": "378",
+          "price": "750.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_kich-thuoc": "2m1",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": "378"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "sku": "CT-CUOC-PINE",
+          "selection": {
+            "name": "attribute_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "750.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "377",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-ct-cuoc-pine-375-selected.webp"
+  },
+  {
+    "utc": "2026-09-24T14:56:29.897Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "sku": "TT4M-089",
+      "width": 1440,
+      "height": 1000,
+      "options": [
+        {
+          "value": "1m2",
+          "text": "1m2",
+          "selected": false
+        },
+        {
+          "value": "5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "8",
+          "text": "1m8",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m2",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-1M2",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "1m2",
+            "label": "1m2"
+          },
+          "variationId": "296",
+          "price": "550.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "1m2",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "296"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-5",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "5",
+            "label": "1m5"
+          },
+          "variationId": "297",
+          "price": "755.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "5",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "297"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-8",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "8",
+            "label": "1m8"
+          },
+          "variationId": "298",
+          "price": "895.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "8",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "298"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "895.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-tt4m-089-1440-selected.webp"
+  },
+  {
+    "utc": "2026-09-24T14:56:36.205Z",
+    "test": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "sku": "TT4M-089",
+      "width": 375,
+      "height": 812,
+      "options": [
+        {
+          "value": "1m2",
+          "text": "1m2",
+          "selected": false
+        },
+        {
+          "value": "5",
+          "text": "1m5",
+          "selected": false
+        },
+        {
+          "value": "8",
+          "text": "1m8",
+          "selected": false
+        }
+      ]
+    },
+    "rows": [
+      {
+        "action": "initial",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "0",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "0"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m2",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-1M2",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "1m2",
+            "label": "1m2"
+          },
+          "variationId": "296",
+          "price": "550.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "1m2",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "296"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m5",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-5",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "5",
+            "label": "1m5"
+          },
+          "variationId": "297",
+          "price": "755.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "5",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "297"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "select 1m8",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089-8",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "8",
+            "label": "1m8"
+          },
+          "variationId": "298",
+          "price": "895.000 ₫",
+          "panelVisible": true,
+          "buttonClass": "single_add_to_cart_button button alt",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "8",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": "298"
+          },
+          "cartCount": "0"
+        }
+      },
+      {
+        "action": "reset after settled",
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "sku": "TT4M-089",
+          "selection": {
+            "name": "attribute_pa_kich-thuoc",
+            "value": "",
+            "label": "Chọn một tùy chọn"
+          },
+          "variationId": "",
+          "price": "895.000 ₫",
+          "panelVisible": false,
+          "buttonClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "formValues": {
+            "attribute_pa_kich-thuoc": "",
+            "quantity": "1",
+            "product_id": "295",
+            "variation_id": ""
+          },
+          "cartCount": "0"
+        }
+      }
+    ],
+    "screenshot": "r27-tt4m-089-375-selected.webp"
+  }
+]

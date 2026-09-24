@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R26 — focus modal và thay đổi catalog](#round-r26), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **39 OPEN — 7 P1, 26 P2, 6 P3**. R26 thêm P3 về focus khi mở/đóng menu mobile. Combo đã có 3 sản phẩm, Cây thông có 2; ghi nhận cải thiện nhưng CTA “8+” và ảnh năm SKU mới vẫn chưa khớp. Không nghiệm thu toàn website.
+> **Trạng thái hiện hành:** xem [Vòng R27 — dữ liệu năm SKU mới](#round-r27), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **40 OPEN — 8 P1, 26 P2, 6 P3**. R27 thêm P1 vì mọi kích thước của hai cây thông mới đều chọn biến thể/giá thấp nhất. Đồng thời mở rộng R2-03, R2-06 và R6-01; không nghiệm thu giao dịch hoặc nguồn dữ liệu kinh doanh.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **39 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **40 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -237,6 +237,8 @@ Thông tin mua hàng sai trực tiếp làm tăng khiếu nại/đổi trả; n�
 ### Evidence
 Quả châu cườm mô tả **nhựa đính cườm**, Lính đánh trống mô tả **nhựa/nỉ, cao 38cm**, nhưng cả hai bảng thông số lại ghi **khung hợp kim** và “Đa dạng kích thước (Xem tùy chọn phân loại bên trên)”. Tháp nhũ có đèn nhưng chưa công bố điện áp/công suất/phạm vi trong-ngoài trời trong phần mô tả đã kiểm tra.
 
+**Bổ sung R27:** cả năm SKU mới ở R26 nhận lại cùng fallback. Ba combo sản phẩm đơn vẫn ghi “Đa dạng kích thước (Xem tùy chọn phân loại bên trên)” dù form không có select; cả năm cùng khẳng định “Khung hợp kim chống gỉ, phủ kim tuyến/sơn tĩnh điện cao cấp” và xuất xứ chung. Cây PE còn hiển thị hai hàng `Kích thước`, một hàng danh sách size và một hàng attribute. [HTTP/text năm PDP](review-evidence/2026-09-24/r27-product-http.json), [bảng combo hiển thị](review-evidence/2026-09-24/r27-combo-gd-50-additional_information.webp). Giữ **OPEN — P1**, không cộng issue trùng.
+
 ### Recommended solution
 Lấy thông số từ dữ liệu có kiểm chứng từng SKU; bỏ fallback vật liệu/xuất xứ khẳng định khi chưa có dữ liệu. Với đồ điện, bổ sung thông số từ nhãn/hướng dẫn nhà cung cấp và điều kiện sử dụng; không tự điền chứng nhận.
 
@@ -298,10 +300,10 @@ Không còn bảo đảm tuyệt đối hoặc mẹo hóa chất thiếu hướn
 ### Status
 OPEN
 
-## [P1] R2-06 — Sitemap index bỏ sót blog, sitemap page chứa URL noindex
+## [P1] R2-06 — Sitemap bỏ sót nội dung indexable và chứa URL noindex
 
 ### Location
-`/robots.txt`, `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`.
+`/robots.txt`, `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`, `/product-sitemap.xml`.
 
 ### Problem
 Sitemap công khai không nhất quán với nội dung indexable hiện tại.
@@ -312,11 +314,13 @@ Giảm chất lượng tín hiệu khám phá/cập nhật nội dung mới và 
 ### Evidence
 Sitemap index chỉ trỏ **page, product, product_cat**, không trỏ `post-sitemap.xml`. Tuy nhiên `post-sitemap.xml` trả 200, có hub và 3 bài cẩm nang indexable. `page-sitemap.xml` chứa `/gio-hang/`, `/thanh-toan/`, `/tai-khoan/` trong khi các trang này noindex; checkout giỏ trống còn redirect. Đọc lại index vẫn cho cùng kết quả; HTTP ghi `cf-cache-status: DYNAMIC`.
 
+**Bổ sung R27:** năm PDP mới đều HTTP 200, `index, follow`, self-canonical và có internal link từ homepage/category, nhưng **0/5** xuất hiện trong `product-sitemap.xml`. Đọc lại sitemap với `Cache-Control: no-cache` vẫn có 90 URL và thiếu cả năm; response ghi `no-cache, no-store`, `cf-cache-status: DYNAMIC`. Sitemap index chỉ có một product sitemap, không có phân mảnh khác chứa chúng. [Response, headers, danh sách sitemap và phép đối chiếu URL](review-evidence/2026-09-24/r27-product-sitemap.json). Không khẳng định Google chưa khám phá vì chưa có GSC.
+
 ### Recommended solution
-Rà cấu hình Rank Math và cache sinh sitemap; thêm sitemap bài viết vào index, loại URL noindex/redirect khỏi sitemap page, dùng lastmod phản ánh cập nhật thực. Không chữa bằng mở index cart/account.
+Rà cấu hình Rank Math và cache sinh sitemap; thêm sitemap bài viết vào index, loại URL noindex/redirect khỏi sitemap page, đồng thời đưa mọi PDP indexable/canonical đang xuất bản vào product sitemap với `lastmod` phản ánh cập nhật thực. Không chữa bằng mở index cart/account hoặc thêm URL biến thể không có trang riêng.
 
 ### Acceptance criteria
-Từ sitemap index khám phá được 3 bài và hub; mỗi URL sitemap là canonical 200 dự định index, không cart/checkout/account. Kiểm tra cả nội dung sau purge cache; gửi lại sitemap qua GSC khi có quyền.
+Từ sitemap index khám phá được 3 bài và hub; mọi PDP indexable đang xuất bản có mặt trong product sitemap; mỗi URL sitemap là canonical 200 dự định index, không cart/checkout/account. Kiểm tra cả nội dung sau purge cache; gửi lại sitemap qua GSC khi có quyền.
 
 ### Status
 OPEN
@@ -1011,7 +1015,7 @@ Xác minh lúc **11:58:26 UTC**, bằng chứng [HTTP, canonical, robots, tập 
 ## [P2] R6-01 — AggregateOffer đang dùng thay cho mô hình biến thể sản phẩm
 
 ### Location
-JSON-LD trên `/san-pham/thap-nhu-dien/` và `/san-pham/keo-gay-trang-tri-noel/`, phần Product/offers do nguồn schema hiện có xuất ra.
+JSON-LD trên `/san-pham/thap-nhu-dien/`, `/san-pham/keo-gay-trang-tri-noel/`, hai PDP cây thông mới và phần Product/offers do nguồn schema hiện có xuất ra.
 
 ### Problem
 Ba/năm lựa chọn kích thước được gộp thành một Product + `AggregateOffer` với lowPrice/highPrice/offerCount. Schema không biểu diễn quan hệ nhóm–biến thể–SKU–giá của các lựa chọn đang bán; cách dùng AggregateOffer này trái hướng dẫn Google dành cho tập biến thể.
@@ -1029,6 +1033,8 @@ Main lấy lại cả ba PDP schema bằng HTTP 200 và parse JSON-LD thành cô
 
 Trong ba graph khảo sát, không có ProductGroup; hai PDP variable không có Offer riêng gắn với từng Product biến thể. Quả châu cườm có Offer 95000 VND, dùng làm mẫu đối chứng simple chứ không phải bằng chứng mọi schema đều sai.
 
+**Bổ sung R27:** `CT-PE-SNOW` tiếp tục xuất một Product + AggregateOffer 850000–2650000, offerCount 4; `CT-CUOC-PINE` xuất 750000–1650000, offerCount 3. Không PDP nào có ProductGroup hoặc Offer riêng theo size. Raw variations của hai cây còn có attribute rỗng và gây lỗi chọn biến thể R27-01; vì vậy chưa thể dựng schema đúng chỉ bằng ánh xạ dữ liệu hiện tại. [HTML/JSON-LD và variations](review-evidence/2026-09-24/r27-product-http.json). Ba combo simple mới dùng một Product + một Offer khớp giá công bố; giữ kiểu này, không ép ProductGroup cho sản phẩm đơn.
+
 Tài liệu chính thức đã đối chiếu:
 - [Google Product snippets — AggregateOffer](https://developers.google.com/search/docs/appearance/structured-data/product-snippet#aggregate-offer-properties): **“Don't use AggregateOffer to describe a set of product variants.”**
 - [Google Merchant listings](https://developers.google.com/search/docs/appearance/structured-data/merchant-listing#structured-data-type-definitions): Product snippets có thể nhận Offer hoặc AggregateOffer; merchant listings yêu cầu **Offer**.
@@ -1042,11 +1048,11 @@ Sửa tại nguồn xuất schema sản phẩm hiện có, không chèn một Pr
 Giải quyết dữ liệu Kẹo gậy theo R2-01/R2-02 trước khi đưa nhãn size/kiểu vào schema; không suy đoán ý nghĩa term. Nếu xuất URL chọn trước biến thể, GET URL đó phải mở đúng lựa chọn, không dùng URL add-to-cart. Giữ một canonical nhóm phù hợp và không tạo các trang biến thể rỗng chỉ để có URL. Giữ Offer của PDP simple; không thêm review/GTIN/brand không có căn cứ.
 
 ### Acceptance criteria
-1. Hai PDP variable không còn dùng AggregateOffer đại diện tập biến thể; mỗi biến thể đang bán có Product/Offer phù hợp và quan hệ nhóm rõ, không có graph giá/identity mâu thuẫn.
-2. Tháp nhũ khớp 296/1m2/550000, 297/1m5/755000, 298/1m8/895000 VND. Kẹo gậy khớp nguồn dữ liệu đã được owner nghiệm thu, không lấy giá sai hiện tại làm chuẩn.
+1. Bốn PDP variable đã nêu không còn dùng AggregateOffer đại diện tập biến thể; mỗi biến thể đang bán có Product/Offer phù hợp và quan hệ nhóm rõ, không có graph giá/identity mâu thuẫn.
+2. Tháp nhũ khớp 296/1m2/550000, 297/1m5/755000, 298/1m8/895000 VND. Kẹo gậy và hai cây mới khớp nguồn dữ liệu được owner nghiệm thu; không lấy giá/mapping sai hiện tại làm chuẩn.
 3. URL biến thể được khai báo mở đúng size/giá/ảnh bằng GET; canonical nhóm đúng cho mô hình single-page.
 4. Kiểm tra raw HTML, JSON parse và Rich Results Test cho Product snippets/merchant listings; xử lý lỗi bắt buộc của mô hình mới. Không xóa warning khuyến nghị bằng dữ liệu bịa và không hứa rich result chỉ vì tool pass.
-5. Quả châu cườm vẫn có một Offer đúng 95000 VND; sửa template không phát sinh Product/Offer trùng.
+5. Quả châu cườm và ba combo simple mới vẫn có một Offer đúng giá công bố; sửa template không phát sinh Product/Offer trùng.
 
 ### Status
 OPEN
@@ -1491,9 +1497,10 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-PDP-VARIANT-RESET-QTY | Chưa thử đổi/xóa biến thể và điều khiển số lượng sau render | DONE | [R25](#round-r25): 2 PDP × 2 viewport, 44 snapshot ổn định; tăng/giảm và min=1 đạt. Bốn ca xóa nhanh tái hiện R25-01; DONE là đã kiểm, không phải đã sửa. |
 | Q-MODAL-FOCUS-LIFECYCLE | Chưa đối chiếu đầy đủ focus mở/đóng và AX giữa search/menu trên hai template | DONE | [R26](#round-r26): 4 ca/128 snapshot, 104 bước Tab/Shift+Tab, thêm 2 lượt tái hiện tự nhiên; search đạt, menu có R26-01. |
 | Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
+| Q-NEW-PRODUCT-DATA | R26 mới xác nhận ảnh/URL, chưa thử toàn bộ size, schema và thông số năm SKU | DONE | [R27](#round-r27): 5 PDP HTTP/schema/spec, 2 cây × 2 viewport và Tháp nhũ đối chứng; phát hiện R27-01, mở rộng R2-03/R2-06/R6-01. DONE là đã kiểm, không phải đã sửa. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
-| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | [R26](#round-r26) ghi nhận Combo/Cây thông không còn rỗng nhưng chưa đạt toàn bộ R2-04/R2-11. Các issue khác vẫn chờ thay đổi có thể đối chiếu hoặc source; không đóng từ lời xác nhận. |
+| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
 
 ---
 
@@ -2307,3 +2314,85 @@ OPEN
 - Ảnh SET-HG-70 đầu tiên chụp trước paint hoàn tất; đã chờ và chụp lại ảnh hiển thị. Không mở issue ảnh hỏng từ screenshot tạm thời.
 - Bộ bằng chứng gồm **6 JSON + 14 screenshot**. Đã đóng các tab Chrome riêng; không sửa code/config/database website, không chạy watcher hoặc giao dịch thật.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; xác nhận remote nhận thành công trong lời bàn giao.
+
+---
+
+<a id="round-r27"></a>
+
+# Vòng R27 — Nội dung, SEO và biến thể của năm SKU mới
+
+Ngày kiểm tra: **24/09/2026**, timestamp từng request/lượt browser trong JSON. Đã fetch Git đầu vòng; `main` bằng `origin/main`, `ASSISTANT_REPLY.md` vẫn SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**. Vì website đã đổi mà tài liệu Coder chưa đổi, R27 kiểm trực tiếp năm PDP quan sát ở R26 thay vì chờ lời bàn giao.
+
+Phạm vi: raw HTML/HTTP, metadata, JSON-LD, product sitemap và bảng thông số của năm SKU; chọn toàn bộ size của `CT-PE-SNOW` và `CT-CUOC-PINE` trên desktop **1440×1000** và mobile mô phỏng **375×812**; dùng Tháp nhũ điện làm đối chứng cùng component. Không bấm thêm giỏ/mua hoặc gửi request thay đổi dữ liệu.
+
+## Các phần hoạt động và cần giữ
+
+- Cả năm PDP trả HTTP 200, có một H1, `index, follow`, self-canonical, meta description và `og:url` khớp URL.
+- Ba combo simple có một Product + một Offer; giá Offer khớp giá đang công bố: `COMBO-GD-50` 750.000₫, `SET-HG-70` 1.250.000₫, `COMBO-B2B-CAFE` 3.850.000₫. Không yêu cầu đổi simple product thành ProductGroup.
+- Mô tả chi tiết `COMBO-GD-50` liệt kê **24 + 6 + 10 + 1 + 4 + 5 = 50 món**; giữ việc định lượng cụ thể này. `SET-HG-70` có mô tả nhóm thành phần nhưng chưa định lượng; không mở issue riêng khi chưa có nguồn owner xác định cơ cấu 70 món.
+- Tháp nhũ đối chứng vẫn đổi đúng **296/550.000₫, 297/755.000₫, 298/895.000₫** ở hai viewport. Sau reset ổn định, panel giá ẩn; giá cũ còn trong DOM ẩn không tính là lỗi mới.
+
+Bằng chứng: [HTTP, metadata, JSON-LD, variations và thông số](review-evidence/2026-09-24/r27-product-http.json) · [32 snapshot browser](review-evidence/2026-09-24/r27-variation-browser.json) · [tổng hợp](review-evidence/2026-09-24/r27-summary.json) · [Tháp nhũ đối chứng desktop](review-evidence/2026-09-24/r27-tt4m-089-1440-selected.webp).
+
+## [P1] R27-01 — Mọi kích thước của hai cây thông mới đều chọn biến thể thấp nhất
+
+### Location
+- `/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/` — product 372, SKU `CT-PE-SNOW`.
+- `/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/` — product 377, SKU `CT-CUOC-PINE`.
+- Form `variations_form`, select `attribute_kich-thuoc`, hidden `variation_id` và giá biến thể.
+
+### Problem
+Mọi option size đều khớp biến thể đầu tiên vì cả bốn variation của cây PE và cả ba variation của cây cước công bố `attribute_kich-thuoc=""`. Kết quả:
+- Cây PE: chọn **1m5, 1m8, 2m1 hoặc 2m4** đều ra ID **373**, giá **850.000₫**.
+- Cây cước: chọn **1m5, 1m8 hoặc 2m1** đều ra ID **378**, giá **750.000₫**.
+
+Nút thêm giỏ mất trạng thái chờ chọn và FormData chứa size người dùng chọn nhưng `variation_id` thấp nhất. Không gửi form để kiểm backend có chấp nhận tổ hợp mâu thuẫn hay không.
+
+### Why it matters
+Người dùng không thấy giá/identity tương ứng size đã chọn ngay trước CTA mua. Nếu tổ hợp được backend nhận, có rủi ro chọn sai hàng/giá; nếu bị từ chối, luồng mua thất bại. Xếp **P1** vì lỗi có trên toàn bộ lựa chọn lớn hơn ở hai sản phẩm mới và trực tiếp nằm trong conversion flow; không nâng P0 khi chưa có giao dịch sai được xác nhận.
+
+### Evidence
+1. Raw `data-product_variations`:
+   - Cây PE có ID/giá **373/850000, 374/1250000, 375/1850000, 376/2650000**, nhưng attribute của cả bốn là chuỗi rỗng.
+   - Cây cước có **378/750000, 379/1100000, 380/1650000**, cũng đều attribute rỗng.
+2. Browser chọn tuần tự mọi option, chờ 700ms và chụp sau render: hai viewport cho cùng ID/giá đầu tiên. [Trace và FormData](review-evidence/2026-09-24/r27-variation-browser.json).
+3. Ảnh: [PE chọn 2m4 vẫn 850.000₫](review-evidence/2026-09-24/r27-ct-pe-snow-375-selected.webp) · [cây cước chọn 2m1 vẫn 750.000₫](review-evidence/2026-09-24/r27-ct-cuoc-pine-1440-selected.webp).
+4. Tháp nhũ dùng taxonomy attribute có value khác nhau và đổi đúng ID/giá trong cùng probe, nên không quy lỗi cho thao tác `select` hoặc cho toàn bộ controller WooCommerce.
+
+### Recommended solution
+1. Xác nhận với owner mapping size ↔ variation ↔ giá/SKU/tồn kho cho từng cây. Không mặc định thứ tự ID là dữ liệu kinh doanh đúng chỉ vì nó đang tăng dần.
+2. Gán giá trị `attribute_kich-thuoc` chính xác cho từng child variation và bảo đảm parent product dùng cùng attribute/options. Không để wildcard rỗng khi các child có giá khác nhau.
+3. Sau khi dữ liệu UI đúng, cập nhật schema theo R6-01 từ cùng nguồn dữ liệu đã được duyệt; không hard-code một mapping riêng trong JavaScript/schema.
+
+### Acceptance criteria
+1. Mỗi option size trên hai PDP chọn đúng một variation ID/giá đã được owner duyệt; không option nào ngoài size nhỏ nhất trả ID đầu tiên.
+2. DOM giá, hidden `variation_id`, FormData attribute và trạng thái CTA cùng biểu diễn một biến thể. Reset đưa ID/attribute về rỗng và khóa trạng thái cần chọn.
+3. Desktop/mobile, chọn qua lại mọi size và reset không tái diễn giá/ID cũ; R25-01 cũng không xuất hiện.
+4. Trên staging, submit từng size vào cart và xác nhận line item/giá/size đúng; không tạo đơn production. Tháp nhũ và sản phẩm đơn không regression.
+5. JSON-LD/Offer của từng size chỉ được nghiệm thu sau khi mapping nguồn đúng; không lấy wildcard hiện tại làm chuẩn.
+
+### Status
+OPEN
+
+## Cập nhật issue hiện có
+
+### R2-03 — thông số mẫu
+
+Cả năm SKU mới dùng fallback “Khung hợp kim chống gỉ…” và xuất xứ chung. Ba combo simple còn bảo người dùng xem “tùy chọn phân loại bên trên” dù không có select; cây PE lặp hai hàng Kích thước. [Ảnh bảng combo](review-evidence/2026-09-24/r27-combo-gd-50-additional_information.webp) · [ảnh bảng cây PE](review-evidence/2026-09-24/r27-ct-pe-snow-additional_information.webp). Giữ **OPEN — P1**; yêu cầu dữ liệu từng SKU, không chỉ sửa câu chữ.
+
+### R2-06 — sitemap
+
+Năm PDP indexable mới vắng trong product sitemap động khi đọc lại không cache; sitemap index không có product sitemap phân mảnh khác. Giữ **OPEN — P1** và bổ sung tiêu chí mọi PDP canonical/indexable đang xuất bản phải được khám phá từ sitemap. [Bằng chứng sitemap](review-evidence/2026-09-24/r27-product-sitemap.json).
+
+### R6-01 — schema biến thể
+
+Hai cây mới tiếp tục Product + AggregateOffer, không ProductGroup/Offer theo size. Dữ liệu child attribute hiện còn sai nên phải sửa R27-01 trước hoặc đồng thời; không tạo schema đẹp trên mapping sai. Ba combo simple có Offer đơn phù hợp kiểu sản phẩm và cần giữ. R6-01 giữ **OPEN — P2**.
+
+## Giới hạn và bàn giao R27
+
+- Thêm **1 P1**, tổng **40 OPEN — 8 P1, 26 P2, 6 P3**. Không đóng issue cũ.
+- Không xác nhận tồn kho, nguồn gốc, chất liệu, thành phần hoặc giá kinh doanh là thật; chỉ đối chiếu tính nhất quán dữ liệu công bố. Không dùng ba Offer simple parse được để hứa rich result; chưa chạy Rich Results Test, GSC hoặc Merchant Center.
+- Không mở issue riêng cho `SET-HG-70` chưa định lượng từng nhóm vì thiếu nguồn owner về cơ cấu đúng. Ảnh/nội dung sản phẩm vẫn theo R2-11.
+- Không thêm giỏ, mua hàng hoặc gửi lead. Rủi ro backend của R27-01 là điều cần staging xác minh, không phải kết quả đã quan sát trên production.
+- Bộ bằng chứng gồm **5 JSON + 9 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.

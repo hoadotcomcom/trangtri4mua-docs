@@ -1,0 +1,91 @@
+{
+  "utc": "2026-09-24T14:59:25.708Z",
+  "browserCases": 6,
+  "browserSnapshots": 32,
+  "findings": {
+    "newIssue": {
+      "id": "R27-01",
+      "priority": "P1",
+      "affected": [
+        {
+          "sku": "CT-PE-SNOW",
+          "productId": 372,
+          "expected": [
+            [
+              373,
+              "1m5",
+              850000
+            ],
+            [
+              374,
+              "1m8",
+              1250000
+            ],
+            [
+              375,
+              "2m1",
+              1850000
+            ],
+            [
+              376,
+              "2m4",
+              2650000
+            ]
+          ],
+          "observedAll": {
+            "variationId": "373",
+            "price": 850000
+          }
+        },
+        {
+          "sku": "CT-CUOC-PINE",
+          "productId": 377,
+          "expected": [
+            [
+              378,
+              "1m5",
+              750000
+            ],
+            [
+              379,
+              "1m8",
+              1100000
+            ],
+            [
+              380,
+              "2m1",
+              1650000
+            ]
+          ],
+          "observedAll": {
+            "variationId": "378",
+            "price": 750000
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "R2-03": "5/5 SKU mới dùng fallback khung hợp kim/xuất xứ; combo simple còn hướng dẫn xem selector không tồn tại.",
+      "R2-06": "5/5 PDP indexable mới vắng trong product-sitemap.xml khi đọc lặp lại no-cache/DYNAMIC.",
+      "R6-01": "Hai cây mới dùng Product+AggregateOffer; không ProductGroup/Offer biến thể; raw variation attributes rỗng."
+    }
+  },
+  "positive": [
+    "5/5 PDP HTTP 200, index/follow, self-canonical, một H1, meta description và og:url khớp URL.",
+    "Ba combo simple có một Product+Offer với giá công bố khớp UI.",
+    "Tháp nhũ đối chứng vẫn đổi đúng ba ID/giá trên hai viewport.",
+    "COMBO-GD-50 liệt kê 24+6+10+1+4+5=50 món."
+  ],
+  "limitations": [
+    "Không bấm thêm giỏ/mua, không kiểm backend nhận sai biến thể.",
+    "Không xác nhận tồn kho, nguồn gốc, vật liệu hay thành phần là thật; chỉ kiểm tính nhất quán công bố.",
+    "Không dùng Product schema pass cơ bản để tuyên bố đủ điều kiện rich result; chưa chạy Rich Results Test/GSC.",
+    "Không tạo issue riêng cho mô tả SET-HG-70 chưa định lượng vì chưa có nguồn owner để xác định thành phần đúng."
+  ],
+  "totals": {
+    "open": 40,
+    "p1": 8,
+    "p2": 26,
+    "p3": 6
+  }
+}
