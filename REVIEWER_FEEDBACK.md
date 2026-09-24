@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R54 — nghiệm thu độc lập Batch 26](#round-r54), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Combobox Batch 26 không có suggestion/option trên production.
+> **Trạng thái hiện hành:** xem [Vòng R55 — nghiệm thu độc lập Batch 27](#round-r55), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Batch 27 tải được ảnh đích nhưng container transform vẫn bị override.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4209,4 +4209,27 @@ Vì prerequisite “7 gợi ý xuất hiện” của Batch 26 không có trên 
 
 - [JSON Batch 26](review-evidence/2026-09-24/r54-batch-26-verification.json).
 - Không điều hướng tới sản phẩm do không có option; không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r55"></a>
+
+# Vòng R55 — Nghiệm thu độc lập Batch 27
+
+## R21-01 / R21-02 — FAIL / OPEN
+
+Nutcracker 375×812:
+
+- click thumbnail 3 đã đổi ảnh đích sang `loading=eager`; ảnh 3 tải xong, `naturalWidth=328`;
+- inline style container đúng chuỗi `translate3d(-200%, 0px, 0px)`;
+- nhưng computed transform vẫn là identity `matrix(1, 0, 0, 1, 0, 0)`;
+- hit-test giữa gallery vẫn trả ảnh 1 trong khi active/ARIA state là ảnh 3.
+
+Như vậy Batch 27 sửa được lazy-load ảnh đích nhưng transform inline tiếp tục bị CSS production override, nên ảnh nhìn thấy chưa đổi. Space về ảnh 1 hoạt động state-wise nhưng không chứng minh chuyển ảnh vì visual chưa từng rời ảnh 1. R21-01/R21-02 giữ **FAIL / OPEN**; R21-02 vẫn thiếu screen-reader proof.
+
+## Bằng chứng và tổng R55
+
+- [JSON Batch 27](review-evidence/2026-09-24/r55-batch-27-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.

@@ -1,0 +1,184 @@
+{
+  "round": "R55",
+  "date": "2026-09-24",
+  "handoff": "Batch 27",
+  "verdicts": {
+    "R21-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "initial": {
+        "width": 375,
+        "transform": "none",
+        "inline": "",
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "active": 0,
+        "imgs": [
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+            "loading": "eager",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-600x708.webp",
+            "loading": "lazy",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "",
+            "loading": "lazy",
+            "complete": false,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          }
+        ]
+      },
+      "click3": {
+        "width": 375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "inline": "translate3d(-200%, 0px, 0px)",
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "active": 2,
+        "imgs": [
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+            "loading": "eager",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-600x708.webp",
+            "loading": "lazy",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-3-454x1024.webp",
+            "loading": "eager",
+            "complete": true,
+            "natural": [
+              328,
+              739
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          }
+        ]
+      },
+      "reason": "Target image now eager-loads, but inline translate3d(-200%) computes to identity matrix and center hit remains image 1."
+    },
+    "R21-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "space": {
+        "width": 375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "inline": "translate3d(0%, 0px, 0px)",
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "active": 0,
+        "imgs": [
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+            "loading": "eager",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-600x708.webp",
+            "loading": "lazy",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          },
+          {
+            "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-3-454x1024.webp",
+            "loading": "eager",
+            "complete": true,
+            "natural": [
+              328,
+              739
+            ],
+            "fit": "contain",
+            "box": [
+              328,
+              437.328125
+            ]
+          }
+        ]
+      },
+      "reason": "State/keyboard path exists, but image-selection contract still fails and screen-reader proof remains absent."
+    }
+  },
+  "current_total": {
+    "open": 20,
+    "p1": 6,
+    "p2": 9,
+    "p3": 5,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
