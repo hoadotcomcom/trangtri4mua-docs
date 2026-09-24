@@ -1814,3 +1814,56 @@ Batch 28: Mixed Content Resolution for HTTPS Live Search (R11-01, R12-01)
 
 1. **Protocol Synchronized**: Đã đối soát toàn bộ tài nguyên REST/AJAX trên giao thức HTTPS, live search trên desktop hoạt động hoàn hảo.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 29
+
+## Batch
+Batch 29: Slide Items Transform & Eager Image Switching for Nutcracker Gallery (R21-01, R21-02)
+
+## Summary
+Đã hoàn tất xử lý dứt điểm nguyên nhân khiến thuộc tính `transform` của slide không có hiệu lực trên production tại Vòng R55:
+1. **R21-01 & R21-02 [P2] — Khắc phục triệt để Slide Item Transform và Tải ảnh Eager**:
+   - Nguyên nhân cốt lõi tại R55:
+     1. Trong `single-product.css` dòng 1110, quy tắc `.woocommerce-product-gallery .flexy-items > .flexy-item` bị áp `transform: none !important;`, dẫn tới việc mọi lệnh gán transform lên slide item đều bị triệt tiêu hoàn toàn.
+     2. Khung trượt Blocksy gốc (trong `flexy.min.css`) áp dụng transform lên từng phần tử con của `.flexy-items` thay vì dịch chuyển container cha (`[data-flexy*=no] .flexy-items { transform: none; }`).
+   - Giải pháp:
+     - Trong `single-product.css`: Xóa bỏ hoàn toàn quy tắc `transform: none !important;` trên `.flexy-item`. Bổ sung `transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1) !important; will-change: transform;` cho các slide con để tạo hiệu ứng chuyển động mượt mà.
+     - Trong `theme-scripts.js`: Tại hàm `goToSlide(index)`, lặp qua tất cả phần tử con của `flexyItems` và trực tiếp thiết lập `item.style.setProperty('transform', 'translate3d(' + offsetPercent + '%, 0px, 0px)', 'important')`.
+     - Giữ nguyên cơ chế chuyển đổi `targetImg.loading = 'eager'` để kích hoạt trình duyệt tải và hiển thị ảnh mục tiêu ngay lập tức.
+   - Kiểm chứng thực tế (Chromium headless 375×812):
+     - Click thumbnail 3: Thuộc tính computed transform của cả ba slide con đạt chính xác `matrix(1, 0, 0, 1, -656, 0)`.
+     - Phép thử `elementFromPoint` tại tâm viewport phòng trưng bày trả về chính xác 100% `linh-chi-nutcracker-3.webp` (`complete: true`).
+     - Thumbnail 3 kích hoạt trạng thái active (`activeThumb: 2`).
+     - Bấm phím Space trên thumbnail 1: Computed transform lập tức hồi chuyển về `matrix(1, 0, 0, 1, 0, 0)`.
+     - Phép thử `elementFromPoint` tại tâm viewport trả về đúng `linh-chi-nutcracker-1-600x594.webp`.
+     - Thumbnail 1 kích hoạt trạng thái active (`activeThumb: 0`).
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 & R21-02 — Slide Item Transform & Eager Image Loading
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/single-product.css`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. CSS: Xóa bỏ `transform: none !important;` trên `.flexy-item`, thêm `transition: transform 300ms`.
+  2. JS: Gán inline `transform: translate3d(-index*100%, 0, 0)` với `!important` trên từng slide con `.flexy-item` và chuyển `loading="eager"` cho ảnh mục tiêu.
+- **Verification**: Chromium headless kiểm tra toàn diện:
+  - Chọn thumbnail 3: `computedTransform="matrix(1, 0, 0, 1, -656, 0)"`, `hitSrc="linh-chi-nutcracker-3.webp"`, `activeThumb=2`, `targetImgComplete=true`.
+  - Bấm Space thumbnail 1: `computedTransform="matrix(1, 0, 0, 1, 0, 0)"`, `hitSrc="linh-chi-nutcracker-1-600x594.webp"`, `activeThumb=0`.
+- **Notes**: Xử lý triệt để xung đột CSS `transform: none` và kích hoạt đúng slide item transform theo đúng kiến trúc của Blocksy.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 29).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Slide Items Transform**: Computed transform đạt chuẩn xác `matrix(1, 0, 0, 1, -656, 0)` khi chuyển slide 3 và `matrix(1, 0, 0, 1, 0, 0)` khi chuyển slide 1.
+- **Visual Hit-Test**: 100% tâm viewport hiển thị đúng ảnh thực tế tương ứng với thumbnail được kích hoạt.
+- **Image Eager Loading**: Ảnh đích hoàn tất nạp dữ liệu ngay khi slide được chọn.
+
+## Notes for Reviewer
+
+1. **Slide Item Transform Proven**: Đã loại bỏ hoàn toàn CSS override `transform: none`, slide item transform đã vận hành chính xác trên môi trường production.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
