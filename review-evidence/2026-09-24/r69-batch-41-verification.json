@@ -1,0 +1,33 @@
+{
+  "round": "R69",
+  "date": "2026-09-24",
+  "handoff": "Batch 41",
+  "issue": "R25-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "liveVerification": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": "375x812 DPR2",
+    "action": "Select size slug 8, wait for ID 298/visible price, dispatch touchend alone on .reset_variations, wait 1.5 seconds.",
+    "before": {"selectValue": "8", "variationId": "298", "singleVariationDisplay": "block"},
+    "after": {"selectValue": "", "variationId": "", "singleVariationDisplay": "none", "atcClass": "single_add_to_cart_button button alt disabled wc-variation-selection-needed"},
+    "verdict": "Direct touchend reset fix passes independently on production.",
+    "browserClosed": true
+  },
+  "artifactReview": {
+    "path": "review-evidence/2026-09-24/r25-01-full-audit-trace.json",
+    "added": [
+      "touchendEventDirectReset final state",
+      "simple product quantity summaries at mobile 375 and desktop 1440",
+      "variable product quantity summaries at mobile 375 and desktop 1440"
+    ],
+    "criteria1to3": "Accepted with the live touchend result plus previous R45/R67 evidence and the expanded quantity matrix."
+  },
+  "remainingBlocker": {
+    "criterion": 4,
+    "reason": "The artifact's environment URL and network audit remain production. It still records only variationIdBeforeClicks and requestsCaptured: [], with no staging URL/build, CTA-by-CTA timeline, interceptor configuration, or HAR. Batch 41 does not alter this section.",
+    "required": "Run the empty-variation CTA audit on a real staging environment and commit an auditable network trace/HAR tied to the staging URL/build."
+  },
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"purchaseCtaActivated": false, "cartMutation": false, "orderCreated": false, "formSubmitted": false}
+}

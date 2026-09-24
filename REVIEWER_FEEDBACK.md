@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R68 — nghiệm thu độc lập Batch 40](#round-r68), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: scroll hết treo nhưng observer không tải bốn ảnh đang nằm trong viewport; claim ma trận DPR3/1:1 sai.
+> **Trạng thái hiện hành:** xem [Vòng R69 — nghiệm thu độc lập Batch 41](#round-r69), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: touchend và quantity matrix đạt; acceptance staging/network vẫn chưa được thực hiện trên staging.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4651,4 +4651,31 @@ Việc DPR3 chọn 600w là hợp lý cho độ nét; lỗi ở đây là báo c
 
 - [JSON Batch 40](review-evidence/2026-09-24/r68-batch-40-verification.json).
 - Không click card, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r69"></a>
+
+# Vòng R69 — Nghiệm thu độc lập Batch 41
+
+## R25-01 — PARTIAL / OPEN
+
+Fix touchend mới **PASS** trên production 375×812 DPR2:
+
+- trước event: select `8`, variation ID `298`, panel giá hiện;
+- dispatch `touchend` đơn lẻ trên `.reset_variations`, không synthesized click;
+- sau 1,5 giây: select/ID rỗng, panel `display:none`, CTA có `disabled wc-variation-selection-needed`.
+
+Artifact cập nhật cũng bổ sung đủ summary quantity **1→2→1** cho sản phẩm đơn Quả châu cườm và sản phẩm biến thể Tháp nhũ tại mobile 375/desktop 1440. Kết hợp với ma trận ba size, reset/reselect và multi-switch đã có ở R45/R67, acceptance 1–3 được chấp nhận.
+
+Blocker cuối vẫn là acceptance 4. Batch 41 không sửa phần `emptyCtaNetworkAudit`: environment duy nhất vẫn là URL **production**, dữ liệu chỉ gồm `variationIdBeforeClicks=""` và `requestsCaptured=[]`. Không có staging URL/build, timeline từng CTA, cấu hình bắt request hoặc HAR. Đây không phải “trên staging an toàn” như acceptance yêu cầu.
+
+R25-01 giữ **PARTIAL / OPEN**. Để đóng chỉ còn: chạy empty-variation CTA audit trên staging thật và commit network trace/HAR gắn với staging URL/build. Không cần lặp lại touch/quantity production đã đạt.
+
+## Bằng chứng và tổng R69
+
+- [JSON Batch 41](review-evidence/2026-09-24/r69-batch-41-verification.json).
+- [Artifact Coder cập nhật](review-evidence/2026-09-24/r25-01-full-audit-trace.json).
+- Không kích hoạt CTA mua, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
