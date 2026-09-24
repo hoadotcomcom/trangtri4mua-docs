@@ -1,0 +1,404 @@
+{
+  "round": "R48",
+  "date": "2026-09-24",
+  "handoff": "Batch 20",
+  "verdicts": {
+    "R21-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "before": {
+        "thumbs": [
+          {
+            "i": 0,
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "true",
+            "active": true
+          },
+          {
+            "i": 1,
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "active": false
+          },
+          {
+            "i": 2,
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "false",
+            "active": false
+          }
+        ],
+        "transform": "none",
+        "current": "",
+        "images": [
+          {
+            "i": 0,
+            "src": "linh-chi-nutcracker-1-600x594.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ]
+          },
+          {
+            "i": 1,
+            "src": "linh-chi-nutcracker-2-600x708.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ]
+          },
+          {
+            "i": 2,
+            "src": "linh-chi-nutcracker-3-454x1024.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              739
+            ]
+          }
+        ]
+      },
+      "afterClick": {
+        "thumbs": [
+          {
+            "i": 0,
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "false",
+            "active": false
+          },
+          {
+            "i": 1,
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "active": false
+          },
+          {
+            "i": 2,
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "true",
+            "active": true
+          }
+        ],
+        "transform": "none",
+        "current": "2",
+        "images": [
+          {
+            "i": 0,
+            "src": "linh-chi-nutcracker-1-600x594.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ]
+          },
+          {
+            "i": 1,
+            "src": "linh-chi-nutcracker-2-600x708.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ]
+          },
+          {
+            "i": 2,
+            "src": "linh-chi-nutcracker-3-454x1024.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              739
+            ]
+          }
+        ]
+      },
+      "visual": {
+        "hit": "IMG.",
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "slides": [
+          {
+            "i": 0,
+            "class": "flexy-item",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "z": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "style": "transform: translate3d(calc(-200%), 0px, 0px); transition: transform 300ms;"
+          },
+          {
+            "i": 1,
+            "class": "flexy-item",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "z": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "style": "transform: translate3d(calc(-200%), 0px, 0px); transition: transform 300ms;"
+          },
+          {
+            "i": 2,
+            "class": "flexy-item",
+            "opacity": "1",
+            "visibility": "visible",
+            "display": "block",
+            "z": "auto",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "style": "transform: translate3d(calc(-200%), 0px, 0px); transition: transform 300ms;"
+          }
+        ]
+      },
+      "reason": "Thumbnail 3 becomes active but every inline translate3d(calc(-200%)) computes to identity; hit-test at gallery center still returns image 1."
+    },
+    "R21-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "afterSpace": {
+        "thumbs": [
+          {
+            "i": 0,
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "true",
+            "active": true
+          },
+          {
+            "i": 1,
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "active": false
+          },
+          {
+            "i": 2,
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "false",
+            "active": false
+          }
+        ],
+        "transform": "none",
+        "current": "0",
+        "images": [
+          {
+            "i": 0,
+            "src": "linh-chi-nutcracker-1-600x594.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              375,
+              371
+            ]
+          },
+          {
+            "i": 1,
+            "src": "linh-chi-nutcracker-2-600x708.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              387
+            ]
+          },
+          {
+            "i": 2,
+            "src": "linh-chi-nutcracker-3-454x1024.webp",
+            "box": {
+              "w": 328,
+              "h": 437.328125
+            },
+            "fit": "contain",
+            "complete": true,
+            "natural": [
+              328,
+              739
+            ]
+          }
+        ]
+      },
+      "reason": "ARIA state changes but visible image remains image 1; no screen-reader evidence supplied or independently available."
+    },
+    "R24-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "mobileLoad": {
+        "width": 375,
+        "orientation": "vertical",
+        "direction": "column",
+        "tabs": [
+          {
+            "text": "MÔ TẢ CHI TIẾT",
+            "selected": "true",
+            "focused": false,
+            "panel": "tab-description"
+          },
+          {
+            "text": "THÔNG SỐ KỸ THUẬT",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-additional_information"
+          },
+          {
+            "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-reviews"
+          }
+        ],
+        "shown": [
+          "tab-description"
+        ]
+      },
+      "desktopResize": {
+        "width": 1200,
+        "orientation": "vertical",
+        "direction": "row",
+        "tabs": [
+          {
+            "text": "MÔ TẢ CHI TIẾT",
+            "selected": "true",
+            "focused": false,
+            "panel": "tab-description"
+          },
+          {
+            "text": "THÔNG SỐ KỸ THUẬT",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-additional_information"
+          },
+          {
+            "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-reviews"
+          }
+        ],
+        "shown": [
+          "tab-description"
+        ]
+      },
+      "mobileReturn": {
+        "width": 375,
+        "orientation": "vertical",
+        "direction": "column",
+        "tabs": [
+          {
+            "text": "MÔ TẢ CHI TIẾT",
+            "selected": "true",
+            "focused": false,
+            "panel": "tab-description"
+          },
+          {
+            "text": "THÔNG SỐ KỸ THUẬT",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-additional_information"
+          },
+          {
+            "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+            "selected": "false",
+            "focused": false,
+            "panel": "tab-reviews"
+          }
+        ],
+        "shown": [
+          "tab-description"
+        ]
+      },
+      "reason": "Mobile->desktop leaves aria-orientation=vertical while CSS flex-direction=row."
+    },
+    "R11-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "empty": {
+        "items": 0,
+        "links": [],
+        "notice": {
+          "tag": "DIV",
+          "class": "tt4m-search-empty-notice",
+          "text": "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.",
+          "display": "block"
+        },
+        "status": "Không có kết quả",
+        "expanded": "false",
+        "query": "zzreviewnomatch20260924"
+      },
+      "resultEvaluate": {
+        "items": 0,
+        "links": [],
+        "notice": {
+          "tag": "DIV",
+          "class": "tt4m-search-empty-notice",
+          "text": "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.",
+          "display": "block"
+        },
+        "status": "Không có kết quả",
+        "expanded": "false",
+        "query": "tháp nhũ điện"
+      },
+      "resultTyped": {
+        "items": 0,
+        "links": [],
+        "notice": {
+          "tag": "DIV",
+          "class": "tt4m-search-empty-notice",
+          "text": "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.",
+          "display": "block"
+        },
+        "status": "Không có kết quả",
+        "expanded": "false",
+        "query": "tháp"
+      },
+      "reason": "Real keyboard input tháp returns zero suggestions, status remains Không có kết quả, notice remains block."
+    }
+  },
+  "current_total": {
+    "open": 21,
+    "p1": 6,
+    "p2": 10,
+    "p3": 5,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}

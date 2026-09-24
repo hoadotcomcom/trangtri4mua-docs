@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R47 — nghiệm thu độc lập Batch 19](#round-r47), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. R6-01 đã có ProductGroup/variants nhưng quan hệ identity còn trỏ sai `@id`.
+> **Trạng thái hiện hành:** xem [Vòng R48 — nghiệm thu độc lập Batch 20](#round-r48), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. Cả bốn claim Batch 20 vẫn tái hiện lỗi trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -3961,5 +3961,51 @@ Claim Batch 19 nói group dùng `#productgroup`, nhưng production không đúng
 ## Bằng chứng và tổng R47
 
 - [JSON Batch 19](review-evidence/2026-09-24/r47-batch-19-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **21 OPEN — 6 P1, 10 P2, 5 P3**.
+
+---
+
+<a id="round-r48"></a>
+
+# Vòng R48 — Nghiệm thu độc lập Batch 20
+
+## Ma trận verdict
+
+| Issue | Verdict | Trạng thái | Bằng chứng quyết định |
+|---|---|---|---|
+| R21-01 | FAIL | OPEN | Thumbnail 3 đổi state nhưng ảnh nhìn thấy vẫn là ảnh 1 |
+| R21-02 | FAIL | OPEN | Space đổi state ARIA nhưng không đổi ảnh thực; chưa có screen-reader proof |
+| R24-01 | FAIL | OPEN | Mobile→desktop giữ `aria-orientation=vertical` trong layout `row` |
+| R11-01 | FAIL | OPEN | Gõ thật `tháp` vẫn 0 suggestion, notice rỗng tiếp tục hiện |
+
+## Gallery — CSS transform không có hiệu lực
+
+Ở Nutcracker 375×812, layout/`contain` vẫn ổn: ba ảnh có khung **328×437,33**, thumbnail 3 nhận `active` và `aria-pressed=true`.
+
+Tuy nhiên implementation đặt lên từng `.flexy-item`:
+
+`transform: translate3d(calc(-200%), 0px, 0px)`
+
+Computed transform của cả ba slide đều là identity `matrix(1, 0, 0, 1, 0, 0)`; ba box cùng tọa độ x=23,5. Hit-test giữa gallery sau click thumbnail 3 vẫn trả ảnh **`linh-chi-nutcracker-1-600x594.webp`**, không phải ảnh 3. Space quay state về thumbnail 1 nhưng không sửa cơ chế visual. R21-01 và R21-02 giữ **FAIL / OPEN**.
+
+## Tabs — resize hai chiều vẫn fail
+
+Tháp nhũ tải ở 375px: `vertical` + CSS `column`. Resize lên 1200px: CSS đổi `row` nhưng ARIA vẫn `vertical`. Resize về 375px vẫn `vertical`. Đây chính là chiều mobile→desktop đã fail ở R45; R24-01 giữ **FAIL / OPEN**.
+
+## Search — query có sản phẩm vẫn ở empty state
+
+Sau query rỗng `zzreviewnomatch20260924`, gõ thật bằng keyboard `tháp`:
+
+- 0 `.ct-search-item`;
+- `aria-expanded=false`;
+- status `Không có kết quả`;
+- `.tt4m-search-empty-notice` vẫn `display:block`.
+
+Không có result transition để nghiệm thu; R11-01 giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R48
+
+- [JSON Batch 20](review-evidence/2026-09-24/r48-batch-20-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **21 OPEN — 6 P1, 10 P2, 5 P3**.
