@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R44 — nghiệm thu độc lập Batch 16](#round-r44), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **23 OPEN — 6 P1, 11 P2, 6 P3**. R44 đóng R2-17; R6-01 giữ OPEN vì schema chưa có ProductGroup/quan hệ Product biến thể.
+> **Trạng thái hiện hành:** xem [Vòng R45 — nghiệm thu độc lập Batch 17](#round-r45), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **22 OPEN — 6 P1, 10 P2, 6 P3**. R45 đóng R17-01; R21-01/R21-02/R24-01/R11-01 còn fail hoặc partial trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **23 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **22 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3810,3 +3810,100 @@ Vai trò taxonomy nay rõ: archive chuyên đề indexable có nội dung riêng
 - [JSON Batch 16](review-evidence/2026-09-24/r44-batch-16-verification.json).
 - Chỉ GET/raw parse, không dùng browser hoặc phát sinh side effect.
 - Đóng **1 P2**, không thêm issue. Tổng mới: **23 OPEN — 6 P1, 11 P2, 6 P3**.
+
+---
+
+<a id="round-r45"></a>
+
+# Vòng R45 — Nghiệm thu độc lập Batch 17
+
+Đã kiểm 5 issue R42 trên production. Kết quả: **R17-01 CLOSED**; gallery đã hết phồng thumbnail nhưng vẫn không đổi ảnh; tabs vẫn giữ orientation cũ ở chiều resize mobile→desktop; search notice không chứng minh được transition sang trạng thái có gợi ý.
+
+## Ma trận verdict R45
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R17-01 | PASS | **CLOSED** | Allowlist giữ sort/UTM, bỏ action/token/redirect; alias/direct sort khớp |
+| R21-01 | PARTIAL | OPEN | Layout 80px/contain ổn hơn; thumbnail click không đổi ảnh chính |
+| R21-02 | FAIL | OPEN | Space chỉ đổi `aria-pressed`, không đổi active slide/ảnh |
+| R24-01 | FAIL | OPEN | Mobile→desktop giữ `vertical` dù CSS đã row |
+| R11-01 | PARTIAL | OPEN | Notice rỗng hiện/clear đúng; query có sản phẩm không trả gợi ý và notice không ẩn |
+
+## R17-01 — CLOSED
+
+HTTP 301:
+
+- `orderby=price-desc` được giữ.
+- `utm_source`/`utm_medium` được giữ.
+- `redirect_to=https://evil.example/x&add-to-cart=298&nonce=abc` bị loại toàn bộ, Location sạch `/cua-hang/`.
+- Không follow query hành động, không phát sinh side effect.
+
+Đối chứng qua alias và URL đích trực tiếp:
+
+- cùng URL cuối `/cua-hang/?orderby=price-desc`;
+- select cùng chọn `price-desc`;
+- 8 product ID đầu cùng thứ tự: `383, 372, 285, 177, 280, 261, 223, 242`.
+
+Path/host/canonical giữ hành vi trước; allowlist đã thay đường sao chép mù. R17-01 **CLOSED**.
+
+## R21-01 — layout phục hồi, slide vẫn không hoạt động
+
+Mobile 375px hiện có:
+
+- gallery 328 × 557,72px;
+- main item rộng 328px, khung ảnh đầu 437,33px;
+- ba thumbnail 80 × 80px cùng hàng;
+- ba main image `object-fit: contain`;
+- không còn gallery cao 1.082px hoặc pill 299px như R42.
+
+Nhưng click trực tiếp thumbnail 3:
+
+- active pill vẫn **1**;
+- `.flexy-items` vẫn `transform: none`;
+- ảnh 1 vẫn là ảnh chính nhìn thấy;
+- thumbnail 3 chỉ đổi state ARIA do custom handler.
+
+Acceptance R21-01 yêu cầu thumbnail/Previous/Next tiếp tục tới đúng ảnh. Bản sửa CSS đạt phần fit/layout nhưng interaction regression chưa hết; R21-01 giữ **PARTIAL / OPEN**.
+
+## R21-02 — `aria-pressed` báo sai trạng thái thực
+
+Trước thao tác, thumbnail 1 `aria-pressed=true`, thumbnail 2/3 false. Space trên `Xem ảnh mẫu 3`:
+
+- focus giữ ở control 3;
+- thumbnail 3 đổi `aria-pressed=true`;
+- active pill DOM vẫn 1;
+- main image/transform không đổi.
+
+Như vậy ARIA công bố ảnh 3 đã chọn trong khi visual/slider vẫn ở ảnh 1. Đây không phải activation thành công. Screen-reader proof cũng chưa có. R21-02 giữ **FAIL / OPEN**.
+
+## R24-01 — resize mới chỉ đúng một hướng/load state
+
+Trên PDP được tải ban đầu ở 375px:
+
+1. resize lên 1200px, chờ 500ms;
+2. CSS tablist chuyển `flex-direction: row`;
+3. `aria-orientation` vẫn **`vertical`**;
+4. resize về 375px tiếp tục vertical.
+
+Batch chứng minh desktop→mobile; acceptance yêu cầu vượt breakpoint không để hướng ARIA cũ, không phân biệt chiều. Mobile→desktop vẫn fail; R24-01 giữ **FAIL / OPEN**.
+
+## R11-01 — empty state hiện, result transition chưa đạt
+
+Phần đạt:
+
+- query `zzreviewnomatch20260924`: notice `display:block`, text đúng, input giữ focus, 0 link;
+- xóa input: notice về `display:none`, focus vẫn ở input.
+
+Phần chưa đạt:
+
+- nhập thật `tháp nhũ điện` — truy vấn đã có sản phẩm/gợi ý trong baseline R11/R35 — vẫn để status `Không có kết quả`;
+- 0 link gợi ý;
+- notice tiếp tục `display:block`.
+
+Vì acceptance 2 yêu cầu chuyển sang query có kết quả thì notice ẩn và gợi ý dùng được, chưa thể đóng từ empty branch. Phần matching/search vẫn thuộc R2-14; không mở issue trùng. R11-01 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R45
+
+- [JSON Batch 17](review-evidence/2026-09-24/r45-batch-17-verification.json).
+- Không follow query hành động, không thêm giỏ/đặt đơn/form; 3 browser tab đã đóng.
+- Đóng **1 P2**, không thêm issue. Tổng mới: **22 OPEN — 6 P1, 10 P2, 6 P3**.

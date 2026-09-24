@@ -1,0 +1,320 @@
+{
+  "round": "R45",
+  "date": "2026-09-24",
+  "handoff": "Batch 17",
+  "verdicts": {
+    "R17-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "headers": [
+        {
+          "path": "/shop/?orderby=price-desc",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?orderby=price-desc"
+        },
+        {
+          "path": "/shop/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/shop/?redirect_to=https%3A%2F%2Fevil.example%2Fx&add-to-cart=298&nonce=abc",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "path": "/shop/?orderby=drop-table&paged=-2&s=c%C3%A2y+th%C3%B4ng&utm_campaign=noel%202026",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?paged=-2&s=c%C3%A2y+th%C3%B4ng&utm_campaign=noel+2026"
+        }
+      ],
+      "sort": {
+        "alias": {
+          "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc",
+          "selected": 1,
+          "ids": [
+            "383",
+            "372",
+            "285",
+            "177",
+            "280",
+            "261",
+            "223",
+            "242"
+          ]
+        },
+        "direct": {
+          "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc",
+          "selected": 1,
+          "ids": [
+            "383",
+            "372",
+            "285",
+            "177",
+            "280",
+            "261",
+            "223",
+            "242"
+          ]
+        }
+      },
+      "reason": "Accepted sort and UTM survive; redirect_to/add-to-cart/nonce are removed and not followed; alias/direct sort state and product order match."
+    },
+    "R21-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "mobile": {
+        "w": 375,
+        "gallery": {
+          "x": 23.5,
+          "y": 295.984375,
+          "width": 328,
+          "height": 557.71875,
+          "top": 295.984375,
+          "right": 351.5,
+          "bottom": 853.703125,
+          "left": 23.5
+        },
+        "items": [
+          {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          },
+          {
+            "x": 23.5,
+            "y": 733.3125,
+            "width": 328,
+            "height": 1,
+            "top": 733.3125,
+            "right": 351.5,
+            "bottom": 734.3125,
+            "left": 23.5
+          },
+          {
+            "x": 23.5,
+            "y": 734.3125,
+            "width": 328,
+            "height": 1,
+            "top": 734.3125,
+            "right": 351.5,
+            "bottom": 735.3125,
+            "left": 23.5
+          }
+        ],
+        "pills": [
+          {
+            "x": 23.5,
+            "y": 773.703125,
+            "width": 80,
+            "height": 80,
+            "top": 773.703125,
+            "right": 103.5,
+            "bottom": 853.703125,
+            "left": 23.5
+          },
+          {
+            "x": 113.5,
+            "y": 773.703125,
+            "width": 80,
+            "height": 80,
+            "top": 773.703125,
+            "right": 193.5,
+            "bottom": 853.703125,
+            "left": 113.5
+          },
+          {
+            "x": 203.5,
+            "y": 773.703125,
+            "width": 80,
+            "height": 80,
+            "top": 773.703125,
+            "right": 283.5,
+            "bottom": 853.703125,
+            "left": 203.5
+          }
+        ],
+        "fit": [
+          "contain",
+          "contain",
+          "contain"
+        ],
+        "controls": [
+          {
+            "label": "Xem ảnh sản phẩm trước",
+            "pressed": null,
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh sản phẩm kế tiếp",
+            "pressed": null,
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "true",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "false",
+            "tab": 0
+          }
+        ]
+      },
+      "pointerAfterFix": {
+        "activePill": 1,
+        "transform": "none"
+      },
+      "blocker": "Layout dimensions and 80px thumbnail sizing are repaired, but clicking thumbnail 3 leaves active pill 1 and the main image unchanged; acceptance 3 fails."
+    },
+    "R21-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "space": {
+        "activePill": 1,
+        "pressed": [
+          {
+            "label": "Xem ảnh sản phẩm trước",
+            "pressed": null
+          },
+          {
+            "label": "Xem ảnh sản phẩm kế tiếp",
+            "pressed": null
+          },
+          {
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "false"
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false"
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "true"
+          }
+        ],
+        "focus": {
+          "tag": "SPAN",
+          "label": "Xem ảnh mẫu 3"
+        },
+        "items": [
+          {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          },
+          {
+            "x": 23.5,
+            "y": 733.3125,
+            "width": 328,
+            "height": 1,
+            "top": 733.3125,
+            "right": 351.5,
+            "bottom": 734.3125,
+            "left": 23.5
+          },
+          {
+            "x": 23.5,
+            "y": 734.3125,
+            "width": 328,
+            "height": 1,
+            "top": 734.3125,
+            "right": 351.5,
+            "bottom": 735.3125,
+            "left": 23.5
+          }
+        ]
+      },
+      "blocker": "Space flips aria-pressed on thumbnail 3 but does not change the active pill or main image. State is therefore false, and screen-reader proof is also absent."
+    },
+    "R24-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "resize": {
+        "desktop": {
+          "w": 1200,
+          "orientation": "vertical",
+          "direction": "row"
+        },
+        "mobile": {
+          "w": 375,
+          "orientation": "vertical",
+          "direction": "column"
+        }
+      },
+      "blocker": "A page loaded mobile remained aria-orientation=vertical after resizing to 1200px while CSS became row; reverse direction is not reliably synchronized. Acceptance 1 fails."
+    },
+    "R11-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "empty": {
+        "notice": {
+          "display": "block",
+          "text": "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả."
+        },
+        "statuses": [
+          "Không có kết quả"
+        ],
+        "visibleLinks": 0,
+        "focus": {
+          "tag": "INPUT",
+          "cls": "modal-field"
+        },
+        "query": "zzreviewnomatch20260924"
+      },
+      "validQuery": {
+        "input": "tháp nhũ điện",
+        "status": [
+          "Không có kết quả"
+        ],
+        "notice": "block",
+        "links": [],
+        "focus": {
+          "tag": "INPUT",
+          "cls": "modal-field"
+        }
+      },
+      "clear": {
+        "notice": "none",
+        "status": [
+          "Không có kết quả"
+        ],
+        "focus": true
+      },
+      "blocker": "Empty notice now becomes visible and clears on blank input without moving focus. A real typed known-product query produced no suggestions and notice remained visible, so acceptance 2 cannot pass; visible and result states were not mutually exclusive as required."
+    }
+  },
+  "current_total": {
+    "open": 22,
+    "p1": 6,
+    "p2": 10,
+    "p3": 6,
+    "closed_in_round": [
+      "R17-01"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "getOnly": true,
+    "actionQueryNotFollowed": true,
+    "cartChanged": false,
+    "browsersClosed": true
+  }
+}
