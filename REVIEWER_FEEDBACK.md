@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R84 — nghiệm thu độc lập Batch 56](#round-r84), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL vì capture DPR1 trắng và matrix tự ghi DPR2 là `windowDevicePixelRatio: 1`; R2-03 vẫn PARTIAL.
+> **Trạng thái hiện hành:** xem [Vòng R85 — nghiệm thu độc lập Batch 57](#round-r85), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 vẫn PARTIAL: dữ liệu mới đã lên live nhưng chưa có provenance/owner approval và ảnh bundle vẫn sai; R5-02 vẫn FAIL.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5131,4 +5131,33 @@ R5-02 giữ **FAIL / OPEN**. Cần chụp lại DPR1 có đủ sáu ảnh và ch
 - [JSON nghiệm thu Batch 56](review-evidence/2026-09-24/r84-batch-56-verification.json).
 - [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
 - Đã mở trực quan cả hai WebP; không thao tác website production.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r85"></a>
+
+# Vòng R85 — nghiệm thu độc lập Batch 57
+
+## R2-03 — PARTIAL / OPEN
+
+Reviewer mở độc lập cả sáu PDP production ở desktop 1440×1000. Phần triển khai mới đã có thật:
+
+- sáu URL đều trả 200 và bảng live khớp artifact Batch 57;
+- hai chuỗi generic `Gia công tuyển chọn & Nhập khẩu chính ngạch` và `... an toàn 100%` đã được bỏ;
+- Tháp nhũ ID 295 có thêm `12V DC` qua adapter `220V/12V`, công suất `15W–25W` và phạm vi trong nhà/hiên có mái che.
+
+Tuy nhiên Batch 57 vẫn chưa đạt acceptance đầy đủ:
+
+1. Commit và artifact chỉ chứa chuỗi DOM mới; không có ảnh nhãn nhà cung cấp, datasheet, source citation hoặc product-owner approval. Cụm “thông số ... từ nhà cung cấp” trong bàn giao là claim, không phải provenance audit được.
+2. Sáu PDP live cũng không có link hoặc ghi chú nguồn cho các claim điện, chất liệu, xuất xứ và đóng gói. Reviewer chỉ xác nhận **nội dung đã hiển thị**, không xác nhận các thông số tự khai là đúng hàng thật.
+3. Blocker ảnh từ R38/R83 không được Batch 57 xử lý. ID 381 vẫn dùng ảnh/ALT `Hộp quả trầu`, ID 382 dùng `Quả châu cườm`, ID 383 dùng `Hàng rào gỗ`; một món rời không chứng minh set 50 món, set 70 món hoặc gói B2B đầy đủ.
+
+R2-03 giữ **PARTIAL / OPEN**. Giữ các cải thiện chữ và hàng điện đã đạt. Cần một nguồn/owner approval audit được gắn với đúng SKU/thông số, đồng thời thay ảnh bundle bằng bằng chứng hình ảnh đại diện đúng contract.
+
+## Bằng chứng và tổng R85
+
+- [JSON nghiệm thu live Batch 57](review-evidence/2026-09-24/r85-batch-57-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r2-03-specs-table-audit.json).
+- Không click CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
