@@ -1,0 +1,979 @@
+{
+  "observed_at_utc": "2026-09-24T16:29:22.582Z",
+  "handoff": {
+    "commit": "cfb3e83",
+    "assistant_reply_sha256": "e392037c7c58ad665363e21df3fc82d52b66df926fb9f2d183b1f2b70dc9a58d"
+  },
+  "scope": "Production GET/browser/network verification; one add-to-cart POST held then aborted before server commit; no form, call, message or order.",
+  "verdicts": {
+    "R4-01": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Production JS still has the 4000ms client redirect. Holding the exact add-to-cart POST triggered checkout at ~4.8s, then empty cart before the POST was aborted at 6.5s."
+    },
+    "R17-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "301 aliases preserve orderby/UTM and browser sort matches direct destination, but implementation forwards every query key including redirect_to/unknown; prohibited action parameters were not safely staged, so allowlist/safety acceptance is unmet."
+    },
+    "R2-14": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Three exact SKUs now resolve in live and full search; title, knowledge, mixed intent, empty/noindex, keyboard and mobile paths remain. Full product cards still omit price and a clear view/select action."
+    },
+    "R5-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Main PDP image is eager/high and starts near 1.3s, but three matched runs show median LCP 5172ms versus 4756ms baseline; browser also requests four hidden related images marked eager/high, violating prioritization scope."
+    },
+    "R2-10": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Contact distinguishes direct support 08:00–21:30, showroom 08:00–21:00 and 24/7 intake, but footer/listing/PDP still promise Zalo support 24/7; Tết listing says phone until 22:00; shipping/refund promises remain inconsistent."
+    }
+  },
+  "buy_now": {
+    "initial": {
+      "cartText": [
+        "Giỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng",
+        "Giỏ hàng0 ₫\n\t\n\t\t0",
+        "Giỏ hàng\n0 ₫\n0",
+        "Giỏ hàng\n0 ₫\n0"
+      ],
+      "selects": [
+        {
+          "name": "attribute_pa_kich-thuoc",
+          "options": [
+            {
+              "text": "Chọn một tùy chọn",
+              "value": ""
+            },
+            {
+              "text": "1m2",
+              "value": "1m2"
+            },
+            {
+              "text": "1m5",
+              "value": "5"
+            },
+            {
+              "text": "1m8",
+              "value": "8"
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "text": "Thêm vào giỏ hàng",
+          "cls": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+          "type": "submit",
+          "disabled": false
+        },
+        {
+          "text": "Mua ngay",
+          "cls": "button tt4m-pdp-buy-now",
+          "type": "button",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "cls": "tt4m-sticky-buy",
+          "type": "button",
+          "disabled": false
+        }
+      ],
+      "form": {
+        "action": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "method": "post",
+        "html": "<form class=\"variations_form cart\" action=\"https://trangtri4mua.com/san-pham/thap-nhu-dien/\" method=\"post\" enctype=\"multipart/form-data\" data-product_id=\"295\" data-product_variations=\"[{&quot;attributes&quot;:{&quot;attribute_pa_kich-thuoc&quot;:&quot;1m2&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;Kh\\u00f4ng \\u00e1p d\\u1ee5ng&quot;,&quot;display_price&quot;:550000,&quot;display_regular_price&quot;:550000,&quot;gallery_image_ids&quot;:[],&quot;gallery_images_html&quot;:&quot;&quot;,&quot;image&quot;:{&quot;title&quot;:&quot;Thap Nhu Dien&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien.webp&quot;,&quot;alt&quot;:&quot;Th\\u00e1p nh\\u0169 \\u0111i\\u1ec7n - c\\u00e2y th\\u00f4ng trang tr\\u00ed Noel&quot;,&quot;src&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-600x800.webp&quot;,&quot;srcset&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-600x800.webp 600w, https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-225x300.webp 225w, https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-768x1024.webp 768w, https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien.webp 900w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien.webp&quot;,&quot;full_src_w&quot;:900,&quot;full_src_h&quot;:1200,&quot;gallery_thumbnail_src&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-100x100.webp&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;https:\\/\\/trangtri4mua.com\\/wp-content\\/uploads\\/2026\\/09\\/thap-nhu-dien-300x300.webp&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:300,&quot;src_w&quot;:600,&quot;src_h&quot;:800},&quot;image_id&quot;:134,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\\&quot;price\\&quot;&gt;&lt;span class=\\&quot;woocommerce-Price-amount amount\\&quot;&gt;&lt;bdi&gt;550.000&amp;nbsp;&lt;span class=\\&quot;woocommerce-Price-currencySymbol\\&quot; translate=\\&quot;no\\&quot;&gt;&amp;#8363;&lt;\\/span&gt;&lt;\\/bdi&gt;&lt;\\/span&gt;&lt;\\/span&gt;&quot;,&quot;sku&quot;:&quot;TT4M-089-1m2&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:296,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;Kh\\u00f4ng \\u0"
+      }
+    },
+    "public_scripts": [
+      {
+        "url": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790266045",
+        "length": 22361,
+        "hasFlag": true,
+        "hasHandle": true,
+        "has4000": true,
+        "snippets": [
+          "\t\tfunction handleInstantCheckout(e) {",
+          "\t\t\t// Atomic Server-Side Redirect: Inject tt4m_buy_now hidden field into cart form",
+          "\t\t\t\tvar flag = cartForm.querySelector('input[name=\"tt4m_buy_now\"]');",
+          "\t\t\t\t\tflag.name = 'tt4m_buy_now';",
+          "\t\t\tstickyBuyBtn.addEventListener('click', handleInstantCheckout);"
+        ]
+      }
+    ],
+    "handler_excerpt": "function handleInstantCheckout(e) {\n\t\t\tif (e) e.preventDefault();\n\n\t\t\tvar triggerBtn = e ? e.currentTarget : stickyBuyBtn;\n\t\t\tif (triggerBtn && triggerBtn.classList.contains('is-loading')) return;\n\n\t\t\tif (!validateVariations()) return;\n\n\t\t\t// Visual button feedback\n\t\t\tvar originalHtml = '';\n\t\t\tif (triggerBtn) {\n\t\t\t\ttriggerBtn.classList.add('is-loading');\n\t\t\t\toriginalHtml = triggerBtn.innerHTML;\n\t\t\t\ttriggerBtn.innerHTML = '<span class=\"tt4m-spinner\"></span> Đang chuyển...';\n\t\t\t}\n\n\t\t\t// Atomic Server-Side Redirect: Inject tt4m_buy_now hidden field into cart form\n\t\t\tvar cartForm = document.querySelector('form.cart');\n\t\t\tif (cartForm) {\n\t\t\t\tvar flag = cartForm.querySelector('input[name=\"tt4m_buy_now\"]');\n\t\t\t\tif (!flag) {\n\t\t\t\t\tflag = document.createElement('input');\n\t\t\t\t\tflag.type = 'hidden';\n\t\t\t\t\tflag.name = 'tt4m_buy_now';\n\t\t\t\t\tflag.value = '1';\n\t\t\t\t\tcartForm.appendChild(flag);\n\t\t\t\t} else {\n\t\t\t\t\tflag.value = '1';\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tvar redirected = false;\n\t\t\tfunction goToCheckout() {\n\t\t\t\tif (redirected) return;\n\t\t\t\tredirected = true;\n\t\t\t\twindow.location.href = TT4M.checkoutUrl;\n\t\t\t}\n\n\t\t\t// Listen for WooCommerce AJAX added_to_cart event if available\n\t\t\tif (window.jQuery) {\n\t\t\t\twindow.jQuery(document.body).one('added_to_cart', function () {\n\t\t\t\t\tgoToCheckout();\n\t\t\t\t});\n\t\t\t}\n\n\t\t\t// Trigger native form submission / add-to-cart click\n\t\t\tif (mainAtc) {\n\t\t\t\tif (mainAtc.classList.contains('disabled') || mainAtc.disabled) {\n\t\t\t\t\tif (triggerBtn) {\n\t\t\t\t\t\ttriggerBtn.classList.remove('is-loading');\n\t\t\t\t\t\ttriggerBtn.innerHTML = originalHtml || '<span>Mua ngay</span>';\n\t\t\t\t\t}\n\t\t\t\t\tshowToast('Vui lòng chọn phân loại sản phẩm hợp lệ!', 'warning');\n\t\t\t\t\treturn;\n\t\t\t\t}\n\t\t\t\tmainAtc.click();\n\t\t\t} else if (cartForm) {\n\t\t\t\tcartForm.submit();\n\t\t\t} else {\n\t\t\t\tgoToCheckout();\n\t\t\t\treturn;\n\t\t\t}\n\n\t\t\t// Fallback redirection timer in case non-AJAX or slow response\n\t\t\tsetTimeout(function () {\n\t\t\t\tif (!redirected) {\n\t\t\t\t\tgoToCheckout();\n\t\t\t\t}\n\t\t\t}, 4000);\n\t\t}\n\n\t\tif (stickyBuyBtn) {\n\t\t\tstickyBuyBtn.addEventListener('click', handleInstantCheckout);\n\t\t}\n\n\t\tif (pdpBuyBtn) {\n\t\t\tpdpBuyBtn.addEventListener('click', handleInstantCheckout);\n\t\t}\n\n\t\tif (mainAtc && varForm) {\n\t\t\tmainAtc.addEventListener('click', ",
+    "slow_abort": {
+      "events": [
+        {
+          "t": 1019,
+          "type": "selected",
+          "variation": "298"
+        },
+        {
+          "t": 1043,
+          "type": "clicked"
+        },
+        {
+          "t": 1114,
+          "type": "held-post",
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes",
+          "postData": "------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"attribute_pa_kich-thuoc\"\r\n\r\n8\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"quantity\"\r\n\r\n1\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"add-to-cart\"\r\n\r\n295\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"product_id\"\r\n\r\n295\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"variation_id\"\r\n\r\n298\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"tt4m_buy_now\"\r\n\r\n1\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr\r\nContent-Disposition: form-data; name=\"undefined\"\r\n\r\n\r\n------WebKitFormBoundaryV7ajAOTGBDOZkRcr--\r\n"
+        },
+        {
+          "t": 5889,
+          "type": "nav-response",
+          "status": 302,
+          "url": "https://trangtri4mua.com/thanh-toan/",
+          "location": "https://trangtri4mua.com/gio-hang/"
+        },
+        {
+          "t": 6978,
+          "type": "nav-response",
+          "status": 200,
+          "url": "https://trangtri4mua.com/gio-hang/"
+        },
+        {
+          "t": 6986,
+          "type": "navigated",
+          "url": "https://trangtri4mua.com/gio-hang/"
+        },
+        {
+          "t": 7616,
+          "type": "aborted-post"
+        }
+      ],
+      "state": {
+        "url": "https://trangtri4mua.com/gio-hang/",
+        "h1": "Giỏ Hàng",
+        "main": "Giỏ Hàng\nChưa có sản phẩm nào trong giỏ hàng.\n\nQuay trở lại cửa hàng",
+        "cart": [
+          "Giỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng",
+          "Giỏ hàng0 ₫\n\t\n\t\t0"
+        ],
+        "active": "BODY"
+      }
+    }
+  },
+  "redirects": {
+    "headers": [
+      {
+        "url": "https://trangtri4mua.com/shop/",
+        "status": 301,
+        "location": "https://trangtri4mua.com/cua-hang/"
+      },
+      {
+        "url": "https://trangtri4mua.com/shop/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/cua-hang/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      {
+        "url": "https://trangtri4mua.com/cart/",
+        "status": 301,
+        "location": "https://trangtri4mua.com/gio-hang/"
+      },
+      {
+        "url": "https://trangtri4mua.com/cart/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/gio-hang/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      {
+        "url": "https://trangtri4mua.com/checkout/",
+        "status": 301,
+        "location": "https://trangtri4mua.com/thanh-toan/"
+      },
+      {
+        "url": "https://trangtri4mua.com/checkout/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/thanh-toan/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      {
+        "url": "https://trangtri4mua.com/cach-chon-size-cay-thong-noel/",
+        "status": 301,
+        "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/"
+      },
+      {
+        "url": "https://trangtri4mua.com/cach-chon-size-cay-thong-noel/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      {
+        "url": "https://trangtri4mua.com/du-toan-chi-phi-trang-tri-noel/",
+        "status": 301,
+        "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/"
+      },
+      {
+        "url": "https://trangtri4mua.com/du-toan-chi-phi-trang-tri-noel/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      {
+        "url": "https://trangtri4mua.com/shop/?orderby=price-desc&utm_campaign=winter",
+        "status": 301,
+        "location": "https://trangtri4mua.com/cua-hang/?orderby=price-desc&utm_campaign=winter"
+      },
+      {
+        "url": "https://trangtri4mua.com/shop/?redirect_to=https%3A%2F%2Fevil.example&foo=bar",
+        "status": 301,
+        "location": "https://trangtri4mua.com/cua-hang/?redirect_to=https%3A%2F%2Fevil.example&foo=bar"
+      }
+    ],
+    "alias_sort": {
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc&utm_campaign=winter",
+      "selected": "price-desc",
+      "ids": [
+        "383",
+        "372",
+        "285",
+        "177",
+        "280",
+        "261",
+        "223",
+        "242",
+        "377",
+        "269",
+        "382",
+        "249",
+        "248",
+        "266",
+        "295",
+        "236"
+      ],
+      "canonical": "https://trangtri4mua.com/cua-hang/",
+      "docWidth": 375,
+      "viewport": 375
+    },
+    "direct_sort": {
+      "url": "https://trangtri4mua.com/cua-hang/?orderby=price-desc&utm_campaign=winter",
+      "selected": "price-desc",
+      "ids": [
+        "383",
+        "372",
+        "285",
+        "177",
+        "280",
+        "261",
+        "223",
+        "242",
+        "377",
+        "269",
+        "382",
+        "249",
+        "248",
+        "266",
+        "295",
+        "236"
+      ],
+      "canonical": "https://trangtri4mua.com/cua-hang/",
+      "docWidth": 1440,
+      "viewport": 1440
+    },
+    "same_ids": true,
+    "checkout_empty": {
+      "first": {
+        "url": "https://trangtri4mua.com/checkout/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 301,
+        "location": "https://trangtri4mua.com/thanh-toan/?utm_source=review%20r34&utm_medium=referral%2Femail"
+      },
+      "second": {
+        "url": "https://trangtri4mua.com/thanh-toan/?utm_source=review%20r34&utm_medium=referral%2Femail",
+        "status": 302,
+        "location": "https://trangtri4mua.com/gio-hang/"
+      }
+    }
+  },
+  "search": {
+    "exact_full": {
+      "url": "https://trangtri4mua.com/?s=COMBO-GD-50",
+      "h1": "Kết quả tìm kiếm cho COMBO-GD-50",
+      "robots": "follow, noindex",
+      "cards": [
+        {
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "href": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "text": "COMBO TRANG TRÍ NOEL, TRANG TRÍ GIÁNG SINH - NOEL\nCombo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)\n\nSet phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.\n\nTHÁNG 9 24, 2026",
+          "actions": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL",
+            "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)"
+          ]
+        }
+      ],
+      "docWidth": 1440,
+      "viewport": 1440
+    },
+    "live_exact": {
+      "input": "CT-PE-SNOW",
+      "results": [
+        {
+          "text": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/"
+        }
+      ],
+      "empty": false,
+      "active": "INPUT"
+    },
+    "live_keyboard": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Nút tìm kiếm"
+      },
+      {
+        "tag": "A",
+        "text": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+        "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "aria": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Đóng cửa sổ tìm kiếm modal"
+      }
+    ],
+    "live_before_enter": {
+      "tag": "A",
+      "text": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+      "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/"
+    },
+    "live_enter_destination": {
+      "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+      "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - Giá | Trang trí 4 mùa"
+    },
+    "mobile_exact": {
+      "url": "https://trangtri4mua.com/?s=SET-HG-70",
+      "h1": "Kết quả tìm kiếm cho SET-HG-70",
+      "docWidth": 375,
+      "viewport": 375,
+      "articles": [
+        {
+          "title": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+          "price": false,
+          "action": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL",
+            "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)"
+          ]
+        }
+      ]
+    },
+    "empty": {
+      "url": "https://trangtri4mua.com/?s=zzzz-no-result-r34",
+      "h1": "Kết quả tìm kiếm cho zzzz-no-result-r34",
+      "body": true,
+      "searchInputs": [
+        {
+          "value": "zzzz-no-result-r34",
+          "rect": {
+            "x": 23.5,
+            "y": 257.078125,
+            "width": 290,
+            "height": 44,
+            "top": 257.078125,
+            "right": 313.5,
+            "bottom": 301.078125,
+            "left": 23.5
+          }
+        }
+      ],
+      "robots": "follow, noindex",
+      "docWidth": 375,
+      "viewport": 375
+    },
+    "query_matrix": {
+      "exact_sku": {
+        "COMBO-GD-50": "product 381 found",
+        "SET-HG-70": "product 382 found",
+        "CT-PE-SNOW": "product 372 found"
+      },
+      "name": "cây thông phủ tuyết/combo 50 món tiếp tục đưa product phù hợp lên đầu",
+      "knowledge": "cách chọn size cây thông tiếp tục ưu tiên bài hướng dẫn",
+      "mixed": "trang trí quán cafe giữ bài cafe và combo B2B",
+      "source": "Scout public GET + Main browser exact/live/full"
+    }
+  },
+  "lcp": {
+    "baseline": {
+      "source": "review-evidence/2026-09-24/r5-performance-summary.json",
+      "ttfb_ms": [
+        1114.9,
+        1228.5,
+        1234.1
+      ],
+      "lcp_ms": [
+        4632,
+        4756,
+        4760
+      ],
+      "median_lcp_ms": 4756,
+      "first_run_main_image_start_ms": 2316.8
+    },
+    "after_summary": {
+      "ttfb_ms": [
+        1126,
+        1157.5,
+        1109
+      ],
+      "lcp_ms": [
+        5372,
+        5172,
+        5168
+      ],
+      "median_lcp_ms": 5172,
+      "main_image_start_ms": [
+        1309.1999998092651,
+        1312.0999999046326,
+        1282.3000001907349
+      ],
+      "main_image_response_end_ms": [
+        5305.5,
+        5113.400000095367,
+        5115
+      ],
+      "related_eager_high_count": [
+        4,
+        4,
+        4
+      ],
+      "interpretation": "Ảnh chính được phát hiện sớm hơn, nhưng ba lượt cùng cấu hình không chứng minh LCP giảm; biến động response làm LCP median 5172ms. Không diễn giải là regression tổng quát."
+    },
+    "runs": [
+      {
+        "run": 1,
+        "nav": {
+          "ttfb": 1126,
+          "domContentLoaded": 4085.7999997138977,
+          "load": 5306.799999713898
+        },
+        "lcp": [
+          {
+            "startTime": 2804,
+            "size": 9696,
+            "url": "",
+            "element": "<h1 class=\"product_title entry-title\">Tháp nhũ điện – Trang trí Noel</h1>"
+          },
+          {
+            "startTime": 5372,
+            "size": 143117,
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+            "element": "<img width=\"600\" height=\"800\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp\" alt=\"Tháp nhũ điện - cây thông trang trí Noel\" decoding=\"async\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-"
+          }
+        ],
+        "main": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "rect": {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          }
+        },
+        "resource": {
+          "startTime": 1309.1999998092651,
+          "responseEnd": 5305.5,
+          "transferSize": 175258,
+          "encodedBodySize": 174958
+        },
+        "relatedEagerHigh": [
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-hong-kim-sa-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-hong-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-nhung-do-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        ]
+      },
+      {
+        "run": 2,
+        "nav": {
+          "ttfb": 1157.5,
+          "domContentLoaded": 3608.4000000953674,
+          "load": 5114.700000286102
+        },
+        "lcp": [
+          {
+            "startTime": 3052,
+            "size": 9696,
+            "url": "",
+            "element": "<h1 class=\"product_title entry-title\">Tháp nhũ điện – Trang trí Noel</h1>"
+          },
+          {
+            "startTime": 5172,
+            "size": 143117,
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+            "element": "<img width=\"600\" height=\"800\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp\" alt=\"Tháp nhũ điện - cây thông trang trí Noel\" decoding=\"async\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-"
+          }
+        ],
+        "main": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "rect": {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          }
+        },
+        "resource": {
+          "startTime": 1312.0999999046326,
+          "responseEnd": 5113.400000095367,
+          "transferSize": 175258,
+          "encodedBodySize": 174958
+        },
+        "relatedEagerHigh": [
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-cu-toi-kim-sa-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-hong-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-do-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/gau-dung-khan-ke-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        ]
+      },
+      {
+        "run": 3,
+        "nav": {
+          "ttfb": 1109,
+          "domContentLoaded": 3630.1000003814697,
+          "load": 5116.10000038147
+        },
+        "lcp": [
+          {
+            "startTime": 3016,
+            "size": 9696,
+            "url": "",
+            "element": "<h1 class=\"product_title entry-title\">Tháp nhũ điện – Trang trí Noel</h1>"
+          },
+          {
+            "startTime": 5168,
+            "size": 143117,
+            "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+            "element": "<img width=\"600\" height=\"800\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp\" alt=\"Tháp nhũ điện - cây thông trang trí Noel\" decoding=\"async\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/thap-"
+          }
+        ],
+        "main": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "rect": {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          }
+        },
+        "resource": {
+          "startTime": 1282.3000001907349,
+          "responseEnd": 5115,
+          "transferSize": 175258,
+          "encodedBodySize": 174958
+        },
+        "relatedEagerHigh": [
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-vuong-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chim-long-do-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-do-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-guong-300x300.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          }
+        ]
+      }
+    ],
+    "normal_page": {
+      "rows": [
+        {
+          "alt": "Tháp nhũ điện - cây thông trang trí Noel",
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "related": false,
+          "rect": {
+            "x": 23.5,
+            "y": 295.984375,
+            "width": 328,
+            "height": 437.328125,
+            "top": 295.984375,
+            "right": 351.5,
+            "bottom": 733.3125,
+            "left": 23.5
+          },
+          "resource": {
+            "startTime": 1127.6999998092651,
+            "responseEnd": 1130.5999999046326,
+            "transferSize": 0
+          }
+        },
+        {
+          "alt": "Kẹo que kim tuyến đỏ - đồ trang trí Noel",
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-do-300x300.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "related": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "resource": {
+            "startTime": 1127.8000001907349,
+            "responseEnd": 1131.1999998092651,
+            "transferSize": 0
+          }
+        },
+        {
+          "alt": "Kẹo tròn kim sa - đồ trang trí Noel",
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-tron-kim-sa-300x300.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "related": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "resource": {
+            "startTime": 1127.9000000953674,
+            "responseEnd": 1130.3000001907349,
+            "transferSize": 0
+          }
+        },
+        {
+          "alt": "Châu trơn đỏ - đồ trang trí Noel",
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-tron-do-300x300.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "related": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "resource": {
+            "startTime": 1127.9000000953674,
+            "responseEnd": 1131.3000001907349,
+            "transferSize": 0
+          }
+        },
+        {
+          "alt": "Sóc nhung đỏ - đồ trang trí Noel",
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/soc-nhung-do-600x597.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "related": true,
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "resource": {
+            "startTime": 1127.9000000953674,
+            "responseEnd": 1131.1999998092651,
+            "transferSize": 0
+          }
+        }
+      ],
+      "docWidth": 375,
+      "viewport": 375
+    }
+  },
+  "hours": {
+    "contact": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "h1": "Liên Hệ",
+      "matches": [
+        "Hotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)",
+        "Quý khách cần tư vấn chọn mẫu sản phẩm, nhận báo giá trang trí trọn gói cho quán cafe / văn phòng hoặc hỗ trợ đơn hàng? Đội ngũ chuyên viên Trang Trí 4 Mùa trực tiếp tư vấn và hỗ trợ từ 08:00 đến 21:30 hàng ngày (kênh Zalo tiếp nhận yêu cầu 24/7)!",
+        "0901.234.567 (Phản hồi trong 15 phút)",
+        "08:00 – 21:00 (Thứ 2 – Chủ Nhật, mở cửa cả ngày lễ)",
+        "Vui lòng điền thông tin bên dưới, chuyên viên decor của chúng tôi sẽ liên hệ lại hỗ trợ bạn trong vòng 15 phút:",
+        "Hotline: 0901.234.567 (08:00 – 21:30)",
+        "TƯ VẤN ZALO (24/7)"
+      ],
+      "footer24": [
+        "TƯ VẤN ZALO (24/7)",
+        "TƯ VẤN ZALO (24/7)"
+      ],
+      "topbar": []
+    },
+    "tree_listing": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "matches": [
+        "Hotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30)",
+        "Tư vấn Zalo 24/7",
+        "Hotline: 0901.234.567 (08:00 – 21:30)",
+        "TƯ VẤN ZALO (24/7)"
+      ],
+      "h1": "Cây Thông Noel"
+    },
+    "http": [
+      {
+        "url": "https://trangtri4mua.com/",
+        "matches": [
+          "ng hợp hiếm hoi bị nứt vỡ do vận chuyển, chúng tôi áp dụng chính sách 1 đổi 1 miễn phí hỏa tốc hoặc hoàn tiền ngay trong ngày",
+          "Các tỉnh thành khác trên toàn quốc: Giao qua chuyển phát nhanh EMS / ViettelPost trong vòng 1 – 3 ngày làm việc",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/",
+        "matches": [
+          "Các tỉnh thành khác: Giao qua chuyển phát nhanh trong 1 – 3 ngày làm việc",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "matches": [
+          "HCM: 1 – 2 ngày; Tỉnh thành khác: 2 – 4 ngày làm việc Giao Tiêu Chuẩn Nội Thành TP",
+          "Thời gian nhận hàng: 2 – 4 ngày làm việc (vùng sâu/xã: 3 – 5 ngày) Nhận Hàng Trực Tiếp Tại Showroom (Local Pickup) Showroom Trang Trí 4 Mùa: 123 Đường Xuân Thủy, Phường Thảo Điền, TP",
+          "HCM Giờ mở cửa: 08:00 – 21:00 hàng ngày Nhắn Tin Zalo Hỗ Trợ Đồng Kiểm Khi Nhận Kiểm tra đúng mẫu mã và chất lượng trước khi thanh toán Miễn Phí Vận",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "matches": [
+          "✓ Hoàn Tiền Nhanh Trong 1 – 2 Ngày Chuyển khoản hoàn tiền 100% nếu mẫu sản phẩm đổi đã hết hàng mùa vụ trong kho",
+          "3 Bước 3: Gửi Hàng Mới Hoặc Hoàn Tiền Ngay khi đơn vị vận chuyển tiếp nhận kiện hàng gửi trả, xưởng Trang Trí 4 Mùa sẽ gửi kiện hàng mới thay thế",
+          "HCM Giờ mở cửa: 08:00 – 21:00 hàng ngày Nhắn Tin Zalo Hỗ Trợ Đồng Kiểm Khi Nhận Kiểm tra đúng mẫu mã và chất lượng trước khi thanh toán Miễn Phí Vận",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/",
+        "matches": [
+          "n từ 500k ✅ Đồng kiểm COD toàn quốc 🔄 Đổi trả 7 ngày lỗi NSX ⚡ Giao hỏa tốc 2h - 4h 💬 Tư vấn Zalo 24/7 🌟 Tất cả 94 🎄 Trang Trí Giáng Sinh - Noel 94 ✨ Phụ Kiện Treo Cây Noel 66 🎅 Mô Hình & Tượng Noel 23 🎁 Combo Trang Tr",
+          "Mô Hình & Tượng Noel (23) Combo Trang Trí Noel (3) ← Xem tất cả sản phẩm Tư vấn chọn mẫu qua Zalo (24/7) Hoặc gọi trực tiếp: 📞 0901",
+          "567 (Hỗ trợ 8h00 - 22h00 hàng ngày) Đồng Kiểm Khi Nhận Kiểm tra đúng mẫu mã và chất lượng trước khi thanh toán Miễn Phí Vận Chuyển Giao tận nơi",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      },
+      {
+        "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "matches": [
+          "Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên số lượng Thêm vào giỏ hàng Mua ngay Tư vấn qua Zalo Hỗ trợ nhanh 24/7 Hotline tư vấn 0901",
+          "567 (08:00 – 21:30) Zalo: 0901",
+          "hụ Kiện Treo Cây Mô Hình &#038; Tượng Noel Cây Thông Noel Combo Trọn Gói Trang Trí Tết Tư Vấn Zalo (24/7) © 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc"
+        ]
+      }
+    ]
+  },
+  "cleanup": {
+    "cart_final": {
+      "cart": [
+        "Giỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng",
+        "Giỏ hàng0 ₫\n\t\n\t\t0"
+      ],
+      "cookies": []
+    },
+    "browser_closed": true
+  },
+  "limitations": [
+    "Không test tham số add-to-cart/nonce/handler qua redirect trên production; cần staging để chứng minh allowlist an toàn.",
+    "LCP là lab local ba lượt với throttle giống R5, không phải CrUX/RUM và không đủ kết luận regression toàn site.",
+    "Không gửi form, gọi/Zalo hoặc đặt đơn; request Mua ngay bị giữ rồi abort trước khi server xử lý."
+  ]
+}

@@ -2863,3 +2863,104 @@ Showroom iframe vẫn có `title=""`, không `aria-label`/`aria-labelledby` dù 
 - Không xác minh chuyên môn tác giả, giá thị trường, database/backend hoặc mọi route. Focus drawer được thử trong Chromium mobile-width, không thay cho touch screen reader; R26-01 không đổi trạng thái.
 - Không gửi form, gọi/Zalo, đặt hàng hoặc thêm giỏ. Bộ bằng chứng gồm **1 JSON + 6 screenshot**; browser riêng đã đóng; không sửa code/config/database website.
 - Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
+
+---
+
+<a id="round-r34"></a>
+
+# Vòng R34 — Nghiệm thu độc lập Batch 4
+
+Ngày kiểm tra: **24/09/2026**. Watcher phát hiện và pull commit Coder **`cfb3e83`**; snapshot `ASSISTANT_REPLY.md` của Batch 4 có SHA-256 **`e392037c7c58ad665363e21df3fc82b66df926fb9f2d183b1f2b70dc9a58d`**.
+
+Coder công bố `FIXED` cho năm issue conversion/search/performance/content. Năm scout đọc độc lập implementation public và acceptance; Main kiểm production bằng GET manual, Chromium và network throttling. Kết quả: **không issue nào đủ điều kiện CLOSED; cả năm giữ OPEN**. Trong lúc kiểm, watcher nhận thêm Batch 5/6; hai bàn giao đó được tách sang vòng sau, không được dùng để thay verdict Batch 4.
+
+## Phạm vi và phương pháp
+
+- Giữ POST thêm giỏ của nút Mua ngay hơn 6 giây rồi abort trước khi server xử lý; ghi timeline navigation và trạng thái giỏ. Không đặt đơn.
+- Gọi no-follow năm alias với/không UTM, `orderby` và query inert; đối chiếu sort qua alias với URL đích trong browser.
+- Kiểm exact SKU ở live/full search, Tab/Enter, card desktop, layout/empty state mobile.
+- Đo ba lượt PDP cùng cấu hình R5: 375×812, DPR 1, latency 150ms, download 200.000 B/s, upload 93.750 B/s, CPU 4×, cache browser tắt; đọc Resource Timing và LCP observer.
+- Đối chiếu giờ, giao hàng và hoàn tiền trên Contact, homepage, hub, policy, listing, PDP và footer. Không gọi/Zalo hoặc gửi form.
+
+## Ma trận nghiệm thu năm claim
+
+| Issue | Kết quả R34 | Trạng thái hiện hành | Bằng chứng quyết định |
+|---|---|---|---|
+| R4-01 | **FAIL** | OPEN | JS production vẫn có timer 4 giây. Khi giữ đúng POST thêm giỏ, browser yêu cầu checkout trước khi POST thành công, rồi rơi vào giỏ trống. |
+| R17-01 | **PARTIAL** | OPEN | Năm alias giữ UTM; sort alias khớp đích trực tiếp. Implementation vẫn chuyển tiếp mọi key, gồm `redirect_to`/key lạ; chưa có staging proof cho tham số action/handler bị cấm. |
+| R2-14 | **PARTIAL** | OPEN | Ba exact SKU nay tìm đúng product; keyboard/mobile/empty/noindex còn hoạt động. Full-search product card vẫn không có giá hoặc CTA xem/chọn mẫu rõ. |
+| R5-01 | **PARTIAL** | OPEN | Ảnh chính đã eager/high và bắt đầu request sớm hơn. Ba lượt chưa chứng minh LCP giảm; bốn ảnh related đang ẩn cũng bị eager/high và được browser request. |
+| R2-10 | **FAIL** | OPEN | Contact phân biệt giờ tốt hơn, nhưng footer/listing/PDP vẫn hứa Zalo 24/7, listing Tết nói hotline tới 22:00; giao hàng/hoàn tiền vẫn mâu thuẫn. |
+
+## R4-01 — timer client vẫn tái hiện race condition
+
+Source production đúng version đã có hidden input `tt4m_buy_now=1`, nhưng cùng `handleInstantCheckout()` vẫn:
+
+- nghe `added_to_cart`;
+- click nút add-to-cart AJAX;
+- gọi `goToCheckout()` bằng fallback `setTimeout(..., 4000)`.
+
+Phép thử bắt đầu với giỏ trống, chọn 1m8 → variation **298**, giá **895.000₫**. POST thực chứa product 295, variation 298, quantity 1 và cờ `tt4m_buy_now=1`; request được giữ rồi abort sau 6,5 giây:
+
+| Mốc sau click | Quan sát |
+|---:|---|
+| ~71ms | POST add-to-cart bị giữ. |
+| ~4,85s | `/thanh-toan/` đã trả 302 tới `/gio-hang/`, khi POST chưa được thả. |
+| ~5,94s | Browser tới giỏ 200. |
+| ~6,57s | POST mới bị abort. |
+
+Trang đích ghi **“Chưa có sản phẩm nào trong giỏ hàng”**; cuối vòng cart vẫn 0₫ và không có WooCommerce session cookie. Server-side filter không loại được race khi client vẫn tự điều hướng bằng timer. Đây là cùng lỗi R4-01, không mở issue mới.
+
+## R17-01 — query hữu ích đã giữ, query policy chưa an toàn
+
+Năm alias không query vẫn 301 đúng pathname. Với `utm_source=review%20r34&utm_medium=referral%2Femail`, cả năm trả 301 và giữ đúng encoding ở Location. `/shop/?orderby=price-desc&utm_campaign=winter` tới đúng URL cửa hàng; dropdown là `price-desc`, 16 product ID đầu khớp URL đích trực tiếp cùng thời điểm, canonical vẫn sạch `/cua-hang/`.
+
+Checkout giỏ trống giữ UTM ở hop alias 301 tới `/thanh-toan/`, sau đó flow WooCommerce 302 về `/gio-hang/` như trước.
+
+Tuy nhiên `/shop/?redirect_to=https%3A%2F%2Fevil.example&foo=bar` cũng sao chép nguyên hai key sang URL đích. Mẫu này không tạo open redirect, nhưng chứng minh implementation chuyển tiếp mù toàn bộ query thay vì allowlist. Không thử `add-to-cart`, nonce hoặc handler trên production. Acceptance yêu cầu chứng minh các tham số action không gây tác dụng phụ trên staging; Coder chưa cung cấp staging/diff đủ để nghiệm thu phần đó.
+
+## R2-14 — exact SKU đã sửa, product card chưa sửa
+
+Ba mã **COMBO-GD-50**, **SET-HG-70**, **CT-PE-SNOW** nay đều có đúng một product ở live search và full search. Với CT-PE-SNOW, Tab tới link gợi ý và Enter mở đúng PDP cây PE. Query tên hàng, kiến thức và intent hỗn hợp vẫn giữ product/bài hữu ích; empty state mobile có ô tìm lại, search page tiếp tục `noindex`, không tràn ngang.
+
+Full search vẫn dùng card bài viết: category, title, ảnh, excerpt, ngày. Card exact SKU không có `.price`; các action chỉ là link category/title, không có CTA xem/chọn mẫu rõ theo product type. Sửa matching không hoàn thành yêu cầu merchandising của R2-14.
+
+## R5-01 — ưu tiên ảnh chính đúng hơn nhưng filter quá rộng
+
+Ảnh chính Tháp nhũ trong viewport có `loading="eager"`, `fetchpriority="high"`, responsive source và hiển thị đúng tỷ lệ 3:4. Ba lượt sau sửa:
+
+| Lượt | TTFB | Bắt đầu ảnh chính | Kết thúc ảnh | LCP |
+|---|---:|---:|---:|---:|
+| 1 | 1.126ms | 1.309ms | 5.306ms | 5.372ms |
+| 2 | 1.158ms | 1.312ms | 5.113ms | 5.172ms |
+| 3 | 1.109ms | 1.282ms | 5.115ms | 5.168ms |
+
+Median LCP là **5.172ms**, so với baseline R5 **4.756ms**. Request ảnh bắt đầu sớm hơn baseline mẫu đầu (2.317ms), nhưng response chậm hơn trong ba lượt này; không được tuyên bố cải thiện LCP chỉ từ attribute, cũng không diễn giải mẫu nhỏ thành regression toàn site.
+
+Quan trọng hơn, mỗi lượt có bốn ảnh product related đang ẩn (`0×0`) cũng mang eager/high; Resource Timing xác nhận browser đã request các URL đó. Acceptance yêu cầu không làm ảnh ngoài viewport đồng loạt tải sớm. Cần giới hạn filter đúng ảnh hero/main gallery đầu, giữ related và slide/thumbnail ngoài viewport lazy/priority mặc định, rồi đo lại.
+
+## R2-10 — chỉ sửa một phần giờ hỗ trợ
+
+Contact nay giải thích trực tiếp tư vấn **08:00–21:30**, showroom **08:00–21:00** và Zalo chỉ **tiếp nhận yêu cầu 24/7**. Topbar/footer widget hotline dùng 21:30. Đây là cải thiện đúng cần giữ.
+
+Các xung đột public còn lại:
+
+- footer menu và listing Cây thông vẫn ghi **“Tư vấn Zalo 24/7”**;
+- PDP cây PE ghi **“Hỗ trợ nhanh 24/7”**;
+- listing Tết ghi Zalo 24/7 và hotline **8h00–22h00**;
+- returns ghi CSKH tới **21:00**, khác 21:30 mà không giải thích kênh;
+- homepage/hub nói tỉnh khác **1–3 ngày**, shipping policy nói **2–4 ngày**, vùng xa **3–5 ngày**;
+- homepage hứa lỗi vận chuyển được hoàn tiền **ngay trong ngày**, returns công bố hoàn tiền **1–2 ngày**.
+
+Batch 4 chỉ sửa Contact và một footer widget, chưa bao phủ acceptance toàn issue.
+
+## Bằng chứng R34
+
+[JSON tổng hợp](review-evidence/2026-09-24/r34-batch4-verification.json) · [sort qua alias](review-evidence/2026-09-24/r34-redirect-sort-preserved.webp) · [exact SKU card thiếu giá/CTA](review-evidence/2026-09-24/r34-sku-search-card.webp) · [ảnh chính PDP](review-evidence/2026-09-24/r34-pdp-main-eager.webp) · [Contact hours](review-evidence/2026-09-24/r34-contact-hours.webp) · [listing vẫn Zalo 24/7](review-evidence/2026-09-24/r34-listing-zalo-24-7.webp).
+
+## Giới hạn và bàn giao R34
+
+- Không đóng issue; tổng giữ nguyên **36 OPEN — 10 P1, 20 P2, 6 P3**. Không thêm issue mới.
+- Không test tham số giao dịch/handler của redirect trên production. LCP là lab local ba lượt, không phải CrUX/RUM và không chứng minh ảnh hưởng kinh doanh.
+- Một POST Mua ngay bị giữ rồi abort trước khi server xử lý; không thêm sản phẩm, gửi form, gọi/Zalo hoặc đặt đơn. Cuối vòng giỏ 0₫; browser riêng đã đóng.
+- Bộ bằng chứng gồm **1 JSON + 5 screenshot**. Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
