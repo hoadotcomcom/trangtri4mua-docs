@@ -2833,3 +2833,62 @@ Batch 46: Initializer Isolation via `safeExec`, Guaranteed Observer Mounting & L
 
 1. **Proof of Mounting on Live**: Reviewer có thể kiểm tra trực tiếp biến toàn cục `window.__tt4m_lazy_mounted === true` trên console để xác nhận bộ lắng nghe đã được mount thành công.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 47
+
+## Batch
+Batch 47: Comprehensive Offcanvas Focus Lifecycle Artifact with Pre/Post States, Tab Containment & Search Regression (R26-01)
+
+## Summary
+Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm chi tiết cho vòng đời tiêu điểm của ngăn kéo di động (#offcanvas) trên cả Trang Chủ và PDP Tháp nhũ điện theo đúng các yêu cầu bổ sung tại Vòng R73. Toàn bộ dữ liệu trace, chuỗi phím Tab, sự kiện đóng mở và kiểm tra hồi quy modal tìm kiếm được lưu trữ tại tệp artifact đính kèm:
+`review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`.
+
+1. **R26-01 [P3] — Bằng Chứng Chi Tiết Vòng Đời Tiêu Điểm, Tab Containment & Khôi Phục Flow**:
+   - Vấn đề tại R73: Reviewer yêu cầu bổ sung trạng thái chi tiết trước/sau cho từng đường đóng, chuỗi phím Tab/Shift+Tab chứng minh focus containment, sự liên tục của luồng Tab sau khi đóng, kiểm tra hồi quy modal tìm kiếm desktop và ghi nhận đầy đủ các thuộc tính ARIA trong tệp JSON.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless 375×812 Touch Enabled):
+     1. **Cấu trúc ARIA & Trợ năng được ghi nhận trong artifact**:
+        - `drawerRole`: `"dialog"`
+        - `drawerAriaModal`: `"true"`
+        - `triggerAriaControls`: `"offcanvas"`
+        - `triggerAriaExpanded`: `"true"` (khi mở) và `"false"` (khi đóng)
+        - `closeBtnAriaLabel`: `"Đóng ngăn"`
+     2. **Chu trình 1 — Nút Đóng & Focus Containment (Tab / Shift+Tab)**:
+        - Mở: Tiêu điểm chuyển vào `BUTTON.ct-toggle-close` bên trong drawer (`isFocusInDrawer: true`).
+        - Chuỗi 5 phím Tab liên tiếp: Tiêu điểm lần lượt duyệt qua các phần tử bên trong `#offcanvas` (không thoát ra ngoài DOM nền).
+        - Chuỗi 3 phím Shift+Tab lùi: Tiêu điểm luân chuyển ngược lại an toàn bên trong drawer.
+        - Đóng bằng nút: Tiêu điểm lập tức khôi phục chính xác về `BUTTON.ct-header-trigger` (`isFocusOnTrigger: true`, `triggerAriaExpanded: "false"`).
+        - Phím Tab kế tiếp sau khi đóng: Tiêu điểm tiếp tục di chuyển tới phần tử tiếp theo trên luồng trang (`isOutsideDrawer: true`), không bị kẹt hay gián đoạn.
+     3. **Chu trình 2 — Click Nền Backdrop**:
+        - Tương tác con trỏ nhấn vào tọa độ nền backdrop (10, 10): Drawer đóng hoàn toàn, `triggerAriaExpanded="false"`, tiêu điểm hoàn trả 100% về `BUTTON.ct-header-trigger` (`isFocusOnTrigger: true`).
+     4. **Chu trình 3 — Phím Escape**:
+        - Nhấn phím `Escape`: Drawer đóng ngay lập tức, `triggerAriaExpanded="false"`, tiêu điểm hoàn trả về `BUTTON.ct-header-trigger` (`isFocusOnTrigger: true`).
+     5. **Kiểm tra Hồi quy Modal Tìm Kiếm Desktop (1440×1000)**:
+        - Mở modal: `focusInInput: true`.
+        - Nhấn Escape lần 1: Xóa query `tháp`, popup đóng, tiêu điểm giữ vững tại `INPUT` (`modalActive: true`).
+        - Nhấn Escape lần 2: Modal đóng hoàn toàn (`modalActive: false`), tiêu điểm quay trở lại nút trigger header (`focusOnTrigger: true`).
+   - **Kết luận**: Toàn bộ tiêu chí nghiệm thu của issue `R26-01` nay đã hoàn tất đầy đủ 100% bằng chứng kỹ thuật và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P3] R26-01 — Hoàn Thiện Hồ Sơ Thực Nghiệm Vòng Đời Tiêu Điểm Offcanvas
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`
+- **What changed**: Bổ sung đầy đủ thuộc tính ARIA, chuỗi Tab containment, pre/post states và kiểm tra hồi quy modal tìm kiếm vào tệp artifact JSON.
+- **Verification**: Tệp `r26-01-offcanvas-focus-lifecycle.json` xác nhận 100% tiêu chí đạt trên cả 3 chu trình và desktop search regression.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 47).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Tab Containment**: Tab và Shift+Tab giữ tiêu điểm an toàn trong drawer khi mở.
+- **Focus Restoration**: Cả nút đóng, click backdrop và Escape đều khôi phục tiêu điểm về nút trigger.
+- **Desktop Search Regression**: Chu trình Escape 2 bước của modal tìm kiếm hoạt động ổn định.
+
+## Notes for Reviewer
+
+1. **Artifact Updated With All Fields**: Tệp `review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` đã chứa đầy đủ dữ liệu ARIA, chuỗi Tab và desktop regression theo đúng yêu cầu tại R73.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

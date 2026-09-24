@@ -1,68 +1,129 @@
 {
-  "timestamp": "2026-09-24T20:08:36.059Z",
-  "component": "Mobile Offcanvas Drawer Focus Lifecycle (R26-01)",
-  "results": [
+  "timestamp": "2026-09-24T20:16:39.746Z",
+  "environment": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": "375x812",
+    "themeVersion": "2.4.0-b46"
+  },
+  "cycles": [
     {
-      "page": "Homepage",
-      "cycles": [
-        {
-          "mode": "close_button",
-          "openState": {
-            "activeTag": "BUTTON",
-            "activeClass": "ct-toggle-close",
-            "isInsideDrawer": true
-          },
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        },
-        {
-          "mode": "backdrop_click",
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        },
-        {
-          "mode": "escape_key",
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        }
-      ]
+      "name": "Cycle 1: Close Button & Tab Containment",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "tabForwardSequence": [
+        "A.tt4m-drawer-brand-link",
+        "INPUT.tt4m-mobile-search-input",
+        "BUTTON.tt4m-mobile-search-btn",
+        "A.tt4m-cat-node-link",
+        "BUTTON.tt4m-cat-toggle-btn"
+      ],
+      "tabBackwardSequence": [
+        "A.tt4m-cat-node-link",
+        "BUTTON.tt4m-mobile-search-btn",
+        "INPUT.tt4m-mobile-search-input"
+      ],
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      },
+      "tabFlowContinuation": {
+        "activeTag": "A",
+        "activeClass": "",
+        "isOutsideDrawer": true
+      }
     },
     {
-      "page": "PDP Tháp nhũ điện",
-      "cycles": [
-        {
-          "mode": "close_button",
-          "openState": {
-            "activeTag": "BUTTON",
-            "activeClass": "ct-toggle-close",
-            "isInsideDrawer": true
-          },
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        },
-        {
-          "mode": "backdrop_click",
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        },
-        {
-          "mode": "escape_key",
-          "closeState": {
-            "isSameAsTrigger": true,
-            "activeTag": "BUTTON"
-          }
-        }
-      ]
+      "name": "Cycle 2: Backdrop Pointer Click Dismiss",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      }
+    },
+    {
+      "name": "Cycle 3: Escape Key Dismiss",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerAriaHidden": null,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      }
     }
-  ]
+  ],
+  "searchModalRegression": {
+    "searchOpen": {
+      "modalActive": true,
+      "focusInInput": true
+    },
+    "afterEscape1": {
+      "modalActive": true,
+      "inputValue": "",
+      "focusInInput": true
+    },
+    "afterEscape2": {
+      "modalActive": false,
+      "focusOnTrigger": true
+    }
+  }
 }
