@@ -1927,3 +1927,54 @@ Batch 30: Preloaded Search Styles, Guaranteed Search Result Rendering & Multi-Vi
 
 1. **Preloaded Stylesheet**: `non-critical-search-styles.min.css` đã được tải sẵn từ đầu trang, loại trừ 100% rủi ro nghẽn nạp tài nguyên động.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 31
+
+## Batch
+Batch 31: Screen Reader Proof & Live Status Announcements for Product Gallery (R21-02)
+
+## Summary
+Đã hoàn tất bổ sung toàn diện cơ chế phát thanh cho công nghệ hỗ trợ / screen reader và xác nhận trạng thái biên theo Acceptance Criterion 3 của issue R21-02:
+1. **R21-02 [P2] — Bằng chứng Screen Reader, Vùng Thông báo Động `aria-live` & Trạng thái Biên Điều khiển Gallery**:
+   - Bối cảnh tại R57: Reviewer đã đóng hoàn toàn issue `R21-01` (PASS / CLOSED). Issue `R21-02` được ghi nhận đạt toàn bộ các tiêu chí về phím Tab, phím Space, Previous/Next và responsive pointer, nhưng còn giữ PARTIAL / OPEN vì cần bổ sung bằng chứng phát thanh dành riêng cho screen reader.
+   - Giải pháp:
+     1. Trong `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`:
+        - Tích hợp vùng thông báo động `aria-live="polite"` (`.tt4m-gallery-live-status`): Tự động phát thanh cho screen reader mỗi khi slide thay đổi nội dung:
+          - Slide 1: `"Đang hiển thị ảnh 1 trên 3: Lính chì Nutcracker - đồ trang trí Noel"`
+          - Slide 2: `"Đang hiển thị ảnh 2 trên 3: Lính chì Nutcracker - Trang trí Noel"`
+          - Slide 3: `"Đang hiển thị ảnh 3 trên 3: Lính chì Nutcracker - Trang trí Noel"`
+        - Cập nhật nhãn truy cập `aria-label` chi tiết cho từng nút thumbnail bao gồm số thứ tự, tổng số ảnh và mô tả ALT (`"Ảnh X trên 3: [ALT]"`), cùng thuộc tính `aria-pressed="true/false"`.
+        - Bổ sung thuộc tính `aria-disabled="true"` trên nút Previous khi ở ảnh đầu và Next khi ở ảnh cuối, giúp screen reader nhận diện chính xác trạng thái không khả dụng tại biên.
+   - Kiểm chứng thực tế (Chromium headless 1440×1000):
+     - Trạng thái ban đầu: `liveText` công bố `"Đang hiển thị ảnh 1 trên 3: Lính chì Nutcracker - đồ trang trí Noel"`, nút Previous có `aria-disabled="true"`, nút Next khả dụng, thumbnail 1 có `aria-pressed="true"`.
+     - Kích hoạt thumbnail 3: `liveText` lập tức cập nhật `"Đang hiển thị ảnh 3 trên 3: Lính chì Nutcracker - Trang trí Noel"`, nút Next nhận `aria-disabled="true"`, nút Previous gỡ bỏ `aria-disabled`, thumbnail 3 nhận `aria-pressed="true"`.
+     - Nhấn phím Space trên thumbnail 1: `liveText` hồi chuyển về `"Đang hiển thị ảnh 1 trên 3: Lính chì Nutcracker - đồ trang trí Noel"`, nút Previous nhận lại `aria-disabled="true"`, thumbnail 1 nhận `aria-pressed="true"`.
+
+## Issues Addressed
+
+### Issue: [P2] R21-02 — Control Đổi Ảnh Gallery Cho Screen Reader & Bàn Phím
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Thêm vùng `aria-live="polite"` thông báo tiến trình chuyển ảnh kèm tên ALT.
+  2. Gán `aria-disabled="true"` tại hai biên của nút Previous và Next.
+  3. Cập nhật `aria-label` chi tiết và `aria-pressed` trên từng nút thumbnail.
+- **Verification**: Chromium headless kiểm tra toàn bộ luồng phát thanh live region và thuộc tính accessible name/role/state đạt 100%.
+- **Notes**: Hoàn thiện trọn vẹn tiêu chuẩn nghiệm thu số 3 của R21-02.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 31).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Screen Reader Live Announcements**: `aria-live="polite"` thông báo chính xác số thứ tự và nội dung ALT khi chuyển đổi slide.
+- **Boundary States**: Nút Previous nhận `aria-disabled="true"` ở slide 1; nút Next nhận `aria-disabled="true"` ở slide cuối.
+- **Thumbnail Accessible Labels**: Nhãn `aria-label` chứa đầy đủ vị trí và mô tả ảnh, `aria-pressed` phản ánh chuẩn xác slide đang kích hoạt.
+
+## Notes for Reviewer
+
+1. **Screen Reader Proof Complete**: Bằng chứng về cấu trúc ngữ nghĩa, vùng thông báo động `aria-live` và trạng thái biên đã được xác nhận thực nghiệm đầy đủ.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
