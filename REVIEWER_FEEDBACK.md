@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R101 — đối chiếu milestone sau R100](#round-r101), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 4 P1, 7 P2, 4 P3**. R5-02 và R2-05 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Milestone mới của Coder chỉ đồng bộ trạng thái tài liệu, không thay đổi website và không làm thay đổi kết luận live R100.
+> **Trạng thái hiện hành:** xem [Vòng R102 — đính chính phạm vi nghiệm thu R2-05](#round-r102), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 trở lại **PARTIAL / OPEN** vì R100 chưa kiểm tra FAQ ẩn và FAQ bài quán cafe vẫn hướng dẫn dùng tuyết bọt ngoài trời 15–20 phút mà không gắn sản phẩm/hướng dẫn nhà sản xuất hoặc phê duyệt chuyên môn.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -297,10 +297,12 @@ Nhờ người có chuyên môn duyệt nội dung an toàn; bỏ cam kết tuy�
 ### Acceptance criteria
 Không còn bảo đảm tuyệt đối hoặc mẹo hóa chất thiếu hướng dẫn nhà sản xuất; thông số và cách lắp được nguồn/owner chuyên môn duyệt, có điều kiện áp dụng rõ. Rà cả bài, FAQ, hero và PDP liên quan.
 
-**Cập nhật R100:** Batch 70 đã xóa các cam kết tuyệt đối, mẹo hóa chất, nhãn chống giật/an toàn generic, conflation quá tải–đoản mạch và cảnh báo kết quả giật/cháy rộng. Hướng dẫn còn lại quy chiếu tem/tài liệu của thiết bị thực tế, điều kiện địa điểm và người thi công đủ chuyên môn; không còn được trình bày như thuộc tính của thiết bị không xác định hoặc bảo đảm kết quả. Xem [R100](#round-r100).
+**Cập nhật R100:** Batch 70 đã xóa các cam kết tuyệt đối, mẹo hóa chất, nhãn chống giật/an toàn generic, conflation quá tải–đoản mạch và cảnh báo kết quả giật/cháy rộng trong phần thân bài đã kiểm tra. Hướng dẫn còn lại quy chiếu tem/tài liệu của thiết bị thực tế, điều kiện địa điểm và người thi công đủ chuyên môn. Xem [R100](#round-r100).
+
+**Đính chính R102:** R100 chưa kiểm tra đủ FAQ ẩn, hero và PDP như acceptance yêu cầu. FAQ bài quán cafe vẫn cho phép dùng tuyết bọt ngoài trời theo phiên `15 – 20 phút` và lau sàn, nhưng không gắn sản phẩm/hướng dẫn nhà sản xuất hoặc phê duyệt chuyên môn. R2-05 mở lại; xem [R102](#round-r102).
 
 ### Status
-CLOSED
+OPEN
 
 ## [P1] R2-06 — Sitemap bỏ sót nội dung indexable và chứa URL noindex
 
@@ -5825,6 +5827,8 @@ R2-05 được **FIXED / CLOSED**. Kết luận dựa trên nội dung thực t�
 
 Tổng hiện hành giảm từ **16** xuống **15 OPEN — 4 P1, 7 P2, 4 P3**. Website chưa đạt điều kiện dừng vì còn 15 issue, trong đó có bốn P1 và R2-03 đang BLOCKED (EXTERNAL).
 
+> **Đính chính R102:** quyết định đóng ở R100 không còn hiệu lực vì bằng chứng chỉ bao phủ ba URL bài viết nói chung, chưa kiểm tra riêng FAQ ẩn, hero và PDP liên quan. FAQ bài quán cafe còn một mẹo dùng hóa chất không đạt acceptance. Trạng thái hiện hành là **PARTIAL / OPEN**.
+
 ## Bằng chứng R100
 
 - [JSON nghiệm thu Batch 70](review-evidence/2026-09-24/r100-batch70-verification.json).
@@ -5843,6 +5847,8 @@ Commit milestone `db397f2` chỉ thêm 21 dòng vào `ASSISTANT_REPLY.md`; khôn
 
 Không chạy lại Chromium cho vòng này vì commit không có claim thay đổi website; bằng chứng production gần nhất vẫn là [R100](#round-r100). Không mở lại R2-05 và không yêu cầu thêm cleanup từ khóa nếu không có regression thực tế.
 
+> **Đính chính R102:** R101 đã chấp nhận milestone dựa trên quyết định R100 thiếu phạm vi. Kết luận “không mở lại R2-05” bị thay thế bởi R102.
+
 ## Hướng tiếp theo
 
 Không gửi thêm milestone chỉ lặp trạng thái R2-05. Chuyển sang một P1 còn actionable:
@@ -5852,3 +5858,37 @@ Không gửi thêm milestone chỉ lặp trạng thái R2-05. Chuyển sang mộ
 3. R2-22 — định danh doanh nghiệp và claim trust/testimonial.
 
 R2-03 giữ nguyên blocker ngoài cho tới khi có owner approval thật; không tự tạo bằng chứng thay thế.
+
+# Vòng R102 — đính chính phạm vi nghiệm thu R2-05
+
+## R2-05 — PARTIAL / OPEN
+
+### Sai sót của Reviewer
+
+Acceptance dòng 298 yêu cầu rà **cả bài, FAQ, hero và PDP liên quan**. R100 chỉ ghi nhận việc mở ba URL bài viết và quét rendered text tổng quát; bằng chứng không chỉ ra việc mở nội dung accordion FAQ, không liệt kê hero hoặc PDP đã kiểm tra. Vì vậy quyết định `FIXED / CLOSED` tại R100 và xác nhận milestone tại R101 không đủ căn cứ.
+
+### Kiểm chứng bổ sung
+
+Reviewer mở production bằng Chromium và kiểm tra riêng các bề mặt còn thiếu:
+
+- **Homepage hero — PASS:** không có bảo đảm chống giật/đoản mạch, thông số điện, mẹo hóa chất hoặc lời hứa an toàn tuyệt đối thuộc phạm vi R2-05.
+- **13 PDP được liên kết từ ba bài — PASS cho nhóm claim R2-05:** không PDP nào chứa các chuỗi/claim `hair spray`, `keo sữa`, hóa chất, chống giật, đoản mạch, tự ngắt, IP65/IP67, 12V/24V, giật điện, chập điện hoặc bảo đảm tuyệt đối.
+- **FAQ bài chọn size và bài dự toán:** không có section FAQ trên live tại lần kiểm tra.
+- **FAQ accordion bài quán cafe — FAIL:** câu trả lời về máy tạo tuyết viết rằng ngoài trời có thể phun tuyết bọt trong phiên `15 – 20 phút vào buổi tối cuối tuần` và để nhân viên thường xuyên lau khô sàn.
+
+Câu FAQ này là một quy trình sử dụng hóa chất có thời lượng và biện pháp cleanup cụ thể. Nó không gắn sản phẩm, thành phần, bề mặt, hướng dẫn nhà sản xuất hoặc approval chuyên môn có attribution. Việc phần đầu câu cảnh báo không dùng trong nhà không làm hướng dẫn dùng ngoài trời trở thành đã kiểm chứng.
+
+### Cần sửa
+
+Chọn một trong hai hướng:
+
+1. Bỏ toàn bộ hướng dẫn sử dụng tuyết bọt ngoài trời; giữ khuyến cáo trung tính không dùng khi chưa có sản phẩm và hướng dẫn nhà sản xuất phù hợp với địa điểm/bề mặt thực tế.
+2. Nếu vẫn hướng dẫn sử dụng, gắn đúng sản phẩm, tài liệu nhà sản xuất, điều kiện bề mặt/khu vực, quy trình vận hành và phê duyệt chuyên môn thật có attribution. Không tự đặt thời lượng `15 – 20 phút`.
+
+Sau deploy, mở accordion FAQ số 3 và kiểm tra nội dung hiển thị; quét body text không đủ vì câu trả lời đang ẩn khi accordion đóng.
+
+## Bằng chứng và tổng R102
+
+- [JSON đính chính phạm vi R2-05](review-evidence/2026-09-24/r102-r2-05-scope-correction.json).
+- Reviewer kiểm tra homepage, nội dung FAQ ẩn và 13 PDP liên kết bằng Chromium; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
+- R2-05 trở lại **PARTIAL / OPEN**. Tổng trở lại **16 OPEN — 5 P1, 7 P2, 4 P3**.

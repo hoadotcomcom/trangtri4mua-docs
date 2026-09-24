@@ -1,0 +1,86 @@
+{
+  "review_round": "R102",
+  "type": "reviewer_scope_correction",
+  "supersedes": {
+    "round": "R100",
+    "decision": "FIXED / CLOSED",
+    "reason": "R100 verified only the three article pages generally and did not explicitly inspect the homepage hero, hidden FAQ answers, or related PDPs required by the R2-05 acceptance criterion."
+  },
+  "acceptance_scope": [
+    "article body",
+    "FAQ",
+    "homepage hero",
+    "related PDPs"
+  ],
+  "live_verification": {
+    "homepage_hero": {
+      "url": "https://trangtri4mua.com/",
+      "result": "PASS",
+      "note": "Rendered hero text contains no anti-shock, short-circuit, voltage, chemical-hack, or absolute safety claim related to R2-05."
+    },
+    "article_faqs": [
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+        "faq_heading_found": false,
+        "result": "NOT_APPLICABLE"
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+        "faq_heading": "7. Câu hỏi thường gặp khi bài trí Giáng Sinh cho quán cafe",
+        "result": "FAIL",
+        "failing_answer": "Nếu quán có khoảng sân vườn rộng ngoài trời, bạn chỉ nên phun biểu diễn trong các khung giờ cố định ngắn (15 – 20 phút vào buổi tối cuối tuần) và có nhân viên thường xuyên lau khô sàn sau đó.",
+        "reason": "This remains an actionable chemical-use recipe for snow foam with a duration and cleanup procedure, but no identified product, manufacturer instructions, or attributable specialist approval. It conflicts with the acceptance requirement covering chemical tips."
+      },
+      {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+        "faq_heading_found": false,
+        "result": "NOT_APPLICABLE"
+      }
+    ],
+    "related_pdps": {
+      "result": "PASS_FOR_SCANNED_R2_05_TERMS",
+      "count": 13,
+      "urls": [
+        "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+        "https://trangtri4mua.com/san-pham/ngoi-sao-nhu-do-bac/",
+        "https://trangtri4mua.com/san-pham/canh-thong-pe/",
+        "https://trangtri4mua.com/san-pham/day-tuyet/",
+        "https://trangtri4mua.com/san-pham/day-qua/",
+        "https://trangtri4mua.com/san-pham/day-pe/",
+        "https://trangtri4mua.com/san-pham/linh-chi-nutcracker/",
+        "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "https://trangtri4mua.com/san-pham/nai-tuan-loc-trang-tri/",
+        "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+        "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+        "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+        "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/"
+      ],
+      "terms_scanned": [
+        "an toàn tuyệt đối",
+        "không bao giờ",
+        "hair spray",
+        "keo sữa",
+        "chống giật",
+        "đoản mạch",
+        "tự ngắt",
+        "chống nước",
+        "IP65",
+        "IP67",
+        "12V",
+        "24V",
+        "chập điện",
+        "giật điện",
+        "hóa chất"
+      ],
+      "matches": []
+    }
+  },
+  "required_action": "In the cafe article FAQ, remove the outdoor snow-foam usage recipe, or bind it to the exact product and applicable manufacturer instructions or real attributable specialist approval. A general warning to avoid use without product-specific instructions is acceptable. Recheck the hidden accordion answer after deployment.",
+  "issue_status": "PARTIAL / OPEN",
+  "open_issue_total": {
+    "total": 16,
+    "P1": 5,
+    "P2": 7,
+    "P3": 4
+  }
+}
