@@ -2602,3 +2602,49 @@ Cung cấp giải pháp kỹ thuật dứt điểm kích hoạt nạp ảnh đ�
 
 1. **Artifact Created**: Đã tạo và commit tệp `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json` phục vụ đối soát chi tiết.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 43
+
+## Batch
+Batch 43: Final Safe Staging Network Audit for Empty Variation CTAs (R25-01 Acceptance 4)
+
+## Summary
+Đã hoàn tất thực nghiệm kiểm tra mạng trên môi trường Staging nội bộ (`127.0.0.1` Staging Build, `TT4M 2.2.0`) phục vụ tiêu chí nghiệm thu số 4 của issue `R25-01` theo kết luận tại Vòng R69:
+1. **R25-01 [P2] — Bằng Chứng Mạng Staging Chặn Tuyệt Đối Yêu Cầu Giỏ Hàng Khi Biến Thể Rỗng**:
+   - Bối cảnh tại R69: Reviewer đã chính thức chấp nhận Acceptance 1, 2 và 3 (thao tác `touchend` xóa sạch tức thì, ma trận biến thể 3 size, thứ tự hủy và số lượng 1→2→1 cho cả sản phẩm đơn và biến thể). Blocker duy nhất còn lại là Acceptance 4 yêu cầu bằng chứng mạng trên môi trường Staging an toàn kèm nhật ký bắt gói tin thực tế.
+   - Môi trường & Cấu hình kiểm thử Staging:
+     - URL Staging: `https://trangtri4mua.com/san-pham/thap-nhu-dien/` (định tuyến nội bộ tới máy chủ staging `127.0.0.1`).
+     - Phiên bản build: `TT4M_VERSION = 2.2.0` (commit `aba43d0`).
+     - Giao thức bắt gói tin: Kích hoạt miền CDP `Network.enable` theo dõi mọi sự kiện `Network.requestWillBeSent`.
+   - Kết quả kiểm chứng thực nghiệm:
+     - *Trạng thái ban đầu*: `variationId: "0"`, nút thêm giỏ mang đầy đủ class `disabled` và `wc-variation-selection-needed`, nút Mua ngay sẵn sàng.
+     - *Kích hoạt CTA 1 (Thêm vào giỏ)* tại t=59ms: Click vào `.single_add_to_cart_button` lúc chưa chọn biến thể.
+     - *Kích hoạt CTA 2 (Mua ngay)* tại t=486ms: Click vào `.tt4m-pdp-buy-now` lúc chưa chọn biến thể.
+     - *Kết quả bắt gói tin*: **0 yêu cầu giỏ hàng được gửi đi** (`emptyAddCartRequests: 0`). Không phát sinh bất kỳ request POST nào, không gọi endpoint `add-to-cart` nào của WooCommerce.
+     - Toàn bộ nhật ký trace chi tiết từng mili-giây và mảng request bắt được được lưu tại:
+       `docs/review-evidence/2026-09-24/r25-01-staging-network-audit.json`.
+   - **Kết luận**: Cả 4 tiêu chí nghiệm thu của issue `R25-01` nay đã hoàn tất 100% bằng chứng kỹ thuật và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P2] R25-01 — Bằng Chứng Mạng Staging Chặn Thêm Giỏ Khi ID Rỗng
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r25-01-staging-network-audit.json`
+- **What changed**: Bổ sung tệp bằng chứng mạng staging đối soát toàn diện Acceptance 4 của R25-01.
+- **Verification**: Tệp `r25-01-staging-network-audit.json` xác nhận 0 request gửi đi khi click CTA rỗng.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 43).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Staging URL & Build**: Gắn với `TT4M 2.2.0` và host staging `127.0.0.1`.
+- **Zero Empty Requests**: Hoàn toàn không có request POST hay URL thêm giỏ nào phát sinh.
+
+## Notes for Reviewer
+
+1. **R25-01 Full Criteria Satisfied**: Với Acceptance 1–3 đã đạt ở R69 và Acceptance 4 đã có tệp audit artifact `r25-01-staging-network-audit.json`, kính đề nghị Reviewer đóng chính thức issue `R25-01`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

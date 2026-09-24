@@ -1,0 +1,70 @@
+{
+  "environment": {
+    "stagingUrl": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "stagingHost": "127.0.0.1 (local staging build)",
+    "themeVersion": "TT4M 2.2.0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "ctaTimeline": [
+    {
+      "action": "check_initial_empty_state",
+      "elapsedMs": 17,
+      "state": {
+        "selectValue": "",
+        "variationId": "0",
+        "atcDisabled": true,
+        "atcSelectionNeeded": true,
+        "buyNowPresent": true
+      }
+    },
+    {
+      "action": "click_atc_cta_empty_id",
+      "elapsedMs": 59
+    },
+    {
+      "action": "click_buy_now_cta_empty_id",
+      "elapsedMs": 486
+    },
+    {
+      "action": "final_verification",
+      "elapsedMs": 1088,
+      "state": {
+        "variationId": "0",
+        "atcDisabled": true
+      }
+    }
+  ],
+  "requestsCapturedDuringClicks": [
+    {
+      "method": "GET",
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/708.052b05407b6c578cb98d.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/783.ab7283116f3102720a7b.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/328.9e358dc63741a0f66a7b.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/318.1cd39a22ca4e96328011.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/non-critical-styles.min.css?ver=2.1.57",
+      "hasPostData": false
+    }
+  ],
+  "totalRequestsCaptured": 5,
+  "emptyAddCartRequests": 0
+}
