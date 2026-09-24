@@ -1,0 +1,34 @@
+{
+  "utc": "2026-09-24T14:17:54Z",
+  "url": "https://trangtri4mua.com/",
+  "status": 200,
+  "marqueeElements": 0,
+  "h1": [
+    "Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng"
+  ],
+  "comboElements": 0,
+  "comboContainers": [
+    {
+      "tag": "section",
+      "class": [
+        "tt4m-combo-hero"
+      ]
+    }
+  ],
+  "heroImages": [
+    {
+      "src": "/wp-content/uploads/2026/09/keo-nhung-do.webp",
+      "alt": "Combo trang trí cây thông Noel trọn gói"
+    }
+  ],
+  "homeCss": [
+    "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/home-sections.css?ver=1790246885"
+  ],
+  "cssCheck": {
+    "url": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/css/home-sections.css?ver=1790246885",
+    "status": 200,
+    "marqueeSelectorPresent": false,
+    "sha256": "27450355a6bfe8157b2eee83d4278a7c046960fd553dabef5cac1971eee27325"
+  },
+  "currentReplySha256": "efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16"
+}
