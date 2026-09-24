@@ -1,0 +1,205 @@
+{
+  "evidenceReportId": "R5-01-MOBILE-PERFORMANCE-PROOF",
+  "timestampUtc": "2026-09-24T23:48:36.878Z",
+  "targetIssue": "R5-01",
+  "priority": "P2",
+  "scope": "Independent 3-run mobile performance measurement on PDP Tháp nhũ điện (https://trangtri4mua.com/san-pham/thap-nhu-dien/) with cache disabled, fixed mobile viewport (375x812, DPR 1), capturing TTFB, main image request start/end, LCP event details, and related image non-preload verification.",
+  "testEnvironment": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": {
+      "width": 375,
+      "height": 812,
+      "deviceScaleFactor": 1
+    },
+    "cacheDisabled": true,
+    "platform": "Headless Chromium via CDP PerformanceTimeline",
+    "serverHost": "127.0.0.1 (local origin)"
+  },
+  "summaryMetricsTable": [
+    {
+      "run": 1,
+      "ttfbMs": 605.3,
+      "mainImageStartMs": 620.5,
+      "mainImageEndMs": 628.3,
+      "mainImageDurationMs": 7.8,
+      "fcpMs": 768,
+      "lcpElementUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "lcpSize": 143224,
+      "mainImageAttrs": {
+        "loading": "eager",
+        "fetchpriority": "high"
+      },
+      "relatedImagesRequestedCount": 0,
+      "relatedImagesAllLazy": true
+    },
+    {
+      "run": 2,
+      "ttfbMs": 624.6,
+      "mainImageStartMs": 639.9,
+      "mainImageEndMs": 647.5,
+      "mainImageDurationMs": 7.6,
+      "fcpMs": 796,
+      "lcpElementUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "lcpSize": 143224,
+      "mainImageAttrs": {
+        "loading": "eager",
+        "fetchpriority": "high"
+      },
+      "relatedImagesRequestedCount": 0,
+      "relatedImagesAllLazy": true
+    },
+    {
+      "run": 3,
+      "ttfbMs": 618.7,
+      "mainImageStartMs": 629.2,
+      "mainImageEndMs": 640.3,
+      "mainImageDurationMs": 11.1,
+      "fcpMs": 732,
+      "lcpElementUrl": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+      "lcpSize": 143224,
+      "mainImageAttrs": {
+        "loading": "eager",
+        "fetchpriority": "high"
+      },
+      "relatedImagesRequestedCount": 0,
+      "relatedImagesAllLazy": true
+    }
+  ],
+  "detailedRuns": [
+    {
+      "run": 1,
+      "metrics": {
+        "ttfbMs": 605.3000011444092,
+        "fcpMs": 768,
+        "mainImageAttrs": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": 375,
+          "height": 500
+        },
+        "mainImgResource": {
+          "name": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "startTimeMs": 620.5,
+          "responseStartMs": 623.1999988555908,
+          "responseEndMs": 628.2999992370605,
+          "durationMs": 7.799999237060547
+        },
+        "relatedImages": {
+          "countInDom": 4,
+          "allLazy": true,
+          "allNullFetchPriority": true,
+          "requestedCount": 0
+        }
+      },
+      "lcpEvent": {
+        "frameId": "4CD1839ECBED691103721C8E3B097A93",
+        "type": "largest-contentful-paint",
+        "name": "",
+        "time": 1790293700.7484,
+        "lcpDetails": {
+          "renderTime": 1790293700.7484,
+          "loadTime": 1790293700.68,
+          "size": 143224,
+          "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "nodeId": 30
+        }
+      }
+    },
+    {
+      "run": 2,
+      "metrics": {
+        "ttfbMs": 624.6000003814697,
+        "fcpMs": 796,
+        "mainImageAttrs": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": 375,
+          "height": 500
+        },
+        "mainImgResource": {
+          "name": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "startTimeMs": 639.8999996185303,
+          "responseStartMs": 644,
+          "responseEndMs": 647.5,
+          "durationMs": 7.600000381469727
+        },
+        "relatedImages": {
+          "countInDom": 4,
+          "allLazy": true,
+          "allNullFetchPriority": true,
+          "requestedCount": 0
+        }
+      },
+      "lcpEvent": {
+        "frameId": "AA2B9F37BA75AA4EBA125A2C720C172D",
+        "type": "largest-contentful-paint",
+        "name": "",
+        "time": 1790293703.3626,
+        "lcpDetails": {
+          "renderTime": 1790293703.3626,
+          "loadTime": 1790293703.2845,
+          "size": 143224,
+          "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "nodeId": 30
+        }
+      }
+    },
+    {
+      "run": 3,
+      "metrics": {
+        "ttfbMs": 618.7000007629395,
+        "fcpMs": 732,
+        "mainImageAttrs": {
+          "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "loading": "eager",
+          "fetchpriority": "high",
+          "width": 375,
+          "height": 500
+        },
+        "mainImgResource": {
+          "name": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "startTimeMs": 629.2000007629395,
+          "responseStartMs": 633.3999996185303,
+          "responseEndMs": 640.2999992370605,
+          "durationMs": 11.099998474121094
+        },
+        "relatedImages": {
+          "countInDom": 4,
+          "allLazy": true,
+          "allNullFetchPriority": true,
+          "requestedCount": 0
+        }
+      },
+      "lcpEvent": {
+        "frameId": "E6AB7E7BB4D9F6F8B594ED66CE0A61F7",
+        "type": "largest-contentful-paint",
+        "name": "",
+        "time": 1790293705.9282,
+        "lcpDetails": {
+          "renderTime": 1790293705.9282,
+          "loadTime": 1790293705.8729,
+          "size": 143224,
+          "url": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+          "nodeId": 30
+        }
+      }
+    }
+  ],
+  "acceptanceCriteriaAudit": {
+    "fixedMobileConfigUsed": true,
+    "cacheDisabledVerified": true,
+    "threeIndependentRunsExecuted": true,
+    "ttfbCapturedAllRuns": true,
+    "mainImageRequestStartCapturedAllRuns": true,
+    "mainImageRequestEndCapturedAllRuns": true,
+    "lcpElementIdentifiedAllRuns": true,
+    "mainImageEagerAndHighVerified": true,
+    "relatedImagesLazyAndNotRequestedEarlyVerified": true,
+    "noRegressionDetected": true
+  }
+}
