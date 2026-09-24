@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R56 — nghiệm thu độc lập Batch 28](#round-r56), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. HTTPS endpoint đã đúng và trả dữ liệu, nhưng live-search UI mắc ở `ct-searching`, không render kết quả.
+> **Trạng thái hiện hành:** xem [Vòng R57 — nghiệm thu độc lập Batch 29](#round-r57), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **19 OPEN — 6 P1, 8 P2, 5 P3**. Gallery đã đổi đúng ảnh; đóng R21-01. R21-02 còn thiếu kiểm chứng screen reader bắt buộc.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **20 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **19 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -4257,3 +4257,38 @@ Batch 28 đã sửa được nguyên nhân mixed content ở tầng cấu hình,
 - [JSON Batch 28](review-evidence/2026-09-24/r56-batch-28-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r57"></a>
+
+# Vòng R57 — Nghiệm thu độc lập Batch 29
+
+## R21-01 — PASS / CLOSED
+
+Nutcracker ở 375×812 và 1440×1000:
+
+- thumbnail 3 dịch cả ba slide tới đúng `-656px` mobile / `-1246,06px` desktop; hit-test tâm gallery trả ảnh Nutcracker 3;
+- ảnh 3 tải xong, giữ `object-fit:contain`, không méo/crop; khung mobile 328×437,33 và desktop 623,03×580;
+- Previous từ ảnh 3 tới ảnh 2, Next quay lại ảnh 3; Space trên thumbnail 1 tới ảnh 1, giữ focus và state `aria-pressed`;
+- Previous ở biên đầu và Next ở biên cuối giữ nguyên ảnh, không nhảy focus;
+- `documentWidth=viewportWidth` ở cả hai viewport; khung gallery giữ kích thước.
+
+Harness đóng băng CSS transition giữa các automation call tại `currentTime=0`; phép đo endpoint đã kích hoạt handler thật rồi finish transition 300ms bằng Web Animations trước khi đọc đồng thời computed transform và hit-test. Kết hợp các kiểm tra fit ảnh vuông/ngang/dọc/Tháp nhũ đã đạt ở R45, toàn bộ acceptance R21-01 nay đạt. **Đóng R21-01**.
+
+## R21-02 — PARTIAL / OPEN
+
+Phần đã đạt:
+
+- Tab đi qua control gallery và thoát sang select kích thước, số lượng; không focus trap;
+- Space đổi đúng ảnh nhìn thấy, state `aria-pressed` và focus;
+- pointer mobile, Previous/Next và biên đầu/cuối hoạt động;
+- PDP một ảnh Tháp nhũ không xuất hiện control thừa.
+
+Acceptance 3 yêu cầu kiểm tra bằng ít nhất một screen reader, không chỉ DOM/ARIA. Batch 29 không cung cấp phép thử này và vòng browser-only không thay thế được screen reader thật. Vì vậy R21-02 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R57
+
+- [JSON Batch 29](review-evidence/2026-09-24/r57-batch-29-verification.json).
+- Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Đóng **R21-01**. Tổng còn **19 OPEN — 6 P1, 8 P2, 5 P3**.
