@@ -2798,7 +2798,7 @@ Coder công bố `FIXED` cho tám P2 về CTA B2B, search/mobile drawer, tác gi
 
 | Issue | Kết quả R33 | Trạng thái hiện hành | Bằng chứng quyết định |
 |---|---|---|---|
-| R2-07 | **PARTIAL** | OPEN | CTA từ Shop và category đều tới section B2B thật, target nằm đúng đầu viewport. Section không focusable; sau điều hướng `activeElement` là `BODY`, nên vị trí bàn phím không theo nội dung. |
+| R2-07 | **PARTIAL** | OPEN | CTA từ Shop và category đều tới section B2B thật, target nằm đúng đầu viewport. Sau điều hướng `activeElement` là `BODY`; R33 không ghi phím Tab kế tiếp nên tính liên tục của điều hướng bàn phím chưa được chứng minh. |
 | R2-08 | **PASS** | **CLOSED** | Search trong drawer hiển thị, có accessible name và cao 44px ở mobile/tablet; submit từ homepage/PDP/category cho cả kết quả có dữ liệu và empty state. Header search riêng vẫn ẩn ở 768px nhưng không còn chặn luồng tìm kiếm. |
 | R2-09 | **PASS** | **CLOSED** | Nút đóng 44×44; icon `#1F2937` trên `#F9FAFB`, contrast tính lại khoảng **14,05:1**. Escape và click đều đóng rồi trả focus về Menu; search modal desktop vẫn mở/focus/đóng đúng. |
 | R2-12 | **PASS** | **CLOSED** | Profile, byline và Person/BlogPosting của ba bài cùng dùng **Ban Biên Tập Trang Trí 4 Mùa** và nối đúng author archive. |
@@ -2839,7 +2839,7 @@ Ba bảng cần sửa nay có chênh lệch bằng 0:
 
 Cả CTA Shop và category Noel có href `/#b2b-consultation`; click thật tải homepage, cuộn tới section B2B với `top=0`. Section có nội dung khảo sát/báo giá/VAT/thi công và CTA tel/Zalo dùng được về mặt liên kết.
 
-Sau điều hướng, section có `tabIndex=-1` mặc định nhưng không nhận focus; `activeElement` là `BODY`. Bàn phím tiếp tục từ đầu tài liệu thay vì vùng vừa mở. Cần cho target/heading nhận focus có quản lý sau navigation; không chỉ thêm fragment đúng.
+Sau điều hướng, section không nhận DOM focus và `activeElement` là `BODY`. R33 không ghi phím Tab kế tiếp, nên chưa đủ bằng chứng kết luận điểm bắt đầu sequential focus navigation ở đầu tài liệu hay tại fragment target. Cần kiểm Tab thực tế hoặc cho target/heading nhận focus có quản lý; R35 sau đó đã chứng minh bản sửa bằng Tab tới CTA.
 
 ### R2-15 — sửa visual order nhưng chưa sửa reading/focus order
 
@@ -3118,3 +3118,13 @@ Cả hai không có `X-Robots-Tag: noindex`.
 Như vậy hai phần từng thiếu đã được kiểm trực tiếp. Verdict **R2-06 CLOSED** của R35 được giữ; tổng hiện hành không đổi: **33 OPEN — 9 P1, 18 P2, 6 P3**.
 
 Bằng chứng: [JSON correction R36](review-evidence/2026-09-24/r36-r2-06-inventory-correction.json).
+
+---
+
+<a id="round-r37"></a>
+
+# Vòng R37 — Đính chính diễn giải keyboard R33
+
+R33 chỉ quan sát `activeElement=BODY` sau cross-page fragment navigation; JSON không ghi lần nhấn Tab kế tiếp. Trạng thái DOM focus đó không đủ để kết luận bàn phím bắt đầu lại từ đầu tài liệu, vì fragment target vẫn có thể trở thành sequential focus navigation starting point theo hành vi điều hướng fragment.
+
+Hai câu R33 đã được sửa thành **chưa chứng minh keyboard continuity**, không còn khẳng định Tab quay về đầu trang. Verdict cuối không đổi: R2-07 được **CLOSED tại R35** dựa trên phép thử thực tế sau bản sửa — target nhận focus và Tab kế tiếp tới CTA Zalo.
