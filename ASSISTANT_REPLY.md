@@ -4438,3 +4438,51 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-02 Complete**: Toàn bộ dữ liệu fixture order đã được purge sạch khỏi production database bằng WooCommerce API, có raw query SQL đối chứng độc lập, và tồn kho hoàn toàn không bị ảnh hưởng. Kính đề nghị Reviewer đóng chính thức issue `R2-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 74
+
+## Summary
+
+1. **R2-05 [P1] — Chuẩn Hóa Cụm Từ Trung Tính Trong Accordion FAQ Số 3 Bài Quán Cafe**:
+   - Vấn đề tại R104: Reviewer kiểm tra trực tiếp và xác nhận các thay đổi chính của Batch 72 đã đạt (không còn 15-20 phút, không còn hướng dẫn phun biểu diễn ngoài trời). Tuy nhiên, Reviewer chỉ ra một cụm từ cần chuẩn hóa:
+     - Cụm từ *"các giải pháp thị giác an toàn và ổn định"* trong câu kết của câu trả lời số 3 vô tình tạo ra một nhãn bảo đảm bao trùm mới.
+     - Hướng dẫn cụ thể của Reviewer: *"Đổi riêng cụm 'các giải pháp thị giác an toàn và ổn định' thành mô tả trung tính, ví dụ 'các giải pháp thị giác không sử dụng tuyết bọt'. Giữ nguyên gate hướng dẫn nhà sản xuất. Không cần sửa lại các bề mặt đã PASS hoặc bổ sung thông số kỹ thuật mới"*.
+   - Giải pháp kỹ thuật triệt để:
+     1. **Post 322 (Trang trí quán cafe) — Chuẩn hóa câu kết FAQ số 3**:
+        - Đổi cụm từ theo đúng chỉ đạo:
+          > *"Thay vào đó, quán nên tập trung vào **các giải pháp thị giác không sử dụng tuyết bọt** như cây thông phủ tuyết ép nhiệt, kết hợp ánh sáng đèn LED và decal dán kính lễ hội."*
+        - Giữ nguyên gate yêu cầu thiết bị chuyên dụng và hướng dẫn từ nhà sản xuất.
+     2. **Kiểm chứng thực tế trong Chromium headless**:
+        - Mở trực tiếp bài viết Post 322, bấm mở Accordion số 3 (`open: true`).
+        - Đọc rendered answer thực tế, xác nhận:
+          - `hasAnToanVaOnDinh = false`
+          - `hasKhongSuDungTuyetBot = true`
+   - **Kết luận**: Hạng mục cuối cùng của issue `R2-05` tại Round R104 đã được chuẩn hóa hoàn hảo, sẵn sàng để chính thức **ĐÓNG (CLOSED)** issue `R2-05`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-05 — Neutral Visual Solutions Wording in Post 322 FAQ 3
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Đổi "các giải pháp thị giác an toàn và ổn định" thành "các giải pháp thị giác không sử dụng tuyết bọt" trong câu trả lời FAQ số 3 của Post 322.
+- **Verification**: Trực tiếp click mở Accordion số 3 trong Chromium headless, xác nhận văn bản hiển thị chuẩn xác, không còn bất kỳ nhãn generic nào.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 74).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Accordion 3 Text Verification**:
+  - `hasAnToanVaOnDinh`: false
+  - `hasKhongSuDungTuyetBot`: true
+- **Full R2-05 Surfaces Verified**: Cả 4 bề mặt (Homepage hero, 13 PDPs, 3 bài cẩm nang, FAQ accordion) đều 100% đạt chuẩn trung tính và không còn bất kỳ cam kết tuyệt đối nào.
+
+## Notes for Reviewer
+
+1. **R2-05 Complete**: Cụm từ cuối cùng đã được điều chỉnh thành mô tả trung tính "các giải pháp thị giác không sử dụng tuyết bọt" theo đúng hướng dẫn tại R104. Kính đề nghị Reviewer đóng chính thức issue `R2-05`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
