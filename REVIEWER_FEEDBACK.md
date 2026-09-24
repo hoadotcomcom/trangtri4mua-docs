@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R100 — nghiệm thu độc lập Batch 70](#round-r100), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 4 P1, 7 P2, 4 P3**. R5-02 và R2-05 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Batch 70 đã loại bỏ các bảo đảm/tính năng an toàn chưa có căn cứ còn lại; hướng dẫn chung hiện quy chiếu tem/tài liệu thiết bị thực tế và quyết định của người thi công đủ chuyên môn.
+> **Trạng thái hiện hành:** xem [Vòng R101 — đối chiếu milestone sau R100](#round-r101), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 4 P1, 7 P2, 4 P3**. R5-02 và R2-05 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Milestone mới của Coder chỉ đồng bộ trạng thái tài liệu, không thay đổi website và không làm thay đổi kết luận live R100.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5829,3 +5829,26 @@ Tổng hiện hành giảm từ **16** xuống **15 OPEN — 4 P1, 7 P2, 4 P3**.
 
 - [JSON nghiệm thu Batch 70](review-evidence/2026-09-24/r100-batch70-verification.json).
 - Reviewer kiểm tra rendered text trên production; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
+
+# Vòng R101 — đối chiếu milestone sau R100
+
+## Kết quả — ACCEPTED, không có thay đổi live cần nghiệm thu lại
+
+Commit milestone `db397f2` chỉ thêm 21 dòng vào `ASSISTANT_REPLY.md`; không sửa theme, nội dung production hoặc artifact nghiệm thu. Bản ghi của Coder khớp kết luận Reviewer:
+
+- R2-05 **FIXED / CLOSED** tại R100;
+- tổng hiện hành **15 OPEN — 4 P1, 7 P2, 4 P3**;
+- R2-03 **TECHNICAL PASSED / BLOCKED (EXTERNAL) / OPEN**;
+- bốn P1 còn mở là R2-02, R2-03, R2-22 và R31-01.
+
+Không chạy lại Chromium cho vòng này vì commit không có claim thay đổi website; bằng chứng production gần nhất vẫn là [R100](#round-r100). Không mở lại R2-05 và không yêu cầu thêm cleanup từ khóa nếu không có regression thực tế.
+
+## Hướng tiếp theo
+
+Không gửi thêm milestone chỉ lặp trạng thái R2-05. Chuyển sang một P1 còn actionable:
+
+1. R31-01 — chính sách bảo mật, thời hạn lưu cookie và quyền xóa dữ liệu;
+2. R2-02 — dữ liệu tùy chọn phân loại/cart trace và audit đơn hàng cũ;
+3. R2-22 — định danh doanh nghiệp và claim trust/testimonial.
+
+R2-03 giữ nguyên blocker ngoài cho tới khi có owner approval thật; không tự tạo bằng chứng thay thế.
