@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R99 — nghiệm thu độc lập Batch 69](#round-r99), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN**. Batch 69 đã xóa các bảo đảm chống giật và conflation quá tải–đoản mạch nêu ở R97, nhưng hướng dẫn điện chung còn chưa có nguồn có thẩm quyền hoặc phê duyệt chuyên môn có attribution; bài dự toán vẫn gắn nhãn generic `an toàn` và đưa cảnh báo giật/cháy rộng.
+> **Trạng thái hiện hành:** xem [Vòng R100 — nghiệm thu độc lập Batch 70](#round-r100), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 4 P1, 7 P2, 4 P3**. R5-02 và R2-05 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Batch 70 đã loại bỏ các bảo đảm/tính năng an toàn chưa có căn cứ còn lại; hướng dẫn chung hiện quy chiếu tem/tài liệu thiết bị thực tế và quyết định của người thi công đủ chuyên môn.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -297,8 +297,10 @@ Nhờ người có chuyên môn duyệt nội dung an toàn; bỏ cam kết tuy�
 ### Acceptance criteria
 Không còn bảo đảm tuyệt đối hoặc mẹo hóa chất thiếu hướng dẫn nhà sản xuất; thông số và cách lắp được nguồn/owner chuyên môn duyệt, có điều kiện áp dụng rõ. Rà cả bài, FAQ, hero và PDP liên quan.
 
+**Cập nhật R100:** Batch 70 đã xóa các cam kết tuyệt đối, mẹo hóa chất, nhãn chống giật/an toàn generic, conflation quá tải–đoản mạch và cảnh báo kết quả giật/cháy rộng. Hướng dẫn còn lại quy chiếu tem/tài liệu của thiết bị thực tế, điều kiện địa điểm và người thi công đủ chuyên môn; không còn được trình bày như thuộc tính của thiết bị không xác định hoặc bảo đảm kết quả. Xem [R100](#round-r100).
+
 ### Status
-OPEN
+CLOSED
 
 ## [P1] R2-06 — Sitemap bỏ sót nội dung indexable và chứa URL noindex
 
@@ -5800,3 +5802,30 @@ Nếu chưa có một trong hai, đổi các nhãn generic `an toàn` và cảnh
 - [JSON nghiệm thu Batch 69](review-evidence/2026-09-24/r99-batch69-verification.json).
 - Reviewer kiểm tra rendered text và external links trên production; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
 - R2-05 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+# Vòng R100 — nghiệm thu độc lập Batch 70
+
+## R2-05 — FIXED / CLOSED
+
+Reviewer mở trực tiếp ba bài production bằng Chromium và đối chiếu toàn bộ nhóm câu Batch 70 cam kết sửa.
+
+### Kết quả đạt
+
+- Bài dự toán không còn `Củ nguồn hạ áp an toàn`, `Bộ đổi nguồn hạ áp an toàn`, `Dây bọc cách điện an toàn`, `Tiêu chuẩn an toàn`, `bộ nguồn an toàn` hoặc cảnh báo rộng về `giật điện`/`cháy các phụ kiện`.
+- Bài quán cafe không còn `biến áp an toàn`, `gia cố an toàn`, `che chắn an toàn`, `liên kết an toàn` hoặc các bảo đảm/tính năng điện bị loại ở R97–R99.
+- Cả ba bài tiếp tục không có `hair spray`, `keo sữa`, “an toàn tuyệt đối”, “không bao giờ”, `12V`, `24V`, `IP65`, `IP67`, `chống giật`, `đoản mạch`, `tự ngắt` hay claim `chống nước`.
+- Bài dự toán hiện yêu cầu đối chiếu bao bì/tem nhãn/tài liệu của thiết bị thực tế và để thợ điện hoặc đơn vị đủ năng lực tính công suất, bố trí lộ điện, thiết kế và lắp đặt.
+- Bài cafe đặt hướng dẫn cố định trong phạm vi tham khảo, phụ thuộc mặt sàn, gió và tư vấn đơn vị thi công chuyên trách; không còn hứa kết quả tuyệt đối.
+
+Tiêu đề chung `Khuyến cáo kỹ thuật & An toàn thi công` vẫn xuất hiện ở bài cafe. Đây là tên một mục cảnh báo, không phải claim rằng thiết bị có tính năng hoặc bảo đảm kết quả, nên không phải lỗi acceptance và không cần xóa chỉ để đạt zero-keyword.
+
+### Quyết định
+
+R2-05 được **FIXED / CLOSED**. Kết luận dựa trên nội dung thực tế và phạm vi acceptance, không dựa trên tuyên bố `FIXED` của Coder. Các khuyến nghị chung có điều kiện được chấp nhận; không yêu cầu model/manual cho từng câu khi bài đã giao quyết định thiết bị/lắp đặt cho tài liệu thực tế và người đủ chuyên môn.
+
+Tổng hiện hành giảm từ **16** xuống **15 OPEN — 4 P1, 7 P2, 4 P3**. Website chưa đạt điều kiện dừng vì còn 15 issue, trong đó có bốn P1 và R2-03 đang BLOCKED (EXTERNAL).
+
+## Bằng chứng R100
+
+- [JSON nghiệm thu Batch 70](review-evidence/2026-09-24/r100-batch70-verification.json).
+- Reviewer kiểm tra rendered text trên production; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.

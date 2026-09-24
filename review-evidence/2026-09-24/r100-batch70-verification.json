@@ -1,0 +1,96 @@
+{
+  "review_round": "R100",
+  "coder_batch": 70,
+  "surface": "https://trangtri4mua.com",
+  "method": "Rendered production text inspected in managed Chromium at 1440x1000 on all three R2-05 article URLs.",
+  "pages": [
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "absent": [
+        "giật điện",
+        "cháy các phụ kiện",
+        "Củ nguồn hạ áp an toàn",
+        "Bộ đổi nguồn hạ áp an toàn",
+        "Dây bọc cách điện an toàn",
+        "biến áp an toàn",
+        "Tiêu chuẩn an toàn",
+        "bộ nguồn an toàn",
+        "Tủ nguồn an toàn kèm aptomat",
+        "12V",
+        "24V",
+        "chống giật",
+        "đoản mạch",
+        "tự ngắt",
+        "chống nước",
+        "IP65",
+        "IP67",
+        "hair spray",
+        "keo sữa",
+        "an toàn tuyệt đối"
+      ],
+      "accepted_conditioned_guidance": [
+        "Đối chiếu thông số kỹ thuật và hướng dẫn lắp đặt trên bao bì hoặc tem nhãn nhà sản xuất.",
+        "Tính công suất và bố trí lộ điện theo tài liệu của thiết bị thực tế và để thợ điện hoặc đơn vị đủ năng lực thiết kế, lắp đặt.",
+        "Không còn gán đặc tính chống giật, chống đoản mạch, tự ngắt hoặc chống nước cho thiết bị không xác định."
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "absent": [
+        "giật điện",
+        "cháy các phụ kiện",
+        "Củ nguồn hạ áp an toàn",
+        "Bộ đổi nguồn hạ áp an toàn",
+        "Dây bọc cách điện an toàn",
+        "biến áp an toàn",
+        "gia cố an toàn",
+        "che chắn an toàn",
+        "liên kết an toàn",
+        "12V",
+        "24V",
+        "chống giật",
+        "đoản mạch",
+        "tự ngắt",
+        "chống nước",
+        "IP65",
+        "IP67",
+        "an toàn tuyệt đối",
+        "giảm thiểu tối đa rủi ro"
+      ],
+      "accepted_conditioned_guidance": [
+        "Thiết bị được chọn theo khuyến cáo và tem nhãn nhà sản xuất.",
+        "Gia cố và liên kết được mô tả là tham khảo, phụ thuộc mặt sàn, gió và tư vấn của đơn vị thi công chuyên trách.",
+        "Tiêu đề 'Khuyến cáo kỹ thuật & An toàn thi công' còn hiện nhưng không phải bảo đảm tính năng hay kết quả."
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "absent": [
+        "hair spray",
+        "keo sữa",
+        "không bao giờ",
+        "an toàn tuyệt đối"
+      ],
+      "present_as_warning": [
+        "tuyệt đối không dùng các hóa chất kết dính tự chế"
+      ]
+    }
+  ],
+  "assessment": {
+    "issue": "R2-05",
+    "status": "FIXED / CLOSED",
+    "rationale": [
+      "All original absolute safety promises and DIY chemical advice are absent.",
+      "Concrete anti-shock guarantees and overload-versus-short-circuit conflation identified in R97 are absent.",
+      "Batch70 removed the remaining generic safety labels and broad shock/fire outcome claims identified in R99.",
+      "Remaining recommendations defer actual specifications and installation decisions to the applicable manufacturer material and qualified professionals, with site conditions stated; they are not treated as claims about an unspecified product."
+    ],
+    "non_blocking_note": "The generic section heading containing 'An toàn thi công' remains, but it does not assert a device feature or guaranteed outcome and is not an acceptance failure."
+  },
+  "open_issue_total_after_closure": {
+    "total": 15,
+    "P1": 4,
+    "P2": 7,
+    "P3": 4
+  }
+}
