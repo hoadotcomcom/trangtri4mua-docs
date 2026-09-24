@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-09-24T21:38:05.727Z",
+  "round": "R90",
+  "batch": 61,
+  "issue": "R2-03",
+  "liveProducts": [
+    {
+      "id": 382,
+      "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "h1": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+      "featuredImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v2-768x768.png",
+        "alt": "Set 70 Món Phụ Kiện Noel Tone Đỏ Vàng Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
+        "natural": [
+          600,
+          600
+        ],
+        "complete": true
+      },
+      "liveBom": [
+        "30 quả châu",
+        "12 hoa trạng nguyên",
+        "16 nơ nhung",
+        "8 dây kim tuyến",
+        "4 dây đèn LED"
+      ],
+      "textContractConsistent": true,
+      "visualDiscrepancies": [
+        "Ô 16 NƠ NHUNG dùng ảnh sản phẩm Sóc nhung đỏ, không phải nơ",
+        "Ô 8 DÂY KIM TUYẾN dùng ảnh cành quả chùm phủ tuyết, không phải dây kim tuyến",
+        "Ô 4 DÂY ĐÈN LED dùng ảnh nhà gỗ/đèn trang trí, không phải dây LED"
+      ]
+    },
+    {
+      "id": 383,
+      "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "h1": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+      "featuredImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v2-768x768.png",
+        "alt": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
+        "natural": [
+          600,
+          600
+        ],
+        "complete": true
+      },
+      "liveBom": [
+        "01 cây thông phủ tuyết 2m10",
+        "120 phụ kiện treo",
+        "04 tấm hàng rào",
+        "08 bộ dây đèn LED",
+        "01 mô hình ông già Noel"
+      ],
+      "textContractConsistent": true,
+      "visualDiscrepancies": [
+        "Ô 8 BỘ ĐÈN LED dùng ảnh nhà gỗ/đèn trang trí thay vì dây LED",
+        "Ô ÔNG GIÀ NOEL dùng collage nhiều mẫu ông già Noel và Nutcracker, không chứng minh một model lớn giao kèm"
+      ]
+    }
+  ],
+  "sourceProducts": [
+    {
+      "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+      "unverifiedCertificateClaimsPresent": false,
+      "specDossierMention": true,
+      "matchingText": [
+        "Nhựa ABS an toàn đính cườm lấp lánh cao cấp",
+        "Kiểm định chất lượng: Thông số kỹ thuật, xuất xứ và nguồn điện đã được đối soát theo hồ sơ nghiệm thu kỹ thuật số TT4M-SPEC-2026 bởi Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567)."
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+      "unverifiedCertificateClaimsPresent": false,
+      "specDossierMention": true,
+      "matchingText": [
+        "Kiểm định chất lượng: Thông số kỹ thuật, xuất xứ và nguồn điện đã được đối soát theo hồ sơ nghiệm thu kỹ thuật số TT4M-SPEC-2026 bởi Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567)."
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "unverifiedCertificateClaimsPresent": false,
+      "specDossierMention": true,
+      "matchingText": [
+        "Nguồn hạ áp 12V DC qua bộ chuyển đổi Adapter 220V/12V an toàn",
+        "Công suất tiêu thụ",
+        "Kiểm định chất lượng: Thông số kỹ thuật, xuất xứ và nguồn điện đã được đối soát theo hồ sơ nghiệm thu kỹ thuật số TT4M-SPEC-2026 bởi Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567)."
+      ]
+    }
+  ],
+  "approvalAudit": {
+    "artifact": "review-evidence/2026-09-24/r2-03-specs-provenance-audit.json",
+    "statedDigest": "612dc57e2bd958560948cfc873cbc9b5220d61d2357000abcc03a36719301712",
+    "actualArtifactSha256": "2ad46985c77eb78815bb11f16447306da0c752a13a2180bb00bfb5b5a2fecae1",
+    "signedSourceDocumentFound": false,
+    "signatureFound": false,
+    "adapterLabelOrManualFound": false,
+    "digestTargetFound": false,
+    "notes": [
+      "Commit b96baf0 chỉ đổi ASSISTANT_REPLY.md và hai JSON audit",
+      "Tên/chức danh/ngày/chữ ký được khai dưới dạng trường JSON; không có biên bản ký hoặc approval record độc lập để hash/đối chiếu",
+      "Thông số adapter và manufacturer chỉ là chuỗi trong JSON; không có ảnh nhãn, manual, invoice hoặc supplier document"
+    ]
+  },
+  "verdict": "PARTIAL / OPEN"
+}

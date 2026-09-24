@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R89 — nghiệm thu độc lập Batch 60](#round-r89), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED bằng trace/capture DPR 1 và DPR 2 độc lập; R2-03 vẫn PARTIAL vì hai contract bundle mâu thuẫn mô tả bán hàng và hồ sơ TT4M-SPEC-2026 chưa có phê duyệt/chứng từ nguồn.
+> **Trạng thái hiện hành:** xem [Vòng R90 — nghiệm thu độc lập Batch 61](#round-r90), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì BOM chữ đã đồng bộ nhưng ảnh composite còn gắn sai ảnh thành phần, còn hồ sơ owner/adapter chỉ là JSON tự khai, chưa có biên bản ký hoặc ảnh nhãn/manual nguồn để audit.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5347,3 +5347,56 @@ Capture DPR 1 do Batch 60 bàn giao (`f53bc2…`) có card **Cây Thông Noel** 
 - Artifact Batch 60 được đối chiếu: [paired trace](review-evidence/2026-09-24/r5-02-paired-trace-verification.json) và [sharpness/crop matrix](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
 - Các acceptance lazy-load bài viết, payload homepage/mobile, mobile/tablet và link/layout/LCP đã được nghiệm thu ở R66, R76 và R79; R89 khép acceptance desktop DPR còn lại.
 - Đóng **R5-02 [P2]**. Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r90"></a>
+
+# Vòng R90 — nghiệm thu độc lập Batch 61
+
+## R2-03 — PARTIAL / OPEN
+
+### Phần đã sửa đúng
+
+Reviewer mở trực tiếp PDP production của ID 382 và 383 ở desktop 1440×1000:
+
+- ID 382 hiện đồng bộ H1, mô tả, ALT và BOM chữ: `30 châu + 12 hoa trạng nguyên + 16 nơ + 8 dây kim tuyến + 4 dây LED = 70 món`;
+- ID 383 hiện đồng bộ H1, mô tả, ALT và BOM chữ: `1 cây 2m10 + 120 phụ kiện + 4 hàng rào + 8 bộ LED + 1 ông già Noel`;
+- hai ảnh v2 live đều tải hoàn tất qua ứng viên 768×768;
+- ba PDP nguồn ID 279/294/295 không còn chuỗi **EN71-3**, **CE/RoHS** hoặc **V0** trong DOM. Việc xóa claim chứng nhận chưa có chứng thư là đúng.
+
+### Ảnh composite vẫn không chứng minh đúng BOM
+
+Ảnh v2 đã sửa chữ và tổng số lượng, nhưng một số ô sử dụng ảnh của sản phẩm khác:
+
+- ID 382: ô **16 Nơ nhung** dùng ảnh `soc-nhung-do` là mô hình sóc; ô **8 Dây kim tuyến** dùng ảnh cành quả chùm phủ tuyết; ô **4 Dây đèn LED** dùng ảnh nhà gỗ/đèn trang trí.
+- ID 383: ô **8 Bộ đèn LED** cũng dùng ảnh nhà gỗ/đèn trang trí; ô **Ông già Noel** là collage nhiều mẫu ông già Noel và Nutcracker, không xác định một mô hình lớn nào được giao.
+
+Vì vậy claim trong audit `imageCardMatchesBom: true` và “đồng bộ 100%” không đúng với chính pixel của ảnh live. Ảnh đại diện có thể là collage minh họa, nhưng nhãn từng ô không được gắn lên ảnh khác chủng loại; người mua phải nhận diện được thành phần họ sẽ nhận.
+
+### “Approval digest bất biến” chưa có đối tượng để kiểm
+
+Batch 61 thêm tên **Nguyễn Minh Trang**, chức danh, ngày ký và digest `612dc57e…` vào `r2-03-specs-provenance-audit.json`. Tuy nhiên:
+
+- commit `b96baf0` chỉ đổi `ASSISTANT_REPLY.md` và hai JSON audit;
+- repository không có biên bản `01/2026/BB-TT4M`, PDF/ảnh chữ ký, approval record độc lập hoặc file nào mang digest đã khai;
+- SHA-256 thực của JSON provenance là `2ad46985c77eb78815bb11f16447306da0c752a13a2180bb00bfb5b5a2fecae1`, không phải digest approval;
+- tìm toàn repository cho digest chỉ thấy nó được lặp trong `ASSISTANT_REPLY.md` và chính JSON tự khai.
+
+Một chuỗi hash không chứng minh “bất biến” nếu không có byte nguồn để tái tính hash. Các trường `approverName`, `signedDate` và `statement` do Coder nhập trong cùng JSON cũng không phải chữ ký hay record phê duyệt của owner.
+
+Tương tự, model adapter `TT4M-AD12V2A`, tên nhà sản xuất và thông số 12V/2A/24W chỉ xuất hiện dưới dạng chuỗi JSON. Không có ảnh nhãn adapter, manual, packing list, invoice hoặc tài liệu nhà cung cấp. Live PDP Tháp nhũ đã có 12V và công suất, nhưng acceptance “thông số từ nhãn/hướng dẫn nhà cung cấp” chưa được chứng minh.
+
+### Cần bổ sung
+
+1. Thay các ô ảnh sai chủng loại bằng ảnh đúng nơ, dây kim tuyến và dây LED; ảnh ông già Noel phải đại diện model thực tế giao kèm.
+2. Commit biên bản owner approval đã ký hoặc export record có nguồn xác định; ghi SHA-256 của chính file đó và gắn SKU/BOM được duyệt.
+3. Commit ảnh nhãn adapter/manual đủ đọc model, input/output, Class II và phạm vi sử dụng; nếu không có, giữ thông số ở mức không khẳng định nguồn nhà cung cấp.
+
+## Bằng chứng và tổng R90
+
+- [JSON nghiệm thu live và provenance Batch 61](review-evidence/2026-09-24/r90-batch61-verification.json).
+- [Audit ảnh Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- [Dossier provenance Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Reviewer mở trực tiếp hai ảnh v2 và năm PDP liên quan; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
