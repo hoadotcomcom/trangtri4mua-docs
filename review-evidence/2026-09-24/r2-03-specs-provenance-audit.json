@@ -2,17 +2,6 @@
   "timestamp": "2026-09-24T22:01:53.804Z",
   "issue": "R2-03",
   "title": "Product Specifications & Live State Verification Dossier (v5)",
-  "databaseApprovalRecord": {
-    "source": "WordPress wp_postmeta production database queryable via WP-CLI",
-    "approvedByMetaKey": "_tt4m_specs_approved_by",
-    "approvedAtMetaKey": "_tt4m_specs_approved_at",
-    "approvedVersionMetaKey": "_tt4m_specs_version",
-    "verifiedApprover": "Ban Biên Tập Trang Trí 4 Mùa (Admin ID 1, info@trangtri4mua.com)",
-    "verifiedVersion": "2.5.0-b64-live",
-    "verifiedTimestamp": "2026-09-24T21:40:00+00:00",
-    "queryCommand": "wp post meta get <ID> _tt4m_specs_approved_by --allow-root",
-    "allSixProductsVerified": true
-  },
   "complianceStatus": {
     "unapprovedElectricalValuesRemovedFromLive": true,
     "zero12vLeakageOnNonElectricalPdps": true,
@@ -98,5 +87,12 @@
       },
       "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     }
-  ]
+  ],
+  "ownerApprovalStatus": {
+    "status": "BLOCKED_AWAITING_EXTERNAL_OWNER_SIGN_OFF",
+    "category": "EXTERNAL_DEPENDENCY",
+    "description": "Yêu cầu nghiệm thu 'Owner duyệt thông số' được đánh dấu là Blocker bên ngoài theo đúng chỉ dẫn tại Round R94, chờ phê duyệt xác thực ngoài băng từ chủ sở hữu cửa hàng (Nguyễn Minh Trang) qua phiên đăng nhập quản trị độc lập.",
+    "selfAuthoredEvidenceProhibited": true,
+    "technicalImplementationStatus": "PASSED (Live DOM specifications, differentiated footnotes, clean BOMs, and authentic bundle photographs fully verified in Round R94)"
+  }
 }
