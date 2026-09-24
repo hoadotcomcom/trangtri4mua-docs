@@ -1,0 +1,42 @@
+{
+  "reviewRound": "R115",
+  "implementationBatch": 83,
+  "reviewedCommit": "ca94d18",
+  "targetIssue": "R5-01",
+  "decision": {
+    "batch83": "PARTIAL",
+    "r5_01": "PARTIAL / OPEN",
+    "reason": "The artifact identifies the LCP element but does not provide an LCP duration relative to navigation start. Its CDP event time/renderTime/loadTime values are absolute monotonic timestamps, and no navigation-start timestamp is preserved to normalize them. The field lcpDetails.size=143224 is rendered area, not bytes, despite the handoff labeling it as element size in bytes."
+  },
+  "acceptedEvidence": {
+    "fixedViewport": [375, 812],
+    "deviceScaleFactor": 1,
+    "cacheDisabledClaimRecorded": true,
+    "threeRuns": true,
+    "ttfbMs": [605.3, 624.6, 618.7],
+    "mainImageStartMs": [620.5, 639.9, 629.2],
+    "mainImageEndMs": [628.3, 647.5, 640.3],
+    "mainImage": "thap-nhu-dien-600x800.webp",
+    "mainImageEagerHigh": true,
+    "relatedImagesLazyAndNotRequestedEarly": true
+  },
+  "missingEvidence": {
+    "normalizedLcpMs": "Missing for all three runs",
+    "navigationStartOnCdpClock": "Missing; absolute PerformanceTimeline timestamps cannot be converted after the fact",
+    "sizeSemanticsCorrection": "lcpDetails.size is the rendered area of the LCP entry, not encoded bytes"
+  },
+  "reviewerReproduction": {
+    "viewport": [375, 812],
+    "deviceScaleFactor": 1,
+    "cacheDisabled": true,
+    "ttfbMs": [1666.0, 1223.2, 1152.5],
+    "mainImageStartMs": [1675.3, 1231.1, 1168.9],
+    "mainImageDurationMs": [958.3, 47.7, 41.4],
+    "mainImageEagerHigh": true,
+    "relatedImagesRequestedEarly": [0, 0, 0],
+    "largestContentfulPaintEntries": [0, 0, 0],
+    "note": "Managed Chromium did not expose LCP entries, matching the R40 limitation. Resource timings and loading policy were independently reconfirmed; they do not substitute for the missing LCP metric."
+  },
+  "requiredFollowup": "For each run, record navigation start and final LCP entry on the same clock, then persist normalizedLcpMs=(lcpEvent.time-navigationRequestTimestamp)*1000 (or equivalent PerformanceObserver startTime). Keep TTFB and image resource timing. Rename lcpDetails.size to renderedAreaPx2; do not call it bytes.",
+  "openCountsAfterReview": {"total": 14, "P0": 1, "P1": 3, "P2": 6, "P3": 4}
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R114 — từ chối handoff lặp Batch 82](#round-r114), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-04 và R2-14 đã CLOSED; không gửi thêm acknowledgement cho hai issue này. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R115 — kiểm toán ledger và nghiệm thu Batch 83](#round-r115), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-22 và R31-01 đã CLOSED từ R43/R72, không thuộc danh sách OPEN. R5-01 vẫn PARTIAL / OPEN vì Batch 83 chưa ghi giá trị LCP tương đối từ navigation start. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6306,3 +6306,65 @@ Không có implementation production, hành vi mới, artifact độc lập ho�
 - [JSON kiểm tra Batch 82](review-evidence/2026-09-24/r114-batch82-verification.json).
 - Không chạy lại production vì commit không có thay đổi website.
 - Không đóng/mở issue. Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
+
+<a id="round-r115"></a>
+
+# Vòng R115 — kiểm toán ledger và nghiệm thu Batch 83
+
+## Đính chính ledger hiện hành
+
+Reviewer dựng lại ledger theo từng ID và **verdict theo thời gian mới nhất**, không tiếp tục trừ dần từ tổng lịch sử. Câu tại R101 gọi R2-22 và R31-01 là P1 còn mở là sai:
+
+- **R2-22 đã CLOSED tại R43**;
+- **R31-01 đã CLOSED tại R72**.
+
+Danh sách OPEN có căn cứ hiện hành:
+
+- **P0:** R2-02.
+- **P1:** R2-01, R2-03, R27-01.
+- **P2:** R2-11, R2-16, R2-18, R5-01, R21-02, R25-01.
+- **P3:** R12-01, R16-01, R24-01, R26-01.
+
+Tổng theo tập ID này vẫn là **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. Việc tổng trùng R114 là kết quả đối chiếu lại, không phải xác nhận cách trừ kế thừa. Từ vòng này, mọi thay đổi tổng phải xuất phát từ ledger ID cụ thể.
+
+## R5-01 / Batch 83 — PARTIAL / OPEN
+
+### Phần được chấp nhận
+
+Artifact có ba lượt cùng cấu hình 375×812, DPR1 và khai báo cache disabled. Mỗi lượt ghi:
+
+- TTFB;
+- thời điểm bắt đầu/kết thúc request ảnh chính;
+- ảnh chính `thap-nhu-dien-600x800.webp`, `loading=eager`, `fetchpriority=high`;
+- bốn ảnh related đều lazy và chưa phát request sớm;
+- CDP xác định ảnh chính là LCP candidate cuối.
+
+Reviewer đo lại ba lượt với cache disabled. Ảnh chính tiếp tục eager/high, bốn ảnh related không request sớm. TTFB quan sát là `1666,0 / 1223,2 / 1152,5 ms`; request ảnh bắt đầu ở `1675,3 / 1231,1 / 1168,9 ms`. Chênh lệch mạng so với artifact không tự tạo lỗi vì acceptance không đặt ngưỡng tuyệt đối.
+
+### Blocker còn lại
+
+Batch 83 **chưa ghi giá trị LCP theo milliseconds từ navigation start**:
+
+- `lcpEvent.time`, `renderTime` và `loadTime` trong artifact là timestamp monotonic tuyệt đối khoảng `1790293700.x`;
+- artifact không lưu navigation request timestamp hoặc `navigationStart` trên cùng clock;
+- do đó không thể tính LCP duration sau khi thu thập;
+- bảng handoff chỉ ghi FCP và URL LCP, không có cột LCP ms.
+
+Ngoài ra, `lcpDetails.size = 143224` là diện tích render của entry, **không phải bytes**. Nhãn “LCP Element Size (bytes)” trong handoff sai đơn vị.
+
+Managed Chromium của Reviewer không trả LCP entry trong ba lượt, giống giới hạn đã ghi tại R40. Resource timing và thuộc tính tải không thay thế metric LCP mà acceptance yêu cầu. Vì vậy chưa đóng R5-01.
+
+### Bàn giao chính xác
+
+Không đổi loading policy hoặc tạo diff production. Chỉ bổ sung ba record có:
+
+1. navigation start và LCP event trên cùng clock;
+2. `normalizedLcpMs = (lcpEvent.time - navigationRequestTimestamp) × 1000`, hoặc `PerformanceObserver.startTime` tương đương;
+3. TTFB và request timing ảnh chính như hiện có;
+4. đổi tên `size` thành `renderedAreaPx2`, không gọi là bytes.
+
+## Bằng chứng và tổng R115
+
+- [Ledger hiện hành theo 42 ID](review-evidence/2026-09-24/r115-current-issue-ledger.json).
+- [JSON nghiệm thu Batch 83](review-evidence/2026-09-24/r115-batch83-verification.json).
+- R5-01 giữ **PARTIAL / OPEN**. Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
