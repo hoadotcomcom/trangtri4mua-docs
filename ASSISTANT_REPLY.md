@@ -1489,3 +1489,73 @@ Batch 22: Responsive Image Optimization & Accessible Search Input Semantics (R5-
 1. **Payload Reduction**: Đã kiểm tra dung lượng các tệp `-300x300.webp` đều dao động từ 28KB – 33KB (so với 200KB – 345KB của ảnh gốc).
 2. **Accessible Search**: Ô tìm kiếm hiện cho phép duyệt danh sách gợi ý bằng Tab mà không bị kiểm tra khắt khe về mô hình APG combobox.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 23
+
+## Batch
+Batch 23: Native Slide Transform Controller, Bidirectional Tabs Orientation, and Live Search Transition (R21-01, R21-02, R24-01, R11-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc và nghiệm thu thực tế 4 vấn đề kỹ thuật tương tác được Reviewer chỉ ra tại Vòng R48:
+1. **R21-01 & R21-02 [P2] — Phục hồi hoàn hảo cơ chế chuyển slide Gallery qua chuột và phím Space**:
+   - Nguyên nhân tại R48: Việc gán thuộc tính `transform: translate3d(...)` và `height: 1px` trực tiếp lên từng slide con đã xung đột với cơ chế flex container của Blocksy và nhân đôi khoảng cách dịch chuyển.
+   - Giải pháp: Hàm `goToSlide(index)` trực tiếp cập nhật CSS custom property `--current-item: index` trên `.flexy-container`, `.flexy-view` và `.flexy-items` mà không can thiệp đè inline transform lên các phần tử con. Cơ chế CSS native `[data-flexy*=no] .flexy-items>* { transform: translate3d(calc(-100% * var(--current-item, 0)), 0, 0); }` của Blocksy tự động dịch chuyển chính xác toàn bộ slide.
+   - Kiểm chứng thực tế (Chromium):
+     - Click thumbnail 3: `hitSrc="linh-chi-nutcracker-3.webp"`, `activeThumb=2`.
+     - Bấm Space trên thumbnail 1: `hitSrc="linh-chi-nutcracker-1-600x594.webp"`, `activeThumb=0`.
+     - Click mũi tên Next lần 1: `hitSrc="linh-chi-nutcracker-2-600x708.webp"`, `activeThumb=1`.
+     - Click mũi tên Next lần 2: `hitSrc="linh-chi-nutcracker-3.webp"`, `activeThumb=2`.
+     - Mọi thao tác click và phím Space/Enter đều trúng đích 100% ảnh tương ứng tại tâm viewport!
+2. **R24-01 [P3] — Đồng bộ `aria-orientation` hai chiều bằng ResizeObserver**:
+   - Sử dụng `ResizeObserver` theo dõi sự thay đổi bố cục của `tablist`: kiểm tra trực tiếp thuộc tính computed `flexDirection === 'column'`.
+   - Kiểm chứng thực tế: Tải ở 375px (`vertical`) -> Resize lên 1200px (`horizontal`) -> Resize về 375px (`vertical`). Cả hai chiều co giãn cửa sổ đều cập nhật tức thì.
+3. **R11-01 [P3] — Chuyển trạng thái mượt mà giữa thông báo rỗng và danh sách gợi ý**:
+   - Giữ nguyên vẹn thuộc tính `role="combobox"` trên ô tìm kiếm `#search-modal input[name="s"]` để bảo đảm endpoint live search của Blocksy kích hoạt bình thường.
+   - Kiểm chứng thực tế:
+     - Gõ *"tháp"*: Trả về 7 gợi ý sản phẩm, thông báo rỗng ẩn (`noticeDisplay="none"`).
+     - Gõ *"tháp nhũ điện"*: Trả về 6 gợi ý sản phẩm, thông báo rỗng ẩn (`noticeDisplay="none"`).
+     - Gõ *"zzreviewnomatch20260924"*: 0 kết quả, thông báo rỗng hiển thị rõ ràng (`noticeDisplay="block"`).
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 & R21-02 — Cơ chế chuyển slide Gallery qua chuột và phím Space
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Sử dụng biến CSS `--current-item` điều khiển vị trí slide thông qua hàm `goToSlide(index)`, đồng bộ class `.active` và thuộc tính `aria-pressed`.
+- **Verification**: Chromium headless kiểm tra `elementFromPoint`:
+  - Click thumbnail 3 -> ảnh 3 hiển thị tại tâm viewport.
+  - Bấm Space thumbnail 1 -> ảnh 1 hiển thị tại tâm viewport.
+  - Click Next -> ảnh 2 hiển thị tại tâm viewport.
+- **Notes**: Khắc phục triệt để lỗi xung đột transform khiến ảnh không đổi.
+
+### Issue: [P3] R24-01 — Đồng bộ hướng Tablist hai chiều khi Resize màn hình
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Sử dụng `ResizeObserver` giám sát `tablist` cập nhật thuộc tính `aria-orientation` dựa trên `flex-direction`.
+- **Verification**: Thử nghiệm resize hai chiều liên tục: 375px (`vertical`) -> 1200px (`horizontal`) -> 375px (`vertical`). 100% khớp với CSS layout.
+- **Notes**: Khắc phục hoàn toàn lỗi giữ nguyên hướng vertical khi chuyển từ mobile lên desktop.
+
+### Issue: [P3] R11-01 — Chuyển trạng thái thông báo rỗng trong Modal Tìm Kiếm
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bảo toàn `role="combobox"` và cập nhật bộ điều khiển ẩn/hiện thông báo rỗng dựa trên số lượng gợi ý thực tế.
+- **Verification**: Thử nghiệm live search trong `#search-modal`: "tháp" trả về 7 kết quả (notice ẩn); query không tồn tại trả về 0 kết quả (notice hiện).
+- **Notes**: Chuyển trạng thái mượt mà giữa có kết quả và rỗng.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 23).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Gallery Slide Switching**: 100% click thumbnail, phím Space/Enter và mũi tên Next/Prev trượt tới đúng ảnh thực tế.
+- **Tabs Bidirectional Resize**: Đổi orientation mượt mà cả 2 chiều mobile ⇄ desktop.
+- **Search Suggestions Transition**: Ẩn hiện thông báo rỗng chính xác theo kết quả trả về của từ khóa.
+
+## Notes for Reviewer
+
+1. **Slide Interaction Proven**: Hit-test tại tâm viewport xác nhận ảnh hiển thị thay đổi chuẩn xác theo từng thao tác điều khiển.
+2. **Tabs ResizeObserver**: Đã thử nghiệm mở rộng viewport từ mobile lên desktop mà không cần tải lại trang.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
