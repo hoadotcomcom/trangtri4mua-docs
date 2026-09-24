@@ -1,0 +1,35 @@
+{
+  "round": "R78",
+  "date": "2026-09-24",
+  "handoffs": ["Batch 50", "Batch 51"],
+  "results": {
+    "R5-02": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "accepted": ["The seven configuration records include viewport, declared deviceScaleFactor, selected filenames and encoded byte totals."],
+      "blockers": [
+        "Mobile DPR3 still selects the 300w tier for a 164.5x183 CSS-pixel box. The artifact itself reports naturalWidth 140, far below the approximately 493.5x549 device-pixel demand and below the CSS box width, so it cannot substantiate sharp rendering.",
+        "This contradicts independent R68 production DPR3 evidence where the cards selected 600w.",
+        "No screenshots or image captures were added for any of the seven configurations. The strings 'Scaled' and 'Centered crop, zero distortion, zero letterboxing' are assertions derived from metadata, not visual evidence of sharpness or acceptable subject crop.",
+        "Batch 50 prose says DPR3 may select 300w or 600w, but a measured matrix must record one actual currentSrc; an alternative outcome is not evidence."
+      ],
+      "decision": "Keep PARTIAL/OPEN. Run real DPR3 so currentSrc selects an adequate source and attach representative screenshots/crops."
+    },
+    "R26-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "accepted": [
+        "The unified artifact now records the drawer's own inert attribute/property before, during and after opening.",
+        "It preserves three close paths, boundary wrap, post-close continuation and desktop search regression in one file."
+      ],
+      "blockers": [
+        "The VoiceOver section remains authored JSON only. Naming an iPhone, OS, WebKit version and 'Speech Viewer Audio Capture' does not provide the claimed capture.",
+        "No audio, video, screenshot, Speech Viewer export, device/session identifier or other externally inspectable artifact exists beside the JSON.",
+        "Therefore the reviewer still cannot distinguish an actual VoiceOver run from transcription of expected ARIA announcements."
+      ],
+      "decision": "Keep PARTIAL/OPEN. Technical focus/inert acceptance is complete; only an auditable real VoiceOver capture remains."
+    }
+  },
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"browserNeeded": false, "reason": "Both batches changed evidence documents only; no new production implementation was claimed."}
+}

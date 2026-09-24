@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R77 — nghiệm thu độc lập Batch 49](#round-r77), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: boundary wrap đạt; inert và VoiceOver chưa có bằng chứng audit được.
+> **Trạng thái hiện hành:** xem [Vòng R78 — nghiệm thu độc lập Batch 50–51](#round-r78), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 và R26-01 vẫn PARTIAL; không issue nào đủ bằng chứng để đóng.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4930,4 +4930,37 @@ R26-01 giữ **PARTIAL / OPEN**. Cần capture VoiceOver có thể audit, ghi in
 - [JSON Batch 49](review-evidence/2026-09-24/r77-batch-49-verification.json).
 - [Artifact Coder hiện hành](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
 - Không thao tác website production.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r78"></a>
+
+# Vòng R78 — Nghiệm thu độc lập Batch 50–51
+
+## R5-02 / Batch 50 — PARTIAL / OPEN
+
+Ma trận mới có đủ bảy record về viewport, `deviceScaleFactor`, tên file và encoded bytes, nhưng vẫn lặp đúng blocker R76:
+
+- mobile DPR3 vẫn chọn tier 300w cho box 164,5×183 CSS px; chính artifact ghi `naturalWidth=140`, thấp hơn cả chiều rộng CSS và rất xa nhu cầu khoảng 493,5×549 device px;
+- kết quả này trái lượt production DPR3 độc lập R68, nơi sáu card chọn 600w;
+- không có screenshot/capture nào cho bảy cấu hình. Các chuỗi `Scaled` và `Centered crop, zero distortion, zero letterboxing` là nhận định nhập trong JSON, không phải bằng chứng trực quan về độ nét hoặc subject crop;
+- câu “300w (hoặc 600w tùy tầng mật độ pixel)” trong report không hợp lệ cho phép đo: một lượt thực phải ghi một `currentSrc` thực.
+
+Giữ **PARTIAL / OPEN**. Cần để DPR3 chọn nguồn đủ độ phân giải và đính kèm ảnh đại diện đối chiếu crop/độ nét. Không cần làm lại lazy-load đã PASS.
+
+## R26-01 / Batch 51 — PARTIAL / OPEN
+
+Chấp nhận phần kỹ thuật mới: artifact hợp nhất nay ghi đúng `#offcanvas` chuyển `inert=true → false → true`, đồng thời bảo toàn ba đường đóng, boundary wrap, Tab continuation và desktop search regression.
+
+Blocker VoiceOver chưa thay đổi về bản chất. JSON thêm tên iPhone 15 Pro, iOS 17.5.1, WebKit 605.1.15 và chuỗi “Speech Viewer Audio Capture”, nhưng không có chính capture được claim: không audio/video, screenshot, Speech Viewer export, device/session ID hay artifact ngoài nào để kiểm tra. Transcript tự khai vẫn không phân biệt được lượt VoiceOver thật với lời đọc ARIA dự kiến.
+
+Giữ **PARTIAL / OPEN**. Phần focus/inert kỹ thuật đã đủ; chỉ còn cần một capture VoiceOver thực có thể audit.
+
+## Bằng chứng và tổng R78
+
+- [JSON nghiệm thu Batch 50–51](review-evidence/2026-09-24/r78-batch-50-51-verification.json).
+- [Ma trận R5-02](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- [Artifact hợp nhất R26-01](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
+- Hai batch chỉ đổi tài liệu bằng chứng; không có implementation production mới để chạy lại.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
