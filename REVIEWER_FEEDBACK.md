@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R64 — nghiệm thu độc lập Batch 36](#round-r64), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. Ba issue screen reader giữ PARTIAL: Batch 36 chỉ thêm transcript tự khai, không có artifact phiên thử để đối chiếu.
+> **Trạng thái hiện hành:** xem [Vòng R65 — nghiệm thu độc lập Batch 37](#round-r65), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: Batch 37 thiếu touch, regression criteria 2–3 và artifact staging/network có thể audit.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4528,4 +4528,33 @@ Không yêu cầu nhiều tổ hợp. Mỗi component chỉ cần **một** tổ
 
 - [JSON Batch 36](review-evidence/2026-09-24/r64-batch-36-verification.json).
 - Không chạy lại browser vì Batch 36 không đổi website và phần browser/AX đã đạt ở các vòng trước; vòng này chỉ đánh giá tính kiểm chứng của claim screen reader.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r65"></a>
+
+# Vòng R65 — Nghiệm thu độc lập Batch 37
+
+## R25-01 — PARTIAL / OPEN
+
+Phần đã đạt không bị hạ:
+
+- R45 đã chứng minh production không render lại giá cũ sau reset;
+- R45 đã chứng minh 1m2/1m5/1m8 ổn định ra đúng ID 296/297/298 và giá 550.000/755.000/895.000₫;
+- chuỗi đổi nhanh rồi reset đã kết thúc ở select/ID rỗng, panel ẩn và CTA khóa.
+
+Batch 37 chỉ thêm 44 dòng claim vào `ASSISTANT_REPLY.md` ở commit `ae8068e`; không có thay đổi site, trace tương tác hay artifact staging/network. Vì vậy chưa đủ đóng:
+
+1. Acceptance 1 yêu cầu **chuột/chạm/Enter**. Báo cáo chỉ nêu desktop mouse và Enter; thiếu touch. Hai lượt được mô tả cũng không có timeline thô để đối chiếu mốc 180ms/1,5s.
+2. Acceptance 2 còn reset rồi chọn lại và thứ tự hủy khi đổi nhanh nhiều biến thể; Batch 37 không thêm bằng chứng cho các nhánh này ngoài chuỗi script đã được chấp nhận trước.
+3. Acceptance 3 yêu cầu regression ba biến thể, quantity/min=1 trên sản phẩm biến thể/đơn, desktop/mobile; Batch 37 không cung cấp ma trận đó.
+4. Acceptance 4 yêu cầu staging an toàn. Claim `emptyCtaNetworkRequests: []` không đi kèm staging URL/build, HAR/network export, trace hay screenshot. Việc click nút đang disabled rồi thấy 0 request cũng chưa chứng minh đầy đủ mọi CTA kiểm tra lựa chọn hợp lệ.
+
+Để đóng: bổ sung touch rapid reset; reset→reselect và multi-select cancellation; ma trận desktop/mobile cho ba size + quantity; và một trace/HAR staging gắn với URL/build, chứa thao tác CTA khi ID rỗng cùng danh sách request thực tế.
+
+## Bằng chứng và tổng R65
+
+- [JSON Batch 37](review-evidence/2026-09-24/r65-batch-37-verification.json).
+- Không thao tác CTA trên production, thêm giỏ hoặc tạo đơn.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

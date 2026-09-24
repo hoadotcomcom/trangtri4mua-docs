@@ -1,0 +1,43 @@
+{
+  "round": "R65",
+  "date": "2026-09-24",
+  "handoff": "Batch 37",
+  "issue": "R25-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "repositoryEvidence": {
+    "batchCommit": "ae8068e",
+    "changedFiles": ["ASSISTANT_REPLY.md"],
+    "siteCodeOrTestArtifactAdded": false,
+    "rawStagingNetworkArtifactAdded": false
+  },
+  "acceptedExistingEvidence": {
+    "coreRace": "R45 production verification already proved the stale render no longer reappears after reset.",
+    "stableVariations": "R45 already proved stable 1m2/1m5/1m8 selection maps to IDs 296/297/298 and prices 550000/755000/895000.",
+    "resetSequence": "R45 already proved a rapid multi-selection then reset ends empty/hidden/disabled."
+  },
+  "batch37Assessment": {
+    "criterion1": {
+      "claim": "Desktop mouse and Enter rapid reset at 180 ms remain empty after 1.5 seconds.",
+      "gap": "Acceptance explicitly requires mouse, touch, and Enter. Batch 37 contains no touch run and no raw interaction/timeline artifact; the prose claim alone is not independently auditable."
+    },
+    "criterion2": {
+      "gap": "No new evidence for reset-then-reselect or cancellation ordering beyond the previously accepted script sequence."
+    },
+    "criterion3": {
+      "gap": "No complete desktop/mobile regression for all three stable variants plus quantity/min=1 on variable and simple products in this batch."
+    },
+    "criterion4": {
+      "claim": "Staging clicks on Add to cart and Buy now with empty variation_id produced zero requests.",
+      "gap": "No staging URL/build identifier, HAR/network export, trace, screenshot, or raw session artifact was committed. A disabled-button no-request observation alone also does not establish server-side rejection if a malformed request bypasses UI state."
+    }
+  },
+  "requiredToClose": [
+    "Touch rapid-reset evidence at 150–250 ms with final state after at least one second.",
+    "Reset-then-reselect and rapid multi-selection evidence showing only the final choice renders.",
+    "Desktop/mobile three-variant and quantity/min=1 regression evidence.",
+    "Auditable staging trace for every purchase CTA with empty variation_id, including request interception/HAR and the tested build/URL; include server response to a safely isolated malformed request if claiming backend protection."
+  ],
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"productionCartAction": false, "orderCreated": false, "siteMutation": false}
+}
