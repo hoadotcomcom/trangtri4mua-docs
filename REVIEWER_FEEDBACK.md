@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R43 — nghiệm thu độc lập Batch 13–15](#round-r43), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **24 OPEN — 6 P1, 12 P2, 6 P3**. R43 đóng R2-10, R2-04, R2-22 và R2-23; R2-21/R26-01 giữ OPEN.
+> **Trạng thái hiện hành:** xem [Vòng R44 — nghiệm thu độc lập Batch 16](#round-r44), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **23 OPEN — 6 P1, 11 P2, 6 P3**. R44 đóng R2-17; R6-01 giữ OPEN vì schema chưa có ProductGroup/quan hệ Product biến thể.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **24 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **23 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3739,3 +3739,74 @@ Listing được ưu tiên rõ rệt, ngữ cảnh mùa đúng và lối báo gi
 - [JSON Batch 13–15](review-evidence/2026-09-24/r43-batches-13-15-verification.json).
 - Chỉ submit form rỗng, không tạo lead; không submit checkout hoặc tạo đơn. Sản phẩm test đã xóa, giỏ cuối vòng **0₫ / 0**; 6 browser tab đã đóng.
 - Đóng **2 P1 + 2 P2**, không thêm issue. Tổng mới: **24 OPEN — 6 P1, 12 P2, 6 P3**.
+
+---
+
+<a id="round-r44"></a>
+
+# Vòng R44 — Nghiệm thu độc lập Batch 16
+
+Đã parse raw JSON-LD của 4 PDP variable + 2 simple control và kiểm trực tiếp bốn landing nội dung. Kết quả: **R2-17 CLOSED**; R6-01 cải thiện nhưng chưa đạt mô hình variant trong acceptance.
+
+## Ma trận verdict R44
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R6-01 | PARTIAL | OPEN | AggregateOffer đã bỏ, Offer/URL/giá đúng hơn; không có ProductGroup hoặc Product node theo biến thể |
+| R2-17 | PASS | **CLOSED** | Hai archive indexable có intent/intro/meta riêng; parent mỏng noindex, hub giàu nội dung giữ index |
+
+## R6-01 — Offer array không thay thế ProductGroup/variant model
+
+Phần đã đạt:
+
+- 4 PDP variable không còn `AggregateOffer`.
+- Tháp nhũ có 3 Offer giá 550.000 / 755.000 / 895.000 VND.
+- Kẹo có 5 Offer; hai cây có 4/3 Offer với SKU/giá/availability riêng.
+- URL Offer thử trực tiếp chọn đúng option: Tháp query `attribute_pa_kich-thuoc=5` chọn `1m5`; cây PE query `attribute_kich-thuoc=1m8` chọn `1m8`.
+- Canonical của URL chọn trước vẫn là PDP nhóm.
+- Quả châu cườm giữ một Offer 95.000 VND; combo simple mẫu giữ một Offer 750.000 VND.
+
+Blocker:
+
+- Mỗi PDP variable vẫn chỉ có **một `Product` cha với `offers: [Offer, ...]`**.
+- 0 `ProductGroup`.
+- 0 `hasVariant`, `variesBy`, `productGroupID` hoặc `isVariantOf`.
+- 0 Product node riêng cho từng biến thể.
+- Tháp dùng tên Offer hậu tố raw `5` / `8` thay vì nhãn người dùng `1m5` / `1m8`.
+- Batch không có Rich Results Test proof cho mô hình mới.
+
+Acceptance R6-01 yêu cầu mỗi biến thể có Product/Offer và quan hệ nhóm rõ, không chỉ tách `AggregateOffer` thành một mảng Offer dưới cùng Product. Bản hiện tại mô tả nhiều offer nhưng chưa mô tả variant model. R6-01 giữ **PARTIAL / OPEN**.
+
+## R2-17 — CLOSED
+
+### Hai archive indexable
+
+`/category/y-tuong-trang-tri/noel/`:
+
+- `index, follow`, self-canonical;
+- H1 `Danh mục Ý Tưởng Trang Trí Noel`;
+- title/meta riêng về cẩm nang Giáng Sinh 2026;
+- intro nhìn thấy mô tả chọn size cây, setup cafe và dự toán Noel.
+
+`/category/y-tuong-trang-tri/huong-dan/`:
+
+- `index, follow`, self-canonical;
+- H1 `Danh mục Hướng Dẫn & Kinh Nghiệm`;
+- title/meta riêng về kỹ thuật thi công, điện LED, cố định và bảo quản;
+- intro nhìn thấy tập trung kỹ thuật/an toàn.
+
+Ba bài hiện cùng thuộc cả hai taxonomy; đây là overlap hợp lệ của tập nội dung nhỏ, không còn ba landing chỉ khác heading: intent, intro và metadata đã phân hóa.
+
+### Archive mỏng và hub
+
+- Parent `/category/y-tuong-trang-tri/`: `noindex, follow`.
+- Hub `/y-tuong-trang-tri/`: `index, follow`, self-canonical, metadata riêng và nội dung điều hướng/FAQ/sản phẩm phong phú.
+- Các archive phụ/rỗng được bàn giao noindex, không tạo landing rỗng indexable mới.
+
+Vai trò taxonomy nay rõ: archive chuyên đề indexable có nội dung riêng; parent mỏng không cạnh tranh hub. R2-17 **CLOSED**.
+
+## Bằng chứng và tổng R44
+
+- [JSON Batch 16](review-evidence/2026-09-24/r44-batch-16-verification.json).
+- Chỉ GET/raw parse, không dùng browser hoặc phát sinh side effect.
+- Đóng **1 P2**, không thêm issue. Tổng mới: **23 OPEN — 6 P1, 11 P2, 6 P3**.

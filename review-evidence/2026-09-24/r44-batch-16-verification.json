@@ -1,0 +1,396 @@
+{
+  "round": "R44",
+  "date": "2026-09-24",
+  "handoff": "Batch 16",
+  "verdicts": {
+    "R6-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "schema": {
+        "thap": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "canonical": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet",
+              "sku": "TT4M-089",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "array",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": "Tháp nhũ điện - Trang trí Noel - 1m2",
+                  "price": "550000",
+                  "sku": "TT4M-089-1m2",
+                  "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=1m2"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Tháp nhũ điện - Trang trí Noel - 5",
+                  "price": "755000",
+                  "sku": "TT4M-089-5",
+                  "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=5"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Tháp nhũ điện - Trang trí Noel - 8",
+                  "price": "895000",
+                  "sku": "TT4M-089-8",
+                  "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=8"
+                }
+              ]
+            }
+          ]
+        },
+        "candy": {
+          "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+          "canonical": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+              "sku": "TT4M-074",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "array",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": "Kẹo gậy trang trí Noel - Trang trí Noel - keo-tron-1m5",
+                  "price": "950000",
+                  "sku": "TT4M-074-1m50",
+                  "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-tron-1m5"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Kẹo gậy trang trí Noel - Trang trí Noel - keo-gay-1m8",
+                  "price": "1150000",
+                  "sku": "TT4M-074-80",
+                  "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-1m8"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Kẹo gậy trang trí Noel - Trang trí Noel - keo-gay-2m",
+                  "price": "1450000",
+                  "sku": "TT4M-074-2m",
+                  "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-2m"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Kẹo gậy trang trí Noel - Trang trí Noel - keo-gay-2m5",
+                  "price": "1650000",
+                  "sku": "TT4M-074-50",
+                  "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-2m5"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Kẹo gậy trang trí Noel - Trang trí Noel - keo-tron-1m2",
+                  "price": "750000",
+                  "sku": "TT4M-074-20",
+                  "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-tron-1m2"
+                }
+              ]
+            }
+          ]
+        },
+        "pe": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "canonical": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+              "sku": "CT-PE-SNOW",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "array",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m5",
+                  "price": "850000",
+                  "sku": "CT-PE-150",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=1m5"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m8",
+                  "price": "1250000",
+                  "sku": "CT-PE-180",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=1m8"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m1",
+                  "price": "1850000",
+                  "sku": "CT-PE-210",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=2m1"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m4",
+                  "price": "2650000",
+                  "sku": "CT-PE-240",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=2m4"
+                }
+              ]
+            }
+          ]
+        },
+        "cuoc": {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "canonical": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+              "sku": "CT-CUOC-PINE",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "array",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m5",
+                  "price": "750000",
+                  "sku": "CT-CUOC-150",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=1m5"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m8",
+                  "price": "1100000",
+                  "sku": "CT-CUOC-180",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=1m8"
+                },
+                {
+                  "type": "Offer",
+                  "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 2m1",
+                  "price": "1650000",
+                  "sku": "CT-CUOC-210",
+                  "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=2m1"
+                }
+              ]
+            }
+          ]
+        },
+        "simple": {
+          "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+          "canonical": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#richSnippet",
+              "sku": "TT4M-079",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "object",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": null,
+                  "price": "95000",
+                  "sku": null,
+                  "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/"
+                }
+              ]
+            }
+          ]
+        },
+        "combo": {
+          "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "canonical": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "products": [
+            {
+              "type": "Product",
+              "id": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/#richSnippet",
+              "sku": "COMBO-GD-50",
+              "productGroupID": null,
+              "variesBy": null,
+              "hasVariantCount": 0,
+              "offerShape": "object",
+              "offers": [
+                {
+                  "type": "Offer",
+                  "name": null,
+                  "price": "750000",
+                  "sku": null,
+                  "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "variantUrls": [
+        {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=5",
+          "selected": [
+            "1m5"
+          ],
+          "canonical": "https://trangtri4mua.com/san-pham/thap-nhu-dien/"
+        },
+        {
+          "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=1m8",
+          "selected": [
+            "1m8"
+          ],
+          "canonical": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/"
+        }
+      ],
+      "blocker": "AggregateOffer is removed and per-variation Offer values/URLs mostly match, but every variable PDP is still one Product with an Offer array: no ProductGroup, no hasVariant Product nodes, no variesBy/productGroupID/isVariantOf. Thap labels also expose raw 5/8 instead of 1m5/1m8. Acceptance 1 and Rich Results validation remain unmet."
+    },
+    "R2-17": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "categories": {
+        "parent": {
+          "status": 200,
+          "title": "Ý Tưởng Trang Trí - Trang trí 4 mùa",
+          "robots": "follow, noindex",
+          "h1": "Danh mục Ý Tưởng Trang Trí",
+          "articles": [
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026"
+            }
+          ],
+          "introMatches": [
+            "g Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác. Ban Biên ",
+            "Trang Trí Noel 10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026 Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế. Ban Biên Tập Trang"
+          ]
+        },
+        "noel": {
+          "status": 200,
+          "title": "Cẩm Nang &amp; Ý Tưởng Trang Trí Giáng Sinh 2026 | Trang Trí 4 Mùa",
+          "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+          "description": "Khám phá cẩm nang trang trí Giáng Sinh 2026: hướng dẫn chọn size cây thông, dự toán chi phí decor tiết kiệm và ý tưởng setup quán cafe, cửa hàng lung linh đón Noel.",
+          "canonical": "https://trangtri4mua.com/category/y-tuong-trang-tri/noel/",
+          "h1": "Danh mục Ý Tưởng Trang Trí Noel",
+          "articles": [
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026"
+            }
+          ],
+          "introMatches": [
+            "Cẩm Nang & Ý Tưởng Trang Trí Giáng Sinh 2026 | Trang Trí 4 Mùa Chuyển đến phần nội dung Không có kết quả Trang Trí 4 Mùa Nghệ thuật bài trí & không gian lễ hội Danh mục sản phẩm Giáng Sinh",
+            "g Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác. Ban Biên ",
+            "Trang Trí Noel 10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026 Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế. Ban Biên Tập Trang"
+          ],
+          "headerText": "Danh mục Ý Tưởng Trang Trí Noel Tổng hợp các bài viết hướng dẫn chuyên sâu về trang trí Giáng Sinh 2026: từ cách chọn kích thước cây thông Noel theo chuẩn diện tích, bí quyết setup quán cafe hút khách check-in đến bảng dự toán bóc tách chi phí chi tiết. Hướng Dẫn & Kinh Nghiệm , Ý Tưởng Trang Trí Noel Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian Bảng bóc tách chi tiết chi phí trang trí Giáng Sinh 2026: cây thông, phụ kiện treo, hệ thống chiếu sáng và tiểu cảnh chân cây. Dự toán mẫu cho căn hộ, quán cafe và văn phòng kèm kỹ thuật bảo quản tái sử dụng nhiều năm. Ban Biên Tập Trang Trí 4 Mùa Tháng 9 24, "
+        },
+        "guide": {
+          "status": 200,
+          "title": "Hướng Dẫn Kỹ Thuật &amp; Kinh Nghiệm Trang Trí | Trang Trí 4 Mùa",
+          "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+          "description": "Kinh nghiệm và cẩm nang kỹ thuật trang trí không gian: hướng dẫn an toàn hệ thống điện đèn LED, cách cố định phụ kiện và bảo quản đồ decor bền đẹp qua các mùa lễ hội.",
+          "canonical": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+          "h1": "Danh mục Hướng Dẫn &amp; Kinh Nghiệm",
+          "articles": [
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            },
+            {
+              "href": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+              "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026"
+            }
+          ],
+          "introMatches": [
+            "0 Menu Danh mục Hướng Dẫn & Kinh Nghiệm Chuyên mục chia sẻ kinh nghiệm thực tế, kỹ thuật an toàn điện khi giăng đèn LED, giải pháp gia cố cây thông chống nghiêng đổ và phương pháp bảo quản phụ kiện tái sử dụng bền bỉ quanh năm. Hướng Dẫn & Kinh Nghiệm , Ý Tưởng Trang Trí Noel Dự T",
+            "g Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác. Ban Biên ",
+            "Trang Trí Noel 10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026 Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế. Ban Biên Tập Trang"
+          ],
+          "headerText": "Danh mục Hướng Dẫn & Kinh Nghiệm Chuyên mục chia sẻ kinh nghiệm thực tế, kỹ thuật an toàn điện khi giăng đèn LED, giải pháp gia cố cây thông chống nghiêng đổ và phương pháp bảo quản phụ kiện tái sử dụng bền bỉ quanh năm. Hướng Dẫn & Kinh Nghiệm , Ý Tưởng Trang Trí Noel Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian Bảng bóc tách chi tiết chi phí trang trí Giáng Sinh 2026: cây thông, phụ kiện treo, hệ thống chiếu sáng và tiểu cảnh chân cây. Dự toán mẫu cho căn hộ, quán cafe và văn phòng kèm kỹ thuật bảo quản tái sử dụng nhiều năm. Ban Biên Tập Trang Trí 4 Mùa Tháng 9 24, 2026 Hướng Dẫn & Kinh Nghiệm , Ý "
+        },
+        "hub": {
+          "status": 200,
+          "title": "Ý Tưởng Trang Trí Theo Mùa: Cẩm Nang Decor Đẹp &amp; Tiết Kiệm | Trang Trí 4 Mùa",
+          "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+          "description": "Khám phá cẩm nang ý tưởng trang trí Giáng Sinh, Tết, không gian quán cafe và căn hộ đẹp mắt, tiết kiệm chi phí tại Trang Trí 4 Mùa. Tư vấn combo decor trọn gói!",
+          "canonical": "https://trangtri4mua.com/y-tuong-trang-tri/",
+          "h1": "Cẩm Nang Trang Trí Không Gian",
+          "articles": [
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+              "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026"
+            },
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+              "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            },
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+              "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian"
+            },
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+              "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian"
+            },
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+              "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần"
+            },
+            {
+              "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+              "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026"
+            }
+          ],
+          "introMatches": [
+            "Ý Tưởng Trang Trí Theo Mùa: Cẩm Nang Decor Đẹp & Tiết Kiệm | Trang Trí 4 Mùa Chuyển đến phần nội dung Không có kết quả Trang Trí 4 Mùa Nghệ thuật bài trí & không gian lễ hội Danh mục sản phẩm Giáng Sinh & Noel Mùa nổ",
+            "g trí 4 mùa Giỏ hàng 0 &#8363; 0 Menu Chuyên Trang Không Gian & Phong Cách Sống Cẩm Nang Trang Trí Không Gian Ý tưởng bài trí, kỹ thuật đo đạc không gian thực tế và bảng dự toán chi tiết cho mùa Giáng Sinh & Năm Mới. Hướng dẫn thiết thực được biên soạn bởi đội ngũ chu",
+            "c • 24/09/2026 10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026 Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và... Đọc cẩm nang chi tiết → Kích Thước Cây Thông ",
+            "g Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh... Đọc tiếp → Hướng Dẫn & Kinh Nghiệm Ban Biên Tập • 18 phút đọc • 24/09/202",
+            "6 10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026 Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý... Đọc tiếp → Mua Sắm Vật Tư Vật Tư Gợi Ý Trong Bài Viết Các sản phẩm trang tr",
+            "í thực tế được chuyên viên sử dụng trong các bài viết cẩm nang và gợi ý concept bài trí. Tháp nhũ điện 550.000 &#8363; &ndash; 895.000 &#8363; Khoảng giá: từ 550.000 &#8363; đến 895.000 &#8363; Đồng kiểm khi nhận hàng (COD) Xem Chi Tiết Dây t",
+            "ệm Mua Sắm Decor Giải đáp các thắc mắc thường gặp về chọn kích thước, thời gian thi công, độ bền phụ kiện và chính sách giao vận. 1 Trang Trí 4 Mùa có hỗ trợ tư vấn trang trí trọn gói cho quán cafe và showroom không? Có. Đội ngũ chuyên viên của Trang Trí 4 Mùa luôn sẵ"
+          ]
+        }
+      },
+      "reason": "The two indexable archives now have distinct intent-specific H1, visible intro, title and meta description; the parent thin archive is noindex/follow while the content-rich hub remains indexable. Empty auxiliary archives are noindex per handoff, with no new indexable empty archive observed."
+    }
+  },
+  "current_total": {
+    "open": 23,
+    "p1": 6,
+    "p2": 11,
+    "p3": 6,
+    "closed_in_round": [
+      "R2-17"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "getOnly": true,
+    "browserUsed": false,
+    "sideEffects": false
+  }
+}
