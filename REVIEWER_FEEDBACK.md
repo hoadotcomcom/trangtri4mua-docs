@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R102 — đính chính phạm vi nghiệm thu R2-05](#round-r102), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 trở lại **PARTIAL / OPEN** vì R100 chưa kiểm tra FAQ ẩn và FAQ bài quán cafe vẫn hướng dẫn dùng tuyết bọt ngoài trời 15–20 phút mà không gắn sản phẩm/hướng dẫn nhà sản xuất hoặc phê duyệt chuyên môn.
+> **Trạng thái hiện hành:** xem [Vòng R103 — nghiệm thu độc lập Batch 71](#round-r103), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 và R2-02 giữ **PARTIAL / OPEN**. Batch 71 đã đạt phần selector, cart trace và ảnh variation của R2-02, nhưng chưa chứng minh đã dọn order fixture `470` trạng thái `completed` khỏi production và hoàn nguyên ảnh hưởng báo cáo/tồn kho.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5892,3 +5892,35 @@ Sau deploy, mở accordion FAQ số 3 và kiểm tra nội dung hiển thị; qu
 - [JSON đính chính phạm vi R2-05](review-evidence/2026-09-24/r102-r2-05-scope-correction.json).
 - Reviewer kiểm tra homepage, nội dung FAQ ẩn và 13 PDP liên kết bằng Chromium; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
 - R2-05 trở lại **PARTIAL / OPEN**. Tổng trở lại **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+<a id="round-r103"></a>
+
+# Vòng R103 — nghiệm thu độc lập Batch 71
+
+## R2-02 — PARTIAL / OPEN
+
+Reviewer mở sáu PDP production bằng Chromium, thao tác selector product 269 và gọi WooCommerce Store API cart từ chính origin live. Phần hành vi mua hàng của Batch 71 đạt:
+
+- Sáu PDP cũ có selector rõ kiểu/đơn vị, không còn nhãn số thô hoặc nhãn trùng: product 255 `Phi 8cm`; 177 `1m8`; 269 năm lựa chọn phân biệt kẹo gậy/kẹo tròn; 237 `Phi 6cm`; 223 `80cm/1m/1m2/1m5`; 261 `45cm/90cm`.
+- Năm lựa chọn product 269 resolve đúng variation ID `271/272/273/274/270`, SKU và giá `1.150.000/1.450.000/1.650.000/750.000/950.000 ₫`; nút mua đều khả dụng.
+- Năm POST add-item độc lập trả HTTP `201`. Cart cuối có đủ năm dòng, đúng variation ID, SKU, giá và nhãn lựa chọn. Reviewer không checkout và không tạo order.
+- Gallery đổi đúng theo loại: ba option kẹo gậy dùng `keo-gay-trang-tri-noel.webp`; hai option kẹo tròn dùng `keo-tron-nhung.webp`. Hai asset khác byte, kích thước và SHA-256, nên đây không phải cùng một ảnh đổi tên.
+
+### Phần chưa đạt: fixture production chưa được dọn và bằng chứng DB chưa audit được
+
+Artifact Coder tự ghi đã tạo order `470`, trạng thái `completed`, tổng `5.950.000`, gồm năm variation. Đây không phải fixture staging vô hại nếu nằm trong production: order hoàn tất có thể làm sai doanh thu, số đơn, báo cáo vận hành và tồn kho. Artifact chỉ chép câu query cùng kết quả tóm tắt; không chứa raw output có timestamp/database identity và không có post-cleanup trace. Vì vậy chưa thể chấp nhận tiêu chí “giữ đơn lịch sử nguyên vẹn” hoặc coi database sạch sau kiểm thử.
+
+### Cần bổ sung
+
+1. Xóa order test `470` bằng luồng WooCommerce được hỗ trợ, gồm order items/itemmeta; hoàn nguyên stock movement nếu variation có quản lý tồn kho.
+2. Cung cấp raw output sau cleanup, có timestamp và định danh database production, chứng minh order `470`, năm order item `9–13` và itemmeta tương ứng không còn.
+3. Cung cấp stock before/after hoặc bằng chứng variations `270–274` không quản lý stock; đồng thời kiểm tra order count/doanh thu không còn tính fixture.
+
+Không cần làm lại selector, cart trace, ma trận sáu PDP hoặc ảnh variation; các phần này đã được Reviewer kiểm chứng live và được giữ là **PASS**.
+
+## Bằng chứng và tổng R103
+
+- [JSON nghiệm thu Batch 71](review-evidence/2026-09-24/r103-batch71-verification.json).
+- [Artifact Coder Batch 71](review-evidence/2026-09-24/r2-02-candy-variations-audit.json).
+- Reviewer có tạo cart-token tạm và thêm năm variation vào giỏ; không checkout, không tạo order, không gửi form, gọi hoặc nhắn tin.
+- R2-02 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

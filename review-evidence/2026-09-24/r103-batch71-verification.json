@@ -1,0 +1,59 @@
+{
+  "round": "R103",
+  "batch": 71,
+  "timestamp": "2026-09-24",
+  "issue": "R2-02",
+  "verdict": "PARTIAL / OPEN",
+  "live_url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+  "live_variation_selection": [
+    {"value":"keo-gay-1m8","variation_id":271,"sku":"TT4M-074-80","price_vnd":1150000,"image":"keo-gay-trang-tri-noel.webp"},
+    {"value":"keo-gay-2m","variation_id":272,"sku":"TT4M-074-2m","price_vnd":1450000,"image":"keo-gay-trang-tri-noel.webp"},
+    {"value":"keo-gay-2m5","variation_id":273,"sku":"TT4M-074-50","price_vnd":1650000,"image":"keo-gay-trang-tri-noel.webp"},
+    {"value":"keo-tron-1m2","variation_id":274,"sku":"TT4M-074-20","price_vnd":750000,"image":"keo-tron-nhung.webp"},
+    {"value":"keo-tron-1m5","variation_id":270,"sku":"TT4M-074-1m50","price_vnd":950000,"image":"keo-tron-nhung.webp"}
+  ],
+  "cart_trace": {
+    "transport": "WooCommerce Store API cart token from the live origin",
+    "responses": [
+      {"requested_variation_id":271,"http_status":201},
+      {"requested_variation_id":272,"http_status":201},
+      {"requested_variation_id":273,"http_status":201},
+      {"requested_variation_id":274,"http_status":201},
+      {"requested_variation_id":270,"http_status":201}
+    ],
+    "final_item_count": 5,
+    "verified_fields": ["variation id", "SKU", "price", "displayed variation label"],
+    "checkout_or_order_created": false
+  },
+  "legacy_product_matrix": [
+    {"product_id":255,"options":["Phi 8cm"],"variation_ids":[256]},
+    {"product_id":177,"options":["1m8"],"variation_ids":[178]},
+    {"product_id":269,"options":["Kẹo gậy 1m8","Kẹo gậy 2m","Kẹo gậy 2m5","Kẹo tròn 1m2","Kẹo tròn 1m5"],"variation_ids":[270,271,272,273,274]},
+    {"product_id":237,"options":["Phi 6cm"],"variation_ids":[238]},
+    {"product_id":223,"options":["1m","1m2","1m5","80cm"],"variation_ids":[224,225,226,227]},
+    {"product_id":261,"options":["45cm","90cm"],"variation_ids":[262,263]}
+  ],
+  "image_assets": [
+    {"file":"keo-gay-trang-tri-noel.webp","bytes":42410,"width":526,"height":702,"sha256":"79f795012c699431e49ce97ed51c28c995c26b3c430bfa4378faf4a9be409a1c"},
+    {"file":"keo-tron-nhung.webp","bytes":46098,"width":1200,"height":765,"sha256":"e66d26aaeb62afe25a831d8f0ed96900fd97fa7b8dd333f3c0eac1abe0ca4caa"}
+  ],
+  "accepted_parts": [
+    "All six legacy PDP selectors have clear type and metric-unit labels with no duplicate visible labels.",
+    "All five product 269 choices resolve to the expected variation id, SKU and price and are purchasable.",
+    "All five variations were added to a live Store API cart successfully.",
+    "The gallery switches between two byte-distinct assets for stick and round candy types."
+  ],
+  "blocking_evidence_gap": {
+    "artifact_order_id": 470,
+    "artifact_order_status": "completed",
+    "artifact_order_total_vnd": 5950000,
+    "problem": "The coder artifact asserts database query results but contains no raw query output or database identity, and it does not show cleanup of the completed production fixture order.",
+    "risk": "A completed 5,950,000 VND test order can contaminate revenue/order analytics, stock movement and operational reports.",
+    "required_follow_up": [
+      "Remove test order 470 and its order items/itemmeta from production through the supported WooCommerce deletion path, restoring any stock movement if applicable.",
+      "Provide timestamped post-cleanup query output tied to the production database showing that order 470, its five order items and their itemmeta no longer exist.",
+      "Provide a stock-before/after or explicit stock-not-managed proof for variations 270-274, plus an order/report check showing the fixture no longer contributes revenue or order count."
+    ]
+  },
+  "current_totals": {"open":16,"p1":5,"p2":7,"p3":4}
+}
