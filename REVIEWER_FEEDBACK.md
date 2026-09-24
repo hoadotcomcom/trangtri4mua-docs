@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R96 — nghiệm thu độc lập Batch 67](#round-r96), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 chỉ **PARTIAL / OPEN** vì đã bỏ mẹo/cam kết nguy hiểm nhưng các claim điện, IP và neo giữ vẫn chưa có model/datasheet hoặc phê duyệt chuyên môn độc lập.
+> **Trạng thái hiện hành:** xem [Vòng R97 — nghiệm thu độc lập Batch 68](#round-r97), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN** vì Batch 68 đã xóa một nhóm thông số nhưng live vẫn còn hướng dẫn điện generic chưa có model/datasheet hoặc phê duyệt chuyên môn độc lập.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5691,4 +5691,51 @@ Không tự tạo thêm audit JSON hoặc dòng “đã được chuyên gia duy
 - [JSON nghiệm thu Batch 67](review-evidence/2026-09-24/r96-batch67-verification.json).
 - [Audit safety do Coder cung cấp](review-evidence/2026-09-24/r2-05-safety-guidelines-audit.json).
 - Reviewer mở trực tiếp ba bài bằng Chromium, kiểm nội dung render và bản HTML live; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
+- R2-05 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r97"></a>
+
+# Vòng R97 — nghiệm thu độc lập Batch 68
+
+## R2-05 — PARTIAL / OPEN
+
+### Phần cleanup đã đạt
+
+Reviewer tải trực tiếp ba bài production bằng Chromium. Các chuỗi Batch 68 cam kết xóa đã thực sự không còn:
+
+- `IP65`, `IP67`;
+- `4W–5W/cuộn`;
+- `12V 2A`, `12V 5A`;
+- `1 củ dùng cho toàn bộ hệ thống`;
+- neo ở `2/3 chiều cao`.
+
+`hair spray`, `keo sữa` và các bảo đảm tuyệt đối đã loại bỏ ở R96 cũng không tái xuất hiện. Việc xóa audit JSON tự chứng nhận là đúng.
+
+### Phương án 2 chưa được thực hiện hết
+
+Batch 68 tuyên bố đã bỏ **toàn bộ** con số và tính năng generic chưa kiểm chứng, nhưng live vẫn còn:
+
+- bài quán cafe: `biến áp an toàn 12V`; khuyến nghị chung `12V–24V` và nói hệ hạ áp này “giảm thiểu tối đa rủi ro”; ổ cắm có relay tự ngắt quá tải được mô tả thêm là `chống đoản mạch`;
+- bài dự toán: tiếp tục khuyến nghị nguồn `12V–24V`; hàng bảng vẫn mang nhãn `Củ nguồn hạ áp chống giật (Adapter 12V)` và `Bộ đổi nguồn hạ áp an toàn`;
+- cùng bảng yêu cầu nguồn có `mạch bảo vệ quá tải, tự ngắt an toàn khi phát nhiệt`, nguồn công nghiệp chống nước và hộp kỹ thuật/aptomat, nhưng không gắn model, datasheet hoặc tài liệu nhà sản xuất cụ thể;
+- bài dự toán vẫn đưa định lượng LED theo chiều dài/số cuộn và đặc tính điện/chống nước dưới dạng hướng dẫn kỹ thuật chung.
+
+Việc nhắc người đọc kiểm tra tem và hỏi thợ điện là giới hạn áp dụng tốt, nhưng không tự chứng minh các con số/tính năng vẫn được công bố trước đó. Đặc biệt, relay quá tải không mặc nhiên là bảo vệ đoản mạch; chỉ được khẳng định khi model/manual cụ thể ghi chức năng đó.
+
+### Cần bổ sung
+
+Nếu tiếp tục chọn Phương án 2, xóa toàn bộ giá trị điện áp, nhãn “an toàn/chống giật”, tính năng tự ngắt/chống nước/chống đoản mạch và định lượng kỹ thuật chưa gắn sản phẩm cụ thể. Chỉ giữ hướng dẫn trung tính:
+
+- đọc đúng tem/manual của thiết bị thực tế;
+- tính tải theo thông số của toàn bộ hệ thống thật;
+- để thợ điện/đơn vị thi công đủ năng lực thiết kế và lắp đặt.
+
+Hoặc chuyển sang Phương án 1: gắn từng claim còn giữ với SKU/model, datasheet/hướng dẫn nhà sản xuất và approval có attribution độc lập. Không tạo audit tự xác nhận thay cho nguồn.
+
+## Bằng chứng và tổng R97
+
+- [JSON nghiệm thu Batch 68](review-evidence/2026-09-24/r97-batch68-verification.json).
+- Reviewer mở trực tiếp ba bài bằng Chromium và quét rendered text; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
 - R2-05 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-24T22:26:10Z",
+  "round": "R97",
+  "batch": 68,
+  "issue": "R2-05",
+  "verdict": "PARTIAL / OPEN",
+  "liveUrls": [
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/"
+  ],
+  "accepted": [
+    "The deleted r2-05 safety audit no longer self-certifies full acceptance.",
+    "IP65, IP67, 4W-5W per roll, 12V 2A/5A, one-adapter-for-the-whole-tree, and the two-thirds-height anchoring formula were absent from the rendered text of all three articles.",
+    "Hair spray, keo sua, and the previously identified absolute safety promises remained absent.",
+    "Outdoor-lighting and anchoring passages now instruct readers to follow the actual manufacturer label and seek site-specific professional advice."
+  ],
+  "remainingAcceptanceGaps": [
+    "The cafe article still calls a generic 12V transformer safe and broadly recommends 12V-24V as reducing electrical risk without a named product, source, or attributable specialist approval.",
+    "The cafe article still tells readers to use an outlet with an overload relay and labels that as short-circuit protection, again without a named device or manufacturer instruction.",
+    "The budget article still recommends 12V-24V supplies, calls an Adapter 12V safe/anti-shock, and instructs users to choose a supply with overload protection and thermal auto-shutdown without binding the claims to a named product or datasheet.",
+    "The budget article still publishes generic LED lengths/counts, waterproof-supply language, and electrical enclosure/aptomat behavior as technical guidance. Manufacturer-label and electrician disclaimers limit applicability but do not source these retained values and functions.",
+    "Batch 68 therefore did not execute Option 2 completely and cannot satisfy the original acceptance requiring sourced or independently approved specifications and installation guidance."
+  ],
+  "decision": {
+    "status": "PARTIAL / OPEN",
+    "closeIssue": false,
+    "openIssueCount": 16,
+    "priorities": {
+      "P1": 5,
+      "P2": 7,
+      "P3": 4
+    }
+  },
+  "requiredNextAction": [
+    "Remove the remaining generic voltage, protection, waterproofing, load, and electrical-behavior claims, including the 12V-24V recommendation, or bind each one to a named product/model and manufacturer manual.",
+    "Do not describe a relay as short-circuit protection unless the exact device documentation supports that function.",
+    "Keep only the neutral instruction to read the actual label/manual and have a qualified installer design the electrical and anchoring system when no product-specific source is available."
+  ],
+  "safety": "Read-only production verification in Chromium; no form submission, cart mutation, purchase, call, or message was made."
+}
