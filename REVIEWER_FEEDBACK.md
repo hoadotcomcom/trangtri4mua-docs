@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R75 — nghiệm thu độc lập Batch 47](#round-r75), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: trace tiến bộ nhưng chưa có boundary wrap, inert hoặc screen-reader run.
+> **Trạng thái hiện hành:** xem [Vòng R76 — nghiệm thu độc lập Batch 48](#round-r76), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 nâng lên PARTIAL: lazy-load đã PASS; ma trận DPR cao/độ nét/crop vẫn chưa đạt.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4872,4 +4872,36 @@ R26-01 giữ **PARTIAL / OPEN**. Cần Tab/Shift+Tab qua đúng hai boundary, gh
 - [JSON Batch 47](review-evidence/2026-09-24/r75-batch-47-verification.json).
 - [Artifact Coder cập nhật](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
 - Không thao tác CTA thương mại hoặc thay đổi website.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r76"></a>
+
+# Vòng R76 — Nghiệm thu độc lập Batch 48
+
+## R5-02 — PARTIAL / OPEN
+
+Polling fallback đã sửa đúng blocker scroll trên production `2.5.0-b48`. Browser độc lập 375×812:
+
+- đầu trang: bốn ảnh cách viewport hơn 8.000px chưa request, `currentSrc=""`, `complete=false`;
+- `window.scrollTo(0,7900)` hoàn tất trong 3ms; trace xác nhận `scrollEventCount=0`;
+- poll kế tiếp ở `scrollY=7900` có `triggered=true`;
+- sau 2 giây, cả bốn ảnh là `eager`, `complete=true`, `naturalWidth=120`, nằm trong viewport và tải đúng file 300×300 với encoded bytes **31.410 / 34.224 / 34.008 / 34.558**.
+
+Như vậy acceptance 1 đã PASS mà không cần manual dispatch. Phần homepage DPR2 180.162 byte cũng đã được Reviewer chấp nhận từ R66. Giữ hai cải thiện này.
+
+Acceptance 3 vẫn chưa đủ:
+
+- matrix hiện ghi mobile 375 DPR3 chọn 300w cho box 164,5×183 CSS px; nhu cầu DPR3 xấp xỉ 493,5×549 device px, nên 300w không phải nguồn phù hợp render × DPR;
+- dòng này trái lượt production DPR3 độc lập R68, nơi cả sáu card chọn 600w — lựa chọn 600w mới hợp lý cho độ nét;
+- matrix không có screenshot hay đánh giá crop/độ nét nhìn thấy. `objectFit=cover` và intrinsic `aspectRatio` không chứng minh chất lượng/crop thực tế.
+
+R5-02 nâng từ FAIL thành **PARTIAL / OPEN**. Không sửa lại lazy-load đã đạt. Chỉ cần chạy lại bảy cấu hình với `deviceScaleFactor` thật, ghi `currentSrc`/resource bytes và ảnh đối chiếu crop/độ nét; DPR3 nên được phép chọn 600w thay vì ép 300w.
+
+## Bằng chứng và tổng R76
+
+- [JSON Batch 48](review-evidence/2026-09-24/r76-batch-48-verification.json).
+- [Scroll trace Coder](review-evidence/2026-09-24/r5-02-scroll-trace.json).
+- Không click card/CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.

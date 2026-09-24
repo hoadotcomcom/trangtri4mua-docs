@@ -1,0 +1,30 @@
+{
+  "round": "R76",
+  "date": "2026-09-24",
+  "handoff": "Batch 48",
+  "issue": "R5-02",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "live": {
+    "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "viewport": "375x812",
+    "build": "2.5.0-b48",
+    "script": "theme-scripts.js?ver=2.5.0.1790281141",
+    "initial": {"mounted": true, "scrollEventCount": 0, "matchingImages": 4, "currentSrc": ["", "", "", ""], "complete": [false, false, false, false], "matchingResources": 0},
+    "scroll": {"action": "window.scrollTo(0,7900)", "callMs": 3, "waitAfterMs": 2000, "scrollY": 7900, "scrollEventCount": 0, "pollCheckTriggered": true},
+    "after": {"loading": ["eager", "eager", "eager", "eager"], "complete": [true, true, true, true], "naturalWidth": [120, 120, 120, 120], "viewportTops": [270.09375, 270.09375, 623.90625, 623.90625], "encodedBytes": [31410, 34224, 34008, 34558]}
+  },
+  "accepted": [
+    "Acceptance 1 now passes: no initial requests; all four deep article images load and display after programmatic scroll without manual event dispatch.",
+    "Homepage DPR2 payload improvement to 180162 bytes was independently accepted in R66.",
+    "Polling stops after triggering according to the live trace check count, avoiding permanent repeated work after all four images are eager."
+  ],
+  "remainingAcceptance3": [
+    "The current matrix claims Mobile 375 DPR3 selects 300w for a 164.5x183 CSS-pixel box. At DPR3 the target is about 493.5x549 device pixels, so 300w is not an appropriate render-by-DPR source.",
+    "This contradicts the independent R68 true-DPR3 run, which selected 600w for all six homepage cards; 600w is the expected sharp choice.",
+    "The matrix still provides no visual screenshots or crop/sharpness assessment; objectFit and intrinsic aspectRatio strings do not prove perceived crop/quality."
+  ],
+  "decision": "Upgrade R5-02 from FAIL to PARTIAL, keep OPEN. Do not regress the now-passing lazy-load path. Re-run the seven configurations with true deviceScaleFactor, record currentSrc/resource bytes, and provide visual crop/sharpness evidence; DPR3 should normally select 600w, not be forced to 300w.",
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"cardClicked": false, "cartMutation": false, "formSubmitted": false, "browserTabsClosed": true}
+}
