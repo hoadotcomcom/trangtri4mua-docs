@@ -1,0 +1,64 @@
+{
+  "evidenceReportId": "R2-04-HERO-COMBO-ALIGNMENT",
+  "timestampUtc": "2026-09-24T23:27:22.126Z",
+  "targetIssue": "R2-04",
+  "targetSurface": "https://trangtri4mua.com/",
+  "destinationCategory": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+  "changesImplemented": {
+    "heroPill": "MÙA LỄ HỘI 2026 • 3 GÓI COMBO & SET PHỤ KIỆN SẴN HÀNG",
+    "heroTitle": "Combo Cây Thông & Set Phụ Kiện Trọn Gói Sẵn Sàng",
+    "heroDescription": "Nêu rõ 3 giải pháp tuyển chọn sẵn hàng: Set 50 món gia đình (750.000₫), Set 70 món đỏ vàng hoàng gia (1.250.000₫) cho cây có sẵn, và Gói combo trọn bộ cây thông 2m1 kèm phụ kiện & hàng rào (3.850.000₫) cho quán cafe, văn phòng.",
+    "heroPerks": [
+      "Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8",
+      "Set 70 món hoàng gia (1.250.000₫): 30 quả châu cườm, 12 hoa trạng nguyên, 16 nơ nhung, 8 dây kim tuyến, 4 dây LED cho cây 1m8 – 2m4",
+      "Combo trọn gói 2m1 (3.850.000₫): gồm cây thông phủ tuyết 2m1, 120 phụ kiện, 4 tấm hàng rào gỗ, 8 bộ LED và tượng ông già Noel"
+    ],
+    "primaryCta": {
+      "text": "Xem 3 Gói Combo (Từ 750k)",
+      "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+    }
+  },
+  "destinationListingAudit": {
+    "categoryUrl": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+    "h1": "Combo Trang Trí Noel",
+    "totalProductCount": 3,
+    "products": [
+      {
+        "id": 381,
+        "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+        "regularPrice": 950000,
+        "salePrice": 750000,
+        "formattedPrice": "750.000 ₫",
+        "hasTree": false,
+        "treeCompatibility": "Cây có sẵn 1m5 – 1m8",
+        "keyItems": "24 quả châu, 6 kẹo gậy, 10 nơ nhung, 4 dây LED, 1 sao đỉnh"
+      },
+      {
+        "id": 382,
+        "title": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+        "regularPrice": 1550000,
+        "salePrice": 1250000,
+        "formattedPrice": "1.250.000 ₫",
+        "hasTree": false,
+        "treeCompatibility": "Cây có sẵn 1m8 – 2m4",
+        "keyItems": "30 quả châu cườm, 12 hoa trạng nguyên, 16 nơ nhung, 8 dây kim tuyến, 4 dây LED"
+      },
+      {
+        "id": 383,
+        "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+        "regularPrice": 4600000,
+        "salePrice": 3850000,
+        "formattedPrice": "3.850.000 ₫",
+        "hasTree": true,
+        "treeDetails": "Cây thông phủ tuyết 2m1",
+        "keyItems": "Cây 2m1, 120 phụ kiện, 4 tấm hàng rào gỗ, 8 bộ LED, tượng ông già Noel"
+      }
+    ]
+  },
+  "complianceVerification": {
+    "zeroFakeProductsCreated": true,
+    "zeroFakeDiscountsFabricated": true,
+    "exactOneToOneMatchWithCatalog": true,
+    "orderMoratoriumStrictlyMaintained": true
+  }
+}

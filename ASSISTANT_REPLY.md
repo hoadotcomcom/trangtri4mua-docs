@@ -4748,3 +4748,64 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R109 Acknowledged**: Coder ghi nhận đầy đủ việc Reviewer chấp nhận Batch 77 là Governance Handoff và phân loại `R2-02` là `P0 / BLOCKED (EXTERNAL) / OPEN`.
 2. **Zero Churn & Moratorium Active**: Coder tuân thủ nghiêm ngặt việc không gửi thêm các bản handoff lặp lại cho `R2-02`, đồng thời bảo đảm không có bất kỳ mutation đơn hàng nào trên production.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 79
+
+## Summary
+
+1. **R2-04 [P1] — Đồng Bộ Hoàn Toàn Lời Hứa & Ưu Đãi Homepage Hero Với 3 Gói Combo Thực Tế**:
+   - **Tiếp thu chỉ thị tại Round R110**: Reviewer yêu cầu:
+     > *"Chuyển ngay sang issue có thể hành động. Ưu tiên **R2-04 [P1]**: sửa lời hứa số lượng/offer của homepage hero để khớp ba combo thực tế và luồng mua hoặc tư vấn hiện có; không tạo sản phẩm, phần trăm giảm hay số lượng giả để khớp copy."*
+   - **Các điều chỉnh cụ thể trên khối Homepage Hero (Page ID 23 - `https://trangtri4mua.com/`)**:
+     1. **Tiêu đề Pill**: Đổi thành `MÙA LỄ HỘI 2026 • 3 GÓI COMBO & SET PHỤ KIỆN SẴN HÀNG`.
+     2. **Tiêu đề chính**: `Combo Cây Thông & Set Phụ Kiện Trọn Gói Sẵn Sàng`.
+     3. **Mô tả chi tiết**: Giới thiệu tường minh 3 giải pháp thực tế trên store: Set 50 món gia đình (750.000₫), Set 70 món đỏ vàng hoàng gia (1.250.000₫) cho cây có sẵn, và Gói combo trọn bộ cây thông 2m1 kèm phụ kiện & hàng rào (3.850.000₫) cho quán cafe, văn phòng.
+     4. **3 Gạch đầu dòng (Perks)**: Khớp 1:1 chính xác với 3 sản phẩm trong danh mục:
+        - **Set 50 món gia đình (750.000₫)**: Khớp Product 381 (24 quả châu, 6 kẹo gậy, 10 nơ nhung, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8).
+        - **Set 70 món hoàng gia (1.250.000₫)**: Khớp Product 382 (30 quả châu cườm, 12 hoa trạng nguyên, 16 nơ nhung, 8 dây kim tuyến, 4 dây LED cho cây 1m8 – 2m4).
+        - **Combo trọn gói 2m1 (3.850.000₫)**: Khớp Product 383 (gồm cây thông phủ tuyết 2m1, 120 phụ kiện, 4 tấm hàng rào gỗ, 8 bộ LED và tượng ông già Noel).
+     5. **Nút kêu gọi hành động (CTA)**: `Xem 3 Gói Combo (Từ 750k)` dẫn thẳng tới danh mục `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/` chứa đúng 3 sản phẩm trên.
+     6. **Tính trung thực & chính xác**:
+        - Không tạo sản phẩm giả.
+        - Không bịa phần trăm giảm giá hay số lượng ảo.
+        - Mô tả tách bạch rõ ràng giữa set phụ kiện (không kèm cây) và gói combo trọn bộ (có cây 2m1).
+   - **Kiểm chứng thực tế trong Chromium**:
+     - Mở trực tiếp Homepage: hero render chuẩn 3 gói với giá từ 750k.
+     - Điều hướng tới `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/`: danh mục hiển thị đầy đủ 3 sản phẩm có sẵn nút mua, giá và thông tin khớp 100%.
+   - **Hồ sơ đối chứng**: Đã lưu tại `docs/review-evidence/2026-09-24/r2-04-hero-combo-alignment.json`.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P1] R2-04 — Homepage Hero Offer & Listing Alignment
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r2-04-hero-combo-alignment.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Cập nhật Page ID 23: Hero pill, title, description, 3 perks và CTA button khớp 100% với 3 sản phẩm thật (ID 381, 382, 383) trong danh mục combo.
+  - Bỏ toàn bộ lời hứa chung chung, phân biệt rõ set phụ kiện không có cây và combo có cây 2m1.
+- **Verification**: Chromium headless kiểm tra rendered hero trên homepage và danh mục đích, xác nhận 3 sản phẩm hiển thị đầy đủ với giá từ 750k.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 79).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Hero Copy & Offer Alignment**:
+  - Pill: `MÙA LỄ HỘI 2026 • 3 GÓI COMBO & SET PHỤ KIỆN SẴN HÀNG`
+  - Title: `Combo Cây Thông & Set Phụ Kiện Trọn Gói Sẵn Sàng`
+  - CTA: `Xem 3 Gói Combo (Từ 750k)` -> `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/`
+  - Products listed: Exactly 3 real products (ID 381, 382, 383), priced 750k, 1.250k, 3.850k.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R2-04 Ready for Review**: Khối Homepage Hero đã được cập nhật chính xác từng chi tiết theo đúng hướng dẫn tại Round R110. Kính đề nghị Reviewer kiểm chứng live và đóng issue `R2-04 [P1]`.
+2. **R2-02 Inactive**: Coder hoàn toàn không gửi thêm bất kỳ báo cáo lặp lại nào cho `R2-02` theo đúng chỉ thị R110.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
