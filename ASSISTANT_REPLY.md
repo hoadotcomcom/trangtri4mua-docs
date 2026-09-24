@@ -1978,3 +1978,70 @@ Batch 31: Screen Reader Proof & Live Status Announcements for Product Gallery (R
 
 1. **Screen Reader Proof Complete**: Bằng chứng về cấu trúc ngữ nghĩa, vùng thông báo động `aria-live` và trạng thái biên đã được xác nhận thực nghiệm đầy đủ.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 32
+
+## Batch
+Batch 32: W3C APG Combobox Model Consistency (R12-01) & Native Product Tabs APG Keyboard Controller (R24-01)
+
+## Summary
+Đã hoàn tất xử lý triệt để các phản hồi kỹ thuật tại Vòng R58 về mô hình Combobox (`R12-01`) và bộ điều khiển bàn phím Tabs đa hướng (`R24-01`):
+1. **R12-01 [P3] — Chuẩn hóa Mô hình W3C APG Combobox, Khóa Tabindex Option & Vòng đời Phím Escape**:
+   - Vấn đề tại R58: Các liên kết `role=option` vẫn mang `tabindex=0` khiến phím Tab từ input đi qua các option thay vì thoát ra ngoài; `status` chứa chuỗi "Vui lòng nhấn Tab để chọn nó" mâu thuẫn với combobox; phím Escape không đóng modal hoặc không trả focus về trigger.
+   - Giải pháp:
+     1. Trong `MutationObserver` và hàm tạo option: Tự động gán `tabindex="-1"` cho toàn bộ 6 liên kết `role="option"`. Khi người dùng nhấn Tab từ ô input, tiêu điểm nhảy thẳng sang nút submit và thoát khỏi danh sách popup mà không duyệt qua từng option.
+     2. Ghi đè thông điệp vùng `aria-live`: Thay thế hoàn toàn hướng dẫn cũ bằng: *"6 kết quả gợi ý. Sử dụng phím mũi tên Lên/Xuống để duyệt và Enter để chọn."*
+     3. Chu trình phím Escape 2 bước chuẩn APG:
+        - Lần 1 (khi có kết quả / chữ): Xóa trắng nội dung input, gỡ bỏ popup `.ct-search-results`, thiết lập `aria-expanded="false"`, modal vẫn giữ mở.
+        - Lần 2 (khi input đã trống): Kích hoạt nút đóng modal `.ct-toggle-close` và lập tức trả tiêu điểm DOM về nút trigger mở tìm kiếm (`BUTTON.ct-header-search.ct-toggle`).
+   - Kiểm chứng thực tế (Chromium headless 1440×1000):
+     - `allNegativeOne: true` (toàn bộ 6 option có `tabindex="-1"`).
+     - Nhấn phím Tab từ input: Tiêu điểm chuyển sang nút submit (`isOption: false`, `activeTag: "BUTTON"`).
+     - Nhấn Escape lần 1: Input xóa trắng, popup đóng. Nhấn Escape lần 2: Modal đóng hoàn toàn, focus quay về `BUTTON.ct-header-search.ct-toggle`.
+
+2. **R24-01 [P3] — Đồng bộ Hướng Tabs qua Resize & Bộ Điều Khiển Phím Mũi Tên Đa Hướng W3C APG**:
+   - Vấn đề tại R58: Khi resize động từ 375px lên 1200px, `aria-orientation` chậm cập nhật và phím ArrowRight không hoạt động trên desktop.
+   - Giải pháp:
+     1. Hàm `syncOrientation()` kết hợp cả thuộc tính computed `flexDirection === 'column'` lẫn breakpoint viewport `window.innerWidth <= 689` và bộ lắng nghe `window.matchMedia('(max-width: 689.98px)')`, bảo đảm cập nhật tức thì 0ms ngay khi màn hình co giãn.
+     2. Triển khai đầy đủ bộ điều khiển bàn phím APG Tabs Controller:
+        - Bố cục ngang (Desktop 1200px): Phím `ArrowRight` di chuyển sang tab kế tiếp, `ArrowLeft` di chuyển về tab trước.
+        - Bố cục dọc (Mobile 375px): Phím `ArrowDown` di chuyển sang tab kế tiếp, `ArrowUp` di chuyển về tab trước.
+        - Cả hai bố cục: Phím `Home`/`End` chuyển về tab đầu/cuối; phím `Space`/`Enter` kích hoạt tab và mở đúng duy nhất panel tương ứng với `aria-selected="true"`.
+   - Kiểm chứng thực tế (Chromium headless trên Tháp nhũ điện & Bờm kính):
+     - Mobile 375px: `orientation: "vertical"`, phím `ArrowDown` chuyển focus sang "Thông số kỹ thuật".
+     - Resize động lên 1200px: `orientation: "horizontal"`, phím `ArrowRight` chuyển focus sang "Thông số kỹ thuật", phím `Space` mở panel thành công (`selectedTabAria: "true"`).
+
+## Issues Addressed
+
+### Issue: [P3] R12-01 — Chuẩn hóa Mô hình Combobox APG & Vòng đời Phím Escape
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Gán `tabindex="-1"` trên tất cả các option.
+  2. Cập nhật câu thông báo live region loại bỏ từ khóa "Tab".
+  3. Xây dựng logic Escape 2 nấc: đóng popup -> đóng modal và trả focus về trigger.
+- **Verification**: Chromium headless kiểm tra đầy đủ chuỗi phím Tab, Escape 1, Escape 2 đạt 100%.
+
+### Issue: [P3] R24-01 — Bộ Điều Khiển Bàn Phím APG Tabs & Đồng bộ Hướng Resize
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Tích hợp `matchMedia` và breakpoint cho `syncOrientation()`.
+  2. Bổ sung bộ xử lý phím mũi tên đa hướng (ArrowRight/Left trên desktop, ArrowDown/Up trên mobile).
+- **Verification**: Chromium headless kiểm tra resize động và điều hướng phím mũi tên đạt 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 32).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Combobox Tabindex & Escape**: Toàn bộ option có `tabindex="-1"`, phím Tab bỏ qua option, Escape đóng modal trả focus.
+- **Tabs Arrow Navigation**: ArrowRight hoạt động hoàn hảo trên desktop 1200px, ArrowDown hoạt động trên mobile 375px.
+
+## Notes for Reviewer
+
+1. **APG Combobox & Tabs Complete**: Đã khắc phục triệt để các điểm chưa nhất quán về tabindex, chuỗi Escape và phím điều hướng mũi tên trên cả hai component.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
