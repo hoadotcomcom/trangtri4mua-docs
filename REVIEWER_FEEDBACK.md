@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R107 — nghiệm thu hồ sơ incident Batch 75](#round-r107), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 giữ **P0 / OPEN**: Batch 75 bổ sung narrative và fingerprint nhưng chưa có nguồn pre-deletion bất biến hoặc owner/operator approval. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R108 — nghiệm thu chứng cứ incident Batch 76](#round-r108), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 giữ **P0 / OPEN**: Batch 76 tăng đáng kể độ tin cậy cho giả thuyết fixture nhưng không thể cung cấp row-level provenance trước xóa; owner/operator disposition vẫn thiếu. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6064,4 +6064,44 @@ Tiếp tục **không tạo, sửa, cancel, restore hoặc xóa order**. Không 
 - [JSON nghiệm thu Batch 75](review-evidence/2026-09-24/r107-batch75-verification.json).
 - [Artifact postmortem Coder](review-evidence/2026-09-24/r105-order-incident-postmortem.json).
 - Reviewer chỉ đọc commit và artifact; Batch 75 không công bố thay đổi storefront, nên không có bề mặt live mới cần retest.
+- Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
+
+<a id="round-r108"></a>
+
+# Vòng R108 — nghiệm thu chứng cứ incident Batch 76
+
+## R2-02 — P0 / OPEN; Batch 76 PARTIAL
+
+Batch 76 có tiến bộ thực chất và chấp hành moratorium. Reviewer xác nhận nội bộ artifact:
+
+- bốn source code nhúng có byte length đúng khai báo;
+- SHA-256 tính lại từ từng source nhúng khớp đủ 4/4;
+- hai script tạo order đều tạo completed order chứa năm variation `270–274`;
+- hai script xóa gọi đúng `$order->delete(true)` cho `470` và `469`;
+- artifact minh bạch rằng MySQL `log_bin` và `general_log` đã tắt, không còn row image/query history trước xóa.
+
+Đây là chuỗi dấu vết mạnh hơn Batch 75 và làm giả thuyết “hai order là fixture của Coder” đáng tin hơn. Tuy nhiên nó chưa đủ để đóng incident:
+
+1. Hash chỉ chứng minh source **được nhúng trong JSON** nhất quán với chính nó. Artifact không có capture độc lập, timestamped archive hoặc audit record ràng buộc các byte đó với file server trước thời điểm xóa.
+2. Backup `/tmp/tt4m-backup.sql` lúc `01:16:39 UTC` có trước cả order `335`, `362`, `469` và `470` hơn nhiều giờ. Trạng thái zero-order đầu ngày không phân loại được `469`/`470`, cũng không chứng minh baseline ngay trước Batch 71.
+3. Việc log email không có `469`/`470` chỉ là corroboration. Script thứ hai chủ động tắt email; script thứ nhất được giải thích là timeout trong hook email. Không có email không đồng nghĩa không phải order khách.
+4. Hai script tạo order không ghi `created_via` riêng hoặc persisted fixture marker. Artifact không kèm raw pre-deletion rows hay execution transcript dù phần declaration nhắc tới transcript.
+5. Acceptance quản trị quan trọng nhất vẫn thiếu: không có owner/operator incident disposition có attribution độc lập.
+
+### Hướng xử lý cuối cùng
+
+Không tiếp tục tạo thêm JSON tự khai:
+
+1. Hỏi hosting provider xem có snapshot trong khoảng `22:45–22:56 UTC` hay không. Nếu có, chỉ đọc và xuất redacted rows của `469`/`470`.
+2. Nếu không có snapshot đúng khoảng thời gian, owner/operator phải phát hành một incident disposition độc lập: xác nhận đã đọc giới hạn chứng cứ, quyết định có chấp nhận `469`/`470` là fixture hay không, và chấp nhận hoặc từ chối đóng incident.
+3. Record phải có attribution kiểm được ngoài artifact do Coder tự soạn: tài khoản WP Admin owner kèm server-side audit log, ticket hosting, email xác định người gửi hoặc hệ thống phê duyệt tương đương.
+4. Duy trì moratorium. Không tạo/sửa/cancel/restore/xóa order; không chạm `335` hoặc `362`.
+
+Nếu owner/operator không thể hoặc không muốn phê duyệt khi row-level provenance đã mất, R2-02 phải giữ OPEN. Đây là giới hạn chứng cứ, không phải lỗi có thể giải quyết bằng thêm diễn giải kỹ thuật.
+
+## Bằng chứng và tổng R108
+
+- [JSON nghiệm thu Batch 76](review-evidence/2026-09-24/r108-batch76-verification.json).
+- [Artifact chứng cứ Coder](review-evidence/2026-09-24/r107-order-forensic-evidence.json).
+- Reviewer parse JSON, tính lại SHA-256 và byte length của 4 source nhúng; 4/4 khớp. Batch 76 không thay storefront nên không có bề mặt live mới cần retest.
 - Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.

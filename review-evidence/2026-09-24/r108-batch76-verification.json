@@ -1,0 +1,90 @@
+{
+  "reviewRound": "R108",
+  "implementationBatch": 76,
+  "reviewedAtUtc": "2026-09-24T23:15:00Z",
+  "reviewedCommit": "e6f313f",
+  "artifact": "review-evidence/2026-09-24/r107-order-forensic-evidence.json",
+  "scope": "Read-only verification of Batch 76 script, backup, log, and incident-provenance claims.",
+  "checks": {
+    "artifactJsonParses": true,
+    "batch76ChangedOnlyHandoffAndEvidence": true,
+    "embeddedScriptHashes": [
+      {
+        "path": "/tmp/stage_order.php",
+        "declaredSha256": "f607d33d8c13bd9cabd6af675aedd7afe30347a332ce2108255687a65ff3f893",
+        "recomputedFromEmbeddedSource": "f607d33d8c13bd9cabd6af675aedd7afe30347a332ce2108255687a65ff3f893",
+        "declaredBytes": 1395,
+        "embeddedBytes": 1395,
+        "matches": true
+      },
+      {
+        "path": "/tmp/stage_order_clean.php",
+        "declaredSha256": "d9de62a730c057b5f421e4af82c2157ee9fe4bfa078a49977fb2b3c53e874de7",
+        "recomputedFromEmbeddedSource": "d9de62a730c057b5f421e4af82c2157ee9fe4bfa078a49977fb2b3c53e874de7",
+        "declaredBytes": 983,
+        "embeddedBytes": 983,
+        "matches": true
+      },
+      {
+        "path": "/tmp/delete_order_470.php",
+        "declaredSha256": "f6cde137b0c65a7dc0a8ae5e05be542274cdb762740b1e13051fe835245d15e6",
+        "recomputedFromEmbeddedSource": "f6cde137b0c65a7dc0a8ae5e05be542274cdb762740b1e13051fe835245d15e6",
+        "declaredBytes": 235,
+        "embeddedBytes": 235,
+        "matches": true
+      },
+      {
+        "path": "/tmp/delete_order_469.php",
+        "declaredSha256": "90fc2cd7abe67f5a02f026bc3fddbb845b1e026730d0935ee38cdc16df16af4e",
+        "recomputedFromEmbeddedSource": "90fc2cd7abe67f5a02f026bc3fddbb845b1e026730d0935ee38cdc16df16af4e",
+        "declaredBytes": 235,
+        "embeddedBytes": 235,
+        "matches": true
+      }
+    ],
+    "sourceCodeCreatesFiveVariationCompletedOrder": true,
+    "sourceCodeSetsPersistedFixtureMarker": false,
+    "sourceCodeSetsCreatedVia": false,
+    "rawPreDeletionRowsIncluded": false,
+    "rawExecutionTranscriptIncluded": false,
+    "backupBytesOrHashIncluded": false,
+    "backupTimestampPrecedesOrdersByMoreThanTwentyOneHours": true,
+    "backupCapturesOrders469Or470": false,
+    "databaseBinlogAvailable": false,
+    "generalQueryLogAvailable": false,
+    "ownerOrOperatorDispositionIncluded": false
+  },
+  "evidenceAssessment": {
+    "improvements": [
+      "All four embedded script bodies are internally consistent with their declared byte lengths and SHA-256 hashes.",
+      "Creation script contents and filesystem timestamps materially support the coder-fixture explanation.",
+      "Coder explicitly declares that no database pre-deletion image or binlog exists instead of fabricating one."
+    ],
+    "limitations": [
+      "Hashes prove only the embedded bytes; the artifact does not include an independently timestamped capture binding those bytes to the server paths before deletion.",
+      "The 01:16 UTC backup predates orders 335, 362, 469, and 470, so its zero-order state cannot classify orders 469 or 470.",
+      "Absence of transactional email is corroboration, not proof of non-customer origin; the second creation script disables email and the first allegedly timed out in email handling.",
+      "The scripts set neither created_via nor a persisted fixture marker, and no raw pre-deletion rows or execution transcript are attached.",
+      "No independently attributable owner/operator incident disposition is attached."
+    ]
+  },
+  "decision": {
+    "issue": "R2-02",
+    "batch76Result": "PARTIAL",
+    "status": "P0 / OPEN",
+    "reason": "Batch 76 materially raises confidence that 469 and 470 were coder fixtures, but cannot prove row-level provenance after permanent deletion. R107 explicitly required owner/operator review when pre-deletion evidence is unavailable; that governance gate remains missing."
+  },
+  "requiredNextAction": [
+    "Stop generating additional self-authored forensic summaries.",
+    "Check whether the hosting provider has a snapshot between 22:45 and 22:56 UTC; if available, obtain a read-only redacted extract for orders 469 and 470.",
+    "If no such snapshot exists, obtain an independently attributable owner/operator incident disposition acknowledging the evidence boundary, deciding whether 469 and 470 may be treated as fixtures, and accepting or rejecting closure.",
+    "Keep the mutation moratorium and do not touch orders 335 or 362."
+  ],
+  "openCountsAfterReview": {
+    "total": 15,
+    "P0": 1,
+    "P1": 3,
+    "P2": 7,
+    "P3": 4
+  }
+}
