@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R71 — nghiệm thu độc lập Batch 43](#round-r71), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 vẫn PARTIAL: trace gắn nhãn localhost nhưng không có dữ liệu xác thực target staging/build.
+> **Trạng thái hiện hành:** xem [Vòng R72 — nghiệm thu độc lập Batch 44](#round-r72), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R31-01 CLOSED; R5-02 vẫn FAIL vì bốn ảnh live vẫn trắng sau scroll dù script mới đã deploy.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **18 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **17 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -4742,3 +4742,43 @@ Vì không thể phân biệt trace staging localhost với trace production ch�
 - [Artifact Coder](review-evidence/2026-09-24/r25-01-staging-network-audit.json).
 - Không kích hoạt CTA production, không sửa cart/session, không tạo đơn.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r72"></a>
+
+# Vòng R72 — Nghiệm thu độc lập Batch 44
+
+Build marker `2.3.0-b44` và script `theme-scripts.js?ver=2.3.0.1790279837` đã xuất hiện trên production. Reviewer kiểm tra lại bằng browser profile sạch, không gửi form, không đăng nhập và không sửa giỏ.
+
+## R5-02 — FAIL / OPEN
+
+Dual-trigger đã có trong source live: `initLazyImageObserver()` định nghĩa `checkLazyImages`, đăng ký scroll listener và đặt ảnh gần viewport thành `loading=eager`. Nhưng hành vi production 375×812 vẫn không chạy đúng:
+
+- đầu trang: bốn ảnh card đều `loading=lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`; không có resource tương ứng;
+- `window.scrollTo(0,7900)` hoàn tất trong 10ms;
+- sau tổng cộng 6 giây, bốn ảnh nằm trong viewport ở top 270/624 nhưng trạng thái vẫn y hệt: `loading=lazy`, `currentSrc=""`, `naturalWidth=0`, 0 resource.
+
+Vì source đã deploy nhưng transition không xảy ra, khả năng cao chuỗi khởi tạo bị ngắt trước `initLazyImageObserver()` hoặc listener không được mount. Đây chỉ là hướng điều tra; verdict dựa trên DOM và PerformanceResourceTiming quan sát được. Screenshot cũng timeout 20 giây, phù hợp với tình trạng page không ổn định; không dùng timeout làm bằng chứng chính.
+
+Artifact matrix mới có encoded bytes, nhưng ca mobile thành công trong artifact trái với lượt production độc lập này. R5-02 chưa thể đóng khi acceptance cơ bản “scroll tới card thì ảnh render” vẫn fail. Cần bắt lỗi runtime/console từ đầu trang, chứng minh initializer đã mount, rồi tái đo bằng một browser session sạch.
+
+## R31-01 — PASS / CLOSED
+
+Fresh visit homepage sau xóa cookie, cache và toàn bộ storage:
+
+- cookie jar rỗng;
+- không có request khớp Sourcebuster/order-attribution;
+- chỉ phát sinh `wc_cart_hash_*` trong localStorage và `wc_fragments_*`/`wc_cart_hash_*` trong sessionStorage, đúng nhóm cache giỏ hàng kỹ thuật đã công bố;
+- vì optional attribution đã bị loại bỏ thay vì chạy trước consent, control accept/reject/change không còn áp dụng.
+
+Policy live đã liệt kê checkout, Contact/B2B, comment, account, VAT; cookie/storage giỏ hàng; Google Maps, Google Fonts, Cloudflare và Gravatar. Mục 3 nói rõ Sourcebuster/order attribution đã tắt. Kiểm tra regression `/tai-khoan/` vẫn có `autocomplete=username` và `current-password`, link policy đúng và không phát sinh cookie. Notice Contact/comment/checkout cùng checkbox comment không chọn sẵn đã được chấp nhận ở các vòng trước; thay đổi Batch 44 không chạm form.
+
+Đủ acceptance về runtime, inventory, notice và regression trong phạm vi an toàn. Đóng R31-01.
+
+## Bằng chứng và tổng R72
+
+- [JSON Batch 44](review-evidence/2026-09-24/r72-batch-44-verification.json).
+- [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- Không click CTA/card, không thêm giỏ, không gửi form, không đăng nhập hoặc tạo đơn; bốn browser tab đã đóng.
+- Đóng **R31-01 [P1]**; R5-02 giữ OPEN. Tổng còn **17 OPEN — 5 P1, 8 P2, 4 P3**.

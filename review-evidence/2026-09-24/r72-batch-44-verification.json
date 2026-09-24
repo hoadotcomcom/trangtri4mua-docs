@@ -1,0 +1,38 @@
+{
+  "round": "R72",
+  "date": "2026-09-24",
+  "handoff": "Batch 44",
+  "build": {
+    "marker": "2.3.0-b44",
+    "script": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=2.3.0.1790279837"
+  },
+  "issues": {
+    "R5-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "environment": {"viewport": "375x812", "cache": "fresh page load", "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/"},
+      "initial": {"matchingImages": 4, "loading": ["lazy", "lazy", "lazy", "lazy"], "currentSrc": ["", "", "", ""], "naturalWidth": [0, 0, 0, 0], "matchingResources": 0},
+      "scroll": {"targetY": 7900, "callMs": 10, "waitAfterMs": 6000},
+      "after": {"scrollY": 7900, "viewportTops": [270.09375, 270.09375, 623.90625, 623.90625], "loading": ["lazy", "lazy", "lazy", "lazy"], "currentSrc": ["", "", "", ""], "naturalWidth": [0, 0, 0, 0], "matchingResources": 0},
+      "deployedSource": "checkLazyImages and its scroll listener are present in the versioned live script, but the observable page behavior does not execute the claimed transition.",
+      "visualEvidence": "Screenshot attempt timed out after 20 seconds; DOM and PerformanceResourceTiming already prove all four viewport cards remained blank.",
+      "artifactDecision": "The updated matrix's successful mobile image loads conflict with this independent live run; it cannot close the issue."
+    },
+    "R31-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "freshVisit": {
+        "cookies": [],
+        "trackingRequestsMatchingSourcebusterOrOrderAttribution": [],
+        "localStorageKeys": ["wc_cart_hash_ba8915a3a64f7c4458791f103796a024"],
+        "sessionStorageKeys": ["wc_fragments_ba8915a3a64f7c4458791f103796a024", "wc_cart_hash_ba8915a3a64f7c4458791f103796a024"],
+        "classification": "Only disclosed WooCommerce cart cache/storage was observed; optional Sourcebuster attribution is absent, so accept/reject/change controls are not applicable."
+      },
+      "policy": "The live policy inventories checkout, contact/B2B, comments, accounts, VAT, cart cookies/storage, Google Maps, Google Fonts, Cloudflare and Gravatar; it discloses Sourcebuster/order attribution as disabled.",
+      "accountRegression": {"cookies": "", "usernameAutocomplete": "username", "passwordAutocomplete": "current-password", "policyLinkPresent": true},
+      "priorAcceptedBehavior": "Contact/comment notices, unchecked comment storage checkbox and checkout notice remain accepted from prior rounds; Batch 44 changes attribution filters and policy wording only."
+    }
+  },
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": ["R31-01"], "new_issues": 0},
+  "safety": {"cartMutation": false, "formSubmitted": false, "loginAttempted": false, "orderCreated": false, "browserTabsClosed": true}
+}
