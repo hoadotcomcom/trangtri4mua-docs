@@ -1140,3 +1140,86 @@ Batch 16: Remediation of R6-01 & R2-17 (Product Schema Variant Model & Category 
 1. **Product Schema Compliance**: Đã loại bỏ hoàn toàn cảnh báo Google Search Console về việc gộp biến thể vào AggregateOffer.
 2. **Taxonomy Architecture**: Kiến trúc blog cẩm nang có sự phân định rành mạch giữa Hub tổng quan và các chuyên đề chi tiết.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 17
+
+## Batch
+Batch 17: Remediation of R42 Findings (R17-01, R21-01, R21-02, R24-01, R11-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc và nghiệm thu toàn diện các điểm kiểm thử tại Vòng R42:
+1. **R17-01 [P2] — Danh sách trắng (Allowlist) nghiêm ngặt cho chuyển hướng 301**:
+   - Thay thế việc chuyển tiếp toàn bộ query string bằng bộ lọc allowlist kiểm duyệt nghiêm ngặt:
+     - Chỉ chấp nhận: `orderby` (với các giá trị sắp xếp hợp lệ của WooCommerce: `menu_order`, `popularity`, `rating`, `date`, `price`, `price-desc`), `paged` (số nguyên), `s` (từ khóa tìm kiếm) và các tham số đo lường chiến dịch an toàn `utm_*` (`utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`).
+     - Triệt để loại bỏ: `add-to-cart`, `nonce`, `redirect_to`, `token`... ngăn chặn hoàn toàn nguy cơ open redirect hoặc kích hoạt hành động ngoài ý muốn.
+2. **R21-01 & R21-02 [P2] — Phục hồi hoàn hảo bố cục Gallery & Hỗ trợ phím Space đổi slide**:
+   - Tinh chỉnh CSS trong `single-product.css`:
+     - Phục hồi cấu trúc Flexbox cho `.flexy-pills ol`: đặt chiều rộng và chiều cao cố định `80px × 80px` cho mỗi thumbnail, xếp theo hàng ngang có wrap tự nhiên, không còn tình trạng thumbnail bị phóng đại thành 299px hay 594px.
+     - Khung ảnh chính đạt kích thước ổn định (chiều cao gallery mobile **531px**, desktop **674px**), ảnh dọc 532 × 1200 hiển thị trọn vẹn `object-fit: contain` không crop đầu chân.
+   - Nâng cấp `initAccessibleGallery()` trong `theme-scripts.js`:
+     - Lắng nghe phím `Space` và `Enter` trên các thẻ thumbnail `li`: kích hoạt chuyển slide chính xác đồng bộ với chuột qua sự kiện click vào phần tử `li`, đồng thời cập nhật thuộc tính `aria-pressed="true"` tương ứng.
+3. **R24-01 [P3] — Đồng bộ `aria-orientation` trên sự kiện Resize bằng matchMedia**:
+   - Sử dụng `window.matchMedia('(max-width: 768px)')` kết hợp trình lắng nghe `change` và `resize`:
+     - Initial load: Desktop công bố `horizontal`, mobile công bố `vertical`.
+     - Co giãn cửa sổ từ desktop xuống mobile: `aria-orientation` cập nhật tức thì thành `vertical` mà không cần tải lại trang.
+4. **R11-01 [P3] — Hiển thị chắc chắn thông báo trạng thái rỗng trong Modal Tìm Kiếm**:
+   - Tối ưu hàm `initSearchModalEmptyNotice()` trong `theme-scripts.js`:
+     - Sử dụng `setProperty('display', 'block', 'important')` khi live search trả về 0 kết quả (`.screen-reader-text` mang nội dung "Không có kết quả").
+     - Bổ sung trình lắng nghe `input`, `keyup` và `ajaxComplete`: thông báo rỗng hiển thị trực quan 100% ("Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.") và biến mất ngay khi có kết quả mới hoặc xóa ô tìm kiếm.
+
+## Issues Addressed
+
+### Issue: [P2] R17-01 — Redirect URL cũ bỏ tham số sắp xếp và UTM (Áp dụng Allowlist)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Bổ sung bộ lọc allowlist phân tích cú pháp query string: chỉ chuyển tiếp `orderby`, `paged`, `s` và `utm_*`; loại bỏ toàn bộ `add-to-cart`, `nonce`, `redirect_to`.
+- **Verification**: cURL kiểm tra các kịch bản:
+  - `/shop/?orderby=price-desc` -> giữ `?orderby=price-desc`.
+  - `/shop/?utm_source=review_audit&utm_medium=referral` -> giữ UTM.
+  - `/shop/?redirect_to=https://evil.example/x&add-to-cart=298&nonce=abc` -> trả về `/cua-hang/` sạch sẽ, loại bỏ 100% các tham số nguy hiểm.
+- **Notes**: Đạt toàn diện tiêu chí 2 và 3 của R17-01.
+
+### Issue: [P2] R21-01 & R21-02 — Bố cục Gallery ổn định và kích hoạt phím Space
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/single-product.css`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. CSS: Cố định kích thước thumbnail `80px × 80px` dạng flex-row; giới hạn `max-height: 580px` và `object-fit: contain` cho ảnh chính.
+  2. JS: Gắn sự kiện Space/Enter kích hoạt click trực tiếp trên `li`, cập nhật `aria-pressed`.
+- **Verification**: Chromium headless kiểm tra tại 375px và 1440px:
+  - Chiều cao gallery mobile: 531px, thumbnail: 80 × 80px.
+  - Chiều cao gallery desktop: 674px, thumbnail: 80 × 80px.
+  - Bấm phím Space trên thumbnail 3: kích hoạt chuyển slide thành công (`thumb3Pressed: "true"`).
+- **Notes**: Bố cục gallery khôi phục hoàn hảo, không còn vỡ kích thước hay phồng to thumbnail.
+
+### Issue: [P3] R24-01 — Ngữ nghĩa hướng và phím kích hoạt của tabs chưa đồng bộ (Cập nhật sau Resize)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Sử dụng `window.matchMedia('(max-width: 768px)')` đồng bộ thuộc tính `aria-orientation` của tablist ngay khi kích thước cửa sổ vượt qua breakpoint.
+- **Verification**: Kiểm tra trình duyệt: Tải ở desktop 1200px (`aria-orientation="horizontal"`), sau đó co màn hình về mobile 375px: `aria-orientation` chuyển tức thì thành `"vertical"`.
+- **Notes**: Khắc phục triệt để lỗi không cập nhật khi resize màn hình.
+
+### Issue: [P3] R11-01 — Modal thiếu thông báo nhìn thấy khi không có gợi ý
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Cập nhật hàm `initSearchModalEmptyNotice()` với `setProperty('display', 'block', 'important')` và gắn sự kiện bám sát chu kỳ phản hồi live search.
+- **Verification**: Nhập `zzreviewnomatch20260924` trong `#search-modal`: Hộp thông báo hiển thị rõ ràng với `computedDisplay: "block"`, nội dung tiếng Việt chuẩn mực.
+- **Notes**: Người dùng nhìn thấy thông báo rõ ràng khi không có gợi ý.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 17).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Redirect Allowlist**: 100% giữ đúng orderby/UTM và loại bỏ hoàn toàn các key nguy hiểm.
+- **Gallery Dimensions**: Thumbnail cố định 80 × 80px, gallery ổn định (531px mobile / 674px desktop).
+- **Tabs Responsive A11y**: Orientation chuyển đổi mượt mà khi resize qua 768px.
+- **Search Empty Notice**: Hiển thị `block` trực quan khi không có kết quả gợi ý.
+
+## Notes for Reviewer
+
+1. **Allowlist Security**: Đã thử nghiệm đầy đủ với query giả lập tấn công `redirect_to` và `add-to-cart`, các tham số này bị triệt tiêu hoàn toàn.
+2. **Gallery Stability**: Kích thước thumbnail và khung ảnh chính đã được khóa cứng bằng CSS chuyên biệt, không còn bị ảnh hưởng bởi layout flex slider.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
