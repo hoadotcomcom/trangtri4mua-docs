@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R103 — nghiệm thu độc lập Batch 71](#round-r103), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 và R2-02 giữ **PARTIAL / OPEN**. Batch 71 đã đạt phần selector, cart trace và ảnh variation của R2-02, nhưng chưa chứng minh đã dọn order fixture `470` trạng thái `completed` khỏi production và hoàn nguyên ảnh hưởng báo cáo/tồn kho.
+> **Trạng thái hiện hành:** xem [Vòng R103 — nghiệm thu độc lập Batch 71](#round-r103), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 và R2-02 giữ **PARTIAL / OPEN**. Batch 71 đã đạt phần selector, cart trace và ảnh variation của R2-02, nhưng artifact chưa định danh môi trường/database của order fixture `470`, nên chưa thể kết luận đây là production fixture hoặc thực hiện cleanup theo ID.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5906,15 +5906,16 @@ Reviewer mở sáu PDP production bằng Chromium, thao tác selector product 26
 - Năm POST add-item độc lập trả HTTP `201`. Cart cuối có đủ năm dòng, đúng variation ID, SKU, giá và nhãn lựa chọn. Reviewer không checkout và không tạo order.
 - Gallery đổi đúng theo loại: ba option kẹo gậy dùng `keo-gay-trang-tri-noel.webp`; hai option kẹo tròn dùng `keo-tron-nhung.webp`. Hai asset khác byte, kích thước và SHA-256, nên đây không phải cùng một ảnh đổi tên.
 
-### Phần chưa đạt: fixture production chưa được dọn và bằng chứng DB chưa audit được
+### Phần chưa đạt: chưa xác định provenance/môi trường của fixture DB
 
-Artifact Coder tự ghi đã tạo order `470`, trạng thái `completed`, tổng `5.950.000`, gồm năm variation. Đây không phải fixture staging vô hại nếu nằm trong production: order hoàn tất có thể làm sai doanh thu, số đơn, báo cáo vận hành và tồn kho. Artifact chỉ chép câu query cùng kết quả tóm tắt; không chứa raw output có timestamp/database identity và không có post-cleanup trace. Vì vậy chưa thể chấp nhận tiêu chí “giữ đơn lịch sử nguyên vẹn” hoặc coi database sạch sau kiểm thử.
+Artifact Coder tự ghi đã tạo order `470`, trạng thái `completed`, tổng `5.950.000`, gồm năm variation. Tuy nhiên artifact không có database identity, `siteurl`/`home`, timestamp raw output hoặc creation context. Vì vậy chưa biết order này thuộc production, staging hay một database cục bộ; cũng không được phép suy từ ID `470` rồi xóa trên production vì có thể trúng một đơn thật không liên quan. Nếu fixture thật sự ở production, order hoàn tất có thể làm sai doanh thu, số đơn, báo cáo vận hành và tồn kho. Nếu ở staging/local, yêu cầu cleanup production là sai và nguy hiểm.
 
 ### Cần bổ sung
 
-1. Xóa order test `470` bằng luồng WooCommerce được hỗ trợ, gồm order items/itemmeta; hoàn nguyên stock movement nếu variation có quản lý tồn kho.
-2. Cung cấp raw output sau cleanup, có timestamp và định danh database production, chứng minh order `470`, năm order item `9–13` và itemmeta tương ứng không còn.
-3. Cung cấp stock before/after hoặc bằng chứng variations `270–274` không quản lý stock; đồng thời kiểm tra order count/doanh thu không còn tính fixture.
+1. Chỉ đọc, chưa xóa: xác định environment/database của audit bằng `siteurl`/`home`, database name/host đã che phần nhạy cảm, thời điểm tạo, creation context và dữ liệu order `470`.
+2. Đối chiếu order bằng toàn bộ fingerprint Batch 71: tổng `5.950.000`, trạng thái `completed`, năm item variation `271/272/273/274/270`, product `269`, item IDs `9–13`, line totals và `pa_kich-thuoc`. ID `470` một mình không đủ.
+3. Chỉ khi read-only match chứng minh đúng fixture Batch 71 trên production mới xóa bằng luồng WooCommerce được hỗ trợ và hoàn nguyên stock movement nếu có. Nếu không match hoặc nằm ở staging/local, không chạm order production; ghi rõ kết quả.
+4. Sau cleanup hợp lệ, cung cấp raw output có timestamp/database identity chứng minh fixture, items/itemmeta, ảnh hưởng order count/doanh thu và stock đã được xử lý. Nếu không cần cleanup production, cung cấp bằng chứng môi trường đủ để loại trừ rủi ro.
 
 Không cần làm lại selector, cart trace, ma trận sáu PDP hoặc ảnh variation; các phần này đã được Reviewer kiểm chứng live và được giữ là **PASS**.
 

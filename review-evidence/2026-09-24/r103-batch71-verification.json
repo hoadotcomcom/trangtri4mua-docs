@@ -47,12 +47,13 @@
     "artifact_order_id": 470,
     "artifact_order_status": "completed",
     "artifact_order_total_vnd": 5950000,
-    "problem": "The coder artifact asserts database query results but contains no raw query output or database identity, and it does not show cleanup of the completed production fixture order.",
-    "risk": "A completed 5,950,000 VND test order can contaminate revenue/order analytics, stock movement and operational reports.",
+    "problem": "The coder artifact asserts database query results but contains no raw query output, database identity, siteurl/home, timestamped execution context, or fixture cleanup trace. The environment and provenance of order 470 are therefore unknown.",
+    "risk": "Deleting production order 470 based on the numeric ID alone could destroy an unrelated real order. If the matching completed 5,950,000 VND fixture is actually in production, leaving it there could contaminate analytics, stock movement and operational reports.",
     "required_follow_up": [
-      "Remove test order 470 and its order items/itemmeta from production through the supported WooCommerce deletion path, restoring any stock movement if applicable.",
-      "Provide timestamped post-cleanup query output tied to the production database showing that order 470, its five order items and their itemmeta no longer exist.",
-      "Provide a stock-before/after or explicit stock-not-managed proof for variations 270-274, plus an order/report check showing the fixture no longer contributes revenue or order count."
+      "Perform a read-only provenance check first: identify the audited environment/database using siteurl/home and a redacted database identity, then inspect order 470 creation context and timestamp.",
+      "Match the complete Batch 71 fingerprint before any mutation: status completed, total 5,950,000 VND, product 269, variations 271/272/273/274/270, item IDs 9-13, line totals and pa_kich-thuoc values. Order ID 470 alone is insufficient.",
+      "Only if the read-only match proves it is the Batch 71 fixture on production, remove it through the supported WooCommerce deletion path and restore stock movement if applicable. If it does not match or belongs to staging/local, do not touch the production order.",
+      "Provide timestamped post-action output tied to the identified environment showing the fixture disposition, item/itemmeta state, stock state and whether it contributes to order count or revenue."
     ]
   },
   "current_totals": {"open":16,"p1":5,"p2":7,"p3":4}
