@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R104 — nghiệm thu độc lập Batch 72](#round-r104), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-02 giữ **PARTIAL / OPEN** vì chưa định danh provenance/môi trường fixture DB; R2-05 giữ **PARTIAL / OPEN** vì Batch 72 đã bỏ công thức tuyết bọt nhưng đưa lại nhãn an toàn/ổn định generic cho cây, LED và decal.
+> **Trạng thái hiện hành:** xem [Vòng R105 — nghiệm thu Batch 73 và incident dữ liệu đơn hàng](#round-r105), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**. R2-02 được tạm nâng **P1 → P0 / OPEN** vì Batch 73 tự báo đã xóa vĩnh viễn order `469` và `470` trước khi có read-only provenance; order `469` chưa từng có trong fingerprint Batch 71. R2-05 giữ **PARTIAL / OPEN** tại R104; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -200,7 +200,7 @@ Kiểm tra Kẹo gậy trong R6 cũng xác nhận schema xuất `AggregateOffer.
 
 **Acceptance criteria mở rộng:** đối soát và kiểm tra toàn bộ biến thể của **269, 261, 280**, cùng các SKU nhập từ nguồn liên quan nếu tìm được; bảo đảm listing, selector, schema, cart và checkout nhất quán với bảng giá owner xác nhận. R6 chỉ đọc dữ liệu công khai, chưa thêm các biến thể này vào giỏ hoặc đặt đơn. Không nghiệm thu R2-01 chỉ bằng việc sửa product 269.
 
-## [P1] R2-02 — Sửa term dùng chung tạo size sai và trùng giữa các sản phẩm
+## [P0] R2-02 — Sửa term dùng chung và bảo toàn dữ liệu đơn hàng
 
 ### Location
 Product 255 `/san-pham/qua-chau-nhu-vang/`; 177 `/san-pham/ong-gia-noel/`; 269, 237, 223.
@@ -222,6 +222,8 @@ Toàn bộ 6 product cũ có lựa chọn rõ đơn vị/kiểu, không nhãn tr
 
 ### Status
 OPEN
+
+**Escalation R105 — P0 data-integrity hold:** Batch 73 tự báo đã xóa vĩnh viễn order `469` và `470` bằng `$order->delete(true)` nhưng không lưu read-only pre-deletion provenance; Batch 71 chỉ mô tả fixture `470`, không hề định danh `469`. Dừng mọi mutation order cho tới khi xử lý incident theo [R105](#round-r105).
 
 ## [P1] R2-03 — Bảng thông số mẫu đang mâu thuẫn vật liệu sản phẩm
 
@@ -5958,3 +5960,41 @@ Homepage hero, hai bài còn lại và 13 PDP liên quan đã được Reviewer 
 - [JSON nghiệm thu Batch 72](review-evidence/2026-09-24/r104-batch72-verification.json).
 - Reviewer mở accordion FAQ số 3 và đọc nội dung hiển thị trên production; không gửi form, sửa giỏ, checkout, đặt hàng, gọi hoặc nhắn tin.
 - R2-05 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+<a id="round-r105"></a>
+
+# Vòng R105 — nghiệm thu Batch 73 và incident dữ liệu đơn hàng
+
+## R2-02 — ESCALATED TO P0 / OPEN
+
+Phần storefront vẫn ổn sau Batch 73: Reviewer mở lại PDP product 269 trên production; năm option, variation ID `270–274`, SKU, giá, trạng thái purchasable/in-stock và mapping ảnh `81/100` đều còn đúng như R103.
+
+Tuy nhiên không thể nghiệm thu tiêu chí “giữ các đơn lịch sử nguyên vẹn”. Batch 73 tự báo:
+
+- chạy `$order->delete(true)` cho **cả order 469 và 470**;
+- xóa vĩnh viễn post/HPOS/order items/itemmeta;
+- database được gọi là `sql_trangtri4mua` trên host `ns3192423`;
+- các query sau xóa trả count `0`.
+
+### Vì sao đây là P0 hold
+
+R103 đã được đính chính trước Batch 73: phải xác định environment và match toàn bộ fixture fingerprint bằng thao tác chỉ đọc trước khi xóa; ID đơn một mình không đủ. Artifact Batch 73 vẫn không có `siteurl`/`home`, creation context, raw pre-deletion rows hoặc test marker. Nghiêm trọng hơn, Batch 71 chỉ ghi fixture order `470`; không có bằng chứng trước đó cho order `469`.
+
+JSON mới chỉ chép câu query và count tóm tắt, không phải raw terminal/SQL transcript. Count `0` sau xóa chỉ chứng minh artifact tuyên bố dữ liệu không còn; nó không chứng minh hai bản ghi đã xóa là fixture. Cũng không được suy order `335` và `362` là “test” rồi tiếp tục dọn: order `362` đang `processing`, tổng `355.000₫`.
+
+### Dừng mutation và xử lý incident
+
+1. Không xóa, sửa, cancel hoặc restore thêm bất kỳ order nào.
+2. Dùng hosting snapshot, immutable backup, command transcript hoặc DB audit log trước `2026-09-24 22:56:40 UTC` để dựng lại bản ghi **chỉ đọc, đã che PII** của order `469` và `470`.
+3. Với từng order, cung cấp `siteurl`/`home`, created GMT, status, total, `created_via`/test marker, product/variation IDs và line totals. Giải thích riêng vì sao `469` bị xóa dù Batch 71 chỉ nêu `470`.
+4. Owner/operator phải review. Chỉ nếu một order không khớp fixture đã được cho phép mới phục hồi từ backup bằng quy trình WooCommerce có kiểm soát; không restore hoặc xóa theo numeric ID.
+5. Không chạm order `335` hoặc `362` nếu chưa có provenance tương đương và owner authorization.
+
+Nếu backup/log chứng minh cả `469` và `470` là fixture được tạo trong cùng phiên Batch 71, phần incident có thể đóng và R2-02 quay về đánh giá acceptance thông thường. Nếu không còn dữ liệu pre-deletion để đối chiếu, không thể tuyên bố “đơn lịch sử nguyên vẹn”.
+
+## Bằng chứng và tổng R105
+
+- [JSON nghiệm thu Batch 73](review-evidence/2026-09-24/r105-batch73-verification.json).
+- [Artifact Coder đã cập nhật](review-evidence/2026-09-24/r2-02-candy-variations-audit.json).
+- Reviewer chỉ đọc storefront production; không truy cập database, không gửi form, sửa order, checkout, đặt hàng, gọi hoặc nhắn tin.
+- Tổng giữ **16 OPEN**, nhưng phân loại hiện hành đổi thành **1 P0, 4 P1, 7 P2, 4 P3**.

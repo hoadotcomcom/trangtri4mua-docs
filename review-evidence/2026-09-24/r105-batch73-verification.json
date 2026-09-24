@@ -1,0 +1,45 @@
+{
+  "round": "R105",
+  "batch": 73,
+  "timestamp": "2026-09-24",
+  "issue": "R2-02",
+  "verdict": "ESCALATED TO P0 / OPEN",
+  "reason": "Batch 73 reports irreversible deletion of production orders 469 and 470 without preserving a read-only pre-deletion provenance record. Order 469 was not identified in the Batch 71 fixture evidence, and order 470 was deleted before the requested environment-and-fingerprint match was documented.",
+  "coder_claimed_action": {
+    "method": "$order->delete(true)",
+    "deleted_order_ids": [469, 470],
+    "database_name": "sql_trangtri4mua",
+    "database_host": "ns3192423",
+    "timestamp_utc": "2026-09-24 22:56:40"
+  },
+  "artifact_limitations": [
+    "The JSON lists query strings and summarized counts but is not raw command/query output.",
+    "No siteurl/home value binds the database identity to trangtri4mua.com.",
+    "No pre-deletion snapshot, creation timestamp, created_via value, test marker, actor, or complete item fingerprint is supplied for order 469.",
+    "The only pre-deletion fixture fingerprint in Batch 71 described order 470; it did not authorize or identify order 469.",
+    "Post-deletion zero counts cannot prove that the deleted rows were fixtures rather than unrelated real orders.",
+    "The artifact calls remaining orders 335 and 362 'historical test orders' while also calling them the genuine baseline; no provenance supports either label."
+  ],
+  "live_product_regression": {
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+    "product_id": 269,
+    "options": ["Kẹo gậy 1m8", "Kẹo gậy 2m", "Kẹo gậy 2m5", "Kẹo tròn 1m2", "Kẹo tròn 1m5"],
+    "variations": [
+      {"id":270,"sku":"TT4M-074-1m50","price_vnd":950000,"purchasable":true,"in_stock":true,"image_id":100},
+      {"id":271,"sku":"TT4M-074-80","price_vnd":1150000,"purchasable":true,"in_stock":true,"image_id":81},
+      {"id":272,"sku":"TT4M-074-2m","price_vnd":1450000,"purchasable":true,"in_stock":true,"image_id":81},
+      {"id":273,"sku":"TT4M-074-50","price_vnd":1650000,"purchasable":true,"in_stock":true,"image_id":81},
+      {"id":274,"sku":"TT4M-074-20","price_vnd":750000,"purchasable":true,"in_stock":true,"image_id":100}
+    ],
+    "result": "PASS; the destructive database action did not visibly regress the product selector/variation payload. This does not prove order-history integrity."
+  },
+  "required_incident_response": [
+    "Stop all further order deletion or mutation.",
+    "Use a hosting snapshot, immutable backup, command transcript or database audit log from before 2026-09-24 22:56:40 UTC to reconstruct redacted pre-deletion records for orders 469 and 470.",
+    "For each deleted order, show environment binding (siteurl/home), created_gmt, status, total, created_via/test marker, item product/variation IDs and line totals. Do not expose customer PII.",
+    "Explain why order 469 was deleted although Batch 71 documented only order 470.",
+    "Obtain owner/operator review. If either deleted order does not match an authorized fixture fingerprint, restore it from backup through a controlled WooCommerce-compatible process; do not restore or delete solely by numeric ID.",
+    "Do not touch orders 335 or 362 without equivalent provenance and owner authorization."
+  ],
+  "current_totals": {"open":16,"p0":1,"p1":4,"p2":7,"p3":4}
+}
