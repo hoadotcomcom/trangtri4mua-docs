@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R24 — điều hướng nội dung PDP](#round-r24), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **37 OPEN — 7 P1, 25 P2, 5 P3**. R24 thêm P3 về hướng ARIA và phím Space của tabs; chuyển panel bằng chuột/Enter vẫn hoạt động. Không đóng issue cũ hoặc nghiệm thu toàn website.
+> **Trạng thái hiện hành:** xem [Vòng R25 — biến thể, reset và số lượng](#round-r25), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **38 OPEN — 7 P1, 26 P2, 5 P3**. R25 thêm P2 về callback hiển thị lại giá biến thể sau khi đã xóa lựa chọn; các thao tác chờ ổn định và tăng/giảm số lượng đạt trong mẫu thử. Không đóng issue cũ hoặc nghiệm thu toàn website.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **37 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **38 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -1480,6 +1480,7 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-EDITORIAL-COMMERCE-LINKS | Reachability chưa chứng minh nhãn link khớp loại hàng | DONE | [R22](#round-r22): 32 lượt/21 đích HTTP 200, hai luồng click; thêm R22-01 và bổ sung 4 đường vào category rỗng cho R2-04. |
 | Q-SKIP-LINK-FOCUS | Baseline chỉ xác nhận có skip link, chưa thử hành vi | DONE | [R23](#round-r23): 7 URL/10 trạng thái, Tab đầu tới skip link, Enter focus main, Tab tiếp theo ở trong main; giữ riêng giới hạn sidebar/landmark. |
 | Q-PDP-CONTENT-TABS | Chưa kiểm chứng tương tác Mô tả/Thông số/Đánh giá | DONE | [R24](#round-r24): 2 PDP × 2 viewport, click và phím điều hướng; manual activation bằng Enter hoạt động, phát hiện R24-01 về orientation/Space. |
+| Q-PDP-VARIANT-RESET-QTY | Chưa thử đổi/xóa biến thể và điều khiển số lượng sau render | DONE | [R25](#round-r25): 2 PDP × 2 viewport, 44 snapshot ổn định; tăng/giảm và min=1 đạt. Bốn ca xóa nhanh tái hiện R25-01; DONE là đã kiểm, không phải đã sửa. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
 | Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | BLOCKED | Chờ thay đổi có thể đối chiếu, issue ID/URL/phạm vi deploy hoặc source; không đóng từ lời xác nhận. |
@@ -2158,3 +2159,63 @@ Kiểm tra homepage/public CSS ngày **24/09/2026** (GET homepage ghi lúc **14:
 - Giữ nguyên toàn bộ nội dung R2–R24 khi giải quyết xung đột; nhận phần chuẩn hóa lịch sử Issue 1–15 nhưng gắn nhãn rõ để không ghi đè kết luận hiện hành.
 - Không đề xuất thêm khối showroom trong vòng này. Những yêu cầu bằng chứng doanh nghiệp/nội dung thật ở các trang đang có vẫn theo R2-22.
 - Sau bổ sung có **6 JSON + 8 screenshot** của R24. **Tổng giữ 37 OPEN — 7 P1, 25 P2, 5 P3**; không đóng issue đang mở chỉ từ bàn giao mới.
+
+---
+
+<a id="round-r25"></a>
+
+# Vòng R25 — Chuyển biến thể, xóa lựa chọn và số lượng
+
+Ngày kiểm tra: **24/09/2026**, các lượt xác nhận **14:26–14:30 UTC**; timestamp chi tiết trong JSON. Đã fetch Git trước vòng kiểm tra và trước khi chốt; chưa có bàn giao Coder mới hơn bản Batch 1 được đối chiếu ở cuối R24. `ASSISTANT_REPLY.md` giữ SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**.
+
+Phạm vi: [Tháp nhũ điện](https://trangtri4mua.com/san-pham/thap-nhu-dien/) có biến thể và [Bờm kính](https://trangtri4mua.com/san-pham/bom-kinh/) sản phẩm đơn; Chrome riêng, desktop **1440×1000**, mobile mô phỏng **375×812**, DPR 1. Chỉ đổi lựa chọn, xóa và thao tác số lượng; không thêm giỏ, bấm mua hoặc gửi form.
+
+## Các phần hoạt động và cần giữ
+
+- **Bốn ca / 44 snapshot ổn định**: trên Tháp nhũ, chọn lần lượt `1m2 → 8 → 5`, chờ ID, giá và class nút cập nhật xong trước khi đánh giá.
+- Nhãn/ID/giá khớp dữ liệu đang công bố: **1m2 / 296 / 550.000₫**, **1m8 / 298 / 895.000₫**, **1m5 / 297 / 755.000₫**. Đây là kiểm đồng bộ UI, không xác nhận giá kinh doanh hoặc hợp thức hóa taxonomy dùng chung; R2-01/R2-02 giữ riêng.
+- Bấm **Xóa sau khi render ổn định**: select về placeholder, ID rỗng, panel giá biến thể bị ẩn và nút thêm giỏ có lại `disabled wc-variation-selection-needed`. Giá cũ còn trong DOM của panel ẩn không phải lỗi hiển thị.
+- Trên cả hai PDP và hai viewport: nút `+,+,−,−,−` cho chuỗi **1→2→3→2→1→1**; ArrowUp/ArrowDown trong input cho **1→2→1→1**. Giới hạn min=1 hoạt động trong các thao tác này.
+- Không suy ra giới hạn tồn kho/max hoặc server validation từ input không khai báo `max`; các đường đó chưa được thử.
+
+Bằng chứng: [44 snapshot](review-evidence/2026-09-24/r25-selection-quantity.json) · [Tổng hợp](review-evidence/2026-09-24/r25-summary.json) · [Chọn biến thể mobile](review-evidence/2026-09-24/r25-thap-mobile-selected.webp) · [Reset ổn định mobile](review-evidence/2026-09-24/r25-thap-mobile-reset.webp) · [Số lượng sản phẩm đơn](review-evidence/2026-09-24/r25-bom-mobile-quantity.webp).
+
+## [P2] R25-01 — Giá biến thể cũ xuất hiện lại sau khi xóa nhanh
+
+### Location
+`form.variations_form` trên PDP Tháp nhũ điện: `#pa_kich-thuoc`, `.reset_variations`, `input.variation_id`, `.single_variation` và `.single_add_to_cart_button`. Xác nhận tại desktop 1440px và mobile mô phỏng 375px.
+
+### Problem
+Khi chọn **1m8** rồi xóa trước callback hiển thị hoàn tất, select và ID đã được xóa đúng nhưng callback cũ vẫn hiển thị lại **895.000₫**. Nút thêm giỏ đồng thời mất class `disabled wc-variation-selection-needed`, dù không còn lựa chọn hợp lệ. Trạng thái sai vẫn hiện sau khi chờ **1,2 giây**, không chỉ là một frame chuyển tiếp.
+
+### Why it matters
+Giá và vẻ ngoài trạng thái có thể mua không còn khớp lựa chọn hiện tại, gây nhầm biến thể/giá ngay trước bước thêm giỏ. Xếp **P2** vì đây là lỗi đồng bộ UI tái hiện được; chưa có bằng chứng server chấp nhận biến thể rỗng hoặc tạo sai đơn hàng, không nâng mức dựa trên giả định đó.
+
+### Evidence
+1. Chọn 1m8, xóa nhanh bằng Enter ở mobile hoặc chuột ở desktop: panel ban đầu ẩn sau reset, sau đó hiện lại 895.000₫; select/ID vẫn rỗng, nút thêm giỏ mất class chờ chọn. Timeline DOM desktop ghi reset tại khoảng 1407ms và render giá cũ tại 1711ms trong cùng lượt.
+2. Lặp lại sau khi đã chọn 1m2 và reset ổn định để loại trừ việc script chưa khởi tạo: chọn 1m8, chờ 150ms rồi thao tác xóa thật. Khoảng từ `change` đến click thực tế là **205,4ms với touchscreen tap** và **184,8ms với chuột desktop**; cả hai đều tái hiện cùng trạng thái sai sau 1,2 giây.
+3. [Trace bốn lần tái hiện, timing và trạng thái panel](review-evidence/2026-09-24/r25-reset-race.json); [ảnh sau chạm mobile](review-evidence/2026-09-24/r25-reset-race-mobile-touch.webp) và [ảnh desktop](review-evidence/2026-09-24/r25-reset-race-desktop-150ms.webp) cho thấy đồng thời placeholder **“Chọn một tùy chọn”**, giá **895.000₫** và nút thêm giỏ không còn mờ như đối chứng reset ổn định.
+4. JS công khai đang tải `woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=11.1.2` có `setTimeout(...,300)` đưa HTML biến thể vào panel rồi gọi `show_variation`. [URL, HTTP 200, SHA-256 và đoạn callback](review-evidence/2026-09-24/r25-public-variation-script.json). **[INFERENCE]** Timeline phù hợp với callback cũ không bị vô hiệu sau reset; cần Coder đối chiếu controller/plugin/theme tại nguồn trước khi chọn cách sửa.
+
+### Recommended solution
+1. Đảm bảo reset hoặc thay lựa chọn làm mất hiệu lực mọi công việc render của lựa chọn trước. Trước khi áp dụng kết quả chậm, kiểm tra nó vẫn thuộc lựa chọn/ID hiện tại; callback cũ không được tự mở panel hoặc bật trạng thái mua.
+2. Giữ một đường điều khiển trạng thái biến thể, đồng bộ giá, ID và trạng thái CTA từ cùng lựa chọn hợp lệ. Không thêm renderer song song hoặc chỉ che giá bằng CSS.
+3. Đối chiếu bản sửa upstream và integration WooCommerce/theme đang dùng; tránh sửa trực tiếp file minified của plugin sẽ bị cập nhật ghi đè. Không tăng/giảm timer để che race.
+
+### Acceptance criteria
+1. Chọn 1m8 rồi reset ngay, sau khoảng 150–250ms và sau khi render ổn định, bằng chuột/chạm/Enter: sau ít nhất 1 giây select/ID vẫn rỗng, panel giá biến thể ẩn, trạng thái cần chọn biến thể không bị callback cũ gỡ.
+2. Chọn nhanh nhiều biến thể rồi reset, hoặc reset rồi chọn lại: chỉ lựa chọn cuối cùng được render; không xuất hiện giá/CTA của lựa chọn đã hủy.
+3. Chọn ổn định lại ba biến thể vẫn ra đúng ID/giá công bố; các chuỗi tăng/giảm và min=1 ở sản phẩm biến thể/đơn vẫn hoạt động trên desktop/mobile.
+4. Trên staging an toàn, xác nhận mọi CTA mua/thêm giỏ kiểm tra lựa chọn hợp lệ và không gửi thêm giỏ với ID rỗng. Không dùng production để tạo đơn thử.
+
+### Status
+OPEN
+
+## Giới hạn và bàn giao R25
+
+- Thêm **1 P2**, tổng **38 OPEN — 7 P1, 26 P2, 5 P3**. Không đóng issue cũ; chưa có thay đổi Coder để nghiệm thu sau sửa.
+- [Probe ban đầu](review-evidence/2026-09-24/r25-initial-timing-probe.json) lấy snapshot quá sớm: ID cập nhật trước callback giá và thao tác số lượng cần chờ kết quả. Không dùng các snapshot này để báo lỗi “giá luôn chậm một lựa chọn” hoặc “nút +/− không hoạt động”. Đã thay bằng phép đợi trạng thái thực tế và đối chứng hoàn chỉnh.
+- [Quan sát tiếp sau probe](review-evidence/2026-09-24/r25-rapid-reset-followup.json) là đầu mối của race, không phải bằng chứng duy nhất; bốn lần tái hiện và screenshot mới là cơ sở issue. Các lần probe không truy cập được global `jQuery` qua công cụ không được tính là lỗi website.
+- Chỉ nghiệm thu UI trong mẫu Chrome mô phỏng, chưa kiểm thiết bị thật, trình duyệt khác, mọi PDP, nhập tay số lượng bất hợp lệ hoặc backend tồn kho. Không kết luận mua hàng thành công/thất bại từ class CSS.
+- Lưu **6 JSON + 11 screenshot**; Q-PDP-VARIANT-RESET-QTY = DONE trong phạm vi đã nêu. Đã đóng Chrome riêng. Không sửa code/config/database website, không chạy watcher.
+- Bàn giao báo cáo và bằng chứng bằng commit/push Git theo yêu cầu; chỉ xác nhận push trong lời bàn giao khi remote đã nhận thành công.

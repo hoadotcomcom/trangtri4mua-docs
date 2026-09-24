@@ -1,0 +1,84 @@
+{
+  "utc": "2026-09-24T14:31:25.698Z",
+  "stableCases": 4,
+  "stableSnapshots": 44,
+  "stableRuns": [
+    {
+      "name": "r25-thap-mobile",
+      "utc": "2026-09-24T14:26:40.127Z",
+      "states": 13
+    },
+    {
+      "name": "r25-thap-desktop",
+      "utc": "2026-09-24T14:26:44.565Z",
+      "states": 13
+    },
+    {
+      "name": "r25-bom-mobile",
+      "utc": "2026-09-24T14:26:47.383Z",
+      "states": 9
+    },
+    {
+      "name": "r25-bom-desktop",
+      "utc": "2026-09-24T14:26:50.322Z",
+      "states": 9
+    }
+  ],
+  "raceCases": [
+    {
+      "name": "r25-reset-race-mobile",
+      "utc": "2026-09-24T14:28:53.813Z",
+      "select": "",
+      "id": "",
+      "panelVisible": true,
+      "price": "895.000 ₫",
+      "buttonClass": "single_add_to_cart_button button alt",
+      "resetDelayMs": null
+    },
+    {
+      "name": "r25-reset-race-desktop",
+      "utc": "2026-09-24T14:28:57.768Z",
+      "select": "",
+      "id": "",
+      "panelVisible": true,
+      "price": "895.000 ₫",
+      "buttonClass": "single_add_to_cart_button button alt",
+      "resetDelayMs": 10.900000095367432
+    },
+    {
+      "name": "r25-reset-race-mobile-touch",
+      "utc": "2026-09-24T14:30:35.037Z",
+      "select": "",
+      "id": "",
+      "panelVisible": true,
+      "price": "895.000 ₫",
+      "buttonClass": "single_add_to_cart_button button alt",
+      "resetDelayMs": 205.40000009536743
+    },
+    {
+      "name": "r25-reset-race-desktop-150ms",
+      "utc": "2026-09-24T14:30:39.995Z",
+      "select": "",
+      "id": "",
+      "panelVisible": true,
+      "price": "895.000 ₫",
+      "buttonClass": "single_add_to_cart_button button alt",
+      "resetDelayMs": 184.80000019073486
+    }
+  ],
+  "newIssue": "R25-01",
+  "priority": "P2",
+  "totals": {
+    "open": 38,
+    "p1": 7,
+    "p2": 26,
+    "p3": 5
+  },
+  "limitations": [
+    "Không bấm mua/thêm giỏ hoặc gửi form; không kết luận server chấp nhận biến thể rỗng.",
+    "Snapshot ban đầu lấy quá sớm, không dùng để báo sai giá sau lựa chọn ổn định hoặc lỗi +/- số lượng.",
+    "Giá còn trong DOM nhưng panel ẩn sau reset ổn định không phải giá còn hiển thị.",
+    "Chrome emulation, chưa kiểm thiết bị thật hoặc toàn bộ PDP.",
+    "Lỗi truy cập global jQuery trong probe công cụ không được quy thành lỗi website."
+  ]
+}

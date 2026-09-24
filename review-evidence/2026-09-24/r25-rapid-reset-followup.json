@@ -1,0 +1,212 @@
+{
+  "utc": "2026-09-24T14:25:45.662Z",
+  "before": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "select": {
+      "value": "",
+      "text": "Chọn một tùy chọn"
+    },
+    "variationId": "",
+    "quantity": {
+      "value": "1",
+      "min": "1",
+      "max": "",
+      "step": "1",
+      "valid": true
+    },
+    "prices": [
+      {
+        "className": "price",
+        "text": "550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫",
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": -122.53125,
+          "width": 330,
+          "height": 28
+        }
+      },
+      {
+        "className": "price",
+        "text": "895.000 ₫",
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 403.4375,
+          "width": 330,
+          "height": 28
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "id": "",
+        "className": "single_add_to_cart_button button alt",
+        "text": "Thêm vào giỏ hàng",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 535.4375,
+          "width": 330,
+          "height": 48
+        }
+      },
+      {
+        "id": "tt4mPdpBuyNow",
+        "className": "button tt4m-pdp-buy-now",
+        "text": "Mua ngay",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 593.4375,
+          "width": 330,
+          "height": 48
+        }
+      },
+      {
+        "id": "",
+        "className": "tt4m-sticky-atc",
+        "text": "",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 70,
+          "y": 827.0999755859375,
+          "width": 128.21875,
+          "height": 44
+        }
+      },
+      {
+        "id": "",
+        "className": "tt4m-sticky-buy",
+        "text": "",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 206.21875,
+          "y": 827.0999755859375,
+          "width": 156.78125,
+          "height": 44
+        }
+      }
+    ],
+    "reset": {
+      "text": "",
+      "visibility": "hidden"
+    },
+    "cartLabel": "\n\n\t\n\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng\t\t\n\t\n\n\n",
+    "documentWidth": 375,
+    "viewportWidth": 375
+  },
+  "quantityWait": "đạt",
+  "after": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "select": {
+      "value": "",
+      "text": "Chọn một tùy chọn"
+    },
+    "variationId": "",
+    "quantity": {
+      "value": "2",
+      "min": "1",
+      "max": "",
+      "step": "1",
+      "valid": true
+    },
+    "prices": [
+      {
+        "className": "price",
+        "text": "550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫",
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": -122.53125,
+          "width": 330,
+          "height": 28
+        }
+      },
+      {
+        "className": "price",
+        "text": "895.000 ₫",
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 403.4375,
+          "width": 330,
+          "height": 28
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "id": "",
+        "className": "single_add_to_cart_button button alt",
+        "text": "Thêm vào giỏ hàng",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 535.4375,
+          "width": 330,
+          "height": 48
+        }
+      },
+      {
+        "id": "tt4mPdpBuyNow",
+        "className": "button tt4m-pdp-buy-now",
+        "text": "Mua ngay",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 22.5,
+          "y": 593.4375,
+          "width": 330,
+          "height": 48
+        }
+      },
+      {
+        "id": "",
+        "className": "tt4m-sticky-atc",
+        "text": "",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 70,
+          "y": 827.0999755859375,
+          "width": 128.21875,
+          "height": 44
+        }
+      },
+      {
+        "id": "",
+        "className": "tt4m-sticky-buy",
+        "text": "",
+        "disabled": false,
+        "ariaDisabled": null,
+        "display": "flex",
+        "rect": {
+          "x": 206.21875,
+          "y": 827.0999755859375,
+          "width": 156.78125,
+          "height": 44
+        }
+      }
+    ],
+    "reset": {
+      "text": "",
+      "visibility": "hidden"
+    },
+    "cartLabel": "\n\n\t\n\n\n\tGiỏ hàng0 ₫\n\t\n\t\t0\t\n\n\n\n\n\t\n\t\tChưa có sản phẩm nào trong giỏ hàng.\t\n\t\n\t\t\n\t\t\tQuay trở lại cửa hàng\t\t\n\t\n\n\n",
+    "documentWidth": 375,
+    "viewportWidth": 375
+  }
+}
