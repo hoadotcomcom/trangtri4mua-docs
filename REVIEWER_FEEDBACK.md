@@ -3128,3 +3128,127 @@ Bằng chứng: [JSON correction R36](review-evidence/2026-09-24/r36-r2-06-inven
 R33 chỉ quan sát `activeElement=BODY` sau cross-page fragment navigation; JSON không ghi lần nhấn Tab kế tiếp. Trạng thái DOM focus đó không đủ để kết luận bàn phím bắt đầu lại từ đầu tài liệu, vì fragment target vẫn có thể trở thành sequential focus navigation starting point theo hành vi điều hướng fragment.
 
 Hai câu R33 đã được sửa thành **chưa chứng minh keyboard continuity**, không còn khẳng định Tab quay về đầu trang. Verdict cuối không đổi: R2-07 được **CLOSED tại R35** dựa trên phép thử thực tế sau bản sửa — target nhận focus và Tab kế tiếp tới CTA Zalo.
+
+---
+
+<a id="round-r38"></a>
+
+# Vòng R38 — Nghiệm thu độc lập Batch 7
+
+Đã pull commit Coder `552b10d`, đọc toàn bộ bàn giao Batch 7 và kiểm lại website live bằng Chromium mobile 375×812, WooCommerce Store API, HTML render và crawl **115 URL duy nhất từ 5 sitemap**. Không có lỗi fetch trong crawl.
+
+Kết luận: Batch 7 có nhiều sửa đúng hướng nhưng **chưa issue nào đạt toàn bộ acceptance criteria để đóng**. Tổng hiện hành giữ nguyên **33 OPEN — 9 P1, 18 P2, 6 P3**.
+
+## Ma trận verdict R38
+
+| Issue | Verdict R38 | Trạng thái | Kết luận chính |
+|---|---|---|---|
+| R2-20 | PARTIAL | OPEN | 4 policy đã hết `h4`, nhưng Đổi trả vẫn nhảy `H1 → H3` |
+| R2-03 | PARTIAL | OPEN | SET-HG-70 và mô tả kẹo đã đồng bộ chữ; chưa có nguồn/owner approval và ảnh set vẫn sai |
+| R2-02 | PARTIAL | OPEN | 5 lựa chọn kẹo đã khớp mô tả; ảnh, add-to-cart đủ 5 option và đơn lịch sử chưa đạt bằng chứng |
+| R2-10 | PARTIAL | OPEN | Phần lớn giờ/khu vực đã thống nhất; policy thanh toán và lời hứa giao Hà Nội vẫn lệch |
+| R2-04 | PARTIAL | OPEN | Hero/combo/card cây cải thiện; card Quà vẫn quảng cáo hàng cụ thể tới danh mục 0 sản phẩm |
+| R2-05 | PARTIAL | OPEN | Đã bỏ ba chỉ dẫn nguy hiểm cụ thể và sửa phép tính LED; chưa có nguồn/model/owner approval |
+| R2-22 | PARTIAL | OPEN | Đã làm mềm một số headline/con số; claim `ảnh thật 100%`, testimonial và `500+ mẫu` chưa có chứng cứ |
+
+## R2-20 — Cấu trúc heading policy chưa đạt strict hierarchy
+
+Điểm đạt:
+
+- Cả 4 policy có đúng một `<main>`.
+- Cả 4 policy hiện có **0 `h4`**.
+- Shipping, Privacy và Payment không còn heading skip trong phép đọc DOM hiện tại.
+
+Blocker còn lại:
+
+- Policy Đổi trả vẫn đi thẳng từ `H1 Chính Sách Đổi Trả & Hoàn Tiền` sang các `H3`, gồm `Đổi Mới 1-1 Trong 7 Ngày`.
+- Vì vậy claim bàn giao “strictly follows H1 → H2 → H3” chưa đúng trên toàn bộ 4 policy. R2-20 giữ **OPEN**.
+
+## R2-03 và R2-02 — Dữ liệu chữ tốt hơn, chưa chứng minh toàn contract
+
+Điểm đạt:
+
+- SET-HG-70 đã thống nhất phạm vi cây **1m8–2m4**.
+- Thành phần `30 + 12 + 16 + 8 + 4 = 70` khớp giữa mô tả và bảng thông số.
+- PDP kẹo ID 269 hiện liệt kê đúng 5 tổ hợp loại/kích thước và giá đang công bố.
+
+Blocker:
+
+- SET-HG-70 vẫn dùng duy nhất ảnh `qua-chau-cuom.webp`, ALT là một quả châu; người mua không thể đối chiếu cả set 70 món hay 4 dây LED.
+- Các claim SKU-specific về chất liệu, điện, xuất xứ và đóng gói chưa kèm nhãn nhà cung cấp, datasheet hay phê duyệt product owner theo acceptance R2-03.
+- Ảnh chung của sản phẩm kẹo vẫn là `keo-gay-trang-tri-noel.webp` với size/giá không đại diện dữ liệu 5 option hiện tại.
+- Batch 7 chưa bàn giao phép thử add-to-cart cho đủ 5 option, regression cho đủ 6 sản phẩm legacy, hoặc bằng chứng đơn lịch sử được bảo toàn.
+
+R2-03 và R2-02 đều giữ **PARTIAL / OPEN**.
+
+## R2-10 — Còn hai mâu thuẫn cùng loại dịch vụ/khu vực
+
+Crawl 115 URL xác nhận các sửa chính:
+
+- Không còn lời hứa giao tỉnh toàn quốc `1–3 ngày`.
+- Không còn lời hứa hoàn tiền trong ngày.
+- Homepage, hub và policy vận chuyển cùng dùng tỉnh khác **2–4 ngày làm việc**, vùng xa **3–5 ngày**.
+- Hỗ trợ trực tiếp phần lớn là **08:00–21:30**; showroom **08:00–21:00**; Zalo tự động **24/7** đã được ghi rõ là kênh tiếp nhận.
+
+Hai blocker:
+
+1. Policy Thanh toán vẫn ghi **“Bộ phận Kế toán & Chăm sóc khách hàng … 08:00 đến 21:00”**, ngay trong site cùng Zalo/hotline được công bố hỗ trợ tới **21:30**.
+2. Bài hướng dẫn cafe vẫn hứa **giao nhanh trong ngày tại TP.HCM và Hà Nội**, trong khi policy vận chuyển chỉ quy định hỏa tốc 2–4 giờ cho nội thành TP.HCM.
+
+R2-10 giữ **PARTIAL / OPEN**.
+
+## R2-04 — Empty-state đích đã tốt, lời hứa từ card chưa khớp
+
+Điểm đạt:
+
+- Hero đã phân biệt set phụ kiện với combo có cây.
+- Category Combo mô tả được cả hai loại và có 3 sản phẩm mua được.
+- Card Cây đổi thành `Đủ Size 1m5 – 2m4`; card Đèn đổi thành `Tư Vấn Chọn Mẫu`.
+- Hai danh mục rỗng Đèn và Quà đã có empty-state “Đang Cập Nhật Mẫu Mã…” cùng CTA tư vấn.
+
+Blocker:
+
+- Card Quà trên homepage vẫn quảng cáo `Hộp Quà Sang Trọng` / `Hộp quà tinh tế`, nhưng trang đích có 0 sản phẩm và `noindex`.
+- Title/meta của cả Đèn và Quà vẫn mô tả như category hàng đang bán (`Giá Tốt, Giao Toàn Quốc`) dù inventory bằng 0.
+- Banner dùng chung trong archive còn claim `Sẵn kho hơn 500+ mẫu` chưa có inventory công khai hỗ trợ.
+
+R2-04 giữ **PARTIAL / OPEN**.
+
+## R2-05 — Đã giảm rủi ro nhưng chưa đạt tiêu chuẩn nguồn kỹ thuật
+
+Điểm đạt:
+
+- Đã bỏ mức tạ `15–20kg`, `25–30kg` và hướng dẫn dùng móc 3M ngoài trời.
+- Bảng LED đã tự nhất quán: adapter 12V 2A = 24W, tải 70% khoảng 15–18W, 3–4 cuộn ở 4–5W/cuộn.
+
+Blocker:
+
+- Không có tài liệu nhà sản xuất, model cụ thể, dữ liệu tải hoặc phê duyệt chuyên môn/owner cho các hướng dẫn điện, neo và dùng ngoài trời.
+- Nội dung vẫn trình bày IP65, 4–5W/cuộn, hành vi bảo vệ adapter và phương pháp neo như dữ kiện áp dụng chung mà không dẫn nguồn hay giới hạn applicability.
+
+R2-05 giữ **PARTIAL / OPEN**.
+
+## R2-22 — Claim trust chưa được loại bỏ hoặc chứng minh hết
+
+Điểm đạt:
+
+- Heading testimonial đổi thành `Cảm Nhận Từ Khách Hàng Thân Thiết`.
+- Không còn cụm `hàng trăm công trình` hoặc `200+ mẫu` tại các vị trí đã nêu trong bàn giao.
+
+Blocker:
+
+- FAQ homepage vẫn khẳng định **“Tất cả sản phẩm … là ảnh thật 100% được quay chụp trực tiếp tại kho và showroom”**.
+- Ba testimonial tên riêng, 5 sao vẫn không có nguồn, ngày, consent hay ngữ cảnh xác minh; đổi heading không chứng minh tính thật.
+- Banner archive còn `Sẵn kho hơn 500+ mẫu` chưa có inventory public hỗ trợ.
+
+R2-22 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng R38
+
+[JSON tổng hợp Batch 7](review-evidence/2026-09-24/r38-batch-7-verification.json) · [homepage mobile](review-evidence/2026-09-24/r38-home-mobile.webp).
+
+## Bàn giao R38
+
+- **Không đóng issue nào**, không thêm issue mới.
+- Coder cần sửa đúng 7 blocker theo acceptance hiện hữu; không chỉ thay headline.
+- Reviewer chưa xác minh đơn lịch sử, owner approval, nhãn/datasheet, consent testimonial hoặc add-to-cart đủ 5 option vì Batch 7 không cung cấp dữ liệu/quyền chứng minh các phần này.

@@ -1,0 +1,117 @@
+{
+  "round": "R38",
+  "date": "2026-09-24",
+  "source_commit": "552b10d",
+  "handoff": "Implementation Report — Batch 7",
+  "environment": {
+    "site": "https://trangtri4mua.com",
+    "browser": "managed Chromium, 375x812 sample",
+    "crawl": {
+      "sitemaps": 5,
+      "unique_urls": 115,
+      "fetch_failures": 0
+    }
+  },
+  "verdicts": {
+    "R2-20": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "All four policy pages have one main element.",
+        "All four policy pages have zero h4 elements."
+      ],
+      "blockers": [
+        "Returns policy still jumps from H1 directly to H3 for the four benefit cards, including 'Đổi Mới 1-1 Trong 7 Ngày'.",
+        "The handoff claim of a strict H1 -> H2 -> H3 hierarchy is therefore not true for every policy page."
+      ]
+    },
+    "R2-03": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "SET-HG-70 description and rendered specification both state the supported tree range 1m8-2m4.",
+        "SET-HG-70 description now enumerates 30 ornaments, 12 poinsettias, 16 bows, 8 tinsel strands and 4 LED strands, totaling 70.",
+        "Product 269 description now lists only the five selector combinations."
+      ],
+      "blockers": [
+        "No supplier label, datasheet or product-owner approval was supplied for the SKU-specific material/electrical claims, as required by R2-03 acceptance criteria.",
+        "SET-HG-70 still uses qua-chau-cuom.webp as its sole image, so the complete 70-item set and the four LED strands are not visually verifiable."
+      ]
+    },
+    "R2-02": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "Product 269 description now matches the five selector labels and published prices.",
+        "The five options remain distinct by candy type and size."
+      ],
+      "blockers": [
+        "The shared product image remains keo-gay-trang-tri-noel.webp with size/price markings that do not represent the current five-option data.",
+        "Batch 7 did not provide five-option cart verification, regression coverage for all six legacy products, or evidence that historical orders remain intact."
+      ]
+    },
+    "R2-10": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "A crawl of 115 sitemap URLs found no remaining 1-3-day nationwide promise and no same-day refund promise.",
+        "Homepage, editorial hub and shipping policy consistently state 2-4 business days for other provinces and 3-5 days for remote areas.",
+        "Direct consultation is generally 08:00-21:30, showroom hours are 08:00-21:00, and automated Zalo intake is explicitly labeled 24/7."
+      ],
+      "blockers": [
+        "Payment policy still says the Accounting & Customer Care department works 08:00-21:00 while the same Zalo/phone support channel is advertised sitewide as 08:00-21:30.",
+        "The cafe guide promises same-day delivery in both Ho Chi Minh City and Hanoi, while the shipping policy defines 2-4-hour express service only for inner Ho Chi Minh City."
+      ]
+    },
+    "R2-04": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "Homepage hero accurately distinguishes accessory sets from combos that include a tree.",
+        "Combo category metadata now describes both accessory sets and full combos and displays three purchasable products.",
+        "Tree category card now says sizes 1m5-2m4."
+      ],
+      "blockers": [
+        "Homepage Gift card still advertises 'Hộp Quà Sang Trọng' and 'Hộp quà tinh tế' while its destination has zero products and is noindex.",
+        "Lights and Gifts destinations still carry sales-oriented SEO descriptions and titles despite being empty; updating only the card badge does not satisfy the destination/offer acceptance criterion.",
+        "The shared archive banner still claims 500+ models in stock without public inventory support."
+      ]
+    },
+    "R2-05": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "The fixed 15-20kg sandbag, 25-30kg cord and 3M hook instructions were removed.",
+        "The budget guide now consistently pairs 12V 2A/24W with a 70% load of about 15-18W and 3-4 LED rolls."
+      ],
+      "blockers": [
+        "No manufacturer documentation, model-specific load data or specialist/owner approval was provided for the revised electrical, anchoring and outdoor-use guidance.",
+        "The articles still present technical values such as IP65, 4-5W per roll, adapter safety behavior and anchoring recommendations as authoritative without cited source or applicability limits."
+      ]
+    },
+    "R2-22": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "Homepage testimonial heading was softened to 'Cảm Nhận Từ Khách Hàng Thân Thiết'.",
+        "The quantified 'hundreds of projects' and '200+ models' claims were removed from the specified About/article locations."
+      ],
+      "blockers": [
+        "Homepage FAQ still states that all products use 'ảnh thật 100%' shot at the warehouse/showroom.",
+        "Three named five-star testimonials still have no source, date, consent or verification context; changing the heading does not establish authenticity.",
+        "The combo/category shared banner still states 'Sẵn kho hơn 500+ mẫu' without public evidence."
+      ]
+    }
+  },
+  "current_total": {
+    "open": 33,
+    "p1": 9,
+    "p2": 18,
+    "p3": 6,
+    "closed_in_round": 0,
+    "new_issues": 0
+  },
+  "artifacts": [
+    "review-evidence/2026-09-24/r38-home-mobile.webp"
+  ]
+}
