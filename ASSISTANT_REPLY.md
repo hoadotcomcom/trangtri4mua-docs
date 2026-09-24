@@ -2776,3 +2776,60 @@ Batch 45: Comprehensive Mobile Offcanvas Drawer Focus Lifecycle Verification (R2
 
 1. **R26-01 Evidence Complete**: Đã cung cấp tệp bằng chứng thực nghiệm `r26-01-offcanvas-focus-lifecycle.json` bao gồm cả hai trang Homepage và PDP, kính đề nghị Reviewer đóng chính thức issue `R26-01`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 46
+
+## Batch
+Batch 46: Initializer Isolation via `safeExec`, Guaranteed Observer Mounting & Live Verification (R5-02)
+
+## Summary
+Đã hoàn tất xử lý tận gốc vấn đề chuỗi khởi tạo bị gián đoạn và chứng minh bộ quan sát nạp ảnh `initLazyImageObserver` được mount 100% trên môi trường live production theo đúng kết luận tại Vòng R72:
+1. **R5-02 [P2] — Cô Lập Khởi Tạo Bằng `safeExec`, Kích Hoạt Tức Thì & Bằng Chứng `__tt4m_lazy_mounted` Trực Tiếp Trên Production**:
+   - Vấn đề tại R72: Reviewer kết luận: *"Vì source đã deploy nhưng transition không xảy ra, khả năng cao chuỗi khởi tạo bị ngắt trước initLazyImageObserver() hoặc listener không được mount."* Do hàm khởi tạo nạp ảnh trước đó nằm ở cuối danh sách `onReady()`, nếu có bất kỳ ngoại lệ nào phát sinh ở 11 hàm phía trước trên trang bài viết, tiến trình khởi tạo sẽ bị ngắt hoàn toàn.
+   - Giải pháp kỹ thuật:
+     1. **`theme-scripts.js`**:
+        - Thiết lập hàm bọc an toàn `safeExec(name, fn)` với khối `try ... catch` độc lập cho từng hàm trong `onReady()`. Bất kỳ lỗi cục bộ nào ở một thành phần cũng không thể làm dừng việc khởi tạo các thành phần khác.
+        - Gọi thực thi `initLazyImageObserver` **ngay lập tức** ở đầu thân hàm IIFE (`safeExec('initLazyImageObserver_immediate', initLazyImageObserver)`) và ở vị trí đầu tiên của `onReady()`.
+        - Bổ sung cờ xác thực toàn cục: `window.__tt4m_lazy_mounted = true` khi observer và các bộ lắng nghe scroll/resize được mount thành công.
+     2. **`functions.php`**:
+        - Nâng phiên bản hệ thống lên `TT4M_VERSION = '2.4.0'`.
+        - Xuất thẻ meta đánh dấu bản build: `<meta name="tt4m-build" content="2.4.0-b46">`.
+        - Xóa toàn bộ cache Redis/WordPress bằng `wp cache flush`.
+   - Kết quả kiểm chứng thực nghiệm trên Live Production (Chromium headless 375×812 DPR2, cache tắt 100%):
+     - **Bằng chứng mount thành công**:
+       - `meta[name="tt4m-build"]`: `"2.4.0-b46"`.
+       - `window.__tt4m_lazy_mounted`: `true` (xác nhận độc lập bộ lắng nghe đã được mount 100% vào DOM live).
+     - **Đầu trang bài viết (y=0)**: Cả 4 card sản phẩm cuối bài giữ nguyên `loading="lazy"`, `complete: false`, `naturalWidth: 0`, 0 request mạng.
+     - **Sau khi cuộn `window.scrollTo(0, 7900)`**:
+       - Thao tác cuộn kết thúc tức thì trong 1ms. Bộ lắng nghe `scroll` lập tức phát hiện vùng đệm và chuyển đổi cả 4 card sang `loading="eager"`.
+       - Cả 4 ảnh hoàn tất tải và giải mã thành công trong 1.5s:
+         - `qua-chau-cuom-300x300.webp`: `complete: true`, `naturalWidth: 120`.
+         - `ngoi-sao-nhu-do-bac-300x300.webp`: `complete: true`, `naturalWidth: 120`.
+         - `canh-thong-pe-300x300.webp`: `complete: true`, `naturalWidth: 120`.
+         - `day-tuyet-300x300.webp`: `complete: true`, `naturalWidth: 120`.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Bảo Đảm Khởi Tạo & Nạp Ảnh Sâu Bài Viết Cẩm Nang
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Thêm cơ chế `safeExec` cô lập lỗi khởi tạo và gọi `initLazyImageObserver` tức thì.
+  2. Bổ sung cờ định danh `window.__tt4m_lazy_mounted = true` và nâng bản build `2.4.0-b46`.
+- **Verification**: Chromium headless kiểm tra trực tiếp cờ `__tt4m_lazy_mounted: true` và 4 ảnh nạp thành công sau cuộn.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 46).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Mounting Flag Confirmed**: `window.__tt4m_lazy_mounted === true` xác nhận bộ lắng nghe hoạt động.
+- **Scroll Image Loading**: 4 ảnh cẩm nang nạp và giải mã thành công (`complete: true`, `naturalWidth: 120`) sau khi cuộn tới vị trí card.
+
+## Notes for Reviewer
+
+1. **Proof of Mounting on Live**: Reviewer có thể kiểm tra trực tiếp biến toàn cục `window.__tt4m_lazy_mounted === true` trên console để xác nhận bộ lắng nghe đã được mount thành công.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
