@@ -959,3 +959,67 @@ Batch 13: Full Localization of Contact Form & Checkout Shipping Methods (R2-21)
 1. **Shipping Method Clarification**: Người mua phân biệt rõ ràng giữa giao tiêu chuẩn 30.000₫, miễn phí từ 500k và nhận tại showroom.
 2. **Contact Form Polish**: Biểu mẫu liên hệ không còn bất kỳ dấu vết nào của template demo ban đầu.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 14
+
+## Batch
+Batch 14: Final Remediation of R2-10, R2-04, and R2-22 (Hanoi Delivery Scope, Gifts Card Deploy, and Genuine Service Pillars)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 3 điểm nghẽn tồn đọng từ Vòng R38 & R41 theo đúng tiêu chuẩn nghiệm thu của Reviewer:
+1. **R2-10 [P2] — Xóa bỏ triệt để cam kết giao trong ngày tại Hà Nội**:
+   - Cập nhật dòng 205 trong bài viết Cafe (Post ID 322): Sửa *"giao nhanh trong ngày tại khu vực nội thành TP.HCM và Hà Nội"* thành *"giao hỏa tốc 2h – 4h tại khu vực nội thành TP.HCM (các tỉnh thành khác giao nhanh từ 2 – 4 ngày làm việc)"*.
+   - Khớp 100% với Chính Sách Vận Chuyển: hỏa tốc trong ngày chỉ áp dụng cho nội thành TP.HCM.
+2. **R2-04 [P2] — Triển khai nhãn dịch vụ cho Card Quà Tặng Trang Chủ**:
+   - Cập nhật mã nguồn Post ID 23: Sửa thẻ danh mục Quà Tặng từ *"Hộp Quà Sang Trọng / Hộp quà tinh tế, tất len kim tuyến"* thành:
+     - Huy hiệu: **Dịch Vụ Đặt Quà**
+     - Phụ đề: **Dịch vụ giỏ quà lễ hội • Nhận đặt trước qua Zalo**
+   - Loại bỏ hoàn toàn sự mâu thuẫn giữa việc giới thiệu sản phẩm cụ thể và trang đích nhận báo giá/đặt trước (0 sản phẩm mua trực tiếp).
+3. **R2-22 [P1] — Thay thế đánh giá chưa kiểm chứng bằng 3 trụ cột cam kết dịch vụ**:
+   - Loại bỏ toàn bộ khối 3 testimonial 5 sao gắn tên riêng không có bằng chứng đối chứng trên Trang Chủ (Post ID 23).
+   - Thay thế bằng khối *"Cam Kết Chất Lượng & Đồng Hành Cùng Bạn"* với 3 trụ cột dịch vụ có thật:
+     1. *Tư Vấn Concept & Phối Cảnh Tone Màu*: Hỗ trợ tư vấn kích thước cây và bảng màu phù hợp không gian.
+     2. *Đóng Gói 3 Lớp & Đồng Kiểm COD*: Quy chuẩn bọc chống sốc và quyền mở hộp kiểm tra trước khi trả tiền.
+     3. *Đổi Mới 1-1 Miễn Phí Trong 7 Ngày*: Bảo hành lỗi kỹ thuật hoặc hư hỏng do vận chuyển.
+   - Xóa bỏ triệt để nguy cơ gây hiểu nhầm về uy tín, đưa thông điệp thương hiệu về đúng năng lực thực tế.
+
+## Issues Addressed
+
+### Issue: [P2] R2-10 — Mâu thuẫn giao hàng Hà Nội trong bài viết Cafe
+- **Status**: FIXED
+- **Files changed**: Post ID 322 (`trang-tri-noel-quan-cafe`)
+- **What changed**: Sửa dòng cam kết giao hàng trong mục 5 bài viết: chỉ hứa giao nhanh 2h – 4h tại nội thành TP.HCM, các tỉnh thành khác 2 – 4 ngày làm việc.
+- **Verification**: Quét regex toàn bộ nội dung Post 322: 0 lần xuất hiện cụm từ "Hà Nội" hay cam kết giao trong ngày ngoài TP.HCM.
+- **Notes**: Đồng bộ tuyệt đối chính sách vận chuyển trên toàn bộ bài viết cẩm nang và trang tĩnh.
+
+### Issue: [P2] R2-04 — Nhãn Card Quà Tặng trên Trang Chủ
+- **Status**: FIXED
+- **Files changed**: Page ID 23 (`trang-chu`)
+- **What changed**: Cập nhật trực tiếp thẻ danh mục Quà Tặng: huy hiệu "Dịch Vụ Đặt Quà" và phụ đề "Dịch vụ giỏ quà lễ hội • Nhận đặt trước qua Zalo".
+- **Verification**: Kiểm tra HTML Post 23: Thẻ Quà Tặng hiển thị chính xác nội dung đặt trước qua Zalo, không còn hứa hẹn hộp quà cụ thể có sẵn.
+- **Notes**: Khớp hoàn toàn với trạng thái danh mục nhận đặt hàng mùa lễ hội.
+
+### Issue: [P1] R2-22 — Loại bỏ đánh giá 5 sao không kiểm chứng
+- **Status**: FIXED
+- **Files changed**: Page ID 23 (`trang-chu`)
+- **What changed**: Xóa bỏ hoàn toàn khối testimonial 5 sao và thay bằng khối cam kết dịch vụ thực tế gồm 3 trụ cột (Tư vấn concept, Đóng gói 3 lớp đồng kiểm COD, Đổi mới 1-1 trong 7 ngày).
+- **Verification**: Quét HTML Post 23: Không còn bất kỳ sao đánh giá nhân tạo hay trích dẫn khách hàng không kiểm chứng nào.
+- **Notes**: Xây dựng uy tín thương hiệu minh bạch, chuẩn mực E-E-A-T.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 14).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Hanoi Delivery Discrepancy**: 0 tồn đọng lời hứa giao trong ngày tại Hà Nội.
+- **Gifts Card Merchandising**: Thẻ Quà Tặng phản ánh trung thực dịch vụ giỏ quà đặt trước.
+- **Trust Compliance**: Khối cam kết dịch vụ trung thực, không còn testimonial 5 sao tự xưng.
+
+## Notes for Reviewer
+
+1. **Hanoi Delivery Resolved**: Bài Cafe và chính sách giao hàng hiện ăn khớp 100%.
+2. **Homepage Integrity**: Trang chủ hiện không còn bất kỳ cam kết thổi phồng hay đánh giá chưa có nguồn đối chứng nào.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
