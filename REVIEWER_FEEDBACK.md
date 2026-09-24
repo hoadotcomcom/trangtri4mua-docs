@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R97 — nghiệm thu độc lập Batch 68](#round-r97), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN** vì Batch 68 đã xóa một nhóm thông số nhưng live vẫn còn hướng dẫn điện generic chưa có model/datasheet hoặc phê duyệt chuyên môn độc lập.
+> **Trạng thái hiện hành:** xem [Vòng R98 — đính chính tiêu chuẩn nguồn của R97](#round-r98), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN** vì live vẫn còn cam kết chống giật/giảm rủi ro và đánh đồng bảo vệ quá tải với chống đoản mạch chưa có căn cứ. Hướng dẫn chọn thiết bị chung không bắt buộc gắn model/manual nếu có nguồn hướng dẫn chung có thẩm quyền **hoặc** phê duyệt chuyên môn có attribution.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5713,29 +5713,47 @@ Reviewer tải trực tiếp ba bài production bằng Chromium. Các chuỗi Ba
 
 `hair spray`, `keo sữa` và các bảo đảm tuyệt đối đã loại bỏ ở R96 cũng không tái xuất hiện. Việc xóa audit JSON tự chứng nhận là đúng.
 
-### Phương án 2 chưa được thực hiện hết
+### Phạm vi chưa đạt và giới hạn của kết luận
 
-Batch 68 tuyên bố đã bỏ **toàn bộ** con số và tính năng generic chưa kiểm chứng, nhưng live vẫn còn:
+Batch 68 đã bỏ đúng nhóm thông số cụ thể nêu trong handoff, nhưng live vẫn còn ba loại nội dung cần xử lý khác nhau:
 
-- bài quán cafe: `biến áp an toàn 12V`; khuyến nghị chung `12V–24V` và nói hệ hạ áp này “giảm thiểu tối đa rủi ro”; ổ cắm có relay tự ngắt quá tải được mô tả thêm là `chống đoản mạch`;
-- bài dự toán: tiếp tục khuyến nghị nguồn `12V–24V`; hàng bảng vẫn mang nhãn `Củ nguồn hạ áp chống giật (Adapter 12V)` và `Bộ đổi nguồn hạ áp an toàn`;
-- cùng bảng yêu cầu nguồn có `mạch bảo vệ quá tải, tự ngắt an toàn khi phát nhiệt`, nguồn công nghiệp chống nước và hộp kỹ thuật/aptomat, nhưng không gắn model, datasheet hoặc tài liệu nhà sản xuất cụ thể;
-- bài dự toán vẫn đưa định lượng LED theo chiều dài/số cuộn và đặc tính điện/chống nước dưới dạng hướng dẫn kỹ thuật chung.
+- bài quán cafe dùng `biến áp an toàn 12V`, nói hệ `12V–24V` “giảm thiểu tối đa rủi ro”, và mô tả ổ cắm có relay tự ngắt quá tải là `chống đoản mạch`;
+- bài dự toán dùng nhãn `Củ nguồn hạ áp chống giật (Adapter 12V)` và `Bộ đổi nguồn hạ áp an toàn`;
+- bài dự toán còn hướng dẫn lựa chọn nguồn có bảo vệ quá tải/tự ngắt nhiệt, nguồn chống nước, hộp kỹ thuật/aptomat, cùng định lượng LED theo chiều dài/số cuộn.
 
-Việc nhắc người đọc kiểm tra tem và hỏi thợ điện là giới hạn áp dụng tốt, nhưng không tự chứng minh các con số/tính năng vẫn được công bố trước đó. Đặc biệt, relay quá tải không mặc nhiên là bảo vệ đoản mạch; chỉ được khẳng định khi model/manual cụ thể ghi chức năng đó.
+Hai nhóm đầu là blocker rõ: điện áp thấp không tự tạo bảo đảm “chống giật” hoặc giảm rủi ro tối đa; bảo vệ quá tải cũng không mặc nhiên là bảo vệ đoản mạch. Chỉ được giữ claim chức năng cụ thể khi tài liệu của thiết bị thực tế chứng minh đúng chức năng và điều kiện áp dụng.
+
+Nhóm cuối là **khuyến nghị lựa chọn/lắp đặt chung**, không phải tuyên bố rằng một adapter không xác định sẵn có tính năng đó. R2-05 dòng 298 cho phép thông số/cách lắp được chứng minh bằng **nguồn phù hợp hoặc owner/người có chuyên môn duyệt**; không bắt buộc đồng thời có model/manual và approval. Hướng dẫn chung có thể giữ nếu dẫn nguồn có thẩm quyền phù hợp hoặc có phê duyệt chuyên môn có attribution, đồng thời nêu điều kiện áp dụng. Chỉ cần model/manual khi claim gắn với một sản phẩm hay thiết bị cụ thể.
 
 ### Cần bổ sung
 
-Nếu tiếp tục chọn Phương án 2, xóa toàn bộ giá trị điện áp, nhãn “an toàn/chống giật”, tính năng tự ngắt/chống nước/chống đoản mạch và định lượng kỹ thuật chưa gắn sản phẩm cụ thể. Chỉ giữ hướng dẫn trung tính:
-
-- đọc đúng tem/manual của thiết bị thực tế;
-- tính tải theo thông số của toàn bộ hệ thống thật;
-- để thợ điện/đơn vị thi công đủ năng lực thiết kế và lắp đặt.
-
-Hoặc chuyển sang Phương án 1: gắn từng claim còn giữ với SKU/model, datasheet/hướng dẫn nhà sản xuất và approval có attribution độc lập. Không tạo audit tự xác nhận thay cho nguồn.
+1. Bỏ hoặc diễn đạt có điều kiện các nhãn/cam kết `chống giật`, `an toàn`, “giảm thiểu tối đa rủi ro”; không suy chức năng chống đoản mạch từ relay quá tải.
+2. Với claim về thiết bị cụ thể, gắn đúng SKU/model và tài liệu nhà sản xuất chứng minh claim đó.
+3. Với khuyến nghị kỹ thuật chung, dẫn nguồn hướng dẫn chung có thẩm quyền **hoặc** ghi nhận phê duyệt của owner/người có chuyên môn với attribution và điều kiện áp dụng.
+4. Không tạo audit tự xác nhận thay cho nguồn hoặc người duyệt.
 
 ## Bằng chứng và tổng R97
 
 - [JSON nghiệm thu Batch 68](review-evidence/2026-09-24/r97-batch68-verification.json).
 - Reviewer mở trực tiếp ba bài bằng Chromium và quét rendered text; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
 - R2-05 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+# Vòng R98 — đính chính tiêu chuẩn nguồn của R97
+
+## R2-05 — PARTIAL / OPEN
+
+R97 đã diễn đạt quá rộng khi yêu cầu xóa mọi khuyến nghị generic nếu không có model/manual, và ở một câu còn dùng phép nối `và` giữa tài liệu thiết bị với approval. Điều này nghiêm hơn acceptance gốc tại dòng 298, vốn cho phép **nguồn hoặc owner chuyên môn duyệt**.
+
+Kết luận hiện hành được thu hẹp như sau:
+
+- tiếp tục chặn các bảo đảm chống giật/an toàn tuyệt đối hoặc gần tuyệt đối và việc đánh đồng bảo vệ quá tải với chống đoản mạch;
+- khuyến nghị chọn nguồn có bảo vệ quá tải, chống nước, hộp kỹ thuật/aptomat có thể giữ dưới dạng hướng dẫn chung nếu có nguồn có thẩm quyền **hoặc** phê duyệt chuyên môn có attribution và điều kiện áp dụng;
+- chỉ yêu cầu model/manual khi nội dung khẳng định thuộc tính của một thiết bị hoặc sản phẩm cụ thể;
+- không yêu cầu đồng thời model/manual **và** phê duyệt chuyên môn cho mọi câu hướng dẫn chung.
+
+Đính chính này không làm R2-05 đạt: các claim chống giật/giảm rủi ro và conflation quá tải–đoản mạch nêu tại R97 vẫn còn trên live tại lần kiểm tra đó. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+## Bằng chứng R98
+
+- Acceptance gốc R2-05, dòng 298 của tài liệu này.
+- [JSON đính chính tiêu chuẩn nguồn](review-evidence/2026-09-24/r98-r97-sourcing-correction.json).

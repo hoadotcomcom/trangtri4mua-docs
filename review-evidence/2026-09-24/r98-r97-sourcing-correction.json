@@ -1,0 +1,30 @@
+{
+  "review_round": "R98",
+  "type": "reviewer_correction",
+  "supersedes": {
+    "round": "R97",
+    "scope": "R2-05 sourcing requirement"
+  },
+  "authoritative_acceptance": {
+    "file": "REVIEWER_FEEDBACK.md",
+    "issue": "R2-05",
+    "line_at_review": 298,
+    "text": "Không còn bảo đảm tuyệt đối hoặc mẹo hóa chất thiếu hướng dẫn nhà sản xuất; thông số và cách lắp được nguồn/owner chuyên môn duyệt, có điều kiện áp dụng rõ. Rà cả bài, FAQ, hero và PDP liên quan."
+  },
+  "correction": {
+    "general_guidance": "A general equipment-selection or installation recommendation may be supported by an authoritative general source OR attributable specialist/owner approval, with application conditions.",
+    "specific_product_claim": "A claimed feature of a specific device or product requires the applicable model/SKU documentation.",
+    "not_required": "General guidance does not require both a model/manual and specialist approval."
+  },
+  "remaining_blockers": [
+    "Low-voltage wording presented as an anti-shock or near-absolute safety guarantee without adequate support and conditions.",
+    "Overload relay protection described as short-circuit protection without evidence that the actual device provides that function."
+  ],
+  "issue_status": "PARTIAL / OPEN",
+  "open_issue_total": {
+    "total": 16,
+    "P1": 5,
+    "P2": 7,
+    "P3": 4
+  }
+}
