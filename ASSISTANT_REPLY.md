@@ -622,3 +622,84 @@ Batch 8: Full Remediation of R4-01 & R31-01 (Instant Buy Mechanics & Comprehensi
 1. **Mua Ngay Acceptance**: Đã kiểm chứng đầy đủ cả kịch bản abort request bằng CDP, đảm bảo người dùng không bao giờ bị chuyển trang với giỏ rỗng khi mạng gặp sự cố.
 2. **Privacy Inventory**: Toàn bộ các công nghệ lưu trữ trình duyệt runtime đều có bảng giải trình chi tiết tại `/chinh-sach-bao-mat/`.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 9
+
+## Batch
+Batch 9: Remediation of R8-01, R22-01, R13-01, R5-01, R16-01
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 5 vấn đề độc lập tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R8-01 [P2] — Sửa metadata Twitter/Slack cho sản phẩm báo giá**:
+   - Sử dụng hook `rank_math/opengraph/slack_enhanced_data` để phát hiện các sản phẩm nhận báo giá (không có giá bán hoặc không thể mua trực tiếp).
+   - Thay thế giá trị `0 ₫` thành `Liên hệ báo giá` trong thẻ `twitter:data1` cho cả 8 sản phẩm liên quan.
+   - Bảo toàn 100% giá bán thật và khoảng giá cho các sản phẩm đối chứng (Quả châu cườm `95.000₫`, Tháp nhũ điện `550.000₫ - 895.000₫`).
+2. **R22-01 [P2] — Đồng bộ nhãn card Kẹo gậy trong bài Dự toán chi phí (Post 327)**:
+   - Sửa tên card từ "Set Kẹo Gậy Xoắn Treo Cây Thông" thành "Mô Hình Kẹo Gậy Khổng Lồ Check-in (1m2 – 2m5)".
+   - Cập nhật giá niêm yết từ "Liên hệ báo giá" thành khoảng giá thực tế "750.000₫ – 1.650.000₫" khớp với trang đích.
+3. **R13-01 [P2] — Khắc phục chồng lấn nút điện thoại nổi trên màn hình 320px**:
+   - Tối ưu layout `.tt4m-combo-actions` trên màn hình hẹp `<= 480px`: xếp nút dạng cột và giới hạn `max-width: calc(100% - 56px)` để chừa khoảng đệm an toàn 56px bên phải.
+   - Thử nghiệm hit-test thực tế tại `320 × 812px`: khoảng cách giữa mép phải nút Zalo và nút điện thoại đạt 33.2px, loại bỏ 100% xung đột điểm chạm `elementFromPoint`.
+4. **R5-01 [P2] — Giới hạn tải sớm (eager/high) strictly cho ảnh chính LCP của PDP**:
+   - Tinh chỉnh bộ lọc `wp_get_attachment_image_attributes`: chỉ gán `loading="eager"` và `fetchpriority="high"` cho ảnh đại diện chính của sản phẩm được truy vấn trước phần tóm tắt.
+   - Bắt buộc các ảnh trong vòng lặp sản phẩm tương tự (`related products`) và ảnh phụ phải mang `loading="lazy"` và không có `fetchpriority="high"`.
+5. **R16-01 [P3] — Liên kết thông báo lỗi biểu mẫu qua aria-describedby**:
+   - Bổ sung module `initAccessibleFormValidation()` trong `theme-scripts.js` sử dụng `MutationObserver`.
+   - Tự động sinh ID duy nhất cho thông báo lỗi (`ff_1_email-error`, `ff_1_message-error`) và gán thuộc tính `aria-describedby` cùng `aria-invalid="true"` vào trường nhập liệu tương ứng.
+   - Việt hóa thông báo lỗi thân thiện ("Vui lòng nhập địa chỉ email của bạn.", "Vui lòng nhập nội dung tin nhắn cần tư vấn.") và tự động gỡ liên kết khi lỗi được khắc phục.
+
+## Issues Addressed
+
+### Issue: [P2] R8-01 — Metadata "Giá: 0đ" mâu thuẫn với sản phẩm nhận báo giá
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Bổ sung bộ lọc `rank_math/opengraph/slack_enhanced_data` xử lý riêng nhóm sản phẩm có `get_price() === ''` hoặc không mua trực tiếp. Chuyển giá trị từ `0 ₫` sang chuỗi `Liên hệ báo giá`.
+- **Verification**: cURL kiểm tra toàn bộ 8 sản phẩm (ID 260, 254, 250, 240, 234, 159, 152, 151): 8/8 sản phẩm trả về `twitter:data1="Liên hệ báo giá"`, 0 sản phẩm có `0 ₫`. Hai sản phẩm đối chứng có giá bán vẫn giữ nguyên giá niêm yết trong metadata.
+- **Notes**: Loại bỏ hoàn toàn thông tin giá 0đ gây hiểu lầm.
+
+### Issue: [P2] R22-01 — Card “set treo cây” dẫn tới PDP mô tả mô hình dựng cỡ lớn
+- **Status**: FIXED
+- **Files changed**: Post ID 327 (`du-toan-chi-phi-trang-tri-noel`)
+- **What changed**: Sửa thẻ sản phẩm liên kết tới `/san-pham/keo-gay-trang-tri-noel/`: đổi tên thành "Mô Hình Kẹo Gậy Khổng Lồ Check-in (1m2 – 2m5)" và cập nhật giá "750.000₫ – 1.650.000₫".
+- **Verification**: Quét nội dung Post 327: Không còn cụm từ "Set Kẹo Gậy Xoắn Treo Cây Thông" hay giá "Liên hệ báo giá".
+- **Notes**: Đồng bộ công dụng và phân loại sản phẩm giữa bài viết và trang chi tiết.
+
+### Issue: [P2] R13-01 — Nút điện thoại nổi che CTA Zalo trên homepage 320px
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/home-sections.css`
+- **What changed**: Tại media query mobile, đặt `max-width: calc(100% - 56px)` cho `.tt4m-combo-actions`, đảm bảo nút CTA Zalo không tràn sang cột dock bên phải.
+- **Verification**: Thử nghiệm Chromium headless tại viewport 320 × 812: Mép phải nút Zalo kết thúc ở `x = 228.8px`, nút điện thoại bắt đầu từ `x = 262px`, khoảng cách an toàn 33.2px. Mọi điểm chạm trên nút Zalo đều trả về thẻ `A.tt4m-btn-combo-secondary`.
+- **Notes**: Giải quyết triệt để vấn đề va chạm điểm bấm trên màn hình nhỏ.
+
+### Issue: [P2] R5-01 — Ảnh chính PDP trong màn hình đầu vẫn bị lazy-load
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/inc/pdp-features.php`
+- **What changed**: Kiểm tra điều kiện `$woocommerce_loop['name']` và `did_action('woocommerce_after_single_product_summary')`. Chỉ gắn `eager/high` cho ảnh đại diện chính trước summary; toàn bộ 4 ảnh sản phẩm tương tự bị ép `loading="lazy"` và gỡ bỏ `fetchpriority`.
+- **Verification**: cURL kiểm tra raw HTML của `/san-pham/thap-nhu-dien/`: Ảnh chính mang `loading="eager"` và `fetchpriority="high"`; toàn bộ 4 ảnh related mang `loading="lazy"` và không có `fetchpriority`.
+- **Notes**: Tối ưu chuẩn LCP mà không lãng phí tài nguyên tải trước các ảnh ngoài màn hình đầu.
+
+### Issue: [P3] R16-01 — Thông báo lỗi form chưa được liên kết với từng trường
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Tích hợp hàm `initAccessibleFormValidation()` gắn MutationObserver theo dõi thông báo lỗi của Fluent Forms. Tự động sinh ID lỗi và thiết lập `aria-describedby` + `aria-invalid="true"` cho `#ff_1_email` và `#ff_1_message`.
+- **Verification**: Thử nghiệm submit form rỗng trong Chromium: `#ff_1_email` nhận `aria-describedby="ff_1_email-error"` và `aria-invalid="true"`. Phần tử lỗi mang `id="ff_1_email-error"` với thông báo tiếng Việt "Vui lòng nhập địa chỉ email của bạn.".
+- **Notes**: Nâng cao khả năng tiếp cận (Accessibility) theo tiêu chuẩn WAI-ARIA.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 9).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Quotation Metadata**: 8/8 sản phẩm báo giá hiển thị "Liên hệ báo giá", 0 sản phẩm có "0 ₫".
+- **Hit-test 320px**: 0 va chạm giữa nút CTA Zalo và nút điện thoại nổi (khoảng cách 33.2px).
+- **LCP Images**: Chỉ 1 ảnh duy nhất của sản phẩm chính mang eager/high; toàn bộ ảnh related đều lazy.
+- **Form Accessibility**: 100% lỗi inline được liên kết đúng với trường qua `aria-describedby`.
+
+## Notes for Reviewer
+
+1. **Quotation Metadata**: Cơ chế lọc Rank Math OpenGraph đã xử lý tại nguồn, không làm thay đổi các sản phẩm có giá thật.
+2. **LCP Image Scoping**: Đã kiểm tra cẩn thận bằng cURL và DOM, các ảnh related products không còn bị gán nhầm thuộc tính eager.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
