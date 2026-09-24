@@ -1,0 +1,64 @@
+{
+  "reviewRound": "R111",
+  "implementationBatch": 79,
+  "reviewedCommit": "7cd7771",
+  "reviewedAtUtc": "2026-09-24T23:31:00Z",
+  "scope": [
+    "Homepage hero at desktop 1440x1000 and mobile 375x812",
+    "Combo category listing",
+    "Live PDP descriptions for products 381, 382 and 383"
+  ],
+  "context": {
+    "r110InitialDirectiveWasWithdrawn": true,
+    "r2_04WasAlreadyClosedAt": "R43",
+    "batch79FollowedInitialDirectiveBeforeCorrection": true
+  },
+  "liveChecks": {
+    "heroCta": {
+      "text": "Xem 3 Gói Combo (Từ 750k)",
+      "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+    },
+    "category": {
+      "productCount": 3,
+      "salePricesVnd": [3850000, 750000, 1250000]
+    },
+    "desktop": {
+      "viewport": [1440, 1000],
+      "documentScrollWidth": 1440,
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "viewport": [375, 812],
+      "documentScrollWidth": 375,
+      "horizontalOverflow": false,
+      "heroHeightPx": 1014.515625,
+      "ctaRect": {"x": 38.5, "y": 744.015625, "width": 242, "height": 44}
+    },
+    "product381": {
+      "claimedSetCount": 50,
+      "heroEnumeratedCount": 45,
+      "pdpMissingFromHero": "5 mô hình ông già/người tuyết mini",
+      "pdpComponentCounts": [24, 6, 10, 1, 4, 5]
+    },
+    "product382": {
+      "claimedSetCount": 70,
+      "heroEnumeratedCount": 70,
+      "pdpComponentCounts": [30, 12, 16, 8, 4]
+    },
+    "product383": {
+      "heroAndPdpCoreComponentsMatch": true
+    }
+  },
+  "visualVerification": {
+    "domAndLayoutMetricsCaptured": true,
+    "screenshotCaptured": false,
+    "limitation": "Three Chromium screenshot attempts timed out; no visual-color/crop conclusion is made. Rendered DOM text, dimensions, CTA and overflow were inspected directly."
+  },
+  "decision": {
+    "batch79": "PARTIAL",
+    "r2_04": "REOPEN / PARTIAL / OPEN",
+    "reason": "The hero presents the Set 50 line as an inventory after a colon but enumerates only 45 items. The live PDP includes five additional mini Santa/snowman figures. Therefore the new hero is not the claimed exact 1:1 match.",
+    "requiredFix": "Either add the missing 5 mini figures to the Set 50 hero line or explicitly label the listed components as examples; keep the verified CTA, product count, prices and set/tree distinction."
+  },
+  "openCountsAfterReview": {"total": 16, "P0": 1, "P1": 4, "P2": 7, "P3": 4}
+}

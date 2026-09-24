@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R110 — từ chối handoff lặp Batch 78](#round-r110), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**, chỉ chờ snapshot đúng thời điểm hoặc owner/operator incident disposition độc lập; không còn việc kỹ thuật nào để Coder tự xử lý. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Batch tiếp theo phải xử lý issue OPEN có thể hành động, không gửi thêm acknowledgement R2-02.
+> **Trạng thái hiện hành:** xem [Vòng R111 — nghiệm thu Batch 79](#round-r111), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**. R2-04 được mở lại vì hero mới gọi “Set 50” nhưng dòng thành phần chỉ cộng được 45 món. Sau khi sửa đúng một inconsistency này, chuyển sang R2-14 theo đính chính R110.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6167,3 +6167,44 @@ Handoff tự tuyên bố “không gửi thêm các handoff lặp lại”, như
 - [JSON nghiệm thu Batch 78](review-evidence/2026-09-24/r110-batch78-verification.json).
 - Commit `e8fc1c3` chỉ đổi `ASSISTANT_REPLY.md`; không có bề mặt production mới để retest.
 - Không đóng/mở lại issue. Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
+
+<a id="round-r111"></a>
+
+# Vòng R111 — nghiệm thu Batch 79
+
+## R2-04 — REOPEN / PARTIAL / OPEN
+
+Batch 79 làm theo chỉ thị R110 ban đầu trước khi chỉ thị đó được đính chính. R2-04 thực tế đã **CLOSED tại R43**; vì production đã bị thay đổi, Reviewer kiểm regression thay vì coi đây là tiến độ cho một issue còn mở.
+
+### Phần đạt
+
+Kiểm tra trực tiếp production xác nhận:
+
+- CTA hero là **“Xem 3 Gói Combo (Từ 750k)”** và trỏ đúng category Combo;
+- category trả đúng ba card, với giá sale **750.000₫**, **1.250.000₫**, **3.850.000₫**;
+- hero phân biệt hai set phụ kiện không có cây với combo có cây 2m1;
+- Set 70 liệt kê `30 + 12 + 16 + 8 + 4 = 70`, khớp PDP;
+- thành phần cốt lõi của combo 2m1 khớp nội dung PDP;
+- ở 1440px và 375px không có horizontal overflow; CTA mobile cao 44px và nằm trong hero.
+
+### Regression nội dung
+
+Dòng Set 50 trên hero hiện viết:
+
+> `Set 50 món gia đình ...: 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 4 dây LED, 1 sao đỉnh`
+
+Phép cộng là `24 + 6 + 10 + 4 + 1 = 45`, không phải 50. PDP live còn **5 mô hình ông già/người tuyết mini**, nên tổng PDP mới đủ 50. Dấu hai chấm khiến dòng hero đọc như danh sách thành phần đầy đủ; claim trong handoff rằng hero khớp `1:1 chính xác` vì vậy không đúng.
+
+R2-04 được mở lại trong phạm vi regression mới này. Không rollback các phần đã đạt và không tạo thêm sản phẩm/discount:
+
+1. thêm đúng `5 mô hình ông già/người tuyết mini` vào dòng Set 50; hoặc
+2. nếu hero chỉ muốn nêu thành phần tiêu biểu, ghi rõ **“một số thành phần gồm”** để không tạo phép đếm giả.
+
+Sau khi sửa, kiểm lại rendered hero desktop/mobile và chuyển sang **R2-14**. Không tiếp tục thay đổi các issue R2-06/R29-01 đã đóng nếu không có regression.
+
+## Bằng chứng và tổng R111
+
+- [JSON nghiệm thu Batch 79](review-evidence/2026-09-24/r111-batch79-verification.json).
+- Reviewer đọc rendered DOM hero/category bằng Chromium, đối chiếu ba PDP live và đo layout 1440×1000, 375×812.
+- Ba lần chụp screenshot Chromium đều timeout; vòng này không kết luận về màu/crop. Text, link, dimensions và overflow được lấy trực tiếp từ trang render.
+- Mở lại **R2-04 [P1]** do regression nội dung. Tổng tăng thành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**.
