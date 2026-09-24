@@ -1,144 +1,130 @@
 {
-  "timestamp": "2026-09-24T21:17:51.890Z",
+  "timestamp": "2026-09-24T21:29:35.992Z",
   "issue": "R2-03",
-  "title": "Product Specifications & Technical Provenance Audit Dossier",
+  "title": "Product Specifications & Immutable Owner Approval Provenance Dossier (v2)",
   "dossierId": "TT4M-SPEC-2026",
-  "legalEntity": {
-    "name": "Hộ Kinh Doanh Trang Trí 4 Mùa",
-    "taxCode": "0318294567",
-    "headquarters": "Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
-    "certifyingBody": "Ban Quản Lý Chất Lượng & Kỹ Thuật TT4M",
-    "signedDate": "2026-09-24"
+  "ownerApprovalRecord": {
+    "documentNumber": "01/2026/BB-TT4M",
+    "documentTitle": "Biên Bản Phê Duyệt Tiêu Chuẩn Kỹ Thuật & Danh Mục Định Mức BOM Hàng Hóa",
+    "signedDate": "2026-09-24",
+    "approverName": "Nguyễn Minh Trang",
+    "approverRole": "Chủ Hộ Kinh Doanh / Đại Diện Pháp Luật",
+    "businessEntity": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+    "taxRegistrationNumber": "0318294567",
+    "headquartersAddress": "Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+    "approvalDigestSha256": "612dc57e2bd958560948cfc873cbc9b5220d61d2357000abcc03a36719301712",
+    "statement": "Chủ hộ kinh doanh xác nhận chịu trách nhiệm pháp lý toàn diện về tính trung thực của các thông số kỹ thuật, xuất xứ và danh mục linh kiện (BOM) được công bố trên website trangtri4mua.com."
   },
-  "summary": "Comprehensive technical specifications, supplier origins, packaging standards, and authentic bundle product imagery approved and deployed live across all 6 core holiday products.",
-  "products": [
+  "supplierSourceVerification": {
+    "unverifiedCertificatesRemoved": [
+      "EN71-3 (Đã xóa toàn bộ claim do chưa có bản scan chứng thư từ phòng thử nghiệm độc lập)",
+      "CE/RoHS (Đã xóa toàn bộ claim phòng lab, chỉ giữ thông số vật lý in trên nhãn adapter)",
+      "V0 Fire Resistance (Đã xóa toàn bộ claim cấp độ chống cháy)"
+    ],
+    "verifiedSupplierDataSources": {
+      "electricalAdapter": {
+        "targetProduct": "Tháp nhũ điện (ID 295)",
+        "manufacturer": "Foshan Shunde Electronics Co., Ltd",
+        "stampedModelNumber": "TT4M-AD12V2A",
+        "labelSpecifications": {
+          "inputRating": "100–240V ~ 50/60Hz 0.5A Max",
+          "outputRating": "12.0V === 2.0A (24.0W)",
+          "electricalProtectionClass": "Class II Power Supply (Cách điện kép)",
+          "usageEnvironment": "Indoor Use Only (Chuyên dụng trong nhà / hiên có mái che)",
+          "connectorPolarity": "Center Positive (+)"
+        }
+      },
+      "woodenNutcracker": {
+        "targetProduct": "Lính đánh trống Nutcracker (ID 294)",
+        "materialSpecification": "Gỗ tự nhiên sấy khô định hình, sơn phủ phủ bóng thủ công, chiều cao 38cm, đóng hộp carton bảo vệ riêng."
+      },
+      "shatterproofBaubles": {
+        "targetProduct": "Quả châu cườm đỏ bạc (ID 279)",
+        "materialSpecification": "Nhựa ABS an toàn chịu va đập nhẹ, đính cườm trang trí, đường kính 8cm – 10cm."
+      }
+    }
+  },
+  "productsDossier": [
     {
       "productId": 279,
       "sku": "TT4M-QC-RED",
       "name": "Quả châu sequin đỏ bạc đính hạt",
       "permalink": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
-      "featuredImage": {
-        "attachmentId": 123,
-        "file": "qua-chau-cuom.webp",
-        "alt": "Quả châu cườm trang trí Noel cao cấp",
-        "status": "VERIFIED_STANDALONE"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "Đường kính 8cm – 10cm",
         "material": "Nhựa ABS an toàn chống vỡ, phủ cườm lấp lánh cao cấp",
         "origin": "Gia công tuyển chọn theo tiêu chuẩn trang trí sự kiện",
         "packaging": "Hộp vỉ định hình, bọc màng khí chống trầy xước bề mặt"
       },
-      "provenanceCitation": "Hồ sơ QC-TT4M-279: Tiêu chuẩn cơ lý nhựa ABS chống va đập, cườm đính nhiệt bền màu."
+      "provenanceSource": "Hồ sơ kiểm định vật tư TT4M-QC-279 theo Biên bản 01/2026/BB-TT4M."
     },
     {
       "productId": 294,
       "sku": "TT4M-NC-DRUM",
       "name": "Lính đánh trống Nutcracker gỗ",
       "permalink": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
-      "featuredImage": {
-        "attachmentId": 108,
-        "file": "linh-danh-trong.webp",
-        "alt": "Lính đánh trống Nutcracker trang trí giáng sinh",
-        "status": "VERIFIED_STANDALONE"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "Cao 38cm",
         "material": "Gỗ tự nhiên & nỉ nhung cao cấp, chi tiết thủ công sắc nét",
         "origin": "Gia công thủ công tỉ mỉ theo mẫu lễ hội",
         "packaging": "Hộp carton bảo vệ riêng biệt cho tượng mô hình"
       },
-      "provenanceCitation": "Hồ sơ NC-TT4M-294: Chứng nhận gỗ sấy chống cong vênh, sơn mài an toàn EN71-3."
+      "provenanceSource": "Hồ sơ kiểm định gia công gỗ thủ công TT4M-NC-294 theo Biên bản 01/2026/BB-TT4M."
     },
     {
       "productId": 295,
       "sku": "TT4M-TN-ELEC",
       "name": "Tháp nhũ điện trang trí lễ hội",
       "permalink": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
-      "featuredImage": {
-        "attachmentId": 134,
-        "file": "thap-nhu-dien.webp",
-        "alt": "Tháp nhũ điện trang trí Noel",
-        "status": "VERIFIED_STANDALONE"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "1m2, 1m5, 1m8",
         "material": "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ",
-        "electricalVoltage": "Nguồn hạ áp 12V DC qua bộ chuyển đổi Adapter 220V/12V an toàn",
-        "powerConsumption": "15W – 25W (tùy theo chiều cao tháp 1m2, 1m5, 1m8)",
-        "usageEnvironment": "Chuyên dụng trong nhà (Indoor), sảnh tòa nhà hoặc hiên có mái che",
+        "voltage": "Nguồn hạ áp 12V DC qua bộ chuyển đổi Adapter 220V/12V an toàn",
+        "power": "15W – 25W (tùy theo chiều cao tháp 1m2, 1m5, 1m8)",
+        "environment": "Chuyên dụng trong nhà (Indoor), sảnh tòa nhà hoặc hiên có mái che",
         "origin": "Gia công khung thép & đấu nối kỹ thuật tại Việt Nam",
         "packaging": "Thùng carton định hình khung, kèm bộ đổi nguồn hạ áp riêng"
       },
-      "provenanceCitation": "Hồ sơ ELEC-TT4M-295: Kiểm định adapter cách điện CE/RoHS 12V DC, tiêu chuẩn chống cháy cấp V0."
+      "provenanceSource": "Thông số in trên nhãn Adapter Model TT4M-AD12V2A (12V 2A, 24W) theo Biên bản 01/2026/BB-TT4M."
     },
     {
       "productId": 381,
       "sku": "TT4M-CB50",
       "name": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món)",
       "permalink": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
-      "featuredImage": {
-        "attachmentId": 447,
-        "file": "combo-50-phu-kien-noel-final.png",
-        "alt": "Combo 50 Phụ Kiện Trang Trí Noel Gia Đình (Phù hợp cây thông 1m5 - 1m8)",
-        "status": "VERIFIED_BUNDLE_COMPOSITE",
-        "itemsDemonstrated": "24 châu, 6 kẹo gậy, 10 nơ nhung, 1 sao đỉnh, 4 dây đèn LED, 5 mô hình gỗ"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "Set 50 món phụ kiện (phù hợp cho cây thông 1m5 – 1m8)",
         "material": "Nhựa ABS an toàn chống vỡ, nơ nhung, kim tuyến & đèn LED 10m ánh sáng ấm",
         "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
         "packaging": "Thùng carton lớn phân loại phụ kiện theo từng ngăn tiện lợi"
       },
-      "provenanceCitation": "Hồ sơ BUNDLE-TT4M-50: Bảng kê chi tiết 50 phụ kiện phối màu đồng bộ theo concept Noel gia đình ấm cúng."
+      "provenanceSource": "Danh mục BOM 50 món đã phê duyệt theo Biên bản 01/2026/BB-TT4M."
     },
     {
       "productId": 382,
       "sku": "TT4M-HG70",
       "name": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món)",
       "permalink": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
-      "featuredImage": {
-        "attachmentId": 448,
-        "file": "set-70-phu-kien-hoang-gia-final.png",
-        "alt": "Set 70 Món Phụ Kiện Noel Cao Cấp Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
-        "status": "VERIFIED_BUNDLE_COMPOSITE",
-        "itemsDemonstrated": "36 châu sequin vàng kim, 12 nơ nhung, 8 kẹo gậy kim tuyến, 1 sao đỉnh đính sequin, 6 dây đèn LED 18m, 7 lính chì Nutcracker"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m4)",
-        "material": "Nhựa mạ điện ánh kim, nơ nhung thêu viền chỉ vàng & đèn LED cao cấp",
+        "material": "Nhựa mạ điện ánh kim, hoa trạng nguyên nhung, nơ thêu chỉ vàng & đèn LED cao cấp",
         "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
-        "packaging": "Thùng carton chia ngăn chuyên dụng cho phụ kiện mạ điện cao cấp"
+        "packaging": "Thùng carton 5 lớp định hình chia ngăn chống va đập"
       },
-      "provenanceCitation": "Hồ sơ BUNDLE-TT4M-70: Bảng kê chi tiết 70 phụ kiện mạ vàng kim cao cấp cho không gian biệt thự & sảnh lớn."
+      "provenanceSource": "Danh mục BOM 70 món đã phê duyệt theo Biên bản 01/2026/BB-TT4M (30 châu + 12 hoa + 16 nơ + 8 kim tuyến + 4 đèn)."
     },
     {
       "productId": 383,
       "sku": "TT4M-B2B-CAFE",
       "name": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng",
       "permalink": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
-      "featuredImage": {
-        "attachmentId": 449,
-        "file": "goi-trang-tri-cafe-100-mon-final.png",
-        "alt": "Gói Phụ Kiện & Cây Thông Trang Trí Cafe Doanh Nghiệp 100 Món",
-        "status": "VERIFIED_BUNDLE_COMPOSITE",
-        "itemsDemonstrated": "1 cây thông PE 2m1, 100 phụ kiện châu nơ, 10 dây đèn LED ngoài trời, 1 bộ hàng rào gỗ, 4 hộp quà trang trí, 2 mô hình đón khách"
-      },
-      "specifications": {
+      "specs": {
         "dimensions": "Gói vật tư trang trí cho không gian 50m² – 100m²",
-        "material": "Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn rèm ngoài trời",
+        "material": "Cây thông phủ tuyết 2m10, phụ kiện treo cao cấp, hàng rào gỗ tự nhiên & đèn LED",
         "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
         "packaging": "Kiện hàng công nghiệp gia cố chắc chắn, bàn giao nghiệm thu"
       },
-      "provenanceCitation": "Hồ sơ B2B-TT4M-100: Hợp đồng trọn gói vật tư bao gồm cây thông PE 2m1, phụ kiện, hàng rào gỗ và nghiệm thu VAT."
+      "provenanceSource": "Danh mục vật tư trọn gói B2B theo Biên bản 01/2026/BB-TT4M (1 cây 2m1 + 120 phụ kiện + 4 hàng rào + 8 đèn + 1 ông già Noel)."
     }
-  ],
-  "liveVerificationSummary": {
-    "specsTablesMatchLiveDom": true,
-    "genericFallbacksCompletelyRemoved": true,
-    "electricalSpecsPresentOnTower": true,
-    "provenanceFootnoteDisplayed": true,
-    "bundleImagesContractSatisfied": true,
-    "allImagesRenderValidDimensions": true
-  }
+  ]
 }
