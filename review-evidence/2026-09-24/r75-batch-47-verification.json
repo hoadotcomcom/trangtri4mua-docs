@@ -1,0 +1,24 @@
+{
+  "round": "R75",
+  "date": "2026-09-24",
+  "handoff": "Batch 47",
+  "issue": "R26-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "artifact": "review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json",
+  "acceptedImprovements": [
+    "PDP artifact now records aria/dialog semantics and open/closed trigger states for close button, backdrop and Escape.",
+    "Three successive open/close cycles return focus to the trigger and set aria-expanded=false.",
+    "Desktop search regression records its two-stage Escape behavior.",
+    "Five forward Tab and three backward Tab steps all remain inside the PDP drawer in the sampled segment."
+  ],
+  "remainingGaps": [
+    "The five-forward/three-backward sample does not reach either focus-list boundary and therefore does not prove Tab/Shift+Tab wrap containment.",
+    "The artifact records no inert state despite R73 explicitly requesting inert cleanup across repeated cycles.",
+    "The artifact environment contains only the PDP URL; Batch 47's claim that the updated artifact covers both Homepage and PDP is false. Homepage remains supported by the older R43 independent check, not this artifact.",
+    "There is still no actual screen-reader run, named AT/browser pair, transcript, speech log, or result. DOM ARIA fields do not satisfy acceptance criterion 4's screen-reader check."
+  ],
+  "decision": "Keep R26-01 PARTIAL/OPEN. The decisive blocker remains the explicitly required screen-reader check; additionally provide boundary-wrap and inert evidence rather than short interior Tab samples.",
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"browserNeeded": false, "siteMutation": false}
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R74 — nghiệm thu độc lập Batch 46](#round-r74), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: build 2.4.0 và cờ mounted đã live, nhưng `window.scrollTo` chưa tự tải bốn ảnh.
+> **Trạng thái hiện hành:** xem [Vòng R75 — nghiệm thu độc lập Batch 47](#round-r75), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: trace tiến bộ nhưng chưa có boundary wrap, inert hoặc screen-reader run.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4840,4 +4840,36 @@ R5-02 giữ **FAIL / OPEN**. Bàn giao tiếp theo cần trace cùng session g�
 
 - [JSON Batch 46](review-evidence/2026-09-24/r74-batch-46-verification.json).
 - Không click card/CTA, không sửa giỏ, không gửi form; hai browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r75"></a>
+
+# Vòng R75 — Nghiệm thu độc lập Batch 47
+
+## R26-01 — PARTIAL / OPEN
+
+Artifact cập nhật đã sửa phần lớn thiếu sót R73:
+
+- PDP ghi đủ role/modal/control/expanded và open/closed state cho nút đóng, backdrop, Escape;
+- ba vòng mở/đóng liên tiếp đều trả focus về trigger và `aria-expanded=false`;
+- search desktop ghi đúng chuỗi Escape hai bước;
+- năm Tab tiến và ba Shift+Tab lùi trong mẫu đều còn nằm trong drawer.
+
+Ba blocker vẫn còn:
+
+1. Chuỗi Tab chỉ đi qua năm phần tử đầu và lùi ba bước; chưa chạm phần tử cuối/đầu để chứng minh wrap boundary của Tab/Shift+Tab. Đây là sample bên trong, không phải focus-containment test hoàn chỉnh.
+2. Artifact không ghi `inert` ở bất kỳ open/closed state nào dù R73 yêu cầu xác nhận cleanup inert qua các vòng lặp.
+3. Acceptance 4 yêu cầu **một screen reader**. Batch 47 vẫn không có tên AT/browser, transcript, speech log hoặc kết quả thao tác bằng screen reader. Các trường DOM ARIA không thay thế phép thử này.
+
+Ngoài ra `environment.url` của artifact chỉ là PDP; mô tả “cả Homepage và PDP” trong handoff không đúng với tệp commit. Homepage vẫn có bằng chứng độc lập cũ ở R43, nên đây không phải blocker mới, nhưng không được tính là artifact Batch 47 bao phủ hai template.
+
+R26-01 giữ **PARTIAL / OPEN**. Cần Tab/Shift+Tab qua đúng hai boundary, ghi inert mỗi state và chạy một tổ hợp screen reader/browser có thể audit. Không cần lặp lại ba đường đóng PDP đã đủ.
+
+## Bằng chứng và tổng R75
+
+- [JSON Batch 47](review-evidence/2026-09-24/r75-batch-47-verification.json).
+- [Artifact Coder cập nhật](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
+- Không thao tác CTA thương mại hoặc thay đổi website.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
