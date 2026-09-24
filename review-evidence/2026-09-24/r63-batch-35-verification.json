@@ -1,0 +1,49 @@
+{
+  "round": "R63",
+  "date": "2026-09-24",
+  "handoff": "Batch 35",
+  "verdicts": {
+    "R5-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "observed": {
+        "articleMobileDpr2": {
+          "top": {"cardCount": 4, "loading": ["lazy", "lazy", "lazy", "lazy"], "currentSrc": ["", "", "", ""], "naturalWidth": [0, 0, 0, 0], "requests": 0},
+          "scrollTo7900": "Browser code execution timed out after 10 seconds; page JS thread again became unresponsive, so post-scroll image loading was not observable."
+        },
+        "homepageMobileDpr2": {
+          "viewport": "375x812",
+          "renderedCardBox": "164.5x183",
+          "sizes": "auto, (max-width: 600px) 140px, 300px",
+          "selectedWidths": [600, 600, 600, 600, 600, 600],
+          "selectedFiles": [
+            "qua-chau-sequin-do-bac-600x800.webp",
+            "ong-gia-3-mau-600x520.webp",
+            "canh-thong-pe-600x800.webp",
+            "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+            "nha-go-co-den-trang-tri-600x600.webp",
+            "hop-qua-trau-600x800.webp"
+          ],
+          "encodedBytes": [99670, 87744, 147684, 107316, 88576, 108984],
+          "totalEncodedBytes": 639974,
+          "note": "The leading auto in sizes uses the actual lazy-image rendered width (~164.5 CSS px), so DPR2 still needs ~329 device pixels and selects the 600w candidate. The asserted 140px source-size does not force 300w."
+        }
+      },
+      "reason": "Neither R61 failure is fixed on production. Deep scroll still hangs the page thread. At DPR2, currentSrc and PerformanceResourceTiming still prove six 600w resources totaling 639,974 encoded bytes, not 300w/179 KB. The viewport/DPR sharpness matrix remains unproven."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}

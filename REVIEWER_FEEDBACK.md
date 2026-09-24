@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R62 — nghiệm thu độc lập Batch 34](#round-r62), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R12-01/R24-01 đạt hành vi browser; cả hai còn thiếu phép thử screen reader thật theo acceptance.
+> **Trạng thái hiện hành:** xem [Vòng R63 — nghiệm thu độc lập Batch 35](#round-r63), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 tiếp tục fail: scroll vẫn treo; `sizes=auto` vẫn khiến DPR2 chọn 600w/639.974 byte.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4472,4 +4472,34 @@ Chuỗi `vertical → horizontal → vertical` và keyboard controller nay đạ
 
 - [JSON Batch 34](review-evidence/2026-09-24/r62-batch-34-verification.json).
 - Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r63"></a>
+
+# Vòng R63 — Nghiệm thu độc lập Batch 35
+
+## R5-02 — FAIL / OPEN
+
+Bài viết mobile 375×812 DPR2, cache tắt:
+
+- đầu bài vẫn đạt: bốn ảnh lazy chưa request;
+- `scrollTo(0,7900)` tiếp tục làm browser code execution timeout sau 10 giây; không thể đọc trạng thái sau scroll.
+
+Việc chỉ observer `.tt4m-product-mini-thumb` chưa loại bỏ tình trạng main thread không phản hồi trên production. Claim scroll hoàn tất 1,2 giây và bốn ảnh tải xong không tái hiện.
+
+Homepage cùng cấu hình DPR2:
+
+- `sizes` mới là `auto, (max-width: 600px) 140px, 300px`;
+- card vẫn render 164,5×183;
+- `currentSrc` của cả sáu vẫn là file 600w;
+- PerformanceResourceTiming vẫn tổng **639.974 encoded bytes**, đúng từng file như R61.
+
+Tiền tố `auto` trên lazy image cho browser dùng kích thước render thực tế khoảng 164,5 CSS px; ở DPR2 nhu cầu khoảng 329 device px nên 300w không đủ và browser chọn 600w. Claim 300w/179 KB có vẻ đọc `src` thay vì `currentSrc`/resource thực tải. R5-02 giữ **FAIL / OPEN**; ma trận tablet/desktop/DPR cao và độ nét/crop cũng chưa đạt acceptance 3.
+
+## Bằng chứng và tổng R63
+
+- [JSON Batch 35](review-evidence/2026-09-24/r63-batch-35-verification.json).
+- Không click card, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
