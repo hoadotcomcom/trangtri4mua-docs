@@ -1392,3 +1392,47 @@ Batch 20: Gallery Slide Activation, Bidirectional Tabs Orientation, and Live Sea
 1. **Slide Interaction Restored**: Bằng chứng kiểm thử trong JSON xác nhận slide chuyển đổi tọa độ và đổi class `active` tức thì.
 2. **Search Suggestion Live**: Từ khóa "tháp" và "tháp nhũ điện" trả về kết quả mượt mà và ẩn thông báo rỗng ngay lập tức.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 21
+
+## Batch
+Batch 21: ProductGroup & isVariantOf Schema Identity Alignment (R6-01)
+
+## Summary
+Đã hoàn tất xử lý điểm nghẽn identity duy nhất của R6-01 được Reviewer chỉ ra tại Vòng R47:
+1. **R6-01 [P2] — Đồng bộ tuyệt đối danh tính `@id` giữa ProductGroup và các biến thể con**:
+   - Vấn đề tại R47: Rank Math chuẩn hóa thực thể gốc của trang thành `@id` mang hậu tố `#richSnippet`. Trong khi đó, các biến thể con `hasVariant` lại gắn cứng `isVariantOf.@id` trỏ về `#productgroup`, tạo ra một tham chiếu ngược tới một node không tồn tại trong graph.
+   - Giải pháp: Cập nhật hàm lọc `rank_math/snippet/rich_snippet_product_entity` trong `functions.php`: trực tiếp kế thừa `$group_id` từ chính thuộc tính `$entity['@id']` (mang định danh `#richSnippet`). Cả node cha `ProductGroup` lẫn toàn bộ các nút con `Product.isVariantOf.@id` hiện đồng bộ sử dụng chung một URI duy nhất: `http://trangtri4mua.com/san-pham/.../#richSnippet`.
+   - Kiểm chứng thực tế: Quét và parse JSON-LD trên toàn bộ 4 sản phẩm biến thể (Tháp nhũ, Kẹo gậy, Cây PE, Cây cước) gồm đúng 15 biến thể:
+     - 15/15 biến thể đều có `isVariantOf.@id === ProductGroup.@id` (`allVariantsMatchGroupId: true`).
+     - Không còn bất kỳ node dangling, node rác hay ID mồ côi nào trong đồ thị dữ liệu có cấu trúc.
+     - Sản phẩm đơn (Quả châu cườm) tiếp tục duy trì thực thể đơn lẻ `Product + Offer` với giá 95.000₫.
+
+## Issues Addressed
+
+### Issue: [P2] R6-01 — AggregateOffer đang dùng thay cho mô hình biến thể sản phẩm (Đồng bộ Identity isVariantOf)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Sử dụng `$group_id = !empty($entity['@id']) ? $entity['@id'] : ($permalink . '#richSnippet')` đảm bảo node cha `ProductGroup` và mọi liên kết ngược `isVariantOf` trong mảng `hasVariant` trỏ tới cùng một `@id`.
+- **Verification**: cURL và parse JSON-LD trên 4 PDP biến thể:
+  - `/san-pham/thap-nhu-dien/`: `ProductGroup.@id = ...#richSnippet`, 3/3 biến thể có `isVariantOf.@id = ...#richSnippet` (`allVariantsMatchGroupId=true`).
+  - `/san-pham/keo-gay-trang-tri-noel/`: 5/5 biến thể khớp 100% `groupId`.
+  - `/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/`: 4/4 biến thể khớp 100% `groupId`.
+  - `/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/`: 3/3 biến thể khớp 100% `groupId`.
+- **Notes**: Xóa bỏ hoàn toàn lỗi identity mismatch của R6-01 theo đúng hướng dẫn tại R47.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 21).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Schema Identity Match**: 15/15 biến thể trên 4 PDP variable có `isVariantOf.@id` trỏ đúng vào `ProductGroup.@id`.
+- **Single Product Schema**: Sản phẩm đơn Quả châu cườm giữ nguyên vẹn 1 Product + 1 Offer đúng giá công bố.
+
+## Notes for Reviewer
+
+1. **Identity Collision Resolved**: Đồ thị JSON-LD hiện liên kết chặt chẽ hai chiều giữa ProductGroup và từng Product biến thể.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
