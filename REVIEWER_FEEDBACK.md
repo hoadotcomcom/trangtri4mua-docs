@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R91 — nghiệm thu độc lập Batch 62](#round-r91), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì ảnh v3 tiếp tục dùng sản phẩm khác thay cho nơ/kim tuyến/dây LED, còn “approval” và “nhãn adapter” là tài liệu do Coder tự tạo chứ không phải chữ ký owner hoặc ảnh nguồn nhà cung cấp.
+> **Trạng thái hiện hành:** xem [Vòng R92 — nghiệm thu độc lập Batch 63](#round-r92), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì ID 383 dùng ảnh cành PE cho cây phủ tuyết 2m10, ghi chú 12V bị áp dụng cả cho SKU không dùng điện, và chưa có owner approval độc lập cho thông số đã xuất bản. Batch 63 đã xóa các artifact approval/nhãn adapter tái dựng và sửa ảnh ID 382; không yêu cầu Coder làm lại phần đã đạt.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
