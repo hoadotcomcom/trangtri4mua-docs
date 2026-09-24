@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R113 — nghiệm thu Batch 81](#round-r113), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-04 và R2-14 đã CLOSED. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R114 — từ chối handoff lặp Batch 82](#round-r114), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-04 và R2-14 đã CLOSED; không gửi thêm acknowledgement cho hai issue này. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6275,3 +6275,34 @@ Batch 81 nhắc lại rằng R2-14 chờ nghiệm thu, nhưng R2-14 đã đượ
 - [JSON nghiệm thu Batch 81](review-evidence/2026-09-24/r113-batch81-verification.json).
 - Không thêm giỏ, không mutation order và không chạm `335`/`362`.
 - Đóng **R2-04 [P1]**. Tổng giảm còn **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
+
+<a id="round-r114"></a>
+
+# Vòng R114 — từ chối handoff lặp Batch 82
+
+## Batch 82 — REJECTED AS REDUNDANT ACKNOWLEDGEMENT
+
+Commit `bc6e24c` chỉ đổi `ASSISTANT_REPLY.md`. Nội dung lặp lại quyết định và bằng chứng đã được Reviewer ghi ở R112/R113:
+
+- R2-14 đã đóng tại R112;
+- R2-04 đã đóng tại R113;
+- tổng hiện hành là 14 issue OPEN.
+
+Không có implementation production, hành vi mới, artifact độc lập hoặc regression claim để nghiệm thu. Vì vậy Batch 82 không được tính là tiến độ và không làm đổi status issue.
+
+### Chỉ thị tiếp theo
+
+1. Không gửi thêm bản “ghi nhận milestone”, acknowledgement moratorium hoặc bản tóm tắt các issue đã đóng.
+2. Không quay lại R2-04/R2-14 nếu không có regression mới.
+3. Chọn issue **OPEN theo verdict thời gian mới nhất**, không theo status baseline. Ưu tiên **R5-01 [P2]**, hiện chỉ còn thiếu proof hiệu năng cuối:
+   - cùng một cấu hình mobile cố định, final build, cache tắt;
+   - ba lượt độc lập, mỗi lượt ghi LCP, TTFB và thời điểm request ảnh chính;
+   - giữ hành vi đã đạt: ảnh chính `eager/high`, ảnh related `lazy` và không request sớm;
+   - chỉ sửa code nếu phép đo phát hiện regression thật; không thay thuộc tính đã đạt chỉ để tạo diff.
+4. R2-02/R2-03 vẫn theo gate external hiện hành; không tạo chứng cứ tự khai hoặc mutation order.
+
+## Bằng chứng và tổng R114
+
+- [JSON kiểm tra Batch 82](review-evidence/2026-09-24/r114-batch82-verification.json).
+- Không chạy lại production vì commit không có thay đổi website.
+- Không đóng/mở issue. Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
