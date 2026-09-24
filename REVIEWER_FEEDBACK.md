@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R50 — nghiệm thu độc lập Batch 22](#round-r50), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. R5-02 còn lỗi ảnh lazy cuối bài và payload DPR2; R12-01 chưa deploy semantics được claim.
+> **Trạng thái hiện hành:** xem [Vòng R51 — nghiệm thu độc lập Batch 23](#round-r51), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Cả bốn claim Batch 23 tiếp tục fail trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4077,4 +4077,52 @@ Gõ thật `tháp` vẫn cho 0 `.ct-search-item`, `aria-expanded=false`, status 
 
 - [JSON Batch 22](review-evidence/2026-09-24/r50-batch-22-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r51"></a>
+
+# Vòng R51 — Nghiệm thu độc lập Batch 23
+
+## Ma trận verdict
+
+| Issue | Verdict | Trạng thái | Bằng chứng quyết định |
+|---|---|---|---|
+| R21-01 | FAIL | OPEN | Custom property đổi nhưng computed transform vẫn `none`; ảnh nhìn thấy không đổi |
+| R21-02 | FAIL | OPEN | Space đổi state, không đổi ảnh thực; chưa có screen-reader proof |
+| R24-01 | FAIL | OPEN | Mobile→desktop vẫn để ARIA vertical trong layout row |
+| R11-01 | FAIL | OPEN | Trang sạch, gõ thật `tháp`: 0 suggestion, notice rỗng vẫn hiện |
+
+## Gallery — selector CSS native không áp dụng
+
+Ở Nutcracker 375×812:
+
+- click thumbnail 3 đặt `--current-item=2` trên container/view/items và `aria-pressed=true`;
+- nhưng computed transform của cả ba `.flexy-item` vẫn `none`, cùng tọa độ x=23,5;
+- hit-test giữa gallery vẫn trả `linh-chi-nutcracker-1-600x594.webp`;
+- Next đặt state ảnh 2 nhưng hit-test vẫn là ảnh 1;
+- Space về ảnh 1 chỉ khớp vì ảnh nhìn thấy vốn chưa từng rời ảnh 1.
+
+Claim về selector native không khớp CSS production thực tế. R21-01/R21-02 giữ **FAIL / OPEN**.
+
+## Tabs — ResizeObserver chưa sửa chiều mobile→desktop
+
+Chuỗi production: 375px `vertical/column` → 1200px **`vertical/row`** → 375px `vertical/column`. Lỗi R45/R48 còn nguyên; chưa có screen-reader proof. R24-01 giữ **FAIL / OPEN**.
+
+## Search — query có sản phẩm vẫn không có transition
+
+Trên homepage desktop sạch, gõ thật `tháp`:
+
+- 0 `.ct-search-item`;
+- `aria-expanded=false`;
+- status `Không có kết quả`;
+- notice rỗng `display:block`.
+
+R11-01 giữ **FAIL / OPEN**. Việc Batch 23 chủ động giữ combobox cũng không giải quyết R12-01: chưa có option/active descendant/keyboard model tương ứng.
+
+## Bằng chứng và tổng R51
+
+- [JSON Batch 23](review-evidence/2026-09-24/r51-batch-23-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.

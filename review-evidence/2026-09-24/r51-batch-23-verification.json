@@ -1,0 +1,204 @@
+{
+  "round": "R51",
+  "date": "2026-09-24",
+  "handoff": "Batch 23",
+  "verdicts": {
+    "R21-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "click3": {
+        "current": [
+          "2",
+          "2",
+          "2"
+        ],
+        "active": 2,
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "hitTag": "IMG",
+        "thumbs": [
+          {
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "false",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "true",
+            "tabindex": "0"
+          }
+        ],
+        "arrows": [
+          {
+            "class": "flexy-arrow-prev",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm trước"
+          },
+          {
+            "class": "flexy-arrow-next",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm kế tiếp"
+          }
+        ]
+      },
+      "next": {
+        "current": [
+          "1",
+          "1",
+          "1"
+        ],
+        "active": 1,
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "hitTag": "IMG",
+        "thumbs": [
+          {
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "false",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "true",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "false",
+            "tabindex": "0"
+          }
+        ],
+        "arrows": [
+          {
+            "class": "flexy-arrow-prev",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm trước"
+          },
+          {
+            "class": "flexy-arrow-next",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm kế tiếp"
+          }
+        ]
+      },
+      "diagnosis": "Custom properties update, but computed transform on every .flexy-item remains none; center hit remains image 1."
+    },
+    "R21-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "space": {
+        "current": [
+          "0",
+          "0",
+          "0"
+        ],
+        "active": 0,
+        "hitSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+        "hitTag": "IMG",
+        "thumbs": [
+          {
+            "label": "Xem ảnh mẫu 1",
+            "pressed": "true",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "pressed": "false",
+            "tabindex": "0"
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "pressed": "false",
+            "tabindex": "0"
+          }
+        ],
+        "arrows": [
+          {
+            "class": "flexy-arrow-prev",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm trước"
+          },
+          {
+            "class": "flexy-arrow-next",
+            "role": "button",
+            "tabindex": "0",
+            "label": "Xem ảnh sản phẩm kế tiếp"
+          }
+        ]
+      },
+      "reason": "Keyboard changes ARIA/current state but does not provide a working image selection; no screen-reader proof."
+    },
+    "R24-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "sequence": [
+        {
+          "width": 375,
+          "orientation": "vertical",
+          "direction": "column"
+        },
+        {
+          "width": 1200,
+          "orientation": "vertical",
+          "direction": "row"
+        },
+        {
+          "width": 375,
+          "orientation": "vertical",
+          "direction": "column"
+        }
+      ],
+      "reason": "Mobile->desktop still leaves vertical ARIA while CSS is row; no screen-reader proof."
+    },
+    "R11-01": {
+      "result": {
+        "q": "tháp",
+        "attrs": {
+          "role": "combobox",
+          "expanded": "false"
+        },
+        "items": [],
+        "status": "Không có kết quả",
+        "notice": [
+          "block"
+        ]
+      },
+      "status": "OPEN",
+      "empty": {
+        "q": "zzreviewnomatch20260924",
+        "attrs": {
+          "role": "combobox",
+          "expanded": "false"
+        },
+        "items": [],
+        "status": "Không có kết quả",
+        "notice": [
+          "block"
+        ]
+      },
+      "reason": "Fresh page real keyboard tháp produces zero items and leaves empty notice visible."
+    }
+  },
+  "current_total": {
+    "open": 20,
+    "p1": 6,
+    "p2": 9,
+    "p3": 5,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
