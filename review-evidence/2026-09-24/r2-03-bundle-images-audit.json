@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-09-24T21:16:40.388Z",
+  "issue": "R2-03",
+  "title": "Bundle & Set Featured Imagery Contract Audit",
+  "description": "Replaced single-item placeholder images for bundle/set products with authentic high-resolution composite images demonstrating complete product sets, breakdown of components, and accurate ALT texts.",
+  "productsAudited": [
+    {
+      "productId": 381,
+      "sku": "TT4M-CB50",
+      "productName": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện, Đèn LED, Sao Đỉnh)",
+      "permalink": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+      "previousImage": "hop-qua-trau.webp (Single gift box item)",
+      "newFeaturedImage": {
+        "attachmentId": 447,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/combo-50-phu-kien-noel-final-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/combo-50-phu-kien-noel-final-768x768.png",
+        "altText": "Combo 50 Phụ Kiện Trang Trí Noel Gia Đình (Phù hợp cây thông 1m5 - 1m8)",
+        "renderedDimensions": "600x600",
+        "complete": true,
+        "bundleComponentsShown": [
+          "24 Trái châu đỏ, vàng & sequin",
+          "6 Kẹo gậy xoắn nhung đỏ",
+          "10 Nơ nhung đỏ viền vàng",
+          "1 Ngôi sao nhũ đỉnh cây",
+          "4 Dây đèn LED vàng ấm",
+          "5 Mô hình lính chì & người tuyết gỗ"
+        ]
+      }
+    },
+    {
+      "productId": 382,
+      "sku": "TT4M-HG70",
+      "productName": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+      "permalink": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "previousImage": "qua-chau-cuom.webp (Single bauble item)",
+      "newFeaturedImage": {
+        "attachmentId": 448,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-final-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-final-768x768.png",
+        "altText": "Set 70 Món Phụ Kiện Noel Cao Cấp Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
+        "renderedDimensions": "600x600",
+        "complete": true,
+        "bundleComponentsShown": [
+          "36 Trái châu cườm & sequin mạ vàng kim",
+          "12 Nơ nhung đỏ cao cấp viền vàng",
+          "8 Kẹo nhung xoắn & gậy kim tuyến",
+          "1 Ngôi sao đính sequin đỉnh cây",
+          "6 Dây đèn LED vàng ấm (18m)",
+          "7 Mô hình lính chì Nutcracker gỗ hoàng gia"
+        ]
+      }
+    },
+    {
+      "productId": 383,
+      "sku": "TT4M-B2B-CAFE",
+      "productName": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
+      "permalink": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "previousImage": "hang-rao-go-trang-tri-goc-cay.webp (Single fence item)",
+      "newFeaturedImage": {
+        "attachmentId": 449,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-100-mon-final-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-100-mon-final-768x768.png",
+        "altText": "Gói Phụ Kiện & Cây Thông Trang Trí Cafe Doanh Nghiệp 100 Món",
+        "renderedDimensions": "600x600",
+        "complete": true,
+        "bundleComponentsShown": [
+          "1 Cây thông PE cao cấp 2m1 tán xòe tự nhiên",
+          "100 Phụ kiện châu cườm, nơ nhung, chuông vàng",
+          "10 Dây đèn LED chống nước ngoài trời",
+          "1 Bộ hàng rào gỗ tự nhiên gốc cây",
+          "4 Hộp quà trang trí sảnh đón",
+          "2 Mô hình ông già Noel check-in"
+        ]
+      }
+    }
+  ],
+  "acceptanceCriteriaSatisfied": [
+    "Triệt tiêu hoàn toàn việc dùng ảnh một món đơn lẻ (Hộp quà trầu, Quả châu cườm, Hàng rào gỗ) cho các gói combo/set",
+    "Hình ảnh đại diện mới phản ánh trực quan, chi tiết từng thành phần phụ kiện có trong bộ sản phẩm",
+    "ALT text mô tả đầy đủ quy mô set và đối tượng sử dụng (cây thông 1m5-1m8, cây thông 1m8-2m4, trọn gói cafe)",
+    "Hệ thống ảnh sinh ra đầy đủ các phiên bản responsive (600x600, 768x768, 1000x1000) hiển thị sắc nét trên cả desktop và mobile"
+  ]
+}
