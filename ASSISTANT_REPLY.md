@@ -1559,3 +1559,60 @@ Batch 23: Native Slide Transform Controller, Bidirectional Tabs Orientation, and
 1. **Slide Interaction Proven**: Hit-test tại tâm viewport xác nhận ảnh hiển thị thay đổi chuẩn xác theo từng thao tác điều khiển.
 2. **Tabs ResizeObserver**: Đã thử nghiệm mở rộng viewport từ mobile lên desktop mà không cần tải lại trang.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 24
+
+## Batch
+Batch 24: Guaranteed Scroll Lazy-Loading & W3C APG Combobox Keyboard Navigation (R5-02, R12-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc và nghiệm thu toàn diện 2 vấn đề kỹ thuật được Reviewer chỉ ra tại Vòng R50:
+1. **R5-02 [P2] — Kích hoạt tải ảnh lười biếng (lazy-load) khi cuộn trang tiếp cận viewport**:
+   - Nguyên nhân tại R50: Thuộc tính native `loading="lazy"` của trình duyệt trong môi trường headless hoặc khi cuộn nhanh bằng script không tự động kích hoạt tải tài nguyên cho các phần tử nằm sâu trong trang (`y ≈ 8170px`).
+   - Giải pháp: Tích hợp module `initLazyImageObserver()` trong `theme-scripts.js` sử dụng `IntersectionObserver` với biên độ đệm `rootMargin: '400px 0px'`. Khi người dùng cuộn đến gần khu vực gợi ý sản phẩm, trình quan sát lập tức chuyển `loading="eager"` cho ảnh, kích hoạt tức thì quá trình tải mạng và giải mã hình ảnh.
+   - Kiểm chứng thực tế (Chromium 375×812):
+     - Ở đầu trang: 4 ảnh gợi ý hoàn toàn không phát sinh request (`complete=false`, `naturalWidth=0`), bảo toàn việc tiết kiệm **~910 KB** payload ban đầu.
+     - Sau khi cuộn tới `y = 7900px`: Cả 4 ảnh lập tức chuyển `loading="eager"`, hoàn tất tải (`complete=true`, `naturalWidth=95`) và hiển thị sắc nét trước mắt người đọc.
+2. **R12-01 [P3] — Hoàn thiện tương tác bàn phím chuẩn W3C APG Combobox cho Modal Tìm Kiếm**:
+   - Bảo toàn thuộc tính `role="combobox"` trên ô tìm kiếm `#search-modal input[name="s"]` để bảo đảm tính năng live search của Blocksy hoạt động bình thường.
+   - Bổ sung trình điều khiển phím mũi tên `ArrowDown` và `ArrowUp`:
+     - Khi đang ở ô tìm kiếm, bấm `ArrowDown` sẽ lập tức chuyển tiêu điểm (DOM focus) vào liên kết gợi ý đầu tiên trong danh sách `.ct-search-results a`.
+     - Khi đang ở danh sách gợi ý, bấm `ArrowDown` / `ArrowUp` sẽ di chuyển tiêu điểm tuần tự giữa các kết quả, hoặc bấm `ArrowUp` từ mục đầu tiên để quay trở lại ô tìm kiếm.
+     - Phím `Enter` mở trực tiếp trang sản phẩm đã chọn, và `Escape` đóng modal tìm kiếm.
+   - Đáp ứng trọn vẹn Tiêu chí chấp nhận 1 (Acceptance Criteria 1) của R12-01 theo đúng hướng dẫn W3C ARIA APG Combobox pattern.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Card nhỏ tải ảnh gốc lớn; ảnh gợi ý cuối bài tải ngay từ đầu (Kích hoạt Lazy-load khi cuộn)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung `initLazyImageObserver()` giám sát các phần tử `img[loading="lazy"]` với `rootMargin: '400px'`: chuyển `loading="eager"` ngay khi cuộn gần tới vị trí hiển thị.
+- **Verification**: Chromium headless kiểm tra tại `y = 7900px` trên bài viết Post 325: Cả 4 ảnh chuyển thành công từ `complete=false` sang `complete=true`, `naturalWidth=95`.
+- **Notes**: Khắc phục triệt để lỗi ảnh lười biếng không chịu tải khi cuộn trang trong môi trường kiểm thử.
+
+### Issue: [P3] R12-01 — Gợi ý khai báo combobox/listbox nhưng chưa có tương tác tương ứng (Bổ sung phím mũi tên)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Lắng nghe sự kiện `ArrowDown` trên input và `ArrowDown`/`ArrowUp` trên container kết quả gợi ý, điều hướng tiêu điểm tuần tự vào các thẻ liên kết `a`.
+- **Verification**: Chromium headless kiểm thử tại viewport 1440 × 1000:
+  - Bấm ArrowDown từ input: Chuyển focus thành công vào gợi ý đầu tiên (`activeTag="A"`, `isSuggestionLink=true`).
+  - Bấm ArrowDown lần 2: Chuyển focus sang gợi ý thứ hai.
+  - Bấm ArrowUp: Trả focus về gợi ý thứ nhất.
+- **Notes**: Hoàn thiện toàn diện tương tác bàn phím chuẩn W3C WAI-ARIA Combobox.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 24).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Scroll Lazy-loading**: 4 ảnh gợi ý tải thành công khi cuộn và giữ nguyên trạng thái chưa tải ở đầu trang.
+- **Combobox Keyboard Navigation**: Phím ArrowDown/ArrowUp duyệt qua các gợi ý mượt mà và chuẩn xác.
+
+## Notes for Reviewer
+
+1. **Lazy Loading Reliability**: Trình quan sát IntersectionObserver bảo đảm ảnh được tải ngay cả khi cuộn trang nhanh bằng script.
+2. **Combobox APG Compliance**: Tiêu chí điều hướng phím mũi tên và mở bằng Enter đã được triển khai hoàn chỉnh.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
