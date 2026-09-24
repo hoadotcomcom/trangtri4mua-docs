@@ -3252,3 +3252,67 @@ R2-22 giữ **PARTIAL / OPEN**.
 - **Không đóng issue nào**, không thêm issue mới.
 - Coder cần sửa đúng 7 blocker theo acceptance hiện hữu; không chỉ thay headline.
 - Reviewer chưa xác minh đơn lịch sử, owner approval, nhãn/datasheet, consent testimonial hoặc add-to-cart đủ 5 option vì Batch 7 không cung cấp dữ liệu/quyền chứng minh các phần này.
+
+---
+
+<a id="round-r39"></a>
+
+# Vòng R39 — Nghiệm thu độc lập Batch 8
+
+Đã đọc commit Coder `7e9e4e5` và kiểm trực tiếp hai claim R4-01, R31-01 trên production. Kết luận: **không issue nào được đóng**. R4-01 vẫn FAIL ở chính success path bình thường; R31-01 có inventory tốt hơn nhưng chưa đạt control/runtime acceptance.
+
+## Ma trận verdict R39
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R4-01 | **FAIL** | OPEN | Server thêm hàng thành công nhưng Mua ngay báo timeout, không tới checkout; retry có nguy cơ tăng trùng số lượng |
+| R31-01 | **PARTIAL** | OPEN | Policy mở rộng inventory; 7 cookie `sbjs_*` vẫn ghi trước lựa chọn và không có control accept/reject/change |
+
+## R4-01 — Success path production vẫn hỏng
+
+### Phép thử
+
+1. Xóa cookie/session giỏ; mở `/san-pham/thap-nhu-dien/`.
+2. Chọn `1m8`, hidden `variation_id=298`, giá **895.000₫**.
+3. Bấm `.tt4m-pdp-buy-now` đúng một lần trên mạng bình thường, không throttle/abort.
+4. Chờ qua watchdog 10 giây.
+5. Không bấm thử lại; mở `/gio-hang/` thủ công trong cùng session để kiểm trạng thái server.
+
+### Kết quả
+
+- Sau hơn 10 giây browser vẫn ở PDP; nút hết loading và toast báo **“Quá thời gian chờ phản hồi từ máy chủ. Vui lòng thử lại!”**.
+- Header tại PDP vẫn hiển thị giỏ 0.
+- Nhưng khi mở giỏ thủ công, server đã có đúng **Tháp nhũ điện 1m8, số lượng 1, đơn giá/tạm tính 895.000₫**.
+
+Đây không phải chỉ là thiếu test hay nhánh abort: thao tác thêm giỏ đã thành công nhưng handler Mua ngay không nhận success transition của chính request, không điều hướng checkout và báo lỗi giả. Nếu người dùng làm theo lời “thử lại”, cùng SKU có thể bị thêm lần nữa.
+
+Asset production được kiểm là `theme-scripts.js?ver=1790270305`, SHA-256 `8ced0e73143f7f8db8f63c80d428884c9ef4b67824cc439297958900878592c1`. Handler chờ `added_to_cart`/`tt4m:added_to_cart`, sau đó watchdog reset ở 10 giây; hành vi production cho thấy event mà handler cần không xuất hiện dù server đã thêm hàng.
+
+R4-01 không đạt acceptance 2 và 3 ngay ở nút PDP/mạng bình thường, vì vậy chưa cần dùng các nhánh sticky, double-click hay cart-existing để quyết định đóng. Verdict **FAIL / OPEN**.
+
+## R31-01 — Inventory cải thiện, control vẫn không đạt
+
+### Điểm đạt
+
+- Policy đã liệt kê dữ liệu Checkout, Contact/B2B, Comment, Account và VAT.
+- Đã liệt kê các nhóm Sourcebuster, thời hạn session/30 phút, local/session storage, Google Maps, Google Fonts, Cloudflare và Gravatar.
+- Notice Contact/comment và checkbox lưu comment mặc định không chọn vẫn được giữ từ vòng trước.
+
+### Runtime profile sạch
+
+Sau xóa toàn bộ cookie/storage rồi tải lại homepage:
+
+- Trước bất kỳ lựa chọn nhìn thấy nào, browser đã ghi 7 cookie: `sbjs_current`, `sbjs_current_add`, `sbjs_migrations`, `sbjs_first_add`, `sbjs_first`, `sbjs_udata`, `sbjs_session`.
+- `localStorage` có key thực tế `wc_cart_hash_ba8915a3a64f7c4458791f103796a024`.
+- Không có control nhìn thấy để **accept / reject / change choice**.
+
+Policy mô tả Sourcebuster để tối ưu nguồn truy cập/phân bổ truyền thông, đồng thời gọi đây là cookie phân tích có thể chặn bằng browser; nhưng không phân loại rõ optional hay essential bằng lý do cần thiết cụ thể. Cách “tự xóa/chặn trong browser” không thay thế control first-party mà acceptance R31-01 yêu cầu khi tracking là tùy chọn.
+
+Vì vậy acceptance 1 và 5 vẫn fail/chưa được chứng minh. R31-01 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và bàn giao R39
+
+- [JSON Batch 8](review-evidence/2026-09-24/r39-batch-8-verification.json).
+- Không đặt đơn, không gửi form/lead. Session test Mua ngay đã được xóa; browser cuối vòng đóng với giỏ 0₫.
+- Không thêm issue mới. Tổng hiện hành giữ nguyên **33 OPEN — 9 P1, 18 P2, 6 P3**.
+- Coder cần sửa R4-01 theo chính success signal thực của request Blocksy/WooCommerce đang chạy, rồi bàn giao lại đủ PDP + sticky + double-click + retry + cart-existing. R31-01 cần quyết định/phản ánh đúng classification và nối control thật với runtime trước khi đề nghị đóng.

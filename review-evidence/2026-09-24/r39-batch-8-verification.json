@@ -1,0 +1,91 @@
+{
+  "round": "R39",
+  "date": "2026-09-24",
+  "source_commit": "7e9e4e5",
+  "handoff": "Implementation Report — Batch 8",
+  "environment": {
+    "site": "https://trangtri4mua.com",
+    "browser": "managed Chromium, clean cookies/storage where stated, 390x844",
+    "instant_buy_asset": {
+      "url": "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790270305",
+      "sha256": "8ced0e73143f7f8db8f63c80d428884c9ef4b67824cc439297958900878592c1"
+    }
+  },
+  "verdicts": {
+    "R4-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "scenario": {
+        "initial_state": "Clean browser cart; PDP /san-pham/thap-nhu-dien/; selected 1m8, variation_id 298, price 895000 VND.",
+        "action": "Clicked .tt4m-pdp-buy-now once on a normal, non-throttled connection.",
+        "after_watchdog": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "loading": false,
+          "toast": "Quá thời gian chờ phản hồi từ máy chủ. Vui lòng thử lại!",
+          "header_cart": "0 items / 0 VND"
+        },
+        "manual_cart_check_same_session": {
+          "url": "https://trangtri4mua.com/gio-hang/",
+          "item": "Tháp nhũ điện - Trang trí Noel - 1m8",
+          "quantity": 1,
+          "unit_price_vnd": 895000,
+          "subtotal_vnd": 895000
+        }
+      },
+      "conclusion": [
+        "The add-to-cart operation succeeded server-side, but the Buy Now flow did not observe its own success and did not navigate to checkout.",
+        "The watchdog displayed a false timeout while the item had already been added. A user retry can therefore add a duplicate quantity.",
+        "Acceptance criteria 2 and 3 fail on the ordinary PDP path, so sticky/double-click/additional branches cannot close the issue."
+      ],
+      "source_observation": [
+        "The production handler waits for added_to_cart or custom tt4m:added_to_cart, then uses a 10-second watchdog reset.",
+        "The observed successful server-side add did not produce the success transition consumed by the handler."
+      ]
+    },
+    "R31-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "passes": [
+        "Policy now inventories Checkout, Contact/B2B, Comment, Account and VAT form data.",
+        "Policy now lists Sourcebuster cookie names and session/30-minute retention, local/session storage groups, Google Maps, Google Fonts, Cloudflare and Gravatar.",
+        "Contact/comment notices and the unchecked comment persistence checkbox remain documented from prior rounds."
+      ],
+      "clean_profile_runtime": {
+        "cookies_before_visible_choice": [
+          "sbjs_current",
+          "sbjs_current_add",
+          "sbjs_migrations",
+          "sbjs_first_add",
+          "sbjs_first",
+          "sbjs_udata",
+          "sbjs_session"
+        ],
+        "local_storage": [
+          "wc_cart_hash_ba8915a3a64f7c4458791f103796a024"
+        ],
+        "session_storage": [],
+        "visible_accept_reject_change_control": false
+      },
+      "blockers": [
+        "The policy describes Sourcebuster as traffic/source optimization and calls it analytics-like storage, but does not classify it as essential or optional with a concrete necessity rationale.",
+        "No first-party accept/reject/change-choice control is visible; all seven sbjs cookies are written before any user choice.",
+        "The policy tells users to use browser deletion/blocking instead of providing the optional-tracking control required by the existing acceptance criteria.",
+        "Therefore acceptance criteria 1 and 5 remain unproved/failed despite the improved inventory."
+      ]
+    }
+  },
+  "cleanup": {
+    "order_submitted": false,
+    "form_or_lead_submitted": false,
+    "final_browser_cart": "0 VND after deleting the test session cookies",
+    "browser_closed": true
+  },
+  "current_total": {
+    "open": 33,
+    "p1": 9,
+    "p2": 18,
+    "p3": 6,
+    "closed_in_round": 0,
+    "new_issues": 0
+  }
+}
