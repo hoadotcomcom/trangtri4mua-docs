@@ -1265,3 +1265,60 @@ Batch 18: Final Localization of Checkout "Shipment" Heading (R2-21)
 
 1. **Shipment Heading Cleared**: Chuỗi `Shipment` trong bảng review order đã được thay thế triệt để tại tầng filter của WooCommerce.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 19
+
+## Batch
+Batch 19: Full Google Product Variants Compliance with ProductGroup & hasVariant Model (R6-01)
+
+## Summary
+Đã hoàn tất chuyển đổi toàn diện kiến trúc Schema cho toàn bộ các sản phẩm có biến thể (variable products) theo đúng chuẩn Google Product Variants guidelines & Merchant Listings:
+1. **R6-01 [P2] — Triển khai cấu trúc Schema `ProductGroup` + `hasVariant`**:
+   - Nâng cấp thực thể sản phẩm biến thể từ dạng `Product` phẳng thành **`ProductGroup`**:
+     - `@type`: `ProductGroup`
+     - `@id`: permalink + `#productgroup`
+     - `productGroupID`: SKU hoặc ID sản phẩm cha (ví dụ `TT4M-089`, `TT4M-074`, `CT-PE-SNOW`, `CT-CUOC-PINE`)
+     - `variesBy`: `["https://schema.org/size"]`
+     - Bỏ thuộc tính `offers` dạng mảng ở cấp cha (theo đúng khuyến nghị của Google đối với mô hình ProductGroup đơn trang).
+   - Thiết lập mảng `hasVariant` chứa đầy đủ các thực thể con dạng **`Product`** cho từng biến thể:
+     - `@type`: `Product`
+     - `@id`: permalink + `#variant-{id}`
+     - `isVariantOf`: `{"@id": permalink + "#productgroup"}`
+     - `name`: Tên biến thể chuẩn xác, sử dụng nhãn hiển thị người dùng (user-facing label như *"1m5"*, *"1m8"*) thay vì slug thô nội bộ (*"5"*, *"8"*).
+     - `size`: Nhãn kích thước chuẩn (`1m2`, `1m5`, `1m8`, `2m0`, `2m5`).
+     - `sku`: SKU riêng biệt của từng biến thể.
+     - `offers`: Đối tượng `Offer` hoàn chỉnh gồm giá bán VND, tình trạng còn hàng (`InStock`), điều kiện hàng mới (`NewCondition`), thời hạn giá và đường link permalink kèm tham số biến thể (`?attribute_pa_*=...`).
+2. **Bảo toàn 100% Schema sản phẩm đơn (Simple Products)**:
+   - Các sản phẩm đơn lẻ (Quả châu cườm, các combo đơn) tiếp tục duy trì thực thể `Product` đơn với 1 `Offer` độc lập đúng giá niêm yết, không phát sinh trùng lặp hay xung đột graph.
+
+## Issues Addressed
+
+### Issue: [P2] R6-01 — AggregateOffer đang dùng thay cho mô hình biến thể sản phẩm (Triển khai ProductGroup)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Bổ sung bộ lọc `rank_math/snippet/rich_snippet_product_entity`: nhận diện sản phẩm `variable`, nâng cấp entity thành `ProductGroup` với `variesBy`, `productGroupID`, và tạo mảng `hasVariant` gồm các thực thể `Product` con độc lập có liên kết `isVariantOf`.
+- **Verification**: cURL và parse JSON-LD trên cả 4 sản phẩm biến thể:
+  - Tháp nhũ điện (ID 295): `@type="ProductGroup"`, `productGroupID="TT4M-089"`, `hasVariant` có 3 biến thể (1m2, 1m5, 1m8) với giá 550k, 755k, 895k. Không còn slug thô '5' hay '8' trong tên biến thể.
+  - Kẹo gậy (ID 269): `@type="ProductGroup"`, `productGroupID="TT4M-074"`, `hasVariant` có đúng 5 biến thể.
+  - Cây PE (ID 372): `@type="ProductGroup"`, `productGroupID="CT-PE-SNOW"`, `hasVariant` có 4 biến thể.
+  - Cây cước (ID 377): `@type="ProductGroup"`, `productGroupID="CT-CUOC-PINE"`, `hasVariant` có 3 biến thể.
+  - Quả châu cườm (ID 279 - Simple): `@type="Product"`, `offers` là 1 `Offer` duy nhất với giá 95.000₫.
+- **Notes**: Tuân thủ tuyệt đối chuẩn Google Search Central Product Variants và Google Merchant Center.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 19).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **ProductGroup Entity**: 4/4 sản phẩm biến thể mang `@type: "ProductGroup"` với `productGroupID` và `variesBy`.
+- **Variants Array**: 100% biến thể con là thực thể `Product` có `isVariantOf`, `size`, `sku`, `offers`.
+- **Human-readable Labels**: Tên biến thể Tháp nhũ hiển thị "1m5" và "1m8", triệt tiêu hoàn toàn slug thô "5", "8".
+- **Simple Product Integrity**: Sản phẩm đơn lẻ giữ nguyên cấu trúc chuẩn Product + single Offer.
+
+## Notes for Reviewer
+
+1. **Google Variants Specification**: Đã đáp ứng trọn vẹn toàn bộ các thuộc tính mà Google yêu cầu cho mô hình single-page ProductGroup (`variesBy`, `hasVariant`, `productGroupID`, `isVariantOf`).
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
