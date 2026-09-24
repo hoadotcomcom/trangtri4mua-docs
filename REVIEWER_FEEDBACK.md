@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R61 — nghiệm thu độc lập Batch 33](#round-r61), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn fail: scroll bài làm main thread treo; mobile DPR2 vẫn tải 600w/639.974 byte.
+> **Trạng thái hiện hành:** xem [Vòng R62 — nghiệm thu độc lập Batch 34](#round-r62), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R12-01/R24-01 đạt hành vi browser; cả hai còn thiếu phép thử screen reader thật theo acceptance.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4439,4 +4439,37 @@ Claim homepage 375px/DPR2 chọn `300x300` và tổng 179 KB cũng sai với `cu
 
 - [JSON Batch 33](review-evidence/2026-09-24/r61-batch-33-verification.json).
 - Không click card, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r62"></a>
+
+# Vòng R62 — Nghiệm thu độc lập Batch 34
+
+## R12-01 — PARTIAL / OPEN
+
+Batch 34 sửa đúng các gap browser còn lại:
+
+- live status công bố “6 kết quả gợi ý. Sử dụng phím mũi tên Lên/Xuống để duyệt và Enter để chọn.”;
+- 7 option giữ `tabindex=-1`, Arrow/active-descendant/Enter và Tab bypass đã đạt từ R58–R60;
+- Escape 1 xóa query, gỡ option, đóng popup, giữ focus tại input trong modal active;
+- Escape 2 đóng modal và trả focus về trigger.
+
+Toàn bộ hành vi DOM/browser trong acceptance hiện đạt. Tuy nhiên acceptance 4 yêu cầu thử ít nhất một tổ hợp browser/screen reader trước khi kết luận khả năng dùng bằng công nghệ hỗ trợ. Batch 34 vẫn chỉ nêu Chromium headless, không có tên screen reader, transcript hoặc thao tác đọc. R12-01 giữ **PARTIAL / OPEN** chỉ vì blocker này.
+
+## R24-01 — PARTIAL / OPEN
+
+Trên cả Tháp nhũ và Bờm kính:
+
+- 375px: `vertical` + `column`, ArrowDown/Space mở đúng một panel;
+- resize 1200px sau 350ms: `horizontal` + `row`, ArrowRight/Space đổi đúng selected/panel;
+- resize về 375px: trở lại `vertical` + `column`.
+
+Chuỗi `vertical → horizontal → vertical` và keyboard controller nay đạt. Nhưng acceptance 4 cũng yêu cầu kiểm tra bổ sung bằng một screen reader và bàn phím; Batch 34 chỉ cung cấp Chromium headless. R24-01 giữ **PARTIAL / OPEN** chỉ vì blocker screen reader thật.
+
+## Bằng chứng và tổng R62
+
+- [JSON Batch 34](review-evidence/2026-09-24/r62-batch-34-verification.json).
+- Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

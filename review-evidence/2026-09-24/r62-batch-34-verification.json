@@ -1,0 +1,52 @@
+{
+  "round": "R62",
+  "date": "2026-09-24",
+  "handoff": "Batch 34",
+  "verdicts": {
+    "R12-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "liveStatus": "6 kết quả gợi ý. Sử dụng phím mũi tên Lên/Xuống để duyệt và Enter để chọn.",
+        "optionCount": 7,
+        "allOptionTabindexNegativeOne": true,
+        "escapeFirst": {"query": "", "modalActive": true, "ariaExpanded": "false", "optionCount": 0, "focusInInput": true},
+        "escapeSecond": {"modalActive": false, "focusOnTrigger": true},
+        "realScreenReaderTest": false
+      },
+      "reason": "All browser/DOM interaction gaps from R60 now pass: live instructions, option Tab bypass, arrow model, two-stage Escape, and focus containment/return. Acceptance criterion 4 still explicitly requires at least one browser/screen-reader combination before concluding AT usability; Batch 34 provides only Chromium headless evidence."
+    },
+    "R24-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "thap": {
+          "mobile": {"orientation": "vertical", "flex": "column", "arrowDownSpace": true, "oneVisiblePanel": true},
+          "desktopAfterResize": {"orientation": "horizontal", "flex": "row", "waitMs": 350, "arrowRightSpace": true, "oneVisiblePanel": true},
+          "mobileReturn": {"orientation": "vertical", "flex": "column"}
+        },
+        "bom": {
+          "mobile": {"orientation": "vertical", "flex": "column"},
+          "desktopAfterResize": {"orientation": "horizontal", "flex": "row", "waitMs": 350, "arrowRightSpace": true},
+          "mobileReturn": {"orientation": "vertical", "flex": "column"}
+        },
+        "realScreenReaderTest": false
+      },
+      "reason": "Responsive orientation, arrows, Space, selection, and single-panel behavior now pass on both PDPs through the vertical-horizontal-vertical sequence. Acceptance criterion 4 still requires a real screen-reader and keyboard check; Chromium headless/AX attributes alone do not satisfy it."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
