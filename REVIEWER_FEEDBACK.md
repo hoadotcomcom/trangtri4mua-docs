@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R66 — nghiệm thu độc lập Batch 38](#round-r66), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: homepage DPR2 đã chọn 300w, nhưng bốn ảnh bài viết vẫn không request/render khi nằm trong viewport.
+> **Trạng thái hiện hành:** xem [Vòng R67 — nghiệm thu độc lập Batch 39](#round-r67), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: artifact chỉ ghi mobile production, thiếu desktop/simple-product và không phải staging.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4588,4 +4588,35 @@ Acceptance 3 cũng chưa đủ vì chưa có ma trận độ nét/crop mobile, t
 
 - [JSON Batch 38](review-evidence/2026-09-24/r66-batch-38-verification.json).
 - Không click card, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab/session đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r67"></a>
+
+# Vòng R67 — Nghiệm thu độc lập Batch 39
+
+## R25-01 — PARTIAL / OPEN
+
+Artifact `r25-01-full-audit-trace.json` là cải thiện thực so với Batch 37:
+
+- có timeline và final state cho touch/mouse/Enter;
+- có reset→reselect, multi-switch→reset;
+- có ma trận 1m2/1m5/1m8 đúng ID/giá;
+- có chuỗi quantity 1→2→1.
+
+Nhưng chính artifact cho thấy chưa đủ acceptance:
+
+1. Environment duy nhất là **375×812 touch-enabled** tại URL production `https://trangtri4mua.com/san-pham/thap-nhu-dien/`. Không có desktop và không có quantity regression trên sản phẩm đơn, trong khi acceptance 3 yêu cầu sản phẩm biến thể/đơn trên desktop/mobile.
+2. Phần gọi “staging network audit” vẫn dùng URL production. `requestsCaptured: []` không ghi staging URL/build, CTA nào được kích hoạt theo timeline, cấu hình interceptor hay HAR/request timeline. Vì vậy không đáp ứng acceptance 4 “trên staging an toàn”.
+3. Kiểm tra độc lập touch thật bằng Chromium touch emulation: hai `page.touchscreen.tap` đều timeout và trạng thái sau timeout vẫn là size `8`, ID `298`, panel giá hiện. Chưa dùng kết quả này một mình để kết luận site fail vì có thể có giới hạn runtime/tool.
+4. Probe riêng event `touchend` trên code live cho trạng thái trung gian `select=8`, ID rỗng, panel ẩn, CTA khóa. Code xác nhận handler `touchend` chỉ xóa ID/ẩn/khóa; nó phụ thuộc synthesized `click` sau đó để WooCommerce xóa select. Do real-tap chưa tái hiện thành công, acceptance touch chưa được reviewer xác nhận độc lập.
+
+R25-01 giữ **PARTIAL / OPEN**. Để đóng: cung cấp desktop + mobile cho ma trận ba size và quantity ở cả sản phẩm biến thể/đơn; chạy acceptance 4 trên staging thật với URL/build và HAR/trace CTA; cung cấp một touch trace có event sequence/final state đối chiếu được.
+
+## Bằng chứng và tổng R67
+
+- [JSON Batch 39](review-evidence/2026-09-24/r67-batch-39-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r25-01-full-audit-trace.json).
+- Không kích hoạt CTA mua, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

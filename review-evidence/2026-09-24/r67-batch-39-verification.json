@@ -1,0 +1,42 @@
+{
+  "round": "R67",
+  "date": "2026-09-24",
+  "handoff": "Batch 39",
+  "issue": "R25-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "artifactReviewed": "review-evidence/2026-09-24/r25-01-full-audit-trace.json",
+  "artifactFindings": {
+    "environmentUrl": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "environmentViewport": "375x812 touch-enabled",
+    "isStaging": false,
+    "desktopScenarioPresent": false,
+    "simpleProductQuantityScenarioPresent": false,
+    "touchMouseEnterFinalStatesPresent": true,
+    "resetThenReselectPresent": true,
+    "multiSwitchThenResetPresent": true,
+    "threeVariantMatrixPresent": true,
+    "networkAudit": {"variationIdBeforeClicks": "", "requestsCaptured": []},
+    "networkAuditLimit": "No staging URL/build, CTA-by-CTA action list, interceptor configuration, HAR, or request timeline. The only recorded URL is production."
+  },
+  "liveDiagnostic": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": "375x812 touch emulation",
+    "realTapAttempts": "Two page.touchscreen.tap attempts timed out; after each, selected value remained 8, variation ID 298, price visible. This is recorded as inconclusive tool/runtime behavior, not alone as a site failure.",
+    "syntheticTouchend": {
+      "before": {"selectValue": "8", "variationId": "298"},
+      "after": {"selectValue": "8", "variationId": "", "panel": "none", "cta": "disabled wc-variation-selection-needed"},
+      "interpretation": "The explicit touchend guard only clears ID/hides/locks; it does not reset the select. It relies on the subsequent synthesized click/WooCommerce handler to complete reset."
+    },
+    "liveImplementation": "jQuery handler is bound to both click and touchend; MutationObserver watches childList/subtree and enforces hidden/disabled when variation ID is empty.",
+    "browserClosed": true
+  },
+  "acceptanceAssessment": {
+    "criterion1": "PARTIAL: artifact contains all three named mode summaries, but independent real touch could not be confirmed.",
+    "criterion2": "PASS in submitted artifact: reset/reselect and multi-switch/reset final states are recorded.",
+    "criterion3": "PARTIAL: mobile three-variant matrix and one quantity sequence are recorded; required desktop/mobile coverage and variable/simple-product quantity regression are absent.",
+    "criterion4": "FAIL: artifact identifies production, not staging; empty request array lacks an auditable network trace and does not satisfy the staging-only criterion."
+  },
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"ctaActivated": false, "cartMutation": false, "orderCreated": false, "formSubmitted": false}
+}
