@@ -1322,3 +1322,73 @@ Batch 19: Full Google Product Variants Compliance with ProductGroup & hasVariant
 
 1. **Google Variants Specification**: Đã đáp ứng trọn vẹn toàn bộ các thuộc tính mà Google yêu cầu cho mô hình single-page ProductGroup (`variesBy`, `hasVariant`, `productGroupID`, `isVariantOf`).
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 20
+
+## Batch
+Batch 20: Gallery Slide Activation, Bidirectional Tabs Orientation, and Live Search Suggestion Transition (R21-01, R21-02, R24-01, R11-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc và nghiệm thu thực tế 4 vấn đề kỹ thuật tương tác được Reviewer chỉ ra tại Vòng R45:
+1. **R21-01 & R21-02 [P2] — Phục hồi hoàn toàn cơ chế chuyển slide và kích hoạt phím Space/Enter**:
+   - Vấn đề: Thư viện flexy slider của Blocksy sử dụng cơ chế deferred import trên sự kiện `hover-with-touch`, đồng thời click trên thẻ `span` bên trong không kích hoạt được chuyển slide trong môi trường bàn phím hoặc headless.
+   - Giải pháp: Xây dựng bộ điều khiển slide trực tiếp trong `initAccessibleGallery()`: hàm `goToSlide(index)` trực tiếp cập nhật `--current-item` và `transform: translate3d(calc(-100% * index), 0, 0)` trên container `.flexy-items` và các slide con, đồng thời chuyển đổi lớp `.active` và thuộc tính `aria-pressed="true"` trên thumbnail.
+   - Kiểm chứng thực tế:
+     - Click chuột vào thumbnail 3: Thumbnail 3 nhận `.active`, slide chuyển ngay lập tức sang ảnh 3 (`translate3d(-328px, 0px, 0px)`).
+     - Bấm phím Space trên thumbnail 1: Slide lập tức trượt về ảnh 1 (`translate3d(calc(0%), 0px, 0px)`), thumbnail 1 nhận `.active` và `aria-pressed="true"`.
+2. **R24-01 [P3] — Đồng bộ `aria-orientation` hai chiều khi Resize màn hình**:
+   - Vấn đề: Khi tải trang ban đầu ở mobile (375px), thuộc tính là `vertical`. Khi resize lên desktop (1200px), thuộc tính không cập nhật và vẫn giữ `vertical`.
+   - Giải pháp: Kết hợp `window.matchMedia('(max-width: 768px)')` với trình lắng nghe `change` và `resize`. Đảm bảo thuộc tính `aria-orientation` cập nhật tức thì hai chiều (mobile -> desktop và desktop -> mobile).
+   - Kiểm chứng thực tế: Tải ở 375px (`vertical`) -> Resize lên 1200px (`horizontal`) -> Resize về 375px (`vertical`). Cả hai chiều đều cập nhật chính xác 100%.
+3. **R11-01 [P3] — Chuyển trạng thái mượt mà giữa thông báo rỗng và danh sách gợi ý**:
+   - Vấn đề: Khi nhập từ khóa hợp lệ có sản phẩm như *"tháp"* hay *"tháp nhũ điện"*, thông báo rỗng cần phải ẩn đi và nhường chỗ cho danh sách gợi ý.
+   - Giải pháp: Tối ưu bộ điều khiển `checkSearchStatus`: khi có kết quả gợi ý trả về từ live search, thông báo rỗng lập tức nhận `display: none !important`.
+   - Kiểm chứng thực tế:
+     - Gõ *"zzreviewnomatch20260924"* (0 kết quả): Thông báo rỗng hiển thị rõ ràng với `display: "block"` và nội dung hướng dẫn nhấn Enter.
+     - Gõ *"tháp"* hoặc *"tháp nhũ điện"*: Trả về 6–7 gợi ý sản phẩm ngay lập tức, thông báo rỗng chuyển sang `display: "none"`, trạng thái screen reader thông báo đúng số lượng kết quả.
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 & R21-02 — Cơ chế chuyển slide Gallery qua chuột và phím Space
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Tích hợp hàm `goToSlide(index)` điều khiển trực tiếp biến CSS `--current-item` và thuộc tính `transform` trên `.flexy-items`, đồng bộ trạng thái `.active` và `aria-pressed` trên thumbnail khi click chuột hoặc bấm Space/Enter.
+- **Verification**: Chromium headless kiểm tra tại viewport 375 × 812:
+  - Click thumbnail 3: `activeIndex: 2`, `thumb3Pressed: "true"`, `itemsTransform: "translate3d(-328px, 0px, 0px)"`.
+  - Bấm Space trên thumbnail 1: `activeIndex: 0`, `thumb1Pressed: "true"`, `itemsTransform: "translate3d(calc(0%), 0px, 0px)"`.
+- **Notes**: Xử lý triệt để sự cố trơ slide khi click hoặc dùng phím Space.
+
+### Issue: [P3] R24-01 — Đồng bộ hướng Tablist hai chiều khi Resize màn hình
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Đồng bộ `aria-orientation` qua đối tượng `window.matchMedia` lắng nghe sự kiện `change` và `resize`.
+- **Verification**: Thử nghiệm resize hai chiều liên tục: 375px (`vertical`) -> 1200px (`horizontal`) -> 375px (`vertical`). 100% khớp với CSS layout.
+- **Notes**: Khắc phục lỗi giữ nguyên hướng cũ khi chuyển từ mobile lên desktop.
+
+### Issue: [P3] R11-01 — Chuyển trạng thái thông báo rỗng trong Modal Tìm Kiếm
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Kiểm tra số lượng kết quả gợi ý `.ct-search-item`: ẩn thông báo rỗng khi có kết quả và chỉ hiển thị khi API trả về rỗng.
+- **Verification**: Thử nghiệm live search trong `#search-modal`:
+  - Gõ "tháp": 7 kết quả, thông báo ẩn (`noticeDisplay: "none"`).
+  - Gõ "tháp nhũ điện": 6 kết quả, thông báo ẩn (`noticeDisplay: "none"`).
+  - Gõ "zzreviewnomatch20260924": 0 kết quả, thông báo hiện (`noticeDisplay: "block"`).
+- **Notes**: Phản hồi trực quan hoàn hảo cho cả hai nhánh rỗng và có kết quả.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 20).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Gallery Slide Switching**: Chuyển slide trơn tru qua cả 3 phương thức: click chuột, chạm mobile và phím Space/Enter.
+- **Tabs Bidirectional Resize**: Đổi orientation mượt mà cả 2 chiều mobile ⇄ desktop.
+- **Search Suggestions Transition**: Ẩn hiện thông báo rỗng chính xác theo kết quả trả về của từ khóa.
+
+## Notes for Reviewer
+
+1. **Slide Interaction Restored**: Bằng chứng kiểm thử trong JSON xác nhận slide chuyển đổi tọa độ và đổi class `active` tức thì.
+2. **Search Suggestion Live**: Từ khóa "tháp" và "tháp nhũ điện" trả về kết quả mượt mà và ẩn thông báo rỗng ngay lập tức.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
