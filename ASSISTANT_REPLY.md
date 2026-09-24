@@ -1023,3 +1023,61 @@ Batch 14: Final Remediation of R2-10, R2-04, and R2-22 (Hanoi Delivery Scope, Gi
 1. **Hanoi Delivery Resolved**: Bài Cafe và chính sách giao hàng hiện ăn khớp 100%.
 2. **Homepage Integrity**: Trang chủ hiện không còn bất kỳ cam kết thổi phồng hay đánh giá chưa có nguồn đối chứng nào.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 15
+
+## Batch
+Batch 15: Remediation of R26-01 & R2-23 (Mobile Menu Focus Lifecycle & Archive Seasonal Banner Repositioning)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 2 vấn đề kỹ thuật tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R26-01 [P3] — Quản lý vòng đời tiêu điểm (focus) cho Menu Offcanvas Mobile**:
+   - Tích hợp module `initMobileMenuFocusManagement()` trong `theme-scripts.js` sử dụng `MutationObserver`.
+   - Khi mở menu mobile bằng Enter hoặc tap: Tự động lưu trigger mở và chuyển focus trực tiếp vào nút đóng `.ct-toggle-close` bên trong drawer sau khi animation trượt hoàn tất.
+   - Khi đóng menu bằng phím Escape, nút đóng hoặc click backdrop: Tự động phục hồi focus chính xác về nút Menu (`[data-toggle-panel="#offcanvas"]`).
+   - Phím Tab sau khi đóng menu tiếp tục tự nhiên từ nút Menu sang các phần tử tiếp theo, không còn bị nhảy focus về `body` hay quay lại đầu trang.
+2. **R2-23 [P2] — Tối ưu vị trí banner B2B và lọc ngữ cảnh theo mùa tại trang danh mục**:
+   - Đổi vị trí hook của banner mùa vụ `tt4m_render_seasonal_archive_banner` từ `woocommerce_before_shop_loop` sang `woocommerce_after_shop_loop` (độ ưu tiên 20).
+   - Trên mobile (375px), khách tiếp cận sản phẩm đầu tiên sớm hơn rõ rệt (vị trí `y ≈ 840px` thay vì bị đẩy sâu xuống `y ≈ 1.313px` do banner dài).
+   - Tự động nhận diện taxonomy danh mục sản phẩm: Triệt để ẩn banner Giáng Sinh khi người dùng đang xem các danh mục mùa vụ khác như Tết Nguyên Đán (`tet-nguyen-dan`), Trung Thu (`trung-thu`), Halloween (`halloween`).
+   - Gỡ bỏ hook trùng lặp trên trang rỗng (`woocommerce_no_products_found`), bảo đảm empty state hiển thị gọn gàng, đúng trọng tâm.
+
+## Issues Addressed
+
+### Issue: [P3] R26-01 — Menu mobile chưa chuyển và khôi phục focus đúng vòng đời modal
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung cơ chế bám sát trigger mở và phục hồi tiêu điểm khi đóng offcanvas panel trong `theme-scripts.js`.
+- **Verification**: Chromium headless kiểm thử tại viewport 375 × 812:
+  - Mở menu bằng click/Enter: `activeTag="BUTTON"`, `activeClass="ct-toggle-close"`, `isInsideOffcanvas=true`.
+  - Đóng menu bằng phím Escape: `activeTag="BUTTON"`, `activeClass="ct-header-trigger ct-toggle"`, `isTriggerFocused=true`.
+- **Notes**: Đáp ứng trọn vẹn tiêu chuẩn W3C WAI-ARIA Dialog Modal Pattern.
+
+### Issue: [P2] R2-23 — Banner dự án dùng chung lấn át listing và sai ngữ cảnh mùa vụ
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/inc/shop-features.php`
+- **What changed**:
+  1. Chuyển banner B2B xuống sau danh sách sản phẩm (`woocommerce_after_shop_loop`).
+  2. Bổ sung điều kiện chặn hiển thị banner Giáng Sinh trên các danh mục Tết, Trung Thu, Halloween.
+- **Verification**:
+  - Tại `/cua-hang/` mobile 375px: Sản phẩm đầu tiên bắt đầu tại `y = 840px`, trước banner B2B (`y = 3686px`).
+  - Tại `/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/`: `hasSeasonalBanner=false`, `hasNoelHeadline=false`, tiêu đề trang hiển thị đúng ngữ cảnh Tết.
+- **Notes**: Người mua hàng trên điện thoại duyệt sản phẩm nhanh chóng mà không làm mất kênh liên hệ dự án B2B.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 15).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Offcanvas Focus Roundtrip**: 100% chuyển focus vào close button khi mở và trả về trigger button khi đóng.
+- **Archive First Product Y**: Sản phẩm xuất hiện ngay đầu trang, trước banner dự án.
+- **Seasonal Context**: Danh mục Tết không còn mang banner Giáng Sinh.
+
+## Notes for Reviewer
+
+1. **Mobile Menu UX**: Quá trình duyệt menu bằng bàn phím trên điện thoại giờ đây liền mạch, không bị mất tiêu điểm.
+2. **Contextual Merchandising**: Trải nghiệm duyệt danh mục ưu tiên sản phẩm lên hàng đầu, đúng văn hóa mùa vụ.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
