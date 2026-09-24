@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R85 — nghiệm thu độc lập Batch 57](#round-r85), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 vẫn PARTIAL: dữ liệu mới đã lên live nhưng chưa có provenance/owner approval và ảnh bundle vẫn sai; R5-02 vẫn FAIL.
+> **Trạng thái hiện hành:** xem [Vòng R86 — nghiệm thu độc lập Batch 58](#round-r86), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã FIXED/CLOSED sau khi hai capture desktop được thay đúng và Reviewer tái hiện độc lập DPR1/DPR2 thật; R2-03 vẫn PARTIAL vì thiếu provenance/owner approval và ảnh bundle đúng contract.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -1013,7 +1013,7 @@ Dùng các kích thước attachment/thumbnail sẵn có của WordPress cho car
 4. Không làm hỏng link card, thay đổi bố cục ngoài ý muốn hoặc gây ảnh trống khi cuộn. Giữ ưu tiên ảnh LCP theo R5-01.
 
 ### Status
-OPEN
+FIXED
 
 ## Bàn giao R5
 
@@ -5161,3 +5161,45 @@ R2-03 giữ **PARTIAL / OPEN**. Giữ các cải thiện chữ và hàng điện
 - [Artifact Coder](review-evidence/2026-09-24/r2-03-specs-table-audit.json).
 - Không click CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r86"></a>
+
+# Vòng R86 — nghiệm thu độc lập Batch 58
+
+## R5-02 — PASS / CLOSED
+
+Hai artifact desktop mới khắc phục đầy đủ các mâu thuẫn ở R82/R84:
+
+- DPR1: **246.998 byte**, **1192×604px**, SHA-256 `2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90`;
+- DPR2: **619.750 byte**, **2384×1208px**, SHA-256 `f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330`;
+- mở trực tiếp cả hai WebP đều thấy đủ sáu product image; không còn card nền xanh rỗng, letterbox hoặc méo tỷ lệ rõ;
+- kích thước raster DPR2 đúng gấp đôi cả hai chiều so với DPR1 và hai file không trùng hash.
+
+`clip.scale: 2` chỉ điều khiển kích thước raster đầu ra, tự nó **không chứng minh** browser thực sự chạy DPR2. Vì vậy Reviewer chạy thêm hai phiên production độc lập cùng viewport **1440×1000**:
+
+| Lượt | `window.devicePixelRatio` | Grid CSS | Trạng thái ảnh | `currentSrc` / bytes |
+|---|---:|---:|---|---|
+| DPR1 | 1 | 1192×604 | 6/6 `complete=true` | sáu URL tier 600w; tổng 639.974 byte |
+| DPR2 | 2 | 1192×604 | 6/6 `complete=true` | sáu URL tier 600w; tổng 639.974 byte |
+
+Sáu encoded body size ở cả hai lượt là `99.670 + 87.744 + 147.684 + 107.316 + 88.576 + 108.984 = 639.974 byte`, khớp matrix. Trace live trực tiếp xác nhận `window.devicePixelRatio: 2`; không suy ra DPR từ tên file hoặc `clip.scale`.
+
+Kết hợp các phần đã nghiệm thu trước:
+
+- R66: nguồn/payload homepage;
+- R76: lazy-load/polling và deep-scroll bài viết;
+- R79: ba capture mobile và hai capture tablet, gồm DPR cao;
+- R86: hai capture desktop có hình và trace DPR1/DPR2 thật.
+
+Toàn bộ acceptance R5-02 đã có bằng chứng trực tiếp. Cập nhật issue thành **FIXED / CLOSED**.
+
+## Bằng chứng và tổng R86
+
+- [JSON nghiệm thu Batch 58](review-evidence/2026-09-24/r86-batch-58-verification.json).
+- [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- [Desktop DPR1](review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp).
+- [Desktop DPR2](review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp).
+- Không click card/CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Đóng **R5-02 [P2]**. Tổng còn **16 OPEN — 5 P1, 7 P2, 4 P3**.

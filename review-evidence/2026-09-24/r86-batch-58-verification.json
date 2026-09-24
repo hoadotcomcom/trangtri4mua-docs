@@ -1,0 +1,56 @@
+{
+  "round": "R86",
+  "batch": 58,
+  "checkedAt": "2026-09-24T21:10:50.430Z",
+  "site": "https://trangtri4mua.com/",
+  "issue": "R5-02",
+  "artifactChecks": {
+    "desktopDpr1": {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
+      "sha256": "2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90",
+      "bytes": 246998,
+      "raster": "1192x604",
+      "visual": "PASS: six product images visible; no blank green cards, letterboxing, or obvious distortion"
+    },
+    "desktopDpr2": {
+      "path": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
+      "sha256": "f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330",
+      "bytes": 619750,
+      "raster": "2384x1208",
+      "visual": "PASS: six product images visible; no blank green cards, letterboxing, or obvious distortion"
+    }
+  },
+  "independentLiveTraces": [
+    {
+      "timestamp": "2026-09-24T21:10:46.125Z",
+      "viewport": "1440x1000",
+      "windowDevicePixelRatio": 1,
+      "gridCssBox": "1192x604",
+      "allSixImagesComplete": true,
+      "currentSrcTier": "six 600w URLs",
+      "encodedBodySizes": [99670, 87744, 147684, 107316, 88576, 108984],
+      "totalEncodedBytes": 639974
+    },
+    {
+      "timestamp": "2026-09-24T21:10:50.430Z",
+      "viewport": "1440x1000",
+      "windowDevicePixelRatio": 2,
+      "gridCssBox": "1192x604",
+      "allSixImagesComplete": true,
+      "currentSrcTier": "six 600w URLs",
+      "encodedBodySizes": [99670, 87744, 147684, 107316, 88576, 108984],
+      "totalEncodedBytes": 639974
+    }
+  ],
+  "assessment": {
+    "result": "PASS",
+    "status": "CLOSED",
+    "reason": "The two desktop artifacts are independent and internally consistent; both render all six images. An independent production browser session reproduced window.devicePixelRatio 1 and 2 with the same 1440x1000 viewport and recorded currentSrc, resource bytes, and complete state. Combined with previously accepted R66, R76, and R79 evidence, all R5-02 acceptance criteria are now covered.",
+    "scopeNote": "The Batch 58 CDP clip.scale controls output raster size and is not by itself proof of browser DPR. Closure additionally relies on the independent live traces above, which directly read window.devicePixelRatio in each run."
+  },
+  "safety": {
+    "clickedCardOrCta": false,
+    "cartOrOrderMutation": false,
+    "formSubmission": false
+  }
+}
