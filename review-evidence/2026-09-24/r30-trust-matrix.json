@@ -1,0 +1,223 @@
+{
+  "observed_at_utc": "2026-09-24T15:18:19.113Z",
+  "scope_urls": {
+    "home": "https://trangtri4mua.com/",
+    "about": "https://trangtri4mua.com/gioi-thieu/",
+    "showroom": "https://trangtri4mua.com/showroom/",
+    "contact": "https://trangtri4mua.com/lien-he/",
+    "returns": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+    "shipping": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+    "payment": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+    "privacy": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+  },
+  "consistent_visible_fields": {
+    "brand": "Trang Trí 4 Mùa",
+    "address": "123 Đường Xuân Thủy, Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
+    "phone_display": "0901.234.567",
+    "phone_href": "tel:0901234567",
+    "email": "cskh@trangtri4mua.com"
+  },
+  "seller_identity": {
+    "legal_name_found": false,
+    "seller_tax_or_registration_id_found": false,
+    "note": "Các cụm Tên công ty/Mã số thuế trong chính sách là dữ liệu yêu cầu khách mua cung cấp để xuất hóa đơn, không định danh bên bán."
+  },
+  "service_promise_conflicts": {
+    "contact_intro": "phục vụ 24/7",
+    "contact_opening_hours": "08:00–21:00",
+    "shared_topbar": "08:00–21:30",
+    "footer_zalo": "24/7",
+    "contact_zalo_response": "15 phút"
+  },
+  "payment_policy": {
+    "bank": "Ngân hàng TMCP Quân Đội (MB Bank)",
+    "account": "0901234567",
+    "account_holder": "TRANG TRI 4 MUA",
+    "claims": [
+      "tài khoản chính thức",
+      "hợp đồng kinh tế",
+      "hóa đơn điện tử GTGT hợp lệ"
+    ],
+    "limitation": "Không thực hiện chuyển tiền hoặc xác minh tài khoản; tên hiển thị là thương hiệu, trong khi website chưa nêu chủ thể pháp lý/MST bên bán."
+  },
+  "trust_claims": [
+    "Homepage: hơn 1.200 khách hàng và ba testimonial 5 sao có dấu tick",
+    "About: toàn bộ ảnh/video chụp thực tế 100%, hơn 200 mẫu quả châu",
+    "Showroom: hàng trăm mẫu, local pickup sau 30 phút, POS và bãi xe miễn phí"
+  ],
+  "schema_matrix": {
+    "home": {
+      "url": "https://trangtri4mua.com/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "about": {
+      "url": "https://trangtri4mua.com/gioi-thieu/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "showroom": {
+      "url": "https://trangtri4mua.com/showroom/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "contact": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "returns": {
+      "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "shipping": {
+      "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "payment": {
+      "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article",
+        "FAQPage"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    },
+    "privacy": {
+      "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+      "types": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "Article"
+      ],
+      "organization_fields": [
+        "id",
+        "logo",
+        "name",
+        "type"
+      ],
+      "person_names": [
+        null
+      ],
+      "has_article": true
+    }
+  },
+  "limitations": [
+    "Dữ liệu trên website là tự khai, không phải xác minh doanh nghiệp/showroom/tài khoản ngoài đời",
+    "Không gọi điện, mở Zalo/bản đồ ngoài, gửi form, chuyển khoản, thêm giỏ hay đặt hàng"
+  ]
+}

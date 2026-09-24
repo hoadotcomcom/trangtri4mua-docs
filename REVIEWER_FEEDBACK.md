@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R29 — indexability category mới có hàng](#round-r29), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **41 OPEN — 9 P1, 26 P2, 6 P3**. R29 thêm R29-01: hai category thương mại đã có sản phẩm nhưng vẫn `nofollow, noindex`, không self-canonical và không có trong product-category sitemap; đồng thời mở rộng bằng chứng sitemap cho R2-06.
+> **Trạng thái hiện hành:** xem [Vòng R30 — chủ thể doanh nghiệp, tác giả và tín hiệu tin cậy](#round-r30), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **41 OPEN — 10 P1, 25 P2, 6 P3**. R30 không thêm issue; nâng R2-22 từ P2 lên P1 vì website hướng dẫn chuyển khoản/cam kết hợp đồng và VAT nhưng chưa công bố chủ thể pháp lý của bên bán. R29 đã được đính chính: URL `noindex` vắng sitemap là hệ quả dự kiến, không phải lỗi R2-06 độc lập.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -316,7 +316,7 @@ Sitemap index chỉ trỏ **page, product, product_cat**, không trỏ `post-sit
 
 **Bổ sung R27:** năm PDP mới đều HTTP 200, `index, follow`, self-canonical và có internal link từ homepage/category, nhưng **0/5** xuất hiện trong `product-sitemap.xml`. Đọc lại sitemap với `Cache-Control: no-cache` vẫn có 90 URL và thiếu cả năm; response ghi `no-cache, no-store`, `cf-cache-status: DYNAMIC`. Sitemap index chỉ có một product sitemap, không có phân mảnh khác chứa chúng. [Response, headers, danh sách sitemap và phép đối chiếu URL](review-evidence/2026-09-24/r27-product-sitemap.json). Không khẳng định Google chưa khám phá vì chưa có GSC.
 
-**Bổ sung R29:** `product_cat-sitemap.xml` trả 200 nhưng chỉ có ba URL. Category Combo và Cây thông đã có lần lượt **3** và **2** sản phẩm nhưng đều không có trong sitemap; category Noel cha là mẫu đối chứng có mặt. Sự thiếu sitemap thuộc issue này; nguyên nhân indexability `nofollow, noindex` của hai category có hàng được tách thành R29-01 để không nhầm với danh mục rỗng nên tiếp tục noindex. [HTTP/meta/internal-link và danh sách sitemap](review-evidence/2026-09-24/r29-http-seo.json).
+**Đính chính sau R29:** Category Combo và Cây thông có lần lượt **3** và **2** sản phẩm, nhưng đang `noindex`; việc cả hai vắng `product_cat-sitemap.xml` là hành vi đúng theo [hướng dẫn Rank Math: URL đặt noindex không xuất hiện trong sitemap](https://rankmath.com/kb/url-not-in-sitemap/#the-page-is-set-as-noindex). Vì vậy bằng chứng R29 **không mở rộng lỗi R2-06**. Chỉ kiểm lại sitemap sau khi R29-01 đã chuyển hai term sang indexable; nếu lúc đó URL vẫn thiếu mới thuộc R2-06. [HTTP/meta/internal-link và danh sách sitemap tại R29](review-evidence/2026-09-24/r29-http-seo.json).
 
 ### Recommended solution
 Rà cấu hình Rank Math và cache sinh sitemap; thêm sitemap bài viết vào index, loại URL noindex/redirect khỏi sitemap page, đồng thời đưa mọi PDP và product category **được chủ đích index**, canonical, đang xuất bản vào sitemap tương ứng với `lastmod` phản ánh cập nhật thực. Không chữa bằng mở index cart/account, bật index hàng loạt category rỗng hoặc thêm URL biến thể không có trang riêng.
@@ -333,7 +333,7 @@ OPEN
 `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/`; `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/`.
 
 ### Problem
-Hai category đã chuyển từ trạng thái rỗng sang có hàng nhưng vẫn phát `nofollow, noindex`; HTML không có self-canonical và cả hai bị loại khỏi `product_cat-sitemap.xml`.
+Hai category đã chuyển từ trạng thái rỗng sang có hàng nhưng vẫn phát `nofollow, noindex`; HTML không có self-canonical. Việc chúng vắng `product_cat-sitemap.xml` là hệ quả dự kiến của `noindex`, không phải lỗi sitemap riêng.
 
 ### Why it matters
 Đây là hai landing page thương mại có intent riêng, metadata riêng, listing mua hàng và internal link từ homepage/shop/bài hướng dẫn. `noindex` chủ động ngăn chúng cạnh tranh cho nhu cầu “combo trang trí Noel” và “cây thông Noel”; `nofollow` còn làm yếu đường khám phá sản phẩm qua chính category. Không suy ra Google chưa biết các URL hoặc chưa index PDP vì không có GSC.
@@ -342,7 +342,7 @@ Hai category đã chuyển từ trạng thái rỗng sang có hàng nhưng vẫn
 GET không cache lúc **15:12 UTC 24/09/2026**: Combo HTTP 200, 3 card; Cây thông HTTP 200, 2 card. Cả hai có H1/title/meta description riêng và schema `CollectionPage` + `BreadcrumbList`, nhưng robots đều **`nofollow, noindex`**, canonical không có. `product_cat-sitemap.xml` chỉ có ba URL và thiếu cả hai; category Noel cha là đối chứng `index, follow`, self-canonical và có trong sitemap. Homepage, shop và bài chọn size đều có internal link tới các đích này. [Dữ liệu HTTP/sitemap/internal link](review-evidence/2026-09-24/r29-http-seo.json) · [DOM desktop/mobile](review-evidence/2026-09-24/r29-browser.json) · [Combo desktop](review-evidence/2026-09-24/r29-combo-category-desktop.webp) · [Cây thông mobile](review-evidence/2026-09-24/r29-tree-category-mobile.webp).
 
 ### Recommended solution
-Tại từng taxonomy term đã sẵn sàng làm landing page, bỏ `noindex`/`nofollow`, phát `index, follow`, self-canonical và đưa URL vào `product_cat-sitemap.xml`; purge cache Rank Math/site/CDN sau đổi. Áp dụng theo term hoặc điều kiện chất lượng rõ ràng, không bật index hàng loạt các category vẫn 0 sản phẩm. Giữ title/H1/description riêng đang có; sửa dữ liệu/ảnh/offer còn sai trong các issue sản phẩm trước khi mở rộng quảng bá.
+Tại từng taxonomy term đã sẵn sàng làm landing page, bỏ `noindex`/`nofollow` và phát `index, follow` cùng self-canonical; purge cache Rank Math/site/CDN sau đổi rồi xác nhận Rank Math tự đưa URL indexable vào `product_cat-sitemap.xml`. Áp dụng theo term hoặc điều kiện chất lượng rõ ràng, không bật index hàng loạt các category vẫn 0 sản phẩm. Giữ title/H1/description riêng đang có; sửa dữ liệu/ảnh/offer còn sai trong các issue sản phẩm trước khi mở rộng quảng bá.
 
 ### Acceptance criteria
 Hai URL trả 200, `index, follow`, self-canonical đúng URL và xuất hiện trong product-category sitemap sau purge cache. Internal link từ homepage/shop/bài viết không bị gắn `nofollow`; schema còn parse được, listing đúng 3/2 sản phẩm hoặc count tồn kho mới. Category 0 sản phẩm tiếp tục noindex cho đến khi có giá trị riêng; không coi việc gửi sitemap là bảo đảm Google index.
@@ -435,6 +435,8 @@ Khách mua đồ theo sự kiện cần ngày nhận chính xác; cam kết khá
 ### Evidence
 Hub hứa hỏa tốc **TP.HCM & Hà Nội 2–4h**; chính sách chỉ nêu nội thành TP.HCM. FAQ homepage/hub ghi tỉnh khác **1–3 ngày**, chính sách **2–4 ngày**, vùng xa **3–5 ngày**. Homepage hứa **hoàn tiền ngay trong ngày**, đổi trả ghi **1–2 ngày** khi hết mẫu. Hotline footer **08:00–21:00**, topbar/drawer **08:00–21:30**, empty category **8:00–22:00**, Zalo còn **24/7**.
 
+**Bổ sung R30:** ngay màn hình đầu `/lien-he/`, câu mở đầu ghi đội ngũ **“luôn sẵn sàng phục vụ 24/7”**, cùng card lại ghi giờ showroom **08:00–21:00** và phản hồi Zalo **15 phút**; topbar cùng lượt duyệt vẫn ghi **08:00–21:30**. Đây là mâu thuẫn nhìn thấy trong một bề mặt thật, không chỉ đối chiếu HTML giữa các trang. [Ảnh desktop](review-evidence/2026-09-24/r30-contact-desktop.webp) · [ma trận nội dung](review-evidence/2026-09-24/r30-trust-matrix.json). Giữ **OPEN — P2**.
+
 ### Recommended solution
 Owner vận hành chốt dữ liệu chuẩn theo kênh/khu vực; phân biệt “nhận tin 24/7” với giờ nhân viên phản hồi. Dùng cùng nguồn nội dung cho các template, ghi rõ ngoại lệ và mốc tính thời gian.
 
@@ -488,6 +490,8 @@ Người đọc khó biết ai chịu trách nhiệm cho các hướng dẫn k�
 
 ### Evidence
 Browser mobile bài chọn size hiển thị **ED4F7B**. BlogPosting author.name và Person.name là `ed4f7b`; archive không có hồ sơ chuyên môn hữu ích trong phần đã đọc.
+
+**Bổ sung R30:** browser desktop vẫn thấy byline bài chọn size là `ed4f7b`; `BlogPosting.author` và `Person.name` cùng giá trị này. `/author/ed4f7b/` là `ProfilePage`, `noindex`, chỉ hiển thị avatar mặc định, mã tài khoản, ngày tham gia và ba bài; hub/box cuối bài vẫn dùng **Ban Biên Tập**. Quan hệ `BlogPosting → Person → Organization` có `@id` liên kết được, nhưng không giải quyết mâu thuẫn danh tính. [Schema/DOM](review-evidence/2026-09-24/r30-editorial-schema.json) · [hồ sơ tác giả](review-evidence/2026-09-24/r30-author-desktop.webp). Giữ **OPEN — P2**.
 
 ### Recommended solution
 Dùng tên người/ban biên tập có thật, cùng một byline giữa UI/schema; bổ sung vai trò, kinh nghiệm có kiểm chứng, quy trình biên tập và liên kết bài/dự án của tác giả. Không tạo bằng cấp/tiểu sử giả.
@@ -575,25 +579,27 @@ Tại 375×812, người vào trang tiếp cận được đoạn chính/điều
 ### Status
 OPEN
 
-## [P2] R2-16 — Metadata/schema homepage chưa phản ánh đúng trang thương mại
+## [P2] R2-16 — Metadata/schema homepage và static page gán sai vai trò nội dung
 
 ### Location
-Homepage `<head>` và JSON-LD.
+Homepage; `/gioi-thieu/`, `/showroom/`, `/lien-he/` và bốn trang chính sách, phần `<head>`/JSON-LD.
 
 ### Problem
-Title quá chung, thiếu ảnh chia sẻ explicit, schema gán Article/Person không đủ danh tính cho trang chủ.
+Title homepage quá chung, thiếu ảnh chia sẻ explicit; homepage và static page đều gán `Article`/Person tác giả rỗng dù vai trò thật là trang thương mại, giới thiệu, liên hệ hoặc chính sách.
 
 ### Why it matters
-Giảm khả năng hiểu nội dung trang qua kết quả tìm kiếm/chia sẻ; schema không nên mô tả một bài có tác giả rỗng khi đây là homepage bán hàng.
+Giảm khả năng hiểu nội dung trang qua kết quả tìm kiếm/chia sẻ; schema không nên mô tả một bài có tác giả vô danh khi trang có vai trò khác. Đây là lỗi phân loại template, không phải yêu cầu nhồi mọi trường schema tùy chọn.
 
 ### Evidence
-Title **“Trang Chủ - Trang trí 4 mùa”**; meta description là đoạn mô tả danh mục chung; không có `og:image` trong HTML đã đọc. Graph có `Article`, Person URL `/author/` không có name. H1 homepage vẫn đúng một thẻ, không cần sửa chỉ để checklist.
+Baseline: title **“Trang Chủ - Trang trí 4 mùa”**; meta description là đoạn mô tả danh mục chung; không có `og:image` trong HTML đã đọc. Graph homepage có `Article`, Person URL `/author/` không có name. H1 homepage vẫn đúng một thẻ, không cần sửa chỉ để checklist.
+
+**Bổ sung R30:** browser parse homepage và **7 static page**: cả tám đều có `Article` và một `Person` không có `name`. Node Organization dùng chung có name/logo; `WebSite.publisher` và Article.publisher trỏ đúng `@id` Organization, nên giữ quan hệ tốt này nhưng chọn type đúng. Riêng hub bài viết dùng `CollectionPage`, bài thật dùng `BlogPosting`; đây là mẫu đúng để không xóa schema biên tập hợp lệ. [Ma trận tám trang](review-evidence/2026-09-24/r30-pages-browser.json) · [tóm tắt field](review-evidence/2026-09-24/r30-trust-matrix.json).
 
 ### Recommended solution
-Viết title/description mô tả offer thực và thương hiệu; đặt ảnh OG đúng nội dung. Cấu hình homepage WebPage/WebSite/Organization phù hợp; bỏ Article/Person rỗng nếu không phải nội dung biên tập. Giữ Product/BlogPosting đúng ở template tương ứng.
+Viết title/description homepage mô tả offer thực và thương hiệu; đặt ảnh OG đúng nội dung. Cấu hình homepage thành WebPage/WebSite/Organization; static page dùng `AboutPage`, `ContactPage` hoặc `WebPage` phù hợp và bỏ `Article`/Person rỗng. Giữ Product/BlogPosting/CollectionPage đúng ở template tương ứng; chỉ thêm Organization fields đã được owner xác nhận.
 
 ### Acceptance criteria
-Metadata có nội dung đặc thù và khớp offer thật; OG image tải được; JSON-LD parse được, không còn tác giả rỗng/Article không phù hợp ở homepage. Không hứa rich result chỉ nhờ thêm schema.
+Metadata homepage có nội dung đặc thù, khớp offer và có OG image tải được. Homepage, About, Showroom, Contact và policy không còn `Article` hoặc Person tác giả rỗng; Organization/WebSite vẫn liên kết nhất quán. Bài thật còn BlogPosting + tác giả đúng, hub còn CollectionPage, JSON-LD parse được. Không hứa rich result chỉ nhờ thêm schema.
 
 ### Status
 OPEN
@@ -717,25 +723,27 @@ Nhãn, accessible name và lỗi hiển thị đều tiếng Việt; shipping me
 ### Status
 OPEN
 
-## [P2] R2-22 — Tuyên bố uy tín/chuyên môn thiếu bằng chứng công khai tương xứng
+## [P1] R2-22 — Chưa xác định rõ chủ thể nhận tiền và căn cứ tuyên bố uy tín
 
 ### Location
-Homepage reviews; About, Showroom; các bài cẩm nang có lời hứa chuyên môn/dự án.
+Chính sách thanh toán; homepage reviews; About, Showroom, Contact, privacy; Organization schema; các bài cẩm nang có lời hứa chuyên môn/dự án.
 
 ### Problem
-Website có NAP/chính sách nhưng chưa giúp người đọc kiểm chứng các tuyên bố về quy mô khách hàng, công trình và đơn vị chịu trách nhiệm.
+Website có NAP/chính sách và hướng dẫn chuyển tiền thật, nhưng chưa giúp người mua xác định chủ thể pháp lý chịu trách nhiệm, trong khi công bố quy mô khách hàng, công trình, showroom, hợp đồng và hóa đơn VAT.
 
 ### Why it matters
-Khách B2B cần đánh giá năng lực và chủ thể hợp đồng; nội dung chuyên sâu cần dấu hiệu kinh nghiệm thực tế chứ không chỉ lời tự giới thiệu.
+Người mua chuyển khoản và khách B2B cần đối chiếu bên nhận tiền, bên ký hợp đồng/xuất hóa đơn và đơn vị xử lý dữ liệu. Khoảng trống này tác động trực tiếp trust, thanh toán và khả năng xử lý tranh chấp; nội dung chuyên sâu cũng cần dấu hiệu kinh nghiệm thực tế chứ không chỉ lời tự giới thiệu.
 
 ### Evidence
-Homepage ghi **hơn 1.200 khách hàng**, 3 testimonial 5 sao có dấu tick; bài dự toán nêu kinh nghiệm **hàng trăm công trình**. Không thấy liên kết nguồn/ngày/case study đi kèm trong mẫu. About/Contact công bố thương hiệu và NAP nhưng chưa thấy tên pháp nhân/MST hoặc thông tin chủ thể vận hành tương đương; Showroom không có ảnh không gian thực trong nội dung chính. **Chưa có bằng chứng các tuyên bố là giả.**
+Baseline: homepage ghi **hơn 1.200 khách hàng**, 3 testimonial 5 sao có dấu tick; bài dự toán nêu kinh nghiệm **hàng trăm công trình**. Không thấy liên kết nguồn/ngày/case study đi kèm trong mẫu. About/Contact công bố thương hiệu và NAP nhưng chưa thấy tên pháp nhân/MST hoặc thông tin chủ thể vận hành tương đương; Showroom không có ảnh không gian thực trong nội dung chính. **Chưa có bằng chứng các tuyên bố là giả.**
+
+**Bổ sung R30:** thương hiệu, địa chỉ, hotline và email hiển thị nhất quán trên tám trang; đây là mặt tích cực nhưng vẫn là dữ liệu tự khai. Chính sách thanh toán gọi tài khoản MB **0901234567**, chủ tài khoản **“TRANG TRI 4 MUA”** là “tài khoản chính thức”, đồng thời hứa chuyển khoản theo hợp đồng và hóa đơn điện tử GTGT hợp lệ. Nội dung không nêu tên đăng ký/MST **của bên bán**; các trường “Tên công ty, Mã số thuế” là dữ liệu yêu cầu khách cung cấp để xuất hóa đơn. Organization schema chỉ có name/logo trong mẫu, không thay thế định danh pháp lý. [Vùng hướng dẫn chuyển khoản](review-evidence/2026-09-24/r30-payment-beneficiary.webp) · [ma trận NAP/chủ thể/claim/schema](review-evidence/2026-09-24/r30-trust-matrix.json). Reviewer không chuyển tiền, gọi điện hay xác minh ngân hàng/showroom; không kết luận tài khoản hoặc tuyên bố là giả.
 
 ### Recommended solution
-Owner xác nhận chủ thể kinh doanh và nguồn claim. Bổ sung thông tin doanh nghiệp phù hợp hình thức pháp lý thật; testimonial có sự đồng ý, thời gian/ngữ cảnh và cách xác minh không lộ dữ liệu cá nhân. Xuất bản case study thật: diện tích, yêu cầu, bố cục, vật tư, khoảng ngân sách, ảnh trước/sau và bài học vận hành.
+Owner xác nhận và công bố chủ thể bán hàng đúng hình thức thực: tên đăng ký, địa chỉ, thông tin đăng ký/MST nếu áp dụng, đầu mối chịu trách nhiệm; bảo đảm tên người nhận tiền, hợp đồng, hóa đơn và privacy notice quy về cùng chủ thể hoặc giải thích quan hệ được phép. Đồng bộ dữ liệu đã xác nhận vào Contact/About/footer/policy và Organization schema. Với claim uy tín: testimonial có sự đồng ý, thời gian/ngữ cảnh và cách xác minh không lộ dữ liệu cá nhân; case study thật có diện tích, yêu cầu, vật tư, khoảng ngân sách, ảnh trước/sau và bài học. Không tạo pháp nhân, review, chứng chỉ hay dự án giả.
 
 ### Acceptance criteria
-Mọi con số/huy hiệu “thực tế/đã mua” được owner cung cấp căn cứ hoặc chỉnh thành thông tin không gây hiểu nhầm; người đọc xác định được đơn vị chịu trách nhiệm và xem được minh chứng chuyên môn thực. Không chế tác review, chứng chỉ hay dự án.
+Trước khi yêu cầu chuyển khoản, người mua nhận diện được bên bán/bên thụ hưởng và đối chiếu với hợp đồng/hóa đơn/privacy; thông tin nhất quán trên Contact, About, footer, payment policy và schema. Mọi con số/huy hiệu “thực tế/đã mua” được owner cung cấp căn cứ hoặc chỉnh thành thông tin không gây hiểu nhầm; có minh chứng chuyên môn thực. Không yêu cầu công khai dữ liệu cá nhân không cần thiết và không coi schema tự khai là xác minh pháp lý.
 
 ### Status
 OPEN
@@ -1532,7 +1540,8 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
 | Q-NEW-PRODUCT-DATA | R26 mới xác nhận ảnh/URL, chưa thử toàn bộ size, schema và thông số năm SKU | DONE | [R27](#round-r27): 5 PDP HTTP/schema/spec, 2 cây × 2 viewport và Tháp nhũ đối chứng; phát hiện R27-01, mở rộng R2-03/R2-06/R6-01. DONE là đã kiểm, không phải đã sửa. |
 | Q-SEARCH-NEW-SKU | Search cũ mới thử “tháp nhũ”, chưa kiểm SKU/tên/intent của năm sản phẩm mới | DONE | [R28](#round-r28): 7 query HTTP, 5 luồng live→full search, 2 mobile, một lần Tab/Enter mở PDP; mở rộng R2-14, không thêm issue trùng. |
-| Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R29](#round-r29): hai category 200 có 3/2 sản phẩm, metadata/schema riêng nhưng vẫn `nofollow, noindex`, không canonical và vắng product-category sitemap; thêm R29-01, mở rộng R2-06. |
+| Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R29](#round-r29): hai category 200 có 3/2 sản phẩm, metadata/schema riêng nhưng vẫn `nofollow, noindex` và không canonical; thêm R29-01. Việc vắng sitemap là hệ quả đúng của `noindex`, chỉ recheck R2-06 sau khi term indexable. |
+| Q-BUSINESS-IDENTITY | Chưa tái kiểm tra NAP, chủ thể nhận tiền, Organization và author chain theo hệ thống | DONE | [R30](#round-r30): 8 trang doanh nghiệp/chính sách + 3 bề mặt editorial; giữ R2-10/R2-12/R2-16 OPEN, nâng R2-22 lên P1. Không xác minh offline hoặc giao dịch. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
 | Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
@@ -2513,7 +2522,7 @@ Ngày kiểm tra: **24/09/2026**, timestamp chi tiết trong JSON. Đầu vòng 
 
 ## Phát hiện R29-01 — P1 OPEN
 
-Cả hai category có hàng vẫn phát **`nofollow, noindex`**, không có self-canonical và vắng khỏi `product_cat-sitemap.xml`. Đây không còn là trạng thái hợp lý cho trang rỗng như R18/R22: mỗi trang nay có listing mua hàng, nội dung mô tả riêng và internal link rõ.
+Cả hai category có hàng vẫn phát **`nofollow, noindex`** và không có self-canonical. Việc chúng vắng `product_cat-sitemap.xml` là hệ quả dự kiến của `noindex`, không phải lỗi sitemap độc lập. Đây không còn là trạng thái hợp lý cho trang rỗng như R18/R22: mỗi trang nay có listing mua hàng, nội dung mô tả riêng và internal link rõ.
 
 Mẫu đối chứng category Noel cha phát `index, follow`, self-canonical và có trong sitemap. Sai khác cho thấy cần chuyển trạng thái SEO theo term đã sẵn sàng, không phải bật index toàn bộ taxonomy.
 
@@ -2522,7 +2531,7 @@ Mẫu đối chứng category Noel cha phát `index, follow`, self-canonical và
 ### Phân ranh issue
 
 - **R29-01** sở hữu robots/canonical của hai category có hàng.
-- **R2-06** tiếp tục sở hữu tính đầy đủ và tính sạch của sitemap; R29 chỉ bổ sung hai URL product-category bị thiếu.
+- Hai URL vắng `product_cat-sitemap.xml` đúng với cơ chế Rank Math khi term đang `noindex`; đây là **hệ quả của R29-01**, không phải bằng chứng lỗi R2-06 độc lập. Sau khi đổi sang indexable, nếu purge cache mà URL vẫn thiếu thì mới chuyển phần đó sang R2-06.
 - **R2-04/R2-11/R27-01** tiếp tục sở hữu lời hứa số lượng, ảnh sai loại hàng và mapping biến thể. Không gọi indexability là cách sửa những lỗi catalog đó.
 
 ## Giới hạn và bàn giao R29
@@ -2531,4 +2540,62 @@ Mẫu đối chứng category Noel cha phát `index, follow`, self-canonical và
 - Không có GSC nên không tuyên bố URL đang/không đang nằm trong chỉ mục Google; bằng chứng chỉ kết luận directive công khai và sitemap hiện hành.
 - Không chạy crawler toàn bộ taxonomy; phạm vi là hai category đã đổi trạng thái hàng và một mẫu đối chứng. Không kiểm ranking, impression, cache Google hoặc Core Web Vitals.
 - Bộ bằng chứng gồm **3 JSON + 3 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.
+
+---
+
+<a id="round-r30"></a>
+
+# Vòng R30 — Chủ thể doanh nghiệp, tác giả và tín hiệu tin cậy
+
+Ngày kiểm tra: **24/09/2026**, timestamp chi tiết trong JSON. Đầu vòng `main` bằng `origin/main`; `ASSISTANT_REPLY.md` vẫn SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**, không có bàn giao Coder mới.
+
+Hai scout đọc độc lập nhánh thông tin doanh nghiệp/chính sách và nhánh author/entity schema; Main kiểm lại bằng browser thật, parse DOM/JSON-LD và quyết định phân ranh. Subagent không sửa file/website và kết luận của họ không được dùng thay bằng chứng runtime.
+
+## Phạm vi và phương pháp
+
+- Tám trang: homepage, Giới thiệu, Showroom, Liên hệ, Vận chuyển, Đổi trả, Thanh toán, Bảo mật.
+- Ba bề mặt editorial: hub, bài chọn size và `/author/ed4f7b/`.
+- Browser desktop **1440×1000**: đọc nội dung chính, footer, tel/mail link, iframe, robots và JSON-LD; chụp Contact, About, Showroom, author profile và vùng chính sách nhận chuyển khoản.
+- Không gửi form, gọi điện, mở Zalo/bản đồ ngoài, chuyển khoản, thêm giỏ hoặc đặt hàng. Thông tin website là tự khai; không gọi nó là đã được xác minh ngoài đời.
+
+## Phần đang hoạt động đúng — giữ nguyên
+
+- Tên thương hiệu **Trang Trí 4 Mùa**, địa chỉ `123 Đường Xuân Thủy`, hotline `0901.234.567` và email `cskh@trangtri4mua.com` hiển thị nhất quán ở các trang đã đọc. Không gắn nhãn “placeholder” chỉ vì dãy số/địa chỉ trông giống dữ liệu mẫu.
+- Homepage có link thật tới About, Showroom và bốn chính sách; Contact được truy cập từ navigation. Chính sách vận chuyển/đổi trả/thanh toán/bảo mật có cấu trúc chi tiết hơn một footer trust badge.
+- Graph giữ cùng `Organization @id`; `WebSite.publisher`, Article/BlogPosting publisher liên kết được. Hub dùng `CollectionPage`, bài thật dùng `BlogPosting`, author archive dùng `ProfilePage`.
+- Email bảo vệ Cloudflare render thành `cskh@trangtri4mua.com` trong browser; không báo chuỗi reader-mode `[email protected]` thành lỗi.
+
+## R2-22 — nâng P2 → P1, giữ OPEN
+
+Chính sách thanh toán hướng dẫn người mua chuyển vào tài khoản MB **0901234567**, tên **TRANG TRI 4 MUA**, gọi đây là tài khoản chính thức; cùng trang cam kết hợp đồng dự án và hóa đơn VAT hợp lệ. Tuy nhiên Contact/About/footer/privacy và Organization schema chưa nêu chủ thể đăng ký/MST của **bên bán**. Trường “Tên công ty, Mã số thuế” trong policy là dữ liệu khách phải cung cấp, không phải định danh shop.
+
+Vì khoảng trống nay nằm ngay trước một hành động chuyển tiền và quan hệ B2B, R2-22 được nâng lên **P1**. Không có bằng chứng tài khoản/showroom/claim là giả; yêu cầu là owner xác nhận, công bố và đồng bộ chủ thể thật. Các claim “1.200 khách hàng”, testimonial có tick, “hàng trăm mẫu/công trình”, ảnh thực tế 100% vẫn thiếu nguồn/case study công khai.
+
+[Ảnh vùng thanh toán](review-evidence/2026-09-24/r30-payment-beneficiary.webp) · [ma trận tin cậy](review-evidence/2026-09-24/r30-trust-matrix.json) · [About](review-evidence/2026-09-24/r30-about-desktop.webp) · [Showroom](review-evidence/2026-09-24/r30-showroom-desktop.webp).
+
+## Ba issue P2 tiếp tục OPEN
+
+### R2-10 — giờ phục vụ
+
+Contact ghi **24/7**, cùng màn hình lại ghi showroom **08:00–21:00** và phản hồi Zalo **15 phút**; topbar ghi **08:00–21:30**. Cần phân biệt kênh nhận tin tự động, giờ nhân viên phản hồi và giờ showroom. [Ảnh Contact](review-evidence/2026-09-24/r30-contact-desktop.webp).
+
+### R2-12 — tác giả
+
+Byline/BlogPosting/Person vẫn là `ed4f7b`; profile chỉ có mã tài khoản, avatar mặc định, ngày tham gia và ba bài. Hub/box cuối bài dùng Ban Biên Tập. Quan hệ schema nối được nhưng danh tính/chuyên môn chưa nhất quán. [DOM/schema](review-evidence/2026-09-24/r30-editorial-schema.json) · [profile](review-evidence/2026-09-24/r30-author-desktop.webp).
+
+### R2-16 — schema page template
+
+Homepage và bảy static page đều có `Article` + Person không tên; Organization chỉ có name/logo trong tập đọc. Giữ liên kết Organization/WebSite hiện có, nhưng chuyển static page sang loại phù hợp và không phá `CollectionPage`/`BlogPosting` đang đúng. [Tám trang browser](review-evidence/2026-09-24/r30-pages-browser.json).
+
+## Đính chính phân ranh R29
+
+Theo [hướng dẫn chính thức của Rank Math](https://rankmath.com/kb/url-not-in-sitemap/#the-page-is-set-as-noindex), URL đặt `noindex` không xuất hiện trong sitemap. Vì vậy hai category R29 vắng `product_cat-sitemap.xml` là hệ quả đúng của R29-01, **không** phải bằng chứng lỗi R2-06. Chỉ kiểm R2-06 nếu URL vẫn thiếu sau khi term đã `index, follow`, có canonical và cache đã purge.
+
+## Giới hạn và bàn giao R30
+
+- Không thêm issue; nâng R2-22 từ P2 lên P1. Tổng giữ **41 OPEN — 10 P1, 25 P2, 6 P3**.
+- Không kiểm hồ sơ đăng ký doanh nghiệp, MST, quyền sở hữu showroom/tài khoản, khả năng xuất VAT, số khách hàng hoặc hoạt động hotline/email. Đây là khoảng trống cần owner cung cấp nguồn xác nhận, không phải kết luận gian dối.
+- Không audit lại toàn bộ pháp lý/nội dung chính sách; không đưa ý kiến pháp lý. R30 kiểm sự nhất quán, khả năng nhận diện chủ thể và mối liên kết nội dung/schema.
+- Bộ bằng chứng gồm **4 JSON + 5 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.

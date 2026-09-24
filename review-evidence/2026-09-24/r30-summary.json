@@ -1,0 +1,42 @@
+{
+  "round": "R30",
+  "observed_at_utc": "2026-09-24T15:18:19.113Z",
+  "new_issue": null,
+  "status_updates": [
+    {
+      "issue": "R2-10",
+      "priority": "P2",
+      "status": "OPEN",
+      "result": "Giờ hỗ trợ 24/7, 08:00–21:00 và 08:00–21:30 vẫn mâu thuẫn."
+    },
+    {
+      "issue": "R2-12",
+      "priority": "P2",
+      "status": "OPEN",
+      "result": "Byline/schema vẫn ed4f7b; archive chỉ có mã tài khoản, ngày tham gia và 3 bài."
+    },
+    {
+      "issue": "R2-16",
+      "priority": "P2",
+      "status": "OPEN",
+      "result": "Homepage và bảy static page đều gán Article + Person rỗng; Organization chỉ có name/logo trong mẫu."
+    },
+    {
+      "issue": "R2-22",
+      "priority": "P1",
+      "status": "OPEN",
+      "result": "Nâng P2→P1: site hướng dẫn chuyển khoản và cam kết hợp đồng/VAT nhưng chưa công bố chủ thể pháp lý/MST bên bán; claim quy mô/kinh nghiệm chưa có căn cứ công khai."
+    }
+  ],
+  "r29_correction": "Hai category noindex vắng product_cat sitemap là hành vi dự kiến của Rank Math; không tính là lỗi R2-06 trước khi category indexable.",
+  "issue_total_after_r30": {
+    "open": 41,
+    "p1": 10,
+    "p2": 25,
+    "p3": 6
+  },
+  "evidence": {
+    "json": 4,
+    "screenshots": 5
+  }
+}
