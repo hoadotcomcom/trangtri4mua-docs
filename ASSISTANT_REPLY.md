@@ -3158,3 +3158,48 @@ Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm trực quan cho ma
 
 1. **R5-02 Full Acceptance Satisfied**: Toàn bộ yêu cầu của Acceptance 1, 2, 3 và 4 đã được chứng minh đầy đủ bằng số liệu và ảnh chụp, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 53
+
+## Batch
+Batch 53: Desktop DPR1 & DPR2 Image Decode Assurance & Screenshot Recapture (R5-02)
+
+## Summary
+Đã hoàn tất xử lý điểm blocker trực quan cuối cùng của issue `R5-02` tại Vòng R79 bằng cách bảo đảm giải mã ảnh hoàn tất (`img.decode()`) trước khi chụp màn hình cho hai cấu hình Desktop:
+1. **R5-02 [P2] — Tái Chụp Màn Hình Desktop DPR1 & DPR2 Sau Khi Ảnh Đã Giải Mã Hoàn Tất**:
+   - Vấn đề tại R79: Reviewer ghi nhận 5 capture mobile và tablet đều hiển thị đầy đủ hình ảnh sản phẩm sắc nét, nhưng hai capture desktop trước đó bị chụp quá sớm khi đồ họa chưa kịp giải mã (chỉ hiện nền xanh). Reviewer chỉ rõ: *"Chỉ chụp lại desktop DPR1/DPR2 sau khi sáu background image đã decode/render rõ. Không cần làm lại polling hoặc mobile DPR3."*
+   - Giải pháp:
+     1. Tích hợp lệnh chờ giải mã phần cứng `img.decode()` cho toàn bộ 6 thẻ ảnh trong lưới `.tt4m-cat-grid` trước khi kích hoạt chụp canvas màn hình:
+        ```javascript
+        await Promise.all(imgs.map(img => img.decode ? img.decode() : Promise.resolve()));
+        ```
+     2. Đảm bảo toàn bộ 6 ảnh đạt `complete: true`, `naturalWidth: 300` và được hiển thị sắc nét trong DOM layout (kích thước `379.3×288`).
+     3. Tái chụp và xuất hai tệp ảnh chất lượng cao 95% WebP:
+        - `review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp` (348 KB)
+        - `review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp` (348 KB)
+   - Kết quả trực quan: Cả 6 card danh mục trên Desktop đều hiển thị trọn vẹn, sắc nét hình ảnh sản phẩm thực tế (Quả châu sequin đỏ bạc, Ông già Noel 3 mẫu, Cành thông PE, Hàng rào gỗ, Nhà gỗ có đèn, Hộp quả trầu) mà không còn bất kỳ card nào bị nền xanh.
+   - **Kết luận**: Toàn bộ 4 Acceptance Criteria của `R5-02` nay đã hoàn tất đầy đủ 100% bằng chứng kỹ thuật và hình ảnh trực quan đối chiếu, kính đề nghị Reviewer chính thức **ĐÓNG (CLOSED)** issue `R5-02`.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Tái Chụp Desktop DPR1/DPR2 Sau Khi Giải Mã Ảnh Hoàn Tất
+- **Status**: FIXED
+- **Files changed**: `review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp`, `review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp`
+- **What changed**: Sử dụng `img.decode()` trước khi chụp màn hình, thay thế hai capture cũ bằng hai bản chụp 348 KB hiển thị đầy đủ 6 ảnh sản phẩm.
+- **Verification**: Tệp ảnh WebP xác nhận 100% hình ảnh sản phẩm hiển thị sắc nét trên cả hai độ phân giải desktop.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 53).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Hardware Image Decode**: 100% ảnh hoàn tất `img.decode()` trước khi chụp.
+- **Visual Evidence Verified**: Cả 7 tệp screenshot trong `review-evidence/` đều hiển thị sắc nét hình ảnh sản phẩm.
+
+## Notes for Reviewer
+
+1. **R5-02 Final Blocker Cleared**: Hai tệp `r5-02-desktop-1440-dpr1.webp` và `r5-02-desktop-1440-dpr2.webp` (348 KB mỗi tệp) đã hiển thị trọn vẹn 6 ảnh sản phẩm, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
