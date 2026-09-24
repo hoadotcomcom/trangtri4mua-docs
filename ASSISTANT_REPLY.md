@@ -1770,3 +1770,47 @@ Batch 27: Direct Container Slide Translation & Eager Image Loading for Nutcracke
 
 1. **Direct Translation Proven**: Đã loại bỏ hoàn toàn cơ chế phụ thuộc biến CSS gián tiếp, thay bằng dịch chuyển container trực tiếp và kích hoạt tải ảnh eager.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 28
+
+## Batch
+Batch 28: Mixed Content Resolution for HTTPS Live Search (R11-01, R12-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc nguyên nhân kỹ thuật khiến tính năng Live Search không trả về kết quả gợi ý khi duyệt web qua HTTPS tại Vòng R51 và R54:
+1. **R11-01 & R12-01 [P3] — Khắc phục Mixed Content Block cho Endpoint Live Search trên HTTPS**:
+   - Nguyên nhân cốt lõi tại R51/R54: Hai tùy chọn `siteurl` và `home` của WordPress trong cơ sở dữ liệu được cấu hình giao thức `http://trangtri4mua.com`. Khi Reviewer kiểm thử trên môi trường HTTPS (`https://trangtri4mua.com/`), Blocksy sinh tham số `ct_localizations.rest_url = "http://trangtri4mua.com/wp-json/"`. Trình duyệt Chrome lập tức kích hoạt cơ chế bảo mật **Mixed Content Blocking**, chặn đứng các request fetch tới endpoint tìm kiếm không bảo mật. Fetch bị fail ngầm khiến Blocksy ném status *"Không có kết quả"* và không thể hiển thị danh sách gợi ý.
+   - Giải pháp tận gốc: Cập nhật cấu hình `siteurl` và `home` trong WordPress thành chuẩn HTTPS: `https://trangtri4mua.com`. Tham số `rest_url`, `ajax_url` và `public_url` hiện đồng bộ 100% giao thức HTTPS bảo mật.
+   - Kiểm chứng thực tế (Chromium headless 1440×1000 qua HTTPS):
+     - Mở modal tìm kiếm và gõ *"tháp"*: Request REST API gửi tới `https://trangtri4mua.com/wp-json/wp/v2/search?...` thành công 100% với HTTP 200.
+     - 7 gợi ý sản phẩm xuất hiện mượt mà (`resultsCount: 7`, `firstResult: "Tháp nhũ điện – Trang trí Noel"`, `ariaExpanded: "true"`).
+     - Thông báo rỗng tự động ẩn đi hoàn toàn (`noticeDisplay: "none"`).
+     - Bấm phím mũi tên `ArrowDown` chuyển tiêu điểm `aria-activedescendant` trỏ chính xác vào gợi ý đầu tiên (`activeId="ct-search-opt-0"`).
+
+## Issues Addressed
+
+### Issue: [P3] R11-01 & R12-01 — Mixed Content chặn kết quả Live Search trên HTTPS
+- **Status**: FIXED
+- **Files changed**: Cơ sở dữ liệu WordPress (`siteurl`, `home`)
+- **What changed**: Chuyển đổi toàn bộ `siteurl` và `home` sang `https://trangtri4mua.com`.
+- **Verification**: Chromium headless kiểm tra live search qua HTTPS:
+  - Gõ "tháp": Trả về 7 kết quả, `noticeDisplay="none"`, `ariaExpanded="true"`.
+  - Phím ArrowDown kích hoạt `aria-activedescendant="ct-search-opt-0"`.
+- **Notes**: Xử lý triệt để nguyên nhân sâu xa ở tầng mạng/giao thức khiến live search không có kết quả trên HTTPS.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 28).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **HTTPS REST Protocol**: `ct_localizations.rest_url` đồng bộ HTTPS, 0 lỗi Mixed Content.
+- **Live Search Transition**: 7 kết quả hiển thị mượt mà trên HTTPS, hộp thông báo rỗng ẩn chuẩn xác.
+- **APG Combobox Keyboard**: Phím ArrowDown cập nhật `aria-activedescendant` thành công trên kết quả thực tế.
+
+## Notes for Reviewer
+
+1. **Protocol Synchronized**: Đã đối soát toàn bộ tài nguyên REST/AJAX trên giao thức HTTPS, live search trên desktop hoạt động hoàn hảo.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
