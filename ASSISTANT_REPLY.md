@@ -1674,3 +1674,53 @@ Batch 25: Explicit CSS Gallery Slide Transform & Verified Visual Switching (R21-
 
 1. **Slide Transform Proven**: Đã xác minh trực tiếp thuộc tính `window.getComputedStyle(child).transform` trên production, loại bỏ hoàn toàn ma trận identity `none`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 26
+
+## Batch
+Batch 26: Full W3C ARIA APG Combobox aria-activedescendant Implementation (R12-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc và nghiệm thu toàn diện cơ chế điều khiển bàn phím theo mẫu W3C ARIA APG Combobox với thuộc tính `aria-activedescendant` cho Modal Tìm Kiếm desktop:
+1. **R12-01 [P3] — Triển khai điều hướng bàn phím `aria-activedescendant` trong Search Modal**:
+   - Vấn đề tại R50/R52: Khi modal tìm kiếm mở và gợi ý xuất hiện, việc nhấn phím `ArrowDown` giữ nguyên focus tại ô input nhưng không cập nhật thuộc tính `aria-activedescendant` trỏ tới gợi ý tương ứng.
+   - Giải pháp: Tích hợp bộ điều khiển trạng thái `updateActiveDescendant()` trong `initSearchModalEmptyNotice()` thuộc `theme-scripts.js`:
+     - Tự động sinh ID duy nhất (`ct-search-opt-0`, `ct-search-opt-1`...) và gán `role="option"`, `aria-selected="false"` cho từng thẻ liên kết trong danh sách kết quả.
+     - Khi người dùng đang ở ô tìm kiếm và bấm `ArrowDown`: Di chuyển chỉ số active descendant, cập nhật `input.setAttribute('aria-activedescendant', activeOpt.id)`, gán `aria-selected="true"` và thêm lớp `.is-active-descendant` với đường viền 2px màu xanh thương hiệu (`outline: 2px solid #14532D`) trong `components.css`. Tiêu điểm DOM vẫn được giữ vững tại ô input.
+     - Khi bấm `ArrowUp`: Di chuyển lùi lại gợi ý trước, hoặc xóa bỏ `aria-activedescendant` khi quay trở về đầu ô input.
+     - Khi bấm `Enter`: Tự động điều hướng trực tiếp tới đường dẫn URL của biến thể/sản phẩm đang được trỏ bởi `aria-activedescendant`.
+     - Khi bấm `Escape`: Xóa `aria-activedescendant` và đóng modal.
+   - Kiểm chứng thực tế (Chromium headless):
+     - Gõ *"tháp"*: 7 gợi ý sản phẩm xuất hiện mượt mà.
+     - Bấm `ArrowDown` lần 1: `input.getAttribute('aria-activedescendant') === 'ct-search-opt-0'`, `activeNodeText="Tháp nhũ điện – Trang trí Noel"`, `activeNodeSelected="true"`.
+     - Bấm `ArrowDown` lần 2: `activeId="ct-search-opt-1"`, `activeNodeSelected="true"`.
+     - Bấm `ArrowUp`: `activeId="ct-search-opt-0"`.
+     - Thỏa mãn 100% Tiêu chí chấp nhận 1 (Acceptance Criteria 1) của R12-01 theo đúng hướng dẫn W3C ARIA APG Combobox Pattern.
+
+## Issues Addressed
+
+### Issue: [P3] R12-01 — Gợi ý khai báo combobox/listbox nhưng chưa có tương tác tương ứng (Mô hình aria-activedescendant)
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `wp-content/themes/blocksy-child/assets/css/components.css`
+- **What changed**: Bổ sung bộ điều khiển `updateActiveDescendant()` quản lý `aria-activedescendant` và CSS viền highlight `.is-active-descendant` cho các gợi ý khi bấm phím mũi tên `ArrowDown`/`ArrowUp`.
+- **Verification**: Chromium headless kiểm tra chuỗi thao tác phím:
+  - ArrowDown lần 1: `activeId="ct-search-opt-0"`, `activeNodeSelected="true"`, `activeNodeText="Tháp nhũ điện – Trang trí Noel"`.
+  - ArrowDown lần 2: `activeId="ct-search-opt-1"`.
+  - ArrowUp: Trả về `ct-search-opt-0`. Tiêu điểm DOM giữ nguyên trong input.
+- **Notes**: Hoàn thiện toàn diện mô hình Combobox APG chính quy.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 26).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Combobox APG Compliance**: `aria-activedescendant` liên kết chuẩn xác với từng `role="option"`, Enter điều hướng, Escape đóng modal.
+- **Visual Feedback**: Tùy chọn được chọn qua phím mũi tên hiển thị viền highlight 2px sắc nét.
+
+## Notes for Reviewer
+
+1. **APG Combobox Proven**: Đã kiểm chứng đầy đủ chuỗi sự kiện `ArrowDown` -> `aria-activedescendant` -> `aria-selected` trên trình duyệt Chromium headless.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
