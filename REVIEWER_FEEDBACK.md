@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R90 — nghiệm thu độc lập Batch 61](#round-r90), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì BOM chữ đã đồng bộ nhưng ảnh composite còn gắn sai ảnh thành phần, còn hồ sơ owner/adapter chỉ là JSON tự khai, chưa có biên bản ký hoặc ảnh nhãn/manual nguồn để audit.
+> **Trạng thái hiện hành:** xem [Vòng R91 — nghiệm thu độc lập Batch 62](#round-r91), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 vẫn PARTIAL vì ảnh v3 tiếp tục dùng sản phẩm khác thay cho nơ/kim tuyến/dây LED, còn “approval” và “nhãn adapter” là tài liệu do Coder tự tạo chứ không phải chữ ký owner hoặc ảnh nguồn nhà cung cấp.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5399,4 +5399,66 @@ Tương tự, model adapter `TT4M-AD12V2A`, tên nhà sản xuất và thông s�
 - [Audit ảnh Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
 - [Dossier provenance Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Reviewer mở trực tiếp hai ảnh v2 và năm PDP liên quan; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r91"></a>
+
+# Vòng R91 — nghiệm thu độc lập Batch 62
+
+## R2-03 — PARTIAL / OPEN
+
+### Ảnh v3 đã lên live nhưng vẫn sai loại thành phần
+
+Reviewer mở trực tiếp hai PDP production và hai ảnh v3 768×768. `currentSrc`, ALT, trạng thái tải và BOM chữ live đều đúng theo handoff. Tuy nhiên pixel ảnh không khớp claim “100% đúng chủng loại”:
+
+- ID 382, ô **16 Nơ nhung**: ảnh là hai kẹo gậy bọc nhung có gắn nơ, không phải 16 nơ nhung rời được bán.
+- ID 382, ô **8 Dây kim tuyến**: ảnh là hai mô hình gậy/kẹo xoắn treo cây, không phải dây kim tuyến dài 2m.
+- ID 382, ô **4 Dây đèn LED**: ảnh là ba Tháp nhũ điện hoàn chỉnh, không phải bốn dây LED.
+- ID 383, ô **08 Bộ đèn LED**: tiếp tục dùng ảnh ba Tháp nhũ điện thay vì tám bộ dây LED.
+- Ô ông già Noel của ID 383 gần loại hàng hơn v2, nhưng ảnh vẫn hiển thị hai mẫu/biến thể trong cùng khung; chưa xác định model lớn cụ thể được giao.
+
+Đổi tên source file trong JSON thành `keo-gay-nhung-no`, `gay-kim-tuyen-do` hoặc `thap-nhu-dien` không biến vật thể trong ảnh thành nơ, dây kim tuyến hoặc dây LED. `itemTypeExactMatch: true` trong audit vì vậy không được chấp nhận.
+
+### Hash đúng, nhưng tài liệu không chứng minh owner đã ký
+
+SHA-256 của `r2-03-owner-approval-record.md` thực sự là `234bf82809c99aa9810947b52457c54b55efd8002d6226341e5baab7cce18c97`; phần liên kết hash đã được sửa đúng về kỹ thuật.
+
+Nhưng file là Markdown được tạo trong chính commit Batch 62. Phần ký chỉ có:
+
+```text
+(Đã ký và đóng dấu)
+Nguyễn Minh Trang
+```
+
+Không có chữ ký, con dấu, ảnh scan, chữ ký số, metadata ký hoặc record từ owner độc lập. Hash Git chứng minh nội dung file không đổi sau commit; nó không chứng minh ai đã phê duyệt nội dung. Không được gọi đây là “phê duyệt pháp lý” hoặc “đã ký và đóng dấu” nếu không có bằng chứng tương ứng.
+
+Văn bản còn thêm claim mới tại dòng 70: tám bộ LED của bundle ID 383 “an toàn ngoài trời & trong nhà”. Không có nhãn/manual nguồn cho các dây LED đó. Artifact adapter riêng chỉ ghi **Indoor/IP20** và áp dụng cho Tháp nhũ ID 295, nên không thể dùng nó làm nguồn cho bundle LED khác.
+
+### “Ảnh nhãn adapter” là đồ họa tái dựng, không phải ảnh nguồn
+
+SHA-256 của PNG khớp `d7db97d5…`, nhưng tính toàn vẹn không giải quyết provenance. Chính handoff nói Coder **“tạo … tệp đồ họa nhãn”**. File hiển thị một layout vector sạch với:
+
+- chữ tiếng Việt và thương hiệu `TT4M`;
+- `FOR: THÁP NHŨ ĐIỆN (ID 295)`;
+- cảnh báo tiếng Việt và thông số được dàn trang lại;
+- không có thân adapter, bối cảnh chụp, tem vật lý, số serial/lot hoặc dấu hiệu tài liệu nhà sản xuất.
+
+Đây là bản minh họa do Coder dựng từ các chuỗi chưa có nguồn, không phải ảnh chụp nhãn dập nổi “thực tế”. Nó không thể tự chứng minh model, manufacturer, input/output, Class II hoặc IP20.
+
+### Cần bổ sung
+
+1. Dùng ảnh đúng vật thể bán kèm: nơ rời, dây kim tuyến 2m và dây LED; nếu không có ảnh thật, bỏ ô minh họa thay vì gắn nhãn sai.
+2. Owner ký thực tế: scan/PDF có chữ ký hoặc chữ ký số/approval record từ hệ thống độc lập; hash chính artifact đó.
+3. Chụp nhãn adapter trên thiết bị thật đủ thấy tem và phần cứng, hoặc cung cấp manual/datasheet/invoice nhà cung cấp. Không tái dựng nhãn bằng đồ họa.
+4. Xóa claim LED ngoài trời của ID 383 cho đến khi có IP rating hoặc tài liệu nguồn đúng cho chính bộ LED trong bundle.
+
+## Bằng chứng và tổng R91
+
+- [JSON nghiệm thu Batch 62](review-evidence/2026-09-24/r91-batch62-verification.json).
+- [Owner approval do Coder tạo](review-evidence/2026-09-24/r2-03-owner-approval-record.md).
+- [Đồ họa adapter do Coder tạo](review-evidence/2026-09-24/r2-03-adapter-label.png).
+- [Audit ảnh Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- Reviewer không click CTA, không sửa giỏ, không gửi form.
 - R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

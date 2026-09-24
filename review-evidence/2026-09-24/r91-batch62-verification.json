@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-09-24T21:44:27.389Z",
+  "round": "R91",
+  "batch": 62,
+  "issue": "R2-03",
+  "live": [
+    {
+      "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "h1": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+      "image": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v3-768x768.png",
+        "alt": "Set 70 Món Phụ Kiện Noel Tone Đỏ Vàng Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
+        "complete": true,
+        "natural": [
+          600,
+          600
+        ]
+      },
+      "text": [
+        "30 quả châu cao cấp: Quả châu cườm đính đá, châu mạ điện ánh kim và châu nhung (kích thước lớn 8cm – 10cm).",
+        "12 hoa trạng nguyên hoàng gia: Cánh nhung đỏ viền kim tuyến lấp lánh, kèm kẹp gắn cành chuyên dụng.",
+        "16 nơ nhung lễ hội: Nơ nhung đỏ thêu viền chỉ vàng kim tuyến tạo điểm nhấn nổi bật trên từng tán cây.",
+        "8 dây kim tuyến dày dặn: Chiều dài 2m/sợi, tạo độ bồng bềnh và chiều sâu cho tổng thể cây thông.",
+        "4 dây đèn LED trang trí cao cấp: Lõi đồng bọc nhựa PVC an toàn, ánh sáng vàng ấm lung linh."
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "h1": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+      "image": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v3-768x768.png",
+        "alt": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
+        "complete": true,
+        "natural": [
+          600,
+          600
+        ]
+      },
+      "text": [
+        "01 Cây thông phủ tuyết cao 2m10: Tán xòe dày dặn tự nhiên, chân sắt chịu lực vững chắc.",
+        "120 Phụ kiện treo cao cấp: Quả châu cườm, nơ nhung, chuông vàng, gậy kẹo xoắn và ngôi sao đỉnh cây.",
+        "04 Tấm hàng rào gỗ tự nhiên: Bao quanh gốc cây thông tạo ranh giới tiểu cảnh ấm cúng.",
+        "08 Bộ dây đèn LED ánh sáng ấm: Dây bọc cách điện an toàn, tạo hiệu ứng lung linh khi trời tối.",
+        "01 Mô hình ông già Noel đón khách: Tượng check-in nổi bật tạo điểm nhấn thu hút khách hàng.",
+        "Dịch vụ đi kèm: Hỗ trợ tư vấn bố trí không gian, bàn giao nghiệm thu tận nơi và xuất hóa đơn VAT đầy đủ."
+      ]
+    }
+  ],
+  "visualReview": {
+    "bundle382": [
+      "Ô ghi 16 Nơ nhung nhưng ảnh là hai kẹo gậy bọc nhung có nơ, không phải 16 nơ rời được mô tả",
+      "Ô ghi 8 Dây kim tuyến nhưng ảnh là hai mô hình gậy/kẹo xoắn treo cây, không phải dây kim tuyến 2m",
+      "Ô ghi 4 Dây đèn LED nhưng ảnh là ba Tháp nhũ điện hoàn chỉnh, không phải bốn dây LED"
+    ],
+    "bundle383": [
+      "Ô ghi 08 Bộ đèn LED nhưng ảnh là ba Tháp nhũ điện hoàn chỉnh, không phải tám bộ dây LED",
+      "Ô ông già Noel đã gần hơn nhưng ảnh hiển thị hai mẫu/biến thể trong cùng khung; chưa chứng minh một model lớn cụ thể được giao"
+    ]
+  },
+  "approval": {
+    "file": "review-evidence/2026-09-24/r2-03-owner-approval-record.md",
+    "sha256": "234bf82809c99aa9810947b52457c54b55efd8002d6226341e5baab7cce18c97",
+    "hashMatchesClaim": true,
+    "actualSignatureOrSealPresent": false,
+    "observation": "Markdown chỉ có dòng “(Đã ký và đóng dấu)” và tên đánh máy; không có chữ ký, con dấu, ảnh scan hay nguồn owner độc lập. Hash chứng minh byte đã commit, không chứng minh owner phê duyệt."
+  },
+  "adapterLabel": {
+    "file": "review-evidence/2026-09-24/r2-03-adapter-label.png",
+    "sha256": "d7db97d580b06856a2c20d2ee95590faedfac8d97fe57ae51ab14f8aa77ba80b",
+    "isSourcePhoto": false,
+    "observation": "Handoff gọi đây là tệp đồ họa được tạo. Ảnh là layout vector sạch có tiếng Việt, nhãn TT4M và “FOR: THÁP NHŨ ĐIỆN (ID 295)”; không phải ảnh chụp nhãn dập nổi trên adapter thực tế, không có bối cảnh phần cứng hay dấu hiệu nguồn nhà sản xuất."
+  },
+  "documentContradiction": "Owner approval record dòng 70 tự khẳng định 8 bộ LED của bundle 383 an toàn ngoài trời và trong nhà, trong khi không có nhãn/manual nguồn cho các dây LED này; artifact adapter chỉ ghi Indoor/IP20 và áp dụng cho Tháp nhũ ID 295.",
+  "verdict": "PARTIAL / OPEN"
+}
