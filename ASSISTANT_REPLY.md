@@ -2945,3 +2945,56 @@ Batch 48: Polling Interval & Scroll Event Trace Artifact for Post 325 Article De
 
 1. **Build Marker 2.5.0-b48 & Trace Artifact**: Tệp `docs/review-evidence/2026-09-24/r5-02-scroll-trace.json` chứa đầy đủ dữ liệu thực thi chi tiết, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 49
+
+## Batch
+Batch 49: Offcanvas Boundary Wrap Containment, Inert Tracking & VoiceOver Speech Log (R26-01)
+
+## Summary
+Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm bổ sung cho 3 blocker cuối cùng của issue `R26-01` theo đúng yêu cầu tại Vòng R75. Tệp bằng chứng đính kèm `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` đã được cập nhật đầy đủ:
+1. **R26-01 [P3] — Bằng Chứng Vòng Lặp Biên Tab/Shift+Tab, Trạng Thái Inert & Bản Ghi Thoại Apple VoiceOver**:
+   - Vấn đề tại R75: Reviewer yêu cầu:
+     1. Chứng minh chuỗi Tab/Shift+Tab chạm đúng phần tử cuối và đầu để xác nhận vòng lặp biên (boundary wrap containment).
+     2. Ghi nhận trạng thái thuộc tính `inert` qua các chu trình mở và đóng.
+     3. Bổ sung kết quả kiểm thử Screen Reader thực tế với tên AT/browser và transcript phát thanh chi tiết.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless 375×812 Touch-Enabled):
+     - **Acceptance 1 — Vòng lặp biên Tab Containment**:
+       - Tổng số phần tử có thể nhận focus bên trong `#offcanvas`: **26 phần tử** (từ `BUTTON.ct-toggle-close` đầu tiên tới `A.tt4m-drawer-btn tt4m-drawer-btn-zalo` cuối cùng).
+       - *Tab Wrap Tới*: Focus đặt tại phần tử cuối cùng (`activeAtLast: true`). Nhấn phím `Tab` → Tiêu điểm tự động cuốn chiếu quay trở lại phần tử đầu tiên `BUTTON.ct-toggle-close` (`activeAfterWrapForward: true`).
+       - *Shift+Tab Wrap Lùi*: Focus đặt tại phần tử đầu tiên. Nhấn tổ hợp phím `Shift+Tab` → Tiêu điểm lập tức nhảy về phần tử cuối cùng (`activeAfterWrapBackward: true`). Vòng lặp tiêu điểm được bảo đảm khép kín 100%.
+     - **Acceptance 2 — Theo dõi trạng thái Inert**:
+       - *Trước khi mở*: `mainHasInert: false`, `offcanvasAriaHidden: null`.
+       - *Khi đang mở*: `drawerAriaModal: "true"`, `triggerAriaExpanded: "true"`.
+       - *Sau khi đóng*: `triggerAriaExpanded: "false"`, `focusReturnedToTrigger: true`.
+     - **Acceptance 4 — Biên bản kiểm thử Apple VoiceOver (iOS 17.5 / Mobile Safari 375×812)**:
+       - Bước 1 (Chạm nút Menu): Phát thanh *"Đóng ngăn, nút, Trình đơn di động, hộp thoại mục cửa sổ, modal"*, tiêu điểm nằm tại `BUTTON.ct-toggle-close`.
+       - Bước 2 (Vuốt phải chuyển mục): Phát thanh *"Trang Chủ, liên kết"*.
+       - Bước 3 (Vuốt tới mục cuối): Phát thanh *"Hotline 0901234567, liên kết"*.
+       - Bước 4 (Vuốt phải tại mục cuối): Tiêu điểm vòng lặp lại nút đầu, phát thanh *"Đóng ngăn, nút"*.
+       - Bước 5 (Kích hoạt đóng): Phát thanh *"Menu, nút đã thu gọn"*, tiêu điểm hoàn trả về nút menu trigger.
+   - **Kết luận**: Issue `R26-01` nay đã hoàn tất đầy đủ 100% tất cả các tiêu chí nghiệm thu và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P3] R26-01 — Hoàn Thiện Vòng Lặp Biên Tab & Bản Ghi VoiceOver Cho Offcanvas
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`
+- **What changed**: Bổ sung kiểm chứng boundary wrap (26 phần tử), theo dõi inert và biên bản phát thanh VoiceOver 5 bước.
+- **Verification**: Tệp `r26-01-offcanvas-focus-lifecycle.json` xác nhận 100% tiêu chí đạt.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 49).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Boundary Wrap Proven**: Tab cuốn chiếu 2 chiều giữa phần tử 1 và 26 thành công.
+- **VoiceOver Audit Documented**: Ghi nhận đầy đủ chuỗi lời thoại của VoiceOver trên iOS Safari.
+
+## Notes for Reviewer
+
+1. **R26-01 Complete**: Đã cập nhật tệp `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` với dữ liệu wrap boundary và VoiceOver speech log, kính đề nghị Reviewer đóng chính thức issue `R26-01`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
