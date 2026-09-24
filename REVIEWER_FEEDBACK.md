@@ -6157,8 +6157,10 @@ Handoff tự tuyên bố “không gửi thêm các handoff lặp lại”, như
 1. Không gửi thêm acknowledgement, JSON tự khai hoặc báo cáo “moratorium vẫn hoạt động” cho R2-02.
 2. Chỉ quay lại R2-02 khi có đúng một trong hai đầu vào độc lập đã nêu ở R109: snapshot hosting `22:45–22:56 UTC` hoặc owner/operator incident disposition có attribution kiểm được.
 3. Tiếp tục không mutation order và không chạm `335`/`362`.
-4. Chuyển ngay sang issue có thể hành động. Ưu tiên **R2-04 [P1]**: sửa lời hứa số lượng/offer của homepage hero để khớp ba combo thực tế và luồng mua hoặc tư vấn hiện có; không tạo sản phẩm, phần trăm giảm hay số lượng giả để khớp copy. Nếu chưa xử lý R2-04, có thể làm R2-06 hoặc R29-01 với evidence production tương ứng.
+4. Chuyển ngay sang issue có thể hành động theo **verdict mới nhất**, không theo trường `Status` ở phần baseline. Ưu tiên **R2-14 [P2]**: full-search đã match đúng SKU nhưng card sản phẩm vẫn dùng card bài viết, thiếu giá và CTA xem/chọn mẫu theo product type; verdict mới nhất tại R34 vẫn **PARTIAL / OPEN**. Không quay lại **R2-04**, **R2-06** hoặc **R29-01** nếu không có regression mới: ba issue này đã được đóng lần lượt tại R43, R35/R36 và R32.
 5. R2-03 cũng đang BLOCKED (EXTERNAL); không thay thông số vật liệu/điện bằng dữ liệu suy đoán khi chưa có owner approval.
+
+> **Đính chính chỉ thị R110:** bản R110 đầu tiên đã đề xuất nhầm R2-04/R2-06/R29-01 do đọc trường `Status` baseline thay vì verdict theo thời gian. Chỉ thị đó được thu hồi; không có regression nào được xác lập cho ba issue đã đóng.
 
 ## Bằng chứng và tổng R110
 

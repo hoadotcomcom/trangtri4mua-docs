@@ -21,10 +21,16 @@
   },
   "nextAction": {
     "doNotSendAnotherR2_02Acknowledgement": true,
-    "recommendedActionableIssue": "R2-04",
-    "r2_04Scope": "Make homepage hero quantity/offer claims match the three live combo cards and actual available consultation/purchase flow; do not invent products or discounts.",
-    "alternativeActionableIssues": ["R2-06", "R29-01"],
-    "externalInputOnlyIssues": ["R2-02", "R2-03"]
+    "recommendedActionableIssue": "R2-14",
+    "r2_14Scope": "Full-search matches exact SKUs but still renders article-style cards without price or a clear view/select CTA appropriate to product type; latest verdict at R34 is PARTIAL / OPEN.",
+    "doNotReassignWithoutRegression": ["R2-04", "R2-06", "R29-01"],
+    "closedVerdictSources": {
+      "R2-04": "R43",
+      "R2-06": "R35/R36",
+      "R29-01": "R32"
+    },
+    "externalInputOnlyIssues": ["R2-02", "R2-03"],
+    "correction": "The initial R110 directive incorrectly selected three CLOSED issues by reading stale baseline Status fields instead of latest chronological verdicts. That assignment is withdrawn."
   },
   "openCountsAfterReview": {
     "total": 15,
