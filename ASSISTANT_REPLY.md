@@ -3821,3 +3821,64 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-03 Complete**: Cả hai yêu cầu về ảnh composite trung thực (không gán nhãn sai) và giữ thông số kỹ thuật ở mức quy chuẩn vận hành an toàn nội bộ (không khẳng định nguồn bên ngoài) đã được thực hiện triệt để. Kính đề nghị Reviewer đóng chính thức issue `R2-03`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 64
+
+## Summary
+
+1. **R2-03 [P1] — Khắc Phục Triệt Để Rò Rỉ Ghi Chú 12V, Gỡ Giá Trị Điện Chưa Duyệt & Chuẩn Hóa Nhãn Cận Cảnh Cành PE**:
+   - Vấn đề tại R92: Reviewer kiểm tra trực tiếp và chỉ ra 3 điểm cụ thể:
+     1. **Rò rỉ ghi chú 12V**: Ghi chú chứa cụm từ *"định mức điện áp 12V DC"* xuất hiện toàn cục trên cả 6 PDP, bao gồm cả sản phẩm không dùng điện như Quả châu và Lính đánh trống.
+     2. **Giá trị điện chưa được phê duyệt**: Hướng dẫn của Reviewer: *"bỏ các giá trị điện chưa được duyệt khỏi live thay vì đổi tên chúng thành quy chuẩn"*.
+     3. **Nhãn ô cây 2m10 của ID 383**: Ảnh `canh-thong-pe.webp` là ảnh cận cảnh một cành thông nhỏ, việc ghi *"01 CÂY 2M10 / Thông Phủ Tuyết Chân Sắt"* gây hiểu nhầm cành nhỏ là toàn bộ cây 2m10. Reviewer hướng dẫn: *"Có thể dùng ảnh này như ảnh cận vật liệu/cành PE nếu ghi đúng vai trò; không được gắn nó làm ảnh định danh chính xác cho một cây 2m10"*.
+     4. **Xóa claim ngoài trời**: Bỏ hoàn toàn claim đèn ngoài trời ở ID 383.
+   - Giải pháp kỹ thuật triệt để:
+     1. **Sửa nhãn ô ảnh ID 383 thành đúng bản chất**:
+        - Trong ảnh composite v5 của ID 383:
+          - Đổi nhãn ô đầu tiên thành: `CẬN CẢNH VẬT LIỆU` / `Cành Lá Thông PE Phủ Tuyết`.
+          - Người mua nhận diện rõ ràng đây là hình chụp cận cảnh chất liệu cành lá PE đúc dày dặn, không gây hiểu lầm là toàn bộ cây thông.
+          - Quy cách cây thông 2m10 chân sắt chịu lực được kê chi tiết trong bảng danh mục BOM bên dưới.
+        - Đăng ký và gắn Attachment ID **457** (`goi-trang-tri-cafe-b2b-v5.png`).
+     2. **Phân tách logic Footnote theo từng SKU (Zero 12V Leakage)**:
+        - Trong file `wp-content/themes/blocksy-child/inc/pdp-features.php`:
+          - Với sản phẩm dùng điện (ID 295): Hiển thị ghi chú hướng dẫn an toàn đèn LED trong nhà.
+          - Với sản phẩm không dùng điện (ID 279, 294, 381, 382, 383): Hiển thị ghi chú quy chuẩn chất lượng kích thước, chất liệu, đóng gói trung tính. **Hoàn toàn không có từ "12V" hay "điện áp"**.
+     3. **Gỡ bỏ hoàn toàn các giá trị điện chưa được duyệt khỏi live**:
+        - Gỡ bỏ 2 hàng `Điện áp hoạt động` (12V DC) và `Công suất tiêu thụ` (15W–25W) khỏi bảng thông số kỹ thuật của Tháp nhũ điện (ID 295).
+        - Bảng thông số của Tháp nhũ chỉ công bố các trường vật lý xác thực: Kích thước (1m2, 1m5, 1m8), Chất liệu (Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm), Phạm vi sử dụng (Trong nhà / hiên có mái che), Xuất xứ và Quy cách đóng gói.
+     4. **Xóa bỏ triệt để từ "ngoài trời" ở ID 383**:
+        - Trong `pdp-features.php` dòng 433, sửa thuộc tính chất liệu của ID 383 thành: *"Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn LED ánh sáng ấm"*. Không còn bất kỳ chữ "ngoài trời" nào.
+     5. Cập nhật tệp `docs/review-evidence/2026-09-24/r2-03-specs-provenance-audit.json`.
+   - **Kết luận**: Toàn bộ 4 yêu cầu tại Round R92 đã được thực hiện triệt để và kiểm chứng trên live, sẵn sàng để **ĐÓNG (CLOSED)** issue `R2-03`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-03 — Differentiated Footnotes, Removal of Unapproved Electrical Rows & Accurate Material Labeling
+- **Status**: FIXED
+- **Files changed**:
+  - `wp-content/themes/blocksy-child/inc/pdp-features.php`
+  - `docs/review-evidence/2026-09-24/r2-03-specs-provenance-audit.json`
+- **What changed**:
+  - Sửa nhãn ô đầu tiên ảnh ID 383 thành "CẬN CẢNH VẬT LIỆU / Cành Lá Thông PE Phủ Tuyết", gắn Attachment ID 457.
+  - Phân tách footnote PDP: Không còn chữ "12V" trên các sản phẩm không dùng điện.
+  - Gỡ bỏ hoàn toàn 2 hàng điện áp 12V DC và công suất 15W-25W khỏi bảng thông số Tháp nhũ.
+  - Xóa bỏ từ "ngoài trời" khỏi thuộc tính chất liệu của ID 383.
+- **Verification**: Trực tiếp duyệt 6 PDP live bằng Chromium headless, xác nhận 0/5 sản phẩm không dùng điện có chữ 12V, Tháp nhũ không còn hàng điện áp/công suất chưa duyệt, ID 383 hiển thị ảnh v5 chuẩn.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 64).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Zero 12V Leakage**: 5/5 PDP không dùng điện (279, 294, 381, 382, 383) đều nhận footnote quy chuẩn chất lượng trung tính, `has12vInFootnote = false`.
+- **Clean Specs Table**: Tháp nhũ điện (ID 295) không còn hàng điện áp/công suất chưa duyệt.
+- **Clean Material String**: ID 383 chỉ ghi đèn LED ánh sáng ấm, không có chữ ngoài trời.
+- **Live Image Check**: ID 383 tải Attachment 457 (`goi-trang-tri-cafe-b2b-v5-600x600.png`) với nhãn "CẬN CẢNH VẬT LIỆU".
+
+## Notes for Reviewer
+
+1. **R2-03 Complete**: Cả 4 điểm tại R92 đã được khắc phục triệt để và đối chiếu trực tiếp trên live PDP. Kính đề nghị Reviewer đóng chính thức issue `R2-03`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
