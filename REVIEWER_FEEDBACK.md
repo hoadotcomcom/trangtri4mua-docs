@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R41 — nghiệm thu độc lập Batch 10](#round-r41), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **28 OPEN — 8 P1, 14 P2, 6 P3**. R41 đóng R4-01 và R2-20; R2-10, R2-04 và R2-22 giữ OPEN vì nội dung production còn tái hiện acceptance chưa đạt.
+> **Trạng thái hiện hành:** xem [Vòng R42 — nghiệm thu độc lập Batch 11–12](#round-r42), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **28 OPEN — 8 P1, 14 P2, 6 P3**. R42 không đóng issue: 6/6 claim chỉ PARTIAL hoặc FAIL trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -3519,3 +3519,121 @@ Các quote/tên riêng vẫn không có nguồn, ngày, consent, link hoặc ng�
 - [JSON Batch 10](review-evidence/2026-09-24/r41-batch-10-verification.json).
 - Không tạo đơn, không submit checkout/form, không gọi/Zalo. Toàn bộ sản phẩm test đã xóa; giỏ cuối vòng **0₫ / 0**; 7 browser tab đã đóng.
 - Đóng **1 P1 + 1 P2**, không thêm issue. Tổng mới: **28 OPEN — 8 P1, 14 P2, 6 P3**.
+
+---
+
+<a id="round-r42"></a>
+
+# Vòng R42 — Nghiệm thu độc lập Batch 11–12
+
+Đã kiểm 6 claim trên production bằng redirect HTTP và Chromium mobile/desktop. **Không issue nào đủ acceptance để đóng.** Hai bản sửa có lỗi runtime nhìn thấy trực tiếp: gallery Nutcracker vỡ layout, search empty notice vẫn bị ẩn; tabs giữ ARIA orientation cũ sau resize.
+
+## Ma trận verdict R42
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R21-01 | FAIL | OPEN | `contain` đã áp dụng nhưng gallery chính/thumbnail vỡ kích thước ở cả mobile và desktop |
+| R21-02 | FAIL | OPEN | Control có role/tabindex nhưng Space không chọn ảnh 3; không có state chọn/screen-reader proof |
+| R17-01 | PARTIAL | OPEN | Sort/UTM giữ đúng; implementation chuyển tiếp mù cả key hành động/token/redirect |
+| R25-01 | PARTIAL | OPEN | Race chính không tái hiện; chưa đủ input mode và staging proof của CTA ID rỗng |
+| R24-01 | FAIL | OPEN | Initial load đúng, nhưng resize desktop→mobile để ARIA horizontal trong layout vertical |
+| R11-01 | FAIL | OPEN | Empty notice tồn tại nhưng `display:none` sau response rỗng |
+
+## R21-01 — object-fit đúng, gallery layout không đạt
+
+`object-fit: contain` đã xuất hiện trên ba ảnh thuộc `.flexy-items`. Tuy nhiên layout live không còn khung ảnh chính ổn định.
+
+Mobile 375px:
+
+- container gallery: **328 × 1.082,52px**;
+- ba main flex item cùng nằm một hàng, rộng khoảng **101,34px** mỗi item;
+- item 2 và 3 cao **1px**; item 1 chỉ **135,13px**;
+- ba thumbnail pill bị phóng thành **299 × 299px** và xếp dọc, chiếm gần 900px.
+
+Desktop 1440px:
+
+- gallery cao **2.098,73px**;
+- ba main item rộng khoảng **199,68px**, item 2/3 cao **1px**;
+- ba pill bị phóng thành **594,03 × 594,03px**, xếp dọc.
+
+Như vậy bản sửa bỏ crop nhưng làm hỏng chính acceptance 1/3: người mua không có một ảnh chính đủ kích thước, gallery không giữ không gian ổn định và thumbnail biến thành khối ảnh lớn. R21-01 giữ **FAIL / OPEN**.
+
+## R21-02 — semantics có, interaction chưa đạt
+
+Live DOM có 5 span `role=button`, `tabindex=0` và nhãn:
+
+- `Xem ảnh sản phẩm trước`;
+- `Xem ảnh sản phẩm kế tiếp`;
+- `Xem ảnh mẫu 1/2/3`.
+
+Nhưng:
+
+- Space trên control `Xem ảnh mẫu 3` giữ focus ở control nhưng active pill vẫn là **1**;
+- main item/transform không đổi;
+- các control không công bố `aria-selected` hoặc `aria-pressed`;
+- gallery layout đang vỡ như R21-01;
+- không có screen-reader proof theo acceptance 3.
+
+Chỉ thêm role/tabindex không đủ nếu activation không đổi ảnh và trạng thái chọn không nhận biết được. R21-02 giữ **FAIL / OPEN**.
+
+## R17-01 — positive query pass, allowlist fail
+
+Phần đạt:
+
+- `/shop/?orderby=price-desc` → 301 `/cua-hang/?orderby=price-desc`;
+- cả 5 alias giữ `utm_source=review_audit&utm_medium=referral`;
+- host/pathname đúng, không vòng lặp trong mẫu.
+
+Phần không đạt:
+
+`/shop/?redirect_to=https%3A%2F%2Fevil.example%2Fx&add-to-cart=298&nonce=abc`
+
+trả:
+
+`Location: https://trangtri4mua.com/cua-hang/?redirect_to=...&add-to-cart=298&nonce=abc`
+
+Reviewer không follow URL này để tránh tác dụng phụ. Việc đưa nguyên `add-to-cart`, `nonce` và client-supplied `redirect_to` vào Location chứng minh implementation đang sao chép mù toàn bộ query, trái acceptance 3 và khuyến nghị allowlist. R17-01 giữ **PARTIAL / OPEN**.
+
+## R25-01 — core race cải thiện, chưa đủ acceptance
+
+Các phép DOM production không tạo request mua:
+
+- 1m8 → 150ms → reset → chờ 1,3s: select/variation ID rỗng, panel `display:none`, CTA giữ `disabled wc-variation-selection-needed`.
+- 1m2 → 90ms → 1m8 → 180ms → reset → chờ 1,3s: cùng trạng thái rỗng/ẩn/khóa.
+- Chọn ổn định: 1m2 → ID 296 / 550.000₫; 1m5 → ID 297 / 755.000₫; 1m8 → ID 298 / 895.000₫.
+- Reset cuối: text cũ còn trong node ẩn, nhưng panel vẫn `display:none`, ID rỗng và CTA giữ class cần chọn; không tính node ẩn là tái hiện lỗi.
+
+Core stale-render đã được xử lý đúng. Tuy nhiên Batch chỉ chứng minh một script case; acceptance còn yêu cầu mouse/touch/Enter, reset–reselect/quantity đầy đủ trên desktop/mobile và staging an toàn xác nhận mọi CTA không gửi ID rỗng. Reviewer không dùng production để cố submit ID rỗng thay staging. R25-01 giữ **PARTIAL / OPEN**.
+
+## R24-01 — resize làm ARIA orientation lệch layout
+
+Initial load đạt:
+
+- 375px: `aria-orientation=vertical`;
+- 1440px: `aria-orientation=horizontal`;
+- Space trên tab Thông số đổi `aria-selected` đúng, chỉ panel Thông số hiện, không cuộn trang.
+
+Nhưng khi resize cùng page từ desktop xuống 375px và chờ 1,2 giây:
+
+- CSS: `flex-direction: column`;
+- ARIA: vẫn `aria-orientation=horizontal`.
+
+Do đó tiêu chí “resize qua breakpoint không để hướng ARIA cũ” tái hiện thất bại. Batch cũng chưa có screen-reader proof. R24-01 giữ **FAIL / OPEN**.
+
+## R11-01 — notice vẫn không nhìn thấy
+
+Mở search modal desktop, query `zzreviewnomatch20260924`, chờ 4,2 giây:
+
+- input giữ focus và query;
+- live search hoàn tất: `role=status` có `Không có kết quả`;
+- 0 link gợi ý nhìn thấy;
+- `.tt4m-search-empty-notice` tồn tại với đúng text mong muốn nhưng inline/computed style vẫn **`display: none`**.
+
+Response rỗng đã tới DOM nhưng notice không đổi sang visible. Acceptance 1 fail; R11-01 giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R42
+
+- [JSON Batch 11–12](review-evidence/2026-09-24/r42-batches-11-12-verification.json).
+- Không follow URL có `add-to-cart`, không thêm giỏ, tạo đơn, submit form hoặc liên hệ ngoài; 5 browser tab đã đóng.
+- Không thêm issue riêng: gallery layout là regression trực tiếp trong acceptance R21-01/R21-02; orientation/notice thuộc đúng R24-01/R11-01.
+- Tổng giữ **28 OPEN — 8 P1, 14 P2, 6 P3**.

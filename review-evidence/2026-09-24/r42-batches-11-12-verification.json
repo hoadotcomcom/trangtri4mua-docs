@@ -1,0 +1,530 @@
+{
+  "round": "R42",
+  "date": "2026-09-24",
+  "handoffs": [
+    "Batch 11",
+    "Batch 12"
+  ],
+  "verdicts": {
+    "R21-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "mobile": {
+        "dom": {
+          "viewport": {
+            "w": 375,
+            "h": 812
+          },
+          "images": [
+            {
+              "n": 1,
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-1-600x594.webp",
+              "natural": {
+                "w": 375,
+                "h": 371
+              },
+              "box": {
+                "w": 101.34375,
+                "h": 135.125
+              },
+              "fit": "contain",
+              "ratio": "3 / 4"
+            },
+            {
+              "n": 2,
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-2-254x300.webp",
+              "natural": {
+                "w": 99,
+                "h": 116
+              },
+              "box": {
+                "w": 101.328125,
+                "h": 135.09375
+              },
+              "fit": "contain",
+              "ratio": "3 / 4"
+            },
+            {
+              "n": 3,
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-chi-nutcracker-3-133x300.webp",
+              "natural": {
+                "w": 99,
+                "h": 223
+              },
+              "box": {
+                "w": 101.328125,
+                "h": 135.09375
+              },
+              "fit": "contain",
+              "ratio": "3 / 4"
+            }
+          ],
+          "controls": [
+            {
+              "tag": "SPAN",
+              "cls": "flexy-arrow-prev",
+              "label": "Xem ảnh sản phẩm trước",
+              "tabIndex": 0,
+              "selected": null,
+              "pressed": null
+            },
+            {
+              "tag": "SPAN",
+              "cls": "flexy-arrow-next",
+              "label": "Xem ảnh sản phẩm kế tiếp",
+              "tabIndex": 0,
+              "selected": null,
+              "pressed": null
+            },
+            {
+              "tag": "SPAN",
+              "cls": "ct-media-container",
+              "label": "Xem ảnh mẫu 1",
+              "tabIndex": 0,
+              "selected": null,
+              "pressed": null
+            },
+            {
+              "tag": "SPAN",
+              "cls": "ct-media-container",
+              "label": "Xem ảnh mẫu 2",
+              "tabIndex": 0,
+              "selected": null,
+              "pressed": null
+            },
+            {
+              "tag": "SPAN",
+              "cls": "ct-media-container",
+              "label": "Xem ảnh mẫu 3",
+              "tabIndex": 0,
+              "selected": null,
+              "pressed": null
+            }
+          ],
+          "scrollWidth": 375
+        },
+        "layout": {
+          "gallery": {
+            "w": 328,
+            "h": 1082.515625
+          }
+        }
+      },
+      "mobileFresh": {
+        "gallery": {
+          "w": 328,
+          "h": 1082.515625
+        },
+        "items": [
+          {
+            "w": 101.34375,
+            "h": 135.125
+          },
+          {
+            "w": 101.328125,
+            "h": 1
+          },
+          {
+            "w": 101.328125,
+            "h": 1
+          }
+        ],
+        "pills": [
+          {
+            "w": 299,
+            "h": 299
+          },
+          {
+            "w": 299,
+            "h": 299
+          },
+          {
+            "w": 299,
+            "h": 299
+          }
+        ]
+      },
+      "desktop": {
+        "w": 1440,
+        "gallery": {
+          "x": 76,
+          "y": 280.046875,
+          "width": 623.03125,
+          "height": 2098.734375,
+          "top": 280.046875,
+          "right": 699.03125,
+          "bottom": 2378.78125,
+          "left": 76
+        },
+        "items": [
+          {
+            "x": 78,
+            "y": 290.046875,
+            "width": 199.6875,
+            "height": 266.25,
+            "top": 290.046875,
+            "right": 277.6875,
+            "bottom": 556.296875,
+            "left": 78
+          },
+          {
+            "x": 287.6875,
+            "y": 290.046875,
+            "width": 199.671875,
+            "height": 1,
+            "top": 290.046875,
+            "right": 487.359375,
+            "bottom": 291.046875,
+            "left": 287.6875
+          },
+          {
+            "x": 497.359375,
+            "y": 290.046875,
+            "width": 199.671875,
+            "height": 1,
+            "top": 290.046875,
+            "right": 697.03125,
+            "bottom": 291.046875,
+            "left": 497.359375
+          }
+        ],
+        "pills": [
+          {
+            "x": 110.5,
+            "y": 594.6875,
+            "width": 594.03125,
+            "height": 594.03125,
+            "top": 594.6875,
+            "right": 704.53125,
+            "bottom": 1188.71875,
+            "left": 110.5
+          },
+          {
+            "x": 110.5,
+            "y": 1188.71875,
+            "width": 594.03125,
+            "height": 594.03125,
+            "top": 1188.71875,
+            "right": 704.53125,
+            "bottom": 1782.75,
+            "left": 110.5
+          },
+          {
+            "x": 110.5,
+            "y": 1782.75,
+            "width": 594.03125,
+            "height": 594.03125,
+            "top": 1782.75,
+            "right": 704.53125,
+            "bottom": 2376.78125,
+            "left": 110.5
+          }
+        ],
+        "controls": [
+          {
+            "label": "Xem ảnh sản phẩm trước",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh sản phẩm kế tiếp",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 1",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 2",
+            "tab": 0
+          },
+          {
+            "label": "Xem ảnh mẫu 3",
+            "tab": 0
+          }
+        ],
+        "scrollWidth": 1440
+      },
+      "blocker": "object-fit is contain, but the production gallery layout is broken: main flex items share one row at one-third width, inactive slides collapse to 1px, and thumbnail pills render as large stacked images. Acceptance 1 and 3 fail."
+    },
+    "R21-02": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "domControls": [
+        {
+          "tag": "SPAN",
+          "cls": "flexy-arrow-prev",
+          "label": "Xem ảnh sản phẩm trước",
+          "tabIndex": 0,
+          "selected": null,
+          "pressed": null
+        },
+        {
+          "tag": "SPAN",
+          "cls": "flexy-arrow-next",
+          "label": "Xem ảnh sản phẩm kế tiếp",
+          "tabIndex": 0,
+          "selected": null,
+          "pressed": null
+        },
+        {
+          "tag": "SPAN",
+          "cls": "ct-media-container",
+          "label": "Xem ảnh mẫu 1",
+          "tabIndex": 0,
+          "selected": null,
+          "pressed": null
+        },
+        {
+          "tag": "SPAN",
+          "cls": "ct-media-container",
+          "label": "Xem ảnh mẫu 2",
+          "tabIndex": 0,
+          "selected": null,
+          "pressed": null
+        },
+        {
+          "tag": "SPAN",
+          "cls": "ct-media-container",
+          "label": "Xem ảnh mẫu 3",
+          "tabIndex": 0,
+          "selected": null,
+          "pressed": null
+        }
+      ],
+      "keyboard": {
+        "activeElement": {
+          "tag": "SPAN",
+          "label": "Xem ảnh mẫu 3"
+        },
+        "activePill": 1,
+        "itemBoxes": [
+          {
+            "x": 25.5,
+            "y": 305.984375,
+            "w": 101.34375,
+            "h": 135.125
+          },
+          {
+            "x": 136.84375,
+            "y": 305.984375,
+            "w": 101.328125,
+            "h": 1
+          },
+          {
+            "x": 248.171875,
+            "y": 305.984375,
+            "w": 101.328125,
+            "h": 1
+          }
+        ],
+        "scrollY": 0
+      },
+      "blocker": "Controls enter AX as role=button, but Space on thumbnail 3 left active pill at 1; controls expose no selected/pressed state. No screen-reader proof."
+    },
+    "R17-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "redirects": [
+        {
+          "path": "/shop/?orderby=price-desc",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?orderby=price-desc"
+        },
+        {
+          "path": "/shop/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/cart/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/gio-hang/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/checkout/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/thanh-toan/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/cach-chon-size-cay-thong-noel/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/du-toan-chi-phi-trang-tri-noel/?utm_source=review_audit&utm_medium=referral",
+          "status": 301,
+          "location": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/?utm_source=review_audit&utm_medium=referral"
+        },
+        {
+          "path": "/shop/?redirect_to=https%3A%2F%2Fevil.example%2Fx&add-to-cart=298&nonce=abc",
+          "status": 301,
+          "location": "https://trangtri4mua.com/cua-hang/?redirect_to=https%3A%2F%2Fevil.example%2Fx&add-to-cart=298&nonce=abc"
+        }
+      ],
+      "blocker": "Sort and UTM preservation pass. Implementation blindly forwards redirect_to, add-to-cart and nonce into the target Location, violating the allowlist/no-action acceptance."
+    },
+    "R25-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "fastReset": {
+        "selected": "",
+        "id": "",
+        "panelDisplay": "none",
+        "panelText": "",
+        "disabled": false,
+        "classes": "single_add_to_cart_button button alt disabled wc-variation-selection-needed"
+      },
+      "sequences": {
+        "rapidReset": {
+          "selected": "",
+          "id": "",
+          "panelDisplay": "none",
+          "panelText": "",
+          "classes": "single_add_to_cart_button button alt disabled wc-variation-selection-needed"
+        },
+        "stable": [
+          {
+            "selected": "1m2",
+            "id": "296",
+            "panelDisplay": "none",
+            "panelText": "550.000 ₫",
+            "classes": "single_add_to_cart_button button alt"
+          },
+          {
+            "selected": "5",
+            "id": "297",
+            "panelDisplay": "none",
+            "panelText": "755.000 ₫",
+            "classes": "single_add_to_cart_button button alt"
+          },
+          {
+            "selected": "8",
+            "id": "298",
+            "panelDisplay": "none",
+            "panelText": "895.000 ₫",
+            "classes": "single_add_to_cart_button button alt"
+          }
+        ],
+        "final": {
+          "selected": "",
+          "id": "",
+          "panelDisplay": "none",
+          "panelText": "895.000 ₫",
+          "classes": "single_add_to_cart_button button alt disabled wc-variation-selection-needed"
+        }
+      },
+      "blocker": "Core stale-render race did not reproduce and stable IDs/prices are correct. Acceptance still requires real mouse/touch/Enter coverage and safe staging proof that empty-ID CTAs cannot submit; Batch supplied only one Chromium script case."
+    },
+    "R24-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "mobileInitial": {
+        "before": {
+          "w": 375,
+          "orientation": "vertical",
+          "y": 0,
+          "selected": [
+            {
+              "text": "MÔ TẢ CHI TIẾT",
+              "selected": "true"
+            },
+            {
+              "text": "THÔNG SỐ KỸ THUẬT",
+              "selected": "false"
+            },
+            {
+              "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+              "selected": "false"
+            }
+          ]
+        },
+        "after": {
+          "orientation": "vertical",
+          "y": 0,
+          "active": "Thông số kỹ thuật sản phẩm\nKích thước\t1m2, 1m5, 1m8\nChất liệu\tKhung kim loại phủ nhũTháp nhũ đẹp nhất khi đặt đối xứng hai bên cổng hoặc cạnh cây thông chính làm phụ\nXuất xứ\tGia công tuyển chọn & Nhập khẩu chính ngạch\nQuy cách đóng gói\tThùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%",
+          "selected": [
+            {
+              "text": "MÔ TẢ CHI TIẾT",
+              "selected": "false"
+            },
+            {
+              "text": "THÔNG SỐ KỸ THUẬT",
+              "selected": "true"
+            },
+            {
+              "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+              "selected": "false"
+            }
+          ],
+          "visiblePanels": [
+            "tab-additional_information"
+          ]
+        }
+      },
+      "desktopInitial": {
+        "w": 1440,
+        "orientation": "horizontal",
+        "selected": [
+          {
+            "text": "MÔ TẢ CHI TIẾT",
+            "selected": "true"
+          },
+          {
+            "text": "THÔNG SỐ KỸ THUẬT",
+            "selected": "false"
+          },
+          {
+            "text": "ĐÁNH GIÁ & HỎI ĐÁP (0)",
+            "selected": "false"
+          }
+        ]
+      },
+      "resize": {
+        "w": 375,
+        "orientation": "horizontal",
+        "direction": "column"
+      },
+      "blocker": "Initial-load orientation and Space activation pass. Resizing desktop to 375px leaves aria-orientation=horizontal while CSS flex-direction is column after 1.2s, so acceptance 1 fails; no screen-reader proof."
+    },
+    "R11-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "emptyState": {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "input": "zzreviewnomatch20260924",
+        "notice": {
+          "display": "none",
+          "text": "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.",
+          "hidden": false
+        },
+        "statuses": [
+          {
+            "cls": "screen-reader-text",
+            "text": "Không có kết quả",
+            "display": "block"
+          }
+        ],
+        "links": [],
+        "active": {
+          "tag": "INPUT",
+          "cls": "modal-field"
+        }
+      },
+      "blocker": "After a successful empty live-search state (status text Không có kết quả, zero visible links), .tt4m-search-empty-notice remains display:none. Acceptance 1 fails."
+    }
+  },
+  "current_total": {
+    "open": 28,
+    "p1": 8,
+    "p2": 14,
+    "p3": 6,
+    "closed_in_round": 0,
+    "new_issues": 0
+  },
+  "safety": {
+    "cartChanged": false,
+    "orders": false,
+    "forms": false,
+    "browsersClosed": true
+  }
+}
