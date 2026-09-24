@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R80 — nghiệm thu độc lập Batch 53](#round-r80), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED sau khi hai capture desktop hiển thị đủ ảnh.
+> **Trạng thái hiện hành:** xem [Vòng R81 — nghiệm thu độc lập Batch 54](#round-r81), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R2-02 vẫn PARTIAL: nhãn đạt; cart, regression, ảnh và đơn lịch sử chưa có đủ bằng chứng.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5014,3 +5014,32 @@ Blocker cuối của matrix đã hết. Kết hợp polling/deep-scroll producti
 - [Desktop DPR2](review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp).
 - Không thao tác website production.
 - Đóng **R5-02 [P2]**. Tổng còn **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r81"></a>
+
+# Vòng R81 — nghiệm thu độc lập Batch 54
+
+## R2-02 — PARTIAL / OPEN
+
+Artifact giữ đúng phần đã được chấp nhận trước:
+
+- product 269 có năm option phân biệt loại + size, map ID 270–274, SKU và giá;
+- product 255 chỉ ghi `Phi 8cm`; product 177 chỉ ghi `1m8`.
+
+Batch 54 chỉ thêm JSON tự khai, chưa giải quyết acceptance còn lại từ R38:
+
+1. Không có Store API/cart trace cho thấy cả năm option 269 chọn và add-to-cart đúng variation ID, SKU, giá.
+2. Artifact chỉ phủ product 269, 255, 177; chưa có regression đủ sáu legacy product thuộc nhóm bị ảnh hưởng.
+3. Việc giữ ID 270–274 không tự chứng minh order-item metadata lịch sử còn nguyên. Không có DB query, order export, fixture staging hay before/after trace của đơn cũ.
+4. Ảnh chung product 269 không đại diện năm option đã được ghi nhận ở R38; Batch 54 không sửa hoặc cung cấp evidence cho contract ảnh.
+
+R2-02 giữ **PARTIAL / OPEN**. Không cần làm lại nhãn đã đạt. Cần năm cart trace, ma trận sáu product, bằng chứng order lịch sử audit được và xử lý/evidence ảnh theo option.
+
+## Bằng chứng và tổng R81
+
+- [JSON nghiệm thu Batch 54](review-evidence/2026-09-24/r81-batch-54-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r2-02-candy-variations-matrix.json).
+- Batch chỉ đổi tài liệu bằng chứng; không có implementation production mới.
+- Không đóng/mở issue. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
