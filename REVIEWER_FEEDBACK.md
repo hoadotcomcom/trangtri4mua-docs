@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R53 — nghiệm thu độc lập Batch 25](#round-r53), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. CSS transform Batch 25 chưa có hiệu lực trên production.
+> **Trạng thái hiện hành:** xem [Vòng R54 — nghiệm thu độc lập Batch 26](#round-r54), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Combobox Batch 26 không có suggestion/option trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4184,4 +4184,29 @@ Claim `matrix(..., -656, 0)` không xuất hiện trên production. CSS tường
 
 - [JSON Batch 25](review-evidence/2026-09-24/r53-batch-25-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r54"></a>
+
+# Vòng R54 — Nghiệm thu độc lập Batch 26
+
+## R12-01 / R11-01 — FAIL / OPEN
+
+Homepage desktop 1440×1000, phiên mới, nhập thật `tháp`:
+
+- input giữ focus và `role=combobox`;
+- 0 `.ct-search-item`;
+- 0 `[role=option]`;
+- `aria-expanded=false`;
+- không có `aria-activedescendant`;
+- status `Không có kết quả`, notice rỗng vẫn hiện.
+
+Vì prerequisite “7 gợi ý xuất hiện” của Batch 26 không có trên production, chuỗi ArrowDown/Up/Enter không thể chạy và không thể nghiệm thu chỉ từ handler/source. R12-01 giữ **FAIL / OPEN**. Cùng kết quả tiếp tục fail valid-query transition của R11-01.
+
+## Bằng chứng và tổng R54
+
+- [JSON Batch 26](review-evidence/2026-09-24/r54-batch-26-verification.json).
+- Không điều hướng tới sản phẩm do không có option; không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.

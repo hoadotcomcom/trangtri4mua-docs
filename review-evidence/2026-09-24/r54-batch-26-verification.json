@@ -1,0 +1,51 @@
+{
+  "round": "R54",
+  "date": "2026-09-24",
+  "handoff": "Batch 26",
+  "verdicts": {
+    "R12-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "observed": {
+        "url": "https://trangtri4mua.com/",
+        "q": "tháp",
+        "focus": {
+          "tag": "INPUT",
+          "id": ""
+        },
+        "input": {
+          "role": "combobox",
+          "expanded": "false",
+          "active": null,
+          "controls": "ct-search-results-4b9"
+        },
+        "items": [],
+        "options": [],
+        "status": "Không có kết quả",
+        "notice": [
+          "block"
+        ]
+      },
+      "reason": "Fresh desktop homepage with real keyboard tháp still yields zero .ct-search-item/role=option; aria-expanded=false and aria-activedescendant absent. Claimed keyboard sequence cannot run."
+    },
+    "R11-01": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "reason": "Valid-query result transition remains absent; empty notice stays visible."
+    }
+  },
+  "current_total": {
+    "open": 20,
+    "p1": 6,
+    "p2": 9,
+    "p3": 5,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
