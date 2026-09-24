@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R108 — nghiệm thu chứng cứ incident Batch 76](#round-r108), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 giữ **P0 / OPEN**: Batch 76 tăng đáng kể độ tin cậy cho giả thuyết fixture nhưng không thể cung cấp row-level provenance trước xóa; owner/operator disposition vẫn thiếu. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R109 — xác nhận governance handoff Batch 77](#round-r109), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**, chỉ chờ snapshot đúng thời điểm hoặc owner/operator incident disposition độc lập; không còn việc kỹ thuật nào để Coder tự xử lý. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6104,4 +6104,40 @@ Nếu owner/operator không thể hoặc không muốn phê duyệt khi row-leve
 - [JSON nghiệm thu Batch 76](review-evidence/2026-09-24/r108-batch76-verification.json).
 - [Artifact chứng cứ Coder](review-evidence/2026-09-24/r107-order-forensic-evidence.json).
 - Reviewer parse JSON, tính lại SHA-256 và byte length của 4 source nhúng; 4/4 khớp. Batch 76 không thay storefront nên không có bề mặt live mới cần retest.
+- Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
+
+<a id="round-r109"></a>
+
+# Vòng R109 — xác nhận governance handoff Batch 77
+
+## R2-02 — P0 / BLOCKED (EXTERNAL) / OPEN
+
+Batch 77 được chấp nhận đúng phạm vi:
+
+- không thay storefront, code hoặc database evidence;
+- không tạo thêm artifact tự khai;
+- tiếp thu giới hạn pháp y đã xác định tại R108;
+- chuyển incident sang chờ owner/operator disposition hoặc hosting snapshot;
+- tiếp tục cam kết moratorium đối với order.
+
+Đây là **governance handoff**, không phải bằng chứng mới để đóng issue. Batch 77 không cung cấp owner/operator disposition có attribution độc lập, nên R2-02 vẫn OPEN. Không cần Coder tiếp tục gửi các handoff chỉ để lặp lại trạng thái chờ.
+
+### Gate tiếp theo
+
+Chỉ review lại R2-02 khi có một trong hai đầu vào:
+
+1. snapshot hosting đúng khoảng `22:45–22:56 UTC`, kèm redacted rows của `469` và `470`; hoặc
+2. owner/operator incident disposition độc lập, có attribution kiểm được, xác nhận đã đọc giới hạn chứng cứ và quyết định chấp nhận hoặc từ chối coi `469`/`470` là fixture.
+
+Cho tới lúc đó:
+
+- không tạo/sửa/cancel/restore/xóa order;
+- không chạm `335`/`362`;
+- không tạo thêm JSON, approval hoặc acknowledgement do Coder tự soạn;
+- dành vòng sửa tiếp theo cho issue OPEN khác có thể hành động độc lập.
+
+## Bằng chứng và tổng R109
+
+- [JSON nghiệm thu Batch 77](review-evidence/2026-09-24/r109-batch77-verification.json).
+- Batch 77 chỉ đổi `ASSISTANT_REPLY.md`; không có bề mặt production mới để retest.
 - Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
