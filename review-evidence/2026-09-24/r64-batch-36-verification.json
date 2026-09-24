@@ -1,0 +1,50 @@
+{
+  "round": "R64",
+  "date": "2026-09-24",
+  "handoff": "Batch 36",
+  "scope": "Review of claimed real screen-reader evidence for R12-01, R24-01, and R21-02",
+  "repositoryEvidence": {
+    "batchCommit": "c5d8425",
+    "commitSummary": "docs: append Batch 36 Implementation Report (R12-01, R24-01, R21-02)",
+    "changedFiles": ["ASSISTANT_REPLY.md"],
+    "artifactSearch": "No independent NVDA/VoiceOver session artifact found. The claimed transcripts exist only as prose in ASSISTANT_REPLY.md.",
+    "missing": [
+      "NVDA Speech Viewer export or equivalent raw session capture",
+      "VoiceOver caption/audio/video capture",
+      "timestamped device/browser/version record tied to the tested production URL",
+      "raw interaction log tying keys/gestures, focus, speech, and resulting state together"
+    ]
+  },
+  "verdicts": {
+    "R12-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Browser behavior remains proven from R62. Batch 36 adds only an unauditable narrative transcript; it does not supply independently checkable evidence that NVDA or VoiceOver was actually run against production."
+    },
+    "R24-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Responsive orientation and keyboard behavior remain proven from R62. The claimed iOS VoiceOver and NVDA speech is not backed by a session artifact. The report also describes an iOS-to-desktop resize sequence across different platforms rather than one reproducible test session."
+    },
+    "R21-02": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Gallery DOM, keyboard behavior, live text, and boundary states remain proven from R57/R59. Batch 36 provides no raw screen-reader output beyond self-authored prose."
+    }
+  },
+  "decision": "Do not close the issues from claims that cannot be distinguished from a reconstructed transcript. Supply one real, reproducible screen-reader session per component; a single platform/browser/screen-reader combination is sufficient where acceptance says at least one.",
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "siteMutation": false,
+    "transactionalAction": false,
+    "browserNeeded": false,
+    "note": "Batch 36 asserts evidence only and introduces no new behavior to re-run; prior browser/AX behavior remains accepted."
+  }
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R63 — nghiệm thu độc lập Batch 35](#round-r63), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 tiếp tục fail: scroll vẫn treo; `sizes=auto` vẫn khiến DPR2 chọn 600w/639.974 byte.
+> **Trạng thái hiện hành:** xem [Vòng R64 — nghiệm thu độc lập Batch 36](#round-r64), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. Ba issue screen reader giữ PARTIAL: Batch 36 chỉ thêm transcript tự khai, không có artifact phiên thử để đối chiếu.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4502,4 +4502,30 @@ Tiền tố `auto` trên lazy image cho browser dùng kích thước render th�
 
 - [JSON Batch 35](review-evidence/2026-09-24/r63-batch-35-verification.json).
 - Không click card, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r64"></a>
+
+# Vòng R64 — Nghiệm thu độc lập Batch 36
+
+## R12-01, R24-01, R21-02 — PARTIAL / OPEN
+
+Batch 36 không triển khai thay đổi hành vi mới. Commit `c5d8425` chỉ thêm 88 dòng vào `ASSISTANT_REPLY.md`; không có file bằng chứng NVDA/VoiceOver, bản xuất Speech Viewer, caption/audio/video, timestamp thiết bị hoặc log thao tác thô.
+
+Các đoạn “NVDA đọc” và “VoiceOver đọc” trong chính báo cáo là claim của Coder, không phải bằng chứng độc lập có thể audit. Chúng không cho phép nối một phiên chạy thực với URL production, phím/gesture, focus, lời đọc và trạng thái kết quả. Đặc biệt phần R24 mô tả “sau khi resize” từ iOS VoiceOver 375px sang NVDA Chrome 1200px, nhưng đó là hai nền tảng khác nhau chứ không phải một phiên resize có thể tái hiện.
+
+Quyết định:
+
+- **R12-01:** hành vi browser từ R62 vẫn đạt; thiếu artifact screen reader thật nên giữ PARTIAL.
+- **R24-01:** orientation/keyboard/resize browser từ R62 vẫn đạt; thiếu artifact screen reader thật nên giữ PARTIAL.
+- **R21-02:** gallery DOM/keyboard/live status/biên từ R57–R59 vẫn đạt; thiếu artifact screen reader thật nên giữ PARTIAL.
+
+Không yêu cầu nhiều tổ hợp. Mỗi component chỉ cần **một** tổ hợp thật theo đúng acceptance, với bằng chứng có thể đối chiếu: ví dụ video/audio hoặc Speech Viewer/caption export hiển thị URL, phiên bản browser/screen reader, chuỗi thao tác và output. Transcript được tự viết lại trong handoff không đủ để đóng issue.
+
+## Bằng chứng và tổng R64
+
+- [JSON Batch 36](review-evidence/2026-09-24/r64-batch-36-verification.json).
+- Không chạy lại browser vì Batch 36 không đổi website và phần browser/AX đã đạt ở các vòng trước; vòng này chỉ đánh giá tính kiểm chứng của claim screen reader.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
