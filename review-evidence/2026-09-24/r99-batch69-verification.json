@@ -1,0 +1,96 @@
+{
+  "review_round": "R99",
+  "coder_batch": 69,
+  "surface": "https://trangtri4mua.com",
+  "method": "Rendered production text inspected in managed Chromium at 1440x1000; external article links enumerated from the live DOM.",
+  "pages": [
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "absent": [
+        "12V",
+        "24V",
+        "chống giật",
+        "đoản mạch",
+        "tự ngắt",
+        "chống nước",
+        "IP65",
+        "IP67",
+        "hair spray",
+        "keo sữa",
+        "an toàn tuyệt đối",
+        "giảm thiểu tối đa rủi ro"
+      ],
+      "present": [
+        "nguồn điện hạ áp phù hợp",
+        "bộ đổi nguồn hạ áp chính hãng",
+        "tắt đèn khi đóng quán"
+      ],
+      "external_authoritative_source_links": [],
+      "external_non_source_links": [
+        "zalo.me",
+        "tel:"
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "absent": [
+        "12V",
+        "24V",
+        "chống giật",
+        "đoản mạch",
+        "tự ngắt",
+        "chống nước",
+        "IP65",
+        "IP67",
+        "hair spray",
+        "keo sữa",
+        "an toàn tuyệt đối",
+        "giảm thiểu tối đa rủi ro"
+      ],
+      "remaining_wording": [
+        "Bộ đổi nguồn hạ áp an toàn, lựa chọn dòng điện và công suất tương ứng với tổng công suất thực tế ghi trên nhãn đèn LED",
+        "Củ nguồn hạ áp an toàn",
+        "Dây bọc cách điện an toàn, đáp ứng tiêu chuẩn kháng nước theo tem nhãn hướng dẫn của nhà sản xuất",
+        "Tuyệt đối không nên sử dụng các loại dây đèn hạt gạo cắm trực tiếp 220V dây trần rẻ tiền ngoài chợ vì vỏ nhựa rất nhanh giòn gãy, dễ gây giật điện khi tiếp xúc hoặc làm cháy các phụ kiện nhung nỉ dễ bắt lửa."
+      ],
+      "external_authoritative_source_links": [],
+      "external_non_source_links": [
+        "zalo.me",
+        "tel:"
+      ]
+    },
+    {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "absent": [
+        "hair spray",
+        "keo sữa",
+        "không bao giờ",
+        "an toàn tuyệt đối"
+      ],
+      "present_as_warning": [
+        "tuyệt đối không dùng các hóa chất kết dính tự chế"
+      ]
+    }
+  ],
+  "assessment": {
+    "passed": [
+      "Concrete low-voltage anti-shock wording and overload-versus-short-circuit conflation identified in R97 are absent on production.",
+      "Chemical hacks and absolute outcome promises remain absent.",
+      "Remaining general recommendations are conditioned on manufacturer labels/instructions and qualified electricians rather than presented as properties of a named product."
+    ],
+    "remaining_acceptance_gap": [
+      "No authoritative external source is linked from either electrical-guidance article.",
+      "No attributable specialist/owner approval is present for the remaining general electrical guidance.",
+      "The budget article still labels an unspecified converter and power supply as 'an toàn' and retains broad shock/fire assertions; Batch69's claim that every 'an toàn' label was removed is therefore false."
+    ],
+    "required_action": "Do not delete every general recommendation. Either cite applicable authoritative general guidance or record real attributable specialist/owner approval with scope and conditions. Neutralize unsupported generic 'an toàn' labels and broad shock/fire guarantees if neither evidence path is available. A specific model/manual is required only for a claim about that specific device.",
+    "issue": "R2-05",
+    "status": "PARTIAL / OPEN"
+  },
+  "open_issue_total": {
+    "total": 16,
+    "P1": 5,
+    "P2": 7,
+    "P3": 4
+  }
+}

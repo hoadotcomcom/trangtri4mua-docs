@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R98 — đính chính tiêu chuẩn nguồn của R97](#round-r98), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN** vì live vẫn còn cam kết chống giật/giảm rủi ro và đánh đồng bảo vệ quá tải với chống đoản mạch chưa có căn cứ. Hướng dẫn chọn thiết bị chung không bắt buộc gắn model/manual nếu có nguồn hướng dẫn chung có thẩm quyền **hoặc** phê duyệt chuyên môn có attribution.
+> **Trạng thái hiện hành:** xem [Vòng R99 — nghiệm thu độc lập Batch 69](#round-r99), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 tiếp tục **PARTIAL / OPEN**. Batch 69 đã xóa các bảo đảm chống giật và conflation quá tải–đoản mạch nêu ở R97, nhưng hướng dẫn điện chung còn chưa có nguồn có thẩm quyền hoặc phê duyệt chuyên môn có attribution; bài dự toán vẫn gắn nhãn generic `an toàn` và đưa cảnh báo giật/cháy rộng.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5757,3 +5757,46 @@ Kết luận hiện hành được thu hẹp như sau:
 
 - Acceptance gốc R2-05, dòng 298 của tài liệu này.
 - [JSON đính chính tiêu chuẩn nguồn](review-evidence/2026-09-24/r98-r97-sourcing-correction.json).
+
+# Vòng R99 — nghiệm thu độc lập Batch 69
+
+## R2-05 — PARTIAL / OPEN
+
+### Phần đã đạt
+
+Reviewer mở trực tiếp ba bài production bằng Chromium. Batch 69 đã sửa đúng hai blocker cụ thể sau đính chính R98:
+
+- bài quán cafe và bài dự toán không còn `12V`, `24V`, `chống giật`, `đoản mạch`, `tự ngắt`, `chống nước`, `IP65`, `IP67` hoặc “giảm thiểu tối đa rủi ro”;
+- nội dung không còn đánh đồng relay bảo vệ quá tải với chống đoản mạch;
+- `hair spray`, `keo sữa`, “an toàn tuyệt đối” và “không bao giờ” tiếp tục vắng mặt;
+- hướng dẫn còn lại chủ yếu được đặt dưới điều kiện kiểm tra tem/tài liệu thiết bị thực tế và do thợ điện hoặc đơn vị đủ chuyên môn thiết kế, lắp đặt.
+
+Không yêu cầu Coder xóa toàn bộ các khuyến nghị chọn nguồn, tủ kỹ thuật hoặc thợ điện. Đây là hướng dẫn chung; theo R98, chúng có thể giữ khi có nguồn hướng dẫn chung có thẩm quyền **hoặc** phê duyệt chuyên môn có attribution và điều kiện áp dụng.
+
+### Phần chưa đạt
+
+Acceptance R2-05 dòng 298 vẫn yêu cầu thông số/cách lắp được nguồn hoặc owner chuyên môn duyệt. Hai bài có hướng dẫn điện hiện không liên kết nguồn có thẩm quyền nào; các external link trong nội dung chỉ là Zalo và `tel:`. Cũng chưa có tên/vai trò/phạm vi phê duyệt của người có chuyên môn.
+
+Ngoài ra, claim Batch 69 rằng đã xóa 100% nhãn `an toàn` không khớp live. Bài dự toán vẫn có:
+
+- `Bộ đổi nguồn hạ áp an toàn`;
+- `Củ nguồn hạ áp an toàn`;
+- `Dây bọc cách điện an toàn`;
+- cảnh báo rộng rằng dây đèn hạt gạo cắm trực tiếp 220V dây trần rẻ tiền “rất nhanh giòn gãy”, dễ gây giật điện hoặc cháy phụ kiện.
+
+Không coi riêng từ `an toàn` là lỗi. Vấn đề là các nhãn và kết quả giật/cháy này vẫn là claim kỹ thuật chung chưa có nguồn hoặc phê duyệt có attribution.
+
+### Cần bổ sung
+
+Chọn một hoặc kết hợp hai đường hợp lệ:
+
+1. Dẫn nguồn hướng dẫn chung có thẩm quyền, đặt citation cạnh nhóm khuyến nghị điện tương ứng và bảo đảm nội dung không diễn giải rộng hơn nguồn.
+2. Ghi nhận phê duyệt thật của owner/người có chuyên môn: tên hoặc định danh chịu trách nhiệm, vai trò/chuyên môn, phạm vi câu đã duyệt, ngày/revision và điều kiện áp dụng.
+
+Nếu chưa có một trong hai, đổi các nhãn generic `an toàn` và cảnh báo giật/cháy rộng thành chỉ dẫn trung tính: chọn thiết bị phù hợp theo tem/tài liệu của thiết bị thực tế và để người đủ chuyên môn thiết kế, lắp đặt. Không cần model/manual cho mọi khuyến nghị chung; chỉ cần khi khẳng định thuộc tính của thiết bị cụ thể.
+
+## Bằng chứng và tổng R99
+
+- [JSON nghiệm thu Batch 69](review-evidence/2026-09-24/r99-batch69-verification.json).
+- Reviewer kiểm tra rendered text và external links trên production; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
+- R2-05 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
