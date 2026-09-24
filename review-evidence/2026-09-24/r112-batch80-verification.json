@@ -1,0 +1,75 @@
+{
+  "reviewRound": "R112",
+  "implementationBatch": 80,
+  "reviewedCommit": "35870ec",
+  "reviewedAtUtc": "2026-09-24T23:36:00Z",
+  "targetIssue": "R2-14",
+  "scenarios": {
+    "exactSkuDesktop": [
+      {
+        "query": "COMBO-GD-50",
+        "productId": 381,
+        "cards": 1,
+        "price": "950.000 ₫ / 750.000 ₫",
+        "cta": "Xem chi tiết",
+        "metaDatePresent": false
+      },
+      {
+        "query": "SET-HG-70",
+        "productId": 382,
+        "cards": 1,
+        "price": "1.550.000 ₫ / 1.250.000 ₫",
+        "cta": "Xem chi tiết",
+        "metaDatePresent": false
+      },
+      {
+        "query": "CT-PE-SNOW",
+        "productId": 372,
+        "cards": 1,
+        "price": "850.000 ₫ – 2.650.000 ₫",
+        "cta": "Xem tùy chọn",
+        "metaDatePresent": false
+      }
+    ],
+    "mixedIntentDesktop": {
+      "query": "tháp nhũ",
+      "totalCards": 8,
+      "productCards": 3,
+      "productCardsWithCommerceBlock": 3,
+      "productCardsWithMetaDate": 0,
+      "editorialCardsRetainDateAndAuthor": true
+    },
+    "knowledgeIntentDesktop": {
+      "query": "cách chọn size cây thông",
+      "editorialResultFirst": true,
+      "productCards": 2,
+      "productCardsWithCommerceBlock": 2,
+      "productCardsWithMetaDate": 0
+    },
+    "variableProductMobile": {
+      "viewport": [375, 812],
+      "documentScrollWidth": 375,
+      "horizontalOverflow": false,
+      "priceVisible": true,
+      "cta": "Xem tùy chọn",
+      "ctaAccessibleName": "Xem các tùy chọn và mua Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+      "ctaRect": {"x": 52.5, "y": 879.828125, "width": 270, "height": 38},
+      "ctaDestinationExercised": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/"
+    }
+  },
+  "visualVerification": {
+    "renderedDomAndLayoutInspected": true,
+    "screenshotCaptured": false,
+    "limitation": "Chromium selector screenshot timed out. Review conclusions are limited to rendered content, computed layout, accessible link name, overflow and exercised navigation; no color/crop claim is made."
+  },
+  "decision": {
+    "batch80": "PASS",
+    "r2_14": "CLOSED",
+    "reason": "Exact SKU product cards expose WooCommerce price and a product-type-specific CTA, product cards no longer carry blog dates, mixed/editorial results retain their metadata, mobile has no horizontal overflow, and the variable-product CTA reaches the PDP."
+  },
+  "openCountsAfterReview": {"total": 15, "P0": 1, "P1": 4, "P2": 6, "P3": 4},
+  "safety": {
+    "reviewerOrderMutation": false,
+    "cartMutation": false
+  }
+}

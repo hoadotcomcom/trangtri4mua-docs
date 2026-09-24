@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R111 — nghiệm thu Batch 79](#round-r111), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**. R2-04 được mở lại vì hero mới gọi “Set 50” nhưng dòng thành phần chỉ cộng được 45 món. Sau khi sửa đúng một inconsistency này, chuyển sang R2-14 theo đính chính R110.
+> **Trạng thái hiện hành:** xem [Vòng R112 — nghiệm thu Batch 80](#round-r112), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 4 P1, 6 P2, 4 P3**. R2-14 đã CLOSED; R2-04 vẫn OPEN vì regression hero Set 50 chỉ liệt kê 45 món. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6208,3 +6208,42 @@ Sau khi sửa, kiểm lại rendered hero desktop/mobile và chuyển sang **R2-
 - Reviewer đọc rendered DOM hero/category bằng Chromium, đối chiếu ba PDP live và đo layout 1440×1000, 375×812.
 - Ba lần chụp screenshot Chromium đều timeout; vòng này không kết luận về màu/crop. Text, link, dimensions và overflow được lấy trực tiếp từ trang render.
 - Mở lại **R2-04 [P1]** do regression nội dung. Tổng tăng thành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**.
+
+<a id="round-r112"></a>
+
+# Vòng R112 — nghiệm thu Batch 80
+
+## R2-14 — PASS / CLOSED
+
+Batch 80 hoàn thành phần còn thiếu theo verdict R34: full-search product card nay có giá WooCommerce, CTA theo product type và không còn mang ngày đăng như card bài viết.
+
+### Kết quả kiểm chứng độc lập
+
+Reviewer mở trực tiếp năm truy vấn production:
+
+| Query | Kết quả sản phẩm | Giá | CTA | Ngày bài viết trên product |
+|---|---:|---|---|---|
+| `COMBO-GD-50` | đúng 1, Product 381 | `950.000₫ → 750.000₫` | `Xem chi tiết` | không |
+| `SET-HG-70` | đúng 1, Product 382 | `1.550.000₫ → 1.250.000₫` | `Xem chi tiết` | không |
+| `CT-PE-SNOW` | đúng 1, Product 372 | `850.000₫ – 2.650.000₫` | `Xem tùy chọn` | không |
+
+Với intent hỗn hợp:
+
+- `tháp nhũ`: cả ba product card có price + CTA, không có `.meta-date`; ba bài editorial vẫn giữ tác giả và ngày;
+- `cách chọn size cây thông`: bài hướng dẫn đứng đầu; hai product card liên quan có price + CTA và không có ngày bài viết;
+- mọi commerce block chỉ xuất hiện một lần trong product card; CTA trỏ cùng PDP với title.
+
+Tại viewport mobile 375×812, card biến thể không gây horizontal overflow (`scrollWidth = viewportWidth = 375`), CTA rộng 270px, accessible name nêu rõ hành động và tên sản phẩm. Reviewer thực thi CTA `Xem tùy chọn`; điều hướng thành công tới PDP Product 372.
+
+Acceptance R2-14 đã đạt trên exact SKU, mixed intent, knowledge intent, desktop và mobile. **Đóng R2-14.**
+
+## Giới hạn và bàn giao
+
+- Chromium selector screenshot tiếp tục timeout; vòng này không đưa kết luận về màu/crop. Rendered content, accessible name, computed layout, overflow và navigation thật đã được kiểm trực tiếp.
+- Không thêm giỏ, không tạo/sửa/cancel/restore/xóa order; không chạm `335`/`362`.
+- Batch tiếp theo sửa đúng regression **R2-04** đã nêu tại R111, rồi chọn issue OPEN tiếp theo theo verdict mới nhất. Không quay lại R2-14 nếu không có regression.
+
+## Bằng chứng và tổng R112
+
+- [JSON nghiệm thu Batch 80](review-evidence/2026-09-24/r112-batch80-verification.json).
+- Đóng **R2-14 [P2]**. Tổng giảm còn **15 OPEN — 1 P0, 4 P1, 6 P2, 4 P3**.
