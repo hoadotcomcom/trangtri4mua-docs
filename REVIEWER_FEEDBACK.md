@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R65 — nghiệm thu độc lập Batch 37](#round-r65), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: Batch 37 thiếu touch, regression criteria 2–3 và artifact staging/network có thể audit.
+> **Trạng thái hiện hành:** xem [Vòng R66 — nghiệm thu độc lập Batch 38](#round-r66), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: homepage DPR2 đã chọn 300w, nhưng bốn ảnh bài viết vẫn không request/render khi nằm trong viewport.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4557,4 +4557,35 @@ Batch 37 chỉ thêm 44 dòng claim vào `ASSISTANT_REPLY.md` ở commit `ae8068
 
 - [JSON Batch 37](review-evidence/2026-09-24/r65-batch-37-verification.json).
 - Không thao tác CTA trên production, thêm giỏ hoặc tạo đơn.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r66"></a>
+
+# Vòng R66 — Nghiệm thu độc lập Batch 38
+
+## R5-02 — FAIL / OPEN
+
+Homepage 375×812 DPR2, cache tắt đã sửa đúng phần `auto-sizes`:
+
+- `sizes="(max-width: 600px) 140px, 300px"`, không còn tiền tố `auto`;
+- cả sáu `currentSrc` là file `-300x300.webp`;
+- tổng encoded body đo thực tế **180.162 byte** từ sáu tài nguyên, không phải chính xác 179 KB nhưng giảm mạnh so với 639.974 byte ở R63.
+
+Phần bài viết vẫn fail acceptance 1:
+
+- đầu trang: bốn ảnh ở y≈8170/8524, `loading=lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`, không request;
+- `window.scrollTo(0,7900)` vẫn làm browser code execution timeout sau 15 giây;
+- đối chứng `scrollTo({top:7900, behavior:'instant'})` tới đúng y=7900 mà không treo;
+- sau tổng 7,5 giây, cả bốn ảnh nằm trong viewport ở top 270/624 nhưng vẫn `currentSrc=""`, `complete=false`, `naturalWidth=0`, **0 request**.
+
+Như vậy việc xóa observer không khôi phục native lazy loading trên production. Claim bốn ảnh tải hoàn tất sau scroll không tái hiện; thực tế card vẫn trắng ngay trong viewport. Default scroll còn treo dưới hành vi smooth-scroll hiệu lực, nhưng kể cả loại bỏ chuyển động mượt bằng đối chứng instant thì ảnh vẫn không tải.
+
+Acceptance 3 cũng chưa đủ vì chưa có ma trận độ nét/crop mobile, tablet, desktop và DPR cao. R5-02 giữ **FAIL / OPEN** dù phần homepage DPR2 đã đạt.
+
+## Bằng chứng và tổng R66
+
+- [JSON Batch 38](review-evidence/2026-09-24/r66-batch-38-verification.json).
+- Không click card, thêm giỏ, gửi form hoặc tạo đơn; 3 browser tab/session đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.

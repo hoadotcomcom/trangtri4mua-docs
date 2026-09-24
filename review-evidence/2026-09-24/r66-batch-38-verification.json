@@ -1,0 +1,52 @@
+{
+  "round": "R66",
+  "date": "2026-09-24",
+  "handoff": "Batch 38",
+  "issue": "R5-02",
+  "result": "FAIL",
+  "status": "OPEN",
+  "environment": {"browser": "managed Chromium", "viewport": "375x812", "deviceScaleFactor": 2, "cache": "disabled"},
+  "homepage": {
+    "result": "PASS for sampled DPR2 source selection",
+    "sizes": "(max-width: 600px) 140px, 300px",
+    "autoPrefixPresent": false,
+    "renderedCardBox": "164.5x183",
+    "currentSrcWidths": [300, 300, 300, 300, 300, 300],
+    "encodedBytes": [31282, 31318, 34008, 23568, 28402, 31584],
+    "totalEncodedBytes": 180162,
+    "note": "All six currentSrc values end in -300x300.webp. The measured encoded total is 180,162 bytes, not an exact 179 KB."
+  },
+  "article": {
+    "initial": {
+      "cardCount": 4,
+      "documentTop": [8170.09375, 8170.09375, 8523.90625, 8523.90625],
+      "loading": ["lazy", "lazy", "lazy", "lazy"],
+      "currentSrc": ["", "", "", ""],
+      "complete": [false, false, false, false],
+      "naturalWidth": [0, 0, 0, 0],
+      "matchingRequests": 0
+    },
+    "defaultScroll": {
+      "action": "window.scrollTo(0, 7900)",
+      "result": "Browser code execution timed out after 15 seconds; page main thread again became unresponsive."
+    },
+    "instantScrollControl": {
+      "action": "window.scrollTo({top:7900, behavior:'instant'})",
+      "result": "Reached scrollY 7900 without thread hang.",
+      "afterTotalWaitMs": 7500,
+      "viewportRects": [[270.09375,381.3125],[270.09375,381.3125],[623.90625,735.125],[623.90625,735.125]],
+      "currentSrc": ["", "", "", ""],
+      "complete": [false, false, false, false],
+      "naturalWidth": [0, 0, 0, 0],
+      "matchingRequests": 0,
+      "conclusion": "All four cards were visibly inside the viewport yet remained blank and unrequested. Native lazy loading did not satisfy acceptance criterion 1."
+    }
+  },
+  "remainingAcceptanceGaps": [
+    "Article cards must load and render when near/in viewport.",
+    "Mobile/tablet/desktop/high-DPR sharpness and crop matrix is not supplied.",
+    "Default programmatic scroll still hangs under the page's effective smooth-scroll behavior."
+  ],
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"noCardClick": true, "noCart": true, "noForm": true, "noOrder": true, "browsersClosed": true}
+}
