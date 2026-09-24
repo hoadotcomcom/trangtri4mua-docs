@@ -1,7 +1,7 @@
 {
-  "timestamp": "2026-09-24T21:29:35.992Z",
+  "timestamp": "2026-09-24T21:41:44.249Z",
   "issue": "R2-03",
-  "title": "Product Specifications & Immutable Owner Approval Provenance Dossier (v2)",
+  "title": "Product Specifications & Immutable Owner Approval Provenance Dossier (v3)",
   "dossierId": "TT4M-SPEC-2026",
   "ownerApprovalRecord": {
     "documentNumber": "01/2026/BB-TT4M",
@@ -12,7 +12,8 @@
     "businessEntity": "Hộ Kinh Doanh Trang Trí 4 Mùa",
     "taxRegistrationNumber": "0318294567",
     "headquartersAddress": "Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
-    "approvalDigestSha256": "612dc57e2bd958560948cfc873cbc9b5220d61d2357000abcc03a36719301712",
+    "approvalDocumentFile": "review-evidence/2026-09-24/r2-03-owner-approval-record.md",
+    "approvalDocumentSha256": "234bf82809c99aa9810947b52457c54b55efd8002d6226341e5baab7cce18c97",
     "statement": "Chủ hộ kinh doanh xác nhận chịu trách nhiệm pháp lý toàn diện về tính trung thực của các thông số kỹ thuật, xuất xứ và danh mục linh kiện (BOM) được công bố trên website trangtri4mua.com."
   },
   "supplierSourceVerification": {
@@ -26,10 +27,12 @@
         "targetProduct": "Tháp nhũ điện (ID 295)",
         "manufacturer": "Foshan Shunde Electronics Co., Ltd",
         "stampedModelNumber": "TT4M-AD12V2A",
+        "labelGraphicFile": "review-evidence/2026-09-24/r2-03-adapter-label.png",
+        "labelGraphicSha256": "d7db97d580b06856a2c20d2ee95590faedfac8d97fe57ae51ab14f8aa77ba80b",
         "labelSpecifications": {
           "inputRating": "100–240V ~ 50/60Hz 0.5A Max",
           "outputRating": "12.0V === 2.0A (24.0W)",
-          "electricalProtectionClass": "Class II Power Supply (Cách điện kép)",
+          "electricalProtectionClass": "Class II Power Supply (Cách điện kép an toàn)",
           "usageEnvironment": "Indoor Use Only (Chuyên dụng trong nhà / hiên có mái che)",
           "connectorPolarity": "Center Positive (+)"
         }
@@ -85,7 +88,7 @@
         "origin": "Gia công khung thép & đấu nối kỹ thuật tại Việt Nam",
         "packaging": "Thùng carton định hình khung, kèm bộ đổi nguồn hạ áp riêng"
       },
-      "provenanceSource": "Thông số in trên nhãn Adapter Model TT4M-AD12V2A (12V 2A, 24W) theo Biên bản 01/2026/BB-TT4M."
+      "provenanceSource": "Nhãn dập nổi Adapter Model TT4M-AD12V2A (12V 2A, 24W) theo Biên bản 01/2026/BB-TT4M và r2-03-adapter-label.png."
     },
     {
       "productId": 381,

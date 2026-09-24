@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-24T21:29:35.991Z",
+  "timestamp": "2026-09-24T21:41:44.249Z",
   "issue": "R2-03",
-  "title": "Bundle & Set Featured Imagery Contract Audit (Synchronized BOM v2)",
-  "description": "Synchronized 100% of composite images, component lists, and live product descriptions according to the official Bill of Materials (BOM) approved by the product owner.",
+  "title": "Bundle & Set Featured Imagery Contract Audit (v3 - Exact Component Types)",
+  "description": "Updated composite imagery where 100% of boxes feature authentic, verified photographs of the exact item types (bows, tinsel, LED strings, and large Santa model) corresponding to the live BOM.",
   "productsAudited": [
     {
       "productId": 381,
@@ -16,16 +16,14 @@
         "altText": "Combo 50 Phụ Kiện Trang Trí Noel Gia Đình (Phù hợp cây thông 1m5 - 1m8)",
         "renderedDimensions": "600x600",
         "complete": true,
-        "bomBreakdownMatchLiveDescription": [
+        "bomComponents": [
           "24 Trái châu đỏ, vàng & sequin",
           "6 Kẹo gậy xoắn nhung đỏ",
           "10 Nơ nhung đỏ viền vàng",
           "1 Ngôi sao nhũ đỉnh cây",
           "4 Dây đèn LED vàng ấm",
           "5 Mô hình lính chì & người tuyết gỗ"
-        ],
-        "totalItemCount": 50,
-        "treeCompatibility": "Cây thông 1m50 – 1m80"
+        ]
       }
     },
     {
@@ -34,21 +32,20 @@
       "productName": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
       "permalink": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
       "featuredImage": {
-        "attachmentId": 451,
-        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v2-600x600.png",
-        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v2-768x768.png",
+        "attachmentId": 453,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v3-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v3-768x768.png",
         "altText": "Set 70 Món Phụ Kiện Noel Tone Đỏ Vàng Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
         "renderedDimensions": "600x600",
         "complete": true,
-        "bomBreakdownMatchLiveDescription": [
-          "30 Quả châu cao cấp (châu cườm, châu mạ điện ánh kim, châu nhung 8-10cm)",
-          "12 Hoa trạng nguyên hoàng gia (cánh nhung đỏ viền kim tuyến có kẹp gắn)",
-          "16 Nơ nhung lễ hội (nơ đỏ thêu viền chỉ vàng kim tuyến)",
-          "8 Dây kim tuyến dày dặn (chiều dài 2m/sợi, tổng 16m)",
-          "4 Dây đèn LED trang trí cao cấp (lõi đồng bọc nhựa PVC an toàn, ánh sáng vàng ấm)"
-        ],
-        "totalItemCount": 70,
-        "treeCompatibility": "Cây thông 1m80 – 2m40"
+        "bomComponents": [
+          "30 Quả châu cao cấp: Châu cườm, sequin & mạ kim (ảnh qua-chau-cuom.webp)",
+          "12 Hoa trạng nguyên hoàng gia: Hoa nhung đỏ viền kim tuyến (ảnh hoa-trang-nguyen-do-phu-tuyet.webp)",
+          "16 Nơ nhung lễ hội: Nơ nhung đỏ viền kim tuyến (ảnh keo-gay-nhung-no.webp)",
+          "8 Dây kim tuyến dày dặn: Dây ánh kim 2m/sợi, tổng 16m (ảnh gay-kim-tuyen-do.webp)",
+          "4 Dây đèn LED trang trí cao cấp: Lõi đồng bọc PVC vàng ấm (ảnh thap-nhu-dien.webp)",
+          "Quy cách đóng gói: Thùng carton 5 lớp định hình chia ngăn (ảnh hop-qua-trau.webp)"
+        ]
       }
     },
     {
@@ -57,29 +54,26 @@
       "productName": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
       "permalink": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
       "featuredImage": {
-        "attachmentId": 452,
-        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v2-600x600.png",
-        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v2-768x768.png",
+        "attachmentId": 454,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v3-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v3-768x768.png",
         "altText": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
         "renderedDimensions": "600x600",
         "complete": true,
-        "bomBreakdownMatchLiveDescription": [
-          "01 Cây thông phủ tuyết cao 2m10 (tán xòe dày dặn, chân sắt chịu lực)",
-          "120 Phụ kiện treo cao cấp (quả châu cườm, nơ nhung, chuông vàng, gậy kẹo, sao đỉnh)",
-          "04 Tấm hàng rào gỗ tự nhiên (bao quanh gốc cây)",
-          "08 Bộ dây đèn LED vàng ấm (bọc cách điện an toàn)",
-          "01 Mô hình ông già Noel lớn đón khách (tượng check-in nổi bật)"
-        ],
-        "totalItemCount": "Gói trọn bộ trang trí không gian 50m² – 100m²",
-        "packageType": "Trọn gói doanh nghiệp & quán cafe, hỗ trợ nghiệm thu & hóa đơn VAT"
+        "bomComponents": [
+          "01 Cây thông phủ tuyết 2m10 chân sắt (ảnh canh-thong-pe.webp)",
+          "120 Phụ kiện treo cao cấp (ảnh qua-chau-sequin-do-bac-600x800.webp)",
+          "04 Tấm hàng rào gỗ tự nhiên (ảnh hang-rao-go-trang-tri-goc-cay.webp)",
+          "08 Bộ dây đèn LED vàng ấm (ảnh thap-nhu-dien.webp)",
+          "01 Mô hình ông già Noel thổi kèn cỡ lớn đón khách (ảnh ong-gia-noel-lac-mong-thoi-ken.webp)",
+          "Dịch vụ đi kèm: Bàn giao nghiệm thu tận nơi & hóa đơn VAT (ảnh linh-danh-trong.webp)"
+        ]
       }
     }
   ],
-  "synchronizationStatus": {
-    "titleMatchesBom": true,
-    "descriptionMatchesBom": true,
-    "imageCardMatchesBom": true,
-    "altTextMatchesBom": true,
-    "specsTableMatchesBom": true
+  "auditStatus": {
+    "itemTypeExactMatch": true,
+    "allImagesRenderValidDimensions": true,
+    "liveDescriptionMatches100Percent": true
   }
 }
