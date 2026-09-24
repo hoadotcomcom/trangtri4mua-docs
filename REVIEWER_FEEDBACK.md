@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R42 — nghiệm thu độc lập Batch 11–12](#round-r42), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **28 OPEN — 8 P1, 14 P2, 6 P3**. R42 không đóng issue: 6/6 claim chỉ PARTIAL hoặc FAIL trên production.
+> **Trạng thái hiện hành:** xem [Vòng R43 — nghiệm thu độc lập Batch 13–15](#round-r43), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **24 OPEN — 6 P1, 12 P2, 6 P3**. R43 đóng R2-10, R2-04, R2-22 và R2-23; R2-21/R26-01 giữ OPEN.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **28 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **24 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3637,3 +3637,105 @@ Response rỗng đã tới DOM nhưng notice không đổi sang visible. Accepta
 - Không follow URL có `add-to-cart`, không thêm giỏ, tạo đơn, submit form hoặc liên hệ ngoài; 5 browser tab đã đóng.
 - Không thêm issue riêng: gallery layout là regression trực tiếp trong acceptance R21-01/R21-02; orientation/notice thuộc đúng R24-01/R11-01.
 - Tổng giữ **28 OPEN — 8 P1, 14 P2, 6 P3**.
+
+---
+
+<a id="round-r43"></a>
+
+# Vòng R43 — Nghiệm thu độc lập Batch 13–15
+
+Đã kiểm 6 issue trên production. Kết quả: **đóng 4 issue** (R2-10, R2-04, R2-22, R2-23); R2-21 và R26-01 đạt phần chính nhưng chưa toàn acceptance.
+
+## Ma trận verdict R43
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R2-21 | PARTIAL | OPEN | Form và 3 shipping method đã Việt hóa; checkout vẫn hiện nhãn `Shipment` |
+| R2-10 | PASS | **CLOSED** | Lời hứa giao Hà Nội đã bỏ; nội dung khớp policy |
+| R2-04 | PASS | **CLOSED** | Card Quà chuyển thành dịch vụ đặt trước; metadata/empty-state không còn mâu thuẫn offer |
+| R2-22 | PASS | **CLOSED** | Testimonial/claim chưa kiểm chứng được bỏ; identity và policy đã đồng bộ |
+| R26-01 | PARTIAL | OPEN | Homepage focus lifecycle đạt; chưa đủ PDP/backdrop/screen-reader proof |
+| R2-23 | PASS | **CLOSED** | Listing lên trước banner; Tết không còn banner Noel; lối B2B giữ nguyên |
+
+## R2-21 — shipping method đúng, nhãn `Shipment` còn tiếng Anh
+
+Form Contact live:
+
+- legend: `Gửi Yêu Cầu Tư Vấn & Báo Giá`;
+- text và `aria-label` của nút: `Gửi Yêu Cầu Tư Vấn`;
+- submit rỗng chỉ hiện hai lỗi Việt `Vui lòng điền thông tin vào mục này.`;
+- Email/Nội dung có `aria-invalid=true` và `aria-describedby` hợp lệ;
+- không còn `Contact Form Demo`, `Submit Form`, `This field is required` trong form.
+
+Checkout với giỏ thử 550.000₫ hiển thị ba method rõ ràng:
+
+1. `Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)`;
+2. `Miễn phí vận chuyển (Freeship đơn từ 500k)`;
+3. `Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)`.
+
+Tuy nhiên ngay hàng chứa các phương thức, checkout vẫn hiển thị heading/label **`Shipment`**. Acceptance R2-21 yêu cầu nhãn, accessible name và lỗi hiển thị đều tiếng Việt; không chỉ riêng tên rate. R2-21 giữ **PARTIAL / OPEN**.
+
+## R2-10 — CLOSED
+
+Response cache-busting/dynamic của bài Cafe:
+
+- 0 cụm `giao nhanh trong ngày tại khu vực nội thành TP.HCM và Hà Nội`;
+- 0 lần `Hà Nội`;
+- có đúng `giao hỏa tốc 2h – 4h tại khu vực nội thành TP.HCM (các tỉnh thành khác giao nhanh từ 2 – 4 ngày làm việc)`.
+
+Payment đã dùng 08:00–21:30 từ R41; crawl R38 đã xác nhận các bề mặt còn lại cùng khung giờ, khu vực và mốc 2–4/3–5 ngày. Blocker cuối đã hết; R2-10 **CLOSED**.
+
+## R2-04 — CLOSED
+
+Homepage live:
+
+- không còn `Hộp Quà Sang Trọng` hoặc `Hộp quà tinh tế`;
+- card hiện `Dịch Vụ Đặt Quà` và `Dịch vụ giỏ quà lễ hội • Nhận đặt trước qua Zalo`;
+- không còn claim `500+`.
+
+Category Quà rỗng đã có title/meta dịch vụ đặt theo yêu cầu, noindex và lối tư vấn; Đèn dùng metadata tư vấn/báo giá. Combo/Cây có listing mua được và hero không còn 8+/discount sai từ các vòng trước. Lời hứa nguồn nay khớp trạng thái đích; R2-04 **CLOSED**.
+
+## R2-22 — CLOSED
+
+Homepage live:
+
+- 0 chuỗi `★★★★★`;
+- không còn ba tên testimonial cũ;
+- không còn `ảnh thật 100%` hoặc `500+`;
+- thay bằng `Cam Kết Chất Lượng & Đồng Hành Cùng Bạn` với tư vấn concept, đóng gói/đồng kiểm và đổi mới 7 ngày — các đường policy tương ứng đã tồn tại.
+
+R35 đã xác nhận Contact/About/footer/privacy/payment/schema cùng nêu chủ thể, MST, địa chỉ và đầu mối; blocker sau đó chỉ còn testimonial/claim chưa có căn cứ. Các blocker này nay đã được bỏ thay vì dựng nguồn giả. R2-22 **CLOSED**.
+
+## R26-01 — focus lifecycle đạt trên homepage, scope chưa đủ
+
+Homepage 375×812:
+
+- mở bằng Enter: sau animation focus ở `BUTTON.ct-toggle-close` trong offcanvas; panel active, không inert;
+- Escape: panel đóng/inert, focus về đúng trigger `BUTTON.ct-header-trigger`;
+- Tab kế tiếp đi tới CTA hero, không quay về hotline/đầu header;
+- mở bằng click và đóng bằng nút X lần hai vẫn focus đúng; không giữ inert sai.
+
+Đây là cải thiện đúng và không còn tái hiện baseline trên homepage. Tuy nhiên acceptance nêu **homepage/PDP**, các đường Escape/nút đóng/**backdrop**, mở/đóng lặp và một screen reader. Batch 15 chỉ cung cấp một Chromium trace; Reviewer chưa có PDP/backdrop/screen-reader proof. R26-01 giữ **PARTIAL / OPEN**.
+
+## R2-23 — CLOSED
+
+Shop mobile 375px:
+
+- sản phẩm đầu: `y=839,59px`, `scrollWidth=375`;
+- banner mùa vụ: `y=3.686,41px`, sau listing;
+- CTA/đường Zalo B2B vẫn tồn tại.
+
+Category Tết:
+
+- H1 `Trang Trí Tết Nguyên Đán`;
+- không `.tt4m-seasonal-archive-banner`;
+- không headline/text Noel;
+- empty-state vẫn có CTA tư vấn Zalo.
+
+Listing được ưu tiên rõ rệt, ngữ cảnh mùa đúng và lối báo giá không mất. R2-23 **CLOSED**.
+
+## Bằng chứng và tổng R43
+
+- [JSON Batch 13–15](review-evidence/2026-09-24/r43-batches-13-15-verification.json).
+- Chỉ submit form rỗng, không tạo lead; không submit checkout hoặc tạo đơn. Sản phẩm test đã xóa, giỏ cuối vòng **0₫ / 0**; 6 browser tab đã đóng.
+- Đóng **2 P1 + 2 P2**, không thêm issue. Tổng mới: **24 OPEN — 6 P1, 12 P2, 6 P3**.

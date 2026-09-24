@@ -1,0 +1,201 @@
+{
+  "round": "R43",
+  "date": "2026-09-24",
+  "handoffs": [
+    "Batch 13",
+    "Batch 14",
+    "Batch 15"
+  ],
+  "verdicts": {
+    "R2-21": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "form": {
+        "labels": {
+          "legend": [
+            "Gửi Yêu Cầu Tư Vấn & Báo Giá"
+          ],
+          "submit": [
+            {
+              "text": "Gửi Yêu Cầu Tư Vấn",
+              "aria": "Gửi Yêu Cầu Tư Vấn"
+            }
+          ],
+          "english": []
+        },
+        "errors": {
+          "errors": [
+            "Vui lòng điền thông tin vào mục này.",
+            "Vui lòng điền thông tin vào mục này."
+          ],
+          "fields": [
+            {
+              "id": "ff_1_email",
+              "invalid": "true",
+              "describedBy": "ff_1_email-error"
+            },
+            {
+              "id": "ff_1_message",
+              "invalid": "true",
+              "describedBy": "ff_1_message-error"
+            }
+          ],
+          "url": "https://trangtri4mua.com/lien-he/"
+        }
+      },
+      "checkout": {
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "labels": [
+          "Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)",
+          "Miễn phí vận chuyển (Freeship đơn từ 500k)",
+          "Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)"
+        ],
+        "bodyMatches": [
+          "Shipment",
+          "Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)",
+          "Miễn phí vận chuyển (Freeship đơn từ 500k)",
+          "Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)",
+          "Miễn Phí Vận Chuyển"
+        ],
+        "cart": "\n\n\tGiỏ hàng550.000 ₫\n\t\n\t\t1\t\n"
+      },
+      "blocker": "Form and three shipping method labels are localized, but checkout still visibly renders the section label Shipment, so the all-labels-in-Vietnamese acceptance is not complete."
+    },
+    "R2-10": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "content": {
+        "old": false,
+        "hanoi": [],
+        "newText": [
+          "phí kế toán doanh nghiệp rõ ràng. Giao hàng hỏa tốc và đồng kiểm tận nơi: Hỗ trợ đóng gói cẩn thận, giao hỏa tốc 2h – 4h tại khu vực nội thành TP.HCM (các tỉnh thành khác giao nhanh từ 2 – 4 ngày làm việc). Quý khách được mở kiện đồng kiểm chất lượng sản phẩm trước khi thanh toán"
+        ]
+      },
+      "retained": "Payment, policy, footer/listing/PDP hours and shipping windows passed the prior crawl; the final Hanoi contradiction is now absent."
+    },
+    "R2-04": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "content": {
+        "giftOld": false,
+        "giftNew": [
+          "iết kiệm thời gian → Tư Vấn Chọn Mẫu Đèn & Nến Trang Trí Đèn LED, nến decor • Liên hệ tư vấn Zalo → Dịch Vụ Đặt Quà Quà Tặng & Phụ Kiện Dịch vụ giỏ quà lễ hội • Nhận đặt trước qua Zalo → Sản Phẩm Trang Trí Được Yêu Thích Tuyển chọn các món phụ kiện & tượng decor được khách hàng lựa chọn nhiều c"
+        ],
+        "removed500": true
+      },
+      "retained": "Combo/Cây categories and consultation empty states, category metadata and inventory-language corrections passed prior rounds."
+    },
+    "R2-22": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "content": {
+        "stars": 0,
+        "names": [],
+        "trustHeading": "phụ kiện và bí quyết bảo quản để tái sử dụng cho mùa lễ hội sau. Xem bảng giá → Trải Nghiệm Mua Sắm Cam Kết Chất Lượng & Đồng Hành Cùng Bạn Mỗi chi tiết trang trí tại Trang Trí 4 Mùa đều hướng tới sự an tâm trọn vẹn và trải nghiệm không gian lễ hội ấm áp. 🎨 Tư Vấn Concept & Phối Cảnh Tone Màu Hỗ trợ tư vấn lựa chọn kích thước cây thông và bảng màu phụ kiện tương thích với từng diện tích phòng khách, quán cafe hay sảnh văn phòng. 📦 Đóng Gói 3 Lớp & Đồng Kiểm COD Quy chuẩn bọc màng khí chống sốc và thùng carton định hình an toàn. Quý khách luôn có quyền mở hộp kiểm tra đúng mẫu trước khi thanh toán. 🔄 Đổi Mới 1-1 Miễn Phí Trong 7 Ngày Chính sách bảo hành rõ ràng, hỗ trợ đổi mới hỏa tốc tận nhà nếu sản phẩm g",
+        "image100": false,
+        "fiveHundred": false
+      },
+      "retained": "Identity/payment/privacy/schema consistency passed R35; remaining unsupported testimonial/image/inventory claims are now removed."
+    },
+    "R26-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "homepage": {
+        "open": {
+          "panelClass": "ct-panel ct-header active",
+          "inert": false,
+          "active": {
+            "tag": "BUTTON",
+            "cls": "ct-toggle-close",
+            "label": "Đóng ngăn"
+          },
+          "inside": true
+        },
+        "escapeClose": {
+          "panelClass": "ct-panel ct-header",
+          "inert": true,
+          "active": {
+            "tag": "BUTTON",
+            "cls": "ct-header-trigger ct-toggle ",
+            "label": "Menu"
+          },
+          "isTrigger": true
+        },
+        "nextTab": {
+          "active": {
+            "tag": "A",
+            "cls": "tt4m-btn-combo-primary",
+            "label": null,
+            "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+          }
+        },
+        "repeat": {
+          "open2": {
+            "inside": true,
+            "active": "ct-toggle-close"
+          },
+          "close2": {
+            "inert": true,
+            "isTrigger": true,
+            "active": "ct-header-trigger ct-toggle "
+          }
+        }
+      },
+      "blocker": "Homepage keyboard/pointer repeat paths pass. Acceptance also names PDP, backdrop and one screen reader; those were not supplied/proven in Batch 15."
+    },
+    "R2-23": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "shop": {
+        "product": {
+          "y": 839.59375
+        },
+        "banner": {
+          "y": 3686.40625,
+          "w": 330,
+          "h": 460.953125
+        },
+        "scrollWidth": 375,
+        "b2bPathPreserved": true
+      },
+      "tet": {
+        "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/",
+        "title": "Trang Trí Tết Nguyên Đán",
+        "hasBanner": false,
+        "hasNoel": false,
+        "productY": null,
+        "empty": true,
+        "b2b": [
+          "Tư vấn Zalo (8:00 – 21:30)",
+          "Tư vấn chọn mẫu qua Zalo (08:00 – 21:30)",
+          "0901.234.567",
+          "TƯ VẤN ZALO (08:00 – 21:30)"
+        ]
+      }
+    }
+  },
+  "current_total": {
+    "open": 24,
+    "p1": 6,
+    "p2": 12,
+    "p3": 6,
+    "closed_in_round": [
+      "R2-10",
+      "R2-04",
+      "R2-22",
+      "R2-23"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "blankContactOnly": true,
+    "leadCreated": false,
+    "orderCreated": false,
+    "cartClean": {
+      "empty": true,
+      "cart": "Giỏ hàng\n0 ₫\n0",
+      "removeCount": 0
+    },
+    "browsersClosed": true
+  }
+}
