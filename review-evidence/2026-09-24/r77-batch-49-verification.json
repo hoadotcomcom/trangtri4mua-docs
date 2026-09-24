@@ -1,0 +1,23 @@
+{
+  "round": "R77",
+  "date": "2026-09-24",
+  "handoff": "Batch 49",
+  "issue": "R26-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "artifact": "review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json",
+  "accepted": [
+    "Artifact now states 26 focusable drawer elements and successful forward/backward boundary wrap.",
+    "Combined with R43/R73/R75 history, DOM focus transfer, close-button/backdrop/Escape restoration, repeated cycles and desktop search regression are sufficiently covered."
+  ],
+  "inertProblem": "The artifact labels its section inertStates but only records mainHasInert=false before/during/after and omits the drawer's inert attribute. This does not prove the requested offcanvas inert cleanup. Independent R73 observation showed the drawer itself becomes inert when closed and non-inert when open; that exact state should be recorded.",
+  "screenReaderEvidenceProblem": [
+    "The JSON contains a manually authored speech transcript and a screenReaderTested string, but no machine-produced VoiceOver output, screen recording/audio, screenshots, device/browser build identifiers, test-run identifier, or external artifact tying the transcript to an actual iOS 17.5 Mobile Safari run.",
+    "The repository artifact timestamp alone cannot distinguish a real VoiceOver session from a prose reconstruction of expected ARIA announcements.",
+    "Reviewer cannot independently run iOS VoiceOver from the current Chromium harness, so acceptance requires auditable evidence rather than an assertion."
+  ],
+  "artifactRegression": "Batch 49 overwrote the JSON and removed the three close-path cycles and desktop search regression from Batch 47. Historical Git/report evidence remains, but the current file is not a complete single artifact as claimed.",
+  "decision": "Keep R26-01 PARTIAL/OPEN. Supply an auditable VoiceOver capture or exported test record, record drawer inert before/open/closed, and preserve prior close/search evidence instead of replacing it.",
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"browserNeeded": false, "siteMutation": false}
+}

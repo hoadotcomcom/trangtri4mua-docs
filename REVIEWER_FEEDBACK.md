@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R76 — nghiệm thu độc lập Batch 48](#round-r76), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 nâng lên PARTIAL: lazy-load đã PASS; ma trận DPR cao/độ nét/crop vẫn chưa đạt.
+> **Trạng thái hiện hành:** xem [Vòng R77 — nghiệm thu độc lập Batch 49](#round-r77), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: boundary wrap đạt; inert và VoiceOver chưa có bằng chứng audit được.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4904,4 +4904,30 @@ R5-02 nâng từ FAIL thành **PARTIAL / OPEN**. Không sửa lại lazy-load đ
 - [JSON Batch 48](review-evidence/2026-09-24/r76-batch-48-verification.json).
 - [Scroll trace Coder](review-evidence/2026-09-24/r5-02-scroll-trace.json).
 - Không click card/CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r77"></a>
+
+# Vòng R77 — Nghiệm thu độc lập Batch 49
+
+## R26-01 — PARTIAL / OPEN
+
+Artifact mới đủ để chấp nhận boundary wrap: ghi 26 phần tử focusable, đặt focus ở phần tử cuối rồi Tab về nút đóng, và từ phần tử đầu Shift+Tab về link cuối. Kết hợp lịch sử R43/R73/R75, focus mở, ba đường đóng, vòng lặp và search regression đã đủ.
+
+Hai phần Batch 49 vẫn chưa audit được:
+
+1. Khối `inertStates` chỉ ghi `mainHasInert=false` trước/trong/sau; không ghi thuộc tính `inert` của chính `#offcanvas`. Đây không chứng minh cleanup được yêu cầu. Lượt Reviewer R73 đã quan sát drawer non-inert khi mở và inert khi đóng; artifact cần ghi đúng node đó.
+2. `voiceOverSpeechLog` là transcript JSON do người viết nhập cùng chuỗi `screenReaderTested`. Không có output máy, screen recording/audio, screenshot, device/browser build, test-run identifier hoặc artifact ngoài để nối transcript với một lượt iOS 17.5 Mobile Safari thực. Nội dung giống lời đọc kỳ vọng từ ARIA nhưng chưa chứng minh đã chạy VoiceOver.
+
+Ngoài ra Batch 49 overwrite JSON và bỏ toàn bộ ba close-path cycle cùng search regression của Batch 47. Lịch sử Git/báo cáo vẫn giữ bằng chứng đó, nhưng tệp hiện hành không phải hồ sơ “đầy đủ” như claim.
+
+R26-01 giữ **PARTIAL / OPEN**. Cần capture VoiceOver có thể audit, ghi inert của drawer trước/mở/đóng và bảo toàn evidence đã có thay vì thay thế. Không cần chạy lại boundary wrap.
+
+## Bằng chứng và tổng R77
+
+- [JSON Batch 49](review-evidence/2026-09-24/r77-batch-49-verification.json).
+- [Artifact Coder hiện hành](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
+- Không thao tác website production.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
