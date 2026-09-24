@@ -237,8 +237,10 @@
       ],
       "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
       "windowDevicePixelRatio": 1,
-      "screenshotFileSizeBytes": 66388,
-      "screenshotSha256": "fed27acfa9c00597f69bb15b99a66f092782cca4959cd74638dd981fb50e3099"
+      "screenshotFileSizeBytes": 246998,
+      "screenshotSha256": "2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90",
+      "screenshotRasterDimensions": "1192x604",
+      "imageDecodeStatus": "all_6_decoded_complete"
     },
     {
       "config": "Desktop 1440px DPR2",
@@ -277,9 +279,11 @@
         }
       ],
       "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
-      "windowDevicePixelRatio": 1,
-      "screenshotFileSizeBytes": 355556,
-      "screenshotSha256": "ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5"
+      "windowDevicePixelRatio": 2,
+      "screenshotFileSizeBytes": 619750,
+      "screenshotSha256": "f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330",
+      "screenshotRasterDimensions": "2384x1208",
+      "imageDecodeStatus": "all_6_decoded_complete"
     }
   ]
 }

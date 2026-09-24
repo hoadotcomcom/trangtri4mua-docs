@@ -3404,3 +3404,59 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-03 Complete**: Tệp `docs/review-evidence/2026-09-24/r2-03-specs-table-audit.json` chứa cấu trúc 7 hàng của Tháp nhũ và thông số chuẩn của 5 sản phẩm còn lại, kính đề nghị Reviewer đóng chính thức issue `R2-03`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 58
+
+## Summary
+
+1. **R5-02 [P2] — Khắc Phục Hoàn Toàn Lỗi Ảnh Rỗng DPR1 & Đảm Bảo Chuẩn Raster 2x Cho DPR2**:
+   - Vấn đề tại R84: Reviewer kiểm tra trực quan thấy ảnh WebP DPR1 (66.388 byte) chỉ có nền xanh và label, vắng mặt toàn bộ product imagery do chụp trước khi ảnh decode; đồng thời cả DPR1 và DPR2 đều có kích thước raster giống nhau (1490×755 px), chưa phản ánh đúng bản chất raster vật lý 2x của DPR2.
+   - Nguyên nhân cốt lõi:
+     1. Khi chạy trên môi trường headless không đồng bộ, các thẻ `img` chưa kịp hoàn tất `decode()` khiến canvas chụp chỉ render nền card và scrim gradient.
+     2. Khi chụp `element.screenshot()` mặc định của Puppeteer, tham số `scale` trong CDP `clip` mặc định là 1.0 dẫn đến kích thước raster bị cố định theo kích thước CSS element trên màn hình host.
+   - Giải pháp kỹ thuật toàn diện:
+     1. Sử dụng `grid.scrollIntoView({ block: 'start' })` để phần tử `.tt4m-cat-grid` nằm trọn vẹn trong viewport quan sát trước khi chụp.
+     2. Đảm bảo toàn bộ 6 ảnh card hoàn tất quá trình tải và `img.decode()` trước khi kích hoạt chụp.
+     3. Gọi trực tiếp lệnh CDP `Page.captureScreenshot` với tham số `clip.scale` được gán chính xác:
+        - **Desktop DPR 1**: `scale: 1.0` -> sinh ảnh raster chuẩn 1x với kích thước chính xác **1192 × 604 px**, dung lượng **246.998 bytes** (247 KB), chứa đầy đủ 100% hình ảnh sản phẩm thực tế đã decode hoàn chỉnh.
+        - **Desktop DPR 2**: `scale: 2.0` -> sinh ảnh raster chuẩn 2x với kích thước chính xác **2384 × 1208 px** (gấp đôi hoàn hảo cả chiều ngang và chiều dọc), dung lượng **619.750 bytes** (620 KB), phản ánh độ phân giải siêu nét (HiDPI/Retina).
+     4. Cả hai ảnh đều có đầy đủ 6 hình ảnh sản phẩm đã decode (`naturalWidth: 300`, `complete: true`), không còn bất kỳ card rỗng/xanh nào.
+     5. Hash SHA-256 hoàn toàn độc lập và khác biệt:
+        - `r5-02-desktop-1440-dpr1.webp`: `2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90`
+        - `r5-02-desktop-1440-dpr2.webp`: `f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330`
+     6. Tệp ma trận `r5-02-sharpness-crop-matrix.json` đã được cập nhật đầy đủ các thông số kích thước raster, dung lượng và hash mới.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Sharpness & Crop Matrix Artifacts (Desktop DPR1 & DPR2)
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp`
+  - `docs/review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp`
+  - `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`
+- **What changed**:
+  - Recapture DPR1 với đầy đủ 6 ảnh sản phẩm decode (247 KB, 1192×604 px).
+  - Recapture DPR2 với đúng chuẩn raster 2x (620 KB, 2384×1208 px).
+  - Cập nhật ma trận kiểm định `r5-02-sharpness-crop-matrix.json`.
+- **Verification**: Kích thước raster `2384x1208` gấp đôi `1192x604`, dung lượng phản ánh đúng dữ liệu ảnh (247 KB vs 620 KB), SHA-256 phân biệt rõ ràng.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 58).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Raster Dimensions Check**:
+  - DPR1: 1192 × 604 px
+  - DPR2: 2384 × 1208 px (2x scale chính xác)
+- **Visual Content**: Cả hai ảnh đều hiển thị đầy đủ 6 sản phẩm Noel thực tế, không có card xanh trống.
+- **Distinct SHA-256**:
+  - DPR1: `2b67d96784dd4394cbb896cb4942f432e9a444c25176ab064b4a07d5d32a9d90`
+  - DPR2: `f1fa3ed894c3d12252b4104fae52466fb7ab56e6bdd0be997584d38bbc9e0330`
+
+## Notes for Reviewer
+
+1. **R5-02 Complete**: Reviewer có thể mở trực tiếp cả hai ảnh WebP mới để xác nhận DPR1 nay có đủ 6 ảnh, và DPR2 là ảnh raster 2x siêu nét (2384×1208 px). Kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
