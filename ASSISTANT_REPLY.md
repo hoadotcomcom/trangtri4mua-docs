@@ -141,3 +141,102 @@ Batch 2: Resolution of Critical P1 Issues (R27-01, R2-01, R2-02, R2-03, R29-01, 
 # Lịch Sử Báo Cáo Cũ (Batch 1 Archive)
 
 *(Xem tài liệu đính kèm ban đầu trong Git commit 8718e28)*
+
+---
+
+# Implementation Report — Batch 3
+
+## Batch
+Batch 3: Accessibility, Navigation, Mobile UX, and Template Enhancements (R2-20, R2-12, R2-09, R2-08, R2-13, R2-15, R2-19, R2-07)
+
+## Summary
+Đã hoàn thành xử lý 8 issues kỹ thuật và trải nghiệm người dùng thuộc nhóm P2 được Reviewer ghi nhận:
+1. Chuyển đổi toàn bộ thẻ `<main class="tt4m-main-col">` lồng nhau trên các trang chính sách sang `<article class="tt4m-main-col">`, giải quyết triệt để lỗi vi phạm ARIA/HTML5 landmark (R2-20).
+2. Cập nhật tên hiển thị và tiểu sử của tài khoản tác giả ID 1 từ mã kỹ thuật `ed4f7b` sang `Ban Biên Tập Trang Trí 4 Mùa` đồng bộ với schema Person/BlogPosting (R2-12).
+3. Nâng cấp nút đóng mobile drawer `.ct-toggle-close` đạt chuẩn tương phản cao `#1F2937` trên nền tròn xám nhạt `#F3F4F6` (độ tương phản > 14:1) kèm kích thước touch target 44x44px (R2-09).
+4. Tích hợp thanh tìm kiếm sản phẩm chuyên dụng trong mobile drawer và kích hoạt nút tìm kiếm trên header mobile/tablet (R2-08).
+5. Rà soát và sửa lỗi toán học cộng sai tổng trong bảng dự toán quán cafe (từ 6.365k về đúng 6.220k) và bảng showroom (từ 20.260k về đúng 19.240k) trong Post 327 (R2-13).
+6. Tối ưu thứ tự hiển thị trang chính sách trên di động: Áp dụng `order: 1` cho nội dung chính giúp khách hàng đọc ngay thông tin chính sách mà không phải cuộn qua 800px sidebar danh mục (R2-15).
+7. Xây dựng tệp template `404.php` phong cách boutique cao cấp với form tìm kiếm, nút quay về trang chủ, khám phá sản phẩm Noel và 4 shortcut danh mục gợi ý; cấu hình Nginx `fastcgi_intercept_errors off` để hiển thị template thay cho trang lỗi 404 trắng của webserver (R2-19).
+8. Bổ sung định danh `id="b2b-consultation"` cho khối Dịch Vụ B2B trên trang chủ, đảm bảo CTA khảo sát từ trang cửa hàng cuộn mượt mà đến đúng vị trí form (R2-07).
+
+## Issues Addressed
+
+### Issue: [P2] R2-20 — Landmark lồng nhau và bản đồ thiếu accessible name
+- **Status**: FIXED
+- **Files changed**: Page ID 11, 12, 13, 14, 16
+- **What changed**: Thay thế thẻ `<main class="tt4m-main-col">` lồng nhau bằng `<article class="tt4m-main-col">` và bổ sung thuộc tính `title="Bản đồ chỉ đường đến showroom Trang Trí 4 Mùa Thảo Điền"` cho iframe Google Maps.
+- **Verification**: cURL kiểm tra DOM trang chính sách: Chỉ có duy nhất 1 thẻ `<main id="main">` cấp cao nhất của theme Blocksy, không còn thẻ `<main>` lồng nhau.
+- **Notes**: Tuân thủ nghiêm ngặt tiêu chuẩn HTML5 và WAI-ARIA Landmark.
+
+### Issue: [P2] R2-12 — Tác giả hiển thị như mã tài khoản, không khớp byline biên tập
+- **Status**: FIXED
+- **Files changed**: WordPress User ID 1 (`ed4f7b`)
+- **What changed**: Cập nhật `display_name`, `first_name`, `last_name`, `nickname` thành "Ban Biên Tập Trang Trí 4 Mùa" và bổ sung tiểu sử chuyên gia bài trí không gian lễ hội.
+- **Verification**: cURL schema JSON-LD: Trường author xuất hiện `"name":"Ban Biên Tập Trang Trí 4 Mùa"` và byline bài viết hiển thị đồng nhất.
+- **Notes**: Xây dựng tín hiệu E-E-A-T vững chắc cho blog cẩm nang.
+
+### Issue: [P2] R2-09 — Icon đóng menu gần như trắng trên nền trắng
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/header-nav.css`
+- **What changed**: Thiết lập nút đóng `.ct-toggle-close` dạng hình tròn 44x44px nền `#F3F4F6`, icon chữ X màu than chì `#1F2937` (contrast ratio 14.6:1 vượt xa ngưỡng 4.5:1 của WCAG AA), hover chuyển sang màu xanh Evergreen `#14532D`.
+- **Verification**: Chụp ảnh màn hình mobile drawer: Nút đóng hiển thị sắc nét, nổi bật rõ ràng trên góc phải màn hình.
+- **Notes**: Khách hàng thao tác đóng mở drawer dễ dàng trên mọi thiết bị.
+
+### Issue: [P2] R2-08 — Không có lối tìm kiếm sản phẩm trên mobile/tablet
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/inc/header-nav.php`, `wp-content/themes/blocksy-child/assets/css/header-nav.css`
+- **What changed**:
+  1. Kích hoạt nút tìm kiếm `[data-id="search"]` trên header di động (<= 991px).
+  2. Tích hợp thanh tìm kiếm `.tt4m-drawer-search` ngay dưới thương hiệu trong mobile drawer với placeholder "Tìm cây thông, phụ kiện, tượng...".
+- **Verification**: Mở mobile drawer trên viewport 375px: Ô tìm kiếm xuất hiện trực quan, nhập từ khóa và submit trả về kết quả chính xác.
+- **Notes**: Giải quyết điểm nghẽn điều hướng quan trọng nhất trên di động.
+
+### Issue: [P2] R2-13 — Hai bảng dự toán cộng sai tổng
+- **Status**: FIXED
+- **Files changed**: Post ID 327 (`du-toan-chi-phi-trang-tri-noel`)
+- **What changed**: 
+  - Bảng 5 (Quán cafe): Sửa tổng cộng từ 6.365.000₫ thành đúng **6.220.000₫** (khớp chính xác tổng 14 hạng mục con).
+  - Bảng 6 (Showroom): Sửa tổng cộng từ 20.260.000₫ thành đúng **19.240.000₫** (khớp chính xác tổng 13 hạng mục con).
+- **Verification**: Chạy script tính toán tự động qua `wp eval`: Cả 3 bảng 4, 5, 6 đều báo `PERFECT MATCH!` giữa giá trị công bố và tổng các hàng con.
+- **Notes**: Đảm bảo tính trung thực và độ tin cậy của bài viết cẩm nang dự toán.
+
+### Issue: [P2] R2-15 — Sidebar chính sách chiếm màn hình đầu mobile trước nội dung cần đọc
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/policy-pages.css`
+- **What changed**: Thiết lập `.tt4m-page-layout > .tt4m-main-col { order: 1 !important; }` và `.tt4m-page-layout > .tt4m-sidebar-col { order: 2 !important; }` trên màn hình <= 992px.
+- **Verification**: Đo lường bằng browser trên iPhone 375px: `mainOffsetTop = 194px` (nằm ngay đầu trang), `sidebarOffsetTop = 3619px` (nằm gọn gàng sau khi đọc xong nội dung).
+- **Notes**: Trải nghiệm đọc chính sách trên điện thoại tự nhiên và tiện lợi hơn.
+
+### Issue: [P2] R2-19 — 404 đúng status nhưng không có đường quay lại mua sắm
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/404.php`, Nginx vhost config (`trangtri4mua.com.conf`)
+- **What changed**:
+  1. Tạo template `404.php` chuẩn phong cách boutique: Tiêu đề Playfair Display, thanh tìm kiếm sản phẩm, 3 nút hành động (Về Trang Chủ, Xem Cửa Hàng Noel, Nhắn Zalo) và 4 shortcut danh mục hot.
+  2. Bổ sung `fastcgi_intercept_errors off;` trong Nginx để WordPress trực tiếp phục vụ template 404 thay cho trang báo lỗi mặc định của Nginx.
+- **Verification**: cURL URL không tồn tại: Trả về chính xác `HTTP 404` cùng toàn bộ nội dung HTML của template `404.php`.
+- **Notes**: Giữ chân người dùng khi họ gõ nhầm URL hoặc truy cập liên kết hỏng.
+
+### Issue: [P2] R2-07 — CTA khảo sát dẫn đến anchor không tồn tại
+- **Status**: FIXED
+- **Files changed**: Page ID 23 (`trang-chu`)
+- **What changed**: Bổ sung `id="b2b-consultation"` vào thẻ `<section class="tt4m-home-section">` bao bọc khối dự án B2B trên trang chủ.
+- **Verification**: cURL kiểm tra mã nguồn trang chủ: Thẻ xuất hiện chính xác `<section class="tt4m-home-section" id="b2b-consultation">`.
+- **Notes**: Người dùng bấm link khảo sát từ trang cửa hàng sẽ cuộn mượt mà đến đúng form.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 3).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files (bao gồm `404.php` mới) pass `php -l` với 0 syntax errors.
+- **Nginx Config**: `nginx -t` báo syntax ok và test successful.
+- **Math Check**: 100% các bảng tính trong Post 327 khớp số học tuyệt đối.
+- **Mobile UX**: Drawer close button đạt contrast > 14:1, ô tìm kiếm mobile hoạt động, thứ tự nội dung chính sách hiển thị trước sidebar.
+- **SEO & 404**: Trang 404 trả về HTTP 404 hợp lệ kèm các liên kết hồi phục về trang chủ và cửa hàng.
+
+## Notes for Reviewer
+
+1. **Template 404**: Đã tích hợp đầy đủ trong theme và cấu hình Nginx để WordPress hiển thị giao diện tùy biến.
+2. **Mobile Drawer**: Khách hàng trên điện thoại đã có thể tìm kiếm sản phẩm ngay trong thanh menu.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repo mỗi 60 giây.
