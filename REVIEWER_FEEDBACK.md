@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R112 — nghiệm thu Batch 80](#round-r112), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 4 P1, 6 P2, 4 P3**. R2-14 đã CLOSED; R2-04 vẫn OPEN vì regression hero Set 50 chỉ liệt kê 45 món. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R113 — nghiệm thu Batch 81](#round-r113), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-04 và R2-14 đã CLOSED. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**; R2-03 **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6247,3 +6247,31 @@ Acceptance R2-14 đã đạt trên exact SKU, mixed intent, knowledge intent, de
 
 - [JSON nghiệm thu Batch 80](review-evidence/2026-09-24/r112-batch80-verification.json).
 - Đóng **R2-14 [P2]**. Tổng giảm còn **15 OPEN — 1 P0, 4 P1, 6 P2, 4 P3**.
+
+<a id="round-r113"></a>
+
+# Vòng R113 — nghiệm thu Batch 81
+
+## R2-04 — PASS / CLOSED
+
+Production hero hiện render đầy đủ:
+
+> `Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 5 mô hình mini, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8`
+
+Phép cộng nay là `24 + 6 + 10 + 5 + 4 + 1 = 50`; năm mô hình mini khớp phần còn thiếu trên PDP Product 381. Set 70 vẫn cộng đúng 70. CTA vẫn là `Xem 3 Gói Combo (Từ 750k)` và trỏ đúng category ba sản phẩm.
+
+Kiểm layout trực tiếp:
+
+- desktop 1440×1000: `scrollWidth = 1440`, CTA cao 48px;
+- mobile 375×812: `scrollWidth = 375`, CTA rộng 242px, cao 44px;
+- không có horizontal overflow ở cả hai viewport.
+
+Regression mở tại R111 đã được sửa đúng phạm vi; các phần đã đạt không bị rollback. **Đóng R2-04.**
+
+Batch 81 nhắc lại rằng R2-14 chờ nghiệm thu, nhưng R2-14 đã được Reviewer kiểm độc lập và đóng tại R112; không cần handoff hoặc thay đổi bổ sung cho issue đó nếu không có regression.
+
+## Bằng chứng và tổng R113
+
+- [JSON nghiệm thu Batch 81](review-evidence/2026-09-24/r113-batch81-verification.json).
+- Không thêm giỏ, không mutation order và không chạm `335`/`362`.
+- Đóng **R2-04 [P1]**. Tổng giảm còn **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.

@@ -1,0 +1,46 @@
+{
+  "reviewRound": "R113",
+  "implementationBatch": 81,
+  "reviewedCommit": "0ef7886",
+  "reviewedAtUtc": "2026-09-24T23:42:00Z",
+  "targetIssue": "R2-04",
+  "liveChecks": {
+    "set50RenderedLine": "Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 5 mô hình mini, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8",
+    "set50Arithmetic": {
+      "components": [24, 6, 10, 5, 4, 1],
+      "sum": 50,
+      "matchesPdp381": true
+    },
+    "set70Arithmetic": {
+      "components": [30, 12, 16, 8, 4],
+      "sum": 70
+    },
+    "cta": {
+      "text": "Xem 3 Gói Combo (Từ 750k)",
+      "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+    },
+    "desktop": {
+      "viewport": [1440, 1000],
+      "documentScrollWidth": 1440,
+      "horizontalOverflow": false,
+      "ctaHeightPx": 48
+    },
+    "mobile": {
+      "viewport": [375, 812],
+      "documentScrollWidth": 375,
+      "horizontalOverflow": false,
+      "ctaRect": {"x": 38.5, "y": 744.015625, "width": 242, "height": 44}
+    }
+  },
+  "decision": {
+    "batch81": "PASS",
+    "r2_04": "CLOSED",
+    "reason": "The rendered hero now includes the five mini figures missing at R111; the enumerated Set 50 components total 50 and match PDP 381. The previously accepted CTA, offer separation and responsive layout remain intact."
+  },
+  "scopeNote": "Batch 81 repeats that R2-14 is ready for review, but R2-14 was independently verified and closed at R112; no additional R2-14 status change is needed.",
+  "openCountsAfterReview": {"total": 14, "P0": 1, "P1": 3, "P2": 6, "P3": 4},
+  "safety": {
+    "reviewerOrderMutation": false,
+    "cartMutation": false
+  }
+}
