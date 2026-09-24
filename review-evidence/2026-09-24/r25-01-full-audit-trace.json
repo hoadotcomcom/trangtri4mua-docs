@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-09-24T19:47:17.583Z",
+  "environment": {
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "viewport": {
+      "width": 375,
+      "height": 812,
+      "hasTouch": true
+    },
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+  },
+  "scenarios": {
+    "touchRapidReset": {
+      "timeline": [
+        {
+          "event": "select_1m8_val8",
+          "elapsedMs": 21
+        },
+        {
+          "event": "delay_185ms",
+          "elapsedMs": 208
+        },
+        {
+          "event": "touch_tap_reset",
+          "elapsedMs": 231
+        },
+        {
+          "event": "wait_1500ms_settled",
+          "elapsedMs": 1731
+        }
+      ],
+      "finalState": {
+        "selectValue": "",
+        "variationId": "",
+        "singleVarDisplay": "none",
+        "singleVarHtml": "",
+        "atcClasses": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+        "isDisabled": true
+      }
+    },
+    "mouseRapidReset": {
+      "timeline": [
+        {
+          "event": "select_1m8_val8",
+          "elapsedMs": 12
+        },
+        {
+          "event": "delay_185ms",
+          "elapsedMs": 197
+        },
+        {
+          "event": "mouse_click_reset",
+          "elapsedMs": 232
+        },
+        {
+          "event": "wait_1500ms_settled",
+          "elapsedMs": 1732
+        }
+      ],
+      "finalState": {
+        "selectValue": "",
+        "variationId": "",
+        "singleVarDisplay": "none",
+        "singleVarHtml": "",
+        "atcClasses": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+        "isDisabled": true
+      }
+    },
+    "enterRapidReset": {
+      "timeline": [
+        {
+          "event": "select_1m8_val8",
+          "elapsedMs": 12
+        },
+        {
+          "event": "delay_185ms",
+          "elapsedMs": 197
+        },
+        {
+          "event": "keyboard_enter_reset",
+          "elapsedMs": 215
+        },
+        {
+          "event": "wait_1500ms_settled",
+          "elapsedMs": 1716
+        }
+      ],
+      "finalState": {
+        "selectValue": "",
+        "variationId": "",
+        "singleVarDisplay": "none",
+        "singleVarHtml": "",
+        "atcClasses": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+        "isDisabled": true
+      }
+    },
+    "resetThenReselect": {
+      "selectValue": "1m2",
+      "variationId": "296",
+      "singleVarDisplay": "block",
+      "singleVarText": "550.000 ₫",
+      "atcDisabled": false
+    },
+    "multiSwitchRapidReset": {
+      "selectValue": "",
+      "variationId": "",
+      "singleVarDisplay": "none",
+      "atcDisabled": true
+    },
+    "variantMatrix": [
+      {
+        "slug": "1m2",
+        "selectedSize": "1m2",
+        "variationId": "296",
+        "priceText": "550.000 ₫",
+        "atcDisabled": false
+      },
+      {
+        "slug": "5",
+        "selectedSize": "1m5",
+        "variationId": "297",
+        "priceText": "755.000 ₫",
+        "atcDisabled": false
+      },
+      {
+        "slug": "8",
+        "selectedSize": "1m8",
+        "variationId": "298",
+        "priceText": "895.000 ₫",
+        "atcDisabled": false
+      }
+    ],
+    "quantityControls": {
+      "initial": "1",
+      "afterPlus": "2",
+      "afterMinusTwiceBoundToMinOne": "1"
+    },
+    "emptyCtaNetworkAudit": {
+      "variationIdBeforeClicks": "",
+      "requestsCaptured": []
+    }
+  }
+}

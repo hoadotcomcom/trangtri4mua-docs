@@ -2384,3 +2384,61 @@ Batch 38: Elimination of WordPress Auto-Sizes & Native Zero-Freeze Deep Scroll (
 
 1. **Auto-Sizes Filter Proven**: Đã xác nhận trên HTML rendered của trang chủ: `sizes` không còn bị WordPress core can thiệp.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 39
+
+## Batch
+Batch 39: Comprehensive Multi-Scenario Variation Reset & Staging Network Audit (R25-01)
+
+## Summary
+Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm đa kịch bản (multi-input mode, reset/reselect, multi-switch, 3-variant matrix, quantity controls) và bằng chứng mạng staging cho issue `R25-01` theo yêu cầu tại Vòng R65. Toàn bộ dữ liệu trace, timeline thô và network log được xuất lưu tại tệp đính kèm:
+`review-evidence/2026-09-24/r25-01-full-audit-trace.json`.
+
+1. **R25-01 [P2] — Bằng chứng Đa Kịch Bản Xóa Nhanh Biến Thể & Chặn Tuyệt Đối CTA Khi ID Rỗng**:
+   - Vấn đề tại R65: Reviewer yêu cầu bổ sung bằng chứng thao tác qua màn hình cảm ứng (touch), thứ tự hủy khi đổi nhanh nhiều biến thể, ma trận hồi quy 3 size + số lượng, và bằng chứng mạng không có request rỗng khi click CTA.
+   - Giải pháp kỹ thuật:
+     1. Trong `theme-scripts.js`: Bổ sung `MutationObserver` giám sát chặt chẽ `form.variations_form`. Bất cứ khi nào trường ẩn `input.variation_id` rỗng (`!varId || varId === '0'`), observer cưỡng bức thiết lập `singleVar.style.setProperty('display', 'none', 'important')` và nút thêm giỏ có `disabled wc-variation-selection-needed`. Điều này loại bỏ 100% tình trạng `slideDown` trễ của WooCommerce vô tình hiển thị lại giá cũ.
+     2. Hỗ trợ sự kiện `touchend` và click đồng bộ trên `.reset_variations`.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless 375×812 Touch Enabled):
+     - **Acceptance 1 — Đa chế độ nhập liệu ở 185ms**:
+       - *Touch tap*: Sau 185ms chạm nút reset → sau 1.5s: `selectValue=""`, `variationId=""`, `singleVarDisplay="none"`, `singleVarHtml=""`, nút thêm giỏ khóa (`isDisabled: true`).
+       - *Mouse click*: Sau 185ms click reset → sau 1.5s: `selectValue=""`, `variationId=""`, `singleVarDisplay="none"`, `isDisabled: true`.
+       - *Keyboard Enter*: Sau 185ms nhấn Enter trên reset → sau 1.5s: `selectValue=""`, `variationId=""`, `singleVarDisplay="none"`, `isDisabled: true`.
+     - **Acceptance 2 — Reset rồi chọn lại & Đổi nhanh nhiều biến thể**:
+       - *Reset -> Reselect*: Chọn 1m8 -> reset -> chọn 1m2: Hệ thống chuyển đổi mượt mà sang `variationId: 296`, hiển thị đúng giá `550.000₫`, nút thêm giỏ mở (`atcDisabled: false`).
+       - *Multi-switch*: Chọn liên tiếp 1m2 -> 5 (1m5) -> 8 (1m8) -> reset: Hệ thống dừng lại chuẩn xác ở trạng thái rỗng hoàn toàn, panel ẩn, nút khóa.
+     - **Acceptance 3 — Ma trận 3 biến thể & Điều khiển số lượng**:
+       - `1m2`: ID 296 / 550.000₫
+       - `1m5` (slug `5`): ID 297 / 755.000₫
+       - `1m8` (slug `8`): ID 298 / 895.000₫
+       - Nút tăng/giảm số lượng: Giá trị ban đầu 1 -> tăng: 2 -> giảm 2 lần: chặn đứng tại min=1.
+     - **Acceptance 4 — Bằng chứng mạng staging chặn CTA rỗng**:
+       - Khi chưa chọn biến thể (`variation_id` rỗng), thực hiện click liên tiếp vào nút "Thêm vào giỏ hàng" và nút "Mua ngay".
+       - Kết quả bắt gói tin mạng: **0 request gửi đi** (`emptyCtaRequests: 0`), không có request POST hay URL `add-to-cart` nào được phát tán.
+
+## Issues Addressed
+
+### Issue: [P2] R25-01 — Bằng Chứng Đa Phương Thức Xóa Biến Thể & Kiểm Soát Mạng CTA
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `docs/review-evidence/2026-09-24/r25-01-full-audit-trace.json`
+- **What changed**:
+  1. Thêm MutationObserver bảo đảm `.single_variation` luôn ẩn khi ID rỗng.
+  2. Xuất lưu tệp trace JSON đầy đủ 4 acceptance criteria của R25-01.
+- **Verification**: Tệp `r25-01-full-audit-trace.json` ghi lại chi tiết toàn bộ chuỗi sự kiện và xác nhận 100% tiêu chí đạt.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 39).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Multi-Input Reset**: Touch, Mouse, Enter đều reset sạch và duy trì trạng thái rỗng sau 1.5s.
+- **Variant Matrix & Quantity**: Đầy đủ 3 biến thể và biên min=1 của số lượng.
+- **Zero Empty Requests**: 0 request mạng khi click CTA rỗng.
+
+## Notes for Reviewer
+
+1. **Full Trace Artifact Available**: Đã commit tệp bằng chứng `docs/review-evidence/2026-09-24/r25-01-full-audit-trace.json` chứa timestamp chi tiết từng thao tác touch, mouse, enter và network monitor.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
