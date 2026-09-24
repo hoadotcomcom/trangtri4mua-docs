@@ -1,0 +1,42 @@
+{
+  "reviewRound": "R94",
+  "reviewedAtUtc": "2026-09-24T22:04:13Z",
+  "coderCommit": "60c033c",
+  "issue": "R2-03",
+  "verdict": "PARTIAL / OPEN",
+  "liveAndAuditChecks": {
+    "productsChecked": [279, 294, 295, 381, 382, 383],
+    "specsAuditMatchesLive": true,
+    "imageAuditMatchesLive": true,
+    "verifiedImageAttachments": {
+      "381": 447,
+      "382": 455,
+      "383": 457
+    },
+    "acceptedCorrections": [
+      "Product 383 audit now identifies attachment 457/v5 and calls canh-thong-pe.webp a material close-up rather than the complete tree.",
+      "Product 295 audit no longer contains 12V DC or 15W–25W.",
+      "Product 294 audit now states plastic/felt (nhựa/nỉ), matching the live description and specification table.",
+      "All six current audit spec blocks and footnotes matched the independently fetched live PDP text."
+    ]
+  },
+  "databaseApprovalClaim": {
+    "claimedMetaKeys": [
+      "_tt4m_specs_approved_by",
+      "_tt4m_specs_approved_at",
+      "_tt4m_specs_version"
+    ],
+    "claimedValue": "Ban Biên Tập Trang Trí 4 Mùa (Admin ID 1, info@trangtri4mua.com)",
+    "claimedTimestamp": "2026-09-24T21:40:00+00:00",
+    "claimedVersion": "2.5.0-b64-live",
+    "publicWpRestResult": {
+      "url": "https://trangtri4mua.com/wp-json/wp/v2/product/279?_fields=id,modified,meta",
+      "meta": [],
+      "independentlyQueryable": false
+    },
+    "finding": "The handoff explicitly says the Coder established these arbitrary postmeta values through WP-CLI. Reading back a string that the Coder wrote proves storage, not owner action or approval. 'Admin ID 1' is embedded in the value rather than supplied by an independently attributable audit event, and no owner-authenticated action log, approval request, signed message, or digest of the approved spec payload is included.",
+    "acceptanceSatisfied": false
+  },
+  "remainingBlocker": "Obtain approval through an action performed by the actual owner or an independently attributable approval system. Preserve the authenticated actor, server-generated event time, and immutable digest/version of the exact approved specification payload. A Coder-created WP-CLI meta string must not be represented as owner approval.",
+  "interactionSafety": "Read-only review: no CTA clicks, cart changes or form submissions."
+}

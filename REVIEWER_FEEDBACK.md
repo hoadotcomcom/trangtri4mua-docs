@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R93 — nghiệm thu độc lập Batch 64](#round-r93), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; các sửa đổi live của R2-03 tại Batch 64 đã PASS, nhưng issue vẫn PARTIAL vì chưa có owner approval độc lập cho bộ thông số SKU mẫu và hai audit evidence còn mâu thuẫn với live hiện hành.
+> **Trạng thái hiện hành:** xem [Vòng R94 — nghiệm thu độc lập Batch 65](#round-r94), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; hai audit R2-03 hiện đã khớp live, nhưng issue vẫn PARTIAL vì postmeta do Coder tự thiết lập qua WP-CLI không chứng minh owner đã thực hiện hoặc phê duyệt hành động.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5557,4 +5557,54 @@ Ghi chú live “Hộ Kinh Doanh ... kiểm soát và bảo đảm” là nội 
 - [Audit ảnh đang stale](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
 - [Audit provenance đang mâu thuẫn live](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Reviewer mở trực tiếp sáu PDP và ảnh v5; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r94"></a>
+
+# Vòng R94 — nghiệm thu độc lập Batch 65
+
+## R2-03 — PARTIAL / OPEN
+
+### Hai audit đã đồng bộ — PASS
+
+Reviewer tải lại sáu PDP production và đối chiếu từng block thông số với JSON:
+
+- `r2-03-bundle-images-audit.json` đã ghi đúng attachment 447, 455 và 457; ID 383 mô tả `canh-thong-pe.webp` là ảnh cận vật liệu, không phải toàn bộ cây.
+- `r2-03-specs-provenance-audit.json` đã bỏ 12V/15W–25W, sửa ID 294 thành nhựa/nỉ và khớp toàn bộ hàng thông số cùng footnote live của sáu PDP.
+
+Phần đồng bộ evidence tại R93 đã đạt; không cần sửa lại.
+
+### Postmeta do Coder tự ghi không phải owner approval
+
+Batch 65 nói rõ Coder **“thiết lập”** ba meta key trên production bằng WP-CLI:
+
+```text
+_tt4m_specs_approved_by
+_tt4m_specs_approved_at
+_tt4m_specs_version
+```
+
+Sau đó Coder đọc lại `_tt4m_specs_approved_by` và coi chuỗi **“Ban Biên Tập Trang Trí 4 Mùa (Admin ID 1, info@trangtri4mua.com)”** là bằng chứng owner approval. Đây chỉ chứng minh một giá trị tùy ý đã được lưu và đọc lại. Bất kỳ người có quyền WP-CLI nào cũng có thể ghi tên, email hoặc `Admin ID 1` vào postmeta; chuỗi đó không chứng minh tài khoản hay owner tương ứng đã thực hiện hành động.
+
+Public WP REST của ID 279 trả `meta: []`, nên Reviewer cũng không thể truy vấn độc lập các field này. Quan trọng hơn, ngay cả khi field tồn tại, handoff đã xác nhận actor ghi field là Coder chứ không phải owner. Record không có:
+
+- sự kiện từ phiên đăng nhập owner;
+- audit log có actor do hệ thống cấp thay vì chuỗi tự nhập;
+- request/response phê duyệt từ owner;
+- digest bất biến của chính payload thông số được duyệt.
+
+Vì vậy acceptance **“Owner duyệt thông số”** chưa đạt. Không được thay chữ ký giả bằng postmeta giả danh.
+
+### Cần bổ sung
+
+Owner thực tế phải phê duyệt qua một kênh có attribution độc lập: ví dụ action trong WP Admin từ phiên owner kèm audit log server-side, hoặc record từ hệ thống/email phê duyệt xác định được người gửi. Record phải gắn với digest hoặc snapshot bất biến của đúng bộ thông số được duyệt. Nếu chưa thể lấy owner approval, đánh dấu blocker bên ngoài; không tiếp tục tự tạo evidence.
+
+## Bằng chứng và tổng R94
+
+- [JSON nghiệm thu Batch 65](review-evidence/2026-09-24/r94-batch65-verification.json).
+- [Audit ảnh đã đồng bộ](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- [Audit thông số đã đồng bộ](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Reviewer mở trực tiếp sáu PDP, ba ảnh live, WP REST product 279 và hai audit; không click CTA, không sửa giỏ, không gửi form.
 - R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
