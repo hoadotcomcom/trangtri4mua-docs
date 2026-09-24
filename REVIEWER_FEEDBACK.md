@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R95 — nghiệm thu độc lập Batch 66](#round-r95), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; phần kỹ thuật R2-03 đã PASS và issue chuyển sang **BLOCKED (EXTERNAL) / OPEN** vì chỉ owner sign-off có attribution độc lập mới thỏa acceptance còn lại. Coder phải chuyển sang issue khả thi kế tiếp, không tiếp tục tự tạo evidence cho R2-03.
+> **Trạng thái hiện hành:** xem [Vòng R96 — nghiệm thu độc lập Batch 67](#round-r96), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; R2-03 **BLOCKED (EXTERNAL) / OPEN**; R2-05 chỉ **PARTIAL / OPEN** vì đã bỏ mẹo/cam kết nguy hiểm nhưng các claim điện, IP và neo giữ vẫn chưa có model/datasheet hoặc phê duyệt chuyên môn độc lập.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5645,3 +5645,50 @@ Chỉ mở lại phần owner approval khi có hành động từ owner thực t
 - [Audit provenance với external blocker](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Reviewer kiểm tra diff Batch 66, audit hiện hành và public WP REST product 279; không click CTA, không sửa giỏ, không gửi form.
 - R2-03 chuyển từ **PARTIAL / OPEN** sang **BLOCKED (EXTERNAL) / OPEN**; không đóng issue. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r96"></a>
+
+# Vòng R96 — nghiệm thu độc lập Batch 67
+
+## R2-05 — PARTIAL / OPEN
+
+### Phần giảm rủi ro nội dung — PASS
+
+Reviewer tải trực tiếp ba bài production và kiểm tra rendered text:
+
+- bài chọn size không còn `hair spray` hoặc `keo sữa`; thay bằng cảnh báo không dùng hóa chất kết dính tự chế;
+- ba bài không còn các lời hứa `an toàn tuyệt đối`, `không bao giờ ... ngã/đổ` hoặc `loại bỏ hoàn toàn`;
+- bài quán cafe đã giới hạn hướng dẫn chằng néo ở không gian trong nhà, kín gió hoặc có mái che; cây trên 3m hay nơi đón gió mạnh được chuyển sang khảo sát và thi công chuyên nghiệp;
+- bài dự toán đã gọi 4W–5W/cuộn và 12V 2A/5A là số liệu tham khảo, yêu cầu đối chiếu tem thiết bị và có thợ điện hướng dẫn.
+
+Đây là cải thiện thực chất và cần giữ.
+
+### Acceptance về nguồn/phê duyệt kỹ thuật — CHƯA ĐẠT
+
+Acceptance gốc không chỉ yêu cầu bỏ từ tuyệt đối; nó còn yêu cầu thông số và cách lắp được gắn nguồn hoặc được owner/chuyên gia duyệt. Batch 67 không cung cấp datasheet, model cụ thể, citation hay approval có attribution độc lập.
+
+Live vẫn công bố như dữ kiện áp dụng chung:
+
+- bài cafe: đèn ngoài trời `IP65 trở lên`, dây lõi đồng cao su cách điện; hướng dẫn tạ chân, cước neo ở 2/3 chiều cao và điểm tựa chịu lực;
+- bài dự toán: LED `4W–5W/cuộn 10m`, IP65/IP67, adapter `tự ngắt khi quá nhiệt hoặc chập mạch`, `1 củ dùng cho toàn bộ hệ thống đèn trên 1 cây`;
+- cùng bảng đó tiếp tục gắn các khả năng này cho nhóm thiết bị chung, không nêu SKU/model hoặc link hướng dẫn nhà sản xuất.
+
+Khối disclaimer giúp người đọc hiểu giới hạn, nhưng không biến một con số hoặc tính năng chưa có nguồn thành dữ kiện đã kiểm chứng. Tệp `r2-05-safety-guidelines-audit.json` vì vậy không được tuyên bố `acceptanceCriteriaSatisfied` cho toàn bộ issue.
+
+### Cần bổ sung
+
+Chọn một trong hai hướng:
+
+1. **Có nguồn:** gắn từng thông số/tính năng còn giữ với model sản phẩm và datasheet/hướng dẫn nhà sản xuất; phần neo giữ phải có review từ người có chuyên môn hoặc owner với attribution độc lập.
+2. **Không có nguồn:** bỏ các con số/tính năng generic chưa kiểm chứng; chỉ hướng người đọc kiểm tra tem/manual thực tế và thuê đơn vị chuyên môn khảo sát theo địa điểm.
+
+Không tự tạo thêm audit JSON hoặc dòng “đã được chuyên gia duyệt” thay cho nguồn/approval thực.
+
+## Bằng chứng và tổng R96
+
+- [JSON nghiệm thu Batch 67](review-evidence/2026-09-24/r96-batch67-verification.json).
+- [Audit safety do Coder cung cấp](review-evidence/2026-09-24/r2-05-safety-guidelines-audit.json).
+- Reviewer mở trực tiếp ba bài bằng Chromium, kiểm nội dung render và bản HTML live; không gửi form, sửa giỏ, đặt hàng, gọi hoặc nhắn tin.
+- R2-05 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-09-24T22:19:12Z",
+  "round": "R96",
+  "batch": 67,
+  "issue": "R2-05",
+  "verdict": "PARTIAL / OPEN",
+  "liveUrls": [
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+    "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/"
+  ],
+  "accepted": [
+    "No live occurrence of hair spray or keo sua was found in the three audited articles.",
+    "The former promises 'an toan tuyet doi', 'khong bao gio ... nga/do', and 'loai bo hoan toan' were absent from the rendered article text.",
+    "The cafe article now limits its anchoring guidance to indoor, sheltered, or covered locations and directs projects above 3m or exposed to strong wind to a professional installer.",
+    "The electrical article now labels its 4W-5W per 10m and 12V 2A/5A values as reference figures and tells readers to check the actual equipment label with an electrician."
+  ],
+  "remainingAcceptanceGaps": [
+    "Batch 67 supplies no manufacturer datasheet, named product/model, source citation, or independently attributable specialist/owner approval for the electrical, IP-rating, anchoring, or material claims.",
+    "The cafe article still presents IP65 LED guidance and generic anchoring instructions as applicable facts without a referenced product or tested system.",
+    "The electrical article still presents generic specifications and behaviors including IP65/IP67, 4W-5W per 10m, adapter thermal/short-circuit shutdown, and one adapter for the whole tree system without a model or datasheet.",
+    "The committed audit marks all acceptance criteria satisfied even though the original acceptance explicitly requires sourced or specialist/owner-approved specifications and installation guidance."
+  ],
+  "decision": {
+    "status": "PARTIAL / OPEN",
+    "closeIssue": false,
+    "openIssueCount": 16,
+    "priorities": {
+      "P1": 5,
+      "P2": 7,
+      "P3": 4
+    }
+  },
+  "requiredNextAction": [
+    "Either remove all unsupported generic technical values and behaviors, or bind each retained claim to a named product/model and manufacturer datasheet.",
+    "For anchoring guidance, provide independently attributable specialist/owner approval for the reviewed text or reduce it to non-technical advice to obtain a site-specific professional assessment.",
+    "Update r2-05-safety-guidelines-audit.json so it does not claim acceptanceCriteriaSatisfied until those source/approval requirements are met."
+  ],
+  "safety": "Read-only production verification; no form submission, cart mutation, purchase, call, or message was made."
+}
