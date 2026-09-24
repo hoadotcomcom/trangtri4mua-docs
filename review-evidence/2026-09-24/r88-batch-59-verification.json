@@ -1,0 +1,80 @@
+{
+  "round": "R88",
+  "batch": 59,
+  "checkedAt": "2026-09-24T21:24:00Z",
+  "issue": "R2-03",
+  "live": {
+    "bundle381": {
+      "image": "combo-50-phu-kien-noel-final-600x600.png",
+      "imageVisible": true,
+      "alt": "Combo 50 Phụ Kiện Trang Trí Noel Gia Đình (Phù hợp cây thông 1m5 - 1m8)",
+      "imageComposition": "24 baubles + 6 candy canes + 10 bows + 1 topper + 4 LED strings + 5 figures",
+      "liveDescriptionComposition": "24 baubles + 6 candy canes + 10 bows + 1 topper + 4 LED strings + 5 figures",
+      "contractResult": "PASS"
+    },
+    "bundle382": {
+      "image": "set-70-phu-kien-hoang-gia-final-600x600.png",
+      "imageVisible": true,
+      "alt": "Set 70 Món Phụ Kiện Noel Cao Cấp Hoàng Gia (Phù hợp cây thông 1m8 - 2m4)",
+      "imageAndAuditComposition": "36 baubles + 12 bows + 8 candy/tinsel items + 1 topper + 6 LED strings + 7 Nutcracker figures",
+      "liveDescriptionComposition": "30 baubles + 12 poinsettias + 16 bows + 8 tinsel strings + 4 LED strings",
+      "contractResult": "FAIL",
+      "reason": "The image/audit and the customer-facing product description define different 70-item sets."
+    },
+    "bundle383": {
+      "image": "goi-trang-tri-cafe-100-mon-final-600x600.png",
+      "imageVisible": true,
+      "alt": "Gói Phụ Kiện & Cây Thông Trang Trí Cafe Doanh Nghiệp 100 Món",
+      "imageAndAuditComposition": "1 tree + 100 accessories + 10 LED strings + 1 fence set + 4 gift boxes + 2 figures",
+      "liveDescriptionComposition": "1 tree + 120 accessories + 4 fence panels + 8 LED sets + 1 large Santa figure",
+      "contractResult": "FAIL",
+      "reason": "Counts and component types differ across image/audit and customer-facing product description."
+    },
+    "provenanceFootnote": {
+      "presentOnThreeBundles": true,
+      "textReferences": "TT4M-SPEC-2026"
+    }
+  },
+  "provenanceAudit": {
+    "file": "review-evidence/2026-09-24/r2-03-specs-provenance-audit.json",
+    "legalEntityNamed": true,
+    "signedDateFieldPresent": true,
+    "namedApproverOrSignatory": false,
+    "signatureOrApprovalRecord": false,
+    "supplierLabelOrManualAttachment": false,
+    "certificateOrLabReportAttachment": false,
+    "sourceUrlsOrDocumentHashes": false,
+    "unsupportedCertificationClaims": [
+      "EN71-3 for product 294",
+      "CE/RoHS and V0 flame rating for product 295"
+    ],
+    "assessment": "Self-authored narrative dossier; it does not independently substantiate product-owner approval, supplier provenance, or the cited certification claims."
+  },
+  "repositoryEvidence": {
+    "batch59Commit": "9f46bb1",
+    "filesChanged": [
+      "ASSISTANT_REPLY.md",
+      "review-evidence/2026-09-24/r2-03-bundle-images-audit.json",
+      "review-evidence/2026-09-24/r2-03-specs-provenance-audit.json"
+    ],
+    "sourceOrOriginalEvidenceFilesCommitted": false
+  },
+  "result": {
+    "status": "PARTIAL_OPEN",
+    "accepted": [
+      "All three bundle PDPs now use composite images instead of unrelated single-item featured images.",
+      "Bundle 381 composite matches its live description.",
+      "The TT4M-SPEC-2026 footnote is visible."
+    ],
+    "remaining": [
+      "Align bundle 382 and 383 image, audit, title, description, table and actual sellable package to one component contract.",
+      "Provide auditable owner approval with named approver/date/signature or immutable approval record.",
+      "Attach supplier labels/manuals and real certificate/lab evidence for electrical, EN71-3, CE/RoHS and V0 claims, or remove unsupported claims."
+    ]
+  },
+  "safety": {
+    "clickedCta": false,
+    "cartOrOrderMutation": false,
+    "formSubmission": false
+  }
+}

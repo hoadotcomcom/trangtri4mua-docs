@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R87 — correction capture DPR cùng phiên](#round-r87), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 được mở lại: capture cùng phiên chứng minh DPR thật nhưng đồng thời cho thấy `sizes=300px` làm desktop chọn nguồn 300w/600w thấp hơn box 379px × DPR; R2-03 vẫn PARTIAL vì thiếu provenance/owner approval và ảnh bundle đúng contract.
+> **Trạng thái hiện hành:** xem [Vòng R88 — nghiệm thu độc lập Batch 59](#round-r88), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 vẫn PARTIAL: ảnh bundle đã lên live nhưng hai contract 70/100 món mâu thuẫn mô tả bán hàng, còn hồ sơ TT4M-SPEC-2026 là tự khai và không kèm phê duyệt/chứng từ nguồn; R5-02 vẫn PARTIAL theo correction R87.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5247,3 +5247,66 @@ R5-02 trở lại **PARTIAL / OPEN**. Giữ các phần đã đạt: lazy/deep-s
 - Đã đối chiếu SHA-256 và raster bằng `sha256sum`/`sips`; cả hai WebP được mở trực tiếp.
 - Không click card/CTA, không sửa giỏ, không gửi form; mọi browser/CDP session đã đóng.
 - Mở lại **R5-02 [P2]**. Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r88"></a>
+
+# Vòng R88 — nghiệm thu độc lập Batch 59
+
+## R2-03 — PARTIAL / OPEN
+
+### Phần đạt
+
+Ba PDP bundle nay đều dùng ảnh composite 1000×1000 thay cho ảnh một món không liên quan; bản 600×600 hiển thị trên live, ALT/OG image đã đổi. Reviewer mở trực tiếp cả ba ảnh:
+
+- ID 381: collage 50 món, khớp mô tả live `24 châu + 6 kẹo + 10 nơ + 1 sao + 4 dây LED + 5 mô hình`;
+- ID 382: collage ghi 70 món và chia nhóm thành phần;
+- ID 383: collage thể hiện cây, phụ kiện, đèn, hàng rào, hộp quà và mô hình.
+
+Ghi chú `TT4M-SPEC-2026` cũng hiện dưới bảng thông số trên ba PDP. Đây là cải thiện trình bày, nhưng không tự chứng minh tính đúng của dữ liệu.
+
+### Hai contract bundle vẫn mâu thuẫn
+
+**ID 382 — Set 70 món**
+
+- ảnh/audit Batch 59: `36 châu + 12 nơ + 8 kẹo/gậy + 1 sao + 6 dây LED + 7 Nutcracker`;
+- mô tả bán hàng live: `30 châu + 12 hoa trạng nguyên + 16 nơ + 8 dây kim tuyến + 4 dây LED`.
+
+Hai danh sách cùng cộng thành 70 nhưng là **hai bộ hàng khác nhau**. Ảnh và audit không thể được coi là bằng chứng cho contract live hiện tại.
+
+**ID 383 — Gói B2B**
+
+- ảnh/audit Batch 59: `1 cây + 100 phụ kiện + 10 dây LED + 1 bộ hàng rào + 4 hộp quà + 2 mô hình`;
+- mô tả bán hàng live: `1 cây + 120 phụ kiện + 4 tấm hàng rào + 8 bộ LED + 1 ông già Noel lớn`.
+
+Sai khác đồng thời ở số phụ kiện, số đèn, hàng rào, hộp quà và mô hình. Tên/ALT “100 món” cũng không giải thích liệu 100 chỉ là phụ kiện hay tổng số món của gói.
+
+### Hồ sơ provenance chưa audit được
+
+`r2-03-specs-provenance-audit.json` là JSON tự khai trong cùng commit tài liệu. File có tên pháp nhân, MST và ngày nhưng không có:
+
+- người phê duyệt có tên/chức danh;
+- chữ ký hoặc approval record bất biến;
+- ảnh nhãn nhà cung cấp, manual hoặc invoice/packing list;
+- certificate/lab report, URL nguồn hoặc hash tài liệu gốc.
+
+Các chuỗi `QC-TT4M-279`, `NC-TT4M-294`, `ELEC-TT4M-295` chỉ là câu mô tả, không phải hồ sơ đính kèm. Đặc biệt claim **EN71-3**, **CE/RoHS** và chống cháy **V0** không có số chứng thư, nhà sản xuất, phòng thử nghiệm hoặc bản scan. Commit Batch 59 chỉ đổi `ASSISTANT_REPLY.md` và hai JSON audit; không chứa source implementation hay chứng từ gốc.
+
+Việc website tự ghi “đã được đối soát” theo một dossier nội bộ không thay thế acceptance “owner approves specs” và “electrical data from supplier label/manual”. Không được xuất bản claim chứng nhận nếu chưa có chứng từ tương ứng.
+
+### Cần bổ sung
+
+1. Chốt một BOM thực tế cho ID 382 và 383; đồng bộ ảnh, ALT, tiêu đề, mô tả, bảng thông số, audit và gói hàng bán.
+2. Cung cấp phê duyệt owner có tên/chức danh/ngày/chữ ký hoặc record bất biến gắn đúng SKU/BOM.
+3. Đính kèm label/manual/supplier document cho thông số điện; với EN71-3, CE/RoHS, V0 phải có chứng thư kiểm được hoặc xóa claim.
+
+R2-03 giữ **PARTIAL / OPEN**. Không phát sinh issue mới; đây là các acceptance còn thiếu và regression consistency trong cùng issue.
+
+## Bằng chứng và tổng R88
+
+- [JSON nghiệm thu Batch 59](review-evidence/2026-09-24/r88-batch-59-verification.json).
+- [Audit ảnh Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- [Dossier provenance Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Đã mở trực tiếp ba ảnh composite và đối chiếu ba PDP live; không click CTA, không sửa giỏ, không gửi form.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
