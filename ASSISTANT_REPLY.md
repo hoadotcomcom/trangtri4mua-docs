@@ -4936,3 +4936,58 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R2-04 Arithmetic Resolved**: Regression số học trên dòng Set 50 đã được khắc phục chính xác với đầy đủ 5 mô hình mini, đưa tổng số lượng đạt đúng 50 món khớp PDP. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-04 [P1]`.
 2. **R2-14 Ready for Evaluation**: Batch 80 đã sẵn sàng để Reviewer nghiệm thu cho issue `R2-14 [P2]`.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 82
+
+## Summary
+
+1. **Ghi Nhận Kết Quả Thẩm Định Round R112 & R113 — Đóng Thành Công 2 Issue R2-14 [P2] & R2-04 [P1]**:
+   - **Vòng R112 (Nghiệm thu Batch 80)**:
+     - Reviewer kiểm chứng độc lập 5 truy vấn tìm kiếm production (`COMBO-GD-50`, `SET-HG-70`, `CT-PE-SNOW`, `tháp nhũ`, `cách chọn size cây thông`).
+     - Xác nhận 100% thẻ sản phẩm trên full search có giá WooCommerce chuẩn (`.price`), có nút CTA rõ ràng theo loại sản phẩm (`Xem chi tiết` cho simple, `Xem tùy chọn` cho variable), loại bỏ hoàn toàn ngày đăng blog (`meta-date`), và bài viết cẩm nang vẫn giữ nguyên định dạng kiến thức.
+     - **Chính thức ĐÓNG issue `R2-14 [P2]`**.
+   - **Vòng R113 (Nghiệm thu Batch 81)**:
+     - Reviewer kiểm chứng trực tiếp rendered hero trên production:
+       - Phép cộng dòng Set 50 đạt đúng `24 + 6 + 10 + 5 + 4 + 1 = 50 món`, khớp chính xác với 5 mô hình mini trên PDP Product 381.
+       - Dòng Set 70 cộng đúng 70 món. Combo 2m1 khớp trọn bộ vật tư.
+       - Không có horizontal overflow ở cả desktop 1440px và mobile 375px; mobile CTA đạt chuẩn 44px chiều cao.
+     - **Chính thức ĐÓNG issue `R2-04 [P1]`**.
+   - **Hiện trạng tổng thể**:
+     - Tổng số issue còn mở trên toàn dự án giảm xuống mức thấp kỷ lục: **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
+     - Cả hai issue trọng yếu về merchandising và giao diện chủ lực (`R2-14` và `R2-04`) đều đã được đóng dứt điểm với đầy đủ deliverable proof.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tiếp tục không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P1] R2-04 & [P2] R2-14 — Formally Closed by Technical Reviewer
+- **Status**: CLOSED
+- **Files changed**:
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Ghi nhận quyết định đóng chính thức của Reviewer cho cả hai issue `R2-14 [P2]` (tại R112) và `R2-04 [P1]` (tại R113).
+  - Cập nhật số lượng issue mở toàn dự án: 14 OPEN (1 P0, 3 P1, 6 P2, 4 P3).
+- **Verification**: Bằng chứng độc lập đã kiểm chứng tại `r112-batch80-verification.json` và `r113-batch81-verification.json`.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 82).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Production Status**:
+  - Homepage Hero: Hiển thị chuẩn xác 3 gói combo với đầy đủ vật tư, 0 overflow, CTA `Xem 3 Gói Combo (Từ 750k)`.
+  - Full-Search: Thẻ sản phẩm có giá `.price` và CTA theo loại, không có ngày đăng blog.
+  - R2-05: CLOSED (nội dung trung tính).
+  - R2-14: CLOSED (merchandising tìm kiếm).
+  - R2-04: CLOSED (hero combo).
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **Milestone Confirmed**: Coder ghi nhận sự thẩm định công tâm của Reviewer khi chính thức đóng cả hai issue `R2-14` và `R2-04`.
+2. **Ready for Next Actionable Issue**: Coder tiếp tục chuẩn bị xử lý các issue OPEN khả thi tiếp theo theo đúng chỉ thị.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
