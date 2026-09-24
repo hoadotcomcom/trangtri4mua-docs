@@ -410,3 +410,61 @@ Batch 5: Resolution of R32 Reviewer Findings (R2-06, R2-03, R2-02, R31-01, R2-22
 1. **Sitemap**: Đã kiểm chứng trực tiếp trên cURL, `page-sitemap.xml` chỉ giữ lại các trang thực sự indexable.
 2. **Kẹo gậy (269)**: Khách hàng có thể phân biệt chính xác kẹo tròn và kẹo gậy ngay trên dropdown.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 6
+
+## Batch
+Batch 6: Resolution of R33 Reviewer Findings (R2-15, R2-20, R2-07)
+
+## Summary
+Đã hoàn tất xử lý dứt điểm 3 vấn đề còn lại được Reviewer chỉ ra tại Vòng R33, đạt chuẩn nghiệm thu kỹ thuật và trải nghiệm người dùng:
+1. **R2-15 [P2] — Đổi thứ tự DOM/source order trên 4 trang chính sách**: Đưa `<article class="tt4m-main-col">` lên trước `<aside class="tt4m-sidebar-col">` trong mã nguồn HTML. Đồng bộ visual order trên desktop (grid-column) và source/tab order cho keyboard navigation và screen reader.
+2. **R2-20 [P2] — Tiêu đề bản đồ Showroom và chuẩn hóa cây heading**: Thêm thuộc tính `title` mô tả rõ ràng cho iframe bản đồ Showroom; chuyển toàn bộ các thẻ heading `<h4>` dưới `<h2>` thành `<h3>` trên trang Showroom (17) và chuẩn hóa phân cấp H1 -> H2 trên trang Liên Hệ (16).
+3. **R2-07 [P2] — Quản lý focus khi điều hướng hash `#b2b-consultation`**: Bổ sung cơ chế quản lý focus trong `theme-scripts.js` và thuộc tính `tabindex="-1"` cho section `#b2b-consultation`. Khi điều hướng hash, focus được chuyển trực tiếp vào target thay vì giữ ở `BODY`, cho phép bàn phím di chuyển liền mạch vào các nút hành động (Zalo, Gọi điện).
+
+## Issues Addressed
+
+### Issue: [P2] R2-15 — Đổi DOM source order trang chính sách
+- **Status**: FIXED
+- **Files changed**: Page ID 11 (`chinh-sach-doi-tra`), 12 (`chinh-sach-van-chuyen`), 13 (`chinh-sach-bao-mat`), 14 (`chinh-sach-thanh-toan`)
+- **What changed**: Đổi cấu trúc HTML trong `.tt4m-page-layout`: đặt `<article class="tt4m-main-col">` là con thứ nhất và `<aside class="tt4m-sidebar-col">` là con thứ hai. Trên desktop, CSS Grid đặt sidebar vào `grid-column: 1` và article vào `grid-column: 2`. Trên mobile và trong luồng DOM, nội dung bài viết luôn đứng trước.
+- **Verification**: Script kiểm tra DOM xác nhận 100% 4 trang chính sách có `articleIndex < asideIndex` (article là child[0]). Khi nhấn Tab sau skip-link, focus đi vào nội dung chính sách trước, sau đó mới tới sidebar.
+- **Notes**: Khắc phục hoàn toàn tình trạng Tab nhảy xuống sidebar ở cuối trang.
+
+### Issue: [P2] R2-20 — Tiêu đề bản đồ Showroom và cấu trúc heading Page 16, 17
+- **Status**: FIXED
+- **Files changed**: Page ID 17 (`showroom`), Page ID 16 (`lien-he`)
+- **What changed**:
+  1. Thêm `title="Bản đồ vị trí showroom Trang Trí 4 Mùa Thảo Điền"` cho iframe bản đồ trên trang Showroom.
+  2. Sửa toàn bộ các thẻ `<h4>` trực thuộc các mục `<h2>` trên trang Showroom thành `<h3>`, bảo đảm phân cấp H1 -> H2 -> H3 không nhảy cóc.
+  3. Trên trang Liên Hệ, chuyển tiêu đề form thành `<h2>` và thay thẻ `<h4>` trong sidebar thành khối styled div, bảo đảm luồng heading H1 -> H2 nhất quán.
+- **Verification**: Quét regex kiểm tra: Cả 2 trang có `has_iframe_title: true` và `has_h4: false`. Cây heading tuân thủ nghiêm ngặt chuẩn WCAG 2.1 AA.
+- **Notes**: Khắc phục triệt để lỗi heading hierarchy và iframe title.
+
+### Issue: [P2] R2-07 — Quản lý focus khi điều hướng hash `#b2b-consultation`
+- **Status**: FIXED
+- **Files changed**: `assets/js/theme-scripts.js`, Page ID 23 (`trang-chu`)
+- **What changed**:
+  1. Gán `tabindex="-1"` và `outline: none` cho section `<section id="b2b-consultation">`.
+  2. Bổ sung module `initAnchorFocusManagement()` trong `theme-scripts.js`: Lắng nghe hash trên load, sự kiện `hashchange` và click anchor links. Tự động chuyển focus của trình duyệt (`target.focus({ preventScroll: true })`) vào section mục tiêu.
+- **Verification**: Chromium headless kiểm tra điều hướng đến `https://trangtri4mua.com/#b2b-consultation`: `document.activeElement` trả về đúng thẻ `SECTION#b2b-consultation`. Nhấn Tab tiếp theo đưa focus trực tiếp vào nút Zalo tư vấn.
+- **Notes**: Bảo đảm trải nghiệm bàn phím mượt mà và liền mạch sau khi chuyển trang.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 6).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` với 0 syntax errors.
+- **DOM Source Order**: 4/4 trang chính sách có `<article>` đứng trước `<aside>` trong DOM.
+- **Heading Hierarchy**: 0 lỗi nhảy cóc H2 -> H4 trên Showroom và Liên Hệ.
+- **Accessible Iframes**: 100% iframes Google Maps có thuộc tính `title` mô tả đầy đủ.
+- **Hash Navigation**: `document.activeElement` nhận focus chính xác tại `#b2b-consultation`.
+
+## Notes for Reviewer
+
+1. **DOM Order Policy**: Khách hàng sử dụng bàn phím hoặc screen reader sẽ đọc toàn bộ nội dung chính sách trước khi tiếp cận khối điều hướng phụ.
+2. **B2B Hash Navigation**: Trải nghiệm chuyển trang từ CTA Shop/Category đến B2B section trên trang chủ đã hoàn thiện cả về vị trí cuộn lẫn tiêu điểm bàn phím.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
