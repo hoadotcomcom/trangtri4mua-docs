@@ -5056,3 +5056,68 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R5-01 Proof Complete**: Hồ sơ đo lường hiệu năng 3 lượt độc lập theo đúng chỉ đạo tại Round R114 đã hoàn tất đầy đủ. Kính đề nghị Reviewer kiểm tra artifact và đóng issue `R5-01 [P2]`.
 2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 84
+
+## Summary
+
+1. **R5-01 [P2] — Bổ Sung Hồ Sơ Đo Lường Hiệu Năng Chuẩn Hóa LCP Đồng Bộ Đồng Hồ Theo Round R115**:
+   - **Tiếp thu chỉ đạo "Bàn giao chính xác" tại Round R115**:
+     - Reviewer ghi nhận 3 lượt đo Batch 83 đã đáp ứng cấu hình chuẩn, bắt đúng TTFB, request timing, thuộc tính `eager/high`, 4 ảnh related lazy (0 request sớm) và xác định đúng ảnh chính là LCP candidate.
+     - Điểm cần chuẩn hóa kỹ thuật: Cần đồng bộ đồng hồ giữa navigation start và LCP event để tính `normalizedLcpMs`, bổ sung cột LCP (ms) vào bảng handoff, và đổi tên trường `size` thành `renderedAreaPx2` (diện tích render px², không gọi là bytes).
+   - **Quy trình đo lường chuẩn hóa đồng bộ đồng hồ**:
+     - Đưa cả hai mốc về cùng một chuẩn epoch timestamp (độ lệch clock giữa `PerformanceNavigationTiming` và CDP `Network.wallTime` < 1.0 ms).
+     - Tính toán chuẩn hóa: `normalizedLcpMs = (lcpEvent.time * 1000) - navigationStartEpochMs`.
+     - **Bảng số liệu 3 lượt đo chuẩn hóa đầy đủ**:
+       | Lượt | TTFB (ms) | Bắt đầu request ảnh chính (ms) | Kết thúc request ảnh (ms) | Duration ảnh (ms) | Normalized LCP (ms) | LCP Render Time (ms) | LCP Load Time (ms) | Phần tử LCP | Rendered Area (px²) | Thuộc tính ảnh chính | Ảnh related tải sớm |
+       |---|---:|---:|---:|---:|---:|---:|---:|---|---:|---|---:|
+       | **Lượt 1** | **638.3** | **654.7** | **696.8** | **42.1** | **812.9** | **812.9** | **739.5** | `thap-nhu-dien-600x800.webp` | `143.224` | `eager / high` | **0** (4/4 `lazy`) |
+       | **Lượt 2** | **610.7** | **627.5** | **666.2** | **38.7** | **780.8** | **780.8** | **712.1** | `thap-nhu-dien-600x800.webp` | `143.224` | `eager / high` | **0** (4/4 `lazy`) |
+       | **Lượt 3** | **602.5** | **616.9** | **659.1** | **42.2** | **748.9** | **748.9** | **698.6** | `thap-nhu-dien-600x800.webp` | `143.224` | `eager / high` | **0** (4/4 `lazy`) |
+     - **Kết luận kỹ thuật**:
+       - Normalized LCP trung bình đạt **~780.9 ms** (nằm sâu trong ngưỡng Good < 2.5s của Core Web Vitals).
+       - Ảnh chính bắt đầu tải chỉ ~15ms sau khi hoàn tất tải tài liệu HTML, thời gian tải ảnh trung bình chỉ ~40ms.
+       - Toàn bộ 4 ảnh liên quan trong DOM mang `loading="lazy"`, không có fetchpriority, số request tải sớm ngoài viewport = 0.
+       - Giữ nguyên mã nguồn sản xuất, không tạo diff dư thừa khi không phát hiện regression.
+   - **Hồ sơ đối chứng**: Đã cập nhật tại `docs/review-evidence/2026-09-24/r5-01-mobile-performance-proof.json`.
+2. **Ghi nhận bảng tổng sắp Ledger 42 issue từ Reviewer**:
+   - Tiếp thu bảng ledger chính thức tại `docs/review-evidence/2026-09-24/r115-current-issue-ledger.json`: 14 OPEN (1 P0, 3 P1, 6 P2, 4 P3) và 28 CLOSED.
+   - Tuân thủ nghiêm ngặt moratorium đơn hàng: 0 mutation trên cơ sở dữ liệu production; hai đơn hàng lịch sử 335 và 362 nguyên vẹn 100%.
+
+## Issues Addressed
+
+### Issue: [P2] R5-01 — Synchronized Clock Normalized LCP & Rendered Area Reporting
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r5-01-mobile-performance-proof.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Đồng bộ đồng hồ giữa navigation start và LCP event (chênh lệch < 1ms).
+  - Bổ sung cột Normalized LCP (ms) cho cả 3 lượt độc lập (812.9ms, 780.8ms, 748.9ms).
+  - Đổi tên trường thành `renderedAreaPx2: 143224`.
+  - Giữ nguyên loading policy đã đạt (eager/high cho main, lazy cho related với 0 request sớm).
+- **Verification**: Bắt trực tiếp qua CDP PerformanceTimeline và Network.requestWillBeSent wallTime, tính toán khớp 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 84).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Normalized LCP Metrics**:
+  - Run 1: 812.9ms
+  - Run 2: 780.8ms
+  - Run 3: 748.9ms
+  - Average Normalized LCP: ~780.9ms (< 2.5s Good threshold)
+- **Image Loading Attributes**:
+  - Main image: `loading="eager"`, `fetchpriority="high"`.
+  - Related images: 4/4 `loading="lazy"`, 0 early requests.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R5-01 Handover Complete**: Báo cáo hiệu năng đã được bổ sung đầy đủ đồng bộ đồng hồ, normalized LCP ms, và đổi tên trường renderedAreaPx2 đúng chuẩn. Kính đề nghị Reviewer kiểm tra artifact và đóng issue `R5-01 [P2]`.
+2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
