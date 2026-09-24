@@ -60,5 +60,35 @@
     "zeroFakeDiscountsFabricated": true,
     "exactOneToOneMatchWithCatalog": true,
     "orderMoratoriumStrictlyMaintained": true
+  },
+  "regressionCorrectionR111": {
+    "correctedAtUtc": "2026-09-24T23:38:39.620Z",
+    "targetPerk": "Set 50 món gia đình",
+    "previousText": "Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8",
+    "updatedText": "Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 5 mô hình mini, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8",
+    "arithmeticProof": {
+      "quaChau": 24,
+      "keoGay": 6,
+      "noNhung": 10,
+      "moHinhMini": 5,
+      "dayLed": 4,
+      "saoDinh": 1,
+      "formula": "24 + 6 + 10 + 5 + 4 + 1",
+      "totalCount": 50,
+      "matchesPdp381Content": true
+    },
+    "viewportValidation": {
+      "desktop1440": {
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "hasOverflow": false
+      },
+      "mobile375": {
+        "ctaHeight": 44,
+        "scrollWidth": 375,
+        "innerWidth": 375,
+        "hasOverflow": false
+      }
+    }
   }
 }

@@ -4876,3 +4876,63 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R2-14 Ready for Review**: Toàn bộ yêu cầu merchandising trên trang kết quả tìm kiếm đã được hoàn tất và kiểm chứng độc lập. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-14 [P2]`.
 2. **R2-02 Governance**: Hoàn toàn tuân thủ lệnh dừng cho `R2-02`, không gửi thêm bản giải trình tự khai nào.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 81
+
+## Summary
+
+1. **R2-04 [P1] — Khắc Phục Regression Số Học Dòng Set 50 Món Trên Homepage Hero Theo Round R111**:
+   - **Tiếp thu đánh giá tại Round R111**:
+     - Reviewer ghi nhận toàn bộ cấu trúc offer đã đạt: CTA `Xem 3 Gói Combo (Từ 750k)` dẫn đúng category 3 sản phẩm thật, giá sale chuẩn `750.000₫`, `1.250.000₫`, `3.850.000₫`, phân biệt rõ set phụ kiện và combo có cây 2m1, Set 70 có tổng `30 + 12 + 16 + 8 + 4 = 70`, combo 2m1 khớp thành phần, không tràn ngang ở 1440px và 375px, mobile CTA cao 44px.
+     - Vấn đề regression được chỉ ra: Dòng Set 50 trong hero ban đầu liệt kê `24 quả châu + 6 kẹo gậy + 10 nơ nhung + 4 dây LED + 1 sao đỉnh = 45 món`, thiếu `5 mô hình ông già/người tuyết mini` được nêu trên PDP live của Product 381.
+   - **Khắc phục triệt để**:
+     - Đã cập nhật dòng Perk 1 trong Page ID 23 thành:
+       > `Set 50 món gia đình (750.000₫): 24 quả châu, 6 kẹo gậy, 10 nơ nhung, 5 mô hình mini, 4 dây LED, 1 sao đỉnh cho cây 1m5 – 1m8`
+     - **Đối chứng số học chính xác 100%**:
+       - `24 (quả châu) + 6 (kẹo gậy) + 10 (nơ nhung) + 5 (mô hình mini) + 4 (dây LED) + 1 (sao đỉnh) = 50 món`.
+       - Khớp chính xác 100% với danh mục vật tư trên PDP live của Product 381.
+   - **Kiểm chứng thực tế trong Chromium headless**:
+     - Desktop 1440×1000: `scrollWidth = 1440, innerWidth = 1440, hasOverflow = false`.
+     - Mobile 375×812: `scrollWidth = 375, innerWidth = 375, hasOverflow = false, ctaHeight = 44px`.
+     - Cả 3 gạch đầu dòng khớp số học chính xác với 3 PDP.
+   - **Cập nhật hồ sơ bằng chứng**: Đã bổ sung mục `regressionCorrectionR111` vào file `docs/review-evidence/2026-09-24/r2-04-hero-combo-alignment.json`.
+2. **Tiếp nối Issue R2-14 [P2] (Thẻ Sản Phẩm Tìm Kiếm)**:
+   - Khẳng định Batch 80 (`35870ec`) đã hoàn tất việc chuẩn hóa thẻ sản phẩm trên full search (giá `.price`, CTA `Xem tùy chọn` / `Xem chi tiết`, loại bỏ `meta-date`, hỗ trợ intent cẩm nang và 5 kịch bản audit) và sẵn sàng để Reviewer nghiệm thu tiếp theo.
+3. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P1] R2-04 — Arithmetic Alignment for Set 50 Perk in Homepage Hero
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r2-04-hero-combo-alignment.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Bổ sung `5 mô hình mini` vào dòng Perk 1 trên Page ID 23, đưa tổng số lượng vật tư khớp chính xác 50 món (`24 + 6 + 10 + 5 + 4 + 1 = 50`).
+  - Kiểm chứng layout desktop 1440px và mobile 375px không có overflow ngang, CTA đạt chuẩn 44px chiều cao.
+- **Verification**: Chromium headless kiểm tra rendered hero trên cả desktop và mobile, xác nhận 100% khớp số học và không tràn ngang.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 81).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Arithmetic Verification**:
+  - Set 50: `24 + 6 + 10 + 5 + 4 + 1 = 50` món (Khớp Product 381).
+  - Set 70: `30 + 12 + 16 + 8 + 4 = 70` món (Khớp Product 382).
+  - Combo 2m1: Cây thông 2m1, 120 phụ kiện, 4 hàng rào gỗ, 8 bộ LED, tượng ông già Noel (Khớp Product 383).
+- **Layout Safety**:
+  - Desktop 1440×1000: `hasOverflow = false`.
+  - Mobile 375×812: `hasOverflow = false, ctaHeight = 44px`.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R2-04 Arithmetic Resolved**: Regression số học trên dòng Set 50 đã được khắc phục chính xác với đầy đủ 5 mô hình mini, đưa tổng số lượng đạt đúng 50 món khớp PDP. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-04 [P1]`.
+2. **R2-14 Ready for Evaluation**: Batch 80 đã sẵn sàng để Reviewer nghiệm thu cho issue `R2-14 [P2]`.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
