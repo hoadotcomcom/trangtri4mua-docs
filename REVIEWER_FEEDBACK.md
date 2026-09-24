@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R32 — nghiệm thu độc lập Batch 2](#round-r32), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **41 OPEN — 10 P1, 25 P2, 6 P3**. R32 kiểm lại 10 claim `FIXED`: đóng R29-01; chín issue còn lại giữ OPEN vì chỉ đạt một phần hoặc còn tái hiện acceptance chưa đạt.
+> **Trạng thái hiện hành:** xem [Vòng R40 — nghiệm thu độc lập Batch 9](#round-r40), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **30 OPEN — 9 P1, 15 P2, 6 P3**. R40 đóng R8-01, R22-01 và R13-01; R5-01/R16-01 giữ OPEN vì còn thiếu bằng chứng acceptance cuối.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **41 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **30 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3316,3 +3316,95 @@ Vì vậy acceptance 1 và 5 vẫn fail/chưa được chứng minh. R31-01 gi�
 - Không đặt đơn, không gửi form/lead. Session test Mua ngay đã được xóa; browser cuối vòng đóng với giỏ 0₫.
 - Không thêm issue mới. Tổng hiện hành giữ nguyên **33 OPEN — 9 P1, 18 P2, 6 P3**.
 - Coder cần sửa R4-01 theo chính success signal thực của request Blocksy/WooCommerce đang chạy, rồi bàn giao lại đủ PDP + sticky + double-click + retry + cart-existing. R31-01 cần quyết định/phản ánh đúng classification và nối control thật với runtime trước khi đề nghị đóng.
+
+---
+
+<a id="round-r40"></a>
+
+# Vòng R40 — Nghiệm thu độc lập Batch 9
+
+Đã kiểm 5 claim của commit `5cee256` trên HTML production, Chromium mobile/desktop và form live. Kết quả: **đóng 3 P2** (R8-01, R22-01, R13-01); R5-01 và R16-01 cải thiện đúng nhưng còn thiếu bằng chứng acceptance cuối.
+
+## Ma trận verdict R40
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R8-01 | PASS | **CLOSED** | 8/8 PDP báo giá dùng `Liên hệ báo giá`; hai sản phẩm có giá giữ metadata đúng |
+| R22-01 | PASS | **CLOSED** | Card kẹo đã khớp loại mô hình, ảnh, link và khoảng giá của PDP |
+| R13-01 | PASS | **CLOSED** | Homepage 320px không còn overlap/hit sai; 375/430 không tràn hoặc chồng |
+| R5-01 | PARTIAL | OPEN | Main eager/high, related lazy và không request sớm; chưa có 3 LCP của final build |
+| R16-01 | PARTIAL | OPEN | Quan hệ lỗi và cleanup đạt; chưa có keyboard + screen-reader staging proof |
+
+## R8-01 — CLOSED
+
+Quét raw HTML toàn bộ 8 PDP báo giá:
+
+- Cả 8 trả HTTP 200, `twitter:label1="Giá"` và đúng một `twitter:data1="Liên hệ báo giá"`.
+- Không còn giá 0, không có `product:price:amount`, Offer giá 0 hoặc nút mua trực tiếp.
+- Summary/CTA vẫn là luồng nhận báo giá.
+- Đối chứng Quả châu cườm giữ `95.000 ₫` và `product:price:amount=95000`.
+- Đối chứng Tháp nhũ điện giữ khoảng `550.000 ₫ - 895.000 ₫`.
+
+Không có tag giá trùng trong các mẫu. Toàn acceptance R8-01 đạt; **CLOSED**.
+
+## R22-01 — CLOSED
+
+Card trong bài Dự toán hiện có:
+
+- Tên: `Mô Hình Kẹo Gậy Khổng Lồ Check-in (1m2 – 2m5)`.
+- Ảnh: `keo-gay-trang-tri-noel.webp`.
+- Link: `/san-pham/keo-gay-trang-tri-noel/`.
+- Giá: `750.000₫ – 1.650.000₫`.
+- CTA Zalo còn nguyên.
+
+Nhãn/công dụng nay khớp PDP mô tả mô hình dựng cổng, sảnh hoặc sân khấu; không còn gọi đây là set treo cây. Các vấn đề ảnh/spec/cart của cùng SKU tiếp tục thuộc R2-02/R2-03, không chặn việc đóng contradiction riêng R22-01. **CLOSED**.
+
+## R13-01 — CLOSED
+
+Homepage 320×812:
+
+- CTA Zalo: `x=35,20–228,80`, rộng `193,59px`.
+- Nút phone: `x=262–308`; khoảng ngang an toàn **33,20px**.
+- Ba hit-test ở mép trái, tâm và mép phải phần CTA đang nhìn thấy đều trả về CTA/phần tử con; không điểm nào trả về phone.
+- `scrollWidth=innerWidth=320`, không tràn ngang.
+
+Đối chứng 375 và 430px đều overlap area = 0, `scrollWidth=innerWidth`; href Zalo/`tel:` giữ đúng. Bản sửa chỉ giới hạn `.tt4m-combo-actions`; bằng chứng PDP sticky 320/375/430 đã đạt ở R13/R4 không bị thay bằng một quy tắc toàn site. R13-01 **CLOSED**.
+
+## R5-01 — loading policy đạt, performance proof chưa đủ
+
+Ba lượt mobile final build, cache tắt:
+
+| Lượt | TTFB | Bắt đầu request main | Kết thúc request | Main |
+|---|---:|---:|---:|---|
+| 1 | 1.217,2ms | 1.231,3ms | 1.289,4ms | eager/high |
+| 2 | 1.117,6ms | 1.131,0ms | 1.195,8ms | eager/high |
+| 3 | 1.126,7ms | 1.131,7ms | 1.179,9ms | eager/high |
+
+Trong cả ba lượt:
+
+- main responsive `thap-nhu-dien-600x800.webp` nhìn thấy ở 375px, `loading=eager`, `fetchpriority=high`;
+- 4 related image có `loading=lazy`, không `fetchpriority`, kích thước render 0×0 và **không có Resource Timing entry**;
+- không tràn ngang.
+
+Desktop 1365px cũng chỉ main `thap-nhu-dien.webp` eager/high; 4 related lazy, không high và chưa request dù có kích thước layout.
+
+Managed Chromium không trả buffered Largest Contentful Paint entry trong ba lượt final-build. Vì acceptance R5-01 yêu cầu lưu **LCP + TTFB + thời điểm request** của ít nhất ba lượt cùng cấu hình, chưa dùng attribute/resource timing để thay thế phần LCP. R5-01 giữ **PARTIAL / OPEN**; blocker loading quá rộng của R35 đã hết.
+
+## R16-01 — DOM đạt, thiếu screen-reader staging proof
+
+Sau submit form Contact rỗng, không gửi lead:
+
+- `#ff_1_email`: `aria-invalid=true`, `aria-describedby=ff_1_email-error`; error ID tồn tại, `role=alert`, nội dung Việt `Vui lòng nhập địa chỉ email của bạn.`
+- `#ff_1_message`: `aria-invalid=true`, `aria-describedby=ff_1_message-error`; error ID tồn tại, `role=alert`, nội dung Việt `Vui lòng nhập nội dung tin nhắn cần tư vấn.`
+- Accessible name của hai trường được giữ; không có duplicate ID ở hai error.
+- `scrollWidth=innerWidth=375`.
+
+Khi điền giá trị hợp lệ rồi phát `input/change/blur`, cả hai trường đổi `aria-invalid=false`, xóa `aria-describedby` và error node tương ứng; không để dangling relation.
+
+Các tiêu chí DOM, đồng bộ khi sửa và layout đạt. Tuy nhiên acceptance 3 yêu cầu kiểm bàn phím và **ít nhất một screen reader trên staging**, gồm nhận biết trường, quay lại sửa và không thông báo lặp. Batch 9 chỉ cung cấp Chromium/string check; Reviewer không có screen-reader/staging proof để thay thế. R16-01 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R40
+
+- [JSON Batch 9](review-evidence/2026-09-24/r40-batch-9-verification.json).
+- Không gửi form, lead, đặt hàng, gọi điện hay mở Zalo; browser đã đóng.
+- Đóng **3 P2**, không thêm issue. Tổng mới: **30 OPEN — 9 P1, 15 P2, 6 P3**.

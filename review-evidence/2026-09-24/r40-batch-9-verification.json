@@ -1,0 +1,552 @@
+{
+  "round": "R40",
+  "date": "2026-09-24",
+  "source_commit": "5cee256",
+  "handoff": "Implementation Report — Batch 9",
+  "verdicts": {
+    "R8-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "evidence": {
+        "quoteProducts": [
+          {
+            "slug": "ngoi-sao-nhu-do-bac",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "hang-rao-go-trang-tri-goc-cay",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "hang-rao-khuc-go-trang-tri-goc-cay",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "ngoi-sao-nhu-dinh-sequin",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "qua-chau-nhu-do-hoa-tiet-la",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "chau-tron-do",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "que-keo-xoan-cam-canh",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          },
+          {
+            "slug": "chau-guong-disco",
+            "status": 200,
+            "twitterLabel1": [
+              "Giá"
+            ],
+            "twitterData1": [
+              "Liên hệ báo giá"
+            ],
+            "productPrice": [],
+            "addToCart": false,
+            "quote": true,
+            "offerZero": false
+          }
+        ],
+        "controls": [
+          {
+            "slug": "qua-chau-cuom",
+            "twitterData1": [
+              "95.000 ₫"
+            ],
+            "productPrice": [
+              "95000"
+            ],
+            "addToCart": true
+          },
+          {
+            "slug": "thap-nhu-dien",
+            "twitterData1": [
+              "550.000 ₫ - 895.000 ₫"
+            ],
+            "productPrice": [],
+            "addToCart": true
+          }
+        ]
+      }
+    },
+    "R22-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "evidence": {
+        "cardTitle": "Mô Hình Kẹo Gậy Khổng Lồ Check-in (1m2 – 2m5)",
+        "cardPrice": "750.000₫ – 1.650.000₫",
+        "href": "/san-pham/keo-gay-trang-tri-noel/",
+        "image": "/wp-content/uploads/2026/09/keo-gay-trang-tri-noel.webp",
+        "destinationRole": "mô hình dựng cổng/sảnh/sân khấu",
+        "consultationLink": true
+      }
+    },
+    "R13-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "evidence": {
+        "home320": {
+          "viewport": {
+            "w": 320,
+            "h": 812
+          },
+          "scrollWidth": 320,
+          "cta": {
+            "x": 35.203125,
+            "y": 781.8125,
+            "w": 193.59375,
+            "h": 44,
+            "right": 228.796875,
+            "bottom": 825.8125
+          },
+          "phone": {
+            "x": 262,
+            "y": 692,
+            "w": 46,
+            "h": 46,
+            "right": 308,
+            "bottom": 738
+          },
+          "gap": 33.203125,
+          "points": [
+            {
+              "x": 37.203125,
+              "y": 803.8125,
+              "insideCta": true,
+              "insidePhone": false,
+              "hit": "tt4m-btn-combo-secondary"
+            },
+            {
+              "x": 132,
+              "y": 803.8125,
+              "insideCta": true,
+              "insidePhone": false,
+              "hit": ""
+            },
+            {
+              "x": 226.796875,
+              "y": 803.8125,
+              "insideCta": true,
+              "insidePhone": false,
+              "hit": "tt4m-btn-combo-secondary"
+            }
+          ]
+        },
+        "home375": {
+          "w": 375,
+          "scrollWidth": 375,
+          "cta": {
+            "x": 38.5,
+            "y": 742.09375,
+            "w": 242,
+            "h": 44,
+            "right": 280.5,
+            "bottom": 786.09375
+          },
+          "phone": {
+            "x": 317,
+            "y": 692,
+            "w": 46,
+            "h": 46,
+            "right": 363,
+            "bottom": 738
+          },
+          "overlap": 0
+        },
+        "home430": {
+          "w": 430,
+          "scrollWidth": 430,
+          "cta": {
+            "x": 41.796875,
+            "y": 619.4375,
+            "w": 290.390625,
+            "h": 44,
+            "right": 332.1875,
+            "bottom": 663.4375
+          },
+          "phone": {
+            "x": 372,
+            "y": 692,
+            "w": 46,
+            "h": 46,
+            "right": 418,
+            "bottom": 738
+          },
+          "overlap": 0
+        },
+        "regressionNote": "Current CSS change is scoped to .tt4m-combo-actions; prior PDP 320/375/430 sticky evidence remains valid. Fresh PDP metric attempt timed out in the browser harness and is not claimed as new evidence."
+      }
+    },
+    "R5-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "evidence": {
+        "mobileRuns": [
+          {
+            "lcp": null,
+            "ttfb": 1217.1999998092651,
+            "main": {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+              "loading": "eager",
+              "fetchpriority": "high",
+              "w": 328,
+              "h": 437.328125
+            },
+            "resource": {
+              "startTime": 1231.3000001907349,
+              "responseEnd": 1289.4000000953674,
+              "transferSize": 175258
+            },
+            "related": [
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-hong-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-guong-disco-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-cu-toi-kim-sa-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              }
+            ],
+            "innerWidth": 375,
+            "scrollWidth": 375
+          },
+          {
+            "lcp": null,
+            "ttfb": 1117.6000003814697,
+            "main": {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+              "loading": "eager",
+              "fetchpriority": "high",
+              "w": 328,
+              "h": 437.328125
+            },
+            "resource": {
+              "startTime": 1131,
+              "responseEnd": 1195.8000001907349,
+              "transferSize": 175258
+            },
+            "related": [
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-guong-disco-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/tat-kim-tuyen-do-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-tron-kim-sa-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-do-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              }
+            ],
+            "innerWidth": 375,
+            "scrollWidth": 375
+          },
+          {
+            "lcp": null,
+            "ttfb": 1126.7000002861023,
+            "main": {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+              "loading": "eager",
+              "fetchpriority": "high",
+              "w": 328,
+              "h": 437.328125
+            },
+            "resource": {
+              "startTime": 1131.7000002861023,
+              "responseEnd": 1179.9000000953674,
+              "transferSize": 175258
+            },
+            "related": [
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-gay-nhung-no-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-dung-hong-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              },
+              {
+                "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/gau-dung-khan-ke-300x300.webp",
+                "loading": "lazy",
+                "fetchpriority": null,
+                "w": 0,
+                "h": 0,
+                "requested": false
+              }
+            ],
+            "innerWidth": 375,
+            "scrollWidth": 375
+          }
+        ],
+        "desktop": {
+          "lcp": null,
+          "ttfb": 1190.9000000953674,
+          "main": {
+            "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien.webp",
+            "loading": "eager",
+            "fetchpriority": "high",
+            "w": 592.28125,
+            "h": 789.703125
+          },
+          "resource": {
+            "startTime": 1195.4000000953674,
+            "responseEnd": 1245.9000000953674,
+            "transferSize": 279788
+          },
+          "related": [
+            {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-que-kim-tuyen-hong-300x300.webp",
+              "loading": "lazy",
+              "fetchpriority": null,
+              "w": 264.125,
+              "h": 264.125,
+              "requested": false
+            },
+            {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-tron-do-300x300.webp",
+              "loading": "lazy",
+              "fetchpriority": null,
+              "w": 264.125,
+              "h": 264.125,
+              "requested": false
+            },
+            {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-hong-kim-sa-300x300.webp",
+              "loading": "lazy",
+              "fetchpriority": null,
+              "w": 264.125,
+              "h": 264.125,
+              "requested": false
+            },
+            {
+              "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-hat-noi-1-300x300.webp",
+              "loading": "lazy",
+              "fetchpriority": null,
+              "w": 264.125,
+              "h": 264.125,
+              "requested": false
+            }
+          ],
+          "innerWidth": 1365,
+          "scrollWidth": 1365
+        }
+      },
+      "blocker": "Three final-build runs captured TTFB and main-image request timing but the managed Chromium session returned no buffered LCP entry. Existing acceptance explicitly requires final before/after LCP evidence; main/related loading policy itself now passes."
+    },
+    "R16-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "evidence": {
+        "emptySubmit": {
+          "active": "",
+          "fields": [
+            {
+              "id": "ff_1_email",
+              "invalid": "true",
+              "describedBy": "ff_1_email-error",
+              "accessibleName": "Địa chỉ Email",
+              "error": {
+                "id": "ff_1_email-error",
+                "text": "Vui lòng nhập địa chỉ email của bạn.",
+                "role": "alert"
+              }
+            },
+            {
+              "id": "ff_1_message",
+              "invalid": "true",
+              "describedBy": "ff_1_message-error",
+              "accessibleName": "Nội dung yêu cầu (Diện tích, phong cách, ngân sách...)",
+              "error": {
+                "id": "ff_1_message-error",
+                "text": "Vui lòng nhập nội dung tin nhắn cần tư vấn.",
+                "role": "alert"
+              }
+            }
+          ],
+          "alerts": [
+            {
+              "id": "ff_1_email-error",
+              "text": "Vui lòng nhập địa chỉ email của bạn."
+            },
+            {
+              "id": "ff_1_message-error",
+              "text": "Vui lòng nhập nội dung tin nhắn cần tư vấn."
+            }
+          ],
+          "duplicateIds": [
+            "footer-menu"
+          ],
+          "scrollWidth": 375,
+          "innerWidth": 375
+        },
+        "afterCorrection": {
+          "fields": [
+            {
+              "id": "ff_1_email",
+              "invalid": "false",
+              "describedBy": null,
+              "errorExists": false
+            },
+            {
+              "id": "ff_1_message",
+              "invalid": "false",
+              "describedBy": null,
+              "errorExists": false
+            }
+          ]
+        }
+      },
+      "blocker": "DOM relationships, Vietnamese errors, cleanup and mobile layout pass. Acceptance still requires keyboard plus at least one screen-reader staging check and no-repeat behavior; no screen-reader/staging evidence was supplied or available."
+    }
+  },
+  "current_total": {
+    "open": 30,
+    "p1": 9,
+    "p2": 15,
+    "p3": 6,
+    "closed_in_round": 3,
+    "new_issues": 0
+  },
+  "cleanup": {
+    "orders": false,
+    "leads": false,
+    "formsSubmitted": false,
+    "browserClosed": true
+  }
+}
