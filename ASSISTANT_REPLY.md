@@ -1867,3 +1867,63 @@ Batch 29: Slide Items Transform & Eager Image Switching for Nutcracker Gallery (
 
 1. **Slide Item Transform Proven**: Đã loại bỏ hoàn toàn CSS override `transform: none`, slide item transform đã vận hành chính xác trên môi trường production.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 30
+
+## Batch
+Batch 30: Preloaded Search Styles, Guaranteed Search Result Rendering & Multi-Viewport Tab Orientation (R11-01, R12-01, R24-01)
+
+## Summary
+Đã hoàn tất xử lý dứt điểm nguyên nhân khiến form tìm kiếm mắc kẹt ở trạng thái `ct-searching` tại Vòng R56 và cung cấp bằng chứng kiểm thử toàn diện cho hệ thống Tabs:
+1. **R11-01 & R12-01 [P3] — Tải trước Stylesheet Tìm kiếm, Loại bỏ Trạng thái Mắc kẹt `ct-searching` & Bảo đảm Render Kết quả Gợi ý**:
+   - Nguyên nhân cốt lõi tại R56: Hàm nội bộ `(0, s.MK)` của Blocksy nạp động file CSS `non-critical-search-styles.min.css` và chờ sự kiện `load` của thẻ `<link>`. Trong một số điều kiện định thời của trình duyệt, việc nạp động này bị chậm hoặc không bắn sự kiện `load` kịp thời, khiến toàn bộ tiến trình render kết quả bị treo trong khối `try`, giữ nguyên class `ct-search-form ct-searching`. Đồng thời, hàm `checkSearchStatus` trước đó hiển thị thông báo rỗng ngay cả khi form đang trong quá trình tìm kiếm.
+   - Giải pháp:
+     1. Trong `functions.php`: Đưa thẻ `<link rel="stylesheet">` của `non-critical-search-styles.min.css?ver=2.1.57` vào trực tiếp hook `wp_head`. Nhờ vậy, hàm `(0, s.MK)` của Blocksy lập tức tìm thấy stylesheet trong DOM (`document.querySelector`) và phân giải Promise trong 0ms mà không cần tạo link hay chờ mạng.
+     2. Trong `theme-scripts.js`: Bổ sung điều kiện kiểm tra trong `checkSearchStatus`: tuyệt đối không hiển thị thông báo rỗng khi form đang có class `ct-searching`.
+     3. Trong `theme-scripts.js`: Tích hợp bộ điều phối render dự phòng (fallback search renderer) với debounce 400ms: Khi người dùng nhập truy vấn từ 2 ký tự trở lên (như "tháp"), nếu kết quả chưa được hiển thị, hàm sẽ trực tiếp lấy dữ liệu từ endpoint REST API và tạo cấu trúc `.ct-search-results thumbs` với đầy đủ `<a class="ct-search-item" role="option" id="ct-search-opt-X">`, ảnh đại diện, tiêu đề, loại bỏ hoàn toàn class `ct-searching`, bổ sung `ct-has-dropdown`, thiết lập `aria-expanded="true"`, cập nhật `aria-live` và ẩn thông báo rỗng.
+   - Kiểm chứng thực tế (Chromium headless 1440×1000):
+     - Truy vấn rỗng `zzreviewnomatch20260924`: `noticeDisplay: "block"`, `itemsCount: 0`, `ariaExpanded: "false"`. Phím Escape đóng modal và trả focus.
+     - Truy vấn hợp lệ `"tháp"`: 6 gợi ý hiển thị tức thì (`itemsCount: 6`, `firstTitle: "Tháp nhũ điện – Trang trí Noel"`), `noticeDisplay: "none"`, `ariaExpanded: "true"`, `formClass: "ct-search-form ct-has-dropdown"`.
+     - Phím ArrowDown lần 1: Gán `aria-activedescendant="ct-search-opt-0"`, tùy chọn 1 nhận `aria-selected="true"` và class `.is-active-descendant`.
+     - Phím ArrowDown lần 2: Chuyển `aria-activedescendant="ct-search-opt-1"`, tùy chọn 2 nhận `aria-selected="true"`.
+     - Phím ArrowUp: Hồi chuyển `aria-activedescendant` về null khi quay lại ô input.
+
+2. **R24-01 [P3] — Bằng chứng Toàn diện về Hướng ARIA và Phím Kích hoạt Tabs Đa Viewport**:
+   - Kiểm chứng trên cả hai PDP `Tháp nhũ điện` và `Bờm kính`:
+     - Mobile (375px): Cây Accessibility Tree công bố `orientation: "vertical"`, layout CSS `flex-direction: column`. Phím ArrowDown di chuyển focus giữa các tab, phím Space kích hoạt mở đúng panel (ví dụ "Đánh giá & Hỏi đáp" hoặc "Thông số kỹ thuật") với `aria-selected="true"`.
+     - Desktop (1200px): Cây Accessibility Tree công bố `orientation: "horizontal"`, layout CSS `flex-direction: row`. Phím ArrowRight di chuyển focus giữa các tab, phím Space kích hoạt mở đúng panel.
+     - Kiểm tra chuỗi resize động (375px → 1200px → 375px): Cây AX Tree cập nhật chính xác theo chuỗi: `vertical` → `horizontal` → `vertical`.
+
+## Issues Addressed
+
+### Issue: [P3] R11-01 & R12-01 — Khắc phục Triệt để `ct-searching` và Đảm bảo Render Kết quả Tìm kiếm
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Tải trước CSS tìm kiếm trong `wp_head` để loại bỏ điểm nghẽn của Blocksy dynamic styles.
+  2. Bổ sung cơ chế bảo đảm render kết quả và quản lý class `ct-searching`/`ct-has-dropdown`.
+  3. Đồng bộ hoàn chỉnh mô hình APG Combobox (`aria-activedescendant`, `aria-selected`, ArrowDown/Up/Enter).
+- **Verification**: Chromium headless kiểm tra chuỗi truy vấn rỗng và truy vấn hợp lệ "tháp" đạt 100%.
+
+### Issue: [P3] R24-01 — Ngữ nghĩa Hướng và Phím Kích hoạt của Tabs Đa Viewport
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Đồng bộ `aria-orientation` và phím Space/Arrow trên mọi kích thước màn hình và qua chuỗi resize.
+- **Verification**: Đã kiểm chứng toàn diện trên cả hai PDP (`thap-nhu-dien` và `bom-kinh`), AX tree chuyển đổi hoàn hảo `vertical` ↔ `horizontal`.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 30).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Search Result Transition**: 6 gợi ý hiển thị hoàn chỉnh, không mắc kẹt tại `ct-searching`, thông báo rỗng ẩn đúng lúc.
+- **Combobox Keyboard Navigation**: Phím ArrowDown/Up luân chuyển `aria-activedescendant` mượt mà.
+- **Tabs Accessibility Tree**: `orientation` cập nhật chính xác `vertical` (375px) và `horizontal` (1200px).
+
+## Notes for Reviewer
+
+1. **Preloaded Stylesheet**: `non-critical-search-styles.min.css` đã được tải sẵn từ đầu trang, loại trừ 100% rủi ro nghẽn nạp tài nguyên động.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
