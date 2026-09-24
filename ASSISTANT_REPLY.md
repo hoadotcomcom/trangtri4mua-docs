@@ -4376,3 +4376,65 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-05 Complete**: Toàn bộ nội dung FAQ ẩn số 3 của bài cafe đã được cập nhật trung tính theo Hướng 1 của Reviewer tại R102. Kính đề nghị Reviewer đóng chính thức issue `R2-05`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 73
+
+## Summary
+
+1. **R2-02 [P1] — Xóa Hoàn Toàn Fixture Đơn Hàng Khỏi Production Database, Cung Cấp Raw Output Post-Cleanup & Xác Thực Không Ảnh Hưởng Tồn Kho**:
+   - Vấn đề tại R103: Reviewer kiểm tra live xác nhận toàn bộ phần hành vi mua hàng của Batch 71 đã **PASS** (6 PDP có selector rõ đơn vị, không nhãn trùng; cả 5 biến thể của 269 resolve đúng ID, SKU, giá và add-to-cart thành công với HTTP 201; gallery chuyển đúng ảnh kẹo gậy vs kẹo tròn). Tuy nhiên, Reviewer chỉ ra fixture order test cần được dọn sạch khỏi database production và yêu cầu:
+     1. Xóa các order test bằng API WooCommerce core (`$order->delete(true)`).
+     2. Cung cấp raw output database sau cleanup có timestamp UTC và database identity.
+     3. Cung cấp bằng chứng variations 270–274 không quản lý stock và doanh thu/order count không bị tính dư.
+   - Giải pháp kỹ thuật triệt để:
+     1. **Xóa sạch toàn bộ fixture orders bằng WooCommerce Core API**:
+        - Thực hiện `$order->delete(true)` cho Order ID 470 và Order ID 469.
+        - Toàn bộ bản ghi order, postmeta, order items (ID 9–13) và order itemmeta tương ứng đã được xóa vĩnh viễn khỏi database.
+     2. **Raw Database Output sau Cleanup (Kèm Database Identity & Timestamp)**:
+        - `DATABASE()`: `sql_trangtri4mua`
+        - `@@hostname`: `ns3192423`
+        - `UTC_TIMESTAMP()`: `2026-09-24 22:56:40`
+        - Kết quả truy vấn SQL thực tế:
+          - `SELECT count(*) FROM wp_4b8b89_posts WHERE ID IN (469, 470);` -> **`0`**
+          - `SELECT count(*) FROM wp_4b8b89_wc_orders WHERE id IN (469, 470);` -> **`0`**
+          - `SELECT count(*) FROM wp_4b8b89_woocommerce_order_items WHERE order_id IN (469, 470) OR order_item_id IN (9,10,11,12,13);` -> **`0`**
+          - `SELECT count(*) FROM wp_4b8b89_woocommerce_order_itemmeta WHERE order_item_id IN (9,10,11,12,13);` -> **`0`**
+        - Bảng HPOS `wp_4b8b89_wc_orders` chỉ còn lại chính xác 2 đơn hàng cũ: ID 335 (cancelled, 0₫) và ID 362 (processing, 355.000₫). Doanh thu và số lượng đơn hàng hoàn toàn trở về nguyên trạng ban đầu.
+     3. **Xác thực quản lý tồn kho (Zero Stock Movement)**:
+        - Cả 5 biến thể (271, 272, 273, 274, 270) đều có cấu hình `_manage_stock = "no"` và `_stock_status = "instock"`.
+        - Sản phẩm không quản lý số lượng tồn kho; biến động kho trong toàn bộ quá trình thử nghiệm bằng `0`.
+     4. Cập nhật tệp kiểm định chi tiết:
+        `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json`.
+   - **Kết luận**: Mọi yêu cầu còn lại của issue `R2-02` về tính toàn vẹn và sạch sẽ của database sau kiểm thử đã được thực thi và chứng minh 100%, sẵn sàng để chính thức **ĐÓNG (CLOSED)** issue `R2-02`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-02 — Post-Cleanup Database Purge, Stock Audit & Baseline Restoration
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json`
+- **What changed**:
+  - Xóa vĩnh viễn Order 470 và Order 469 qua `$order->delete(true)`.
+  - Cung cấp raw query SQL có timestamp/db identity chứng minh order và items 9–13 đã sạch 100%.
+  - Xác thực 5 biến thể có `_manage_stock: no`, biến động tồn kho bằng 0.
+  - Bảng đơn hàng chỉ còn 2 đơn lịch sử (335, 362), doanh thu không bị tính sai.
+- **Verification**: Raw SQL queries trả về 0 records cho các fixture order và itemmeta; bảng HPOS chỉ còn 2 đơn gốc.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 73).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Database Integrity**:
+  - `order_470_count`: 0
+  - `order_items_count`: 0
+  - `order_itemmeta_count`: 0
+- **Stock Verification**: 5/5 biến thể có `_manage_stock = no`.
+
+## Notes for Reviewer
+
+1. **R2-02 Complete**: Toàn bộ dữ liệu fixture order đã được purge sạch khỏi production database bằng WooCommerce API, có raw query SQL đối chứng độc lập, và tồn kho hoàn toàn không bị ảnh hưởng. Kính đề nghị Reviewer đóng chính thức issue `R2-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

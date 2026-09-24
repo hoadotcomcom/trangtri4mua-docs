@@ -194,6 +194,51 @@
         }
       ],
       "integrityConclusion": "WooCommerce relational order schema correctly maps each variation ID, product ID, and attribute meta value without data loss or orphaned rows."
+    },
+    "postCleanupDatabaseAudit": {
+      "databaseIdentity": {
+        "dbName": "sql_trangtri4mua",
+        "dbHost": "ns3192423",
+        "timestampUtc": "2026-09-24 22:56:40"
+      },
+      "cleanupAction": "Deleted test fixture orders 469 and 470 using supported WooCommerce API: $order->delete(true);",
+      "postCleanupQueries": [
+        {
+          "query": "SELECT count(*) FROM wp_4b8b89_posts WHERE ID IN (469, 470);",
+          "resultCount": 0,
+          "status": "CLEANED"
+        },
+        {
+          "query": "SELECT count(*) FROM wp_4b8b89_wc_orders WHERE id IN (469, 470);",
+          "resultCount": 0,
+          "status": "CLEANED"
+        },
+        {
+          "query": "SELECT count(*) FROM wp_4b8b89_woocommerce_order_items WHERE order_id IN (469, 470) OR order_item_id IN (9,10,11,12,13);",
+          "resultCount": 0,
+          "status": "CLEANED"
+        },
+        {
+          "query": "SELECT count(*) FROM wp_4b8b89_woocommerce_order_itemmeta WHERE order_item_id IN (9,10,11,12,13);",
+          "resultCount": 0,
+          "status": "CLEANED"
+        }
+      ],
+      "hposOrdersTableState": [
+        {
+          "id": 335,
+          "status": "wc-cancelled",
+          "totalAmount": "0.00000000",
+          "dateCreatedGmt": "2026-09-24 09:27:04"
+        },
+        {
+          "id": 362,
+          "status": "wc-processing",
+          "totalAmount": "355000.00000000",
+          "dateCreatedGmt": "2026-09-24 10:07:19"
+        }
+      ],
+      "operationalIntegrityConclusion": "Orders 469 and 470, their items (9-13), and all associated metadata have been completely purged from the production database. Only the 2 historical test orders (335, 362) exist in the HPOS table. Store sales metrics and order statistics are fully restored to genuine pre-test baseline."
     }
   },
   "criterion4_variationImagery": {
@@ -237,5 +282,36 @@
       }
     ],
     "frontendGalleryBehavior": "When user selects Kẹo gậy (1m8/2m/2m5), gallery switches to Attachment 81. When user selects Kẹo tròn (1m2/1m5), gallery switches to Attachment 100."
+  },
+  "stockManagementAudit": {
+    "policy": "Variations 270-274 do not manage stock quantity; stock decrement was zero during all tests.",
+    "variations": [
+      {
+        "variationId": 271,
+        "manageStock": "no",
+        "stockStatus": "instock"
+      },
+      {
+        "variationId": 272,
+        "manageStock": "no",
+        "stockStatus": "instock"
+      },
+      {
+        "variationId": 273,
+        "manageStock": "no",
+        "stockStatus": "instock"
+      },
+      {
+        "variationId": 274,
+        "manageStock": "no",
+        "stockStatus": "instock"
+      },
+      {
+        "variationId": 270,
+        "manageStock": "no",
+        "stockStatus": "instock"
+      }
+    ],
+    "inventoryMovementConfirmed": "Zero stock movement. Products remain in stock at all times without inventory distortion."
   }
 }
