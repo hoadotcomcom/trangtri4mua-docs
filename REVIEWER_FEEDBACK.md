@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R49 — nghiệm thu độc lập Batch 21](#round-r49), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. R49 đóng R6-01 sau khi identity schema đồng bộ và Rich Results Test hợp lệ.
+> **Trạng thái hiện hành:** xem [Vòng R50 — nghiệm thu độc lập Batch 22](#round-r50), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. R5-02 còn lỗi ảnh lazy cuối bài và payload DPR2; R12-01 chưa deploy semantics được claim.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4040,3 +4040,41 @@ Toàn bộ acceptance R6-01 đạt trong phạm vi bốn PDP variable và simple
 - [JSON Batch 21](review-evidence/2026-09-24/r49-batch-21-verification.json), gồm URL kết quả Rich Results Test.
 - Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Đóng **1 P2**, không thêm issue. Tổng mới: **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r50"></a>
+
+# Vòng R50 — Nghiệm thu độc lập Batch 22
+
+## R5-02 — PARTIAL / OPEN
+
+Phần đạt ở bài chọn size, 375px/DPR2, cache tắt:
+
+- lúc đầu trang, bốn ảnh card cách viewport hơn 8.000px không có request;
+- markup có `srcset`, `sizes`, kích thước, `loading=lazy`, `decoding=async`;
+- bốn file `-300x300.webp` tồn tại, HTTP 200, lần lượt **31.410 / 34.224 / 34.008 / 34.558 byte**.
+
+Phần fail:
+
+- scroll thật tới y=7.900 rồi `scrollIntoView`, chờ thêm 4–5 giây trên hai browser sạch;
+- cả bốn ảnh vẫn `currentSrc=""`, `complete=false`, `naturalWidth=0`;
+- ảnh không tải/hiển thị khi người đọc tới card, fail acceptance 1. Đối chứng local đổi một ảnh sang eager thì file render được, nên file nguồn không hỏng.
+
+Homepage 375px/DPR2 chọn sáu file 600w, tổng encoded body **639.974 byte**, không phải “dưới 180 KB” như claim. Đây vẫn giảm so baseline ~945 KB nhưng chưa có ma trận mobile/tablet/desktop/DPR cao hoặc phép đo byte cùng cấu hình đủ acceptance 2–3. R5-02 giữ **PARTIAL / OPEN**.
+
+## R12-01 — FAIL / OPEN
+
+Production desktop sau mở modal vẫn có nguyên:
+
+- `role="combobox"`;
+- `aria-autocomplete="list"`;
+- `aria-controls="ct-search-results-..."`.
+
+Gõ thật `tháp` vẫn cho 0 `.ct-search-item`, `aria-expanded=false`, status `Không có kết quả` và notice rỗng hiện. Vì DOM chưa chuyển sang mô hình input search + link như Batch 22 claim, và không có link để kiểm Tab/Enter, R12-01 giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R50
+
+- [JSON Batch 22](review-evidence/2026-09-24/r50-batch-22-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
