@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R51 — nghiệm thu độc lập Batch 23](#round-r51), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Cả bốn claim Batch 23 tiếp tục fail trên production.
+> **Trạng thái hiện hành:** xem [Vòng R52 — nghiệm thu độc lập Batch 24](#round-r52), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Lazy observer và combobox navigation Batch 24 chưa hoạt động trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4124,5 +4124,39 @@ R11-01 giữ **FAIL / OPEN**. Việc Batch 23 chủ động giữ combobox cũng
 ## Bằng chứng và tổng R51
 
 - [JSON Batch 23](review-evidence/2026-09-24/r51-batch-23-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r52"></a>
+
+# Vòng R52 — Nghiệm thu độc lập Batch 24
+
+## R5-02 — FAIL / OPEN
+
+Tải bài chọn size ở 375×812:
+
+- đầu trang: bốn ảnh card giữ `loading=lazy`, `complete=false`, `naturalWidth=0`;
+- scroll thật tới y=7.900, chờ 3,5 giây;
+- cả bốn ảnh vẫn `loading=lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`.
+
+`initLazyImageObserver()` được claim không đổi ảnh sang eager và không kích hoạt tải. Acceptance 1 vẫn fail; các blocker payload/ma trận viewport+DPR ở R50 cũng chưa được giải quyết. R5-02 giữ **FAIL / OPEN**.
+
+## R12-01 — FAIL / OPEN
+
+Homepage desktop sạch, mở modal và gõ thật `tháp`:
+
+- 0 suggestion/link;
+- `aria-expanded=false`;
+- `aria-activedescendant` không có;
+- status `Không có kết quả`;
+- ArrowDown giữ focus ở input vì không có target.
+
+Không thể nghiệm thu keyboard model từ handler tồn tại trên source khi kết quả production không xuất hiện. Ngoài ra mô tả Batch 24 chuyển DOM focus sang link không phải mô hình combobox dùng `aria-activedescendant` mà acceptance đã yêu cầu. R12-01 giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R52
+
+- [JSON Batch 24](review-evidence/2026-09-24/r52-batch-24-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
