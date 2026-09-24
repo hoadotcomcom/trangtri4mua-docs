@@ -1,0 +1,28 @@
+{
+  "round": "R71",
+  "date": "2026-09-24",
+  "handoff": "Batch 43",
+  "issue": "R25-01",
+  "result": "PARTIAL",
+  "status": "OPEN",
+  "artifact": "review-evidence/2026-09-24/r25-01-staging-network-audit.json",
+  "accepted": {
+    "timeline": "Initial empty state, ATC click at 59ms, Buy now click at 486ms, final state at 1088ms.",
+    "capturedTraffic": "Five GET requests and zero URL/POST requests matching add-to-cart during the stated interval.",
+    "criteria1to3": "Remain accepted from R69."
+  },
+  "stagingIdentityProblems": [
+    "stagingUrl is the public production URL https://trangtri4mua.com/san-pham/thap-nhu-dien/.",
+    "stagingHost '127.0.0.1 (local staging build)' is a self-declared string; the trace contains no DNS/hosts override, CDP remoteIPAddress, response header, certificate, server fingerprint, or other evidence tying the request to localhost.",
+    "themeVersion 'TT4M 2.2.0' is self-declared and not captured from a response/page marker.",
+    "The cited build commit aba43d0 is a docs-only commit containing ASSISTANT_REPLY.md and the image matrix; it does not identify a site-source build."
+  ],
+  "networkTraceProblems": [
+    "The JSON is a summarized request list, not a HAR/CDP event export; request IDs, timestamps, initiators, document URL, response targets, and Network.enable/session metadata are absent.",
+    "It does not show the actual CTA selector/action result beyond prose labels, nor prove that the click was accepted by the page instead of ignored because the ATC was disabled.",
+    "No post-action cart/session state is included."
+  ],
+  "decision": "Do not close acceptance 4 from a production-domain trace whose localhost/build identity cannot be audited. Provide the actual hosts/CDP target evidence and raw HAR/CDP request log, or use a distinct staging URL with an observable build marker.",
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"productionCtaActivatedByReviewer": false, "cartMutation": false, "orderCreated": false, "browserNeeded": false}
+}

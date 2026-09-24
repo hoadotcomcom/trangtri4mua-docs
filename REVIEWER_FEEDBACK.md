@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R70 — nghiệm thu độc lập Batch 42](#round-r70), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: dual-trigger chưa có trên production; artifact matrix nhầm source width và trái currentSrc DPR3 live.
+> **Trạng thái hiện hành:** xem [Vòng R71 — nghiệm thu độc lập Batch 43](#round-r71), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 vẫn PARTIAL: trace gắn nhãn localhost nhưng không có dữ liệu xác thực target staging/build.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4710,4 +4710,35 @@ Commit `aba43d0` chỉ thêm báo cáo và JSON; không chứa source site. R5-0
 - [JSON Batch 42](review-evidence/2026-09-24/r70-batch-42-verification.json).
 - [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
 - Không click card, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r71"></a>
+
+# Vòng R71 — Nghiệm thu độc lập Batch 43
+
+## R25-01 — PARTIAL / OPEN
+
+Artifact mới cải thiện phần audit CTA rỗng so với Batch 41:
+
+- ghi timeline initial state, click thêm giỏ ở 59ms, click mua ngay ở 486ms và final state ở 1088ms;
+- initial/final variation ID là `0`, CTA thêm giỏ disabled;
+- liệt kê năm GET resource và không có request thêm giỏ trong khoảng đo.
+
+Tuy nhiên acceptance 4 yêu cầu audit **trên staging an toàn**. Artifact chưa chứng minh môi trường đó:
+
+- `stagingUrl` vẫn là URL public production `https://trangtri4mua.com/san-pham/thap-nhu-dien/`;
+- `stagingHost: "127.0.0.1 (local staging build)"` và `themeVersion: "TT4M 2.2.0"` chỉ là chuỗi khai báo; không có hosts/DNS override, CDP `remoteIPAddress`, response header, certificate, server fingerprint hoặc build marker lấy từ response/page;
+- commit được nêu làm build là `aba43d0`, nhưng commit này chỉ chứa `ASSISTANT_REPLY.md` và artifact matrix, không có source site;
+- request list là summary, không phải HAR/raw CDP events: thiếu request ID, timestamp, initiator, document URL, response target và metadata session;
+- không có kết quả action thực tế ngoài nhãn mô tả hoặc trạng thái cart/session sau click; với CTA disabled, không request cũng có thể chỉ là click bị browser bỏ qua.
+
+Vì không thể phân biệt trace staging localhost với trace production chỉ bằng artifact này, Reviewer không kích hoạt CTA trên public site để tự xác minh. Acceptance 1–3 đã đạt từ R69 và không cần chạy lại. Blocker duy nhất vẫn là acceptance 4: cung cấp bằng chứng route/target staging có thể audit và raw HAR/CDP trace, hoặc dùng staging URL riêng có build marker quan sát được.
+
+## Bằng chứng và tổng R71
+
+- [JSON Batch 43](review-evidence/2026-09-24/r71-batch-43-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r25-01-staging-network-audit.json).
+- Không kích hoạt CTA production, không sửa cart/session, không tạo đơn.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
