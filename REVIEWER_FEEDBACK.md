@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R31 — luồng dữ liệu cá nhân, cookie và thông báo tại điểm thu thập](#round-r31), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **42 OPEN — 11 P1, 25 P2, 6 P3**. R31 thêm R31-01 P1 vì policy chỉ mô tả dữ liệu đơn hàng trong khi first visit ghi attribution cookies và các form công khai thu thập thêm dữ liệu nhưng chưa nối tới notice tương ứng.
+> **Trạng thái hiện hành:** xem [Vòng R32 — nghiệm thu độc lập Batch 2](#round-r32), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **41 OPEN — 10 P1, 25 P2, 6 P3**. R32 kiểm lại 10 claim `FIXED`: đóng R29-01; chín issue còn lại giữ OPEN vì chỉ đạt một phần hoặc còn tái hiện acceptance chưa đạt.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -1540,12 +1540,12 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
 | Q-NEW-PRODUCT-DATA | R26 mới xác nhận ảnh/URL, chưa thử toàn bộ size, schema và thông số năm SKU | DONE | [R27](#round-r27): 5 PDP HTTP/schema/spec, 2 cây × 2 viewport và Tháp nhũ đối chứng; phát hiện R27-01, mở rộng R2-03/R2-06/R6-01. DONE là đã kiểm, không phải đã sửa. |
 | Q-SEARCH-NEW-SKU | Search cũ mới thử “tháp nhũ”, chưa kiểm SKU/tên/intent của năm sản phẩm mới | DONE | [R28](#round-r28): 7 query HTTP, 5 luồng live→full search, 2 mobile, một lần Tab/Enter mở PDP; mở rộng R2-14, không thêm issue trùng. |
-| Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R29](#round-r29): hai category 200 có 3/2 sản phẩm, metadata/schema riêng nhưng vẫn `nofollow, noindex` và không canonical; thêm R29-01. Việc vắng sitemap là hệ quả đúng của `noindex`, chỉ recheck R2-06 sau khi term indexable. |
-| Q-BUSINESS-IDENTITY | Chưa tái kiểm tra NAP, chủ thể nhận tiền, Organization và author chain theo hệ thống | DONE | [R30](#round-r30): 8 trang doanh nghiệp/chính sách + 3 bề mặt editorial; giữ R2-10/R2-12/R2-16 OPEN, nâng R2-22 lên P1. Không xác minh offline hoặc giao dịch. |
-| Q-PRIVACY-DATA-FLOWS | Chưa đối chiếu policy với form công khai, cookie/storage first visit và notice tại điểm thu thập | DONE | [R31](#round-r31): browser first visit ghi 7 cookie `sbjs_*`; Contact/comment chưa có link policy trong form, còn checkout có notice/link. Thêm R31-01; không đưa kết luận pháp lý hoặc coi checkbox bình luận là consent toàn site. |
+| Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R32](#round-r32): hai category trả 200, `index, follow`, self-canonical, có 3/2 sản phẩm và đã vào `product_cat-sitemap.xml`; R29-01 CLOSED. R2-06 vẫn riêng vì page sitemap còn URL noindex/redirect. |
+| Q-BUSINESS-IDENTITY | Chưa tái kiểm tra NAP, chủ thể nhận tiền, Organization và author chain theo hệ thống | DONE | [R32](#round-r32): payment/schema đã có legalName/MST; Contact/About/footer mới chỉ hiện MST, privacy body chưa nêu chủ thể, claim uy tín chưa có căn cứ công khai. R2-22 giữ OPEN. |
+| Q-PRIVACY-DATA-FLOWS | Chưa đối chiếu policy với form công khai, cookie/storage first visit và notice tại điểm thu thập | DONE | [R32](#round-r32): notice Contact/comment đã thêm; policy ghi `sbjs_*` tối đa 6 tháng nhưng runtime vẫn là session/30 phút theo config `lifetime=1e-5`, không có control nhìn thấy và inventory chưa đủ. R31-01 giữ OPEN. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
-| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
+| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | [R32](#round-r32) kiểm 10 claim Batch 2: **1 CLOSED, 9 OPEN**. Các cải thiện đã ghi riêng; không đóng từ regex, nội dung policy, schema tự khai hoặc một đường happy-path. |
 
 ---
 
@@ -2679,3 +2679,100 @@ OPEN
 - Không gửi dữ liệu cá nhân, form, bình luận hay đơn hàng. Chỉ thêm/xóa một sản phẩm trong browser cô lập để đọc notice checkout; đã xác nhận giỏ trở về 0 ₫.
 - Bộ bằng chứng gồm **2 JSON + 5 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.
+
+---
+
+<a id="round-r32"></a>
+
+# Vòng R32 — Nghiệm thu độc lập Batch 2
+
+Ngày kiểm tra: **24/09/2026**. Watcher phát hiện và pull commit Coder **`10b0bf13d9e2b2f78cf578f0586fead943e00040`**; `ASSISTANT_REPLY.md` mới có SHA-256 **`6ea13ef3d58c1915e1ae396f9041dc6c084e30bd84c17e067f1abc83c5108161`**.
+
+Coder công bố `FIXED` cho 10 P1. Năm scout đọc độc lập catalog/specs, SEO, privacy/identity và editorial/CTA; Main đối chiếu acceptance gốc bằng Store API, GET no-cache và Chromium thật. Kết quả: **R29-01 CLOSED; 9 issue còn lại giữ OPEN**. `DONE` trong bảng kiểm là đã kiểm xong, không thay cho trạng thái issue.
+
+## Phạm vi và phương pháp
+
+- Product 372/377: chọn tuần tự mọi size desktop, reset, một ca mobile, thêm size lớn nhất của từng cây vào giỏ và xác nhận line item/giá; sau đó xóa.
+- Product 269: chọn đủ năm size, reset, đưa `2m5` tới checkout và xác nhận **1.650.000₫**; không nhập dữ liệu hoặc đặt đơn. Đọc Store API cho chín product được bàn giao.
+- GET no-cache có ghi status/header cho hai category và năm sitemap; kiểm cart/checkout/account bằng redirect manual.
+- Profile sạch cho privacy: xóa cookie/storage, tải homepage, đọc cookie jar/config/runtime, policy và notice Contact/comment.
+- Đọc DOM/schema identity trên homepage, Contact, About, payment, privacy; đọc ba bài an toàn và click CTA hero thật tới category Combo.
+- Không gửi form/bình luận, đăng nhập, gọi/Zalo, đặt đơn hoặc xác minh hồ sơ doanh nghiệp offline. Mọi sản phẩm thử đã xóa; giỏ trở về **0 ₫**.
+
+## Ma trận nghiệm thu 10 claim
+
+| Issue | Kết quả R32 | Trạng thái hiện hành | Bằng chứng quyết định |
+|---|---|---|---|
+| R27-01 | **PARTIAL** | OPEN | Bảy option của hai cây nay đổi đúng ID/giá, reset khóa CTA; size lớn nhất vào giỏ đúng trên hai viewport mẫu. Chưa submit từng size trên staging, chưa chạy toàn bộ đổi qua lại mobile/R25-01 hoặc nghiệm thu Offer theo size. |
+| R2-01 | **PARTIAL** | OPEN | Năm giá lỗi hệ số đã sửa trong payload/schema; mọi selector 269 đúng và checkout `2m5` là 1.650.000₫. Chưa có bảng giá owner duyệt và chưa kiểm cart/checkout cho toàn bộ 261/280. |
+| R2-02 | **FAIL** | OPEN | Nhãn/trùng size đã cải thiện, nhưng product 269 bán **kẹo gậy** và **kẹo tròn** cùng các size trùng mà chỉ có một thuộc tính `Kích thước`; khách vẫn không chọn được kiểu. Không xác minh bảo toàn đơn lịch sử. |
+| R2-03 | **FAIL** | OPEN | Fallback hợp kim đã đổi, nhưng grouping mới vẫn gắn sai thông số: COMBO-GD-50 mô tả đúng 50 phụ kiện không có cây, bảng lại ghi “Trọn bộ đầy đủ cây thông” và vật liệu cây PE/cước. |
+| R29-01 | **PASS** | **CLOSED** | Combo/Cây thông trả 200, `index, follow`, canonical tự tham chiếu, listing 3/2 sản phẩm và có trong `product_cat-sitemap.xml`. |
+| R2-06 | **FAIL** | OPEN | Post sitemap, hai cây và hai category đã vào sitemap. `page-sitemap.xml` vẫn chứa `/gio-hang/` và `/tai-khoan/` đang `noindex`, cùng `/thanh-toan/` trả 302 về cart khi giỏ rỗng. |
+| R31-01 | **PARTIAL** | OPEN | Notice/link Contact/comment đã thêm và checkbox comment vẫn không chọn sẵn. Fresh visit vẫn ghi 7 `sbjs_*` không có control nhìn thấy; retention policy 6 tháng không khớp config/runtime session/30 phút; inventory comment/account/dịch vụ ngoài chưa đủ. |
+| R2-22 | **PARTIAL** | OPEN | Payment và Organization schema có legalName/MST/address. Contact/About/footer chỉ hiện MST, privacy body chưa nêu chủ thể; claim 1.200 khách, “đã mua”, case study/chuyên môn chưa có căn cứ công khai. |
+| R2-05 | **FAIL** | OPEN | Bốn cụm Coder quét đã mất, nhưng bài cafe còn “loại bỏ hoàn toàn rủi ro”; hướng dẫn neo/tải chưa gắn model/bề mặt/gió. Bài dự toán vẫn gán 12V 2A–5A cho 30–50m LED mà không có công suất dây. |
+| R2-04 | **PARTIAL** | OPEN | CTA đã đổi thành “Xem Set Combo”, click tới category có ba sản phẩm. Hero vẫn nói các set đều có cây + 45–80 phụ kiện + chiếu sáng và “Tiết Kiệm 20%”, trong khi hai card là set phụ kiện không gồm cây và mức giảm quan sát không đồng nhất 20%. |
+
+## Phần sửa đúng cần giữ
+
+### Mapping hai cây và giá lỗi hệ số
+
+- Cây PE: `1m5→373/850.000`, `1m8→374/1.250.000`, `2m1→375/1.850.000`, `2m4→376/2.650.000`.
+- Cây cước: `1m5→378/750.000`, `1m8→379/1.100.000`, `2m1→380/1.650.000`.
+- Reset hai form trả hidden ID/attribute rỗng và khóa CTA. Mobile 375×812 của cây cước chọn `2m1` ra ID 380/1.650.000₫. Hai line item size lớn nhất vào giỏ đúng tên/giá rồi được xóa.
+- Kẹo gậy 269 nay lần lượt `1m2 750.000`, `1m5 950.000`, `1m8 1.150.000`, `2m 1.450.000`, `2m5 1.650.000`; không còn giá 1.150/1.450/1.650 đồng trong dữ liệu công khai.
+
+Đây là bằng chứng remediation thực, nhưng không thay owner approval, staging all-size cart hoặc tiêu chí chọn **kiểu** của R2-02.
+
+### SEO category
+
+GET no-cache của cả hai category trả **200**, `cf-cache-status: DYNAMIC`, `index, follow` và canonical đúng. `product_cat-sitemap.xml` trả 200/no-store và chứa hai URL; category đối chứng rỗng không bị bật index đại trà trong mẫu scout. R29-01 đủ điều kiện **CLOSED**.
+
+## Acceptance còn thất bại
+
+### R2-06 — inventory sitemap chưa sạch
+
+Sitemap index nay có `post-sitemap.xml`; hub và ba bài đều hiện diện. `product-sitemap.xml` cũng đã có product 372/377. Tuy nhiên page sitemap vẫn gửi ba URL commerce không dự định index: cart/account phát `noindex, follow`; checkout giỏ rỗng trả **302** về cart. Claim purge cache không giải quyết phần acceptance này.
+
+### R31-01 — policy mới không khớp runtime
+
+Policy mới ghi Sourcebuster có thời hạn tối đa **6 tháng**. Production vẫn phát:
+
+- `allowTracking: true`, `lifetime: 1.0e-5`, `session: 30`;
+- sáu cookie attribution là session cookie; `sbjs_session` hết hạn sau khoảng **30 phút**;
+- fresh profile không có UI accept/reject/change choice đang hiển thị;
+- `localStorage/sessionStorage` cart-fragments cũng được tạo khi tải trang.
+
+Contact notice cách đáy form 14px và link policy đúng; comment notice nằm trước nút gửi, nói rõ kiểm duyệt/email và checkbox lưu trình duyệt vẫn unchecked. Giữ các cải thiện này. R31-01 chưa đóng vì retention công bố sai hành vi quan sát, policy còn câu dữ liệu “chỉ” dùng cho đơn hàng/chăm sóc và chưa bao phủ comment/account/dịch vụ ngoài.
+
+### R2-03 — grouping thông số tạo regression mới trong cùng issue
+
+COMBO-GD-50 mô tả: 24 quả châu + 6 kẹo + 10 nơ + sao + 4 dây LED + 5 mô hình, đủ 50 phụ kiện và **không có cây**. Bảng mới lại ghi:
+
+- Kích thước: “Trọn bộ đầy đủ cây thông và phụ kiện decor”;
+- Chất liệu: “Lá PE đúc nguyên cành / cước cao cấp, thân lõi thép & chân kim loại chịu lực”.
+
+Set Hoàng Gia 70 món có cùng dạng mâu thuẫn. Kẹo gậy mô tả composite sơn màu nhưng bảng ghi ABS/nhũ/sequin; Lính đánh trống có chiều cao 38cm trong mô tả nhưng bảng vẫn dùng “kích thước tiêu chuẩn”. Đây là cùng root cause fallback theo nhóm, không mở issue mới.
+
+### R2-05 và R2-04 — sửa regex/nhãn chưa sửa toàn acceptance
+
+- Bài cafe còn câu timer “**loại bỏ hoàn toàn rủi ro** nhân viên quên tắt đèn”, neo cây bằng cước 25–30kg/móc dán và bao cát 15–20kg mà chưa nêu model, bề mặt, tải hệ neo hoặc điều kiện gió.
+- Bài dự toán còn “12V 2A–5A chịu tải 30m–50m LED” và “1 củ dùng cho toàn bộ hệ thống” mà không nêu công suất dây tương ứng.
+- Hero hiện có ba card đích, nhưng lời hứa chung vẫn bao gồm cây, 45–80 món, đèn “chống chập cháy” và tiết kiệm 20%. Hai card là bộ phụ kiện không gồm cây; giá card quan sát cho mức giảm khác nhau.
+
+## R2-22 — cải thiện trust nhưng chưa đồng bộ chủ thể
+
+Organization schema đã có `legalName="Hộ Kinh Doanh Trang Trí 4 Mùa"`, `taxID/vatID="0318294567"` và địa chỉ; payment hiển thị tên chủ quản, MST và tài khoản `TRANG TRI 4 MUA`. Contact/About/footer chỉ thêm MST, không kèm tên đăng ký; privacy body không xác định đơn vị xử lý dữ liệu. Claim homepage **1.200 khách**, testimonial “Đã mua” và chuyên môn/case study vẫn thiếu căn cứ công khai. Không xác minh MST hoặc câu “UBND TP. Thủ Đức cấp” từ schema/nội dung tự khai.
+
+## Bằng chứng R32
+
+[JSON tổng hợp](review-evidence/2026-09-24/r32-batch2-verification.json) · [cây cước mobile 2m1](review-evidence/2026-09-24/r32-tree377-mobile-2m1.webp) · [first visit](review-evidence/2026-09-24/r32-home-first-visit.webp) · [notice Contact](review-evidence/2026-09-24/r32-contact-privacy-notice.webp) · [notice comment](review-evidence/2026-09-24/r32-comment-privacy-notice.webp) · [hero](review-evidence/2026-09-24/r32-home-hero.webp) · [bảng sai COMBO-GD-50](review-evidence/2026-09-24/r32-combo-gd50-specs.webp) · [identity payment](review-evidence/2026-09-24/r32-payment-identity.webp).
+
+## Giới hạn và bàn giao R32
+
+- Đóng **1 P1** (R29-01); tổng hiện hành **41 OPEN — 10 P1, 25 P2, 6 P3**. Không thêm issue mới.
+- Không xác minh bảng giá owner, vật liệu/nhãn nhà cung cấp, đơn lịch sử, giấy đăng ký/MST, tồn kho, database, email hoặc retention backend. Schema/nội dung tự khai không phải xác minh pháp lý.
+- Không gửi form/bình luận, đăng nhập, gọi/Zalo hoặc đặt đơn. Ba sản phẩm thêm giỏ chỉ phục vụ đọc cart/checkout; tất cả đã xóa và giỏ trở về 0 ₫.
+- Bộ bằng chứng gồm **1 JSON + 7 screenshot**. Browser riêng đã đóng; không sửa code/config/database website.
+- Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.

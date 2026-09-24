@@ -1,0 +1,1639 @@
+{
+  "observed_at_utc": "2026-09-24T16:06:39.787Z",
+  "handoff": {
+    "commit": "10b0bf13d9e2b2f78cf578f0586fead943e00040",
+    "assistant_reply_sha256": "6ea13ef3d58c1915e1ae396f9041dc6c084e30bd84c17e067f1abc83c5108161"
+  },
+  "scope": "Production GET/browser verification; no form/comment/order submitted; temporary cart items removed.",
+  "verdicts": {
+    "R27-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "All desktop options map to distinct ID/price; one mobile largest-size path and largest-size cart samples pass. Staging all-size cart, full mobile back-and-forth/R25 regression and variant schema acceptance remain."
+    },
+    "R2-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Public prices/schema and all 269 selector values are corrected; 269 2m5 checkout is 1,650,000 VND. Owner price approval and cart/checkout coverage for 261/280 are absent."
+    },
+    "R2-02": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Duplicate/ambiguous size labels improved, but product 269 sells cane and round styles while exposing only one size attribute; same-size choices cannot distinguish style. Historical order integrity not verifiable."
+    },
+    "R2-03": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Generic alloy text changed, but grouping introduced incorrect specs. COMBO-GD-50 description is a 50-item accessory set with no tree while table claims full tree and tree materials."
+    },
+    "R29-01": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Both categories return 200, index/follow, self-canonical and appear in product_cat sitemap; listings contain 3 and 2 products."
+    },
+    "R2-06": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Post/product/category sitemap gaps fixed, but page sitemap still includes noindex cart/account and redirecting checkout."
+    },
+    "R31-01": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Contact/comment notice links added. Fresh profile still writes seven sbjs cookies without visible choice; public config lifetime=1e-5/session=30 produces session cookies plus 30-minute sbjs_session, contradicting policy maximum 6 months. Policy still omits comment/account/external-service inventory."
+    },
+    "R2-22": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Payment page and Organization schema now expose legalName/taxID; Contact/About/footer expose MST but not registered name and privacy body does not identify operator. Claim substantiation and offline legal verification remain."
+    },
+    "R2-05": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Four named phrases were removed, but cafe article still promises “loại bỏ hoàn toàn rủi ro”, load/anchoring guidance lacks model/load conditions, and budget article still maps 12V 2A–5A directly to 30–50m LED."
+    },
+    "R2-04": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "CTA label no longer says 8+ and destination has three products, but hero still presents every set as tree+45–80 accessories+lighting and 20% saving while two listed products are accessory-only and observed discounts vary."
+    }
+  },
+  "catalog": {
+    "store_api": [
+      {
+        "id": 377,
+        "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &#038; Đầu Tuyết",
+        "permalink": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+        "prices": {
+          "price": "750000",
+          "regular_price": "750000",
+          "sale_price": "750000",
+          "price_range": {
+            "min_amount": "750000",
+            "max_amount": "1650000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 0,
+            "name": "Kích thước",
+            "taxonomy": null,
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 0,
+                "name": "1m5",
+                "slug": "1m5"
+              },
+              {
+                "id": 0,
+                "name": "1m8",
+                "slug": "1m8"
+              },
+              {
+                "id": 0,
+                "name": "2m1",
+                "slug": "2m1"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 378,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m5"
+              }
+            ]
+          },
+          {
+            "id": 379,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m8"
+              }
+            ]
+          },
+          {
+            "id": 380,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 372,
+        "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+        "permalink": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "prices": {
+          "price": "850000",
+          "regular_price": "850000",
+          "sale_price": "850000",
+          "price_range": {
+            "min_amount": "850000",
+            "max_amount": "2650000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 0,
+            "name": "Kích thước",
+            "taxonomy": null,
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 0,
+                "name": "1m5",
+                "slug": "1m5"
+              },
+              {
+                "id": 0,
+                "name": "1m8",
+                "slug": "1m8"
+              },
+              {
+                "id": 0,
+                "name": "2m1",
+                "slug": "2m1"
+              },
+              {
+                "id": 0,
+                "name": "2m4",
+                "slug": "2m4"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 373,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m5"
+              }
+            ]
+          },
+          {
+            "id": 374,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m8"
+              }
+            ]
+          },
+          {
+            "id": 375,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m1"
+              }
+            ]
+          },
+          {
+            "id": 376,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 280,
+        "name": "Ông già trắng xịn &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+        "prices": {
+          "price": "555000",
+          "regular_price": "555000",
+          "sale_price": "555000",
+          "price_range": {
+            "min_amount": "555000",
+            "max_amount": "1895000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 38,
+                "name": "45cm",
+                "slug": "45cm"
+              },
+              {
+                "id": 39,
+                "name": "60cm",
+                "slug": "60cm"
+              },
+              {
+                "id": 76,
+                "name": "90cm",
+                "slug": "90cm"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 281,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "45cm"
+              }
+            ]
+          },
+          {
+            "id": 282,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "60cm"
+              }
+            ]
+          },
+          {
+            "id": 283,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "90cm"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 269,
+        "name": "Kẹo gậy trang trí Noel &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+        "prices": {
+          "price": "750000",
+          "regular_price": "750000",
+          "sale_price": "750000",
+          "price_range": {
+            "min_amount": "750000",
+            "max_amount": "1650000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 40,
+                "name": "1m2",
+                "slug": "1m2"
+              },
+              {
+                "id": 41,
+                "name": "1m5",
+                "slug": "1m5"
+              },
+              {
+                "id": 42,
+                "name": "1m8",
+                "slug": "1m8"
+              },
+              {
+                "id": 43,
+                "name": "2m",
+                "slug": "2m"
+              },
+              {
+                "id": 135,
+                "name": "2m5",
+                "slug": "2m5"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 270,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m5"
+              }
+            ]
+          },
+          {
+            "id": 271,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m8"
+              }
+            ]
+          },
+          {
+            "id": 272,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m"
+              }
+            ]
+          },
+          {
+            "id": 273,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m5"
+              }
+            ]
+          },
+          {
+            "id": 274,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 261,
+        "name": "Ông già gôn xịn &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+        "prices": {
+          "price": "555000",
+          "regular_price": "555000",
+          "sale_price": "555000",
+          "price_range": {
+            "min_amount": "555000",
+            "max_amount": "1895000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 38,
+                "name": "45cm",
+                "slug": "45cm"
+              },
+              {
+                "id": 76,
+                "name": "90cm",
+                "slug": "90cm"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 262,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "45cm"
+              }
+            ]
+          },
+          {
+            "id": 263,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "90cm"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 255,
+        "name": "Quả châu nhũ vàng &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+        "prices": {
+          "price": "195000",
+          "regular_price": "195000",
+          "sale_price": "195000",
+          "price_range": null,
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 75,
+                "name": "Phi 8cm",
+                "slug": "phi8"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 256,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "phi8"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 237,
+        "name": "Quả châu nhũ vân lưới &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+        "prices": {
+          "price": "125000",
+          "regular_price": "125000",
+          "sale_price": "125000",
+          "price_range": null,
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 71,
+                "name": "Phi 6cm",
+                "slug": "phi6"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 238,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "phi6"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 223,
+        "name": "Tượng người tuyết mũ đỏ &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+        "prices": {
+          "price": "550000",
+          "regular_price": "550000",
+          "sale_price": "550000",
+          "price_range": {
+            "min_amount": "550000",
+            "max_amount": "1750000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 66,
+                "name": "1m",
+                "slug": "1m"
+              },
+              {
+                "id": 40,
+                "name": "1m2",
+                "slug": "1m2"
+              },
+              {
+                "id": 41,
+                "name": "1m5",
+                "slug": "1m5"
+              },
+              {
+                "id": 65,
+                "name": "80cm",
+                "slug": "80cm"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 224,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "80cm"
+              }
+            ]
+          },
+          {
+            "id": 225,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m"
+              }
+            ]
+          },
+          {
+            "id": 226,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m2"
+              }
+            ]
+          },
+          {
+            "id": 227,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m5"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 177,
+        "name": "Ông già Noel 1m8 &#8211; Trang trí Noel",
+        "permalink": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+        "prices": {
+          "price": "2250000",
+          "regular_price": "2250000",
+          "sale_price": "2250000",
+          "price_range": null,
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        },
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 42,
+                "name": "1m8",
+                "slug": "1m8"
+              }
+            ]
+          }
+        ],
+        "variations": [
+          {
+            "id": 178,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tree372": {
+      "states": [
+        {
+          "selected": {
+            "value": "1m5",
+            "text": "1m5"
+          },
+          "id": "373",
+          "price": "850.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "1m5"
+        },
+        {
+          "selected": {
+            "value": "1m8",
+            "text": "1m8"
+          },
+          "id": "374",
+          "price": "1.250.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "1m8"
+        },
+        {
+          "selected": {
+            "value": "2m1",
+            "text": "2m1"
+          },
+          "id": "375",
+          "price": "1.850.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "2m1"
+        },
+        {
+          "selected": {
+            "value": "2m4",
+            "text": "2m4"
+          },
+          "id": "376",
+          "price": "2.650.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "2m4"
+        }
+      ],
+      "reset": {
+        "id": "",
+        "attribute": "",
+        "buttonDisabled": true
+      },
+      "raw": [
+        {
+          "id": 373,
+          "attr": "1m5",
+          "price": 850000,
+          "sku": "CT-PE-150"
+        },
+        {
+          "id": 374,
+          "attr": "1m8",
+          "price": 1250000,
+          "sku": "CT-PE-180"
+        },
+        {
+          "id": 375,
+          "attr": "2m1",
+          "price": 1850000,
+          "sku": "CT-PE-210"
+        },
+        {
+          "id": 376,
+          "attr": "2m4",
+          "price": 2650000,
+          "sku": "CT-PE-240"
+        }
+      ],
+      "cart": {
+        "cart_observation": {
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m4",
+          "quantity": 1,
+          "total": "2.650.000 ₫",
+          "viewport": "1440x1000"
+        },
+        "cleanup": {
+          "cartZero": true,
+          "returnToShop": true
+        }
+      }
+    },
+    "tree377": {
+      "states": [
+        {
+          "selected": {
+            "value": "1m5",
+            "text": "1m5"
+          },
+          "id": "378",
+          "price": "750.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "1m5"
+        },
+        {
+          "selected": {
+            "value": "1m8",
+            "text": "1m8"
+          },
+          "id": "379",
+          "price": "1.100.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "1m8"
+        },
+        {
+          "selected": {
+            "value": "2m1",
+            "text": "2m1"
+          },
+          "id": "380",
+          "price": "1.650.000 ₫",
+          "buttonDisabled": false,
+          "formAttribute": "2m1"
+        }
+      ],
+      "reset": {
+        "id": "",
+        "attribute": "",
+        "buttonDisabled": true
+      },
+      "raw": [
+        {
+          "id": 378,
+          "attr": "1m5",
+          "price": 750000,
+          "sku": "CT-CUOC-150"
+        },
+        {
+          "id": 379,
+          "attr": "1m8",
+          "price": 1100000,
+          "sku": "CT-CUOC-180"
+        },
+        {
+          "id": 380,
+          "attr": "2m1",
+          "price": 1650000,
+          "sku": "CT-CUOC-210"
+        }
+      ],
+      "mobile": {
+        "viewport": {
+          "w": 375,
+          "h": 812
+        },
+        "id": "380",
+        "attribute": "2m1",
+        "price": "1.650.000 ₫",
+        "disabled": false
+      },
+      "cart": {
+        "cart_observation": {
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết - 2m1",
+          "quantity": 1,
+          "total": "1.650.000 ₫",
+          "viewport": "375x812"
+        },
+        "cleanup": {
+          "url": "https://trangtri4mua.com/gio-hang/",
+          "cartZero": true,
+          "returnToShop": true
+        }
+      }
+    },
+    "candy269": {
+      "states": [
+        {
+          "selected": {
+            "value": "1m2",
+            "text": "1m2"
+          },
+          "id": "274",
+          "price": "750.000 ₫",
+          "buttonDisabled": false,
+          "attribute": [
+            "attribute_pa_kich-thuoc",
+            "1m2"
+          ]
+        },
+        {
+          "selected": {
+            "value": "1m5",
+            "text": "1m5"
+          },
+          "id": "270",
+          "price": "950.000 ₫",
+          "buttonDisabled": false,
+          "attribute": [
+            "attribute_pa_kich-thuoc",
+            "1m5"
+          ]
+        },
+        {
+          "selected": {
+            "value": "1m8",
+            "text": "1m8"
+          },
+          "id": "271",
+          "price": "1.150.000 ₫",
+          "buttonDisabled": false,
+          "attribute": [
+            "attribute_pa_kich-thuoc",
+            "1m8"
+          ]
+        },
+        {
+          "selected": {
+            "value": "2m",
+            "text": "2m"
+          },
+          "id": "272",
+          "price": "1.450.000 ₫",
+          "buttonDisabled": false,
+          "attribute": [
+            "attribute_pa_kich-thuoc",
+            "2m"
+          ]
+        },
+        {
+          "selected": {
+            "value": "2m5",
+            "text": "2m5"
+          },
+          "id": "273",
+          "price": "1.650.000 ₫",
+          "buttonDisabled": false,
+          "attribute": [
+            "attribute_pa_kich-thuoc",
+            "2m5"
+          ]
+        }
+      ],
+      "reset": {
+        "id": "",
+        "value": "",
+        "disabled": true
+      },
+      "raw": {
+        "productId": "269",
+        "variations": [
+          {
+            "id": 270,
+            "attributes": {
+              "attribute_pa_kich-thuoc": "1m5"
+            },
+            "price": 950000,
+            "sku": "TT4M-074-1m50"
+          },
+          {
+            "id": 271,
+            "attributes": {
+              "attribute_pa_kich-thuoc": "1m8"
+            },
+            "price": 1150000,
+            "sku": "TT4M-074-80"
+          },
+          {
+            "id": 272,
+            "attributes": {
+              "attribute_pa_kich-thuoc": "2m"
+            },
+            "price": 1450000,
+            "sku": "TT4M-074-2m"
+          },
+          {
+            "id": 273,
+            "attributes": {
+              "attribute_pa_kich-thuoc": "2m5"
+            },
+            "price": 1650000,
+            "sku": "TT4M-074-50"
+          },
+          {
+            "id": 274,
+            "attributes": {
+              "attribute_pa_kich-thuoc": "1m2"
+            },
+            "price": 750000,
+            "sku": "TT4M-074-20"
+          }
+        ]
+      },
+      "store": {
+        "attributes": [
+          {
+            "id": 1,
+            "name": "Kích thước",
+            "taxonomy": "pa_kich-thuoc",
+            "has_variations": true,
+            "terms": [
+              {
+                "id": 40,
+                "name": "1m2",
+                "slug": "1m2"
+              },
+              {
+                "id": 41,
+                "name": "1m5",
+                "slug": "1m5"
+              },
+              {
+                "id": 42,
+                "name": "1m8",
+                "slug": "1m8"
+              },
+              {
+                "id": 43,
+                "name": "2m",
+                "slug": "2m"
+              },
+              {
+                "id": 135,
+                "name": "2m5",
+                "slug": "2m5"
+              }
+            ]
+          }
+        ],
+        "variationIds": [
+          {
+            "id": 270,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m5"
+              }
+            ]
+          },
+          {
+            "id": 271,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m8"
+              }
+            ]
+          },
+          {
+            "id": 272,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m"
+              }
+            ]
+          },
+          {
+            "id": 273,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "2m5"
+              }
+            ]
+          },
+          {
+            "id": 274,
+            "attributes": [
+              {
+                "name": "Kích thước",
+                "value": "1m2"
+              }
+            ]
+          }
+        ],
+        "descriptionText": "Kẹo gậy trang trí Noel là mô hình kẹo cỡ lớn dùng dựng trang trí ngoài trời, sảnh, cổng hay sân khấu, gồm hai kiểu: kẹo gậy cong và kẹo tròn. Đây là hạng mục trang trí chuyên nghiệp cho cửa hàng, trung tâm thương mại, quán cà phê muốn làm góc check-in Giáng sinh. Bảng size và giá kẹo gậy: &#8211; 1m80: 1.150.000đ &#8211; 2m: 1.450.000đ &#8211; 2m50: 1.650.000đ Bảng size và giá kẹo tròn: &#8211; 1m20: 750.000đ &#8211; 1m50: 950.000đ &#8211; 1m80: 1.150.000đ &#8211; 2m: 1.450.000đ Chất liệu: nhựa composite sơn màu Dựng hai gậy kẹo hai bên cổng hoặc cây thông lớn là có ngay cổng chào Giáng sinh. Kẹo tròn hợp đặt xen kẽ tạo nhịp. Shop giao hàng toàn quốc, hàng cồng kềnh đóng kiện kỹ.",
+        "prices": {
+          "price": "750000",
+          "regular_price": "750000",
+          "sale_price": "750000",
+          "price_range": {
+            "min_amount": "750000",
+            "max_amount": "1650000"
+          },
+          "currency_code": "VND",
+          "currency_symbol": "₫",
+          "currency_minor_unit": 0,
+          "currency_decimal_separator": ",",
+          "currency_thousand_separator": ".",
+          "currency_prefix": "",
+          "currency_suffix": " ₫"
+        }
+      },
+      "checkout": {
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "items": [
+          "Kẹo gậy trang trí Noel - Trang trí Noel - 2m5\n  × 1\t1.650.000 ₫"
+        ],
+        "total": "Tổng\t1.650.000 ₫",
+        "privacy": "Thông tin đặt hàng của quý khách được bảo mật tuyệt đối và chỉ sử dụng cho mục đích xác nhận, giao hàng theo Chính sách bảo mật."
+      },
+      "cleanup": {
+        "cartZero": true,
+        "returnToShop": true
+      }
+    },
+    "combo_gd50": {
+      "description": "Set trọn gói 50 món phụ kiện phối màu chuyên nghiệp gồm: 24 quả châu nhũ và sequin cao cấp, 6 kẹo gậy xoắn nhung, 10 nơ nhung đỏ, 1 ngôi sao đỉnh kim tuyến, 4 dây đèn LED đom đóm 10m ánh sáng vàng ấm và 5 mô hình ông già/người tuyết mini.",
+      "rows": [
+        {
+          "label": "Kích thước",
+          "value": "Trọn bộ đầy đủ cây thông và phụ kiện decor"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Lá PE đúc nguyên cành / cước cao cấp, thân lõi thép & chân kim loại chịu lực"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ],
+      "selects": []
+    }
+  },
+  "seo": {
+    "responses": {
+      "combo": {
+        "requested": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+        "status": 200,
+        "location": null,
+        "cacheControl": null,
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "tree": {
+        "requested": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+        "status": 200,
+        "location": null,
+        "cacheControl": null,
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/html; charset=UTF-8"
+      },
+      "index": {
+        "requested": "https://trangtri4mua.com/sitemap_index.xml",
+        "status": 200,
+        "location": null,
+        "cacheControl": "no-cache, no-store, must-revalidate, max-age=0",
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/xml; charset=UTF-8"
+      },
+      "post": {
+        "requested": "https://trangtri4mua.com/post-sitemap.xml",
+        "status": 200,
+        "location": null,
+        "cacheControl": "no-cache, no-store, must-revalidate, max-age=0",
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/xml; charset=UTF-8"
+      },
+      "page": {
+        "requested": "https://trangtri4mua.com/page-sitemap.xml",
+        "status": 200,
+        "location": null,
+        "cacheControl": "no-cache, no-store, must-revalidate, max-age=0",
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/xml; charset=UTF-8"
+      },
+      "product": {
+        "requested": "https://trangtri4mua.com/product-sitemap.xml",
+        "status": 200,
+        "location": null,
+        "cacheControl": "no-cache, no-store, must-revalidate, max-age=0",
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/xml; charset=UTF-8"
+      },
+      "productCat": {
+        "requested": "https://trangtri4mua.com/product_cat-sitemap.xml",
+        "status": 200,
+        "location": null,
+        "cacheControl": "no-cache, no-store, must-revalidate, max-age=0",
+        "cfCacheStatus": "DYNAMIC",
+        "contentType": "text/xml; charset=UTF-8"
+      }
+    },
+    "categories": {
+      "combo": {
+        "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+      },
+      "tree": {
+        "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+      }
+    },
+    "memberships": {
+      "index": {
+        "post": true,
+        "page": true,
+        "product": true,
+        "productCat": true
+      },
+      "post": {
+        "hub": true,
+        "cafe": true,
+        "budget": true,
+        "size": true
+      },
+      "page": {
+        "cart": true,
+        "checkout": true,
+        "account": true
+      },
+      "product": {
+        "p372": true,
+        "p377": true
+      },
+      "productCat": {
+        "combo": true,
+        "tree": true
+      }
+    },
+    "commerceRoutes": [
+      {
+        "path": "gio-hang",
+        "status": 200,
+        "location": null,
+        "robots": "noindex, follow",
+        "canonical": null
+      },
+      {
+        "path": "thanh-toan",
+        "status": 302,
+        "location": "https://trangtri4mua.com/gio-hang/",
+        "robots": null,
+        "canonical": null
+      },
+      {
+        "path": "tai-khoan",
+        "status": 200,
+        "location": null,
+        "robots": "noindex, follow",
+        "canonical": null
+      }
+    ]
+  },
+  "privacy": {
+    "first_visit": {
+      "cookies": [
+        {
+          "name": "sbjs_first_add",
+          "value": "fd%3D2026-09-24%2016%3A01%3A57%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_current",
+          "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_session",
+          "value": "pgs%3D1%7C%7C%7Ccpg%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F",
+          "expires": 1790267517,
+          "session": false,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_migrations",
+          "value": "1418474375998%3D1",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_current_add",
+          "value": "fd%3D2026-09-24%2016%3A01%3A57%7C%7C%7Cep%3Dhttps%3A%2F%2Ftrangtri4mua.com%2F%7C%7C%7Crf%3D%28none%29",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_first",
+          "value": "typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        },
+        {
+          "name": "sbjs_udata",
+          "value": "vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Macintosh%3B%20Intel%20Mac%20OS%20X%2010_15_7%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F150.0.0.0%20Safari%2F537.36",
+          "expires": -1,
+          "session": true,
+          "domain": ".trangtri4mua.com"
+        }
+      ],
+      "storage": {
+        "local": {
+          "wc_cart_hash_ba8915a3a64f7c4458791f103796a024": ""
+        },
+        "session": {
+          "wc_fragments_ba8915a3a64f7c4458791f103796a024": "{\"div.widget_shopping_cart_content\":\"<div class=\\\"widget_shopping_cart_content\\\">\\n<div class=\\\"woocommerce-notices-wrapper\\\"></div><div class=\\\"wc-empty-cart-message\\\">\\n\\t<div class=\\\"cart-empty woocommerce-info\\\" role=\\\"status\\\">\\n\\t\\tChưa có sản phẩm nào trong giỏ hàng.\\t</div>\\n</div>\\t<p class=\\\"return-to-shop\\\">\\n\\t\\t<a class=\\\"button wc-backward\\\" href=\\\"https://trangtri4mua.com/cua-hang/\\\">\\n\\t\\t\\tQuay trở lại cửa hàng\\t\\t</a>\\n\\t</p>\\n\\n\\n</div>\",\"div.tt4m-freeship-cart-wrapper\":\"<div class=\\\"tt4m-freeship-cart-wrapper\\\"></div>\",\"div.tt4m-freeship-minicart-wrapper\":\"<div class=\\\"tt4m-freeship-minicart-wrapper\\\"></div>\",\".ct-dynamic-count-cart\":\"<span class=\\\"ct-dynamic-count-cart\\\" data-count=\\\"0\\\">0</span>\",\".ct-header-cart .ct-cart-content\":\"<div class=\\\"ct-cart-content\\\" data-count=\\\"0\\\">\\n<div class=\\\"woocommerce-notices-wrapper\\\"></div><div class=\\\"wc-empty-cart-message\\\">\\n\\t<div class=\\\"cart-empty woocommerce-info\\\" role=\\\"status\\\">\\n\\t\\tChưa có sản phẩm nào trong giỏ hàng.\\t</div>\\n</div>\\t<p class=\\\"return-to-shop\\\">\\n\\t\\t<a class=\\\"button wc-backward\\\" href=\\\"https://trangtri4mua.com/cua-hang/\\\">\\n\\t\\t\\tQuay trở lại cửa hàng\\t\\t</a>\\n\\t</p>\\n\\n\\n</div>\",\".ct-header-cart .ct-label .ct-amount\":\"<span class=\\\"ct-amount\\\"><span class=\\\"woocommerce-Price-amount amount\\\"><bdi>0&nbsp;<span class=\\\"woocommerce-Price-currencySymbol\\\" translate=\\\"no\\\">&#8363;</span></bdi></span></span>\"}",
+          "wc_cart_hash_ba8915a3a64f7c4458791f103796a024": ""
+        }
+      },
+      "consentUi": [],
+      "attribution": "\nvar wc_order_attribution = {\"params\":{\"lifetime\":1.0e-5,\"session\":30,\"base64\":false,\"ajaxurl\":\"https://trangtri4mua.com/wp-admin/admin-ajax.php\",\"prefix\":\"wc_order_attribution_\",\"allowTracking\":true},\"fields\":{\"source_type\":\"current.typ\",\"referrer\":\"current_add.rf\",\"utm_campaign\":\"current.cmp\",\"utm_source\":\"current.src\",\"utm_medium\":\"current.mdm\",\"utm_content\":\"current.cnt\",\"utm_id\":\"current.id\",\"utm_term\":\"current.trm\",\"utm_source_platform\":\"current.plt\",\"utm_creative_format\":\"current.fmt\",\"utm_marketing_tactic\":\"current.tct\",\"session_entry\":\"current_add.ep\",\"session_start_time\":\"current_add.fd\",\"session_pages\":\"session.pgs\",\"session_count\":\"udata.vst\",\"user_agent\":\"udata.uag\"}};\n//# sourceURL=wc-order-attribution-js-extra\n",
+      "session_expiry_iso": "2026-09-24T16:31:57.000Z",
+      "session_ttl_seconds": 1789
+    },
+    "policy_text": "Chính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách Thanh Toán\nHỗ Trợ Mua Hàng 24/7\n\nHotline: 0901.234.567\n\nZalo CSKH: 0901.234.567\n\nEmail: cskh@trangtri4mua.com\n\nShowroom: 123 Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\n\nGiờ mở cửa: 08:00 – 21:00 hàng ngày\n\n💬 Chat Zalo Hỗ Trợ\n\nTrang Trí 4 Mùa tôn trọng và cam kết bảo vệ dữ liệu cá nhân của quý khách hàng. Chính sách bảo mật này giải thích rõ ràng cách thức chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân theo đúng quy định của Luật An toàn thông tin mạng và Nghị định số 13/2023/NĐ-CP của Chính phủ về Bảo vệ dữ liệu cá nhân.\n\nCam Kết Bảo Mật Dữ Liệu\n\nDữ liệu cá nhân của bạn chỉ được sử dụng nhằm mục đích xử lý đơn hàng, điều phối giao nhận bưu phẩm và chăm sóc khách hàng. Chúng tôi cam kết tuyệt đối KHÔNG mua bán, KHÔNG chia sẻ thông tin cho bên thứ ba trái phép.\n\n1. Mục Đích Thu Thập Dữ Liệu\nXử lý và xác nhận đơn hàng: Liên hệ xác nhận mẫu mã, số lượng và địa chỉ giao hàng.\nĐiều phối giao nhận: Chuyển giao thông tin cần thiết cho đối tác vận chuyển (GHN, GHTK, Viettel Post, Grab) để phát hàng tận nơi.\nChăm sóc và bảo hành: Hướng dẫn lắp đặt, hỗ trợ kích hoạt chính sách đổi trả 7 ngày và giải quyết khiếu nại.\nHóa đơn doanh nghiệp: Xuất hóa đơn điện tử GTGT (VAT) đối với các đơn hàng B2B hoặc khách hàng có nhu cầu.\n2. Phạm Vi Dữ Liệu Thu Thập\n\nThông tin thu thập bao gồm:\n\nHọ và tên người nhận hàng.\nSố điện thoại liên lạc (dùng xác nhận đơn và điều phối giao bưu phẩm).\nĐịa chỉ giao nhận chi tiết (Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố).\nĐịa chỉ email (tùy chọn, nhận thông báo đơn hàng hoặc file hóa đơn VAT điện tử).\nThông tin doanh nghiệp (Tên công ty, MST, Địa chỉ công ty) — chỉ thu thập khi quý khách yêu cầu xuất hóa đơn VAT.\n\n⚠️ Cam Kết Về Dữ Liệu Tài Chính: Trang Trí 4 Mùa tuyệt đối KHÔNG thu thập và KHÔNG lưu trữ số thẻ ngân hàng, số CVV/CVC, mật khẩu Internet Banking hay mã xác thực OTP của quý khách. Mọi giao dịch trực tuyến đều được thực hiện bảo mật qua cổng thanh toán mã hóa của Ngân hàng.\n\n3. Quy Định Về Cookie & Dữ Liệu Nguồn Truy Cập (Attribution Cookies)\n\nKhi bạn truy cập website trangtri4mua.com, hệ thống tự động ghi nhận một số tệp cookie kỹ thuật và phân tích nhằm đảm bảo tính ổn định và nâng cao trải nghiệm mua sắm:\n\nNhóm Cookie Kỹ Thuật Thiết Yếu: Gồm các cookie phiên làm việc của WooCommerce (woocommerce_cart_hash, woocommerce_items_in_cart, wp_woocommerce_session_*) giúp duy trì sản phẩm trong giỏ hàng và đồng bộ quá trình thanh toán. Các cookie này tự động hết hạn khi bạn đóng trình duyệt hoặc hoàn tất đơn hàng.\nNhóm Cookie Ghi Nhận Nguồn Truy Cập (WooCommerce Order Attribution): Sử dụng thư viện Sourcebuster (sbjs_current, sbjs_first, sbjs_session, sbjs_udata…) với thời hạn lưu trữ tối đa 6 tháng. Các cookie này chỉ ghi nhận ẩn danh kênh giới thiệu (Google, Facebook, Zalo, Direct), trang đích đầu tiên và số lượt xem trang để giúp chúng tôi phân tích hiệu quả chiến dịch; tuyệt đối không thu thập địa chỉ IP thực, không lưu trữ thông tin nhận dạng cá nhân.\nQuyền Kiểm Soát & Xóa Cookie: Quý khách có toàn quyền quản lý, chặn hoặc xóa các cookie này bất cứ lúc nào thông qua phần cài đặt quyền riêng tư trên trình duyệt (Chrome, Safari, Firefox, Edge). Việc chặn cookie phân tích không làm ảnh hưởng đến khả năng xem sản phẩm và mua hàng trên website.\n4. Thời Gian Lưu Trữ Thông Tin\n\nDữ liệu đơn hàng được lưu trữ nội bộ an toàn nhằm mục đích tra cứu lịch sử mua hàng, phục vụ đối soát bảo hành đổi trả trong thời hạn tối đa 2 năm. Dữ liệu từ biểu mẫu liên hệ và yêu cầu tư vấn B2B được lưu trữ trong 12 tháng để phục vụ chăm sóc khách hàng, hoặc cho đến khi khách hàng có yêu cầu hủy bỏ.\n\n5. Các Đơn Vị Được Tiếp Cận Dữ Liệu\nNhân viên xử lý đơn hàng và đóng gói kho của Trang Trí 4 Mùa.\nĐơn vị cung cấp dịch vụ vận chuyển chính thức nhằm phục vụ công tác phát hàng.\nCơ quan quản lý nhà nước có thẩm quyền khi có yêu cầu bằng văn bản theo đúng trình tự pháp luật Việt Nam.\n6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân\n\nQuý khách có toàn quyền kiểm tra, cập nhật hoặc yêu cầu xóa bỏ vĩnh viễn thông tin cá nhân của mình trên hệ thống bất cứ lúc nào:\n\n• Gửi yêu cầu qua Email: cskh@trangtri4mua.com\n• Hoặc liên hệ trực tiếp Hotline/Zalo: 0901.234.567\n\nBan Quản Trị Dữ Liệu & Bảo Mật\n\nMọi câu hỏi hoặc khiếu nại về an toàn thông tin cá nhân, vui lòng liên hệ trực tiếp bộ phận Quản trị Bảo mật:\n\n📧 Email: cskh@trangtri4mua.com 📞 Hotline: 0901.234.567",
+    "contact": {
+      "notice": "🔒 Thông tin cá nhân của bạn được bảo mật tuyệt đối và chỉ sử dụng cho mục đích liên hệ tư vấn, báo giá. Xem chi tiết tại Chính sách bảo mật dữ liệu của Trang Trí 4 Mùa.",
+      "noticeLinks": [
+        {
+          "text": "Chính sách bảo mật dữ liệu",
+          "href": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+        }
+      ],
+      "insideForm": false,
+      "formText": "Contact Form Demo\nHọ và tên đệm\nTên\nĐịa chỉ Email\nSố điện thoại / Zalo\nNội dung yêu cầu (Diện tích, phong cách, ngân sách...)\nSubmit Form",
+      "order": {
+        "formTop": 510.0625,
+        "formBottom": 1066.0625,
+        "noticeTop": 1080.0625,
+        "gap": 14
+      }
+    },
+    "comment": {
+      "formText": "Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu *\n\nTên\n *\n\nEmail\n *\n\nTrang web\n\nViết bình luận\n *\n\nLưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo.\n\nBình luận của bạn sẽ được kiểm duyệt trước khi hiển thị công khai. Thông tin email được bảo mật theo Chính sách bảo mật dữ liệu.\n\nGửi bình luận",
+      "notices": [
+        {
+          "text": "Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu *",
+          "class": "comment-notes",
+          "links": []
+        },
+        {
+          "text": "Bình luận của bạn sẽ được kiểm duyệt trước khi hiển thị công khai. Thông tin email được bảo mật theo Chính sách bảo mật dữ liệu.",
+          "class": "tt4m-comment-privacy-notice",
+          "links": [
+            {
+              "text": "Chính sách bảo mật dữ liệu",
+              "href": "https://trangtri4mua.com/chinh-sach-bao-mat/"
+            }
+          ]
+        }
+      ],
+      "cookieChoice": {
+        "checked": false,
+        "defaultChecked": false,
+        "label": "Lưu tên, email và trang web của tôi trong trình duyệt này cho lần bình luận tiếp theo."
+      },
+      "submitText": "Gửi bình luận"
+    }
+  },
+  "identity": {
+    "organizations": {
+      "home": [
+        {
+          "id": "https://trangtri4mua.com/#organization",
+          "name": "Trang Trí 4 Mùa",
+          "legalName": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+          "taxID": "0318294567",
+          "vatID": "0318294567",
+          "telephone": "+84-901-234-567",
+          "email": "cskh@trangtri4mua.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Xuân Thủy, Phường Thảo Điền",
+            "addressLocality": "TP. Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "postalCode": "70000",
+            "addressCountry": "VN"
+          }
+        }
+      ],
+      "contact": [
+        {
+          "id": "https://trangtri4mua.com/#organization",
+          "name": "Trang Trí 4 Mùa",
+          "legalName": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+          "taxID": "0318294567",
+          "vatID": "0318294567",
+          "telephone": "+84-901-234-567",
+          "email": "cskh@trangtri4mua.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Xuân Thủy, Phường Thảo Điền",
+            "addressLocality": "TP. Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "postalCode": "70000",
+            "addressCountry": "VN"
+          }
+        }
+      ],
+      "about": [
+        {
+          "id": "https://trangtri4mua.com/#organization",
+          "name": "Trang Trí 4 Mùa",
+          "legalName": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+          "taxID": "0318294567",
+          "vatID": "0318294567",
+          "telephone": "+84-901-234-567",
+          "email": "cskh@trangtri4mua.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Xuân Thủy, Phường Thảo Điền",
+            "addressLocality": "TP. Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "postalCode": "70000",
+            "addressCountry": "VN"
+          }
+        }
+      ],
+      "payment": [
+        {
+          "id": "https://trangtri4mua.com/#organization",
+          "name": "Trang Trí 4 Mùa",
+          "legalName": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+          "taxID": "0318294567",
+          "vatID": "0318294567",
+          "telephone": "+84-901-234-567",
+          "email": "cskh@trangtri4mua.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Xuân Thủy, Phường Thảo Điền",
+            "addressLocality": "TP. Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "postalCode": "70000",
+            "addressCountry": "VN"
+          }
+        }
+      ],
+      "privacy": [
+        {
+          "id": "https://trangtri4mua.com/#organization",
+          "name": "Trang Trí 4 Mùa",
+          "legalName": "Hộ Kinh Doanh Trang Trí 4 Mùa",
+          "taxID": "0318294567",
+          "vatID": "0318294567",
+          "telephone": "+84-901-234-567",
+          "email": "cskh@trangtri4mua.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Xuân Thủy, Phường Thảo Điền",
+            "addressLocality": "TP. Thủ Đức",
+            "addressRegion": "TP. Hồ Chí Minh",
+            "postalCode": "70000",
+            "addressCountry": "VN"
+          }
+        }
+      ]
+    },
+    "visible_elements": {
+      "contact": [
+        {
+          "tag": "P",
+          "class": null,
+          "id": null,
+          "text": "Địa chỉ Showroom & Kho:\n123 Đường Xuân Thủy, Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh\nMã số thuế / ĐKKD: 0318294567"
+        },
+        {
+          "tag": "P",
+          "class": "wp-block-paragraph",
+          "id": null,
+          "text": "Showroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 - 21:00)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD"
+        }
+      ],
+      "about": [
+        {
+          "tag": "P",
+          "class": null,
+          "id": null,
+          "text": "Địa chỉ: 123 Đường Xuân Thủy, Phường Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh (Mã số thuế / ĐKKD: 0318294567)"
+        },
+        {
+          "tag": "P",
+          "class": "wp-block-paragraph",
+          "id": null,
+          "text": "Showroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 - 21:00)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD"
+        }
+      ],
+      "payment": [
+        {
+          "tag": "P",
+          "class": null,
+          "id": null,
+          "text": "• Đơn vị chủ quản: Hộ Kinh Doanh Trang Trí 4 Mùa"
+        },
+        {
+          "tag": "P",
+          "class": null,
+          "id": null,
+          "text": "• Mã số thuế / ĐKKD: 0318294567 (Do UBND TP. Thủ Đức cấp)"
+        },
+        {
+          "tag": "P",
+          "class": null,
+          "id": null,
+          "text": "• Tên tài khoản: TRANG TRI 4 MUA"
+        },
+        {
+          "tag": "P",
+          "class": "wp-block-paragraph",
+          "id": null,
+          "text": "Showroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 - 21:00)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD"
+        }
+      ],
+      "privacy": [
+        {
+          "tag": "P",
+          "class": "wp-block-paragraph",
+          "id": null,
+          "text": "Showroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 - 21:00)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD"
+        }
+      ]
+    },
+    "trust_claims": {
+      "hits": [
+        "Tuyển chọn các món phụ kiện & tượng decor được khách hàng lựa chọn nhiều cho mùa lễ hội năm nay.",
+        "Dự Án & Khách Hàng Doanh Nghiệp",
+        "Bí quyết phối màu đỏ – xanh rêu ấm áp kết hợp đèn LED rèm dịu nhẹ tạo góc chụp ảnh tự nhiên thu hút khách hàng ghé thăm.",
+        "Trải Nghiệm Từ Khách Hàng Thực Tế",
+        "Hơn 1.200 gia đình, chủ quán cafe và đối tác doanh nghiệp đã tin tưởng lựa chọn Trang Trí 4 Mùa để làm mới không gian lễ hội.",
+        "Quán Cafe TPHCM • Đã mua Combo cây 2m1",
+        "Shop Thời Trang Đà Nẵng • Khách hàng doanh nghiệp",
+        "1.200 gia đình, cửa hàng & doanh nghiệp",
+        "Những băn khoăn phổ biến nhất của khách hàng khi chọn mua phụ kiện trang trí Noel & Tết tại Trang Trí 4 Mùa.",
+        "3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?"
+      ],
+      "testimonialCount": 0,
+      "verifiedMarks": [
+        "Quán Cafe TPHCM • Đã mua Combo cây 2m1"
+      ]
+    }
+  },
+  "content": {
+    "home": {
+      "hero": "MÙA LỄ HỘI 2026 • COMBO TRỌN GÓI SẴN HÀNG\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại Trang Trí 4 Mùa được thiết kế chuẩn tone ấm áp, đầy đủ từ cây thông, quả châu, kẹo xoắn đến hệ thống chiếu sáng an toàn và nơ đỉnh.\n\n✓\nĐầy đủ cây thông chuẩn size (1m5, 1m8, 2m1) kèm chân sắt chịu lực\n✓\nBộ phụ kiện treo 45 – 80 món đồng bộ tone màu (Đỏ – Vàng hoặc Trắng – Bạc)\n✓\nTặng kèm dây đèn LED ánh sáng ấm chống chập cháy & găng tay định hình cành\nXem Set Combo\nTư Vấn Zalo\nTiết Kiệm 20%",
+      "links": [
+        {
+          "text": "Tư vấn Zalo (8:00 – 21:30)",
+          "href": "https://zalo.me/0901234567"
+        },
+        {
+          "text": "Xem Set Combo",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        },
+        {
+          "text": "Tư Vấn Zalo",
+          "href": "https://zalo.me/0901234567"
+        },
+        {
+          "text": "TƯ VẤN ZALO (24/7)",
+          "href": "https://zalo.me/0901234567"
+        }
+      ],
+      "claims": [
+        "MÙA LỄ HỘI 2026 • COMBO TRỌN GÓI SẴN HÀNG",
+        "Tặng kèm dây đèn LED ánh sáng ấm chống chập cháy & găng tay định hình cành"
+      ]
+    },
+    "combo_category": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "h1": "Combo Trang Trí Noel",
+      "count": "HIỂN THỊ TẤT CẢ 3 KẾT QUẢ",
+      "cards": [
+        {
+          "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "price": "4.600.000 ₫\nGiá gốc là: 4.600.000 ₫.\n3.850.000 ₫\nGiá hiện tại là: 3.850.000 ₫.",
+          "href": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/"
+        },
+        {
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "price": "950.000 ₫\nGiá gốc là: 950.000 ₫.\n750.000 ₫\nGiá hiện tại là: 750.000 ₫.",
+          "href": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/"
+        },
+        {
+          "title": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+          "price": "1.550.000 ₫\nGiá gốc là: 1.550.000 ₫.\n1.250.000 ₫\nGiá hiện tại là: 1.250.000 ₫.",
+          "href": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/"
+        }
+      ]
+    },
+    "size_article": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "hits": {
+        "keo sữa": [],
+        "hair spray": [],
+        "an toàn tuyệt đối": [],
+        "không bao giờ": [],
+        "khuyến cáo nhà sản xuất": [
+          "Định hình cành nhẹ nhàng theo khuyến cáo nhà sản xuất: Sau khi lắp ráp và bung cành đều, dùng găng tay vải vuốt xuôi theo tán lá để tạo độ nở tự nhiên. Đối với cây phủ tuyết chất lượng cao, các mảng tuyết bám tự nhiên qua công nghệ ép nhiệt sẽ ổn định sau khi cành đứng dáng; tuyệt đối không dùng các hóa chất kết dính tự chế để tránh làm ố màu hoặc làm giòn sợi lá nhân tạo."
+        ],
+        "ép nhiệt": [
+          "Định hình cành nhẹ nhàng theo khuyến cáo nhà sản xuất: Sau khi lắp ráp và bung cành đều, dùng găng tay vải vuốt xuôi theo tán lá để tạo độ nở tự nhiên. Đối với cây phủ tuyết chất lượng cao, các mảng tuyết bám tự nhiên qua công nghệ ép nhiệt sẽ ổn định sau khi cành đứng dáng; tuyệt đối không dùng các hóa chất kết dính tự chế để tránh làm ố màu hoặc làm giòn sợi lá nhân tạo."
+        ]
+      }
+    },
+    "cafe_article": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "hits": {
+        "an toàn tuyệt đối": [],
+        "không bao giờ": [],
+        "loại bỏ hoàn toàn": [
+          "Sử dụng ổ cắm hẹn giờ (Timer Switch / Smart Plug): Cài đặt lịch tự động bật đèn trang trí lúc 17h chiều và tự ngắt lúc 23h khi đóng quán. Điều này loại bỏ hoàn toàn rủi ro nhân viên quên tắt đèn qua đêm, đồng thời kéo dài tuổi thọ của chip LED và tiết kiệm tiền điện hàng tháng cho quán."
+        ],
+        "25kg": [
+          "Neo giữ thân cây bằng dây cước trong suốt: Với những cây thông có chiều cao từ 2m1 trở lên đặt gần tường hoặc vách kính, hãy dùng 1 – 2 sợi cước câu cá trong suốt (loại chịu tải 25kg – 30kg) buộc vòng qua thân cây ở độ cao 2/3 và neo chặt vào móc dán tường chịu lực 3M hoặc điểm tựa cố định. Sợi cước mảnh khó nhận thấy bằng mắt thường nhưng tạo điểm neo giữ vững chắc, giúp cây đứng vững và hạn chế tối đa nguy cơ nghiêng đổ khi có va chạm ngoài ý muốn."
+        ],
+        "30kg": [
+          "Neo giữ thân cây bằng dây cước trong suốt: Với những cây thông có chiều cao từ 2m1 trở lên đặt gần tường hoặc vách kính, hãy dùng 1 – 2 sợi cước câu cá trong suốt (loại chịu tải 25kg – 30kg) buộc vòng qua thân cây ở độ cao 2/3 và neo chặt vào móc dán tường chịu lực 3M hoặc điểm tựa cố định. Sợi cước mảnh khó nhận thấy bằng mắt thường nhưng tạo điểm neo giữ vững chắc, giúp cây đứng vững và hạn chế tối đa nguy cơ nghiêng đổ khi có va chạm ngoài ý muốn."
+        ],
+        "15kg": [
+          "Gia cố cây thông ngoài trời: Nên chọn cây thông Noel làm từ chất liệu lá PE đúc dày dặn, khung thân kim loại sơn tĩnh điện, chiều cao từ 2m4 đến 3m. Chân đế chữ thập cần được ép thêm bao cát tải trọng 15kg – 20kg giấu kín dưới lớp vải bố hoặc thùng gỗ bọc hộp quà để cây đứng vững trước gió lộng.",
+          "Gia cố trọng lượng chân đế: Khung chân sắt chữ thập của cây thông phải được siết chặt các ốc ren định vị vào lõi thân cây. Sau khi mở rộng 4 nhánh chân sắt, hãy đặt thêm 2 – 3 viên gạch đặc hoặc túi cát sạch (nặng khoảng 10kg – 15kg) đè lên các nhánh chân đế. Sau đó, bọc kín phần chân bằng vải bố thô, thảm lông hoặc xếp các hộp quà nặng bao quanh để giữ tính thẩm mỹ."
+        ],
+        "20kg": [
+          "Gia cố cây thông ngoài trời: Nên chọn cây thông Noel làm từ chất liệu lá PE đúc dày dặn, khung thân kim loại sơn tĩnh điện, chiều cao từ 2m4 đến 3m. Chân đế chữ thập cần được ép thêm bao cát tải trọng 15kg – 20kg giấu kín dưới lớp vải bố hoặc thùng gỗ bọc hộp quà để cây đứng vững trước gió lộng."
+        ]
+      }
+    },
+    "budget_article": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "hits": {
+        "an toàn tuyệt đối": [],
+        "30m": [
+          "Công suất 12V 2A – 5A chịu tải cho 30m – 50m LED",
+          "Nguồn 12V 2A chịu tải 30m LED"
+        ],
+        "50m": [
+          "Công suất 12V 2A – 5A chịu tải cho 30m – 50m LED"
+        ],
+        "12V 2A": [
+          "Công suất 12V 2A – 5A chịu tải cho 30m – 50m LED",
+          "Nguồn 12V 2A chịu tải 30m LED"
+        ],
+        "12V 5A": [
+          "Củ nguồn công nghiệp 12V 5A"
+        ],
+        "toàn bộ hệ thống": [
+          "1 củ dùng cho toàn bộ hệ thống đèn trên 1 cây"
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Không xác minh giấy đăng ký/MST, bảng giá owner, tồn kho, đơn lịch sử, database hoặc retention backend.",
+    "Không gửi form, bình luận, đăng nhập hoặc đặt đơn.",
+    "Chỉ thêm giỏ để kiểm hai cây và Kẹo gậy; mọi sản phẩm thử đã được xóa và giỏ trở về 0 ₫."
+  ]
+}
