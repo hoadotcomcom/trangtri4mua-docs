@@ -468,3 +468,94 @@ Batch 6: Resolution of R33 Reviewer Findings (R2-15, R2-20, R2-07)
 1. **DOM Order Policy**: Khách hàng sử dụng bàn phím hoặc screen reader sẽ đọc toàn bộ nội dung chính sách trước khi tiếp cận khối điều hướng phụ.
 2. **B2B Hash Navigation**: Trải nghiệm chuyển trang từ CTA Shop/Category đến B2B section trên trang chủ đã hoàn thiện cả về vị trí cuộn lẫn tiêu điểm bàn phím.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 7
+
+## Batch
+Batch 7: Remediation of R34 & R35 Findings (R2-20, R2-03, R2-02, R2-10, R2-04, R2-05, R2-22)
+
+## Summary
+Đã hoàn tất xử lý triệt để 7 nhóm vấn đề trọng tâm được Reviewer chỉ ra tại Vòng R34 và R35:
+1. **R2-20 [P2] — Chuẩn hóa cây heading trên 4 trang chính sách**: Loại bỏ hoàn toàn các thẻ `<h4>` nhảy cóc dưới `<h1>`, `<h2>` và trong sidebar trên toàn bộ 4 trang chính sách (11, 12, 13, 14), bảo đảm phân cấp H1 -> H2 -> H3 nghiêm ngặt.
+2. **R2-03 & R2-02 [P1] — Đồng bộ thông số SET-HG-70 và catalog Kẹo gậy (269)**:
+   - SET-HG-70: Khớp hoàn toàn khoảng kích thước cây phù hợp `1m8 – 2m4` giữa mô tả và bảng thông số kỹ thuật; liệt kê rõ 4 dây đèn LED trong thành phần trọn bộ 70 món.
+   - Kẹo gậy (269): Chuẩn hóa mô tả sản phẩm khớp chính xác 100% với 5 biến thể có trong selector/data (Kẹo gậy 1m8, 2m, 2m5; Kẹo tròn 1m2, 1m5), loại bỏ mọi kích cỡ không tồn tại.
+3. **R2-10 [P2] — Đồng bộ giờ hỗ trợ, thời gian giao hàng và hoàn tiền toàn website**:
+   - Giờ hỗ trợ: Hotline & Zalo trực tư vấn **08:00 – 21:30** hàng ngày; Showroom mở cửa **08:00 – 21:00**; Kênh tự động tiếp nhận tin nhắn **24/7**.
+   - Thời gian giao hàng: Nội thành hỏa tốc 2h – 4h; các tỉnh thành khác **2 – 4 ngày làm việc** (vùng sâu/xa 3 – 5 ngày). Sửa đồng bộ tại Trang Chủ, Hub và Chính Sách Vận Chuyển.
+   - Thời gian hoàn tiền: Đồng bộ cam kết hoàn tiền trong **1 – 2 ngày làm việc** sau khi tiếp nhận hàng lỗi trên toàn bộ Trang Chủ và Chính Sách Đổi Trả.
+4. **R2-04 [P1] — Tinh chỉnh Hero perks, category cards và metadata listing**:
+   - Hero perks: Chuẩn hóa bullet mô tả các set 50 – 70 món theo chủ đề linh hoạt.
+   - Category cards Trang Chủ: Cây thông cập nhật huy hiệu "Đủ Size 1m5 – 2m4"; Đèn & Nến, Quà Tặng gắn nhãn tư vấn / cập nhật mùa 2026.
+   - Term 24 (Combo): Cập nhật mô tả và SEO description phản ánh trung thực cả set phụ kiện và gói combo có cây.
+5. **R2-05 & R2-22 [P1] — Định lượng kỹ thuật an toàn và tiết chế uy tín**:
+   - Post 322: Bỏ các số liệu bao cát/cước cố định và móc dán tường 3M; thay bằng khuyến nghị gia cố chân đế theo sức gió và neo vào kết cấu chịu lực kiên cố.
+   - Post 327: Đồng nhất số liệu công suất đèn LED (15W – 18W cho 3 cuộn 10m, củ nguồn 12V 2A 24W đạt ngưỡng an toàn 70%); thay phát biểu "hàng trăm công trình" bằng kinh nghiệm tư vấn thực tế.
+   - Trang Chủ & Giới Thiệu: Đổi tiêu đề khối đánh giá sang "Cảm Nhận Từ Khách Hàng Thân Thiết"; bỏ các tuyên bố 100% hình ảnh / 200 mẫu chưa có căn cứ công khai.
+
+## Issues Addressed
+
+### Issue: [P2] R2-20 — Phân cấp Heading trên 4 trang chính sách
+- **Status**: FIXED
+- **Files changed**: Page ID 11 (`chinh-sach-doi-tra`), 12 (`chinh-sach-van-chuyen`), 13 (`chinh-sach-bao-mat`), 14 (`chinh-sach-thanh-toan`)
+- **What changed**: Thay thế toàn bộ các thẻ `<h4>` dùng sai cấp bậc thành `<h3>` đối với các mục nội dung trực thuộc `<h2>`, hoặc thành thẻ `<div>` có kiểu dáng tương thích đối với các biểu ngữ tóm tắt và tiêu đề sidebar.
+- **Verification**: Node.js script quét regex toàn bộ mã nguồn xác nhận: 0 thẻ `<h4>` trên cả 4 trang chính sách (`h4Count: 0`). Cấu trúc heading tuân thủ nghiêm ngặt H1 -> H2 -> H3.
+- **Notes**: Giải quyết trọn vẹn điểm còn thiếu của R2-20 từ vòng R35.
+
+### Issue: [P1] R2-03 & R2-02 — Thống nhất catalog Kẹo gậy (269) & SET-HG-70
+- **Status**: FIXED
+- **Files changed**: `inc/pdp-features.php`, Product ID 269, Product ID 382 (`SET-HG-70`)
+- **What changed**:
+  1. `SET-HG-70`: Chỉnh kích thước cây phù hợp trong bảng thông số kỹ thuật thành `1m8 – 2m4` (khớp với mô tả bài viết). Cập nhật mô tả liệt kê đầy đủ 70 món (gồm 30 quả châu, 12 hoa trạng nguyên, 16 nơ nhung, 8 dây kim tuyến, 4 dây đèn LED).
+  2. Kẹo gậy 269: Viết lại bảng quy cách trong mô tả sản phẩm khớp chính xác với 5 biến thể có trong dropdown: Kẹo gậy (1m8: 1.150.000₫, 2m: 1.450.000₫, 2m5: 1.650.000₫) và Kẹo tròn (1m2: 750.000₫, 1m5: 950.000₫). Bỏ toàn bộ các size không tồn tại.
+- **Verification**: Thử nghiệm đọc API và hàm render: Cả hai sản phẩm khớp 100% giữa mô tả, bảng thông số và biến thể thực tế.
+- **Notes**: Loại bỏ hoàn toàn mâu thuẫn thông số và phân loại.
+
+### Issue: [P2] R2-10 — Đồng bộ giờ hỗ trợ, thời gian giao hàng và hoàn tiền
+- **Status**: FIXED
+- **Files changed**: `inc/pdp-features.php`, `inc/shop-features.php`, `404.php`, Menu ID 315, Page ID 11, Page ID 23, `home.php`
+- **What changed**:
+  1. Giờ làm việc: Đổi toàn bộ các vị trí ghi "24/7" (PDP assist, Shop trust pills, Empty state category, 404, Footer menu item 315) thành khung giờ chính xác: Tư vấn trực tuyến **08:00 – 21:30**. Showroom mở cửa **08:00 – 21:00**. Kênh nhận tin nhắn tự động **24/7**.
+  2. Thời gian giao hàng: Chuẩn hóa thành **2 – 4 ngày làm việc** (vùng sâu/xa từ 3 – 5 ngày) trên Trang Chủ và Hub, khớp với Chính Sách Vận Chuyển.
+  3. Thời gian hoàn tiền: Chuẩn hóa cam kết hoàn tiền thành **1 – 2 ngày làm việc** trên Trang Chủ, khớp với Chính Sách Đổi Trả.
+- **Verification**: Quét regex toàn bộ theme và database: 0 vị trí bị lệch giờ hỗ trợ hoặc sai lệch thời gian giao nhận/hoàn tiền.
+- **Notes**: Thông điệp dịch vụ hoàn toàn nhất quán trên mọi điểm chạm.
+
+### Issue: [P1] R2-04 — Tinh chỉnh Hero perks, category cards và metadata listing
+- **Status**: FIXED
+- **Files changed**: Page ID 23 (`trang-chu`), Term ID 24 (`combo-trang-tri-noel`)
+- **What changed**:
+  1. Hero perks: Sửa bullet phụ kiện thành "Set 50 – 70 món phụ kiện phối sẵn theo chủ đề (quả châu cao cấp, hoa trạng nguyên, nơ nhung, đèn LED)".
+  2. Category cards Trang Chủ: Cập nhật thẻ Cây thông thành "Đủ Size 1m5 – 2m4"; cập nhật thẻ Đèn & Nến và Quà Tặng thành nhãn tư vấn / cập nhật mùa 2026.
+  3. Term 24: Cập nhật mô tả danh mục và Rank Math SEO description phản ánh trung thực cả set phụ kiện và combo cây trọn gói.
+- **Verification**: Kiểm tra giao diện và term meta: Các lời hứa thương mại hoàn toàn trung thực với sản phẩm đang bán.
+- **Notes**: Bảo đảm trải nghiệm duyệt hàng minh bạch cho người mua.
+
+### Issue: [P1] R2-05 & R2-22 — Định lượng an toàn có căn cứ và tiết chế uy tín
+- **Status**: FIXED
+- **Files changed**: Post ID 322, Post ID 327, Page ID 23, Page ID 15
+- **What changed**:
+  1. Post 322: Loại bỏ số liệu cố định bao cát 15-20kg và móc dán 3M; thay bằng hướng dẫn gia cố tạ đè tương ứng chiều cao/gió và neo vào kết cấu kiến trúc chịu lực kiên cố.
+  2. Post 327: Đồng bộ định mức công suất LED (15W – 18W cho 3 cuộn 10m, củ nguồn 12V 2A 24W đạt ngưỡng an toàn 70%); thay "hàng trăm công trình" bằng kinh nghiệm tư vấn thực tế.
+  3. Trang Chủ & Giới Thiệu: Đổi tiêu đề khối đánh giá sang "Cảm Nhận Từ Khách Hàng Thân Thiết"; bỏ các tuyên bố 100% hình ảnh / 200 mẫu chưa có căn cứ công khai.
+- **Verification**: Quét nội dung bài viết và trang tĩnh: Các số liệu kỹ thuật nhất quán và hợp lý; không còn các claim tiếp thị thổi phồng.
+- **Notes**: Nội dung đạt chuẩn E-E-A-T và xây dựng niềm tin bền vững.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 7).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` với 0 syntax errors.
+- **Policy Headings**: 0 thẻ `<h4>` trên toàn bộ 4 trang chính sách (11, 12, 13, 14).
+- **Catalog Alignment**: SET-HG-70 và Kẹo gậy 269 khớp 100% giữa mô tả, bảng thông số và dữ liệu biến thể.
+- **Cross-site Consistency**: 100% nhất quán về giờ hỗ trợ (08:00–21:30), thời gian giao hàng (2–4 ngày) và hoàn tiền (1–2 ngày).
+- **Safety & Trust**: Không còn các tuyên bố thiếu căn cứ, thông số an toàn chuẩn chỉ.
+
+## Notes for Reviewer
+
+1. **Policy Headings**: Cây heading trên cả 4 trang chính sách đã được chuẩn hóa H1 -> H2 -> H3, không còn bất kỳ bước nhảy cấp bậc nào.
+2. **Catalog Merchandising**: Các trang sản phẩm Kẹo gậy và Set Hoàng Gia đã loại bỏ hoàn toàn các thông số mâu thuẫn với selector.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
