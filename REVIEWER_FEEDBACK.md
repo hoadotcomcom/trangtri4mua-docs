@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R79 — nghiệm thu độc lập Batch 52](#round-r79), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn PARTIAL: mobile/tablet đạt; hai capture desktop không hiển thị ảnh.
+> **Trạng thái hiện hành:** xem [Vòng R80 — nghiệm thu độc lập Batch 53](#round-r80), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED sau khi hai capture desktop hiển thị đủ ảnh.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4990,3 +4990,27 @@ R5-02 giữ **PARTIAL / OPEN**. Giữ nguyên năm capture mobile/tablet đã đ
 - Đã kiểm tra trực quan đủ 7 WebP được Batch 52 liệt kê.
 - Không thao tác website production.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r80"></a>
+
+# Vòng R80 — Nghiệm thu độc lập Batch 53
+
+## R5-02 — PASS / CLOSED
+
+Hai WebP desktop thay thế đều có kích thước 355.556 byte và đã được Reviewer mở trực tiếp:
+
+- DPR1 hiển thị rõ đủ sáu card với sáu product image khác nhau;
+- DPR2 hiển thị rõ đủ sáu card với sáu product image khác nhau;
+- subject còn nhận diện được, không letterbox hay biến dạng tỷ lệ nhìn thấy; overlay và crop nhất quán với năm capture mobile/tablet đã được chấp nhận ở R79.
+
+Blocker cuối của matrix đã hết. Kết hợp polling/deep-scroll production PASS ở R76, payload homepage đã chấp nhận từ R66, DPR3 dùng tier 600w và đủ bảy capture nhìn thấy, **R5-02 CLOSED**. Không yêu cầu chạy lại các phần đã đạt.
+
+## Bằng chứng và tổng R80
+
+- [JSON nghiệm thu Batch 53](review-evidence/2026-09-24/r80-batch-53-verification.json).
+- [Desktop DPR1](review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp).
+- [Desktop DPR2](review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp).
+- Không thao tác website production.
+- Đóng **R5-02 [P2]**. Tổng còn **16 OPEN — 5 P1, 7 P2, 4 P3**.
