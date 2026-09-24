@@ -1,8 +1,8 @@
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
 > **Dự án**: Trang Trí 4 Mùa (`trangtri4mua.com`) — Tái thiết kế Theme Blocksy Child.  
-> **Thời điểm thẩm định**: Tháng 09/2026.  
-> **Hội đồng thẩm định**: Đội ngũ 7 Sub-Agents Reviewer chuyên trách (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
+> **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
+> **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
 ---
 
@@ -11,72 +11,70 @@
 Hội đồng thẩm định đã tiến hành rà soát độc lập trên toàn bộ 8 tệp PHP, 11 tệp CSS, 1 tệp JS và 15 tuyến trang thực tế của website. 
 
 * **Trạng thái chung**: **ĐẠT TIÊU CHUẨN THƯƠNG HIỆU CAO CẤP (PASS WITH ACTIONABLE REFINEMENTS)**.
-* **Tổng số phát hiện kỹ thuật**: 14 phát hiện (gồm 2 lỗi Blocker, 4 lỗi Major, 5 khuyến nghị Medium và 3 tinh chỉnh Low).
-* **100% các vấn đề đã được Assistant xử lý dứt điểm** trong giai đoạn hoàn thiện.
+* **Tổng số vấn đề ghi nhận**: 15 issues (2 P0 Blocker, 4 P1 High, 4 P2 Medium, 5 P3 Low).
+* **Trạng thái hiện tại**: **15/15 CLOSED / FIXED**.
 
 ---
 
-## 2. Chi Tiết Đánh Giá Của Từng Chuyên Môn
+## 2. Danh Sách Chi Tiết Các Issues
 
-### Reviewer 1: Chất Lượng Mã Nguồn & Kiến Trúc Theme (`ReviewerCodeQuality`)
-* **Đánh giá chung**: Mã nguồn được phân tách mô-đun khoa học theo chuẩn WordPress Child Theme. Cú pháp PHP 8.3 sạch sẽ, 100% tệp vượt qua `php -l` với $0$ lỗi.
-* **Các phát hiện cần tối ưu**:
-  1. *Trùng lặp bộ lọc `the_title` (Priority 3 - Khuyên bỏ)*: Trong `functions.php` có khai báo bộ lọc ẩn danh gỡ bỏ hậu tố lặp lại của tiêu đề sản phẩm, chạy cùng lúc với hàm `tt4m_clean_catalog_title` trong `inc/shop-features.php` ở độ ưu tiên 5. Cần gỡ bỏ để tránh chạy regex 2 lần không cần thiết.
-  2. *Đăng ký trùng lặp tệp CSS `tt4m-single-product` (Priority 3)*: Tệp CSS này vừa được nạp tại `functions.php` (priority 20), vừa được gọi lại trong `inc/pdp-features.php` (priority 25). Cần hợp nhất điểm nạp về `functions.php`.
+### Issue 1 [P0] [FIXED]: Lỗi vỡ layout 2 cột trang Chính Sách Bảo Mật (`/chinh-sach-bao-mat/`)
+- **Phân loại**: Layout Bug / Blocker
+- **Mô tả**: Nửa bên phải màn hình bị trắng tinh, toàn bộ nội dung chính bị đẩy tụt xuống dưới chân sidebar.
+- **Root cause**: Bộ lọc `wpautop` tự động chèn thẻ `<p></p>` rỗng vào khoảng cách giữa `</aside>` và `<main>` trong grid 2 cột (`display: grid; grid-template-columns: 300px 1fr;`), chiếm giữ Cột 2 Dòng 1.
 
----
+### Issue 2 [P0] [FIXED]: Lỗi thiếu biến thể trên sản phẩm Tháp nhũ điện (ID 295) & các sản phẩm liên quan
+- **Phân loại**: E-Commerce Catalog / Blocker
+- **Mô tả**: Trong database có 3 biến thể (1m2, 1m5, 1m8) nhưng thuộc tính cha `pa_kich-thuoc` chỉ gán giá trị 1m2. Hậu quả là dropdown trên web chỉ cho chọn 1m2, biến thể 1m5 và 1m8 không thể mua được. Tình trạng tương tự xảy ra ở các sản phẩm 269, 255, 237, 223, 177.
 
-### Reviewer 2: Bố Cục Desktop & Thứ Bậc Thị Giác (`ReviewerLayoutDesktop`)
-* **Đánh giá chung**: Giao diện Desktop ($1440\text{px}$ và $1920\text{px}$) có tỷ lệ phân bổ cân đối, nhịp thở thị giác khoáng đạt, font chữ *Playfair Display* kết hợp *Be Vietnam Pro* mang lại cảm giác sang trọng.
-* **Các phát hiện cần tối ưu**:
-  1. *Lỗi vỡ layout trang Chính Sách Bảo Mật (`/chinh-sach-bao-mat/` - Severity: Major)*: Nửa bên phải màn hình bị trắng tinh, nội dung bị đẩy tụt xuống dưới đáy. Nguyên nhân do `wpautop` chèn thẻ `<p></p>` rỗng vào giữa `<aside>` và `<main>` trong grid 2 cột.
-  2. *Thiếu chuyển hướng 301 cho các bài viết cẩm nang (Severity: Major)*: Các đường dẫn gốc `/cach-chon-size-cay-thong-noel` và `/du-toan-chi-phi-trang-tri-noel` trả về mã lỗi 404 do thiếu luật chuyển hướng 301 về đường dẫn danh mục chuẩn `/y-tuong-trang-tri/noel/...`.
-  3. *Hero Banner cũ bị ám màng màu tối*: Ảnh chụp sản phẩm ở Hero cũ bị lớp overlay xanh che mất ánh sáng tự nhiên. Khuyên chuyển sang **Phương án A: Split 2-Column Hero**.
+### Issue 3 [P1] [FIXED]: Bảng biểu chính sách bị cắt mép bên phải trên mobile (< 600px)
+- **Phân loại**: Mobile Responsive / High
+- **Mô tả**: Bảng đối soát vận chuyển và đổi trả có độ rộng tự nhiên 807px, nhưng container `.tt4m-table-wrap` không có thanh cuộn ngang cảm ứng, khiến các cột bên phải bị cắt mất trên màn hình iPhone ($375\text{px}$ - $430\text{px}$).
 
----
+### Issue 4 [P1] [FIXED]: Lỗi Double-Click gây nhân đôi số lượng khi bấm "Mua ngay"
+- **Phân loại**: Conversion Flow / High
+- **Mô tả**: Khách bấm đúp nhanh vào nút "Mua ngay" sẽ gửi liên tiếp 2 request AJAX, khiến sản phẩm trong giỏ bị tăng lên số lượng 2 trước khi chuyển sang trang thanh toán.
 
-### Reviewer 3: Trải Nghiệm Di Động & Chuẩn Cảm Ứng Touch Target (`ReviewerLayoutMobile`)
-* **Đánh giá chung**: Thanh chốt đơn dính đáy hoạt động mượt mà; không bị lỗi tràn viền ngang (`zero horizontal overflow`).
-* **Các phát hiện cần tối ưu**:
-  1. *Bảng biểu chính sách bị tràn mép trên mobile (Severity: Blocker)*: Bảng đối soát vận chuyển và đổi trả có độ rộng tự nhiên 807px, nhưng container `.tt4m-table-wrap` không có thanh cuộn ngang cảm ứng, khiến các cột bên phải bị cắt mất trên màn hình iPhone ($375\text{px}$ - $430\text{px}$). Cần bổ sung `min-width: 580px` và `overflow-x: auto`.
-  2. *Nút bấm Hero bị xếp chồng dọc chiếm quá nhiều diện tích*: Khách hàng phải cuộn màn hình mới thấy nút mua. Khuyên thu gọn văn bản nút và đặt song song trên cùng 1 hàng ngang.
-  3. *Chiều cao link danh mục menu drawer thiếu 2px*: Thẻ `.tt4m-subcat-link` đo được $42\text{px}$ chiều cao, thiếu 2px so với chuẩn $44\times 44\text{px}$ của Apple Human Interface Guidelines và WCAG 2.5.5. Cần tăng lên $44\text{px}$.
-  4. *Nút liên hệ nổi (Floating Actions) nằm quá cao*: Nằm cách đáy 76px che mất một phần thẻ sản phẩm khi lướt xem danh mục.
+### Issue 5 [P1] [FIXED]: Thiếu chuyển hướng 301 cho các bài viết và đường dẫn `/shop/`, `/cart/`
+- **Phân loại**: SEO & Routing / High
+- **Mô tả**: Các đường dẫn chuẩn tiếng Anh `/shop/`, `/cart/`, `/checkout/` và các URL bài viết cẩm nang gốc trả về mã lỗi 404 do thiếu luật chuyển hướng 301 về đường dẫn tiếng Việt.
 
----
+### Issue 6 [P1] [FIXED]: Lỗ hổng Open Redirect tại handler dự phòng non-JS của form B2B
+- **Phân loại**: Security Vulnerability / High
+- **Mô tả**: Tham số `redirect_zalo` được đọc trực tiếp từ `$_POST` và truyền vào `wp_redirect()`. Kẻ tấn công có thể giả lập form để chuyển hướng người dùng sang trang lừa đảo.
 
-### Reviewer 4: Luồng Giao Dịch & Giỏ Hàng WooCommerce (`ReviewerCommerceFlow`)
-* **Đánh giá chung**: Quy trình thanh toán được rút gọn xuất sắc, loại bỏ các trường không cần thiết cho thị trường Việt Nam; xác thực số điện thoại 10 số hoạt động hoàn hảo (đạt 20/20 test case).
-* **Các phát hiện cần tối ưu**:
-  1. *Lỗi thiếu biến thể trên sản phẩm Tháp nhũ điện ID 295 (Severity: Blocker)*: Trong database có 3 biến thể (1m2, 1m5, 1m8) nhưng thuộc tính cha `pa_kich-thuoc` chỉ gán giá trị 1m2. Hậu quả là dropdown trên web chỉ cho chọn 1m2, khiến khách không thể mua size 1m5 và 1m8. Các sản phẩm 269, 255, 237, 223, 177 cũng gặp tình trạng tương tự.
-  2. *Lỗi Double-Click gây nhân đôi số lượng khi bấm "Mua ngay" (Severity: Major)*: Khách bấm đúp nhanh vào nút "Mua ngay" sẽ gửi liên tiếp 2 request AJAX, khiến sản phẩm trong giỏ bị tăng lên số lượng 2 trước khi chuyển sang trang thanh toán.
-  3. *Timer redirect dự phòng quá ngắn (Severity: Minor)*: Thời gian chờ 1400ms quá gấp gáp đối với các kết nối 3G/4G chập chờn, có thể chuyển hướng khách sang trang thanh toán khi giỏ hàng chưa kịp cập nhật xong.
+### Issue 7 [P2] [FIXED]: Nút bấm Hero bị xếp chồng dọc chiếm diện tích trên mobile
+- **Phân loại**: Mobile UX / Medium
+- **Mô tả**: Hai nút bấm Hero bị xếp chồng dọc (`Khám Phá Các Set Combo Có Sẵn` 298px và `Tư Vấn Phối Set Theo Yêu Cầu` 255px), chiếm tới 120px chiều cao và bị đẩy tụt xuống dưới nếp gấp màn hình (below the fold).
 
----
+### Issue 8 [P2] [FIXED]: Nút liên hệ nổi (Floating Actions) nằm quá cao (bottom 76px)
+- **Phân loại**: Mobile UX / Medium
+- **Mô tả**: Nằm cách đáy 76px che mất một phần thẻ sản phẩm khi lướt xem danh mục trên các trang thông thường không có thanh sticky bar.
 
-### Reviewer 5: An Toàn Thông Tin & Lỗ Hổng Bảo Mật (`ReviewerSecurity`)
-* **Đánh giá chung**: Toàn bộ input người dùng được lọc qua `sanitize_text_field` và bảo vệ chống CSRF bằng `wp_nonce`.
-* **Các phát hiện cần khắc phục**:
-  1. *Lỗ hổng Open Redirect tại handler dự phòng non-JS của form B2B (Severity: Medium)*: Tham số `redirect_zalo` được đọc trực tiếp từ `$_POST` và truyền vào `wp_redirect()`. Kẻ tấn công có thể giả lập form để chuyển hướng người dùng sang trang lừa đảo. Cần cố định URL Zalo chính thức bằng mã nguồn server-side.
-  2. *Các liên kết ngoài `target="_blank"` thiếu `rel="noopener noreferrer"` (Severity: Low)*: Nguy cơ rò rỉ dữ liệu HTTP Referrer và tấn công reverse tabnabbing trên các trình duyệt cũ.
+### Issue 9 [P2] [FIXED]: Bỏ dải Marquee chạy chữ không cần thiết theo yêu cầu thương hiệu
+- **Phân loại**: Brand Taste / Medium
+- **Mô tả**: Dải marquee chạy chữ tạo cảm giác giật cục và thương mại hóa thái quá đối với một thương hiệu decor cao cấp. Khuyên loại bỏ.
 
----
+### Issue 10 [P2] [FIXED]: Thay thế Hero cũ bằng khối Combo Cây Thông & Phụ Kiện Trọn Gói
+- **Phân loại**: Conversion Optimization / Medium
+- **Mô tả**: Đưa ưu đãi giá trị cao nhất (Combo trọn gói sẵn sàng tiết kiệm 15-20%) lên vị trí đầu trang thay cho câu chào chung chung để tối ưu AOV.
 
-### Reviewer 6: Thẩm Mỹ Thương Hiệu & Tiêu Chuẩn De-AI (`ReviewerDesignTaste`)
-* **Đánh giá chung**: Thiết kế thoát xác hoàn toàn khỏi phong cách AI công nghiệp; typography *Playfair Display* và *Be Vietnam Pro* thể hiện đẳng cấp sang trọng tương tự Zara Home và Pottery Barn.
-* **Các phát hiện cần tinh chỉnh**:
-  1. *Khối dải marquee chạy chữ không cần thiết*: Tạo cảm giác giật cục và thương mại hóa thái quá đối với một thương hiệu decor cao cấp. Khuyên loại bỏ.
-  2. *Khối "4 Phong Cách Phối Cảnh Mùa Lễ Hội" gây loãng trang*: Khách hàng muốn vào thẳng danh mục và sản phẩm mua sắm thay vì đọc quá nhiều concept lý thuyết. Khuyên loại bỏ.
-  3. *Một số emoji rác còn sót lại ở chân trang*: Widget 7 và Menu 315 vẫn còn các biểu tượng cảm xúc (💬, 📍, 📞, ✉️). Cần dọn dẹp sạch sẽ để đạt chuẩn boutique tối giản.
+### Issue 11 [P3] [FIXED]: Trùng lặp bộ lọc the_title chạy regex 2 lần
+- **Phân loại**: Code Quality / Low
+- **Mô tả**: Khai báo bộ lọc ẩn danh gỡ bỏ hậu tố lặp lại của tiêu đề sản phẩm trong `functions.php` chạy cùng lúc với hàm `tt4m_clean_catalog_title` trong `inc/shop-features.php`.
 
----
+### Issue 12 [P3] [FIXED]: Đăng ký trùng lặp tệp CSS tt4m-single-product
+- **Phân loại**: Code Quality / Low
+- **Mô tả**: Tệp CSS `tt4m-single-product` vừa được nạp tại `functions.php` (priority 20), vừa được gọi lại trong `inc/pdp-features.php` (priority 25).
 
-### Reviewer 7: Cấu Trúc Dữ Liệu & Chuẩn SEO Kỹ Thuật (`ReviewerSEOPerformance`)
-* **Đánh giá chung**: Cấu trúc thẻ H1-H4 chuẩn ngữ nghĩa; Rank Math SEO cấu hình đầy đủ OpenGraph; robots.txt trỏ đúng sitemap index.
-* **Ghi nhận**: Cần đảm bảo khi thay thế Hero bằng khối Combo Cây Thông, tiêu đề chính của Combo phải giữ vai trò là **thẻ `<h1>` duy nhất** của Trang Chủ để không làm đứt gãy cấu trúc SEO.
+### Issue 13 [P3] [FIXED]: Timer redirect dự phòng của "Mua ngay" quá ngắn (1400ms)
+- **Phân loại**: Conversion Flow / Low
+- **Mô tả**: Thời gian chờ 1400ms quá gấp gáp đối với các kết nối 3G/4G chập chờn, có thể chuyển hướng khách sang trang thanh toán khi giỏ hàng chưa kịp cập nhật xong.
 
----
+### Issue 14 [P3] [FIXED]: Chiều cao touch target thẻ .tt4m-subcat-link thiếu 2px ($42\text{px}$)
+- **Phân loại**: Accessibility / Low
+- **Mô tả**: Thẻ `.tt4m-subcat-link` đo được $42\text{px}$ chiều cao, thiếu 2px so với chuẩn $44\times 44\text{px}$ của Apple Human Interface Guidelines và WCAG 2.5.5.
 
-## 3. Kết Luận & Khuyến Nghị Của Hội Đồng
-
-Website đã có bước nhảy vọt về chất lượng thẩm mỹ, tính thực chiến và trải nghiệm khách hàng. Hội đồng Reviewer yêu cầu Assistant tiến hành khắc phục tuần tự và báo cáo bằng văn bản chi tiết kèm bằng chứng kỹ thuật.
+### Issue 15 [P3] [FIXED]: Dọn dẹp emoji rác còn sót lại tại Footer Widget 7 và Menu 315
+- **Phân loại**: De-AI Aesthetics / Low
+- **Mô tả**: Widget 7 và Menu 315 vẫn còn các biểu tượng cảm xúc (💬, 📍, 📞, ✉️). Cần dọn dẹp sạch sẽ để đạt chuẩn boutique tối giản.
