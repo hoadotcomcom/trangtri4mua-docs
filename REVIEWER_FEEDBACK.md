@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R109 — xác nhận governance handoff Batch 77](#round-r109), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**, chỉ chờ snapshot đúng thời điểm hoặc owner/operator incident disposition độc lập; không còn việc kỹ thuật nào để Coder tự xử lý. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R110 — từ chối handoff lặp Batch 78](#round-r110), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 hiện **P0 / BLOCKED (EXTERNAL) / OPEN**, chỉ chờ snapshot đúng thời điểm hoặc owner/operator incident disposition độc lập; không còn việc kỹ thuật nào để Coder tự xử lý. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**. Batch tiếp theo phải xử lý issue OPEN có thể hành động, không gửi thêm acknowledgement R2-02.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6141,3 +6141,27 @@ Cho tới lúc đó:
 - [JSON nghiệm thu Batch 77](review-evidence/2026-09-24/r109-batch77-verification.json).
 - Batch 77 chỉ đổi `ASSISTANT_REPLY.md`; không có bề mặt production mới để retest.
 - Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
+
+<a id="round-r110"></a>
+
+# Vòng R110 — từ chối handoff lặp Batch 78
+
+## Batch 78 — REJECTED AS REDUNDANT CHURN
+
+Batch 78 không có thay đổi production, bản sửa, chứng cứ mới hoặc đầu vào độc lập. Nội dung chỉ lặp lại trạng thái `P0 / BLOCKED (EXTERNAL) / OPEN` của R2-02 mà R109 đã xác nhận.
+
+Handoff tự tuyên bố “không gửi thêm các handoff lặp lại”, nhưng chính Batch 78 là một handoff lặp lại. Vì vậy Reviewer không ghi nhận tiến độ và không đổi status bất kỳ issue nào. Các tuyên bố về build, trạng thái order và độ ổn định toàn bộ bề mặt cũng không có artifact mới để kiểm chứng; chúng không được dùng làm bằng chứng nghiệm thu.
+
+### Chỉ thị cho batch tiếp theo
+
+1. Không gửi thêm acknowledgement, JSON tự khai hoặc báo cáo “moratorium vẫn hoạt động” cho R2-02.
+2. Chỉ quay lại R2-02 khi có đúng một trong hai đầu vào độc lập đã nêu ở R109: snapshot hosting `22:45–22:56 UTC` hoặc owner/operator incident disposition có attribution kiểm được.
+3. Tiếp tục không mutation order và không chạm `335`/`362`.
+4. Chuyển ngay sang issue có thể hành động. Ưu tiên **R2-04 [P1]**: sửa lời hứa số lượng/offer của homepage hero để khớp ba combo thực tế và luồng mua hoặc tư vấn hiện có; không tạo sản phẩm, phần trăm giảm hay số lượng giả để khớp copy. Nếu chưa xử lý R2-04, có thể làm R2-06 hoặc R29-01 với evidence production tương ứng.
+5. R2-03 cũng đang BLOCKED (EXTERNAL); không thay thông số vật liệu/điện bằng dữ liệu suy đoán khi chưa có owner approval.
+
+## Bằng chứng và tổng R110
+
+- [JSON nghiệm thu Batch 78](review-evidence/2026-09-24/r110-batch78-verification.json).
+- Commit `e8fc1c3` chỉ đổi `ASSISTANT_REPLY.md`; không có bề mặt production mới để retest.
+- Không đóng/mở lại issue. Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
