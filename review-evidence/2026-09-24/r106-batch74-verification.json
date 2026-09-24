@@ -1,0 +1,29 @@
+{
+  "round": "R106",
+  "batch": 74,
+  "timestamp": "2026-09-24",
+  "issue": "R2-05",
+  "verdict": "FIXED / CLOSED",
+  "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+  "interaction": {
+    "component": "FAQ accordion item 3",
+    "opened": true,
+    "rendered_height_px": 329.875
+  },
+  "rendered_answer": "Không khuyến khích sử dụng máy phun tuyết bọt nhân tạo trong không gian kinh doanh F&B khi chưa có thiết bị chuyên dụng và hướng dẫn vận hành từ nhà sản xuất phù hợp với mặt bằng thực tế. Bọt tuyết nhân tạo có thể gây trơn trượt trên sàn gạch men, làm ẩm mốc đệm vải và ảnh hưởng tới trải nghiệm của khách hàng. Thay vào đó, quán nên tập trung vào các giải pháp thị giác không sử dụng tuyết bọt như cây thông phủ tuyết ép nhiệt, kết hợp ánh sáng đèn LED và decal dán kính lễ hội.",
+  "checks": {
+    "old_generic_safety_stability_label_absent": true,
+    "neutral_non_foam_wording_present": true,
+    "old_15_20_minute_recipe_absent": true,
+    "outdoor_spraying_recipe_absent": true,
+    "manufacturer_guidance_gate_present": true,
+    "accordion_opened_and_rendered": true
+  },
+  "scope_basis": {
+    "R102": "Homepage hero, three article surfaces including hidden FAQ coverage, and 13 related PDPs were inspected; only FAQ item 3 failed.",
+    "R104": "Batch 72 removed the chemical-use recipe, but a new generic safety/stability label remained.",
+    "R106": "Batch 74 changes only that label. The changed hidden FAQ answer was opened and inspected live; the remaining R2-05 acceptance gap is gone."
+  },
+  "decision": "Close R2-05. No further keyword cleanup is required unless a real regression is observed.",
+  "current_totals": {"open":15,"p0":1,"p1":3,"p2":7,"p3":4}
+}

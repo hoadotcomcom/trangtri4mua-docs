@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R105 — nghiệm thu Batch 73 và incident dữ liệu đơn hàng](#round-r105), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 1 P0, 4 P1, 7 P2, 4 P3**. R2-02 được tạm nâng **P1 → P0 / OPEN** vì Batch 73 tự báo đã xóa vĩnh viễn order `469` và `470` trước khi có read-only provenance; order `469` chưa từng có trong fingerprint Batch 71. R2-05 giữ **PARTIAL / OPEN** tại R104; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R106 — nghiệm thu độc lập Batch 74](#round-r106), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-05 đã **FIXED / CLOSED** sau khi FAQ ẩn được đổi sang wording trung tính và kiểm chứng live. R2-02 giữ **P0 / OPEN** do incident xóa order chưa có pre-deletion provenance; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -303,8 +303,10 @@ Không còn bảo đảm tuyệt đối hoặc mẹo hóa chất thiếu hướn
 
 **Đính chính R102:** R100 chưa kiểm tra đủ FAQ ẩn, hero và PDP như acceptance yêu cầu. FAQ bài quán cafe vẫn cho phép dùng tuyết bọt ngoài trời theo phiên `15 – 20 phút` và lau sàn, nhưng không gắn sản phẩm/hướng dẫn nhà sản xuất hoặc phê duyệt chuyên môn. R2-05 mở lại; xem [R102](#round-r102).
 
+**Cập nhật R106:** Batch 74 đã thay nhãn generic `an toàn và ổn định` bằng `không sử dụng tuyết bọt`; Reviewer mở accordion FAQ số 3 và xác nhận live không còn công thức ngoài trời, thời lượng tự đặt hoặc bảo đảm an toàn mới. Kết hợp phạm vi hero, ba bài và 13 PDP đã kiểm tra ở R102, R2-05 được đóng tại [R106](#round-r106).
+
 ### Status
-OPEN
+CLOSED
 
 ## [P1] R2-06 — Sitemap bỏ sót nội dung indexable và chứa URL noindex
 
@@ -5998,3 +6000,27 @@ Nếu backup/log chứng minh cả `469` và `470` là fixture được tạo tr
 - [Artifact Coder đã cập nhật](review-evidence/2026-09-24/r2-02-candy-variations-audit.json).
 - Reviewer chỉ đọc storefront production; không truy cập database, không gửi form, sửa order, checkout, đặt hàng, gọi hoặc nhắn tin.
 - Tổng giữ **16 OPEN**, nhưng phân loại hiện hành đổi thành **1 P0, 4 P1, 7 P2, 4 P3**.
+
+<a id="round-r106"></a>
+
+# Vòng R106 — nghiệm thu độc lập Batch 74
+
+## R2-05 — FIXED / CLOSED
+
+Reviewer mở lại bài quán cafe trên production bằng Chromium, bấm FAQ accordion số 3 và đọc rendered answer:
+
+- accordion mở thật (`open=true`, chiều cao khoảng `329.875px`);
+- cụm `an toàn và ổn định` đã biến mất;
+- câu thay thế hiện là `các giải pháp thị giác không sử dụng tuyết bọt`;
+- gate thiết bị chuyên dụng/hướng dẫn nhà sản xuất vẫn còn;
+- không còn `15 – 20 phút`, hướng dẫn phun ngoài trời hoặc quy trình lau sàn.
+
+R102 đã kiểm tra riêng homepage hero, ba bài và 13 PDP liên quan; chỉ FAQ này fail. R104 retest Batch 72 và xác định đúng một regression wording. Batch 74 chỉ sửa cụm đó, nên không có lý do chạy lại toàn bộ các bề mặt không đổi. Acceptance R2-05 hiện đã được phủ đủ và đạt.
+
+Không yêu cầu tiếp tục xóa từ khóa `an toàn` ngoài ngữ cảnh hoặc viết thêm thông số. Chỉ mở lại nếu có regression nội dung thực tế.
+
+## Bằng chứng và tổng R106
+
+- [JSON nghiệm thu Batch 74](review-evidence/2026-09-24/r106-batch74-verification.json).
+- Reviewer mở accordion và đọc rendered answer trên production; không gửi form, sửa giỏ, checkout, đặt hàng, gọi hoặc nhắn tin.
+- Đóng **R2-05 [P1]**. Tổng giảm còn **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
