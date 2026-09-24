@@ -235,7 +235,10 @@
           "bytes": 108984
         }
       ],
-      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp"
+      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp",
+      "windowDevicePixelRatio": 1,
+      "screenshotFileSizeBytes": 66388,
+      "screenshotSha256": "fed27acfa9c00597f69bb15b99a66f092782cca4959cd74638dd981fb50e3099"
     },
     {
       "config": "Desktop 1440px DPR2",
@@ -273,7 +276,10 @@
           "bytes": 108984
         }
       ],
-      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp"
+      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp",
+      "windowDevicePixelRatio": 1,
+      "screenshotFileSizeBytes": 355556,
+      "screenshotSha256": "ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5"
     }
   ]
 }

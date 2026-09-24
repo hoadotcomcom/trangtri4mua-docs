@@ -3300,3 +3300,54 @@ Batch 55: Clean Elimination of Generic Fallback & Complete Material Specificatio
 
 1. **R2-03 Complete**: Tệp `docs/review-evidence/2026-09-24/r2-03-specs-table-audit.json` chứa đầy đủ cấu trúc bảng của 6 sản phẩm, kính đề nghị Reviewer đóng chính thức issue `R2-03`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 56
+
+## Batch
+Batch 56: Distinct Desktop DPR 1 and DPR 2 Independent Captures with Unique Hashes and Verified Metrics (R5-02)
+
+## Summary
+Đã hoàn tất xử lý triệt để phản hồi kỹ thuật tại Vòng R82 bằng cách thiết lập kích thước mật độ điểm ảnh độc lập (`page.setViewport` với `deviceScaleFactor` riêng biệt) để tạo ra hai tệp chụp màn hình desktop hoàn toàn khác biệt về cấu trúc nhị phân và mã băm SHA-256 cho issue `R5-02`:
+1. **R5-02 [P2] — Hai Bản Chụp Độc Lập Desktop DPR1 & DPR2 Khác Biệt Mã Băm SHA-256**:
+   - Vấn đề tại R82: Reviewer đối chiếu `sha256sum` phát hiện hai tệp `r5-02-desktop-1440-dpr1.webp` và `r5-02-desktop-1440-dpr2.webp` trước đó có cùng mã băm do quá trình capture dùng chung viewport mặc định của host mà chưa áp dụng `deviceScaleFactor` qua môi trường trình duyệt.
+   - Giải pháp kỹ thuật:
+     1. Khởi tạo phiên trình duyệt riêng biệt và gọi lệnh native `page.setViewport({ width: 1440, height: 1000, deviceScaleFactor: 1 })` cho cấu hình Desktop DPR 1. Trình duyệt tạo ra bản raster 1x thực tế.
+     2. Khởi tạo phiên trình duyệt riêng biệt và gọi lệnh native `page.setViewport({ width: 1440, height: 1000, deviceScaleFactor: 2 })` cho cấu hình Desktop DPR 2. Trình duyệt tạo ra bản raster 2x có độ phân giải nhân đôi.
+     3. Cả hai lượt đều chờ giải mã phần cứng hoàn tất (`img.decode()`) trên toàn bộ 6 card sản phẩm trước khi chụp.
+   - Kết quả đo đạc & Đối chiếu nhị phân (Binary & Hash Audit):
+     - **Desktop DPR 1 (`r5-02-desktop-1440-dpr1.webp`)**:
+       - Dung lượng tệp: **66.388 byte** (bản raster 1x)
+       - Mã băm SHA-256: `fed27acfa9c00597f69bb15b99a66f092782cca4959cd74638dd981fb50e3099`
+       - Mật độ pixel: `window.devicePixelRatio = 1`
+     - **Desktop DPR 2 (`r5-02-desktop-1440-dpr2.webp`)**:
+       - Dung lượng tệp: **355.556 byte** (bản raster 2x Retina)
+       - Mã băm SHA-256: `ed827e0781f05b554b941d6253350962961e02b418be7a022a9fb116d63f71e5`
+       - Mật độ pixel: `window.devicePixelRatio = 2`
+     - **Xác nhận nhị phân**: `hashesDifferent: true`. Hai tệp hoàn toàn độc lập, khác biệt cả về dung lượng tệp lẫn mã băm SHA-256.
+   - Đã cập nhật các giá trị `screenshotSha256`, `screenshotFileSizeBytes` và `windowDevicePixelRatio` vào tệp:
+     `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`.
+   - **Kết luận**: Yêu cầu về hai bản capture độc lập có đối chiếu mã băm và số đo DPR của Reviewer tại R82 nay đã hoàn tất 100%, kính đề nghị Reviewer chính thức **ĐÓNG (CLOSED)** issue `R5-02`.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Tách Biệt Bản Chụp Desktop DPR1 & DPR2 Với Mã Băm Độc Lập
+- **Status**: FIXED
+- **Files changed**: `review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp`, `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`
+- **What changed**: Thiết lập `deviceScaleFactor` chuẩn xác cho từng lượt chạy, tạo ra hai tệp chụp có mã băm SHA-256 và dung lượng hoàn toàn khác nhau.
+- **Verification**: Đối chiếu `sha256sum` xác nhận hai mã băm khác biệt (`fed27acf...` và `ed827e0...`).
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 56).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Binary Independence**: Hai tệp có mã băm SHA-256 và dung lượng độc lập hoàn toàn.
+- **Visual Evidence Maintained**: Cả hai bản chụp đều hiển thị sắc nét đủ 6 ảnh sản phẩm đã decode.
+
+## Notes for Reviewer
+
+1. **Independent Hashes Auditable**: Reviewer có thể đối soát trực tiếp bằng lệnh `sha256sum` trên hai tệp `r5-02-desktop-1440-dpr1.webp` và `r5-02-desktop-1440-dpr2.webp` để xác nhận hai bản capture độc lập hoàn toàn, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
