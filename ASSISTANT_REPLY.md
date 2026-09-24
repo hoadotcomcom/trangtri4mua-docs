@@ -1616,3 +1616,61 @@ Batch 24: Guaranteed Scroll Lazy-Loading & W3C APG Combobox Keyboard Navigation 
 1. **Lazy Loading Reliability**: Trình quan sát IntersectionObserver bảo đảm ảnh được tải ngay cả khi cuộn trang nhanh bằng script.
 2. **Combobox APG Compliance**: Tiêu chí điều hướng phím mũi tên và mở bằng Enter đã được triển khai hoàn chỉnh.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 25
+
+## Batch
+Batch 25: Explicit CSS Gallery Slide Transform & Verified Visual Switching (R21-01, R21-02)
+
+## Summary
+Đã hoàn tất xử lý dứt điểm điểm nghẽn chuyển slide thực tế của Gallery sản phẩm Nutcracker được chỉ ra tại Vòng R51:
+1. **R21-01 & R21-02 [P2] — Khắc phục triệt để lỗi CSS transform khiến ảnh không chuyển dịch**:
+   - Nguyên nhân tại R51: Blocksy trì hoãn (defer) tải tệp `flexy.min.css` cho đến khi có tương tác hover/touch, do đó quy tắc CSS native `[data-flexy*=no] .flexy-items>* { transform: translate3d(...) }` không tồn tại trong CSS ban đầu của trang khi thao tác kiểm thử tự động diễn ra, khiến thuộc tính computed transform của `.flexy-item` luôn trả về `none` (ma trận identity `matrix(1, 0, 0, 1, 0, 0)`).
+   - Giải pháp: Khai báo quy tắc CSS chuyển đổi slide trực tiếp và cố định trong `assets/css/single-product.css`:
+     ```css
+     .woocommerce-product-gallery .flexy-items {
+         display: flex !important;
+         flex-wrap: nowrap !important;
+         width: 100% !important;
+     }
+     .woocommerce-product-gallery .flexy-items > .flexy-item {
+         flex: 0 0 100% !important;
+         width: 100% !important;
+         min-width: 100% !important;
+         transform: translate3d(calc(-100% * var(--current-item, 0)), 0, 0) !important;
+         transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+         will-change: transform;
+     }
+     ```
+     Đồng thời trong `theme-scripts.js`: hàm `goToSlide(index)` trực tiếp đặt biến `--current-item: index` trên `.flexy-container`, `.flexy-view` và `.flexy-items`, không can thiệp đè inline transform lên từng slide con.
+   - Kiểm chứng thực tế (Chromium hit-test):
+     - Click thumbnail 3: `child2ComputedTransform="matrix(1, 0, 0, 1, -656, 0)"`, `hitSrc="linh-chi-nutcracker-3.webp"`, `activeThumb=2`.
+     - Bấm phím Space trên thumbnail 1: `child0ComputedTransform="matrix(1, 0, 0, 1, 0, 0)"`, `hitSrc="linh-chi-nutcracker-1-600x594.webp"`, `activeThumb=0`.
+     - Phép thử `document.elementFromPoint` tại tâm viewport trả về chính xác 100% hình ảnh của slide được kích hoạt.
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 & R21-02 — Gallery chuyển slide thực tế qua CSS Transform tường minh
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/single-product.css`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung quy tắc CSS tường minh cho `.flexy-items > .flexy-item` sử dụng biến `--current-item` để dịch chuyển slide, đảm bảo slide dịch chuyển chính xác ngay cả khi tệp CSS gốc của Blocksy chưa được tải.
+- **Verification**: Chromium headless kiểm tra computed transform và `elementFromPoint`:
+  - Chọn thumbnail 3: computed transform đạt `matrix(1, 0, 0, 1, -656, 0)`, `elementFromPoint` trả về `linh-chi-nutcracker-3.webp`.
+  - Chọn thumbnail 1 (qua phím Space): computed transform đạt `matrix(1, 0, 0, 1, 0, 0)`, `elementFromPoint` trả về `linh-chi-nutcracker-1-600x594.webp`.
+- **Notes**: Xóa bỏ hoàn toàn hiện tượng transform `none` và lỗi giữ nguyên ảnh cũ.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 25).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Computed Transforms**: Tọa độ transform của các slide con chuyển đổi chính xác giữa `0px` và `-656px`.
+- **Visual Hit-Test**: 100% ảnh hiển thị tại tâm viewport khớp với thumbnail và mũi tên điều hướng.
+
+## Notes for Reviewer
+
+1. **Slide Transform Proven**: Đã xác minh trực tiếp thuộc tính `window.getComputedStyle(child).transform` trên production, loại bỏ hoàn toàn ma trận identity `none`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
