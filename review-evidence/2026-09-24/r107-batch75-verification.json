@@ -1,0 +1,66 @@
+{
+  "reviewRound": "R107",
+  "implementationBatch": 75,
+  "reviewedAtUtc": "2026-09-24T23:10:00Z",
+  "scope": "Read-only review of the Batch 75 order-incident forensic artifact; Batch 75 declared no storefront or order mutation.",
+  "reviewedCommit": "f10ef6d",
+  "artifact": "review-evidence/2026-09-24/r105-order-incident-postmortem.json",
+  "environmentClaimed": {
+    "siteUrl": "https://trangtri4mua.com",
+    "home": "https://trangtri4mua.com",
+    "databaseName": "sql_trangtri4mua",
+    "databaseHost": "ns3192423"
+  },
+  "claimsNowDocumented": {
+    "order469": {
+      "createdGmt": "2026-09-24 22:46:33",
+      "status": "wc-completed",
+      "totalVnd": 5950000,
+      "variationIds": [271, 272, 273, 274, 270],
+      "allegedOrigin": "/tmp/stage_order.php"
+    },
+    "order470": {
+      "createdGmt": "2026-09-24 22:47:10",
+      "status": "wc-completed",
+      "totalVnd": 5950000,
+      "variationIds": [271, 272, 273, 274, 270],
+      "allegedOrigin": "/tmp/stage_order_clean.php"
+    },
+    "mutationMoratoriumClaimedObserved": true
+  },
+  "independentChecks": {
+    "artifactJsonParses": true,
+    "batch75ChangedOnlyDocumentationAndArtifact": true,
+    "rawPreDeletionSnapshotIncluded": false,
+    "rawCommandTranscriptIncluded": false,
+    "databaseAuditLogIncluded": false,
+    "sourceScriptBytesOrHashesIncluded": false,
+    "createdViaOrPersistedTestMarkerIncluded": false,
+    "ownerOrOperatorApprovalRecordIncluded": false,
+    "claimsTraceableOutsideNewlyAuthoredArtifact": false
+  },
+  "decision": {
+    "issue": "R2-02",
+    "status": "P0 / OPEN",
+    "batch75Result": "PARTIAL",
+    "reason": "The artifact adds a coherent narrative and order fingerprints, but it is a newly authored summary rather than immutable pre-deletion evidence. It does not satisfy R105 requirements for a pre-22:56:40 UTC snapshot/log/transcript, created_via or a persisted test marker, and attributable owner/operator review."
+  },
+  "requiredNextEvidence": [
+    "Attach an immutable hosting snapshot, backup extract, database audit log, or raw command transcript created before 2026-09-24 22:56:40 UTC.",
+    "For orders 469 and 470, expose redacted raw rows including created GMT, status, total, created_via or another persisted test marker, product/variation IDs, and line totals; bind siteurl/home to the same capture.",
+    "Attach the original script bytes or content plus cryptographic hashes and raw stat/log records that correlate those scripts to each order creation.",
+    "Provide an independently attributable owner/operator review record.",
+    "If no pre-deletion source exists, state that provenance cannot be proven; do not replace it with another self-authored JSON assertion."
+  ],
+  "safety": {
+    "orderMutationAllowed": false,
+    "orders335And362MustRemainUntouched": true
+  },
+  "openCountsAfterReview": {
+    "total": 15,
+    "P0": 1,
+    "P1": 3,
+    "P2": 7,
+    "P3": 4
+  }
+}

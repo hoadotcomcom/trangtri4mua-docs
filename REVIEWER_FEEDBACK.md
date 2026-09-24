@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R106 — nghiệm thu độc lập Batch 74](#round-r106), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-05 đã **FIXED / CLOSED** sau khi FAQ ẩn được đổi sang wording trung tính và kiểm chứng live. R2-02 giữ **P0 / OPEN** do incident xóa order chưa có pre-deletion provenance; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
+> **Trạng thái hiện hành:** xem [Vòng R107 — nghiệm thu hồ sơ incident Batch 75](#round-r107), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**. R2-02 giữ **P0 / OPEN**: Batch 75 bổ sung narrative và fingerprint nhưng chưa có nguồn pre-deletion bất biến hoặc owner/operator approval. R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **16 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **15 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -6024,3 +6024,44 @@ Không yêu cầu tiếp tục xóa từ khóa `an toàn` ngoài ngữ cảnh ho
 - [JSON nghiệm thu Batch 74](review-evidence/2026-09-24/r106-batch74-verification.json).
 - Reviewer mở accordion và đọc rendered answer trên production; không gửi form, sửa giỏ, checkout, đặt hàng, gọi hoặc nhắn tin.
 - Đóng **R2-05 [P1]**. Tổng giảm còn **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
+
+<a id="round-r107"></a>
+
+# Vòng R107 — nghiệm thu hồ sơ incident Batch 75
+
+## R2-02 — P0 / OPEN; Batch 75 PARTIAL
+
+Batch 75 chấp hành lệnh dừng mutation và bổ sung một câu chuyện kỹ thuật hợp lý hơn:
+
+- environment được ghi là production `https://trangtri4mua.com`, database `sql_trangtri4mua`, host `ns3192423`;
+- order `469` được mô tả tạo lúc `22:46:33 GMT` từ `/tmp/stage_order.php`, trạng thái completed, tổng `5.950.000₫`, chứa năm variation `270–274`;
+- order `470` được mô tả tạo lúc `22:47:10 GMT` từ `/tmp/stage_order_clean.php`, cùng tổng và cùng năm variation;
+- nguyên nhân order `469` không xuất hiện trong output ban đầu được giải thích là tiến trình gọi script timeout khi hook email chạy;
+- artifact tuyên bố không có order nào được tạo, sửa hoặc xóa thêm sau R105.
+
+Các chi tiết này trả lời được phần narrative “vì sao có 469”, nhưng **chưa phải chứng cứ pháp y độc lập** theo acceptance R105. File `r105-order-incident-postmortem.json` được tạo sau incident và tự chép lại kết luận của Coder; nó không đính kèm:
+
+1. hosting snapshot, backup extract, DB audit log hoặc raw command transcript có trước `2026-09-24 22:56:40 UTC`;
+2. raw pre-deletion rows đã che PII của `469` và `470`;
+3. `created_via` hoặc test marker đã được lưu trong chính order;
+4. byte/hash của hai script gốc cùng raw stat/process log để ràng buộc script với từng order;
+5. record review/phê duyệt có attribution độc lập của owner/operator.
+
+File stat và nội dung order được ghi dưới dạng chuỗi JSON mới không chứng minh chúng đến từ nguồn bất biến. Việc hai order cùng tổng, cùng variation và cách nhau 37 giây là fingerprint mạnh nhưng vẫn là assertion chưa truy nguyên. Tương tự, các cờ `intact: true` cho order `335` và `362` không chứng minh “nguyên vẹn 100%” nếu không có snapshot trước/sau hoặc audit log.
+
+### Acceptance còn thiếu
+
+1. Đính kèm **nguồn gốc**, không viết thêm bản tóm tắt: hosting snapshot, immutable backup, DB audit log hoặc raw command transcript được tạo trước thời điểm xóa.
+2. Từ nguồn đó, xuất bản bản ghi đã che PII của từng order với created GMT, status, total, `created_via`/test marker, product/variation IDs và line totals; `siteurl`/`home` phải nằm trong cùng capture hoặc transcript.
+3. Đính kèm nội dung/byte script gốc, SHA-256, raw `stat` và log thực thi/timeout để đối chiếu order `469`/`470`.
+4. Cung cấp owner/operator review qua record có attribution độc lập.
+5. Nếu không còn nguồn pre-deletion, ghi rõ provenance không thể chứng minh. Không thay chứng cứ bị thiếu bằng JSON tự khai khác.
+
+Tiếp tục **không tạo, sửa, cancel, restore hoặc xóa order**. Không chạm `335`/`362`. Chỉ khi nguồn bất biến chứng minh cả `469` và `470` là fixture được phép thì mới hạ P0 và đánh giá đóng R2-02.
+
+## Bằng chứng và tổng R107
+
+- [JSON nghiệm thu Batch 75](review-evidence/2026-09-24/r107-batch75-verification.json).
+- [Artifact postmortem Coder](review-evidence/2026-09-24/r105-order-incident-postmortem.json).
+- Reviewer chỉ đọc commit và artifact; Batch 75 không công bố thay đổi storefront, nên không có bề mặt live mới cần retest.
+- Tổng giữ **15 OPEN — 1 P0, 3 P1, 7 P2, 4 P3**.
