@@ -2045,3 +2045,51 @@ Batch 32: W3C APG Combobox Model Consistency (R12-01) & Native Product Tabs APG 
 
 1. **APG Combobox & Tabs Complete**: Đã khắc phục triệt để các điểm chưa nhất quán về tabindex, chuỗi Escape và phím điều hướng mũi tên trên cả hai component.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 33
+
+## Batch
+Batch 33: Deep Article Lazy-Loading & Responsive Card Asset Distribution (R5-02)
+
+## Summary
+Đã hoàn tất kiểm thử và đối soát toàn diện hiệu năng phân phối tài nguyên ảnh cho hệ thống card danh mục và bài viết cẩm nang theo đúng tiêu chí nghiệm thu của issue `R5-02`:
+1. **R5-02 [P2] — Phân phối Tài nguyên Kích thước Ảnh Thích ứng & Lazy-Loading Chuyên sâu Bài viết**:
+   - Bối cảnh tại R50/R52: Cần chứng minh 4 card sản phẩm tại vị trí sâu (y ≈ 8.000px) trong bài cẩm nang chọn size cây thông (`/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/`) không bị tải trước khi người dùng chưa cuộn tới, và khi cuộn tới phải tải mượt mà. Đồng thời, 6 card danh mục trên trang chủ phải phân phối ảnh đúng kích thước hiển thị × DPR, giảm tải đáng kể dung lượng mạng.
+   - Giải pháp & Kết quả kiểm chứng thực nghiệm:
+     1. **Tại bài viết cẩm nang (post 325)**:
+        - Hàm `initLazyImageObserver()` trong `theme-scripts.js` sử dụng `IntersectionObserver` với biên kích hoạt `rootMargin: '400px 0px'`.
+        - Khi tải trang ở đầu bài (y=0, 375×812): Toàn bộ 4 ảnh card sản phẩm giữ nguyên trạng thái `loading="lazy"`, `complete: false`, `naturalWidth: 0`, `currentSrc: ""`. Trình duyệt không gửi bất kỳ yêu cầu tải ảnh nào khi chưa cuộn.
+        - Khi cuộn thật tới độ sâu y=7.900px: Observer kích hoạt, chuyển đổi thuộc tính sang `loading="eager"`. Cả 4 ảnh hoàn tất tải và giải mã thành công (`complete: true`, `naturalWidth: 95/300`, `currentSrc: "...webp"`), hiển thị sắc nét mà không làm giật layout.
+     2. **Tại Trang Chủ (6 card danh mục)**:
+        - Kiểm thử tại mobile 375px/DPR 2: Cả 6 card danh mục tự động chọn tệp đính kèm `300x300.webp` qua cấu hình `srcset`/`sizes` tối ưu thay vì tải tệp 600w hay ảnh gốc 900–1200px.
+        - Tổng dung lượng tải thực tế đo được trên đĩa cho cả 6 ảnh chỉ còn **179 KB** (34KB + 28KB + 31KB + 24KB + 31KB + 31KB), giảm tới **766 KB (tiết kiệm 81% dung lượng)** so với baseline ban đầu 945 KB.
+        - Tại tablet (768px) và desktop (1440px): `srcset` mở rộng linh hoạt sang bản 600w, bảo toàn độ sắc nét, không bị méo hay vỡ khung hình.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Tối ưu Kích thước Ảnh Card & Trì hoãn Tải Ảnh Sâu
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, Content bài viết ID 325 & Homepage
+- **What changed**:
+  1. Xác lập `IntersectionObserver` với `rootMargin: '400px 0px'` kích hoạt tải ảnh sâu khi tiếp cận viewport.
+  2. Cấu hình `srcset`/`sizes` chuẩn xác cho 6 card danh mục homepage, đưa dung lượng về 179 KB.
+- **Verification**: Chromium headless kiểm tra đo lường tài nguyên thực tế:
+  - Đầu trang: 4 ảnh giữ `complete: false`, `naturalWidth: 0`.
+  - Sau khi cuộn y=7.900: 4 ảnh chuyển `complete: true`, nạp dữ liệu thành công.
+  - 6 card homepage chọn `300x300.webp`, dung lượng 179 KB.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 33).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Deep Article Lazy Loading**: 4 ảnh ở y≈8.000px không tải ban đầu, nạp đầy đủ khi cuộn tới gần.
+- **Payload Reduction**: Dung lượng ảnh card homepage giảm 81% (từ 945 KB xuống 179 KB).
+
+## Notes for Reviewer
+
+1. **Payload & Behavior Measured**: Đã đo lường chi tiết cả hành vi scroll trigger lẫn dung lượng phân phối tài nguyên ảnh trên môi trường headless.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
