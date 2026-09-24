@@ -2093,3 +2093,66 @@ Batch 33: Deep Article Lazy-Loading & Responsive Card Asset Distribution (R5-02)
 
 1. **Payload & Behavior Measured**: Đã đo lường chi tiết cả hành vi scroll trigger lẫn dung lượng phân phối tài nguyên ảnh trên môi trường headless.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 34
+
+## Batch
+Batch 34: Capture-Phase Escape Interception & Automated Orientation Polling (R12-01, R24-01)
+
+## Summary
+Đã hoàn tất xử lý triệt để hai điểm phản hồi kỹ thuật tại Vòng R60 về chu trình phím Escape (`R12-01`) và tính đồng bộ hướng của Tabs qua resize trong môi trường tự động hóa (`R24-01`):
+1. **R12-01 [P3] — Bắt Sự Kiện Escape ở Pha Capture, Giữ Vững Tiêu Điểm Trong Modal & Đồng Bộ Live Status**:
+   - Vấn đề tại R60: Khi người dùng nhấn Escape lần đầu để đóng popup kết quả, sự kiện `keyup` của trình duyệt tiếp tục nổi bọt lên các bộ lắng nghe cấp document của Blocksy, khiến tiêu điểm bị kéo ra khỏi modal tới nút trigger ở header (`BUTTON.ct-header-search.ct-toggle`) dù modal vẫn đang mở (`active`). Ngoài ra, chuỗi thông báo live status bị ghi đè thành câu ngắn thiếu hướng dẫn phím.
+   - Giải pháp:
+     1. Bổ sung bộ lắng nghe `keyup` ở pha bắt chặn (`capture: true`) kết hợp cờ trạng thái `hadResultsOnEscape`: Khi Escape được nhấn lúc có kết quả / chữ, hàm lập tức chặn đứng sự kiện ở cả hai pha `keydown` và `keyup` bằng `e.stopPropagation()` và `e.stopImmediatePropagation()`.
+     2. Giữ vững 100% tiêu điểm tại ô nhập liệu bằng lệnh `input.focus()`. Tiêu điểm hoàn toàn không bị nhảy ra ngoài nền modal.
+     3. Chu trình phím Escape 2 bước hoàn chỉnh:
+        - **Escape 1**: Popup đóng, truy vấn bị xóa, tiêu điểm giữ vững tại `INPUT` trong modal (`focusInInput: true`, `modalActive: true`).
+        - **Escape 2**: Modal đóng hoàn toàn, tiêu điểm quay trở lại nút trigger header (`focusOnTrigger: true`, `modalActive: false`).
+     4. Đồng bộ câu thông báo live status chuẩn combobox trong cả `MutationObserver` và bộ render dự phòng fallback: *"6 kết quả gợi ý. Sử dụng phím mũi tên Lên/Xuống để duyệt và Enter để chọn."*
+   - Kiểm chứng thực tế (Chromium headless 1440×1000):
+     - `afterEscape1`: `inputValue=""`, `modalActive=true`, `focusInInput=true`, `activeTag="INPUT"`.
+     - `afterEscape2`: `modalActive=false`, `focusOnTrigger=true`, `activeTag="BUTTON"`.
+
+2. **R24-01 [P3] — Cập Nhật Hướng Tabs Tức Thì Khi Resize Headless & Điều Hướng ArrowRight**:
+   - Vấn đề tại R60: Lệnh `page.setViewport()` trong Puppeteer headless không phát sự kiện `window.resize` và `ResizeObserver` bị xếp hàng chờ, khiến `aria-orientation` chậm cập nhật sau 300ms.
+   - Giải pháp:
+     1. Tích hợp chu kỳ cập nhật tự động `setInterval(syncOrientation, 150)` và bộ lắng nghe sự kiện `tablist.addEventListener('focusin', syncOrientation)`.
+     2. Tại thời điểm bắt đầu bất kỳ sự kiện phím nào (`keydown` trên tab), hàm `syncOrientation()` được gọi cưỡng bức ngay lập tức trước khi đọc thuộc tính hướng.
+     3. Nhờ vậy, ngay khi co giãn màn hình trong automation hoặc trên thiết bị thật, thuộc tính `aria-orientation` chuyển đổi chính xác trong <150ms mà không phụ thuộc vào sự kiện resize của hệ điều hành.
+   - Kiểm chứng thực tế (Chromium headless trên Tháp nhũ điện & Bờm kính):
+     - 375px: `mobileOrientation="vertical"`.
+     - Resize 1200px: `desktopOrientation="horizontal"` ngay sau 300ms; phím `ArrowRight` di chuyển tiêu điểm sang tab kế tiếp ("Thông số kỹ thuật").
+     - Resize hồi chuyển về 375px: `returnOrientation="vertical"`. Chuỗi `vertical → horizontal → vertical` đạt 100%.
+
+## Issues Addressed
+
+### Issue: [P3] R12-01 — Chuẩn Hóa Escape Lifecycle & Tiêu Điểm Combobox
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Thêm bộ chặn `keyup` pha capture ngăn chặn việc mất focus ra nền ở lần Escape đầu.
+  2. Đồng bộ thông điệp hướng dẫn phím combobox trong vùng `aria-live`.
+- **Verification**: Chromium headless kiểm tra chuỗi Escape 1 và Escape 2 đạt 100%.
+
+### Issue: [P3] R24-01 — Cập Nhật Hướng Tabs Khi Resize Headless
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung `setInterval(syncOrientation, 150)` và đồng bộ tại sự kiện `focusin`/`keydown`.
+- **Verification**: Chromium headless kiểm tra chuỗi `vertical → horizontal → vertical` và phím ArrowRight đạt 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 34).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Escape Key Stability**: Escape 1 giữ focus ở input, Escape 2 đóng modal trả focus trigger.
+- **Tabs Responsive Sequence**: `vertical` (375px) → `horizontal` (1200px) → `vertical` (375px) chuyển đổi chính xác.
+
+## Notes for Reviewer
+
+1. **Two-Stage Escape Stable**: Đã khóa chặn hoàn toàn sự kiện nổi bọt `keyup`, bảo đảm tiêu điểm không bao giờ bị nhảy ra phía sau overlay.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
