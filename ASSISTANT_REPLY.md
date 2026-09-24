@@ -4323,3 +4323,56 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-02 Complete**: Tệp `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json` đã cung cấp đầy đủ cả 4 phần bằng chứng mà Reviewer yêu cầu tại R81: cart trace 5 biến thể, ma trận 6 sản phẩm legacy, truy vấn DB đơn hàng cũ / fixture order 470 và phân tách ảnh variation. Kính đề nghị Reviewer đóng chính thức issue `R2-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 72
+
+## Summary
+
+1. **R2-05 [P1] — Loại Bỏ Hoàn Toàn Hướng Dẫn Dùng Tuyết Bọt Ngoài Trời Trong Accordion FAQ Bài Quán Cafe**:
+   - Vấn đề tại R102: Reviewer đính chính phạm vi rà soát và xác nhận:
+     - Homepage hero: **PASS** (không có claim tuyệt đối/điện/hóa chất).
+     - 13 PDP liên kết: **PASS** (không chứa claim kỹ thuật chưa kiểm chứng).
+     - Bài chọn size (Post 325) và Bài dự toán (Post 327): Đạt chuẩn, không còn mẹo hóa chất hay nhãn sai.
+     - Tuy nhiên, trong Accordion FAQ ẩn của bài quán cafe (Post 322), câu trả lời số 3 còn dòng: *"ngoài trời, bạn chỉ nên phun biểu diễn trong các khung giờ cố định ngắn (15 – 20 phút vào buổi tối cuối tuần) và có nhân viên thường xuyên lau khô sàn sau đó"*.
+     - Hướng dẫn của Reviewer: *"Chọn hướng 1: Bỏ toàn bộ hướng dẫn sử dụng tuyết bọt ngoài trời; giữ khuyến cáo trung tính không dùng khi chưa có sản phẩm và hướng dẫn nhà sản xuất phù hợp với địa điểm/bề mặt thực tế"*.
+   - Giải pháp kỹ thuật triệt để theo Hướng 1:
+     1. **Post 322 — Viết lại câu trả lời FAQ số 3 chuẩn hóa trung tính**:
+        - Bỏ hoàn toàn việc hướng dẫn phun tuyết ngoài trời và thời lượng tự đặt `15 – 20 phút`.
+        - Thay thế toàn bộ bằng khuyến cáo an toàn vận hành:
+          > *"Không khuyến khích sử dụng máy phun tuyết bọt nhân tạo trong không gian kinh doanh F&B khi chưa có thiết bị chuyên dụng và hướng dẫn vận hành từ nhà sản xuất phù hợp với mặt bằng thực tế. Bọt tuyết nhân tạo có thể gây trơn trượt trên sàn gạch men, làm ẩm mốc đệm vải và ảnh hưởng tới trải nghiệm của khách hàng. Thay vào đó, quán nên tập trung vào các giải pháp thị giác an toàn và ổn định như cây thông phủ tuyết ép nhiệt cao cấp, kết hợp ánh sáng đèn LED và decal dán kính lễ hội."*
+     2. **Kiểm chứng thực tế hiển thị accordion**:
+        - Dùng Chromium headless mở trực tiếp Post 322, kích hoạt click mở Accordion số 3 (`open: true`).
+        - Đọc rendered text thực tế, xác nhận:
+          - Không còn cụm từ *"15 – 20 phút"*.
+          - Không còn hướng dẫn phun biểu diễn ngoài trời.
+          - Hiển thị đúng 100% nội dung khuyến cáo trung tính theo Hướng 1.
+   - **Kết luận**: Hạng mục cuối cùng chưa đạt của issue `R2-05` tại Round R102 nay đã được xử lý triệt để trên toàn bộ các bề mặt yêu cầu (bài viết, FAQ accordion, hero và PDP liên kết), sẵn sàng để chính thức **ĐÓNG (CLOSED)** issue `R2-05`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-05 — Elimination of Outdoor Foam Snow Guidance in Post 322 FAQ
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Viết lại câu trả lời FAQ số 3 trong Post 322 theo Hướng 1: loại bỏ thời lượng 15-20 phút và hướng dẫn phun ngoài trời, thay bằng khuyến cáo không dùng khi chưa có thiết bị chuyên dụng và hướng dẫn nhà sản xuất.
+- **Verification**: Kích hoạt click mở accordion FAQ số 3 trong Chromium, xác nhận `open: true`, nội dung hiển thị sạch 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 72).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **FAQ Accordion 3 Live Verification**:
+  - `has_old_text: false` (không còn "15 – 20 phút").
+  - `has_new_text: true` ("Không khuyến khích sử dụng máy phun tuyết bọt nhân tạo...").
+  - `open: true` (accordion mở và hiển thị văn bản đúng chuẩn).
+- **All Surfaces Clean**: Hero, 13 PDPs, 3 bài cẩm nang và FAQ đều vắng mặt 100% các cam kết tuyệt đối hay mẹo hóa chất.
+
+## Notes for Reviewer
+
+1. **R2-05 Complete**: Toàn bộ nội dung FAQ ẩn số 3 của bài cafe đã được cập nhật trung tính theo Hướng 1 của Reviewer tại R102. Kính đề nghị Reviewer đóng chính thức issue `R2-05`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
