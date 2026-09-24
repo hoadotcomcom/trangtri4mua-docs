@@ -1,0 +1,244 @@
+{
+  "evidenceReportId": "R2-14-SEARCH-COMMERCE-CARDS-AUDIT",
+  "timestampUtc": "2026-09-24T23:32:50.419Z",
+  "targetIssue": "R2-14",
+  "priority": "P2",
+  "scope": "Full-search (/?s=...) product card merchandising: price display, product-type specific CTA, elimination of blog post publication dates on products, and coexistence with editorial search intent.",
+  "implementationSummary": {
+    "hookAdded": "blocksy:loop:card:end in wp-content/themes/blocksy-child/functions.php",
+    "filterAdded": "blocksy:archive:render-card-layer in wp-content/themes/blocksy-child/functions.php to remove meta-date from products",
+    "cssAdded": ".search-results .entry-card.product styling, .tt4m-search-card-commerce, .tt4m-search-price, .tt4m-search-cta in wp-content/themes/blocksy-child/style.css"
+  },
+  "auditResults": {
+    "COMBO-GD-50": {
+      "url": "https://trangtri4mua.com/?s=COMBO-GD-50",
+      "totalCards": 1,
+      "productCardsCount": 1,
+      "postCardsCount": 0,
+      "cards": [
+        {
+          "id": "post-381",
+          "isProduct": true,
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "price": "950.000 ₫\nGiá gốc là: 950.000 ₫.\n750.000 ₫\nGiá hiện tại là: 750.000 ₫.",
+          "ctaText": "Xem chi tiết",
+          "ctaHref": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--simple",
+          "hasMetaDate": false
+        }
+      ]
+    },
+    "SET-HG-70": {
+      "url": "https://trangtri4mua.com/?s=SET-HG-70",
+      "totalCards": 1,
+      "productCardsCount": 1,
+      "postCardsCount": 0,
+      "cards": [
+        {
+          "id": "post-382",
+          "isProduct": true,
+          "title": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+          "price": "1.550.000 ₫\nGiá gốc là: 1.550.000 ₫.\n1.250.000 ₫\nGiá hiện tại là: 1.250.000 ₫.",
+          "ctaText": "Xem chi tiết",
+          "ctaHref": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--simple",
+          "hasMetaDate": false
+        }
+      ]
+    },
+    "CT-PE-SNOW": {
+      "url": "https://trangtri4mua.com/?s=CT-PE-SNOW",
+      "totalCards": 1,
+      "productCardsCount": 1,
+      "postCardsCount": 0,
+      "cards": [
+        {
+          "id": "post-372",
+          "isProduct": true,
+          "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "price": "850.000 ₫\n–\n2.650.000 ₫\nKhoảng giá: từ 850.000 ₫ đến 2.650.000 ₫",
+          "ctaText": "Xem tùy chọn",
+          "ctaHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--variable",
+          "hasMetaDate": false
+        }
+      ]
+    },
+    "tháp nhũ": {
+      "url": "https://trangtri4mua.com/?s=th%C3%A1p%20nh%C5%A9",
+      "totalCards": 8,
+      "productCardsCount": 3,
+      "postCardsCount": 5,
+      "cards": [
+        {
+          "id": "post-295",
+          "isProduct": true,
+          "title": "Tháp nhũ điện – Trang trí Noel",
+          "price": "550.000 ₫\n–\n895.000 ₫\nKhoảng giá: từ 550.000 ₫ đến 895.000 ₫",
+          "ctaText": "Xem tùy chọn",
+          "ctaHref": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--variable",
+          "hasMetaDate": false
+        },
+        {
+          "id": "post-322",
+          "isProduct": false,
+          "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-327",
+          "isProduct": false,
+          "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-325",
+          "isProduct": false,
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-202",
+          "isProduct": true,
+          "title": "Gấu bò khăn kẻ – Trang trí Noel",
+          "price": "355.000 ₫",
+          "ctaText": "Xem chi tiết",
+          "ctaHref": "https://trangtri4mua.com/san-pham/gau-bo-khan-ke/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--simple",
+          "hasMetaDate": false
+        },
+        {
+          "id": "post-153",
+          "isProduct": true,
+          "title": "Kẹo hạt nổi – Trang trí Noel",
+          "price": "75.000 ₫\n–\n255.000 ₫\nKhoảng giá: từ 75.000 ₫ đến 255.000 ₫",
+          "ctaText": "Xem tùy chọn",
+          "ctaHref": "https://trangtri4mua.com/san-pham/keo-hat-noi/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--variable",
+          "hasMetaDate": false
+        },
+        {
+          "id": "post-23",
+          "isProduct": false,
+          "title": "Trang Chủ",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-13",
+          "isProduct": false,
+          "title": "Chính Sách Bảo Mật",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        }
+      ]
+    },
+    "cách chọn size cây thông": {
+      "url": "https://trangtri4mua.com/?s=c%C3%A1ch%20ch%E1%BB%8Dn%20size%20c%C3%A2y%20th%C3%B4ng",
+      "totalCards": 8,
+      "productCardsCount": 2,
+      "postCardsCount": 6,
+      "cards": [
+        {
+          "id": "post-325",
+          "isProduct": false,
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-327",
+          "isProduct": false,
+          "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-322",
+          "isProduct": false,
+          "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-280",
+          "isProduct": true,
+          "title": "Ông già trắng xịn – Trang trí Noel",
+          "price": "555.000 ₫\n–\n1.895.000 ₫\nKhoảng giá: từ 555.000 ₫ đến 1.895.000 ₫",
+          "ctaText": "Xem tùy chọn",
+          "ctaHref": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--variable",
+          "hasMetaDate": false
+        },
+        {
+          "id": "post-160",
+          "isProduct": true,
+          "title": "Châu sọc sẫn – Trang trí Noel",
+          "price": "195.000 ₫\n–\n295.000 ₫\nKhoảng giá: từ 195.000 ₫ đến 295.000 ₫",
+          "ctaText": "Xem tùy chọn",
+          "ctaHref": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+          "ctaClass": "tt4m-search-cta tt4m-search-cta--variable",
+          "hasMetaDate": false
+        },
+        {
+          "id": "post-23",
+          "isProduct": false,
+          "title": "Trang Chủ",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-17",
+          "isProduct": false,
+          "title": "Cửa Hàng & Showroom",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        },
+        {
+          "id": "post-13",
+          "isProduct": false,
+          "title": "Chính Sách Bảo Mật",
+          "ctaText": null,
+          "ctaHref": null,
+          "ctaClass": null,
+          "hasMetaDate": true
+        }
+      ]
+    }
+  },
+  "acceptanceVerification": {
+    "exactSkusMatch": true,
+    "exactSkusHavePrice": true,
+    "exactSkusHaveClearCta": true,
+    "variableProductsHaveXemTuyChon": true,
+    "simpleProductsHaveXemChiTiet": true,
+    "productsHaveNoBlogMetaDate": true,
+    "editorialPostsRetainDateAndAuthor": true,
+    "mixedIntentQueriesSupported": true,
+    "orderMoratoriumStrictlyMaintained": true
+  }
+}

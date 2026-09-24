@@ -4809,3 +4809,70 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R2-04 Ready for Review**: Khối Homepage Hero đã được cập nhật chính xác từng chi tiết theo đúng hướng dẫn tại Round R110. Kính đề nghị Reviewer kiểm chứng live và đóng issue `R2-04 [P1]`.
 2. **R2-02 Inactive**: Coder hoàn toàn không gửi thêm bất kỳ báo cáo lặp lại nào cho `R2-02` theo đúng chỉ thị R110.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 80
+
+## Summary
+
+1. **R2-14 [P2] — Chuẩn Hóa Thẻ Sản Phẩm Trên Toàn Bộ Kết Quả Tìm Kiếm (Full-Search Merchandising)**:
+   - **Tiếp thu chỉ đạo đính chính tại Round R110**: Reviewer yêu cầu:
+     > *"Chuyển ngay sang issue có thể hành động theo verdict mới nhất, không theo trường Status ở phần baseline. Ưu tiên **R2-14 [P2]**: full-search đã match đúng SKU nhưng card sản phẩm vẫn dùng card bài viết, thiếu giá và CTA xem/chọn mẫu theo product type; verdict mới nhất tại R34 vẫn PARTIAL / OPEN."*
+   - **Các giải pháp kỹ thuật đã triển khai**:
+     1. **Hook hiển thị giá và nút hành động sản phẩm (`blocksy:loop:card:end`)**:
+        - Xác định đúng ngữ cảnh tìm kiếm `is_search()` và đối tượng `product`.
+        - Gọi `wc_get_product($post_id)` và lấy giá đầy đủ qua `$product->get_price_html()`.
+        - Xuất khối `.tt4m-search-card-commerce` bao gồm:
+          - `.tt4m-search-price`: Hiển thị giá WooCommerce đầy đủ (khoảng giá đối với sản phẩm biến thể; giá gốc gạch ngang và giá khuyến mãi nổi bật đối với sản phẩm đang sale).
+          - Nút CTA rõ ràng theo loại sản phẩm (`product type`):
+            - Sản phẩm biến thể (`variable`): nút `Xem tùy chọn` (class `tt4m-search-cta--variable`) kèm `aria-label` chi tiết.
+            - Sản phẩm đơn giản (`simple`): nút `Xem chi tiết` (class `tt4m-search-cta--simple`) kèm `aria-label` chi tiết.
+     2. **Loại bỏ ngày đăng bài viết blog khỏi thẻ sản phẩm (`blocksy:archive:render-card-layer`)**:
+        - Lọc bỏ thẻ `<li class="meta-date">` trên toàn bộ kết quả là sản phẩm thương mại; sản phẩm không còn bị gắn ngày đăng như bài viết blog.
+        - Giữ nguyên tác giả và ngày đăng trên các bài viết cẩm nang (Post 322, 325, 327) để phục vụ chính xác intent tìm kiếm kiến thức.
+     3. **CSS giao diện chuẩn thương mại (`wp-content/themes/blocksy-child/style.css`)**:
+        - Định dạng flexbox phân tách đều giữa giá và nút hành động, border-top tinh tế ngăn cách phần trích dẫn, responsive hoàn hảo trên mobile (dưới 600px nút CTA mở rộng 100% chiều rộng).
+   - **Kiểm chứng thực tế 5 truy vấn trong Chromium headless**:
+     1. `COMBO-GD-50`: Khớp đúng 1 sản phẩm (Post 381), giá `950.000₫ / 750.000₫`, CTA `Xem chi tiết`, `hasMetaDate: false`.
+     2. `SET-HG-70`: Khớp đúng 1 sản phẩm (Post 382), giá `1.550.000₫ / 1.250.000₫`, CTA `Xem chi tiết`, `hasMetaDate: false`.
+     3. `CT-PE-SNOW`: Khớp đúng 1 sản phẩm (Post 372), khoảng giá `850.000₫ – 2.650.000₫`, CTA `Xem tùy chọn`, `hasMetaDate: false`.
+     4. `tháp nhũ`: Khớp 3 sản phẩm có giá + CTA chuẩn và 5 bài viết blog/trang tĩnh giữ nguyên định dạng cẩm nang.
+     5. `cách chọn size cây thông`: Ưu tiên hiển thị các bài hướng dẫn trước, sản phẩm liên quan hiển thị đầy đủ giá và CTA.
+   - **Hồ sơ đối chứng chi tiết**: Đã lưu tại `docs/review-evidence/2026-09-24/r2-14-search-commerce-cards-audit.json`.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P2] R2-14 — Full-Search Product Card Merchandising & Pricing CTA
+- **Status**: FIXED
+- **Files changed**:
+  - `wp-content/themes/blocksy-child/functions.php`
+  - `wp-content/themes/blocksy-child/style.css`
+  - `docs/review-evidence/2026-09-24/r2-14-search-commerce-cards-audit.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Bổ sung hook `blocksy:loop:card:end` render giá `.price` và CTA button tương ứng loại sản phẩm.
+  - Bổ sung filter `blocksy:archive:render-card-layer` gỡ bỏ `meta-date` trên thẻ sản phẩm.
+  - Bổ sung CSS định kiểu `.tt4m-search-card-commerce`, `.tt4m-search-price`, `.tt4m-search-cta`.
+- **Verification**: Kiểm chứng độc lập 5 kịch bản tìm kiếm trong Chromium headless, xác nhận 100% thẻ sản phẩm có giá, có CTA rõ ràng và không có ngày đăng blog.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 80).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Search Card Merchandising Audit**:
+  - Exact SKU queries (`COMBO-GD-50`, `SET-HG-70`, `CT-PE-SNOW`): Tất cả đều hiển thị giá và CTA tương ứng (`Xem chi tiết` cho simple, `Xem tùy chọn` cho variable).
+  - Zero blog dates on product cards (`hasMetaDate: false` cho 100% thẻ sản phẩm).
+  - Editorial articles retain author and date for knowledge intent queries.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R2-14 Ready for Review**: Toàn bộ yêu cầu merchandising trên trang kết quả tìm kiếm đã được hoàn tất và kiểm chứng độc lập. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-14 [P2]`.
+2. **R2-02 Governance**: Hoàn toàn tuân thủ lệnh dừng cho `R2-02`, không gửi thêm bản giải trình tự khai nào.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
