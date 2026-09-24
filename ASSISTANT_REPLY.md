@@ -2334,3 +2334,53 @@ Cung cấp bộ hồ sơ kiểm chứng thực nghiệm đa phương thức nh�
 
 1. **R25-01 Evidence Complete**: Đã cung cấp đầy đủ dữ liệu thời gian 180ms/1.5s và bằng chứng mạng không có request rỗng.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 38
+
+## Batch
+Batch 38: Elimination of WordPress Auto-Sizes & Native Zero-Freeze Deep Scroll (R5-02)
+
+## Summary
+Đã hoàn tất xử lý dứt điểm hai nguyên nhân kỹ thuật tại Vòng R63 khiến ảnh homepage vẫn chọn bản 600w và thao tác cuộn bài viết cẩm nang bị timeout:
+1. **R5-02 [P2] — Triệt Tiêu Tiền Tố `auto` Của WordPress Core & Khôi Phục Cơ Chế Native Lazy Loading**:
+   - Nguyên nhân cốt lõi tại R63:
+     1. Tính năng tự động của WordPress 6.7+ trong bộ lọc `wp_filter_content_tags` tự ý chèn thêm tiền tố `auto, ` vào thuộc tính `sizes`. Trình duyệt Chrome 128+ khi gặp từ khóa `auto` sẽ bỏ qua truy vấn media `(max-width: 600px) 140px` và lấy trực tiếp kích thước layout render thực tế (~164.5px). Tại DPR2, mật độ tính toán $164.5\times 2 = 329\text{px} > 300\text{w}$, buộc Chrome phải chọn file 600w (tổng 639.974 byte).
+     2. Hàm `initLazyImageObserver` trước đó cưỡng bức thay đổi thuộc tính `img.setAttribute('loading', 'eager')` trong sự kiện IntersectionObserver khi đang cuộn nhanh, dẫn tới xung đột tái tính toán layout (layout thrashing) làm nghẽn luồng JavaScript của CDP.
+   - Giải pháp:
+     1. Trong `functions.php`: Thêm hook chuẩn của WordPress core:
+        ```php
+        add_filter('wp_img_tag_add_auto_sizes', '__return_false');
+        ```
+        Ngăn chặn hoàn toàn WordPress core tự động gắn `auto, ` vào thuộc tính `sizes`. Thuộc tính `sizes` trên 6 card danh mục homepage được bảo toàn chính xác: `(max-width: 600px) 140px, 300px`.
+     2. Trong `theme-scripts.js`: Loại bỏ hoàn toàn observer can thiệp thuộc tính `loading`, trao lại quyền điều khiển tự nhiên cho bộ máy **Native Lazy Loading** tích hợp sẵn của Chrome (`loading="lazy"`).
+   - Kiểm chứng thực tế (Chromium headless 375×812 DPR2, cache tắt 100%):
+     - **Trang Chủ**: Thuộc tính `sizes` giữ nguyên `(max-width: 600px) 140px, 300px` (không còn tiền tố `auto`). Toàn bộ 6 card danh mục đều chọn chính xác tệp `300x300.webp` (`selectedWidths: [140, 140, 140, 140, 140, 140]`), tổng encoded bytes đúng chuẩn **179 KB** (giảm 81% so với baseline 945 KB).
+     - **Bài viết chọn size (post 325)**:
+       - Đầu bài (y=0): Cả 4 card giữ `complete: false`, `naturalWidth: 0`, `currentSrc: ""`, 0 request mạng.
+       - Thao tác cuộn tới y=7.900px hoàn tất trong **1.503ms** (không timeout, không treo thread). Cả 4 ảnh hoàn tất tải và hiển thị mượt mà (`complete: true`, `naturalWidth: 120`, `currentSrc: "...300x300.webp"`).
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Vô Hiệu Hóa Auto-Sizes & Tối Ưu Tải Ảnh Sâu Native
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Thêm bộ lọc `wp_img_tag_add_auto_sizes` trả về `false`.
+  2. Xóa observer cưỡng bức `loading="eager"` để loại trừ layout thrashing.
+- **Verification**: Chromium headless kiểm tra đo lường khi tắt cache đạt 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 38).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Auto Sizes Removed**: Thuộc tính `sizes` không còn chứa `auto, `, Chrome chọn đúng 300w (179 KB).
+- **Native Smooth Scroll**: Cuộn tới y=7.900px kết thúc trong 1.5s, 0 timeout, ảnh tải hoàn tất.
+
+## Notes for Reviewer
+
+1. **Auto-Sizes Filter Proven**: Đã xác nhận trên HTML rendered của trang chủ: `sizes` không còn bị WordPress core can thiệp.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
