@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R82 — correction bằng chứng DPR desktop](#round-r82), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 được mở lại vì hai capture gắn nhãn DPR1/DPR2 là cùng một file; R2-02 vẫn PARTIAL.
+> **Trạng thái hiện hành:** xem [Vòng R83 — nghiệm thu độc lập Batch 55](#round-r83), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R2-03 giữ PARTIAL vì bảng chữ đã sửa nhưng nguồn dữ liệu, thông số điện và ảnh bundle chưa đạt; R5-02 vẫn mở lại theo R82.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5073,3 +5073,34 @@ Giữ nguyên các phần đã đạt: polling/deep-scroll production ở R76, p
 - [Audit danh tính capture](review-evidence/2026-09-24/r82-r5-02-dpr-capture-audit.json).
 - Đối chiếu bằng `sha256sum` và `sips`; không thao tác website production.
 - **Mở lại R5-02 [P2]**. Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r83"></a>
+
+# Vòng R83 — nghiệm thu độc lập Batch 55
+
+## R2-03 — PARTIAL / OPEN
+
+Reviewer mở độc lập cả sáu PDP production ở desktop 1440×1000. Sáu URL đều trả 200 và bảng live khớp artifact Batch 55. Các phần sửa đúng:
+
+- không còn chuỗi fallback vật liệu cũ “Khung hợp kim chống gỉ…” trong sáu bảng;
+- Quả châu cườm, Lính đánh trống và Tháp nhũ có kích thước/chất liệu riêng thay vì fallback;
+- COMBO-GD-50 không còn nói set phụ kiện có cây;
+- SET-HG-70 dùng phạm vi cây 1m8–2m4; ba bundle không còn chỉ dẫn tới selector không tồn tại.
+
+Các acceptance còn thiếu:
+
+1. Batch chỉ chụp lại DOM hiện hành; không có nhãn nhà cung cấp, datasheet, source citation hoặc phê duyệt product owner cho claim chất liệu, điện, xuất xứ và đóng gói. Đây là blocker đã nêu tại R38 và là acceptance gốc của R2-03.
+2. Cả sáu bảng vẫn lặp nguyên văn hai claim generic chưa có nguồn: `Gia công tuyển chọn & Nhập khẩu chính ngạch` và `... bảo vệ an toàn 100%`. Đổi riêng hàng “Chất liệu” không phải “triệt tiêu fallback” toàn bảng.
+3. Tháp nhũ điện ID 295 chỉ ghi “chuỗi bóng LED ánh sáng ấm bền bỉ”; không có điện áp, công suất hoặc điều kiện dùng trong/ngoài trời từ nhãn/hướng dẫn nhà cung cấp.
+4. Acceptance yêu cầu ảnh nhất quán. Ba bundle vẫn dùng ảnh chính/ALT của một món rời: ID 381 là `hop-qua-trau`, ID 382 là `qua-chau-cuom`, ID 383 là `hang-rao-go`; các ảnh này không chứng minh set 50 món, set 70 món hoặc gói B2B đầy đủ.
+
+R2-03 giữ **PARTIAL / OPEN**. Không cần sửa lại các hàng kích thước/chất liệu đã đạt. Cần nguồn/owner approval audit được, bỏ hoặc chứng minh claim generic, bổ sung thông số điện có nguồn cho ID 295 và ảnh bundle đúng contract.
+
+## Bằng chứng và tổng R83
+
+- [JSON nghiệm thu live Batch 55](review-evidence/2026-09-24/r83-batch-55-verification.json).
+- [Artifact Coder](review-evidence/2026-09-24/r2-03-specs-table-audit.json).
+- Không click CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.

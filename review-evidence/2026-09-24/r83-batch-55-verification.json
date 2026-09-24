@@ -1,0 +1,266 @@
+{
+  "round": "R83",
+  "date": "2026-09-24",
+  "handoff": "Batch 55",
+  "issue": "R2-03",
+  "liveCheckedAt": "2026-09-24T20:53:27.976Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "results": [
+    {
+      "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+      "status": 200,
+      "h1": "Quả châu cườm – Trang trí Noel",
+      "shortDescription": "Quả châu đính cườm hạt lấp lánh, phụ kiện treo cây thông sang và bắt đèn đẹp.",
+      "specRows": [
+        [
+          "Kích thước",
+          "Đường kính 8cm – 10cm"
+        ],
+        [
+          "Chất liệu",
+          "Nhựa ABS an toàn đính cườm lấp lánh cao cấp"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom-768x1024.webp",
+        "alt": "Quả châu cườm - đồ trang trí Noel",
+        "complete": true,
+        "naturalWidth": 600
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+      "status": 200,
+      "h1": "Lính đánh trống – Trang trí Noel",
+      "shortDescription": "Tượng lính đánh trống 38cm, mô hình lính chì Giáng sinh cổ điển cho kệ và gốc cây thông.",
+      "specRows": [
+        [
+          "Kích thước",
+          "Cao 38cm"
+        ],
+        [
+          "Chất liệu",
+          "Nhựa/nỉ trang trí cao cấp, chi tiết thủ công sắc nét"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/linh-danh-trong-600x641.webp",
+        "alt": "Lính đánh trống - đồ trang trí Noel",
+        "complete": false,
+        "naturalWidth": 0
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "status": 200,
+      "h1": "Tháp nhũ điện – Trang trí Noel",
+      "shortDescription": "Tháp cây thông phủ nhũ có đèn sẵn, cao 1m2 – 1m8, cắm điện là sáng cả góc Giáng sinh.",
+      "specRows": [
+        [
+          "Kích thước",
+          "Chọn một tùy chọn\n1m2\n1m5\n1m8"
+        ],
+        [
+          "Kích thước",
+          "1m2, 1m5, 1m8"
+        ],
+        [
+          "Chất liệu",
+          "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/thap-nhu-dien-600x800.webp",
+        "alt": "Tháp nhũ điện - cây thông trang trí Noel",
+        "complete": false,
+        "naturalWidth": 0
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung/",
+      "status": 200,
+      "h1": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+      "shortDescription": "Set phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.",
+      "specRows": [
+        [
+          "Kích thước",
+          "Set 50 món phụ kiện (phù hợp cho cây thông 1m5 – 1m8)"
+        ],
+        [
+          "Chất liệu",
+          "Nhựa ABS an toàn chống vỡ, nơ nhung nỉ, kim tuyến & đèn LED lõi đồng ánh sáng ấm"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp",
+        "alt": "Hộp quả trầu treo cây - đồ trang trí Noel",
+        "complete": false,
+        "naturalWidth": 0
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "status": 200,
+      "h1": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)",
+      "shortDescription": "Bộ sưu tập 70 món phụ kiện cao cấp tone Đỏ – Vàng phong cách quý tộc châu Âu.",
+      "specRows": [
+        [
+          "Kích thước",
+          "Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m4)"
+        ],
+        [
+          "Chất liệu",
+          "Nhựa mạ điện ánh kim, nơ nhung thêu viền chỉ vàng & đèn LED cao cấp"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/qua-chau-cuom-768x1024.webp",
+        "alt": "Quả châu cườm - đồ trang trí Noel",
+        "complete": true,
+        "naturalWidth": 600
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    },
+    {
+      "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "status": 200,
+      "h1": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+      "shortDescription": "Gói decor Giáng Sinh trọn gói cho quán cafe, nhà hàng, sảnh văn phòng (có hóa đơn VAT).",
+      "specRows": [
+        [
+          "Kích thước",
+          "Gói vật tư trang trí cho không gian 50m² – 100m²"
+        ],
+        [
+          "Chất liệu",
+          "Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn rèm ngoài trời"
+        ],
+        [
+          "Xuất xứ",
+          "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        ],
+        [
+          "Quy cách đóng gói",
+          "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        ]
+      ],
+      "mainImage": {
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp",
+        "alt": "Hàng rào gỗ trang trí gốc cây - đồ trang trí Noel",
+        "complete": false,
+        "naturalWidth": 0
+      },
+      "checks": {
+        "oldAlloyFallback": false,
+        "genericOrigin": true,
+        "packingSafety100": true,
+        "voltageMention": false,
+        "powerMention": false,
+        "indoorOutdoorMention": false
+      }
+    }
+  ],
+  "findings": {
+    "passed": [
+      "All six URLs returned HTTP 200.",
+      "All six live tables match the row values in the Batch 55 artifact.",
+      "The former material fallback “Khung hợp kim chống gỉ…” is absent from all six samples.",
+      "Product 381 no longer claims the 50-item accessory set includes a tree; product 382 size range is 1m8–2m4."
+    ],
+    "blockers": [
+      "No supplier label, datasheet, source citation, or product-owner approval is attached to the SKU-specific material, electrical, origin, or packing claims.",
+      "All six products repeat the generic origin claim “Gia công tuyển chọn & Nhập khẩu chính ngạch” and generic packing guarantee “an toàn 100%”.",
+      "Product 295 still gives no voltage, power, or explicit use-condition evidence despite being electrical.",
+      "Bundle products 381, 382, and 383 still use single-component main images/ALT (Hộp quả trầu, Quả châu cườm, Hàng rào gỗ), not auditable images of the advertised 50-item, 70-item, and full B2B packages."
+    ]
+  },
+  "decision": "PARTIAL / OPEN",
+  "currentTotal": {
+    "open": 17,
+    "p1": 5,
+    "p2": 8,
+    "p3": 4
+  }
+}
