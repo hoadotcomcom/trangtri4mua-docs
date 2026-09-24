@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R45 — nghiệm thu độc lập Batch 17](#round-r45), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **22 OPEN — 6 P1, 10 P2, 6 P3**. R45 đóng R17-01; R21-01/R21-02/R24-01/R11-01 còn fail hoặc partial trên production.
+> **Trạng thái hiện hành:** xem [Vòng R46 — nghiệm thu độc lập Batch 18](#round-r46), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. R46 đóng R2-21 sau khi checkout không còn nhãn tiếng Anh.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **22 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **21 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3907,3 +3907,27 @@ Vì acceptance 2 yêu cầu chuyển sang query có kết quả thì notice ẩn
 - [JSON Batch 17](review-evidence/2026-09-24/r45-batch-17-verification.json).
 - Không follow query hành động, không thêm giỏ/đặt đơn/form; 3 browser tab đã đóng.
 - Đóng **1 P2**, không thêm issue. Tổng mới: **22 OPEN — 6 P1, 10 P2, 6 P3**.
+
+---
+
+<a id="round-r46"></a>
+
+# Vòng R46 — Nghiệm thu độc lập Batch 18
+
+## R2-21 — CLOSED
+
+Checkout production với giỏ Tháp nhũ 1m2:
+
+- heading hàng giao vận: `Giao nhận & Vận chuyển`;
+- `Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)`;
+- `Miễn phí vận chuyển (Freeship đơn từ 500k)`;
+- `Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)`;
+- 0 `Shipment`, `Flat rate`, `Free shipping`, `Local pickup`.
+
+R43 đã xác nhận form Contact có legend/nút/accessible name/lỗi inline tiếng Việt. Blocker cuối `Shipment` nay đã hết; toàn acceptance R2-21 đạt. **CLOSED**.
+
+## Bằng chứng và tổng R46
+
+- [JSON Batch 18](review-evidence/2026-09-24/r46-batch-18-verification.json).
+- Không submit checkout hoặc tạo đơn. Sản phẩm test đã xóa; giỏ cuối vòng **0₫ / 0**; 2 browser tab đã đóng.
+- Đóng **1 P3**, không thêm issue. Tổng mới: **21 OPEN — 6 P1, 10 P2, 5 P3**.

@@ -1,0 +1,44 @@
+{
+  "round": "R46",
+  "date": "2026-09-24",
+  "handoff": "Batch 18",
+  "verdicts": {
+    "R2-21": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "checkout": {
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "shippingRow": [
+          "Giao nhận & Vận chuyển\nGiao hàng tiêu chuẩn toàn quốc (30.000 ₫)\nMiễn phí vận chuyển (Freeship đơn từ 500k)\nNhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)"
+        ],
+        "english": [],
+        "methods": [
+          "Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)",
+          "Miễn phí vận chuyển (Freeship đơn từ 500k)",
+          "Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)"
+        ],
+        "cart": "\n\n\tGiỏ hàng550.000 ₫\n\t\n\t\t1\t\n"
+      },
+      "retained": "R43 verified the Vietnamese contact form legend, submit text/aria-label, inline errors and the three localized shipping method labels."
+    }
+  },
+  "current_total": {
+    "open": 21,
+    "p1": 6,
+    "p2": 10,
+    "p3": 5,
+    "closed_in_round": [
+      "R2-21"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "orderCreated": false,
+    "checkoutSubmitted": false,
+    "cartClean": {
+      "empty": true,
+      "cart": "Giỏ hàng\n0 ₫\n0"
+    },
+    "browsersClosed": true
+  }
+}
