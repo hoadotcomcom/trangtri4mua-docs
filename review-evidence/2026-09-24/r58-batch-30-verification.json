@@ -1,0 +1,78 @@
+{
+  "round": "R58",
+  "date": "2026-09-24",
+  "handoff": "Batch 30",
+  "verdicts": {
+    "R11-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "observed": {
+        "empty": {
+          "query": "zzreviewnomatch20260924",
+          "items": 0,
+          "noticeDisplay": "block",
+          "ariaExpanded": "false",
+          "focusStayedOnInput": true
+        },
+        "sameSessionValidTransition": {
+          "query": "tháp",
+          "items": 6,
+          "noticeDisplay": "none",
+          "ariaExpanded": "true",
+          "focusStayedOnInput": true,
+          "status": "Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó."
+        },
+        "firstResult": "Tháp nhũ điện – Trang trí Noel"
+      },
+      "reason": "The visible empty state and the same-session transition to six usable results now pass without simultaneous empty/result UI or focus loss."
+    },
+    "R12-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "arrowSequence": [
+          {"key": "ArrowDown", "active": "ct-search-opt-0", "selected": "ct-search-opt-0"},
+          {"key": "ArrowDown", "active": "ct-search-opt-1", "selected": "ct-search-opt-1"},
+          {"key": "ArrowUp", "active": "ct-search-opt-0", "selected": "ct-search-opt-0"}
+        ],
+        "enterOpenedActiveResult": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+        "optionTabindex": 0,
+        "tabSequenceAfterInput": ["search submit button", "ct-search-opt-0", "ct-search-opt-1", "ct-search-opt-2"],
+        "statusInstruction": "Vui lòng nhấn Tab để chọn nó.",
+        "escapeAfterOpenPopup": {
+          "first": {"modalActive": true, "query": "", "expanded": "false", "staleOptions": 7, "focusOnInput": true},
+          "second": {"modalActive": true, "focusOnInput": true},
+          "third": {"modalActive": true, "focusOnInput": true}
+        },
+        "screenReaderProof": false
+      },
+      "reason": "Arrow selection and Enter now work, but the claimed APG combobox remains inconsistent: role=option links stay in Tab order, live instructions explicitly tell users to Tab into them, Escape does not close the modal after a populated popup, and no real screen-reader test satisfies acceptance criterion 4."
+    },
+    "R24-01": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "freshMobileBothPdps": {"ariaOrientation": "vertical", "flexDirection": "column", "arrowDownMovedFocus": true, "spaceActivatedOnePanel": true},
+        "freshDesktop": {"ariaOrientation": "horizontal", "flexDirection": "row"},
+        "thapResize375To1200": {"ariaOrientation": "vertical", "flexDirection": "row", "waitMs": 1500},
+        "bomResize375To1200": {"ariaOrientation": "vertical", "flexDirection": "row", "waitMs": 1200},
+        "screenReaderProof": false
+      },
+      "reason": "Initial-load orientation and Space activation pass on both PDPs. Dynamic mobile-to-desktop resize still leaves stale aria-orientation=vertical while CSS is row on both PDPs, directly failing criterion 1; no real screen-reader check satisfies criterion 4."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": ["R11-01"],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R57 — nghiệm thu độc lập Batch 29](#round-r57), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **19 OPEN — 6 P1, 8 P2, 5 P3**. Gallery đã đổi đúng ảnh; đóng R21-01. R21-02 còn thiếu kiểm chứng screen reader bắt buộc.
+> **Trạng thái hiện hành:** xem [Vòng R58 — nghiệm thu độc lập Batch 30](#round-r58), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. Đóng R11-01; R12-01 còn mismatch APG/Escape, R24-01 còn stale orientation sau resize.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **19 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **18 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -4292,3 +4292,54 @@ Acceptance 3 yêu cầu kiểm tra bằng ít nhất một screen reader, không
 - [JSON Batch 29](review-evidence/2026-09-24/r57-batch-29-verification.json).
 - Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Đóng **R21-01**. Tổng còn **19 OPEN — 6 P1, 8 P2, 5 P3**.
+
+---
+
+<a id="round-r58"></a>
+
+# Vòng R58 — Nghiệm thu độc lập Batch 30
+
+## R11-01 — PASS / CLOSED
+
+Desktop 1440×1000, chuyển query trong cùng modal:
+
+- `zzreviewnomatch20260924`: 0 item, notice rỗng hiện, `aria-expanded=false`, focus giữ ở input;
+- xóa bằng bàn phím rồi nhập `tháp`: 6 item, notice ẩn, `aria-expanded=true`, status cập nhật “6 kết quả”, focus vẫn ở input;
+- không còn `ct-searching` treo hoặc hiển thị đồng thời notice rỗng với danh sách.
+
+Ba acceptance R11-01 đạt; **đóng R11-01**.
+
+## R12-01 — PARTIAL / OPEN
+
+Phần tiến bộ đã xác nhận:
+
+- ArrowDown lần lượt chọn `ct-search-opt-0`, `ct-search-opt-1`; ArrowUp quay lại option 0;
+- `aria-activedescendant` và `aria-selected` đồng bộ;
+- Enter mở đúng URL của option đang hoạt động.
+
+Mô hình APG vẫn chưa nhất quán:
+
+- sáu link `role=option` đều còn `tabindex=0`; Tab từ input đi qua nút submit rồi từng option;
+- live status còn hướng dẫn “Vui lòng nhấn Tab để chọn nó”, trái với mô hình combobox đang dùng `aria-activedescendant`;
+- sau popup có kết quả, Escape đầu xóa query/đóng popup nhưng giữ 7 option stale; Escape thứ hai và thứ ba vẫn không đóng modal hoặc trả focus;
+- chưa có phép thử screen reader thật theo acceptance 4.
+
+R12-01 giữ **PARTIAL / OPEN**.
+
+## R24-01 — PARTIAL / OPEN
+
+Trên cả Tháp nhũ và Bờm kính, initial mobile 375px đúng `vertical` + layout `column`; ArrowDown chuyển focus và Space mở đúng duy nhất một panel. Fresh desktop 1200px đúng `horizontal` + `row`.
+
+Tuy nhiên resize live 375→1200 vẫn fail trên cả hai PDP:
+
+- CSS chuyển thành `flex-direction:row`;
+- sau 1,2–1,5 giây `aria-orientation` vẫn là `vertical`;
+- desktop ArrowRight vì vậy không chạy theo hướng công bố.
+
+Claim chuỗi `vertical → horizontal → vertical` không tái hiện, trực tiếp fail acceptance 1. Batch 30 cũng không có screen-reader proof thật theo acceptance 4. R24-01 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R58
+
+- [JSON Batch 30](review-evidence/2026-09-24/r58-batch-30-verification.json).
+- Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 4 browser tab đã đóng.
+- Đóng **R11-01**. Tổng còn **18 OPEN — 6 P1, 8 P2, 4 P3**.
