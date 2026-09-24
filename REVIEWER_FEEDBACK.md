@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R40 — nghiệm thu độc lập Batch 9](#round-r40), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **30 OPEN — 9 P1, 15 P2, 6 P3**. R40 đóng R8-01, R22-01 và R13-01; R5-01/R16-01 giữ OPEN vì còn thiếu bằng chứng acceptance cuối.
+> **Trạng thái hiện hành:** xem [Vòng R41 — nghiệm thu độc lập Batch 10](#round-r41), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **28 OPEN — 8 P1, 14 P2, 6 P3**. R41 đóng R4-01 và R2-20; R2-10, R2-04 và R2-22 giữ OPEN vì nội dung production còn tái hiện acceptance chưa đạt.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **30 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **28 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -3408,3 +3408,114 @@ Các tiêu chí DOM, đồng bộ khi sửa và layout đạt. Tuy nhiên accept
 - [JSON Batch 9](review-evidence/2026-09-24/r40-batch-9-verification.json).
 - Không gửi form, lead, đặt hàng, gọi điện hay mở Zalo; browser đã đóng.
 - Đóng **3 P2**, không thêm issue. Tổng mới: **30 OPEN — 9 P1, 15 P2, 6 P3**.
+
+---
+
+<a id="round-r41"></a>
+
+# Vòng R41 — Nghiệm thu độc lập Batch 10
+
+Đã kiểm trực tiếp 5 claim Batch 10 trên production. Kết quả: **đóng R4-01 và R2-20**; ba issue nội dung còn lại chỉ đạt một phần vì claim bàn giao chưa hiện đầy đủ trên live.
+
+## Ma trận verdict R41
+
+| Issue | Verdict | Trạng thái | Kết luận |
+|---|---|---|---|
+| R4-01 | PASS | **CLOSED** | Success/failure, trễ 6 giây, PDP/sticky, double-click, cart-existing, unselected và retry đều đạt |
+| R2-20 | PASS | **CLOSED** | 4 policy có một main và heading không nhảy cấp; giữ kết quả map/keyboard Contact–Showroom đã đạt |
+| R2-10 | FAIL | OPEN | Payment đã 21:30, nhưng bài Cafe live vẫn hứa giao trong ngày tại Hà Nội |
+| R2-04 | PARTIAL | OPEN | Meta category và claim 500+ đã sửa; card Quà homepage live vẫn là offer hàng cụ thể tới category 0 sản phẩm |
+| R2-22 | PARTIAL | OPEN | Bỏ “ảnh thật 100%” và 500+; testimonial vẫn tự gọi là phản hồi/chia sẻ thực tế, không có căn cứ công khai |
+
+## R4-01 — CLOSED
+
+### Request trễ 6 giây
+
+Giỏ ban đầu trống, chọn Tháp nhũ 1m8:
+
+| Thời điểm | Sự kiện |
+|---:|---|
+| 12ms | POST `?blocksy_add_to_cart=yes` bị giữ |
+| 6.014ms | Reviewer thả POST |
+| 6.919ms | Browser mới yêu cầu `/thanh-toan/` |
+
+Không có navigation trước server response. Checkout có đúng `Tháp nhũ điện - 1m8 ×1`, giá/tổng **895.000₫**.
+
+### Sticky và giỏ đã có hàng
+
+Với 1m8 đã ở giỏ, chọn 1m5 rồi bấm `.tt4m-sticky-buy` trên mobile. Checkout có hai dòng độc lập:
+
+- 1m8 ×1 — 895.000₫;
+- 1m5 ×1 — 755.000₫;
+- tổng 1.650.000₫.
+
+### Failure, retry, double-click và validation
+
+- Abort POST: giữ nguyên PDP sau 11,5 giây; hiện `Quá thời gian chờ phản hồi từ máy chủ. Vui lòng thử lại!`; hai nút hết disabled/busy; giỏ không tăng.
+- Retry ngay sau lỗi: đi checkout thành công và tăng đúng một đơn vị của biến thể đã chọn.
+- Click liên tiếp hai lần cho 1m2: checkout chỉ có một lần thêm, dòng 1m2 là `×1`, cart count tăng từ 2 lên 3.
+- Chưa chọn biến thể: giữ nguyên PDP, cart không tăng, báo `Vui lòng chọn phân loại sản phẩm (kích thước, mẫu mã) trước khi mua hàng!`.
+
+Hai button path, success signal thật, trạng thái lỗi, chống lặp, cart-existing và validation đều đạt acceptance. **R4-01 CLOSED**.
+
+## R2-20 — CLOSED
+
+Raw HTML live của cả bốn policy:
+
+| Trang | Main | Heading bắt đầu | Số bước nhảy >1 cấp |
+|---|---:|---|---:|
+| Đổi trả | 1 | H1 → H2 → H3 → H2 | 0 |
+| Thanh toán | 1 | H1 → H2 → H2 → H3 | 0 |
+| Vận chuyển | 1 | H1 → H2 → H2 → H2 | 0 |
+| Bảo mật | 1 | H1 → H2 → H2 → H2 | 0 |
+
+Đổi trả nay bắt đầu nội dung bằng H2 `1. Điều Kiện Áp Dụng Đổi Trả Sản Phẩm`; bốn card cam kết đầu trang không còn tạo H1→H3.
+
+R35 đã kiểm trực tiếp Contact và Showroom: mỗi trang một main, iframe có title cụ thể, Tab vào/ra map và heading H1→H2→H3. Batch 10 chỉ sửa đúng blocker policy còn lại, không thay các bề mặt đó. Toàn phạm vi acceptance R2-20 đạt; **CLOSED**.
+
+## R2-10 — live vẫn còn mâu thuẫn Hà Nội
+
+Payment live đã sửa đúng thành:
+
+> Bộ phận Kế toán & Chăm sóc khách hàng … 08:00 đến 21:30 hàng ngày.
+
+Nhưng bài `trang-tri-noel-quan-cafe` production vẫn ghi:
+
+> giao nhanh trong ngày tại khu vực nội thành TP.HCM và Hà Nội.
+
+Kết quả này lặp lại với query cache-busting và response `CF-Cache-Status: DYNAMIC`; không phải chỉ đọc bản cache cũ của Reviewer. Policy vận chuyển vẫn chỉ quy định hỏa tốc 2–4 giờ cho nội thành TP.HCM. Do blocker thứ hai của R38 còn nguyên trên live, R2-10 giữ **FAIL / OPEN**.
+
+## R2-04 — metadata đúng, card Quà homepage chưa deploy
+
+Phần đã đạt:
+
+- Category Quà title hiện là `Dịch Vụ Đặt Quà Theo Yêu Cầu`, description mô tả tư vấn/đóng gói theo yêu cầu.
+- Category Đèn title hiện là `Tư Vấn & Báo Giá Sỉ Lẻ`.
+- Cả hai category rỗng giữ `noindex, nofollow`; homepage/public HTML không còn `500+`.
+
+Phần chưa đạt:
+
+- Card homepage live vẫn là `Hộp Quà Sang Trọng` / `Hộp quà tinh tế, tất len kim tuyến`.
+- Card vẫn dẫn tới category Quà có **0 product card**.
+- Chuỗi Batch 10 công bố `Dịch vụ giỏ quà lễ hội • Nhận đặt trước qua Zalo` không có trong homepage production.
+
+Vì bề mặt chuyển đổi chính vẫn trình bày offer hàng cụ thể trước trang 0 sản phẩm, R2-04 giữ **PARTIAL / OPEN**.
+
+## R2-22 — hai claim đã bỏ, testimonial vẫn chưa có căn cứ
+
+Homepage live không còn:
+
+- `ảnh thật 100%`;
+- `Sẵn kho hơn 500+ mẫu`.
+
+Tuy nhiên khối ba testimonial 5 sao vẫn mở đầu:
+
+> Những phản hồi và chia sẻ thực tế từ các gia đình, quán cà phê và cửa hàng đã tin chọn sản phẩm…
+
+Các quote/tên riêng vẫn không có nguồn, ngày, consent, link hoặc ngữ cảnh xác minh. Acceptance R2-22 yêu cầu mọi huy hiệu/con số/claim “thực tế/đã mua” có căn cứ owner hoặc được chỉnh thành thông tin không gây hiểu nhầm; bỏ riêng claim ảnh và inventory chưa hoàn tất phần này. R2-22 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R41
+
+- [JSON Batch 10](review-evidence/2026-09-24/r41-batch-10-verification.json).
+- Không tạo đơn, không submit checkout/form, không gọi/Zalo. Toàn bộ sản phẩm test đã xóa; giỏ cuối vòng **0₫ / 0**; 7 browser tab đã đóng.
+- Đóng **1 P1 + 1 P2**, không thêm issue. Tổng mới: **28 OPEN — 8 P1, 14 P2, 6 P3**.

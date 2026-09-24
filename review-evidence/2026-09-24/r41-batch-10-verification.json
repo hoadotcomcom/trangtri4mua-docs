@@ -1,0 +1,312 @@
+{
+  "round": "R41",
+  "date": "2026-09-24",
+  "source_commit": "Batch 10 handoff observed after 5cee256",
+  "verdicts": {
+    "R4-01": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "slowRequest": {
+        "events": [
+          {
+            "t": 12,
+            "type": "add-request-held",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes"
+          },
+          {
+            "t": 6014,
+            "type": "add-request-released"
+          },
+          {
+            "t": 6919,
+            "type": "navigation",
+            "method": "GET",
+            "url": "https://trangtri4mua.com/thanh-toan/"
+          }
+        ],
+        "finalUrl": "https://trangtri4mua.com/thanh-toan/",
+        "checkoutProduct": "Tháp nhũ điện - Trang trí Noel - 1m8 ×1",
+        "checkoutTotal": "895.000 ₫"
+      },
+      "stickyWithExistingCart": {
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "rows": [
+          "Tháp nhũ điện - Trang trí Noel - 1m8\n  × 1\t895.000 ₫",
+          "Tháp nhũ điện - Trang trí Noel - 1m5\n  × 1\t755.000 ₫"
+        ],
+        "total": "Tổng\t1.650.000 ₫",
+        "cart": "\n\n\tGiỏ hàng1.650.000 ₫\n\t\n\t\t2\t\n"
+      },
+      "abortedRequest": {
+        "elapsed": 11515,
+        "events": [
+          {
+            "t": 11,
+            "type": "aborted",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?blocksy_add_to_cart=yes"
+          }
+        ],
+        "state": {
+          "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+          "buy": {
+            "disabled": false,
+            "busy": null,
+            "classes": "button tt4m-pdp-buy-now",
+            "text": "Mua ngay"
+          },
+          "add": {
+            "disabled": false,
+            "busy": null,
+            "classes": "single_add_to_cart_button button alt"
+          },
+          "notices": [
+            "550.000 ₫",
+            "Quá thời gian chờ phản hồi từ máy chủ. Vui lòng thử lại!\n\n×"
+          ],
+          "cart": "\n\n\tGiỏ hàng1.650.000 ₫\n\t\n\t\t2\t\n"
+        }
+      },
+      "retryAfterAbort": {
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "rows": [
+          "Tháp nhũ điện - Trang trí Noel - 1m8\n  × 1\t895.000 ₫",
+          "Tháp nhũ điện - Trang trí Noel - 1m5\n  × 1\t755.000 ₫",
+          "Tháp nhũ điện - Trang trí Noel - 1m2\n  × 2\t1.100.000 ₫"
+        ],
+        "cart": "\n\n\tGiỏ hàng2.750.000 ₫\n\t\n\t\t4\t\n",
+        "notices": []
+      },
+      "doubleClick": {
+        "elapsed": 4023.699951171875,
+        "url": "https://trangtri4mua.com/thanh-toan/",
+        "rows": [
+          "Tháp nhũ điện - Trang trí Noel - 1m8\n  × 1\t895.000 ₫",
+          "Tháp nhũ điện - Trang trí Noel - 1m5\n  × 1\t755.000 ₫",
+          "Tháp nhũ điện - Trang trí Noel - 1m2\n  × 1\t550.000 ₫"
+        ],
+        "cart": "\n\n\tGiỏ hàng2.200.000 ₫\n\t\n\t\t3\t\n",
+        "notices": [],
+        "wallElapsed": 5033
+      },
+      "unselectedVariation": {
+        "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+        "selection": "",
+        "notices": [
+          "Vui lòng chọn phân loại sản phẩm (kích thước, mẫu mã) trước khi mua hàng!\n\n×"
+        ],
+        "cart": "\n\n\tGiỏ hàng2.200.000 ₫\n\t\n\t\t3\t\n",
+        "buyDisabled": false
+      },
+      "cleanup": {
+        "url": "https://trangtri4mua.com/gio-hang/",
+        "cart": "Giỏ hàng\n0 ₫\n0",
+        "empty": true,
+        "removeCount": 0
+      }
+    },
+    "R2-20": {
+      "result": "PASS",
+      "status": "CLOSED",
+      "headingAudit": {
+        "returns": {
+          "sequence": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            3,
+            3,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "labels": [
+            "1:Chính Sách Đổi Trả",
+            "2:1. Điều Kiện Áp Dụng Đổi Trả Sản Phẩm",
+            "3:Lưu Ý Quan Trọng Khi Nhận Hàng",
+            "2:2. Quy Trình 3 Bước Đổi Trả Tận Nơi",
+            "3:Bước 1: Tiếp Nhận Thông Tin Khiếu Nại",
+            "3:Bước 2: Xác Nhận &#038; Điều Phối Lấy Hàng",
+            "3:Bước 3: Gửi Hàng Mới Hoặc Hoàn Tiền",
+            "2:3. Phân Định Chi Phí Vận Chuyển Khi Đổi Trả",
+            "3:Bạn Cần Hỗ Trợ Đổi Hàng Hoặc Giải Quyết Sự Cố?",
+            "3:Đồng Kiểm Khi Nhận",
+            "3:Miễn Phí Vận Chuyển",
+            "3:Đổi Trả Trong 7 Ngày",
+            "3:Giao Hàng Hỏa Tốc",
+            "3:TRANG TRÍ 4 MÙA"
+          ],
+          "jumpCount": 0,
+          "mainCount": 1
+        },
+        "payment": {
+          "sequence": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "labels": [
+            "1:Chính Sách Thanh Toán",
+            "2:1. Bảng Tổng Hợp Phương Thức Thanh Toán",
+            "2:2. Chi Tiết Các Hình Thức Thanh Toán &#038; Quy Trình",
+            "3:1. Thanh Toán Khi Nhận Hàng (COD &#8211; Cash On Delivery)",
+            "3:2. Thanh Toán Chuyển Khoản Ngân Hàng Napas247 (VietQR)",
+            "3:3. Thanh Toán Trực Tiếp Tại Showroom",
+            "3:4. Quy Trình Xuất Hóa Đơn Điện Tử Giá Trị Gia Tăng (VAT)",
+            "3:Bạn Cần Hỗ Trợ Xác Nhận Thanh Toán Hoặc Xuất Hóa Đơn VAT?",
+            "3:Đồng Kiểm Khi Nhận",
+            "3:Miễn Phí Vận Chuyển",
+            "3:Đổi Trả Trong 7 Ngày",
+            "3:Giao Hàng Hỏa Tốc",
+            "3:TRANG TRÍ 4 MÙA"
+          ],
+          "jumpCount": 0,
+          "mainCount": 1
+        },
+        "shipping": {
+          "sequence": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "labels": [
+            "1:Chính Sách Vận Chuyển",
+            "2:1. Biểu Phí Vận Chuyển Chi Tiết &#038; Thời Gian Giao Hàng",
+            "2:2. Quy Chuẩn Đóng Gói Bảo Vệ Hàng Dễ Vỡ",
+            "2:3. Quyền Lợi Đồng Kiểm Mở Hộp Khi Nhận Hàng (COD)",
+            "3:Mở Hộp Kiểm Tra Trước Khi Trả Tiền",
+            "3:Từ Chối Nhận Miễn Phí Nếu Nứt Vỡ",
+            "2:4. Khuyến Nghị Đặt Hàng Mùa Cao Điểm Lễ Hội",
+            "3:Bạn Cần Tra Cứu Vận Đơn Hoặc Cần Giao Hỏa Tốc?",
+            "3:Đồng Kiểm Khi Nhận",
+            "3:Miễn Phí Vận Chuyển",
+            "3:Đổi Trả Trong 7 Ngày",
+            "3:Giao Hàng Hỏa Tốc",
+            "3:TRANG TRÍ 4 MÙA"
+          ],
+          "jumpCount": 0,
+          "mainCount": 1
+        },
+        "privacy": {
+          "sequence": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "labels": [
+            "1:Chính Sách Bảo Mật",
+            "2:1. Mục Đích Thu Thập & Xử Lý Dữ Liệu",
+            "2:2. Phạm Vi Dữ Liệu Thu Thập",
+            "2:3. Quy Định Về Cookie, Attribution & Lưu Trữ Cục Bộ Trình Duyệt",
+            "2:4. Thời Gian Lưu Trữ Thông Tin",
+            "2:5. Các Đơn Vị Được Tiếp Cận Dữ Liệu",
+            "2:6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân",
+            "3:Ban Quản Trị Dữ Liệu & Bảo Mật Thông Tin",
+            "3:Đồng Kiểm Khi Nhận",
+            "3:Miễn Phí Vận Chuyển",
+            "3:Đổi Trả Trong 7 Ngày",
+            "3:Giao Hàng Hỏa Tốc",
+            "3:TRANG TRÍ 4 MÙA"
+          ],
+          "jumpCount": 0,
+          "mainCount": 1
+        }
+      },
+      "priorRetainedEvidence": "Contact and Showroom each have one main, named map iframe, keyboard entry/exit, H1→H2→H3 from R35."
+    },
+    "R2-10": {
+      "result": "FAIL",
+      "status": "OPEN",
+      "paymentText": "VAT? Bộ phận Kế toán &#038; Chăm sóc khách hàng của Trang Trí 4 Mùa làm việc từ 08:00 đến 21:30 hàng ngày, sẵn sàng hỗ trợ bạn: Xác Nhận Thanh Toán Zalo Hotline Kế T",
+      "cafeOldPromise": "phí kế toán doanh nghiệp rõ ràng. Giao hàng hỏa tốc và đồng kiểm tận nơi: Hỗ trợ đóng gói cẩn thận, giao nhanh trong ngày tại khu vực nội thành TP.HCM và Hà Nội. Quý khách được mở kiện đồng kiểm chất lượng sản phẩm trước khi thanh toán (COD). Tư vấn dự toán và cung cấp vật tư tra",
+      "cacheBypass": "DYNAMIC response with cache-busting query still contained old Hà Nội promise"
+    },
+    "R2-04": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "homepageGiftCard": {
+        "href": "/danh-muc/trang-tri-theo-mua/giang-sinh-noel/qua-tang-giang-sinh/",
+        "text": "Hộp Quà Sang Trọng Quà Tặng & Phụ Kiện Hộp quà tinh tế, tất len kim tuyến →"
+      },
+      "categories": {
+        "gift": {
+          "status": 200,
+          "title": "Quà Tặng Giáng Sinh 2026 — Dịch Vụ Đặt Quà Theo Yêu Cầu | Trang Trí 4 Mùa",
+          "description": "Dịch vụ tư vấn và đóng gói set quà tặng Giáng Sinh doanh nghiệp, gia đình theo yêu cầu. Đa dạng mẫu mã quà tặng Noel ý nghĩa, giao hàng toàn quốc.",
+          "robots": "nofollow, noindex",
+          "productCards": 0,
+          "text": "Quà Tặng Giáng Sinh 2026 — Dịch Vụ Đặt Quà Theo Yêu Cầu | Trang Trí 4 Mùa Chuyển đến phần nội dung Không có kết quả Trang Trí 4 Mùa Nghệ thuật bài trí & không gian lễ hội Danh mục sản phẩm Giáng Sinh & Noel Mùa nổi bật Phụ kiện treo cây Noel Mô hình & tượng Noel Combo trang trí trọn gói Cây thông Noel Vòng nguyệt quế & treo cửa Trang trí Tết Nguyên Đán Tất cả sản phẩm decor Trang thông tin Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh &#8211; Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Gọi Hotline: 0901.234.567 Tư vấn Zalo (8:00 – 21:30) Đồng kiểm COD khi nhận hàng Freeship toàn quốc đơn từ 500.000đ Đổi trả trong 7 ngày nếu lỗi sản xuất Thời gian phục vụ: 8:00 – 21:30 hàng ngày Miễn phí vận chuyển toàn quốc đơn từ 500.000đ | Đồng kiểm khi nhận hàng &bull; Bảo đảm nguyên vẹn 100% | Hotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30) Freeship đơn từ 500.000đ &bull; Hotline: 0901.234.567 📞 Hotline: 0901.234.567 | 🚚 Freeship đơn từ 500k Trang trí 4 mùa Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh &#8211; Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Tìm kiếm Giỏ hàng 0 &#8363; 0 📞 Hotline: 0901.234.567 | 🚚 Freeship"
+        },
+        "lights": {
+          "status": 200,
+          "title": "Đèn &amp; Nến Trang Trí Noel 2026 — Tư Vấn &amp; Báo Giá Sỉ Lẻ | Trang Trí 4 Mùa",
+          "description": "Tư vấn và cung ứng các loại đèn LED trang trí Noel, đèn rèm, nến thơm nghệ thuật cho quán cafe, nhà hàng và sự kiện. Nhận báo giá nhanh qua Zalo!",
+          "robots": "nofollow, noindex",
+          "productCards": 0,
+          "text": "Đèn & Nến Trang Trí Noel 2026 — Tư Vấn & Báo Giá Sỉ Lẻ | Trang Trí 4 Mùa Chuyển đến phần nội dung Không có kết quả Trang Trí 4 Mùa Nghệ thuật bài trí & không gian lễ hội Danh mục sản phẩm Giáng Sinh & Noel Mùa nổi bật Phụ kiện treo cây Noel Mô hình & tượng Noel Combo trang trí trọn gói Cây thông Noel Vòng nguyệt quế & treo cửa Trang trí Tết Nguyên Đán Tất cả sản phẩm decor Trang thông tin Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh &#8211; Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Gọi Hotline: 0901.234.567 Tư vấn Zalo (8:00 – 21:30) Đồng kiểm COD khi nhận hàng Freeship toàn quốc đơn từ 500.000đ Đổi trả trong 7 ngày nếu lỗi sản xuất Thời gian phục vụ: 8:00 – 21:30 hàng ngày Miễn phí vận chuyển toàn quốc đơn từ 500.000đ | Đồng kiểm khi nhận hàng &bull; Bảo đảm nguyên vẹn 100% | Hotline / Zalo đặt hàng: 0901.234.567 (8:00 – 21:30) Freeship đơn từ 500.000đ &bull; Hotline: 0901.234.567 📞 Hotline: 0901.234.567 | 🚚 Freeship đơn từ 500k Trang trí 4 mùa Trang Chủ Cửa Hàng Theo Mùa Giáng Sinh &#8211; Noel Phụ Kiện Treo Cây Mô Hình &#038; Tượng Combo Trọn Gói Ý Tưởng Trang Trí Liên Hệ Tìm kiếm Giỏ hàng 0 &#8363; 0 📞 Hotline: 0901.234.567 | 🚚 Freeship "
+        }
+      },
+      "removed500Claim": true
+    },
+    "R2-22": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "removedImage100": true,
+      "removed500": true,
+      "remainingTrustBlock": "Cảm Nhận Từ Khách Hàng Thân Thiết Những phản hồi và chia sẻ thực tế từ các gia đình, quán cà phê và cửa hàng đã tin chọn sản phẩm của Trang Trí 4 Mùa. ★★★★★ &#8220;Set phụ kiện và cây thông Noel giao hỏa tốc đóng gói rất kỹ càng. Quán cafe mình trang trí xong tạo không khí ấm cúng rõ rệt, khách ghé uống cafe chụp ảnh check-in rất thích.&#8221; TR The Rustic Coffee Quán Cafe tại TPHCM ★★★★★ &#8220;Tượng lính chì Nutcracker và ông già Noel chi tiết sắc nét, chắc chắn. Khâu đồng kiểm COD mở hàng kiểm tra trước khi trả tiền rất yên tâm, nhân viên tư vấn Zalo hướng dẫn lắp ráp tận tình.&#8221; TH Chị Thu Hằng Căn hộ chung cư tại Hà Nội ★★★★★ &#8220;Cửa hàng mình đặt gói decor trang trí cho shop thời trang, được hỗ trợ xuất hóa đơn VAT điện tử nhanh gọn. Mẫu mã sang trọng, phối màu chuẩn tone ấm áp.&#8221; MB May Boutique Cửa hàng thời trang tại Đà Nẵng Trang Trí 4 Mùa trân trọng cảm ơn sự đồn"
+    }
+  },
+  "current_total": {
+    "open": 28,
+    "p1": 8,
+    "p2": 14,
+    "p3": 6,
+    "closed_in_round": [
+      "R4-01",
+      "R2-20"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "ordersCreated": false,
+    "checkoutSubmitted": false,
+    "formsSubmitted": false,
+    "cartEmptied": true,
+    "browsersClosed": true
+  }
+}
