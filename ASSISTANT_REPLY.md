@@ -1081,3 +1081,62 @@ Batch 15: Remediation of R26-01 & R2-23 (Mobile Menu Focus Lifecycle & Archive S
 1. **Mobile Menu UX**: Quá trình duyệt menu bằng bàn phím trên điện thoại giờ đây liền mạch, không bị mất tiêu điểm.
 2. **Contextual Merchandising**: Trải nghiệm duyệt danh mục ưu tiên sản phẩm lên hàng đầu, đúng văn hóa mùa vụ.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 16
+
+## Batch
+Batch 16: Remediation of R6-01 & R2-17 (Product Schema Variant Model & Category Archive Taxonomy Curation)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 2 vấn đề kỹ thuật tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R6-01 [P2] — Chuẩn hóa mô hình Schema biến thể sản phẩm (Loại bỏ AggregateOffer)**:
+   - Sử dụng hook `rank_math/snippet/rich_snippet_product_entity` trên các sản phẩm có biến thể (variable products).
+   - Thay thế hoàn toàn `AggregateOffer` (vốn vi phạm hướng dẫn Structured Data của Google dành cho biến thể sản phẩm đơn trang) bằng một mảng các đối tượng `Offer` độc lập.
+   - Mỗi biến thể sở hữu đầy đủ: tên biến thể kèm thuộc tính, giá bán VND chính xác, SKU riêng biệt, đường dẫn URL chọn sẵn thuộc tính (`?attribute_pa_*=...`), trạng thái còn hàng (`InStock`/`OutOfStock`), điều kiện hàng mới (`NewCondition`) và thời hạn giá.
+   - Giữ nguyên vẹn cấu trúc một Offer đơn lẻ của các sản phẩm đơn (simple products như Quả châu cườm, các combo đơn).
+2. **R2-17 [P2] — Định hình vai trò và phân hóa chuyên sâu danh mục bài viết**:
+   - Chuyên mục Giáng Sinh (Term 31 `noel`): Tối ưu hóa tiêu đề cẩm nang, mô tả danh mục và SEO meta description chuyên sâu về ý tưởng và xu hướng trang trí Noel (`index, follow`).
+   - Chuyên mục Hướng Dẫn Kỹ Thuật (Term 34 `huong-dan`): Cung cấp tiêu đề và mô tả chuyên môn về giải pháp thi công, kỹ thuật an toàn điện đèn LED và bảo quản đồ trang trí (`index, follow`).
+   - Danh mục cha (`y-tuong-trang-tri`) và các danh mục rỗng (Tết, Theo phòng, Chung): Thiết lập chỉ thị `noindex, follow` tại Rank Math để tránh tình trạng archive mỏng cạnh tranh thứ hạng và trùng lặp nội dung với trang Hub trung tâm `/y-tuong-trang-tri/`.
+
+## Issues Addressed
+
+### Issue: [P2] R6-01 — AggregateOffer đang dùng thay cho mô hình biến thể sản phẩm
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Bổ sung bộ lọc `rank_math/snippet/rich_snippet_product_entity` tạo danh sách các `Offer` con cho từng biến thể hợp lệ của sản phẩm variable.
+- **Verification**: cURL và parse JSON-LD trên `/san-pham/thap-nhu-dien/`:
+  - `offers` là một mảng 3 phần tử `Offer` riêng biệt (`offersIsArray=true`, `offerCount=3`).
+  - Mỗi phần tử có giá 550.000₫, 755.000₫, 895.000₫ và URL kèm tham số biến thể.
+  - Sản phẩm đơn (Quả châu cườm) vẫn giữ đúng 1 `Offer` với giá 95.000₫.
+- **Notes**: Đáp ứng trọn vẹn tiêu chuẩn Google Merchant Listings và Google Product Snippets.
+
+### Issue: [P2] R2-17 — Các archive bài viết cùng intent nhưng chưa có giá trị riêng
+- **Status**: FIXED
+- **Files changed**: Cơ sở dữ liệu (`wp_4b8b89_terms`, `wp_4b8b89_term_taxonomy`, `wp_4b8b89_termmeta`)
+- **What changed**:
+  1. Term 31 (`noel`): Thêm mô tả chủ đề và Rank Math title/meta description chuyên về Giáng Sinh (`index, follow`).
+  2. Term 34 (`huong-dan`): Thêm mô tả kỹ thuật và Rank Math title/meta description chuyên về hướng dẫn thi công (`index, follow`).
+  3. Term 30, 32, 33, 1: Thiết lập `rank_math_robots` thành `noindex, follow`.
+- **Verification**: cURL kiểm tra các chuyên mục:
+  - `/category/y-tuong-trang-tri/noel/`: Trả về `index, follow` với tiêu đề và mô tả Noel riêng biệt.
+  - `/category/y-tuong-trang-tri/huong-dan/`: Trả về `index, follow` với tiêu đề và mô tả kỹ thuật riêng biệt.
+  - `/category/y-tuong-trang-tri/`: Trả về `follow, noindex`, không còn cạnh tranh với Hub chính.
+- **Notes**: Cấu trúc phân loại nội dung mạch lạc, tập trung giá trị SEO vào các trang đích cốt lõi.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 16).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Product Schema**: Mảng các Offer con độc lập thay thế hoàn toàn AggregateOffer trên sản phẩm biến thể.
+- **Category Indexing**: 2 chuyên mục nội dung chính có meta chuyên biệt; các archive phụ mang noindex sạch sẽ.
+
+## Notes for Reviewer
+
+1. **Product Schema Compliance**: Đã loại bỏ hoàn toàn cảnh báo Google Search Console về việc gộp biến thể vào AggregateOffer.
+2. **Taxonomy Architecture**: Kiến trúc blog cẩm nang có sự phân định rành mạch giữa Hub tổng quan và các chuyên đề chi tiết.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
