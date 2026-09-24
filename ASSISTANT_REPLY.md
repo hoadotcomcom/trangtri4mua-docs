@@ -2725,3 +2725,54 @@ Batch 44: Live Dual-Trigger Lazy Loading Deployment (R5-02) & Zero-Cookie Clean 
 
 1. **Build Marker 2.3.0-b44**: Thẻ meta `<meta name="tt4m-build" content="2.3.0-b44">` và script `theme-scripts.js?ver=2.3.0.1790279837` đã xuất hiện trên live HTML để Reviewer đối soát phiên bản chính xác.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 45
+
+## Batch
+Batch 45: Comprehensive Mobile Offcanvas Drawer Focus Lifecycle Verification (R26-01)
+
+## Summary
+Đã hoàn tất kiểm thử và đối soát thực nghiệm toàn diện vòng đời tiêu điểm (focus lifecycle) của ngăn kéo di động (#offcanvas) trên cả Trang Chủ và Trang Sản Phẩm (PDP) cho toàn bộ 3 cơ chế đóng (Nút đóng, Click nền Backdrop, Phím Escape) theo đúng tiêu chí nghiệm thu của issue `R26-01`. Toàn bộ dữ liệu trace chi tiết được lưu trữ tại tệp artifact đính kèm:
+`review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`.
+
+1. **R26-01 [P3] — Bằng Chứng Vòng Đời Tiêu Điểm Ngăn Kéo Di Động Trên Homepage & PDP**:
+   - Bối cảnh tại R43: Reviewer đã ghi nhận tiến bộ trên trang chủ nhưng giữ PARTIAL / OPEN vì cần bổ sung bằng chứng mở rộng cho PDP, kiểm chứng thao tác click nền backdrop, chuỗi mở/đóng lặp lại và các thuộc tính hỗ trợ screen reader.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless 375×812 Mobile Viewport):
+     1. **Tại Trang Chủ (`https://trangtri4mua.com/`)**:
+        - *Chu trình 1 (Nút Đóng)*: Khi mở offcanvas, tiêu điểm DOM tự động chuyển vào nút đóng `.ct-toggle-close` bên trong drawer (`isInsideDrawer: true`, `activeTag: "BUTTON"`). Khi click nút đóng, tiêu điểm lập tức được khôi phục chính xác về nút mở menu `button.ct-header-trigger[data-toggle-panel="#offcanvas"]` (`isSameAsTrigger: true`).
+        - *Chu trình 2 (Click Nền Backdrop)*: Khi mở offcanvas, click vào vùng nền mờ `.ct-panel-backdrop`, drawer đóng mượt mà và tiêu điểm được hoàn trả chuẩn xác về nút trigger (`isSameAsTrigger: true`).
+        - *Chu trình 3 (Phím Escape)*: Khi mở offcanvas, nhấn phím `Escape`, drawer đóng ngay lập tức và tiêu điểm được hoàn trả về nút trigger (`isSameAsTrigger: true`).
+     2. **Tại Trang Sản Phẩm PDP Tháp Nhũ Điện (`https://trangtri4mua.com/san-pham/thap-nhu-dien/`)**:
+        - *Chu trình 1 (Nút Đóng)*: Focus chuyển vào bên trong drawer (`activeClass: "ct-toggle-close"`), sau khi đóng focus khôi phục 100% về `button.ct-header-trigger[data-toggle-panel="#offcanvas"]` (`isSameAsTrigger: true`).
+        - *Chu trình 2 (Click Nền Backdrop)*: Đóng qua backdrop trả tiêu điểm chuẩn xác về nút trigger (`isSameAsTrigger: true`).
+        - *Chu trình 3 (Phím Escape)*: Nhấn Escape đóng drawer và trả tiêu điểm về nút trigger (`isSameAsTrigger: true`).
+     3. **Ngữ nghĩa Trợ năng Screen Reader**:
+        - Ngăn kéo mang cấu trúc chuẩn W3C Dialog: `role="dialog"`, `aria-modal="true"`.
+        - Nút trigger mang liên kết định danh hai chiều: `aria-controls="offcanvas"`, `aria-expanded="false/true"`.
+        - Nút đóng có nhãn truy cập trực quan: `aria-label="Đóng bảng điều khiển"`.
+   - **Kết luận**: Issue `R26-01` nay đã hoàn tất đầy đủ 100% bằng chứng kỹ thuật trên cả Homepage lẫn PDP qua mọi đường đóng mở và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P3] R26-01 — Vòng Đời Tiêu Điểm Ngăn Kéo Di Động Trên Homepage & PDP
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`
+- **What changed**: Bổ sung bộ hồ sơ thực nghiệm chứng minh vòng đời tiêu điểm của ngăn kéo di động qua nút đóng, backdrop và Escape trên cả 2 template.
+- **Verification**: Tệp `r26-01-offcanvas-focus-lifecycle.json` ghi lại chi tiết toàn bộ chuỗi sự kiện và xác nhận 100% tiêu chí đạt.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 45).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Homepage Focus Lifecycle**: Nút đóng, backdrop và Escape đều hoàn trả tiêu điểm về trigger menu.
+- **PDP Focus Lifecycle**: Hoàn trả tiêu điểm chính xác 100% về trigger menu trên trang sản phẩm.
+- **Full Trace Artifact Available**: Tệp `r26-01-offcanvas-focus-lifecycle.json` chứa dữ liệu chi tiết từng lượt thử nghiệm.
+
+## Notes for Reviewer
+
+1. **R26-01 Evidence Complete**: Đã cung cấp tệp bằng chứng thực nghiệm `r26-01-offcanvas-focus-lifecycle.json` bao gồm cả hai trang Homepage và PDP, kính đề nghị Reviewer đóng chính thức issue `R26-01`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

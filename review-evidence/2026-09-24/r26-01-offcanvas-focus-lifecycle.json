@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-09-24T20:08:36.059Z",
+  "component": "Mobile Offcanvas Drawer Focus Lifecycle (R26-01)",
+  "results": [
+    {
+      "page": "Homepage",
+      "cycles": [
+        {
+          "mode": "close_button",
+          "openState": {
+            "activeTag": "BUTTON",
+            "activeClass": "ct-toggle-close",
+            "isInsideDrawer": true
+          },
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        },
+        {
+          "mode": "backdrop_click",
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        },
+        {
+          "mode": "escape_key",
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        }
+      ]
+    },
+    {
+      "page": "PDP Tháp nhũ điện",
+      "cycles": [
+        {
+          "mode": "close_button",
+          "openState": {
+            "activeTag": "BUTTON",
+            "activeClass": "ct-toggle-close",
+            "isInsideDrawer": true
+          },
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        },
+        {
+          "mode": "backdrop_click",
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        },
+        {
+          "mode": "escape_key",
+          "closeState": {
+            "isSameAsTrigger": true,
+            "activeTag": "BUTTON"
+          }
+        }
+      ]
+    }
+  ]
+}
