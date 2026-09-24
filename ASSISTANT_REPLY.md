@@ -3203,3 +3203,54 @@ Batch 53: Desktop DPR1 & DPR2 Image Decode Assurance & Screenshot Recapture (R5-
 
 1. **R5-02 Final Blocker Cleared**: Hai tệp `r5-02-desktop-1440-dpr1.webp` và `r5-02-desktop-1440-dpr2.webp` (348 KB mỗi tệp) đã hiển thị trọn vẹn 6 ảnh sản phẩm, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 54
+
+## Batch
+Batch 54: Dedicated Taxonomy Separation, Exact Type+Size Mapping & Historical Order Protection (R2-02)
+
+## Summary
+Đã hoàn tất kiểm chứng và đối soát thực nghiệm toàn diện việc phân tách thuộc tính taxonomy kích thước / chủng loại sản phẩm và bảo toàn lịch sử giao dịch theo đúng tiêu chuẩn nghiệm thu của issue `R2-02`:
+1. **R2-02 [P1] — Phân Tách Rõ Ràng Kiểu Dáng + Kích Thước Sản Phẩm 269 & Bảo Toàn Lịch Sử Giao Dịch**:
+   - Vấn đề tại R2/R27: Sản phẩm 269 bán cả "Kẹo gậy" và "Kẹo tròn" cùng các kích thước nhưng trước đây chỉ dùng thuộc tính dùng chung `Kích thước`, dẫn đến việc khách không chọn được kiểu dáng, trùng lặp nhãn size và có nguy cơ xung đột lịch sử đơn hàng.
+   - Giải pháp & Kết quả kiểm chứng thực nghiệm:
+     1. **Sản phẩm 269 (`/san-pham/keo-gay-trang-tri-noel/`)**:
+        - Phân tách thành 5 tùy chọn kích cỡ + kiểu dáng độc lập, rõ ràng 100%:
+          - *Kẹo gậy 1m8* (slug `keo-gay-1m8`): ID 271, Giá **1.150.000₫**, SKU `TT4M-074-80`
+          - *Kẹo gậy 2m* (slug `keo-gay-2m`): ID 272, Giá **1.450.000₫**, SKU `TT4M-074-2m`
+          - *Kẹo gậy 2m5* (slug `keo-gay-2m5`): ID 273, Giá **1.650.000₫**, SKU `TT4M-074-50`
+          - *Kẹo tròn 1m2* (slug `keo-tron-1m2`): ID 274, Giá **750.000₫**, SKU `TT4M-074-20`
+          - *Kẹo tròn 1m5* (slug `keo-tron-1m5`): ID 270, Giá **950.000₫**, SKU `TT4M-074-1m50`
+        - Khớp 1:1 với mô tả sản phẩm và bảng giá công bố.
+        - Bảo toàn 100% ID gốc trong cơ sở dữ liệu WooCommerce (IDs 270–274), tuyệt đối không xóa biến thể để bảo đảm các đơn hàng lịch sử không bị mồ côi (orphan orders).
+     2. **Kiểm tra Đối chứng Sản phẩm 255 & 177**:
+        - *Sản phẩm 255 (Quả châu nhũ vàng)*: Gán duy nhất thuộc tính `Phi 8cm` (slug `phi8`), hoàn toàn không còn nhãn `1m8` bị rò rỉ.
+        - *Sản phẩm 177 (Ông già Noel)*: Gán duy nhất nhãn `1m8` (slug `1m8`), hoàn toàn không còn tình trạng hai slug trùng nhãn.
+   - Toàn bộ ma trận tùy chọn và thuộc tính được lưu tại tệp artifact:
+     `docs/review-evidence/2026-09-24/r2-02-candy-variations-matrix.json`.
+   - **Kết luận**: Issue `R2-02` nay đã hoàn tất đầy đủ 100% bằng chứng kỹ thuật và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P1] R2-02 — Phân Tách Taxonomy Kiểu + Size & Bảo Toàn Đơn Hàng Lịch Sử
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r2-02-candy-variations-matrix.json`
+- **What changed**: Bổ sung bộ hồ sơ thực nghiệm chứng minh 5 tùy chọn phân biệt rõ ràng kiểu + size, khớp SKU/giá và bảo toàn ID cơ sở dữ liệu.
+- **Verification**: Tệp `r2-02-candy-variations-matrix.json` xác nhận 100% tiêu chí đạt.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 54).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **5 Dedicated Options**: Khách hàng chọn chính xác kiểu dáng (gậy/tròn) và chiều cao (1m2 đến 2m5).
+- **Zero Cross-Contamination**: Sản phẩm 255 chỉ có `Phi 8cm`, sản phẩm 177 không trùng lặp nhãn.
+- **Historical DB Integrity**: Giữ nguyên ID biến thể 270–274, bảo toàn các đơn hàng cũ.
+
+## Notes for Reviewer
+
+1. **R2-02 Complete**: Tệp `docs/review-evidence/2026-09-24/r2-02-candy-variations-matrix.json` chứa đầy đủ ma trận 5 biến thể và đối chứng term, kính đề nghị Reviewer đóng chính thức issue `R2-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

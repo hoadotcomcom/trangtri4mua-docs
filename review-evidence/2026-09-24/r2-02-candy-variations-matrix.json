@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-09-24T20:44:38.448Z",
+  "issue": "R2-02",
+  "product269": {
+    "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+    "optionsCount": 5,
+    "matrix": [
+      {
+        "optionText": "Kẹo gậy 1m8",
+        "optionValue": "keo-gay-1m8",
+        "variationId": "271",
+        "priceText": "1.150.000 ₫",
+        "sku": "TT4M-074-80"
+      },
+      {
+        "optionText": "Kẹo gậy 2m",
+        "optionValue": "keo-gay-2m",
+        "variationId": "272",
+        "priceText": "1.450.000 ₫",
+        "sku": "TT4M-074-2m"
+      },
+      {
+        "optionText": "Kẹo gậy 2m5",
+        "optionValue": "keo-gay-2m5",
+        "variationId": "273",
+        "priceText": "1.650.000 ₫",
+        "sku": "TT4M-074-50"
+      },
+      {
+        "optionText": "Kẹo tròn 1m2",
+        "optionValue": "keo-tron-1m2",
+        "variationId": "274",
+        "priceText": "750.000 ₫",
+        "sku": "TT4M-074-20"
+      },
+      {
+        "optionText": "Kẹo tròn 1m5",
+        "optionValue": "keo-tron-1m5",
+        "variationId": "270",
+        "priceText": "950.000 ₫",
+        "sku": "TT4M-074-1m50"
+      }
+    ]
+  },
+  "product255Terms": [
+    {
+      "term_id": 75,
+      "name": "Phi 8cm",
+      "slug": "phi8"
+    }
+  ],
+  "product177Terms": [
+    {
+      "term_id": 42,
+      "name": "1m8",
+      "slug": "1m8"
+    }
+  ]
+}
