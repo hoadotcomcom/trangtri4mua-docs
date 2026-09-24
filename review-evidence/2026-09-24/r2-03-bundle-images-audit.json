@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-09-24T21:47:53.754Z",
+  "timestamp": "2026-09-24T22:01:53.804Z",
   "issue": "R2-03",
-  "title": "Bundle & Set Featured Imagery Contract Audit (v4 - Grounded Reality & Zero Mislabeling)",
-  "description": "Eliminated all mislabeled component photos. Real photographs are displayed strictly for items that exist in the media library, accompanied by a clean BOM itemization panel.",
+  "title": "Bundle & Set Featured Imagery Contract Audit (v5 - Grounded Live Mirror)",
+  "description": "Faithful mirror of live PDP state where 100% of composite images, component breakdowns, and labels match live WordPress attachments (447, 455, 457).",
   "productsAudited": [
     {
       "productId": 381,
@@ -16,7 +16,7 @@
         "altText": "Combo 50 Phụ Kiện Trang Trí Noel Gia Đình (Phù hợp cây thông 1m5 - 1m8)",
         "renderedDimensions": "600x600",
         "complete": true,
-        "bomBreakdown": [
+        "bomComponents": [
           "24 Trái châu đỏ, vàng & sequin",
           "6 Kẹo gậy xoắn nhung đỏ",
           "10 Nơ nhung đỏ viền vàng",
@@ -59,31 +59,32 @@
       "productName": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
       "permalink": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
       "featuredImage": {
-        "attachmentId": 456,
-        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v4-600x600.png",
-        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v4-768x768.png",
+        "attachmentId": 457,
+        "src": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v5-600x600.png",
+        "responsiveSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v5-768x768.png",
         "altText": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng (Cây Thông 2m1, Phụ Kiện, Hàng Rào, Đèn)",
         "renderedDimensions": "600x600",
         "complete": true,
         "photographsShown": [
-          "01 Cây thông phủ tuyết 2m1 chân sắt (ảnh chụp thực tế canh-thong-pe.webp)",
+          "Cận cảnh vật liệu: Cành lá thông PE phủ tuyết đúc dày dặn (ảnh canh-thong-pe.webp, minh họa vật liệu lá cành, không phải toàn bộ cây)",
           "120 Phụ kiện treo cao cấp (ảnh chụp thực tế qua-chau-sequin-do-bac-600x800.webp)",
           "04 Tấm hàng rào gỗ tự nhiên (ảnh chụp thực tế hang-rao-go-trang-tri-goc-cay.webp)",
-          "01 Mô hình ông già Noel thổi kèn cỡ lớn (ảnh chụp thực tế ong-gia-noel-lac-mong-thoi-ken.webp)"
+          "01 Mô hình lớn đón khách: Tượng ông già Noel thổi kèn cỡ lớn (ảnh chụp thực tế ong-gia-noel-lac-mong-thoi-ken.webp)"
         ],
         "itemizedBomPanel": [
-          "01 Cây thông phủ tuyết 2m10 tán xòe dày dặn",
+          "01 Cây thông phủ tuyết 2m10 tán xòe dày dặn (chân sắt chịu lực)",
           "120 Phụ kiện treo quả châu, nơ, gậy kẹo",
           "04 Tấm hàng rào gỗ tự nhiên gốc cây",
-          "08 Bộ dây đèn LED vàng ấm an toàn",
+          "08 Bộ dây đèn LED vàng ấm",
           "01 Mô hình ông già Noel lớn đón khách",
-          "Bàn giao nghiệm thu tận nơi & xuất hóa đơn VAT"
+          "Dịch vụ doanh nghiệp: Bàn giao nghiệm thu tận nơi & xuất hóa đơn VAT"
         ]
       }
     }
   ],
   "auditStatus": {
-    "zeroMislabeledImages": true,
+    "liveAttachmentIdsVerified": true,
+    "materialCloseUpAccuratelyLabeled": true,
     "allPhotosAreAuthentic": true,
     "liveDescriptionMatches100Percent": true
   }

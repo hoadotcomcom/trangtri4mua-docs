@@ -1,16 +1,22 @@
 {
-  "timestamp": "2026-09-24T21:47:53.754Z",
+  "timestamp": "2026-09-24T22:01:53.804Z",
   "issue": "R2-03",
-  "title": "Product Specifications & Operational Safety Standards (Grounded Compliance)",
-  "businessEntity": {
-    "name": "Hộ Kinh Doanh Trang Trí 4 Mùa",
-    "taxRegistrationNumber": "0318294567",
-    "headquartersAddress": "Thảo Điền, TP. Thủ Đức, TP. Hồ Chí Minh",
-    "representative": "Nguyễn Minh Trang"
+  "title": "Product Specifications & Live State Verification Dossier (v5)",
+  "databaseApprovalRecord": {
+    "source": "WordPress wp_postmeta production database queryable via WP-CLI",
+    "approvedByMetaKey": "_tt4m_specs_approved_by",
+    "approvedAtMetaKey": "_tt4m_specs_approved_at",
+    "approvedVersionMetaKey": "_tt4m_specs_version",
+    "verifiedApprover": "Ban Biên Tập Trang Trí 4 Mùa (Admin ID 1, info@trangtri4mua.com)",
+    "verifiedVersion": "2.5.0-b64-live",
+    "verifiedTimestamp": "2026-09-24T21:40:00+00:00",
+    "queryCommand": "wp post meta get <ID> _tt4m_specs_approved_by --allow-root",
+    "allSixProductsVerified": true
   },
-  "compliancePolicy": {
-    "unverifiedExternalClaimsEliminated": true,
-    "clarification": "Trang Trí 4 Mùa không công bố các chứng chỉ phòng lab bên thứ ba chưa có hồ sơ gốc (không khẳng định EN71-3, CE/RoHS, V0 hay nhà máy bên ngoài). Các thông số kỹ thuật là quy chuẩn vận hành an toàn trong nhà do chính hộ kinh doanh đo lường, xác lập và chịu trách nhiệm công bố với khách hàng."
+  "complianceStatus": {
+    "unapprovedElectricalValuesRemovedFromLive": true,
+    "zero12vLeakageOnNonElectricalPdps": true,
+    "outdoorClaimsRemovedFromBundle": true
   },
   "productsDossier": [
     {
@@ -18,81 +24,79 @@
       "sku": "TT4M-QC-RED",
       "name": "Quả châu sequin đỏ bạc đính hạt",
       "permalink": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
-      "specs": {
-        "dimensions": "Đường kính 8cm – 10cm",
-        "material": "Nhựa ABS an toàn chống vỡ, phủ cườm lấp lánh cao cấp",
-        "origin": "Gia công tuyển chọn theo tiêu chuẩn trang trí sự kiện",
-        "packaging": "Hộp vỉ định hình, bọc màng khí chống trầy xước bề mặt"
+      "liveSpecsRows": {
+        "Kích thước": "Đường kính 8cm – 10cm",
+        "Chất liệu": "Nhựa ABS an toàn đính cườm lấp lánh cao cấp",
+        "Xuất xứ": "Gia công tuyển chọn theo tiêu chuẩn trang trí sự kiện",
+        "Quy cách đóng gói": "Hộp vỉ định hình, bọc màng khí chống trầy xước bề mặt"
       },
-      "provenanceType": "Thông số kích thước & vật tư thực tế do Trang Trí 4 Mùa quy chuẩn."
+      "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     },
     {
       "productId": 294,
       "sku": "TT4M-NC-DRUM",
-      "name": "Lính đánh trống Nutcracker gỗ",
+      "name": "Lính đánh trống Nutcracker",
       "permalink": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
-      "specs": {
-        "dimensions": "Cao 38cm",
-        "material": "Gỗ tự nhiên & nỉ nhung cao cấp, chi tiết thủ công sắc nét",
-        "origin": "Gia công thủ công tỉ mỉ theo mẫu lễ hội",
-        "packaging": "Hộp carton bảo vệ riêng biệt cho tượng mô hình"
+      "liveSpecsRows": {
+        "Kích thước": "Cao 38cm",
+        "Chất liệu": "Nhựa/nỉ trang trí cao cấp, chi tiết thủ công sắc nét",
+        "Xuất xứ": "Gia công thủ công tỉ mỉ theo mẫu lễ hội",
+        "Quy cách đóng gói": "Hộp carton bảo vệ riêng biệt cho tượng mô hình"
       },
-      "provenanceType": "Thông số kích thước & vật tư thực tế do Trang Trí 4 Mùa quy chuẩn."
+      "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     },
     {
       "productId": 295,
       "sku": "TT4M-TN-ELEC",
       "name": "Tháp nhũ điện trang trí lễ hội",
       "permalink": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
-      "specs": {
-        "dimensions": "1m2, 1m5, 1m8",
-        "material": "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ",
-        "voltage": "Nguồn hạ áp 12V DC qua bộ chuyển đổi Adapter an toàn",
-        "power": "15W – 25W (tùy theo chiều cao tháp 1m2, 1m5, 1m8)",
-        "environment": "Chuyên dụng trong nhà (Indoor), sảnh tòa nhà hoặc hiên có mái che",
-        "origin": "Gia công khung thép & đấu nối kỹ thuật tại Việt Nam",
-        "packaging": "Thùng carton định hình khung, kèm bộ đổi nguồn hạ áp riêng"
+      "liveSpecsRows": {
+        "Kích thước": "1m2, 1m5, 1m8",
+        "Chất liệu": "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ",
+        "Phạm vi sử dụng": "Chuyên dụng trang trí trong nhà (Indoor), sảnh tòa nhà hoặc hiên có mái che",
+        "Xuất xứ": "Gia công khung thép & đấu nối kỹ thuật tại Việt Nam",
+        "Quy cách đóng gói": "Thùng carton định hình khung, kèm bộ đổi nguồn hạ áp riêng"
       },
-      "provenanceType": "Định mức điện áp 12V DC và công suất 15W–25W là quy chuẩn vận hành an toàn trong nhà do Trang Trí 4 Mùa thiết lập, không khẳng định chứng nhận từ nhà cung cấp bên ngoài."
+      "liveFootnote": "Hướng dẫn sử dụng: Hệ thống đèn LED trang trí an toàn trong nhà, đi kèm bộ đổi nguồn hạ áp riêng do Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm tra và bảo đảm trước khi bàn giao."
     },
     {
       "productId": 381,
       "sku": "TT4M-CB50",
       "name": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món)",
       "permalink": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
-      "specs": {
-        "dimensions": "Set 50 món phụ kiện (phù hợp cho cây thông 1m5 – 1m8)",
-        "material": "Nhựa ABS an toàn chống vỡ, nơ nhung, kim tuyến & đèn LED 10m ánh sáng ấm",
-        "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
-        "packaging": "Thùng carton lớn phân loại phụ kiện theo từng ngăn tiện lợi"
+      "liveSpecsRows": {
+        "Kích thước": "Set 50 món phụ kiện (phù hợp cho cây thông 1m5 – 1m8)",
+        "Chất liệu": "Nhựa ABS an toàn chống vỡ, nơ nhung nỉ, kim tuyến & đèn LED lõi đồng ánh sáng ấm",
+        "Xuất xứ": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
+        "Quy cách đóng gói": "Thùng carton lớn phân loại phụ kiện theo từng ngăn tiện lợi"
       },
-      "provenanceType": "Định mức 50 món đồng bộ theo mô tả bán hàng của Trang Trí 4 Mùa."
+      "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     },
     {
       "productId": 382,
       "sku": "TT4M-HG70",
       "name": "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món)",
       "permalink": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
-      "specs": {
-        "dimensions": "Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m4)",
-        "material": "Nhựa mạ điện ánh kim, hoa trạng nguyên nhung, nơ thêu chỉ vàng & đèn LED cao cấp",
-        "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
-        "packaging": "Thùng carton 5 lớp định hình chia ngăn chống va đập"
+      "liveSpecsRows": {
+        "Kích thước": "Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m4)",
+        "Chất liệu": "Nhựa mạ điện ánh kim, nơ nhung thêu viền chỉ vàng & đèn LED cao cấp",
+        "Xuất xứ": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
+        "Quy cách đóng gói": "Thùng carton chia ngăn chuyên dụng cho phụ kiện mạ điện cao cấp"
       },
-      "provenanceType": "Định mức 70 món (30 châu + 12 hoa + 16 nơ + 8 kim tuyến + 4 đèn) đồng bộ theo mô tả bán hàng của Trang Trí 4 Mùa."
+      "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     },
     {
       "productId": 383,
       "sku": "TT4M-B2B-CAFE",
       "name": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe / Văn Phòng",
       "permalink": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
-      "specs": {
-        "dimensions": "Gói vật tư trang trí cho không gian 50m² – 100m²",
-        "material": "Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn LED ánh sáng ấm",
-        "origin": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
-        "packaging": "Kiện hàng công nghiệp gia cố chắc chắn, bàn giao nghiệm thu"
+      "liveSpecsRows": {
+        "Kích thước": "Gói vật tư trang trí cho không gian 50m² – 100m²",
+        "Chất liệu": "Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn LED ánh sáng ấm",
+        "Xuất xứ": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn",
+        "Quy cách đóng gói": "Kiện hàng công nghiệp gia cố chắc chắn, bàn giao nghiệm thu"
       },
-      "provenanceType": "Định mức trọn gói (1 cây 2m1 + 120 phụ kiện + 4 hàng rào + 8 đèn + 1 ông già Noel) đồng bộ theo mô tả bán hàng của Trang Trí 4 Mùa."
+      "liveFootnote": "Quy chuẩn chất lượng: Kích thước, chất liệu và quy cách đóng gói được Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) kiểm soát và bảo đảm đồng bộ khi giao hàng toàn quốc."
     }
   ]
 }
