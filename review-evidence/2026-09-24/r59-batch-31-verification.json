@@ -1,0 +1,66 @@
+{
+  "round": "R59",
+  "date": "2026-09-24",
+  "handoff": "Batch 31",
+  "verdicts": {
+    "R21-02": {
+      "result": "PARTIAL",
+      "status": "OPEN",
+      "observed": {
+        "initial": {
+          "liveRegion": {
+            "ariaLive": "polite",
+            "ariaAtomic": "true",
+            "text": "Đang hiển thị ảnh 1 trên 3: Lính chì Nutcracker - đồ trang trí Noel"
+          },
+          "previousAriaDisabled": "true",
+          "nextAriaDisabled": null,
+          "pressed": ["true", "false", "false"]
+        },
+        "spaceThumbnail3": {
+          "liveText": "Đang hiển thị ảnh 3 trên 3: Lính chì Nutcracker - Trang trí Noel",
+          "previousAriaDisabled": null,
+          "nextAriaDisabled": "true",
+          "pressed": ["false", "false", "true"],
+          "transform": "matrix(1, 0, 0, 1, -1246.06, 0)",
+          "hit": "linh-chi-nutcracker-3.webp",
+          "focusStayedOnControl": true
+        },
+        "spaceNextAtLast": {
+          "stateUnchanged": true,
+          "focusStayedOnControl": true
+        },
+        "spaceThumbnail1": {
+          "liveText": "Đang hiển thị ảnh 1 trên 3: Lính chì Nutcracker - đồ trang trí Noel",
+          "previousAriaDisabled": "true",
+          "nextAriaDisabled": null,
+          "pressed": ["true", "false", "false"],
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "hit": "linh-chi-nutcracker-1.webp",
+          "focusStayedOnControl": true
+        },
+        "accessibilityTree": {
+          "previous": {"role": "button", "disabled": true},
+          "thumbnail1": {"role": "button", "pressed": true},
+          "liveTextExposed": true
+        },
+        "realScreenReaderTest": false
+      },
+      "reason": "The live region, accessible labels, pressed states, disabled edge states, visual changes, and AX-tree exposure all pass. However Batch 31 only reports Chromium headless/DOM testing. That is not the real screen-reader check explicitly required by acceptance criterion 3, so the issue cannot be closed."
+    }
+  },
+  "current_total": {
+    "open": 18,
+    "p1": 6,
+    "p2": 8,
+    "p3": 4,
+    "closed_in_round": [],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R58 — nghiệm thu độc lập Batch 30](#round-r58), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. Đóng R11-01; R12-01 còn mismatch APG/Escape, R24-01 còn stale orientation sau resize.
+> **Trạng thái hiện hành:** xem [Vòng R59 — nghiệm thu độc lập Batch 31](#round-r59), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R21-02 đạt DOM/AX/live-region nhưng vẫn thiếu phép thử bằng screen reader thật.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4343,3 +4343,27 @@ Claim chuỗi `vertical → horizontal → vertical` không tái hiện, trực 
 - [JSON Batch 30](review-evidence/2026-09-24/r58-batch-30-verification.json).
 - Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 4 browser tab đã đóng.
 - Đóng **R11-01**. Tổng còn **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r59"></a>
+
+# Vòng R59 — Nghiệm thu độc lập Batch 31
+
+## R21-02 — PARTIAL / OPEN
+
+Nutcracker desktop 1440×1000:
+
+- initial có live region `aria-live=polite`, `aria-atomic=true`, công bố ảnh 1/3; Previous có `aria-disabled=true`;
+- Space trên thumbnail 3 đổi đúng ảnh nhìn thấy, live text thành ảnh 3/3, `aria-pressed` đồng bộ, Next thành `aria-disabled=true`, focus giữ tại control;
+- Space trên Next ở biên cuối không đổi ảnh hoặc focus;
+- Space về thumbnail 1 đổi đúng visual/live text/state biên;
+- accessibility tree phơi bày thumbnail dưới role button + pressed, Previous dưới disabled button, và nội dung live region dưới StaticText.
+
+Các thay đổi DOM/AX này đạt và hữu ích. Tuy nhiên “Chromium headless kiểm tra live region/ARIA” không phải bằng chứng một screen reader thực sự phát/diễn giải thông báo. Acceptance 3 ghi rõ “kiểm tra thêm bằng ít nhất một screen reader, không chỉ DOM có ARIA”; Batch 31 không nêu sản phẩm screen reader, browser, thao tác đọc hoặc transcript. Vì vậy claim “Screen Reader Proof Complete” chưa đủ căn cứ và R21-02 giữ **PARTIAL / OPEN**.
+
+## Bằng chứng và tổng R59
+
+- [JSON Batch 31](review-evidence/2026-09-24/r59-batch-31-verification.json).
+- Không chọn biến thể, thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
