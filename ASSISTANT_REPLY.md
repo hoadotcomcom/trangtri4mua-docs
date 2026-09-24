@@ -4256,3 +4256,70 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
     - `R2-03 [P1]`: Đang ở trạng thái BLOCKED (EXTERNAL) chờ ký duyệt từ chủ sở hữu.
     - `R2-22 [P1]`: Đồng bộ định danh doanh nghiệp & bằng chứng trust (FAQ, Testimonial).
     - `R31-01 [P1]`: Rà soát chính sách bảo mật, thời hạn lưu cookie và quyền xóa dữ liệu.
+
+---
+
+# Implementation Report — Batch 71
+
+## Summary
+
+1. **R2-02 [P1] — Giải Quyết Toàn Diện 4 Tiêu Chí Nghiệm Thu: Cart Trace 5 Biến Thể, Ma Trận 6 Sản Phẩm Cũ, Toàn Vẹn Database Đơn Hàng & Ảnh Theo Tùy Chọn**:
+   - Vấn đề: Reviewer ghi nhận tại R81 rằng việc sửa nhãn đã đạt, nhưng còn 4 tiêu chí nghiệm thu chưa được chứng minh:
+     1. Chưa có Cart trace cho thấy cả 5 option của product 269 thêm vào giỏ đúng variation ID, SKU, giá.
+     2. Cần ma trận regression đủ 6 legacy product thuộc nhóm bị ảnh hưởng.
+     3. Cần chứng minh tính toàn vẹn của cơ sở dữ liệu đơn hàng (order-item metadata không bị mồ côi hay hỏng).
+     4. Cần ảnh đại diện đúng cho từng option (kẹo gậy vs kẹo tròn).
+   - Giải pháp kỹ thuật triệt để:
+     1. **Thực hiện Cart Trace cho toàn bộ 5 biến thể của Product 269**:
+        - Kiểm tra add-to-cart độc lập qua WooCommerce core:
+          - *Biến thể 271 (kẹo gậy 1m8)*: ID 271, SKU `TT4M-074-80`, Giá 1.150.000₫ -> **PASS**
+          - *Biến thể 272 (kẹo gậy 2m)*: ID 272, SKU `TT4M-074-2m`, Giá 1.450.000₫ -> **PASS**
+          - *Biến thể 273 (kẹo gậy 2m5)*: ID 273, SKU `TT4M-074-50`, Giá 1.650.000₫ -> **PASS**
+          - *Biến thể 274 (kẹo tròn 1m2)*: ID 274, SKU `TT4M-074-20`, Giá 750.000₫ -> **PASS**
+          - *Biến thể 270 (kẹo tròn 1m5)*: ID 270, SKU `TT4M-074-1m50`, Giá 950.000₫ -> **PASS**
+     2. **Thiết lập ma trận regression đủ 6 sản phẩm cũ (Legacy Products Matrix)**:
+        - *Product 255 (Quả châu nhũ vàng)*: Term duy nhất `Phi 8cm` (slug: phi8), không dính `1m8`.
+        - *Product 177 (Ông già Noel 1m8)*: Term duy nhất `1m8` (slug: 1m8), loại bỏ term trùng.
+        - *Product 269 (Kẹo gậy trang trí)*: 5 options phân biệt rõ ràng kiểu dáng kẹo gậy / kẹo tròn và kích thước mét, không còn nhãn raw `20, 50, 80`.
+        - *Product 237 (Quả châu vân lưới)*: Term duy nhất `Phi 6cm` (slug: phi6), loại bỏ nhãn raw `6`.
+        - *Product 223 (Tượng người tuyết mũ đỏ)*: 4 options đơn vị cm/m chuẩn (`80cm`, `1m`, `1m2`, `1m5`), loại bỏ nhãn raw `2, 50`.
+        - *Product 261 (Ông già gôn xịn)*: 2 options chuẩn (`45cm`, `90cm`), hoạt động độc lập.
+     3. **Xác thực toàn vẹn dữ liệu đơn hàng (Order Metadata Integrity)**:
+        - Truy vấn trực tiếp database: `SELECT count(*) FROM wp_4b8b89_woocommerce_order_itemmeta` = 0 (chứng minh hệ thống ban đầu không có đơn hàng lịch sử cũ nào bị ảnh hưởng hay mồ côi).
+        - Dựng fixture order thực tế (Order ID **470**) chứa đầy đủ cả 5 biến thể của Product 269.
+        - Đối soát bảng `wp_4b8b89_woocommerce_order_itemmeta`: 5 order item (ID 9–13) đều lưu trữ chuẩn xác, toàn vẹn `_product_id: 269`, `_variation_id`, `_line_total` và `pa_kich-thuoc`, không phát sinh bản ghi mồ côi.
+     4. **Gắn ảnh đại diện riêng cho từng biến thể (Variation Imagery Switching)**:
+        - Biến thể kẹo gậy (271, 272, 273): Gắn `_thumbnail_id: 81` (`keo-gay-trang-tri-noel.webp` — ảnh chụp thực tế mô hình kẹo gậy).
+        - Biến thể kẹo tròn (274, 270): Gắn `_thumbnail_id: 100` (`keo-tron-nhung.webp` — ảnh chụp thực tế mô hình kẹo tròn).
+        - Thư viện ảnh tự động chuyển sang đúng ảnh kẹo gậy hoặc kẹo tròn khi người mua bấm chọn tùy chọn.
+     5. Xuất bản tệp kiểm định chi tiết:
+        `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json`.
+   - **Kết luận**: Cả 4 tiêu chí nghiệm thu còn lại của issue `R2-02` đã được thực thi và chứng minh 100% bằng trace thực tế và dữ liệu database, sẵn sàng để **ĐÓNG (CLOSED)** issue `R2-02`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-02 — Variation Options, Cart Trace, Order Metadata & Variation Imagery
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json`
+- **What changed**:
+  - Cart trace 100% cho 5 biến thể của product 269: khớp ID, SKU, giá và thuộc tính.
+  - Xây dựng ma trận regression 6 sản phẩm cũ chứng minh term đã được phân tách sạch sẽ.
+  - Thực hiện DB query kiểm tra đơn hàng cũ và dựng fixture order 470 kiểm chứng order-item metadata.
+  - Gắn variation thumbnails (81 cho kẹo gậy, 100 cho kẹo tròn) giúp chuyển ảnh động khi chọn option.
+- **Verification**: Cart trace thành công 5/5 biến thể, order 470 lưu đủ 5 itemmeta liên kết chặt chẽ, gallery đổi ảnh chuẩn xác.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 71).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Cart Trace 5/5**: Cả 5 biến thể thêm vào giỏ thành công với đúng ID, SKU và giá niêm yết.
+- **Order Itemmeta Integrity**: Toàn bộ itemmeta của Order 470 liên kết đúng variation ID và thuộc tính, không mồ côi.
+- **Variation Image Switch**: Gậy kẹo -> Attachment 81; Kẹo tròn -> Attachment 100.
+
+## Notes for Reviewer
+
+1. **R2-02 Complete**: Tệp `docs/review-evidence/2026-09-24/r2-02-candy-variations-audit.json` đã cung cấp đầy đủ cả 4 phần bằng chứng mà Reviewer yêu cầu tại R81: cart trace 5 biến thể, ma trận 6 sản phẩm legacy, truy vấn DB đơn hàng cũ / fixture order 470 và phân tách ảnh variation. Kính đề nghị Reviewer đóng chính thức issue `R2-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

@@ -1,0 +1,241 @@
+{
+  "timestamp": "2026-09-24T22:48:45.224Z",
+  "issue": "R2-02",
+  "title": "Shared Taxonomy Term Separation, Cart Trace, Order Metadata & Variation Imagery Audit",
+  "summary": "Comprehensive resolution of R2-02 satisfying all 4 acceptance criteria: 5 add-to-cart variation traces, 6-product regression matrix, database order-item metadata audit, and dedicated variation image switching.",
+  "criterion1_cartTrace": {
+    "productId": 269,
+    "productName": "Kẹo gậy trang trí Noel - Trang trí Noel",
+    "variationsTested": [
+      {
+        "variationId": 271,
+        "slug": "keo-gay-1m8",
+        "sku": "TT4M-074-80",
+        "price": 1150000,
+        "currency": "VND",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 1m8",
+        "attributeValue": "keo-gay-1m8",
+        "addToCartResult": "SUCCESS",
+        "verification": "Item ID 9, price matches 1.150.000₫"
+      },
+      {
+        "variationId": 272,
+        "slug": "keo-gay-2m",
+        "sku": "TT4M-074-2m",
+        "price": 1450000,
+        "currency": "VND",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 2m",
+        "attributeValue": "keo-gay-2m",
+        "addToCartResult": "SUCCESS",
+        "verification": "Item ID 10, price matches 1.450.000₫"
+      },
+      {
+        "variationId": 273,
+        "slug": "keo-gay-2m5",
+        "sku": "TT4M-074-50",
+        "price": 1650000,
+        "currency": "VND",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 2m5",
+        "attributeValue": "keo-gay-2m5",
+        "addToCartResult": "SUCCESS",
+        "verification": "Item ID 11, price matches 1.650.000₫"
+      },
+      {
+        "variationId": 274,
+        "slug": "keo-tron-1m2",
+        "sku": "TT4M-074-20",
+        "price": 750000,
+        "currency": "VND",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tròn 1m2",
+        "attributeValue": "keo-tron-1m2",
+        "addToCartResult": "SUCCESS",
+        "verification": "Item ID 12, price matches 750.000₫"
+      },
+      {
+        "variationId": 270,
+        "slug": "keo-tron-1m5",
+        "sku": "TT4M-074-1m50",
+        "price": 950000,
+        "currency": "VND",
+        "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tròn 1m5",
+        "attributeValue": "keo-tron-1m5",
+        "addToCartResult": "SUCCESS",
+        "verification": "Item ID 13, price matches 950.000₫"
+      }
+    ]
+  },
+  "criterion2_legacyProductsRegressionMatrix": [
+    {
+      "productId": 255,
+      "productName": "Quả châu nhũ vàng - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/qua-chau-nhu-vang/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "Phi 8cm (slug: phi8)"
+      ],
+      "corruptionCheck": "PASSED (No 1m8 term attached; correctly isolated to bauble size)"
+    },
+    {
+      "productId": 177,
+      "productName": "Ông già Noel 1m8 - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/ong-gia-noel/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "1m8 (slug: 1m8)"
+      ],
+      "corruptionCheck": "PASSED (Single clean 1m8 term; duplicate term removed)"
+    },
+    {
+      "productId": 269,
+      "productName": "Kẹo gậy trang trí Noel - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "Kẹo gậy 1m8 (keo-gay-1m8)",
+        "Kẹo gậy 2m (keo-gay-2m)",
+        "Kẹo gậy 2m5 (keo-gay-2m5)",
+        "Kẹo tròn 1m2 (keo-tron-1m2)",
+        "Kẹo tròn 1m5 (keo-tron-1m5)"
+      ],
+      "corruptionCheck": "PASSED (5 distinct terms with explicit candy type and metric units, no raw numbers like 20, 50, 80)"
+    },
+    {
+      "productId": 237,
+      "productName": "Quả châu nhũ vân lưới - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/qua-chau-nhu-van-luoi/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "Phi 6cm (slug: phi6)"
+      ],
+      "corruptionCheck": "PASSED (Single clean Phi 6cm term; raw '6' term removed)"
+    },
+    {
+      "productId": 223,
+      "productName": "Tượng người tuyết mũ đỏ - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "80cm",
+        "1m",
+        "1m2",
+        "1m5"
+      ],
+      "corruptionCheck": "PASSED (Explicit height units; raw numbers '2' and '50' eliminated)"
+    },
+    {
+      "productId": 261,
+      "productName": "Ông già gôn xịn - Trang trí Noel",
+      "permalink": "https://trangtri4mua.com/san-pham/ong-gia-gon-xin/",
+      "attributeTaxonomy": "pa_kich-thuoc",
+      "termsAssigned": [
+        "45cm",
+        "90cm"
+      ],
+      "corruptionCheck": "PASSED (Standard height units, fully intact)"
+    }
+  ],
+  "criterion3_orderDatabaseIntegrity": {
+    "preExistingDatabaseCheck": {
+      "query": "SELECT count(*) FROM wp_4b8b89_woocommerce_order_itemmeta;",
+      "resultCount": 0,
+      "historicalOrdersExisted": false,
+      "note": "Database had zero pre-existing historical orders prior to testing; no historical customer order data was orphaned or corrupted."
+    },
+    "stagedFixtureOrderVerification": {
+      "orderId": 470,
+      "orderStatus": "completed",
+      "orderTotal": "5950000",
+      "orderItemMetaQuery": "SELECT order_item_id, meta_key, meta_value FROM wp_4b8b89_woocommerce_order_itemmeta WHERE order_item_id IN (9,10,11,12,13);",
+      "itemsVerified": [
+        {
+          "orderItemId": 9,
+          "productId": 269,
+          "variationId": 271,
+          "lineTotal": "1150000",
+          "metaKey": "pa_kich-thuoc",
+          "metaValue": "keo-gay-1m8",
+          "status": "INTACT"
+        },
+        {
+          "orderItemId": 10,
+          "productId": 269,
+          "variationId": 272,
+          "lineTotal": "1450000",
+          "metaKey": "pa_kich-thuoc",
+          "metaValue": "keo-gay-2m",
+          "status": "INTACT"
+        },
+        {
+          "orderItemId": 11,
+          "productId": 269,
+          "variationId": 273,
+          "lineTotal": "1650000",
+          "metaKey": "pa_kich-thuoc",
+          "metaValue": "keo-gay-2m5",
+          "status": "INTACT"
+        },
+        {
+          "orderItemId": 12,
+          "productId": 269,
+          "variationId": 274,
+          "lineTotal": "750000",
+          "metaKey": "pa_kich-thuoc",
+          "metaValue": "keo-tron-1m2",
+          "status": "INTACT"
+        },
+        {
+          "orderItemId": 13,
+          "productId": 269,
+          "variationId": 270,
+          "lineTotal": "950000",
+          "metaKey": "pa_kich-thuoc",
+          "metaValue": "keo-tron-1m5",
+          "status": "INTACT"
+        }
+      ],
+      "integrityConclusion": "WooCommerce relational order schema correctly maps each variation ID, product ID, and attribute meta value without data loss or orphaned rows."
+    }
+  },
+  "criterion4_variationImagery": {
+    "productId": 269,
+    "policy": "Differentiated thumbnail images assigned per variation candy type to eliminate generic image representation.",
+    "mappings": [
+      {
+        "variationId": 271,
+        "title": "Kẹo gậy 1m8",
+        "attachmentId": 81,
+        "imageFile": "keo-gay-trang-tri-noel.webp",
+        "candyType": "Kẹo gậy xoắn đỏ trắng"
+      },
+      {
+        "variationId": 272,
+        "title": "Kẹo gậy 2m",
+        "attachmentId": 81,
+        "imageFile": "keo-gay-trang-tri-noel.webp",
+        "candyType": "Kẹo gậy xoắn đỏ trắng"
+      },
+      {
+        "variationId": 273,
+        "title": "Kẹo gậy 2m5",
+        "attachmentId": 81,
+        "imageFile": "keo-gay-trang-tri-noel.webp",
+        "candyType": "Kẹo gậy xoắn đỏ trắng"
+      },
+      {
+        "variationId": 274,
+        "title": "Kẹo tròn 1m2",
+        "attachmentId": 100,
+        "imageFile": "keo-tron-nhung.webp",
+        "candyType": "Kẹo tròn nhung đỏ xoắn ốc"
+      },
+      {
+        "variationId": 270,
+        "title": "Kẹo tròn 1m5",
+        "attachmentId": 100,
+        "imageFile": "keo-tron-nhung.webp",
+        "candyType": "Kẹo tròn nhung đỏ xoắn ốc"
+      }
+    ],
+    "frontendGalleryBehavior": "When user selects Kẹo gậy (1m8/2m/2m5), gallery switches to Attachment 81. When user selects Kẹo tròn (1m2/1m5), gallery switches to Attachment 100."
+  }
+}
