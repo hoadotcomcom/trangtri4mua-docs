@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R52 — nghiệm thu độc lập Batch 24](#round-r52), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Lazy observer và combobox navigation Batch 24 chưa hoạt động trên production.
+> **Trạng thái hiện hành:** xem [Vòng R53 — nghiệm thu độc lập Batch 25](#round-r53), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. CSS transform Batch 25 chưa có hiệu lực trên production.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4158,5 +4158,30 @@ Không thể nghiệm thu keyboard model từ handler tồn tại trên source k
 ## Bằng chứng và tổng R52
 
 - [JSON Batch 24](review-evidence/2026-09-24/r52-batch-24-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r53"></a>
+
+# Vòng R53 — Nghiệm thu độc lập Batch 25
+
+## R21-01 / R21-02 — FAIL / OPEN
+
+Kiểm Nutcracker ở 375×812 và 1440×1000:
+
+- layout flex mới có ba slide nối hàng; mỗi slide rộng đúng 100% view;
+- nhưng computed transform của cả ba slide luôn là identity `matrix(1, 0, 0, 1, 0, 0)`;
+- click thumbnail 3 đổi active/state sang index 2 nhưng tâm gallery vẫn hit ảnh 1;
+- resize desktop vẫn hit ảnh 1;
+- Previous đổi state về index 1 nhưng tâm gallery tiếp tục hit ảnh 1;
+- ảnh 3 còn `currentSrc=""`, `naturalWidth=0`.
+
+Claim `matrix(..., -656, 0)` không xuất hiện trên production. CSS tường minh được mô tả chưa điều khiển visual surface. R21-01 và R21-02 giữ **FAIL / OPEN**; R21-02 ngoài ra vẫn thiếu screen-reader proof theo acceptance.
+
+## Bằng chứng và tổng R53
+
+- [JSON Batch 25](review-evidence/2026-09-24/r53-batch-25-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
