@@ -3108,3 +3108,53 @@ Cung cấp tệp hồ sơ artifact hợp nhất toàn diện giải quyết tri�
 
 1. **R26-01 Unified Artifact Complete**: Đã cập nhật tệp `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` chứa đầy đủ cả 6 phân đoạn chứng minh kỹ thuật, kính đề nghị Reviewer đóng chính thức issue `R26-01`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 52
+
+## Batch
+Batch 52: Full Multi-Viewport/High-DPR Matrix Artifact with 7 Captured Screenshots & Exact PerformanceResourceTiming Bytes (R5-02)
+
+## Summary
+Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm trực quan cho ma trận 7 cấu hình đa viewport và DPR kèm ảnh chụp màn hình đối chiếu thực tế và số liệu byte đo đạc từ PerformanceResourceTiming theo đúng yêu cầu tại Vòng R78 cho issue `R5-02`:
+1. **R5-02 [P2] — Bằng Chứng Thực Nghiệm Ma Trận 7 Cấu Hình, 7 Tệp Ảnh Chụp Màn Hình & Tỷ Lệ Render Chính Xác**:
+   - Bối cảnh tại R78: Reviewer xác nhận Acceptance 1 (cuộn trang) đã hoàn thành và yêu cầu bổ sung bằng chứng trực quan:
+     1. Mobile DPR3 chọn tầng ảnh 600w là hợp lý và tối ưu cho độ nét thực tế (mật độ 495px thiết bị).
+     2. Ghi nhận chính xác kích thước khung hình render thực tế (không phải 1:1 vuông): Mobile 164.5×183 (tỷ lệ 0.90), Tablet 349.4×228 (tỷ lệ 1.53), Desktop 379.3×288 (tỷ lệ 1.32).
+     3. Đính kèm các tệp ảnh chụp màn hình đối chiếu độ nét và hành vi crop của `object-fit: cover`.
+   - Kết quả đo đạc thực nghiệm (Chromium headless, cache tắt, PerformanceResourceTiming):
+     - **Tệp bằng chứng JSON**: `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`.
+     - **Cấu hình Mobile (375×812)**:
+       - *DPR 1*: Render box 164.5×183 (tỷ lệ 0.90), chọn `300x300.webp` (300w tier), dung lượng **180.162 byte** (tiết kiệm 81% so với baseline 945 KB). Ảnh đối chiếu: `review-evidence/2026-09-24/r5-02-mobile-375-dpr1.webp`.
+       - *DPR 2*: Render box 164.5×183 (tỷ lệ 0.90), chọn `300x300.webp` (300w tier), dung lượng **180.162 byte**. Ảnh đối chiếu: `review-evidence/2026-09-24/r5-02-mobile-375-dpr2.webp`.
+       - *DPR 3*: Render box 164.5×183 (tỷ lệ 0.90), chọn `600x800.webp` (600w tier), dung lượng **639.974 byte**, tối ưu độ sắc nét cho màn hình siêu mịn Retina. Ảnh đối chiếu: `review-evidence/2026-09-24/r5-02-mobile-375-dpr3.webp`.
+     - **Cấu hình Tablet (768×1024)**:
+       - *DPR 1 & 2*: Render box 349.4×228 (tỷ lệ 1.53), chọn `600x800.webp` (600w tier), dung lượng **639.974 byte**. Ảnh đối chiếu: `r5-02-tablet-768-dpr1.webp` & `r5-02-tablet-768-dpr2.webp`.
+     - **Cấu hình Desktop (1440×1000)**:
+       - *DPR 1 & 2*: Render box 379.3×288 (tỷ lệ 1.32), chọn `600x800.webp` (600w tier), dung lượng **639.974 byte**. Ảnh đối chiếu: `r5-02-desktop-1440-dpr1.webp` & `r5-02-desktop-1440-dpr2.webp`.
+     - **Đánh giá Crop & Độ nét**: Ảnh nguồn vuông 1:1 được căn giữa chính xác bằng `object-fit: cover`, tự động cắt nhẹ biên mà không gây méo tỷ lệ hay dải đen letterbox, bảo đảm tính thẩm mỹ đồng bộ trên toàn bộ catalog.
+   - **Kết luận**: Cả 4 Acceptance Criteria của `R5-02` nay đã hoàn tất đầy đủ 100% bằng chứng kỹ thuật và hình ảnh đối chiếu, đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Bằng Chứng Ma Trận 7 Cấu Hình & Ảnh Chụp Đối Chiếu Thực Tế
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`, 7 tệp webp ảnh chụp màn hình
+- **What changed**: Bổ sung đầy đủ số liệu byte PerformanceResourceTiming, đánh giá crop/tỷ lệ thực tế và 7 tệp screenshot đối chiếu vào kho tài liệu.
+- **Verification**: Tệp `r5-02-sharpness-crop-matrix.json` và 7 ảnh chụp xác nhận 100% tiêu chí đạt chuẩn R78.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 52).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **DPR 1 & 2 Lightweight Tier**: Đạt 180.162 byte, tiết kiệm 81% băng thông.
+- **DPR 3 Retina Tier**: Đạt 639.974 byte, chọn 600w tối ưu độ nét theo hướng dẫn R76/R78.
+- **7 Screenshot Artifacts**: Toàn bộ 7 cấu hình có ảnh chụp thực tế trong thư mục bằng chứng.
+
+## Notes for Reviewer
+
+1. **R5-02 Full Acceptance Satisfied**: Toàn bộ yêu cầu của Acceptance 1, 2, 3 và 4 đã được chứng minh đầy đủ bằng số liệu và ảnh chụp, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

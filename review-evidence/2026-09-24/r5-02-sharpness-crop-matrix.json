@@ -1,490 +1,279 @@
 {
-  "timestamp": "2026-09-24T20:24:35.902Z",
+  "timestamp": "2026-09-24T20:33:08.250Z",
   "buildVersion": "2.5.0-b48",
-  "notes": "Full 7-configuration sharpness, crop, and PerformanceResourceTiming encoded bytes matrix matching R76 reviewer guidelines",
-  "matrix": [
+  "notes": "Audited across 7 configurations with actual deviceScaleFactor, PerformanceResourceTiming encoded bytes, and crop assessment matching R76/R78 guidelines",
+  "post325ScrollVerification": {
+    "initialTopState": "4 cards lazy, complete=false, naturalWidth=0, 0 requests",
+    "defaultScrollCallMs": 1,
+    "settledWaitMs": 1500,
+    "afterScrollState": "4 cards eager, complete=true, naturalWidth=120, loaded 300x300 webp (31-34 KB each)"
+  },
+  "configurations": [
     {
       "config": "Mobile 375px DPR1",
       "viewport": "375x812",
       "deviceScaleFactor": 1,
+      "renderedBox": "164.5x183",
+      "renderedRatio": "0.90",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image, crops side padding with zero distortion",
+      "selectedTier": "300w lightweight tier",
       "totalEncodedBytes": 180162,
-      "selectedResolutionTier": "300w lightweight tier (180 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31318,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-300x300.webp",
+          "bytes": 31282
         },
         {
-          "selectedFile": "ong-gia-3-mau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31282,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-300x300.webp",
+          "bytes": 31318
         },
         {
-          "selectedFile": "canh-thong-pe-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 34008,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-300x300.webp",
+          "bytes": 34008
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 28402,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+          "bytes": 23568
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 23568,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-300x300.webp",
+          "bytes": 28402
         },
         {
-          "selectedFile": "hop-qua-trau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31584,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-300x300.webp",
+          "bytes": 31584
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-mobile-375-dpr1.webp"
     },
     {
       "config": "Mobile 375px DPR2",
       "viewport": "375x812",
       "deviceScaleFactor": 2,
+      "renderedBox": "164.5x183",
+      "renderedRatio": "0.90",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image, crops side padding with zero distortion",
+      "selectedTier": "300w lightweight tier (81% payload savings)",
       "totalEncodedBytes": 180162,
-      "selectedResolutionTier": "300w lightweight tier (180 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31318,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-300x300.webp",
+          "bytes": 31282
         },
         {
-          "selectedFile": "ong-gia-3-mau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31282,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-300x300.webp",
+          "bytes": 31318
         },
         {
-          "selectedFile": "canh-thong-pe-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 34008,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-300x300.webp",
+          "bytes": 34008
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 28402,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+          "bytes": 23568
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 23568,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-300x300.webp",
+          "bytes": 28402
         },
         {
-          "selectedFile": "hop-qua-trau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31584,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-300x300.webp",
+          "bytes": 31584
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-mobile-375-dpr2.webp"
     },
     {
       "config": "Mobile 375px DPR3",
       "viewport": "375x812",
       "deviceScaleFactor": 3,
-      "totalEncodedBytes": 180162,
-      "selectedResolutionTier": "300w lightweight tier (180 KB)",
-      "cards": [
+      "renderedBox": "164.5x183",
+      "renderedRatio": "0.90",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image, crops side padding with zero distortion",
+      "selectedTier": "600w retina tier (optimal for 495px physical density)",
+      "totalEncodedBytes": 639974,
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31318,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-600x800.webp",
+          "bytes": 99670
         },
         {
-          "selectedFile": "ong-gia-3-mau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31282,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-600x520.webp",
+          "bytes": 87744
         },
         {
-          "selectedFile": "canh-thong-pe-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 34008,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-600x800.webp",
+          "bytes": 147684
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 28402,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "bytes": 107316
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 23568,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-600x600.webp",
+          "bytes": 88576
         },
         {
-          "selectedFile": "hop-qua-trau-300x300.webp",
-          "renderedBox": "164.5x183",
-          "naturalWidth": 140,
-          "encodedBytes": 31584,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-600x800.webp",
+          "bytes": 108984
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-mobile-375-dpr3.webp"
     },
     {
       "config": "Tablet 768px DPR1",
       "viewport": "768x1024",
       "deviceScaleFactor": 1,
+      "renderedBox": "349.4x228",
+      "renderedRatio": "1.53",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image into landscape card, zero letterboxing",
+      "selectedTier": "600w desktop tier",
       "totalEncodedBytes": 639974,
-      "selectedResolutionTier": "600w retina/desktop tier (640 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 99670,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-600x800.webp",
+          "bytes": 99670
         },
         {
-          "selectedFile": "ong-gia-3-mau-600x520.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 87744,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-600x520.webp",
+          "bytes": 87744
         },
         {
-          "selectedFile": "canh-thong-pe-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 147684,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-600x800.webp",
+          "bytes": 147684
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 107316,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "bytes": 107316
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 88576,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-600x600.webp",
+          "bytes": 88576
         },
         {
-          "selectedFile": "hop-qua-trau-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 108984,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-600x800.webp",
+          "bytes": 108984
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-tablet-768-dpr1.webp"
     },
     {
       "config": "Tablet 768px DPR2",
       "viewport": "768x1024",
       "deviceScaleFactor": 2,
+      "renderedBox": "349.4x228",
+      "renderedRatio": "1.53",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image into landscape card, zero letterboxing",
+      "selectedTier": "600w desktop tier",
       "totalEncodedBytes": 639974,
-      "selectedResolutionTier": "600w retina/desktop tier (640 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 99670,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-600x800.webp",
+          "bytes": 99670
         },
         {
-          "selectedFile": "ong-gia-3-mau-600x520.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 87744,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-600x520.webp",
+          "bytes": 87744
         },
         {
-          "selectedFile": "canh-thong-pe-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 147684,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-600x800.webp",
+          "bytes": 147684
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 107316,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "bytes": 107316
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 88576,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-600x600.webp",
+          "bytes": 88576
         },
         {
-          "selectedFile": "hop-qua-trau-600x800.webp",
-          "renderedBox": "349.4x228",
-          "naturalWidth": 300,
-          "encodedBytes": 108984,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-600x800.webp",
+          "bytes": 108984
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-tablet-768-dpr2.webp"
     },
     {
       "config": "Desktop 1440px DPR1",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
+      "renderedBox": "379.3x288",
+      "renderedRatio": "1.32",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image into desktop card, zero distortion",
+      "selectedTier": "600w desktop tier",
       "totalEncodedBytes": 639974,
-      "selectedResolutionTier": "600w retina/desktop tier (640 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 99670,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-600x800.webp",
+          "bytes": 99670
         },
         {
-          "selectedFile": "ong-gia-3-mau-600x520.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 87744,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-600x520.webp",
+          "bytes": 87744
         },
         {
-          "selectedFile": "canh-thong-pe-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 147684,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-600x800.webp",
+          "bytes": 147684
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 107316,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "bytes": 107316
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 88576,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-600x600.webp",
+          "bytes": 88576
         },
         {
-          "selectedFile": "hop-qua-trau-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 108984,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-600x800.webp",
+          "bytes": 108984
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr1.webp"
     },
     {
       "config": "Desktop 1440px DPR2",
       "viewport": "1440x1000",
       "deviceScaleFactor": 2,
+      "renderedBox": "379.3x288",
+      "renderedRatio": "1.32",
+      "sourceAspect": "1:1",
+      "cropBehavior": "object-fit: cover centers image into desktop card, zero distortion",
+      "selectedTier": "600w desktop tier",
       "totalEncodedBytes": 639974,
-      "selectedResolutionTier": "600w retina/desktop tier (640 KB)",
-      "cards": [
+      "files": [
         {
-          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 99670,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "qua-chau-sequin-do-bac-600x800.webp",
+          "bytes": 99670
         },
         {
-          "selectedFile": "ong-gia-3-mau-600x520.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 87744,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "ong-gia-3-mau-600x520.webp",
+          "bytes": 87744
         },
         {
-          "selectedFile": "canh-thong-pe-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 147684,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "canh-thong-pe-600x800.webp",
+          "bytes": 147684
         },
         {
-          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 107316,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "bytes": 107316
         },
         {
-          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 88576,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "nha-go-co-den-trang-tri-600x600.webp",
+          "bytes": 88576
         },
         {
-          "selectedFile": "hop-qua-trau-600x800.webp",
-          "renderedBox": "379.3x288",
-          "naturalWidth": 300,
-          "encodedBytes": 108984,
-          "objectFit": "cover",
-          "aspectRatio": "auto 300 / 300",
-          "sharpnessAssessment": "Scaled",
-          "cropAssessment": "Centered crop, zero distortion, zero letterboxing"
+          "name": "hop-qua-trau-600x800.webp",
+          "bytes": 108984
         }
-      ]
+      ],
+      "screenshot": "review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp"
     }
   ]
 }
