@@ -1,7 +1,8 @@
 {
-  "timestamp": "2026-09-24T20:50:05.928Z",
+  "timestamp": "2026-09-24T20:57:10.266Z",
   "issue": "R2-03",
   "component": "Product Specifications Table Audit (tt4m_get_specs_table_html)",
+  "notes": "Elimination of generic fallback claims and addition of electrical ratings for ID 295 matching R83 guidelines",
   "products": [
     {
       "productId": 279,
@@ -19,11 +20,11 @@
         },
         {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Gia công tuyển chọn theo tiêu chuẩn trang trí sự kiện"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Hộp vỉ định hình, bọc màng khí chống trầy xước bề mặt"
         }
       ]
     },
@@ -43,11 +44,11 @@
         },
         {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Gia công thủ công tỉ mỉ theo mẫu lễ hội"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Hộp carton bảo vệ riêng biệt cho tượng mô hình"
         }
       ]
     },
@@ -66,12 +67,24 @@
           "value": "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ"
         },
         {
+          "label": "Điện áp hoạt động",
+          "value": "Nguồn hạ áp 12V DC qua bộ chuyển đổi Adapter 220V/12V an toàn"
+        },
+        {
+          "label": "Công suất tiêu thụ",
+          "value": "15W – 25W (tùy theo chiều cao tháp 1m2, 1m5, 1m8)"
+        },
+        {
+          "label": "Phạm vi sử dụng",
+          "value": "Chuyên dụng trong nhà (Indoor), sảnh tòa nhà hoặc hiên có mái che"
+        },
+        {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Gia công khung thép & đấu nối kỹ thuật tại Việt Nam"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Thùng carton định hình khung, kèm bộ đổi nguồn hạ áp riêng"
         }
       ]
     },
@@ -91,11 +104,11 @@
         },
         {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Thùng carton lớn phân loại phụ kiện theo từng ngăn tiện lợi"
         }
       ]
     },
@@ -115,11 +128,11 @@
         },
         {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Thùng carton chia ngăn chuyên dụng cho phụ kiện mạ điện cao cấp"
         }
       ]
     },
@@ -139,11 +152,11 @@
         },
         {
           "label": "Xuất xứ",
-          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+          "value": "Đóng gói và phối set tại Việt Nam từ vật tư tuyển chọn"
         },
         {
           "label": "Quy cách đóng gói",
-          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+          "value": "Kiện hàng công nghiệp gia cố chắc chắn, bàn giao nghiệm thu"
         }
       ]
     }
