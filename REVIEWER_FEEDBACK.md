@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R78 — nghiệm thu độc lập Batch 50–51](#round-r78), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 và R26-01 vẫn PARTIAL; không issue nào đủ bằng chứng để đóng.
+> **Trạng thái hiện hành:** xem [Vòng R79 — nghiệm thu độc lập Batch 52](#round-r79), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn PARTIAL: mobile/tablet đạt; hai capture desktop không hiển thị ảnh.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4963,4 +4963,30 @@ Giữ **PARTIAL / OPEN**. Phần focus/inert kỹ thuật đã đủ; chỉ còn
 - [Ma trận R5-02](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
 - [Artifact hợp nhất R26-01](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
 - Hai batch chỉ đổi tài liệu bằng chứng; không có implementation production mới để chạy lại.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r79"></a>
+
+# Vòng R79 — Nghiệm thu độc lập Batch 52
+
+## R5-02 — PARTIAL / OPEN
+
+Reviewer đã mở trực tiếp cả bảy WebP:
+
+- mobile DPR1/DPR2/DPR3 đều hiển thị đủ sáu ảnh; subject nhận diện được, overlay/crop dùng được;
+- tablet DPR1/DPR2 đều hiển thị đủ sáu ảnh, không có letterbox hoặc biến dạng rõ;
+- matrix mới ghi mobile DPR3 chọn sáu file tier 600w cùng byte count cụ thể. Blocker nguồn 300w ở R78 đã được xử lý.
+
+Hai capture desktop DPR1/DPR2 **không đạt**: cả sáu card chỉ có nền xanh đặc, label và nút; toàn bộ product imagery vắng mặt. Đây là bằng chứng trực quan ngược với claim “toàn bộ 7 cấu hình” đã chứng minh sharpness/crop. Dữ liệu tên file và byte trong JSON không thay thế trạng thái render nhìn thấy.
+
+R5-02 giữ **PARTIAL / OPEN**. Giữ nguyên năm capture mobile/tablet đã đạt; chỉ chụp lại desktop DPR1/DPR2 sau khi sáu background image đã decode/render rõ. Không cần làm lại polling hoặc mobile DPR3.
+
+## Bằng chứng và tổng R79
+
+- [JSON nghiệm thu Batch 52](review-evidence/2026-09-24/r79-batch-52-verification.json).
+- [Ma trận R5-02](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- Đã kiểm tra trực quan đủ 7 WebP được Batch 52 liệt kê.
+- Không thao tác website production.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
