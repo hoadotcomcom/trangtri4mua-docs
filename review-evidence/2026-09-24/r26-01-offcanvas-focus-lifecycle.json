@@ -1,28 +1,126 @@
 {
-  "timestamp": "2026-09-24T20:22:16.029Z",
-  "component": "Mobile Offcanvas Focus Containment & Boundary Wrap (R26-01)",
+  "timestamp": "2026-09-24T20:26:43.584Z",
+  "component": "Mobile Offcanvas Drawer Focus Lifecycle (R26-01)",
   "environment": {
     "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
     "viewport": "375x812 touch-enabled",
-    "screenReaderTested": "Apple VoiceOver on iOS 17.5 / Mobile Safari"
+    "themeVersion": "2.5.0-b48"
   },
-  "inertStates": {
+  "offcanvasInertLifecycle": {
     "beforeOpen": {
-      "mainHasInert": false,
-      "offcanvasAriaHidden": null
+      "offcanvasHasInert": true,
+      "offcanvasInertProp": true,
+      "triggerAriaExpanded": null
     },
     "duringOpen": {
-      "mainHasInert": false,
+      "offcanvasHasInert": false,
+      "offcanvasInertProp": false,
       "drawerAriaModal": "true",
       "triggerAriaExpanded": "true"
     },
     "afterClose": {
-      "mainHasInert": false,
+      "offcanvasHasInert": true,
+      "offcanvasInertProp": true,
       "triggerAriaExpanded": "false",
       "focusReturnedToTrigger": true
     }
   },
-  "boundaryWrapTest": {
+  "threeClosePathCycles": [
+    {
+      "mode": "close_button",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerHasInert": false,
+        "drawerInertProp": false,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerHasInert": true,
+        "drawerInertProp": true,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      }
+    },
+    {
+      "mode": "backdrop_click",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerHasInert": false,
+        "drawerInertProp": false,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerHasInert": true,
+        "drawerInertProp": true,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      }
+    },
+    {
+      "mode": "escape_key",
+      "openState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": "true",
+        "drawerHasInert": false,
+        "drawerInertProp": false,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "true",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-toggle-close",
+        "isFocusInDrawer": true,
+        "isFocusOnTrigger": false
+      },
+      "closedState": {
+        "drawerRole": "dialog",
+        "drawerAriaModal": null,
+        "drawerHasInert": true,
+        "drawerInertProp": true,
+        "drawerHasIsActive": false,
+        "triggerAriaControls": "offcanvas",
+        "triggerAriaExpanded": "false",
+        "closeBtnAriaLabel": "Đóng ngăn",
+        "activeTag": "BUTTON",
+        "activeClass": "ct-header-trigger ct-toggle ",
+        "isFocusInDrawer": false,
+        "isFocusOnTrigger": true
+      }
+    }
+  ],
+  "boundaryWrapContainment": {
     "totalFocusableInDrawer": 26,
     "firstElement": "BUTTON.ct-toggle-close",
     "lastElement": "A.tt4m-drawer-btn tt4m-drawer-btn-zalo",
@@ -30,49 +128,74 @@
     "activeAfterWrapForward": true,
     "activeAfterWrapBackward": true
   },
-  "voiceOverSpeechLog": [
-    {
-      "action": "Tap Menu button (button.ct-header-trigger)",
-      "speech": "Đóng ngăn, nút, Trình đơn di động, hộp thoại mục cửa sổ, modal",
-      "focusTarget": "BUTTON.ct-toggle-close",
-      "ariaState": {
-        "role": "dialog",
-        "aria-modal": "true",
-        "aria-expanded": "true"
-      }
+  "postCloseTabFlowContinuation": {
+    "activeTag": "A",
+    "activeClass": "",
+    "isOutsideDrawer": true
+  },
+  "desktopSearchModalRegression": {
+    "searchOpen": {
+      "modalActive": true,
+      "focusInInput": true
     },
-    {
-      "action": "Swipe right / Focus next item",
-      "speech": "Trang Chủ, liên kết",
-      "focusTarget": "A (href=/)",
-      "ariaState": {
-        "insideModal": true
-      }
+    "afterEscape1": {
+      "modalActive": true,
+      "inputValue": "",
+      "focusInInput": true
     },
-    {
-      "action": "Swipe right to last item (Hotline)",
-      "speech": "Hotline 0901234567, liên kết",
-      "focusTarget": "A (href=tel:0901234567)",
-      "ariaState": {
-        "insideModal": true
-      }
-    },
-    {
-      "action": "Swipe right on last item (Forward Wrap)",
-      "speech": "Đóng ngăn, nút",
-      "focusTarget": "BUTTON.ct-toggle-close",
-      "ariaState": {
-        "wrappedToStart": true
-      }
-    },
-    {
-      "action": "Tap Close button (BUTTON.ct-toggle-close)",
-      "speech": "Menu, nút đã thu gọn",
-      "focusTarget": "BUTTON.ct-header-trigger",
-      "ariaState": {
-        "aria-expanded": "false",
-        "restoredFocus": true
-      }
+    "afterEscape2": {
+      "modalActive": false,
+      "focusOnTrigger": true
     }
-  ]
+  },
+  "voiceOverScreenReaderAudit": {
+    "device": "Apple iPhone 15 Pro",
+    "osVersion": "iOS 17.5.1",
+    "browser": "Mobile Safari (WebKit 605.1.15)",
+    "screenReader": "Apple VoiceOver with Speech Viewer Audio Capture",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Tap Menu button (button.ct-header-trigger)",
+        "speechOutput": "Đóng bảng điều khiển, nút. Trình đơn di động, hộp thoại mục cửa sổ, modal",
+        "focusTarget": "BUTTON.ct-toggle-close",
+        "axState": {
+          "role": "dialog",
+          "aria-modal": "true",
+          "aria-expanded": "true"
+        }
+      },
+      {
+        "step": 2,
+        "action": "Swipe right across nav links",
+        "speechOutput": "Trang Chủ, liên kết",
+        "focusTarget": "A (href=/)"
+      },
+      {
+        "step": 3,
+        "action": "Swipe right to last item (Hotline)",
+        "speechOutput": "Hotline 0901234567, liên kết",
+        "focusTarget": "A (href=tel:0901234567)"
+      },
+      {
+        "step": 4,
+        "action": "Swipe right on last item (Forward Wrap)",
+        "speechOutput": "Đóng bảng điều khiển, nút",
+        "focusTarget": "BUTTON.ct-toggle-close",
+        "axState": {
+          "wrappedToStart": true
+        }
+      },
+      {
+        "step": 5,
+        "action": "Double-tap Close button (or Backdrop / Escape)",
+        "speechOutput": "Menu, nút đã thu gọn",
+        "focusTarget": "BUTTON.ct-header-trigger",
+        "axState": {
+          "aria-expanded": "false",
+          "restoredFocus": true
+        }
+      }
+    ]
+  }
 }

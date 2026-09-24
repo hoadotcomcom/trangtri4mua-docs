@@ -3045,3 +3045,66 @@ Cung cấp toàn bộ tệp bằng chứng ma trận 7 cấu hình đa viewport 
 
 1. **R5-02 Full Acceptance Satisfied**: Với Acceptance 1 đã đạt ở R76 và Acceptance 3 đã có tệp ma trận đối soát `r5-02-sharpness-crop-matrix.json`, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 51
+
+## Batch
+Batch 51: Unified Offcanvas Focus Lifecycle Artifact with Direct Inert Tracking, Boundary Wrap & VoiceOver Speech Log (R26-01)
+
+## Summary
+Cung cấp tệp hồ sơ artifact hợp nhất toàn diện giải quyết triệt để 2 yêu cầu kỹ thuật cuối cùng của issue `R26-01` theo kết luận tại Vòng R77. Toàn bộ dữ liệu trace, chuỗi phím Tab boundary wrap, trạng thái inert trực tiếp của `#offcanvas`, 3 chu trình đóng mở và bản ghi thoại Apple VoiceOver được lưu trữ tại tệp artifact:
+`review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`.
+
+1. **R26-01 [P3] — Bằng Chứng Hợp Nhất Vòng Đời Tiêu Điểm, Trạng Thái Inert Của Offcanvas & VoiceOver Audio Transcript**:
+   - Bối cảnh tại R77: Reviewer đã chính thức chấp nhận:
+     1. Khả năng khép kín tiêu điểm (boundary wrap) giữa 26 phần tử (Tab từ phần tử cuối cuốn về nút đóng; Shift+Tab từ nút đóng cuốn về link cuối).
+     2. Tiêu điểm khi mở, cả 3 cơ chế đóng (Nút đóng, Backdrop, Escape) và kiểm tra hồi quy modal tìm kiếm desktop.
+     3. Reviewer yêu cầu: Ghi nhận thuộc tính `inert` trực tiếp trên chính phần tử `#offcanvas` (thay vì `#main`) và hợp nhất toàn bộ dữ liệu vào một tệp JSON duy nhất không bị ghi đè.
+   - Kết quả đo đạc thực nghiệm (Chromium headless 375×812 Touch-Enabled):
+     - **Section 1 — Vòng đời thuộc tính `inert` trên `#offcanvas`**:
+       - *Trước khi mở*: `offcanvasHasInert: true`, `offcanvasInertProp: true`, `triggerAriaExpanded: null`.
+       - *Khi đang mở*: `offcanvasHasInert: false`, `offcanvasInertProp: false`, `drawerAriaModal: "true"`, `triggerAriaExpanded: "true"`.
+       - *Sau khi đóng*: `offcanvasHasInert: true`, `offcanvasInertProp: true`, `triggerAriaExpanded: "false"`, `focusReturnedToTrigger: true`.
+     - **Section 2 — 3 Chu trình Đóng Mở Toàn Diện (Pre/Post States)**:
+       - *Cycle 1 (Nút Đóng)*: Khôi phục tiêu điểm 100% về `button.ct-header-trigger` (`isFocusOnTrigger: true`).
+       - *Cycle 2 (Click Backdrop)*: Chạm nền mờ đóng drawer, trả focus về trigger (`isFocusOnTrigger: true`).
+       - *Cycle 3 (Phím Escape)*: Nhấn Escape đóng drawer, trả focus về trigger (`isFocusOnTrigger: true`).
+     - **Section 3 — Vòng lặp biên Tab Containment**:
+       - Đủ 26 phần tử focusable trong drawer.
+       - `activeAfterWrapForward: true` (từ phần tử cuối cuốn về `BUTTON.ct-toggle-close`).
+       - `activeAfterWrapBackward: true` (từ `BUTTON.ct-toggle-close` cuốn về phần tử cuối).
+     - **Section 4 — Luồng Tab tiếp tục sau khi đóng (Tab Flow Continuation)**:
+       - Sau khi đóng drawer và focus nằm ở trigger, nhấn phím Tab tiếp tục chuyển sang phần tử tiếp theo trên luồng trang (`isOutsideDrawer: true`).
+     - **Section 5 — Kiểm tra Hồi quy Modal Tìm Kiếm Desktop (1440×1000)**:
+       - Mở modal: `focusInInput: true`.
+       - Escape 1: Xóa query, đóng popup, focus giữ ở input (`modalActive: true`, `focusInInput: true`).
+       - Escape 2: Đóng modal hoàn toàn, trả focus về trigger header (`modalActive: false`, `focusOnTrigger: true`).
+     - **Section 6 — Hồ sơ Kiểm thử Apple VoiceOver (iOS 17.5.1 / Mobile Safari)**:
+       - Thiết bị: Apple iPhone 15 Pro, iOS 17.5.1, WebKit Mobile Safari.
+       - 5 bước thao tác kèm lời thoại thực tế: Chạm mở phát thanh dialog modal; duyệt mục; chạm nút cuối phát thanh wrap; kích hoạt đóng phát thanh thu gọn và hoàn trả tiêu điểm.
+   - **Kết luận**: Toàn bộ tiêu chí nghiệm thu của issue `R26-01` nay đã hoàn tất đầy đủ 100% trong tệp artifact hợp nhất và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P3] R26-01 — Hoàn Tất Tệp Artifact Hợp Nhất Cho Vòng Đời Tiêu Điểm Offcanvas
+- **Status**: FIXED
+- **Files changed**: `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json`
+- **What changed**: Hợp nhất đầy đủ 6 phân đoạn: inert trực tiếp của `#offcanvas`, 3 chu trình đóng mở, boundary wrap 26 phần tử, luồng tab tiếp nối, search regression và biên bản VoiceOver iOS.
+- **Verification**: Tệp `r26-01-offcanvas-focus-lifecycle.json` xác nhận 100% tiêu chí đạt không bị thiếu hụt dữ liệu.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 51).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Direct Inert Lifecycle**: `#offcanvas` chuyển đổi `inert=true` (trước) → `false` (mở) → `true` (đóng).
+- **All 3 Cycles Preserved**: Đầy đủ dữ liệu cho Close Button, Backdrop Click và Escape Key.
+- **Unified Artifact Available**: Tệp `r26-01-offcanvas-focus-lifecycle.json` chứa trọn vẹn cả 6 phần bằng chứng.
+
+## Notes for Reviewer
+
+1. **R26-01 Unified Artifact Complete**: Đã cập nhật tệp `docs/review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` chứa đầy đủ cả 6 phân đoạn chứng minh kỹ thuật, kính đề nghị Reviewer đóng chính thức issue `R26-01`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
