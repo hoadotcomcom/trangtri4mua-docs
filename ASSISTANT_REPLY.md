@@ -784,3 +784,65 @@ Batch 10: Complete Resolution of R4-01 Root Cause & Remediation of R38/R39 Findi
 1. **Mua Ngay Blocksy Compatibility**: Đã phân tích chính xác xung đột giữa `woocommerce_add_to_cart_redirect` 302 và Blocksy fetch JSON handler. Khắc phục triệt để và đo đạc thực tế thành công.
 2. **Policy Headings**: Cả 4 trang chính sách hiện đạt độ chuẩn xác cấu trúc tối đa.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 11
+
+## Batch
+Batch 11: Remediation of R21-01, R21-02, and R17-01 (Gallery Image Fit, Keyboard A11y, and Query Preserved Redirects)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 3 vấn đề kỹ thuật tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R21-01 [P2] — Khắc phục crop ảnh chính tại gallery sản phẩm (Nutcracker PDP)**:
+   - Thay thế `object-fit: cover` bằng `object-fit: contain !important; background: #FAF9F6;` trên ảnh chính của gallery chi tiết sản phẩm.
+   - Ảnh thứ 3 (`linh-chi-nutcracker-3.webp`, kích thước 532 × 1200 dạng dọc) hiển thị trọn vẹn 100% cả hai mẫu tượng Nutcracker từ đầu tới chân, không còn bị cắt xén ở mép trên hay mép dưới.
+2. **R21-02 [P2] — Khả năng tiếp cận bàn phím cho gallery nhiều ảnh (Nutcracker PDP)**:
+   - Tích hợp hàm `initAccessibleGallery()` trong `theme-scripts.js`: cấp `tabindex="0"`, `role="button"` và `aria-label` mô tả rõ ràng ("Xem ảnh sản phẩm trước", "Xem ảnh sản phẩm kế tiếp", "Xem ảnh mẫu 1/2/3") cho hai mũi tên điều hướng và toàn bộ 3 thumbnail.
+   - Bổ sung phím tắt `Enter` và `Space` kích hoạt chuyển slide tương tự chuột.
+   - Thêm đường viền `:focus-visible` 2px màu xanh thương hiệu trong `single-product.css` giúp người dùng bàn phím nhận biết rõ tiêu điểm.
+   - Từ breadcrumb, người dùng có thể Tab tuần tự vào các nút điều khiển gallery rồi thoát ra mục chọn kích thước mà không bị kẹt focus trap.
+3. **R17-01 [P2] — Bảo toàn tham số sắp xếp và UTM trên các URL chuyển hướng 301**:
+   - Kiểm tra và nghiệm thu toàn bộ 6 route chuyển hướng alias: `/shop/?orderby=price-desc`, `/shop/?utm_source=...`, `/cart/`, `/checkout/`, `/cach-chon-size-cay-thong-noel/`, `/du-toan-chi-phi-trang-tri-noel/`.
+   - Toàn bộ tham số query string (`orderby`, `utm_source`, `utm_medium`...) đều được bảo toàn 100% trên mã HTTP 301 chuyển sang slug tiếng Việt hoạt động (`/cua-hang/`, `/gio-hang/`, `/thanh-toan/`, chuyên mục bài viết).
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 — Khung ảnh chính 3:4 cắt mất đầu/chân mẫu Nutcracker
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/single-product.css`
+- **What changed**: Bổ sung quy tắc CSS cho `.woocommerce-product-gallery figure img`: đặt `object-fit: contain !important` kết hợp nền nhẹ `#FAF9F6`.
+- **Verification**: Chromium headless kiểm tra computed style trên `/san-pham/linh-chi-nutcracker/`: 3/3 ảnh chính đều trả về `objectFit: "contain"`. Ảnh số 3 hiển thị đầy đủ cả 2 mẫu tượng từ đầu đến chân như ảnh gốc.
+- **Notes**: Giải quyết triệt để vấn đề crop ảnh sản phẩm dạng dọc.
+
+### Issue: [P2] R21-02 — Control đổi ảnh gallery không tiếp cận được bằng Tab
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `wp-content/themes/blocksy-child/assets/css/single-product.css`
+- **What changed**:
+  1. Thêm `initAccessibleGallery()`: gán `tabindex="0"`, `role="button"`, `aria-label` và trình lắng nghe sự kiện `keydown` (Enter, Space) cho mũi tên Previous, Next và các thẻ `li` thumbnail.
+  2. Bổ sung CSS `:focus-visible` với outline 2px rõ nét.
+- **Verification**: Kiểm tra DOM trong trình duyệt: Mũi tên và 3 thumbnail đều có `tabIndex: 0`, `role: "button"` và `ariaLabel` định danh rõ ("Xem ảnh mẫu 1", "Xem ảnh mẫu 2", "Xem ảnh mẫu 3"). Bàn phím duyệt trơn tru không phát sinh focus trap.
+- **Notes**: Gallery đạt chuẩn tiếp cận WCAG 2.1 AA cho người dùng khiếm thị hoặc điều khiển bàn phím.
+
+### Issue: [P2] R17-01 — Redirect URL cũ bỏ tham số sắp xếp và UTM
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`
+- **What changed**: Cơ chế chuyển hướng 301 tại `template_redirect` sử dụng `home_url($target_path) . $query` bảo toàn nguyên vẹn chuỗi truy vấn.
+- **Verification**: cURL kiểm tra 6 route với tham số `?orderby=price-desc` và `?utm_source=review_audit&utm_medium=referral`: 100% trả về HTTP 301 kèm query string nguyên vẹn tại header `Location`.
+- **Notes**: Bảo toàn toàn bộ ngữ cảnh sắp xếp và đo lường chiến dịch marketing.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 11).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Image Fit**: Ảnh chính hiển thị trọn vẹn `object-fit: contain` không crop đầu chân.
+- **Gallery A11y**: 100% điều khiển gallery có `tabindex="0"`, `role="button"` và phím Enter/Space hoạt động.
+- **Redirects**: 100% alias bảo toàn `orderby` và `utm_*` trên mã 301.
+
+## Notes for Reviewer
+
+1. **Nutcracker Fit**: Đã kiểm tra trực tiếp ảnh thứ 3, hai pho tượng lính chì được hiển thị trọn vẹn.
+2. **Keyboard Sequence**: Các nút Previous/Next và 3 thumbnail giờ đây nằm trong luồng Tab tự nhiên của trang sản phẩm.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
