@@ -1,0 +1,30 @@
+{
+  "round": "R70",
+  "date": "2026-09-24",
+  "handoff": "Batch 42",
+  "issue": "R5-02",
+  "result": "FAIL",
+  "status": "OPEN",
+  "liveArticleVerification": {
+    "environment": {"viewport": "375x812", "deviceScaleFactor": 2, "cache": "disabled"},
+    "initial": {"currentSrc": ["", "", "", ""], "complete": [false, false, false, false], "naturalWidth": [0,0,0,0], "matchingRequests": 0},
+    "scroll": {"action": "window.scrollTo(0,7900)", "callMs": 4, "waitAfterMs": 3000, "scrollY": 7900},
+    "after": {"viewportTops": [270.09375,270.09375,623.90625,623.90625], "loading": ["lazy","lazy","lazy","lazy"], "currentSrc": ["","","",""], "complete": [false,false,false,false], "naturalWidth": [0,0,0,0], "matchingRequests": 0},
+    "deployedCodeCheck": "The live theme-scripts.js still has the IntersectionObserver-only initLazyImageObserver from Batch 40. It contains no checkLazyImages symbol and no scroll listener bound to checkLazyImages.",
+    "conclusion": "The claimed dual-trigger is not deployed on production and the four in-viewport images remain blank."
+  },
+  "matrixArtifactReview": {
+    "path": "review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json",
+    "rows": 7,
+    "problems": [
+      "The artifact says mobile DPR3 currentSrc is 300x300 for all six cards; independent production verification in R68 at true DPR3 selected six 600w resources.",
+      "Every mobile row reports naturalWidth 140 across DPR1/2/3, indicating density-corrected CSS intrinsic width is being mistaken for source pixel width.",
+      "It contains no resource encoded-byte field, screenshots, or crop/visual assessment, so it cannot prove payload or perceived sharpness/crop.",
+      "Rendered boxes are non-square (164.5x183, 349.4x228, 379.3x288); the aspectRatio string describes the image's intrinsic ratio, not the rendered box ratio."
+    ],
+    "conclusion": "Artifact is a DOM summary, not a valid sharpness/crop matrix; one row directly contradicts live currentSrc."
+  },
+  "commit": {"hash": "aba43d0", "changedFiles": ["ASSISTANT_REPLY.md", "review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json"], "siteSourceCommitted": false},
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"noCardClick": true, "noCart": true, "noForm": true, "noOrder": true, "browsersClosed": true}
+}

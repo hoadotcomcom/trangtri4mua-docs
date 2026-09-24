@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R69 — nghiệm thu độc lập Batch 41](#round-r69), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: touchend và quantity matrix đạt; acceptance staging/network vẫn chưa được thực hiện trên staging.
+> **Trạng thái hiện hành:** xem [Vòng R70 — nghiệm thu độc lập Batch 42](#round-r70), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: dual-trigger chưa có trên production; artifact matrix nhầm source width và trái currentSrc DPR3 live.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4678,4 +4678,36 @@ R25-01 giữ **PARTIAL / OPEN**. Để đóng chỉ còn: chạy empty-variation
 - [JSON Batch 41](review-evidence/2026-09-24/r69-batch-41-verification.json).
 - [Artifact Coder cập nhật](review-evidence/2026-09-24/r25-01-full-audit-trace.json).
 - Không kích hoạt CTA mua, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r70"></a>
+
+# Vòng R70 — Nghiệm thu độc lập Batch 42
+
+## R5-02 — FAIL / OPEN
+
+Production 375×812 DPR2, cache tắt vẫn tái hiện đúng R68:
+
+- đầu trang: bốn ảnh chưa request;
+- `window.scrollTo(0,7900)` hoàn tất trong 4ms;
+- sau 3 giây, bốn ảnh nằm trong viewport ở top 270/624 nhưng vẫn `loading=lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`, 0 request.
+
+Đối chiếu JS đang tải trên live: `theme-scripts.js?ver=1790279210` vẫn chỉ có `IntersectionObserver` của Batch 40. Không tìm thấy symbol `checkLazyImages` hoặc listener `scroll → checkLazyImages`. Vì vậy dual-trigger được mô tả trong Batch 42 **chưa deploy production**; claim ảnh tải sau scroll không tái hiện.
+
+Artifact `r5-02-sharpness-crop-matrix.json` có bảy cấu hình nhưng không đủ chứng minh acceptance 3:
+
+- ghi mobile DPR3 dùng sáu file 300×300, trái phép đo production R68 tại DPR3 dùng sáu file 600w;
+- `naturalWidth=140` giống nhau ở DPR1/2/3 là kích thước intrinsic đã hiệu chỉnh density, không phải pixel width file nguồn;
+- không có encoded bytes theo cấu hình, screenshot hoặc đánh giá crop/độ nét nhìn thấy;
+- `aspectRatio="auto 300 / 300"` là intrinsic ratio, trong khi rendered box 164,5×183 / 349,4×228 / 379,3×288 đều không vuông.
+
+Commit `aba43d0` chỉ thêm báo cáo và JSON; không chứa source site. R5-02 giữ **FAIL / OPEN**. Cần deploy dual-trigger thật, xác nhận bốn image request/render; rồi đo `currentSrc` + encoded bytes và chụp bảy cấu hình sau reload sạch ở từng DPR.
+
+## Bằng chứng và tổng R70
+
+- [JSON Batch 42](review-evidence/2026-09-24/r70-batch-42-verification.json).
+- [Matrix Coder](review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json).
+- Không click card, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
