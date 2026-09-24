@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-09-24T20:50:05.928Z",
+  "issue": "R2-03",
+  "component": "Product Specifications Table Audit (tt4m_get_specs_table_html)",
+  "products": [
+    {
+      "productId": 279,
+      "productName": "Quả châu cườm",
+      "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+      "shortDescription": "Quả châu đính cườm hạt lấp lánh, phụ kiện treo cây thông sang và bắt đèn đẹp.",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "Đường kính 8cm – 10cm"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Nhựa ABS an toàn đính cườm lấp lánh cao cấp"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    },
+    {
+      "productId": 294,
+      "productName": "Lính đánh trống",
+      "url": "https://trangtri4mua.com/san-pham/linh-danh-trong/",
+      "shortDescription": "Tượng lính đánh trống 38cm, mô hình lính chì Giáng sinh cổ điển cho kệ và gốc cây thông.",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "Cao 38cm"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Nhựa/nỉ trang trí cao cấp, chi tiết thủ công sắc nét"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    },
+    {
+      "productId": 295,
+      "productName": "Tháp nhũ điện",
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "shortDescription": "Tháp cây thông phủ nhũ có đèn sẵn, cao 1m2 – 1m8, cắm điện là sáng cả góc Giáng sinh.",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "1m2, 1m5, 1m8"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Khung kim loại định hình phủ nhũ, chuỗi bóng LED ánh sáng ấm bền bỉ"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    },
+    {
+      "productId": 381,
+      "productName": "Combo Gia Đình 50",
+      "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung/",
+      "shortDescription": "Set phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "Set 50 món phụ kiện (phù hợp cho cây thông 1m5 – 1m8)"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Nhựa ABS an toàn chống vỡ, nơ nhung nỉ, kim tuyến & đèn LED lõi đồng ánh sáng ấm"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    },
+    {
+      "productId": 382,
+      "productName": "Set Hoàng Gia 70",
+      "url": "https://trangtri4mua.com/san-pham/set-phu-kien-trang-tri-giang-sinh-tone-do-vang-hoang-gia-70-mon-cao-cap/",
+      "shortDescription": "Bộ sưu tập 70 món phụ kiện cao cấp tone Đỏ – Vàng phong cách quý tộc châu Âu.",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "Set 70 món phụ kiện cao cấp (phù hợp cho cây thông 1m8 – 2m4)"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Nhựa mạ điện ánh kim, nơ nhung thêu viền chỉ vàng & đèn LED cao cấp"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    },
+    {
+      "productId": 383,
+      "productName": "B2B Cafe 100",
+      "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+      "shortDescription": "Gói decor Giáng Sinh trọn gói cho quán cafe, nhà hàng, sảnh văn phòng (có hóa đơn VAT).",
+      "specsTableRows": [
+        {
+          "label": "Kích thước",
+          "value": "Gói vật tư trang trí cho không gian 50m² – 100m²"
+        },
+        {
+          "label": "Chất liệu",
+          "value": "Cây thông PE 2m10 cành đúc, phụ kiện treo cao cấp & hệ thống đèn rèm ngoài trời"
+        },
+        {
+          "label": "Xuất xứ",
+          "value": "Gia công tuyển chọn & Nhập khẩu chính ngạch"
+        },
+        {
+          "label": "Quy cách đóng gói",
+          "value": "Thùng carton 5 lớp định hình, bọc màng khí chống sốc bảo vệ an toàn 100%"
+        }
+      ]
+    }
+  ]
+}
