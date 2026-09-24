@@ -1,0 +1,64 @@
+{
+  "meta": "2.5.0-b48",
+  "initial": [
+    {
+      "loading": "lazy",
+      "complete": false,
+      "naturalWidth": 0,
+      "currentSrc": ""
+    },
+    {
+      "loading": "lazy",
+      "complete": false,
+      "naturalWidth": 0,
+      "currentSrc": ""
+    },
+    {
+      "loading": "lazy",
+      "complete": false,
+      "naturalWidth": 0,
+      "currentSrc": ""
+    },
+    {
+      "loading": "lazy",
+      "complete": false,
+      "naturalWidth": 0,
+      "currentSrc": ""
+    }
+  ],
+  "scrollDurationMs": 1,
+  "after": [
+    {
+      "src": "qua-chau-cuom-300x300.webp",
+      "loading": "eager",
+      "complete": true,
+      "naturalWidth": 120,
+      "currentSrc": "qua-chau-cuom-300x300.webp",
+      "encodedBytes": 31410
+    },
+    {
+      "src": "ngoi-sao-nhu-do-bac-300x300.webp",
+      "loading": "eager",
+      "complete": true,
+      "naturalWidth": 120,
+      "currentSrc": "ngoi-sao-nhu-do-bac-300x300.webp",
+      "encodedBytes": 34224
+    },
+    {
+      "src": "canh-thong-pe-300x300.webp",
+      "loading": "eager",
+      "complete": true,
+      "naturalWidth": 120,
+      "currentSrc": "canh-thong-pe-300x300.webp",
+      "encodedBytes": 34008
+    },
+    {
+      "src": "day-tuyet-300x300.webp",
+      "loading": "eager",
+      "complete": true,
+      "naturalWidth": 120,
+      "currentSrc": "day-tuyet-300x300.webp",
+      "encodedBytes": 34558
+    }
+  ]
+}

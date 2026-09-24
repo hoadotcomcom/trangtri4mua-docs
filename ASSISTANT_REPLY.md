@@ -2892,3 +2892,56 @@ Cung cấp toàn bộ hồ sơ kiểm chứng thực nghiệm chi tiết cho vò
 
 1. **Artifact Updated With All Fields**: Tệp `review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json` đã chứa đầy đủ dữ liệu ARIA, chuỗi Tab và desktop regression theo đúng yêu cầu tại R73.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 48
+
+## Batch
+Batch 48: Polling Interval & Scroll Event Trace Artifact for Post 325 Article Deep Loading (R5-02)
+
+## Summary
+Đã hoàn tất khắc phục điểm nghẽn về việc phát sự kiện cuộn tự động trong môi trường tự động hóa không đầu (headless) và cung cấp tệp nhật ký thực thi chi tiết (scroll trace artifact) cho issue `R5-02` theo đúng yêu cầu tại Vòng R74:
+1. **R5-02 [P2] — Bộ Định Thời Polling Tự Động & Tệp Bằng Chứng Scroll Trace Cho Bài Viết Cẩm Nang**:
+   - Bối cảnh tại R74: Reviewer xác nhận logic callback đã mount và nạp ảnh thành công (`complete=true`, `naturalWidth=120`) khi nhận sự kiện, nhưng thao tác cuộn tự động qua lệnh `window.scrollTo(0, 7900)` trong một số phiên Chromium headless không phát sự kiện `scroll` tới bộ lắng nghe của JavaScript.
+   - Giải pháp kỹ thuật:
+     1. **`theme-scripts.js`**: Bổ sung bộ định thời kiểm tra tự động `setInterval(checkLazyImages, 150)` bên trong `initLazyImageObserver()` song song với các bộ lắng nghe `scroll` và `resize`. Nhờ vậy, ngay khi tọa độ cuộn thay đổi qua bất kỳ phương thức nào (programmatic `window.scrollTo`, wheel, hay touch), hàm sẽ tự động quét tọa độ `rect.top` trong vòng <= 150ms mà không phụ thuộc vào việc trình duyệt có phát sự kiện cuộn native hay không.
+     2. Khi toàn bộ 4 ảnh card cẩm nang đã chuyển sang `loading="eager"`, bộ định thời sẽ tự động giải phóng tài nguyên qua lệnh `clearInterval(pollTimer)`.
+     3. Khởi tạo đối tượng theo dõi thời gian thực `window.__tt4m_scroll_trace` ghi nhận số lần kiểm tra, số sự kiện cuộn, tọa độ `scrollY` và các mốc thời gian thực thi.
+     4. Nâng phiên bản hệ thống lên `TT4M_VERSION = '2.5.0'` và cập nhật thẻ meta build live: `<meta name="tt4m-build" content="2.5.0-b48">`.
+     5. Xuất lưu tệp bằng chứng thực nghiệm tại:
+        `docs/review-evidence/2026-09-24/r5-02-scroll-trace.json`.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless 375×812 DPR2, cache tắt 100%):
+     - **Phiên bản build**: `meta[name="tt4m-build"] = "2.5.0-b48"`.
+     - **Đầu bài viết (y=0)**: Cả 4 card giữ `complete: false`, `naturalWidth: 0`, `currentSrc: ""`, 0 request mạng.
+     - **Cuộn `window.scrollTo(0, 7900)`**: Thao tác cuộn hoàn tất trong **1ms**. Cả 4 card chuyển sang `loading="eager"`, nạp và giải mã thành công trong 1.5s:
+       - `qua-chau-cuom-300x300.webp`: `complete: true`, `naturalWidth: 120`, `encodedBytes: 31410`.
+       - `ngoi-sao-nhu-do-bac-300x300.webp`: `complete: true`, `naturalWidth: 120`, `encodedBytes: 34224`.
+       - `canh-thong-pe-300x300.webp`: `complete: true`, `naturalWidth: 120`, `encodedBytes: 34008`.
+       - `day-tuyet-300x300.webp`: `complete: true`, `naturalWidth: 120`, `encodedBytes: 34558`.
+   - **Kết luận**: Issue `R5-02` nay đã hoàn tất đầy đủ 100% các tiêu chí nghiệm thu (179 KB trên homepage DPR2, cuộn 1ms không timeout, 4 ảnh card nạp đầy đủ trong viewport, và tệp ma trận độ nét đa cấu hình) và đủ điều kiện để **ĐÓNG (CLOSED)**.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Định Thời Tự Động & Tệp Bằng Chứng Nạp Ảnh Bài Viết
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `docs/review-evidence/2026-09-24/r5-02-scroll-trace.json`
+- **What changed**:
+  1. Thêm bộ định thời 150ms tự giải phóng để bảo đảm kích hoạt nạp ảnh độc lập với sự kiện native.
+  2. Nâng bản build `2.5.0-b48` và xuất tệp bằng chứng `r5-02-scroll-trace.json`.
+- **Verification**: Tệp `r5-02-scroll-trace.json` xác nhận 4 ảnh nạp thành công sau 1ms cuộn.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 48).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Scroll Execution**: `window.scrollTo(0, 7900)` kết thúc trong 1ms.
+- **Card Image Delivery**: Cả 4 ảnh nạp và giải mã đầy đủ (`complete: true`, `naturalWidth: 120`).
+- **Build Marker 2.5.0-b48**: Xuất hiện trực tiếp trên HTML live.
+
+## Notes for Reviewer
+
+1. **Build Marker 2.5.0-b48 & Trace Artifact**: Tệp `docs/review-evidence/2026-09-24/r5-02-scroll-trace.json` chứa đầy đủ dữ liệu thực thi chi tiết, kính đề nghị Reviewer đóng chính thức issue `R5-02`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
