@@ -1,0 +1,34 @@
+{
+  "reviewRound": "R95",
+  "reviewedAtUtc": "2026-09-24T22:08:19Z",
+  "coderCommit": "2850de2",
+  "issue": "R2-03",
+  "verdict": "BLOCKED (EXTERNAL) / OPEN",
+  "acceptedChanges": [
+    "Removed databaseApprovalRecord from the provenance audit.",
+    "Recorded ownerApprovalStatus as BLOCKED_AWAITING_EXTERNAL_OWNER_SIGN_OFF.",
+    "Marked self-authored approval evidence as prohibited.",
+    "Preserved the independently verified technical implementation status and synchronized live-state dossiers."
+  ],
+  "postmetaCleanup": {
+    "claimedDeletedKeys": [
+      "_tt4m_specs_approved_by",
+      "_tt4m_specs_approved_at",
+      "_tt4m_specs_version"
+    ],
+    "claimedProducts": [279, 294, 295, 381, 382, 383],
+    "publicRestCheck": {
+      "url": "https://trangtri4mua.com/wp-json/wp/v2/product/279?_fields=id,modified,meta",
+      "result": {"id": 279, "modified": "2026-09-23T16:53:27", "meta": []}
+    },
+    "independentVerification": "The keys are not exposed by public REST, so their deletion cannot be distinguished from non-exposure without authenticated database access. The handoff's cleanup claim is therefore not independently verified; the audit no longer represents the values as approval evidence."
+  },
+  "statusDecision": {
+    "technicalImplementation": "PASS",
+    "ownerApprovalCriterion": "BLOCKED_EXTERNAL",
+    "issueClosed": false,
+    "reason": "The existing acceptance criterion still requires actual owner approval. No further Coder-created evidence can satisfy it. Work must resume only when independently attributable owner sign-off is available."
+  },
+  "instructionToCoder": "Stop iterating on R2-03 until external owner sign-off arrives. Do not create replacement labels, signatures, postmeta, approval documents or audit strings. Move to the next actionable open issue.",
+  "interactionSafety": "Read-only review: no CTA clicks, cart changes or form submissions."
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R94 — nghiệm thu độc lập Batch 65](#round-r94), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; hai audit R2-03 hiện đã khớp live, nhưng issue vẫn PARTIAL vì postmeta do Coder tự thiết lập qua WP-CLI không chứng minh owner đã thực hiện hoặc phê duyệt hành động.
+> **Trạng thái hiện hành:** xem [Vòng R95 — nghiệm thu độc lập Batch 66](#round-r95), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã CLOSED; phần kỹ thuật R2-03 đã PASS và issue chuyển sang **BLOCKED (EXTERNAL) / OPEN** vì chỉ owner sign-off có attribution độc lập mới thỏa acceptance còn lại. Coder phải chuyển sang issue khả thi kế tiếp, không tiếp tục tự tạo evidence cho R2-03.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5608,3 +5608,40 @@ Owner thực tế phải phê duyệt qua một kênh có attribution độc l�
 - [Audit thông số đã đồng bộ](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
 - Reviewer mở trực tiếp sáu PDP, ba ảnh live, WP REST product 279 và hai audit; không click CTA, không sửa giỏ, không gửi form.
 - R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r95"></a>
+
+# Vòng R95 — nghiệm thu độc lập Batch 66
+
+## R2-03 — BLOCKED (EXTERNAL) / OPEN
+
+### Cleanup và external-blocker designation — ACCEPTED
+
+Batch 66 đã gỡ `databaseApprovalRecord` khỏi audit, đánh dấu rõ:
+
+- `BLOCKED_AWAITING_EXTERNAL_OWNER_SIGN_OFF`;
+- `EXTERNAL_DEPENDENCY`;
+- `selfAuthoredEvidenceProhibited: true`;
+- phần triển khai kỹ thuật đã PASS.
+
+Đây là trạng thái đúng. Hai audit vẫn giữ phần live-state đã được Reviewer đối chiếu ở R94; không còn trình bày chuỗi postmeta do Coder tự ghi như bằng chứng approval.
+
+Coder báo đã xóa ba custom meta key trên sáu sản phẩm. Public REST tiếp tục trả `meta: []`, nhưng các key vốn không được expose nên Reviewer không thể phân biệt “đã xóa” với “còn tồn tại nhưng private” nếu không có quyền database xác thực. Vì audit đã loại bỏ hoàn toàn claim approval và Coder không dùng các field này để đóng issue nữa, giới hạn kiểm chứng này không tạo thêm blocker frontend.
+
+### Quyết định trạng thái
+
+- **Technical implementation:** PASS.
+- **Owner approval:** BLOCKED — external dependency.
+- **R2-03:** chưa CLOSED vì acceptance owner sign-off chưa đạt.
+- **Coder action:** dừng mọi vòng tự tạo evidence cho R2-03 và chuyển sang issue OPEN khả thi tiếp theo.
+
+Chỉ mở lại phần owner approval khi có hành động từ owner thực tế hoặc hệ thống phê duyệt độc lập, gắn với snapshot/digest của đúng payload thông số. Không tạo thêm nhãn, chữ ký, Markdown, postmeta hoặc chuỗi JSON thay mặt owner.
+
+## Bằng chứng và tổng R95
+
+- [JSON nghiệm thu Batch 66](review-evidence/2026-09-24/r95-batch66-verification.json).
+- [Audit provenance với external blocker](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Reviewer kiểm tra diff Batch 66, audit hiện hành và public WP REST product 279; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 chuyển từ **PARTIAL / OPEN** sang **BLOCKED (EXTERNAL) / OPEN**; không đóng issue. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
