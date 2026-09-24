@@ -1,0 +1,886 @@
+[
+  {
+    "utc": "2026-09-24T14:42:34.086Z",
+    "url": "https://trangtri4mua.com/",
+    "waitMs": 1500,
+    "route": [
+      {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "name": "Chuyển đến phần nội dung",
+        "href": "#main"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-topbar-phone",
+        "name": "0901.234.567",
+        "href": "tel:0901234567"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "site-logo-container",
+        "name": "",
+        "href": "https://trangtri4mua.com/"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "ct-cart-item",
+        "name": "Giỏ hàng\n0 ₫\n0",
+        "href": "https://trangtri4mua.com/gio-hang/"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null
+      }
+    ],
+    "opened": {
+      "url": "https://trangtri4mua.com/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": "true",
+        "inert": false,
+        "className": "ct-panel ct-header active",
+        "visible": true
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "true"
+      },
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null
+      },
+      "focusInside": false,
+      "focusOnTrigger": true,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden",
+      "tabbables": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-close",
+          "name": "Đóng ngăn",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-brand-link",
+          "name": "Trang Trí 4 Mùa",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Giáng Sinh & Noel\nMùa nổi bật",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "tt4m-cat-toggle-btn",
+          "name": "Đóng mở Giáng Sinh & Noel",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Phụ kiện treo cây Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Mô hình & tượng Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Combo trang trí trọn gói",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Cây thông Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Vòng nguyệt quế & treo cửa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Trang trí Tết Nguyên Đán",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Tất cả sản phẩm decor",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Trang Chủ",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Cửa Hàng",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Theo Mùa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-dropdown-mobile",
+          "name": "Mở rộng menu thả xuống",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Ý Tưởng Trang Trí",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Liên Hệ",
+          "href": "https://trangtri4mua.com/lien-he/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-hotline",
+          "name": "Gọi điện thoại trực tiếp hotline",
+          "href": "tel:0901234567"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-zalo",
+          "name": "Tư vấn nhanh qua Zalo",
+          "href": "https://zalo.me/0901234567"
+        }
+      ]
+    },
+    "inside": {
+      "url": "https://trangtri4mua.com/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": "true",
+        "inert": false,
+        "className": "ct-panel ct-header active",
+        "visible": true
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "true"
+      },
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-drawer-brand-link",
+        "name": "Trang Trí 4 Mùa",
+        "href": "https://trangtri4mua.com/"
+      },
+      "focusInside": true,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden",
+      "tabbables": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-close",
+          "name": "Đóng ngăn",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-brand-link",
+          "name": "Trang Trí 4 Mùa",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Giáng Sinh & Noel\nMùa nổi bật",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "tt4m-cat-toggle-btn",
+          "name": "Đóng mở Giáng Sinh & Noel",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Phụ kiện treo cây Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Mô hình & tượng Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Combo trang trí trọn gói",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Cây thông Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Vòng nguyệt quế & treo cửa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Trang trí Tết Nguyên Đán",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Tất cả sản phẩm decor",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Trang Chủ",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Cửa Hàng",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Theo Mùa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-dropdown-mobile",
+          "name": "Mở rộng menu thả xuống",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Ý Tưởng Trang Trí",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Liên Hệ",
+          "href": "https://trangtri4mua.com/lien-he/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-hotline",
+          "name": "Gọi điện thoại trực tiếp hotline",
+          "href": "tel:0901234567"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-zalo",
+          "name": "Tư vấn nhanh qua Zalo",
+          "href": "https://zalo.me/0901234567"
+        }
+      ]
+    },
+    "closed": {
+      "url": "https://trangtri4mua.com/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": null,
+        "inert": true,
+        "className": "ct-panel ct-header",
+        "visible": false
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "false"
+      },
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "home wp-singular page-template-default page page-id-23 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "name": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nMÙA LỄ HỘI ",
+        "href": null
+      },
+      "focusInside": false,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden auto",
+      "tabbables": []
+    },
+    "next": {
+      "url": "https://trangtri4mua.com/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": null,
+        "inert": true,
+        "className": "ct-panel ct-header",
+        "visible": false
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "false"
+      },
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-topbar-phone",
+        "name": "0901.234.567",
+        "href": "tel:0901234567"
+      },
+      "focusInside": false,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden auto",
+      "tabbables": []
+    }
+  },
+  {
+    "utc": "2026-09-24T14:42:38.688Z",
+    "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+    "waitMs": 1500,
+    "route": [
+      {
+        "tag": "A",
+        "id": "",
+        "className": "skip-link screen-reader-text",
+        "name": "Chuyển đến phần nội dung",
+        "href": "#main"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-topbar-phone",
+        "name": "0901.234.567",
+        "href": "tel:0901234567"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "site-logo-container",
+        "name": "",
+        "href": "https://trangtri4mua.com/"
+      },
+      {
+        "tag": "A",
+        "id": "",
+        "className": "ct-cart-item",
+        "name": "Giỏ hàng\n0 ₫\n0",
+        "href": "https://trangtri4mua.com/gio-hang/"
+      },
+      {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null
+      }
+    ],
+    "opened": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": "true",
+        "inert": false,
+        "className": "ct-panel ct-header active",
+        "visible": true
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "true"
+      },
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null
+      },
+      "focusInside": false,
+      "focusOnTrigger": true,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden",
+      "tabbables": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-close",
+          "name": "Đóng ngăn",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-brand-link",
+          "name": "Trang Trí 4 Mùa",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Giáng Sinh & Noel\nMùa nổi bật",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "tt4m-cat-toggle-btn",
+          "name": "Đóng mở Giáng Sinh & Noel",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Phụ kiện treo cây Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Mô hình & tượng Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Combo trang trí trọn gói",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Cây thông Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Vòng nguyệt quế & treo cửa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Trang trí Tết Nguyên Đán",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Tất cả sản phẩm decor",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Trang Chủ",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Cửa Hàng",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Theo Mùa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-dropdown-mobile",
+          "name": "Mở rộng menu thả xuống",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Ý Tưởng Trang Trí",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Liên Hệ",
+          "href": "https://trangtri4mua.com/lien-he/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-hotline",
+          "name": "Gọi điện thoại trực tiếp hotline",
+          "href": "tel:0901234567"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-zalo",
+          "name": "Tư vấn nhanh qua Zalo",
+          "href": "https://zalo.me/0901234567"
+        }
+      ]
+    },
+    "inside": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": "true",
+        "inert": false,
+        "className": "ct-panel ct-header active",
+        "visible": true
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "true"
+      },
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-drawer-brand-link",
+        "name": "Trang Trí 4 Mùa",
+        "href": "https://trangtri4mua.com/"
+      },
+      "focusInside": true,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden",
+      "tabbables": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-close",
+          "name": "Đóng ngăn",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-brand-link",
+          "name": "Trang Trí 4 Mùa",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Giáng Sinh & Noel\nMùa nổi bật",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "tt4m-cat-toggle-btn",
+          "name": "Đóng mở Giáng Sinh & Noel",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Phụ kiện treo cây Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Mô hình & tượng Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Combo trang trí trọn gói",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Cây thông Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-subcat-link",
+          "name": "Vòng nguyệt quế & treo cửa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/vong-nguyet-que/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Trang trí Tết Nguyên Đán",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/tet-nguyen-dan/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-cat-node-link",
+          "name": "Tất cả sản phẩm decor",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Trang Chủ",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Cửa Hàng",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Theo Mùa",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "className": "ct-toggle-dropdown-mobile",
+          "name": "Mở rộng menu thả xuống",
+          "href": null
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Ý Tưởng Trang Trí",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "ct-menu-link",
+          "name": "Liên Hệ",
+          "href": "https://trangtri4mua.com/lien-he/"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-hotline",
+          "name": "Gọi điện thoại trực tiếp hotline",
+          "href": "tel:0901234567"
+        },
+        {
+          "tag": "A",
+          "id": "",
+          "className": "tt4m-drawer-btn tt4m-drawer-btn-zalo",
+          "name": "Tư vấn nhanh qua Zalo",
+          "href": "https://zalo.me/0901234567"
+        }
+      ]
+    },
+    "closed": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": null,
+        "inert": true,
+        "className": "ct-panel ct-header",
+        "visible": false
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "false"
+      },
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "className": "wp-singular product-template-default single single-product postid-295 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce woocommerce-page woocommerce-js",
+        "name": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nTRANG CHỦ\nT",
+        "href": null
+      },
+      "focusInside": false,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden auto",
+      "tabbables": []
+    },
+    "next": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "panel": {
+        "id": "offcanvas",
+        "role": "dialog",
+        "name": "Mô-đun Offcanvas",
+        "ariaModal": null,
+        "inert": true,
+        "className": "ct-panel ct-header",
+        "visible": false
+      },
+      "trigger": {
+        "tag": "BUTTON",
+        "id": "",
+        "className": "ct-header-trigger ct-toggle ",
+        "name": "Menu",
+        "href": null,
+        "expanded": "false"
+      },
+      "active": {
+        "tag": "A",
+        "id": "",
+        "className": "tt4m-topbar-phone",
+        "name": "0901.234.567",
+        "href": "tel:0901234567"
+      },
+      "focusInside": false,
+      "focusOnTrigger": false,
+      "mainInert": false,
+      "mainAriaHidden": null,
+      "bodyOverflow": "hidden auto",
+      "tabbables": []
+    }
+  }
+]

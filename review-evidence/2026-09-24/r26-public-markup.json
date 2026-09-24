@@ -1,0 +1,112 @@
+{
+  "utc": "2026-09-24T14:37:19Z",
+  "url": "https://trangtri4mua.com/",
+  "status": 200,
+  "reply_sha256": "efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16",
+  "panels": [
+    {
+      "id": "search-modal",
+      "attrs": {
+        "id": "search-modal",
+        "class": [
+          "ct-panel"
+        ],
+        "data-behaviour": "modal",
+        "role": "dialog",
+        "aria-label": "Modal tìm kiếm",
+        "inert": ""
+      },
+      "parent": {
+        "tag": "div",
+        "id": null,
+        "class": [
+          "ct-drawer-canvas"
+        ]
+      },
+      "close": [
+        {
+          "tag": "button",
+          "attrs": {
+            "class": [
+              "ct-toggle-close"
+            ],
+            "data-type": "type-1",
+            "aria-label": "Đóng cửa sổ tìm kiếm modal"
+          },
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "offcanvas",
+      "attrs": {
+        "id": "offcanvas",
+        "class": [
+          "ct-panel",
+          "ct-header"
+        ],
+        "data-behaviour": "right-side",
+        "role": "dialog",
+        "aria-label": "Mô-đun Offcanvas",
+        "inert": ""
+      },
+      "parent": {
+        "tag": "div",
+        "id": null,
+        "class": [
+          "ct-drawer-canvas"
+        ]
+      },
+      "close": [
+        {
+          "tag": "button",
+          "attrs": {
+            "class": [
+              "ct-toggle-close"
+            ],
+            "data-type": "type-1",
+            "aria-label": "Đóng ngăn"
+          },
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "tag": "button",
+      "attrs": {
+        "class": [
+          "ct-header-search",
+          "ct-toggle"
+        ],
+        "data-toggle-panel": "#search-modal",
+        "aria-controls": "search-modal",
+        "aria-label": "Tìm kiếm",
+        "data-label": "left",
+        "data-id": "search"
+      },
+      "text": "Tìm kiếm"
+    },
+    {
+      "tag": "button",
+      "attrs": {
+        "class": [
+          "ct-header-trigger",
+          "ct-toggle"
+        ],
+        "data-toggle-panel": "#offcanvas",
+        "aria-controls": "offcanvas",
+        "data-design": "simple",
+        "data-label": "right",
+        "aria-label": "Menu",
+        "data-id": "trigger"
+      },
+      "text": "Menu"
+    }
+  ],
+  "scripts": [
+    "https://trangtri4mua.com/wp-content/themes/blocksy/static/bundle/main.js?ver=2.1.57",
+    "https://trangtri4mua.com/wp-content/themes/blocksy-child/assets/js/theme-scripts.js?ver=1790244747"
+  ]
+}

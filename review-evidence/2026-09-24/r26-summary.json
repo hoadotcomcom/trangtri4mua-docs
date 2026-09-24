@@ -1,0 +1,126 @@
+{
+  "utc": "2026-09-24T14:48:03.007Z",
+  "modalCases": 4,
+  "modalSnapshots": 128,
+  "tabSteps": 104,
+  "cases": [
+    {
+      "name": "r26-search-home",
+      "utc": "2026-09-24T14:41:29.073Z",
+      "openFocusInside": true,
+      "escapeReturnsToTrigger": true,
+      "closeButtonReturnsToTrigger": true,
+      "openAXDialogs": [
+        {
+          "role": "dialog",
+          "name": "Modal tìm kiếm",
+          "properties": [
+            {
+              "name": "modal",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          ]
+        }
+      ],
+      "closedAXDialogs": []
+    },
+    {
+      "name": "r26-search-product",
+      "utc": "2026-09-24T14:41:33.845Z",
+      "openFocusInside": true,
+      "escapeReturnsToTrigger": true,
+      "closeButtonReturnsToTrigger": true,
+      "openAXDialogs": [
+        {
+          "role": "dialog",
+          "name": "Modal tìm kiếm",
+          "properties": [
+            {
+              "name": "modal",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          ]
+        }
+      ],
+      "closedAXDialogs": []
+    },
+    {
+      "name": "r26-offcanvas-home",
+      "utc": "2026-09-24T14:41:39.738Z",
+      "openFocusInside": false,
+      "escapeReturnsToTrigger": false,
+      "closeButtonReturnsToTrigger": false,
+      "openAXDialogs": [
+        {
+          "role": "dialog",
+          "name": "Mô-đun Offcanvas",
+          "properties": [
+            {
+              "name": "modal",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          ]
+        }
+      ],
+      "closedAXDialogs": []
+    },
+    {
+      "name": "r26-offcanvas-product",
+      "utc": "2026-09-24T14:41:44.288Z",
+      "openFocusInside": false,
+      "escapeReturnsToTrigger": false,
+      "closeButtonReturnsToTrigger": false,
+      "openAXDialogs": [
+        {
+          "role": "dialog",
+          "name": "Mô-đun Offcanvas",
+          "properties": [
+            {
+              "name": "modal",
+              "value": {
+                "type": "boolean",
+                "value": true
+              }
+            }
+          ]
+        }
+      ],
+      "closedAXDialogs": []
+    }
+  ],
+  "newIssue": {
+    "id": "R26-01",
+    "priority": "P3"
+  },
+  "existingIssues": {
+    "R2-04": "OPEN; combo đã có 3 card, cây thông 2; CTA vẫn hứa 8+",
+    "R2-11": "OPEN; thêm bằng chứng ảnh không khớp năm SKU mới"
+  },
+  "totals": {
+    "open": 39,
+    "p1": 7,
+    "p2": 26,
+    "p3": 6
+  },
+  "catalog": {
+    "newProducts": 5,
+    "httpPages": 7,
+    "comboCards": 3
+  },
+  "agentLimitations": "Hai scout không có browser/CDP; Main thực hiện toàn bộ bằng chứng runtime, không tính nhánh bị chặn là đã đạt.",
+  "limitations": [
+    "Không chạy screen reader, thiết bị thật hoặc checkout.",
+    "Không đánh đồng node nền trong Chrome AX với thiếu ngữ nghĩa modal khi aria-modal=true.",
+    "HTML gallery có thể chứa template inert; browser querySelectorAll xác nhận số ảnh DOM, không báo trùng ảnh từ bản parse HTML.",
+    "Probe wait/selector/evaluateHandle lỗi được phục hồi bằng DOM và ảnh thực tế, không quy thành lỗi website."
+  ]
+}

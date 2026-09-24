@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R25 — biến thể, reset và số lượng](#round-r25), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **38 OPEN — 7 P1, 26 P2, 5 P3**. R25 thêm P2 về callback hiển thị lại giá biến thể sau khi đã xóa lựa chọn; các thao tác chờ ổn định và tăng/giảm số lượng đạt trong mẫu thử. Không đóng issue cũ hoặc nghiệm thu toàn website.
+> **Trạng thái hiện hành:** xem [Vòng R26 — focus modal và thay đổi catalog](#round-r26), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **39 OPEN — 7 P1, 26 P2, 6 P3**. R26 thêm P3 về focus khi mở/đóng menu mobile. Combo đã có 3 sản phẩm, Cây thông có 2; ghi nhận cải thiện nhưng CTA “8+” và ảnh năm SKU mới vẫn chưa khớp. Không nghiệm thu toàn website.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **38 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **39 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -246,13 +246,13 @@ Mô tả, bảng thuộc tính, ảnh nhãn và biến thể nhất quán; sản
 ### Status
 OPEN
 
-## [P1] R2-04 — CTA chủ lực hứa 8+ combo nhưng đích đến không có sản phẩm
+## [P1] R2-04 — CTA chủ lực chưa khớp số lượng và nội dung danh mục
 
 ### Location
 Homepage hero; `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/`; các card Cây thông/Đèn/Quà tặng.
 
 ### Problem
-Hero bán “Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng”, tiết kiệm 15–20%, nhưng trang đích chỉ báo đang cập nhật.
+Ở baseline R2, hero bán “Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng”, tiết kiệm 15–20%, nhưng trang đích chỉ báo đang cập nhật. R26 ghi nhận danh mục đã có hàng công bố, song lời hứa “8+” vẫn chưa khớp ba sản phẩm hiển thị; xem cập nhật dưới đây.
 
 ### Why it matters
 Đứt luồng chuyển đổi ngay CTA quan trọng nhất; lời hứa số lượng và sẵn hàng không được danh mục online chứng minh.
@@ -263,6 +263,8 @@ Nút **“Xem 8+ Set Combo”** dẫn tới category có count **0**, không có
 **Bổ sung R18:** bấm CTA thật trên mobile 375×812 tới category Combo HTTP 200, **0 product card**, chip Combo **0**, nội dung “Đang Cập Nhật Mẫu Mã Cho Mùa Lễ Hội 2026”; robots vẫn noindex. Có link quay lại cửa hàng hoạt động và CTA tư vấn Zalo, nên không kết luận người dùng bị kẹt hoàn toàn; vấn đề vẫn là lời hứa “8+ set sẵn sàng” không khớp đích. Xem [R18](#round-r18), giữ **OPEN — P1**.
 
 **Bổ sung R22:** bốn link trong bài chọn size/cafe dẫn tới ba category Cây thông, Decal dán kính, Vòng nguyệt quế: tất cả HTTP 200 nhưng 0 product card, `nofollow, noindex`, có empty-state và đường hồi phục. Đã click link “bộ sưu tập cây thông Noel” từ bài chọn size tới category rỗng. Đây là phạm vi nội dung → mua hàng của cùng lỗi merchandising, không phải bốn broken link mới; xem [R22](#round-r22). Giữ **OPEN — P1**.
+
+**Cập nhật R26:** không còn dùng “Combo/Cây thông rỗng” làm mô tả hiện hành. GET xác nhận **3 card Combo, 2 card Cây thông**, cả hai HTTP 200; bấm CTA hero **“Xem 8+ Set Combo”** thực tế tới danh mục có đúng ba card. Đây là cải thiện một phần, nhưng số lượng quảng bá vẫn chưa khớp và ảnh các SKU mới chưa đại diện đúng bộ/cây đang bán. Xem [R26](#round-r26), giữ **OPEN — P1**; không tự nâng con số quảng bá hoặc tạo thêm sản phẩm chỉ để đủ tám. Những kết quả rỗng ở R2/R18/R22 là lịch sử tại thời điểm kiểm tra.
 
 ### Recommended solution
 Nếu có combo thực, xuất bản SKU, ảnh, thành phần, giá lẻ/giá combo và tồn kho chính xác. Nếu chỉ nhận tư vấn, đổi thông điệp/CTA sang dịch vụ tư vấn đúng thực tế; không tiếp tục quảng bá “8+” hoặc phần trăm giảm chưa có cơ sở. Ưu tiên category có hàng trong điều hướng mua sắm.
@@ -413,10 +415,10 @@ Cùng khu vực/dịch vụ/điều kiện có cùng lời hứa; thời gian ph
 ### Status
 OPEN
 
-## [P2] R2-11 — Ảnh hero và bài cẩm nang không minh họa đúng lời hứa
+## [P2] R2-11 — Ảnh không minh họa đúng sản phẩm, offer và nội dung
 
 ### Location
-Homepage hero, category cards, 3 card editorial; nội dung bài cafe/chọn size.
+Homepage hero, category cards, 3 card editorial; nội dung bài cafe/chọn size; năm PDP mới liệt kê ở R26.
 
 ### Problem
 Ảnh phụ kiện lẻ được dùng như ảnh combo hoàn chỉnh hoặc nội dung hướng dẫn không gian.
@@ -429,11 +431,17 @@ Hero dùng `keo-nhung-do.webp`: ảnh phụ kiện kẹo tròn có nhãn **52cm:
 
 **Đính chính evidence R22:** câu cũ “395k/35cm” ghép nhầm hai nhãn trong ảnh, không phải thông số đã xác minh. Đã sửa câu trên sau khi xem [ảnh nguồn đầy đủ](review-evidence/2026-09-24/r22-home-hero-original.webp); [metadata HTTP/hash](review-evidence/2026-09-24/r22-hero-source-metadata.json). Không suy giá bán hiện hành từ chữ trên ảnh. Hero/ALT vẫn mô tả đồ lẻ thành combo như [screenshot R22](review-evidence/2026-09-24/r22-home-desktop.webp), nên **R2-11 vẫn OPEN — P2**.
 
+**Bổ sung R26:** năm SKU mới tiếp tục dùng ảnh đồ lẻ cho bộ/cây hoàn chỉnh: `COMBO-GD-50` dùng hộp quả trầu có nhãn 95k, `SET-HG-70` dùng quả châu cườm có nhãn 95k, `COMBO-B2B-CAFE` dùng gói hàng rào, `CT-PE-SNOW` dùng một cành PE có nhãn 45k, `CT-CUOC-PINE` dùng dây quả 1,8m có nhãn 255k. Đã đọc ảnh hiển thị trên năm PDP; [đối chiếu SKU/URL/ảnh](review-evidence/2026-09-24/r26-catalog-browser.json) và bảng R26. Không suy giá bán đúng từ chữ trên ảnh cũ; vấn đề là ảnh không chứng minh bộ/cây đang chào bán. Mở rộng cùng issue, không cộng năm issue trùng.
+
 ### Recommended solution
 Dùng ảnh đúng set thực bán, kèm thành phần; bài chọn size thêm hình đo trần/tán, bài cafe thêm ảnh hoặc sơ đồ bố trí có chú thích và quyền sử dụng. Nếu minh họa phối cảnh, ghi rõ không phải ảnh dự án đã thi công. ALT mô tả đúng ảnh, không nhồi từ khóa.
 
+Với năm SKU mới, cung cấp ảnh đúng toàn bộ bộ hàng/cây, ảnh thành phần và chú thích rõ hàng bao gồm/không bao gồm. Không chỉ đổi ALT hoặc che nhãn giá để tiếp tục dùng ảnh sai loại hàng.
+
 ### Acceptance criteria
 Hero minh họa đúng offer; category/thumbnail không gây nhầm đồ lẻ với bộ trọn gói. Người đọc có thể áp dụng ít nhất một hướng dẫn đo/bố trí bằng minh họa đúng nội dung.
+
+Năm PDP mới và card liên quan phải dùng ảnh khớp SKU/biến thể, nhìn được bộ/cây thực bán và không có nhãn giá của một mặt hàng khác gây hiểu nhầm.
 
 ### Status
 OPEN
@@ -1481,9 +1489,11 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-SKIP-LINK-FOCUS | Baseline chỉ xác nhận có skip link, chưa thử hành vi | DONE | [R23](#round-r23): 7 URL/10 trạng thái, Tab đầu tới skip link, Enter focus main, Tab tiếp theo ở trong main; giữ riêng giới hạn sidebar/landmark. |
 | Q-PDP-CONTENT-TABS | Chưa kiểm chứng tương tác Mô tả/Thông số/Đánh giá | DONE | [R24](#round-r24): 2 PDP × 2 viewport, click và phím điều hướng; manual activation bằng Enter hoạt động, phát hiện R24-01 về orientation/Space. |
 | Q-PDP-VARIANT-RESET-QTY | Chưa thử đổi/xóa biến thể và điều khiển số lượng sau render | DONE | [R25](#round-r25): 2 PDP × 2 viewport, 44 snapshot ổn định; tăng/giảm và min=1 đạt. Bốn ca xóa nhanh tái hiện R25-01; DONE là đã kiểm, không phải đã sửa. |
+| Q-MODAL-FOCUS-LIFECYCLE | Chưa đối chiếu đầy đủ focus mở/đóng và AX giữa search/menu trên hai template | DONE | [R26](#round-r26): 4 ca/128 snapshot, 104 bước Tab/Shift+Tab, thêm 2 lượt tái hiện tự nhiên; search đạt, menu có R26-01. |
+| Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
-| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | BLOCKED | Chờ thay đổi có thể đối chiếu, issue ID/URL/phạm vi deploy hoặc source; không đóng từ lời xác nhận. |
+| Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | [R26](#round-r26) ghi nhận Combo/Cây thông không còn rỗng nhưng chưa đạt toàn bộ R2-04/R2-11. Các issue khác vẫn chờ thay đổi có thể đối chiếu hoặc source; không đóng từ lời xác nhận. |
 
 ---
 
@@ -2219,3 +2229,81 @@ OPEN
 - Chỉ nghiệm thu UI trong mẫu Chrome mô phỏng, chưa kiểm thiết bị thật, trình duyệt khác, mọi PDP, nhập tay số lượng bất hợp lệ hoặc backend tồn kho. Không kết luận mua hàng thành công/thất bại từ class CSS.
 - Lưu **6 JSON + 11 screenshot**; Q-PDP-VARIANT-RESET-QTY = DONE trong phạm vi đã nêu. Đã đóng Chrome riêng. Không sửa code/config/database website, không chạy watcher.
 - Bàn giao báo cáo và bằng chứng bằng commit/push Git theo yêu cầu; chỉ xác nhận push trong lời bàn giao khi remote đã nhận thành công.
+
+---
+
+<a id="round-r26"></a>
+
+# Vòng R26 — Focus modal và thay đổi catalog quan sát trực tiếp
+
+Ngày kiểm tra: **24/09/2026**, timestamp từng lượt trong JSON. Đã fetch remote đầu vòng và trước khi chốt. `ASSISTANT_REPLY.md` vẫn bản Batch 1, SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**. Tuy nhiên website đã xuất hiện năm SKU mới: **không coi tài liệu chưa đổi là bằng chứng website chưa đổi**.
+
+Phân trang/canonical của URL sort đã có bằng chứng R6/R14, nên không chạy lại baseline. Phạm vi mới: modal tìm kiếm desktop **1440×1000** và menu offcanvas mobile mô phỏng **375×812**, mỗi loại trên homepage và PDP Tháp nhũ điện; sau đó đối chiếu năm SKU mới và hai danh mục liên quan. Chỉ GET, mở/đóng giao diện, Tab/Shift+Tab/Escape, click CTA điều hướng; không mua, gửi form hoặc gọi hotline.
+
+## Các phần hoạt động và cần giữ
+
+- **Modal tìm kiếm, hai URL:** Enter ở trigger đưa focus vào input sau khi mở; Tab/Shift+Tab không thoát panel trong mẫu; Escape và nút đóng đều đưa focus trở lại trigger. Tab tiếp theo tiếp tục được ngoài modal.
+- **Cả hai loại modal:** mở có `role="dialog"`, tên truy cập và `aria-modal="true"`; Chrome AX công bố `modal=true`. Đóng thì panel nhận lại `inert`, bỏ `aria-modal`, không còn dialog unignored trong tập AX thu được; trigger chuyển `aria-expanded` từ true về false.
+- **Menu mobile:** sau Tab đầu tiên vào nút đóng, vòng Tab/Shift+Tab vẫn nằm trong menu; Escape và nút đóng vẫn đóng được. Không mở rộng lỗi focus bên dưới thành “menu không dùng được” hoặc “Escape hỏng”.
+- Tổng bốn ca có **128 snapshot**, trong đó **104 bước Tab/Shift+Tab** khi panel mở. Hai lượt tái hiện menu bổ sung dùng chuỗi Tab tự nhiên, không đặt focus trigger bằng script.
+- Nền không có DOM `inert`/`aria-hidden` trong mẫu, nhưng dialog đã khai báo `aria-modal=true`. Không tạo issue chỉ vì cây AX thô còn node nền hoặc thiếu một attribute cụ thể; chưa thử chế độ đọc của screen reader.
+
+Bằng chứng: [Trace bốn ca và AX](review-evidence/2026-09-24/r26-modal-interactions.json) · [Markup ban đầu](review-evidence/2026-09-24/r26-public-markup.json) · [Modal tìm kiếm](review-evidence/2026-09-24/r26-search-home-open.webp) · [Menu mobile](review-evidence/2026-09-24/r26-offcanvas-product-open.webp) · [Tổng hợp](review-evidence/2026-09-24/r26-summary.json).
+
+## [P3] R26-01 — Menu mobile chưa chuyển và khôi phục focus đúng vòng đời modal
+
+### Location
+`#offcanvas`, trigger `[data-toggle-panel="#offcanvas"]` và `.ct-toggle-close` trên homepage/PDP Tháp nhũ điện, viewport 375×812.
+
+### Problem
+1. Sau khi mở menu bằng Enter hoặc tap, focus vẫn ở nút **Menu bên ngoài dialog**, không tự chuyển vào panel.
+2. Sau khi đã Tab vào bên trong rồi đóng bằng Escape hoặc nút đóng, focus về **`body`**, không trở lại nút Menu.
+3. Tab sau khi đóng đi tới link hotline đầu trang, khiến người dùng phải đi lại một đoạn header.
+
+### Why it matters
+Người dùng bàn phím hoặc điều khiển thay thế mất vị trí thao tác khi đóng menu; focus lúc mở không khớp dialog đang được công bố là modal. Xếp **P3** vì Tab vẫn đưa vào menu, vòng focus và đường đóng vẫn hoạt động; không có bằng chứng toàn bộ navigation bị chặn hoặc screen reader cụ thể đọc sai.
+
+### Evidence
+- Hai template cho cùng kết quả ở trace chính: `keyboard open settled` và `pointer reopen settled` có `focusInside=false`; `Escape closed settled` và `close button settled` có `focusOnTrigger=false`, activeElement là BODY.
+- [Tái hiện bằng Tab tự nhiên](review-evidence/2026-09-24/r26-offcanvas-focus-repro.json): Tab tới Menu → Enter → chờ **1.500ms**, focus vẫn ở trigger; Tab hai lần tới link thương hiệu trong drawer → Escape → chờ **1.500ms**, focus ở BODY; Tab tiếp theo tới hotline. Không kích hoạt link hotline.
+- Phép thử ban đầu đã chờ/render ổn định 700ms; lượt 1.500ms xác nhận đây không chỉ là snapshot lấy trước khi animation xong.
+- [W3C APG Dialog Modal](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) khuyến nghị focus vào dialog khi mở và quay lại phần tử gọi khi đóng, trừ trường hợp workflow có lý do khác. Trigger ở hai trang vẫn tồn tại; không có bước điều hướng hay tác vụ mới cần chuyển focus sang nơi khác.
+- Đây là lỗi vòng đời focus, **khác R2-09** về nút X trắng trên nền trắng. Không thay đổi kết quả focus trap/Escape cơ bản đã đạt trước đây.
+
+### Recommended solution
+Sửa đường điều khiển drawer hiện có: lưu trigger mở thực tế; khi panel đã hiển thị, focus vào nút đóng hoặc phần tử đầu phù hợp; khi đóng, trả focus về trigger còn tồn tại và hiển thị. Dùng cùng cơ chế cho Escape/nút đóng/backdrop, giữ vòng Tab và `inert`/ARIA hiện có. Tham khảo hành vi modal tìm kiếm đang hoạt động, không gắn thêm một focus trap toàn trang cạnh controller cũ.
+
+### Acceptance criteria
+1. Trên homepage/PDP ở mobile, mở bằng Enter hoặc tap đưa focus vào drawer sau animation; không giữ focus ở nền bị che.
+2. Tab/Shift+Tab tiếp tục nằm trong drawer. Đóng bằng Escape/nút đóng/backdrop trả focus về đúng trigger; Tab tiếp tục từ vị trí đó, không khởi động lại header.
+3. Mở/đóng lặp lại không giữ `inert` sai, không mất focus, không tạo hai handler cạnh tranh. Nếu trigger bị gỡ khỏi DOM, có điểm focus dự phòng phù hợp.
+4. Modal tìm kiếm desktop vẫn giữ hành vi đã đạt. Kiểm bổ sung một screen reader trước khi nghiệm thu hỗ trợ AT đầy đủ.
+
+### Status
+OPEN
+
+## Catalog mới — ghi nhận cải thiện, không nghiệm thu ảnh thay thế
+
+Đã GET **5 PDP + 2 category**, tất cả HTTP 200, và xem năm PDP trong Chrome desktop. Năm SKU xuất hiện trên homepage có ID **381, 382, 383, 372, 377**; không coi đây là đổi tên năm SKU cũ. Dữ liệu công khai chưa đủ chứng minh tồn kho hoặc giao hàng thực tế.
+
+| SKU / ID | Nội dung và giá đang công bố | Ảnh hiển thị đã đối chiếu |
+|---|---|---|
+| COMBO-GD-50 / 381 | Combo 50 món + LED + sao, 750.000₫ | [Hộp quả trầu lẻ, nhãn 95k](review-evidence/2026-09-24/r26-new-product-1.webp), không thấy toàn bộ set. |
+| SET-HG-70 / 382 | Set 70 món tone đỏ–vàng, 1.250.000₫ | [Hộp quả châu cườm, nhãn 95k](review-evidence/2026-09-24/r26-new-product-2.webp), ảnh chính có quả xanh/trắng, chưa đại diện bộ đỏ–vàng 70 món. |
+| COMBO-B2B-CAFE / 383 | Combo cây 2m1 + phụ kiện + hàng rào + đèn, 3.850.000₫ | [Gói hàng rào rời](review-evidence/2026-09-24/r26-new-product-3.webp); cây phía sau không phải ảnh thể hiện đầy đủ combo. |
+| CT-PE-SNOW / 372 | Cây PE phủ tuyết, 850.000–2.650.000₫ | [Một cành PE cầm tay, nhãn 45k](review-evidence/2026-09-24/r26-new-product-4.webp), không phải cây đầy đủ như tên/mô tả. |
+| CT-CUOC-PINE / 377 | Cây cước gắn trái thông/đầu tuyết, 750.000–1.650.000₫ | [Dây quả 1,8m, nhãn 255k](review-evidence/2026-09-24/r26-new-product-5.webp), khác loại hàng. |
+
+- **R2-04 cải thiện một phần:** Combo hiện có **3 card**, Cây thông **2 card**, không còn rỗng. Đã bấm CTA hero “Xem 8+ Set Combo” tới danh mục ba card: [ảnh đích](review-evidence/2026-09-24/r26-combo-category-after-cta.webp), [trace browser](review-evidence/2026-09-24/r26-catalog-browser.json). Nhãn “8+” chưa được số hàng hiển thị chứng minh, nên giữ OPEN; không tạo thêm SKU không có hàng thật chỉ để khớp số.
+- **R2-11 mở rộng phạm vi:** năm ảnh mới không đại diện đúng offer. Cần ảnh bộ/cây thực bán và thành phần; không chữa bằng đổi ALT hoặc che giá đồ lẻ. Các nhãn 95k/45k/255k là chữ trên ảnh, **không phải đề xuất sửa giá bán về các số đó**.
+- [HTTP, canonical, robots, tên/giá/mô tả/schema và URL năm PDP/hai category](review-evidence/2026-09-24/r26-catalog-delta.json). Trường `cards` ở PDP là sản phẩm liên quan, không phải số sản phẩm trong danh mục; không dùng parser HTML đếm ảnh trong template inert thành gallery nhìn thấy.
+- Chưa nghiệm thu giá nguồn, đầy đủ thành phần/tồn kho, mọi biến thể, schema mới hoặc checkout của năm SKU. Không kết luận hàng giả hay không tồn tại chỉ từ ảnh không khớp. Không đóng các issue catalog/schema khác từ việc đã có năm trang mới.
+
+## Giới hạn và bàn giao R26
+
+- Thêm **1 P3**, tổng **39 OPEN — 7 P1, 26 P2, 6 P3**. R2-04 và R2-11 có cập nhật hiện hành ngay trong issue gốc; giữ lịch sử các vòng trước.
+- Hai nhánh scout đã được giao độc lập nhưng không có browser/CDP; Main thực hiện toàn bộ phép thử runtime. Không tính nhánh bị chặn là đã kiểm tra đạt.
+- Một probe đợi focus gặp timeout; đã đọc trạng thái thực tế, lấy trace sau animation và tái hiện bằng Tab tự nhiên. Một click chọn nhầm link trong drawer ẩn đã được đổi sang CTA hero nhìn thấy; lỗi `evaluateHandle` sau điều hướng được phục hồi bằng URL/DOM và screenshot, không coi là website điều hướng thất bại.
+- Ảnh SET-HG-70 đầu tiên chụp trước paint hoàn tất; đã chờ và chụp lại ảnh hiển thị. Không mở issue ảnh hỏng từ screenshot tạm thời.
+- Bộ bằng chứng gồm **6 JSON + 14 screenshot**. Đã đóng các tab Chrome riêng; không sửa code/config/database website, không chạy watcher hoặc giao dịch thật.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; xác nhận remote nhận thành công trong lời bàn giao.
