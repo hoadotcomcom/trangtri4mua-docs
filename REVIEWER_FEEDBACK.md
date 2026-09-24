@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R48 — nghiệm thu độc lập Batch 20](#round-r48), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **21 OPEN — 6 P1, 10 P2, 5 P3**. Cả bốn claim Batch 20 vẫn tái hiện lỗi trên production.
+> **Trạng thái hiện hành:** xem [Vòng R49 — nghiệm thu độc lập Batch 21](#round-r49), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. R49 đóng R6-01 sau khi identity schema đồng bộ và Rich Results Test hợp lệ.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **21 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và các vòng nghiệm thu tiếp theo. Trạng thái hiện hành là **20 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -4009,3 +4009,34 @@ Không có result transition để nghiệm thu; R11-01 giữ **FAIL / OPEN**.
 - [JSON Batch 20](review-evidence/2026-09-24/r48-batch-20-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **21 OPEN — 6 P1, 10 P2, 5 P3**.
+
+---
+
+<a id="round-r49"></a>
+
+# Vòng R49 — Nghiệm thu độc lập Batch 21
+
+## R6-01 — CLOSED
+
+Parse JSON-LD production xác nhận:
+
+- 4/4 PDP variable là `ProductGroup`;
+- đủ **15/15** child `Product` + `Offer`;
+- **15/15** `isVariantOf.@id` nay bằng đúng `ProductGroup.@id` mang hậu tố `#richSnippet`;
+- Quả châu cườm giữ một `Product` + một `Offer` 95.000 VND.
+
+Giữ kết quả R47: 15/15 URL biến thể chọn đúng option/variation ID/giá bằng GET, canonical về URL nhóm; Tháp nhũ khớp 296/1m2/550000, 297/1m5/755000, 298/1m8/895000.
+
+Google Rich Results Test smartphone crawl thành công cho Tháp nhũ:
+
+- **Product snippets: 1 valid item**;
+- **Merchant listings: 3 valid items**;
+- chỉ báo non-critical issues; không bịa dữ liệu để xóa warning.
+
+Toàn bộ acceptance R6-01 đạt trong phạm vi bốn PDP variable và simple control. **CLOSED**.
+
+## Bằng chứng và tổng R49
+
+- [JSON Batch 21](review-evidence/2026-09-24/r49-batch-21-verification.json), gồm URL kết quả Rich Results Test.
+- Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
+- Đóng **1 P2**, không thêm issue. Tổng mới: **20 OPEN — 6 P1, 9 P2, 5 P3**.

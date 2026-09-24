@@ -1,0 +1,494 @@
+{
+  "round": "R49",
+  "date": "2026-09-24",
+  "handoff": "Batch 21",
+  "issue": "R6-01",
+  "verdict": "PASS / CLOSED",
+  "schema": {
+    "thap": {
+      "type": "ProductGroup",
+      "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet",
+      "productGroupID": "TT4M-089",
+      "variesBy": [
+        "https://schema.org/size"
+      ],
+      "offers": null,
+      "count": 3,
+      "variants": [
+        {
+          "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#variant-296",
+          "type": "Product",
+          "name": "Tháp nhũ điện - Trang trí Noel - 1m2",
+          "size": "1m2",
+          "sku": "TT4M-089-1m2",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "550000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=1m2",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#variant-297",
+          "type": "Product",
+          "name": "Tháp nhũ điện - Trang trí Noel - 1m5",
+          "size": "1m5",
+          "sku": "TT4M-089-5",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "755000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=5",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#variant-298",
+          "type": "Product",
+          "name": "Tháp nhũ điện - Trang trí Noel - 1m8",
+          "size": "1m8",
+          "sku": "TT4M-089-8",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/thap-nhu-dien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "895000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/?attribute_pa_kich-thuoc=8",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        }
+      ]
+    },
+    "keo": {
+      "type": "ProductGroup",
+      "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+      "productGroupID": "TT4M-074",
+      "variesBy": [
+        "https://schema.org/size"
+      ],
+      "offers": null,
+      "count": 5,
+      "variants": [
+        {
+          "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#variant-270",
+          "type": "Product",
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tròn 1m5",
+          "size": "Kẹo tròn 1m5",
+          "sku": "TT4M-074-1m50",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "950000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-tron-1m5",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#variant-271",
+          "type": "Product",
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 1m8",
+          "size": "Kẹo gậy 1m8",
+          "sku": "TT4M-074-80",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1150000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-1m8",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#variant-272",
+          "type": "Product",
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 2m",
+          "size": "Kẹo gậy 2m",
+          "sku": "TT4M-074-2m",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1450000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-2m",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#variant-273",
+          "type": "Product",
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gậy 2m5",
+          "size": "Kẹo gậy 2m5",
+          "sku": "TT4M-074-50",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1650000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-gay-2m5",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#variant-274",
+          "type": "Product",
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tròn 1m2",
+          "size": "Kẹo tròn 1m2",
+          "sku": "TT4M-074-20",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "750000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/keo-gay-trang-tri-noel/?attribute_pa_kich-thuoc=keo-tron-1m2",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        }
+      ]
+    },
+    "pe": {
+      "type": "ProductGroup",
+      "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+      "productGroupID": "CT-PE-SNOW",
+      "variesBy": [
+        "https://schema.org/size"
+      ],
+      "offers": null,
+      "count": 4,
+      "variants": [
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#variant-373",
+          "type": "Product",
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m5",
+          "size": "1m5",
+          "sku": "CT-PE-150",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "850000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=1m5",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#variant-374",
+          "type": "Product",
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m8",
+          "size": "1m8",
+          "sku": "CT-PE-180",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1250000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=1m8",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#variant-375",
+          "type": "Product",
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m1",
+          "size": "2m1",
+          "sku": "CT-PE-210",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1850000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=2m1",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#variant-376",
+          "type": "Product",
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m4",
+          "size": "2m4",
+          "sku": "CT-PE-240",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "2650000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/?attribute_kich-thuoc=2m4",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        }
+      ]
+    },
+    "cuoc": {
+      "type": "ProductGroup",
+      "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+      "productGroupID": "CT-CUOC-PINE",
+      "variesBy": [
+        "https://schema.org/size"
+      ],
+      "offers": null,
+      "count": 3,
+      "variants": [
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#variant-378",
+          "type": "Product",
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m5",
+          "size": "1m5",
+          "sku": "CT-CUOC-150",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "750000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=1m5",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#variant-379",
+          "type": "Product",
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m8",
+          "size": "1m8",
+          "sku": "CT-CUOC-180",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1100000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=1m8",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        },
+        {
+          "id": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#variant-380",
+          "type": "Product",
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 2m1",
+          "size": "2m1",
+          "sku": "CT-CUOC-210",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+          "match": true,
+          "offer": {
+            "@type": "Offer",
+            "price": "1650000",
+            "priceCurrency": "VND",
+            "priceValidUntil": "2027-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/?attribute_kich-thuoc=2m1",
+            "seller": {
+              "@type": "Organization",
+              "@id": "https://trangtri4mua.com/",
+              "name": "Trang trí 4 mùa",
+              "url": "https://trangtri4mua.com",
+              "logo": ""
+            }
+          }
+        }
+      ]
+    },
+    "simple": {
+      "type": "Product",
+      "id": "https://trangtri4mua.com/san-pham/qua-chau-cuom/#richSnippet",
+      "name": "Quả châu cườm - Trang trí Noel - Giá | Trang trí 4 mùa",
+      "sku": "TT4M-079",
+      "offer": {
+        "@type": "Offer",
+        "price": "95000",
+        "priceCurrency": "VND",
+        "priceValidUntil": "2027-12-31",
+        "availability": "http://schema.org/InStock",
+        "itemCondition": "NewCondition",
+        "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+        "seller": {
+          "@type": "Organization",
+          "@id": "https://trangtri4mua.com/",
+          "name": "Trang trí 4 mùa",
+          "url": "https://trangtri4mua.com",
+          "logo": ""
+        }
+      }
+    }
+  },
+  "checks": {
+    "variableGroups": 4,
+    "totalVariants": 15,
+    "allIdentityMatch": true,
+    "simpleControl": {
+      "type": "Product",
+      "offerType": "Offer",
+      "price": "95000",
+      "currency": "VND"
+    },
+    "retainedFromR47": {
+      "all15VariantUrlsPreselectCorrect": true,
+      "allCanonicalsPointToGroup": true,
+      "thapMapping": "296/1m2/550000; 297/1m5/755000; 298/1m8/895000"
+    }
+  },
+  "richResultsTest": {
+    "resultUrl": "https://search.google.com/test/rich-results/result?id=xp49HVM_XXlJRXbFBciQTQ",
+    "summary": [
+      "Crawled successfully on Sep 25, 2026, 1:34:37 AM",
+      "Product snippets 1 valid item detected Non-critical issues detected",
+      "Merchant listings 3 valid items detected Non-critical issues detected"
+    ]
+  },
+  "current_total": {
+    "open": 20,
+    "p1": 6,
+    "p2": 9,
+    "p3": 5,
+    "closed_in_round": [
+      "R6-01"
+    ],
+    "new_issues": 0
+  },
+  "safety": {
+    "noCart": true,
+    "noForm": true,
+    "noOrder": true,
+    "browsersClosed": true
+  }
+}
