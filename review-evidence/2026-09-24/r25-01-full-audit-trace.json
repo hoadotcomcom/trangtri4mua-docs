@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T19:47:17.583Z",
+  "timestamp": "2026-09-24T19:55:23.692Z",
   "environment": {
     "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
     "viewport": {
@@ -138,6 +138,51 @@
     "emptyCtaNetworkAudit": {
       "variationIdBeforeClicks": "",
       "requestsCaptured": []
+    },
+    "touchendEventDirectReset": {
+      "description": "Direct touchend event dispatch on .reset_variations without synthesized click event",
+      "stateAfterTouchOnly": {
+        "selectValue": "",
+        "variationId": "",
+        "singleVarDisplay": "none",
+        "atcDisabled": true
+      }
+    },
+    "simpleProductQuantityMatrix": {
+      "url": "https://trangtri4mua.com/san-pham/qua-chau-cuom/",
+      "productType": "simple",
+      "viewports": [
+        {
+          "viewport": "Mobile 375px",
+          "qtyInitial": "1",
+          "qtyAfterPlus": "2",
+          "qtyAfterMinusTwiceBoundToMinOne": "1"
+        },
+        {
+          "viewport": "Desktop 1440px",
+          "qtyInitial": "1",
+          "qtyAfterPlus": "2",
+          "qtyAfterMinusTwiceBoundToMinOne": "1"
+        }
+      ]
+    },
+    "variableProductQuantityMatrix": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "productType": "variable",
+      "viewports": [
+        {
+          "viewport": "Mobile 375px",
+          "qtyInitial": "1",
+          "qtyAfterPlus": "2",
+          "qtyAfterMinusTwiceBoundToMinOne": "1"
+        },
+        {
+          "viewport": "Desktop 1440px",
+          "qtyInitial": "1",
+          "qtyAfterPlus": "2",
+          "qtyAfterMinusTwiceBoundToMinOne": "1"
+        }
+      ]
     }
   }
 }

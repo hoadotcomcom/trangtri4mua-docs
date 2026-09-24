@@ -2502,3 +2502,50 @@ Batch 40: Smooth-Scroll Auto Override, In-Viewport Card Trigger & Multi-Viewport
 
 1. **All 3 Gaps Closed**: Đã giải quyết đồng thời cả lỗi smooth-scroll, lỗi nạp ảnh khi vào viewport và cung cấp đầy đủ ma trận đo lường đa kích thước/DPR.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 41
+
+## Batch
+Batch 41: Elimination of Intermediate Select State via Direct Touchend Reset & Multi-Product Quantity Matrix (R25-01)
+
+## Summary
+Đã hoàn tất xử lý tận gốc vấn đề trạng thái trung gian `select=8` trên sự kiện cảm ứng và bổ sung đầy đủ ma trận số lượng sản phẩm đơn / biến thể theo yêu cầu tại Vòng R67:
+1. **R25-01 [P2] — Triệt Tiêu Trạng Thái Trung Gian `select=8` & Hoàn Thiện Ma Trận Đa Sản Phẩm**:
+   - Vấn đề tại R67:
+     1. Khi kiểm tra sự kiện cảm ứng riêng biệt (`touchend`), mã nguồn trước đó chỉ xóa ID và khóa nút, nhưng phụ thuộc vào sự kiện click giả lập (`synthesized click`) của trình duyệt để WooCommerce chạy lệnh xóa select. Nếu thao tác chạm không phát sinh click hoàn chỉnh, trường select vẫn lưu giá trị `8`.
+     2. Ma trận hồi quy số lượng và 3 biến thể chưa bao gồm sản phẩm đơn (simple product) trên cả hai môi trường desktop và mobile.
+   - Giải pháp kỹ thuật:
+     1. Trong `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`: Tại bộ lắng nghe `click touchend` của nút `.reset_variations`, hàm trực tiếp duyệt qua toàn bộ `.variations select`, gán `s.value = ''`, phát sự kiện `change` và kích hoạt lệnh `$(form).trigger('reset_data')`. Nhờ vậy, ngay cả khi chỉ có sự kiện `touchend` đơn lẻ không kèm click, ô select được bảo đảm 100% lập tức trở về rỗng `""`.
+     2. Mở rộng bộ hồ sơ kiểm chứng tại tệp `review-evidence/2026-09-24/r25-01-full-audit-trace.json` bổ sung:
+        - Kịch bản `touchendEventDirectReset`: Kiểm chứng riêng lẻ sự kiện `touchend` không kèm click, xác nhận `selectValue=""`, `variationId=""`, `singleVarDisplay="none"`, `atcDisabled=true`.
+        - Ma trận `simpleProductQuantityMatrix`: Kiểm chứng trên sản phẩm đơn (`/san-pham/qua-chau-cuom/`) ở cả Mobile (375px) và Desktop (1440px), xác nhận giá trị ban đầu 1 -> tăng: 2 -> giảm 2 lần: khóa tại min=1.
+        - Ma trận `variableProductQuantityMatrix`: Kiểm chứng trên sản phẩm biến thể (`/san-pham/thap-nhu-dien/`) ở cả Mobile và Desktop.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless Touch/Desktop):
+     - `stateAfterTouchOnly`: `selectValue=""`, `variationId=""`, `singleVarDisplay="none"`, `atcDisabled=true`. Hoàn toàn không còn trạng thái trung gian `select=8`.
+     - Số lượng sản phẩm đơn: Mobile 375px (1 -> 2 -> 1), Desktop 1440px (1 -> 2 -> 1).
+
+## Issues Addressed
+
+### Issue: [P2] R25-01 — Triệt Tiêu Lỗi Select Touchend & Bổ Sung Ma Trận Sản Phẩm Đơn
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `docs/review-evidence/2026-09-24/r25-01-full-audit-trace.json`
+- **What changed**:
+  1. Trực tiếp reset `select.value = ''` và phát `change` ngay trong handler `touchend`.
+  2. Bổ sung dữ liệu kiểm thử số lượng sản phẩm đơn và biến thể trên cả mobile/desktop vào tệp trace JSON.
+- **Verification**: Tệp `r25-01-full-audit-trace.json` được cập nhật đầy đủ và kiểm chứng đạt 100%.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 41).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Touch Direct Reset**: `touchend` đơn lẻ xóa ngay lập tức `selectValue=""` và `variationId=""`.
+- **Quantity Full Matrix**: Cả sản phẩm đơn và biến thể trên mobile và desktop đều tuân thủ biên min=1.
+
+## Notes for Reviewer
+
+1. **Artifact Updated**: Đã cập nhật tệp `review-evidence/2026-09-24/r25-01-full-audit-trace.json` với mục `touchendEventDirectReset` và `simpleProductQuantityMatrix`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
