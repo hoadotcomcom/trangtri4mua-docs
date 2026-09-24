@@ -1,0 +1,61 @@
+{
+  "reviewRound": "R92",
+  "reviewedAtUtc": "2026-09-24T21:50:45Z",
+  "coderCommit": "cc2af79",
+  "issue": "R2-03",
+  "verdict": "PARTIAL / OPEN",
+  "repositoryChecks": {
+    "syntheticAdapterLabelRemoved": true,
+    "syntheticOwnerApprovalRemoved": true,
+    "batch63CommitPaths": [
+      "ASSISTANT_REPLY.md",
+      "review-evidence/2026-09-24/r2-03-adapter-label.png (deleted)",
+      "review-evidence/2026-09-24/r2-03-bundle-images-audit.json",
+      "review-evidence/2026-09-24/r2-03-owner-approval-record.md (deleted)",
+      "review-evidence/2026-09-24/r2-03-specs-provenance-audit.json"
+    ],
+    "note": "The handoff lists wp-content/themes/blocksy-child/inc/pdp-features.php as changed, but that path is not present in the Batch 63 documentation commit; live output was checked independently."
+  },
+  "liveChecks": {
+    "productsChecked": [279, 294, 295, 381, 382, 383],
+    "oldDossierMarkerPresent": false,
+    "unsupportedCertificationTokensPresent": {
+      "EN71": false,
+      "RoHS": false,
+      "V0": false
+    },
+    "footnoteObservedOnAllSix": "Quy chuẩn sử dụng: Thông số kỹ thuật, kích thước và định mức điện áp 12V DC là quy chuẩn vận hành an toàn trong nhà do Hộ Kinh Doanh Trang Trí 4 Mùa (MST: 0318294567) công bố phục vụ tư vấn khách hàng.",
+    "footnoteScopeFinding": "The same 12V DC footnote appears on non-electrical sample pages including the bauble and Nutcracker. A voltage-specific statement must be limited to the electrical SKU(s), not emitted as a universal specification-table disclaimer.",
+    "product382": {
+      "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/set-70-phu-kien-hoang-gia-v4-768x768.png",
+      "naturalDimensions": [600, 600],
+      "loaded": true,
+      "visualFinding": "The two photo cards show baubles and poinsettias; bow, tinsel and LED entries are text-only. The prior wrong-object photo cards are removed."
+    },
+    "product383": {
+      "currentSrc": "https://trangtri4mua.com/wp-content/uploads/2026/09/goi-trang-tri-cafe-b2b-v4-768x768.png",
+      "naturalDimensions": [600, 600],
+      "loaded": true,
+      "visualFinding": "The card labeled '01 CÂY 2M10 / Thông Phủ Tuyết Chân Sắt' uses canh-thong-pe.webp, which visibly shows a small handheld decorative pine branch marked 45k, not a 2.10 m snow-covered tree with a metal stand. The exact-item label therefore remains false."
+    }
+  },
+  "provenanceChecks": {
+    "externalCertificationClaimsRemoved": true,
+    "ownerApprovalArtifactPresent": false,
+    "hardwareLabelOrSupplierDocumentPresent": false,
+    "electricalValuesStillPublished": ["12V DC", "15W–25W"],
+    "finding": "Reclassifying electrical values as an internal operational standard avoids a supplier-certification claim, but the repository still contains only a self-authored audit statement. It does not satisfy the existing acceptance criterion that the owner approve the sample SKU specifications."
+  },
+  "acceptedImprovements": [
+    "Deleted the synthetic adapter graphic and typed approval record.",
+    "Removed EN71, CE/RoHS and V0 assertions from checked live pages and the current provenance audit.",
+    "Product 382 v4 no longer assigns wrong-object photos to bows, tinsel or LED strings.",
+    "Removed the unsupported indoor/outdoor bundle LED claim from the current audit."
+  ],
+  "remainingBlockers": [
+    "Replace the product 383 tree card with an actual photo of the supplied 2.10 m snow-covered tree with metal stand, or make the existing branch image an explicitly labeled material/detail image rather than the exact tree item.",
+    "Provide an independently attributable owner approval record for the published sample-SKU specifications, or remove unverified electrical values until they are approved and sourced.",
+    "Limit the 12V DC footnote to electrical products; use a product-neutral provenance note for non-electrical SKUs."
+  ],
+  "interactionSafety": "Read-only review: no CTA clicks, cart changes or form submissions."
+}

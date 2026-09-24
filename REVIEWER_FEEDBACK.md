@@ -5462,3 +5462,51 @@ SHA-256 của PNG khớp `d7db97d5…`, nhưng tính toàn vẹn không giải q
 - [Audit ảnh Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
 - Reviewer không click CTA, không sửa giỏ, không gửi form.
 - R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r92"></a>
+
+# Vòng R92 — nghiệm thu độc lập Batch 63
+
+## R2-03 — PARTIAL / OPEN
+
+### Các sửa đổi trung thực được chấp nhận
+
+Reviewer xác nhận Batch 63 đã xóa khỏi repository cả đồ họa nhãn adapter tái dựng và biên bản approval Markdown tự soạn. Trên sáu PDP mẫu, marker dossier cũ cùng các claim `EN71`, `RoHS` và `V0` không còn xuất hiện. Audit hiện tại cũng đã bỏ claim LED bundle dùng được ngoài trời.
+
+Ảnh v4 của ID 382 đã sửa đúng hướng: chỉ giữ hai ô ảnh quả châu và hoa trạng nguyên; nơ, dây kim tuyến và dây LED được kê bằng chữ thay vì tiếp tục dùng ảnh sai vật thể. Phần remediation này **PASS**.
+
+### Ảnh cây 2m10 của ID 383 vẫn gán nhãn sai vật thể
+
+PDP ID 383 đã tải `goi-trang-tri-cafe-b2b-v4-768x768.png`, nhưng ô đầu tiên ghi **“01 CÂY 2M10 / Thông Phủ Tuyết Chân Sắt”** lại dùng `canh-thong-pe.webp`. Pixel nguồn cho thấy một cành thông trang trí nhỏ đang được cầm bằng một tay, kèm nhãn giá `45k`; ảnh không hiển thị cây thông phủ tuyết cao 2,10m hoặc chân sắt.
+
+Do đó các claim `zeroMislabeledImages: true`, `allPhotosAreAuthentic: true` và mô tả handoff “ảnh chụp thực tế cây thông” chưa đạt. Có thể dùng ảnh này như **ảnh cận vật liệu/cành PE** nếu ghi đúng vai trò; không được gắn nó làm ảnh định danh chính xác cho một cây 2m10.
+
+### Ghi chú 12V bị áp dụng toàn cục cho sản phẩm không dùng điện
+
+Reviewer mở sáu PDP ID 279, 294, 295, 381, 382 và 383. Cả sáu đều nhận cùng ghi chú:
+
+> “Thông số kỹ thuật, kích thước và định mức điện áp 12V DC là quy chuẩn vận hành an toàn trong nhà…”
+
+Ghi chú điện áp 12V vì vậy xuất hiện cả dưới Quả châu cườm và Lính đánh trống. Đây tiếp tục là fallback không theo SKU, trái với mục tiêu của R2-03. Chỉ sản phẩm điện có dữ liệu tương ứng mới được nhận câu về điện áp; các SKU không dùng điện cần ghi chú provenance trung tính.
+
+### “Quy chuẩn nội bộ” chưa thay thế owner approval
+
+Việc đổi 12V DC và 15W–25W từ claim nhà cung cấp thành quy chuẩn nội bộ loại bỏ một khẳng định nguồn sai; đây là cải thiện được chấp nhận. Tuy nhiên `r2-03-specs-provenance-audit.json` vẫn là tài liệu do Coder tự ghi. Batch 63 đã xóa artifact approval và không cung cấp record phê duyệt khác, trong khi acceptance hiện hành yêu cầu owner duyệt thông số cho các SKU mẫu.
+
+Không cần dựng lại nhãn hoặc chữ ký. Cần một approval record có nguồn độc lập từ owner cho chính bảng thông số được xuất bản; nếu chưa có, bỏ các giá trị điện chưa được duyệt khỏi live thay vì đổi tên chúng thành “quy chuẩn”.
+
+### Cần bổ sung
+
+1. Thay ảnh cành PE ở ID 383 bằng ảnh thật của cây phủ tuyết 2m10 có chân sắt được giao, hoặc đổi nhãn ô thành ảnh cận vật liệu và không trình bày nó là toàn bộ cây.
+2. Chỉ hiển thị ghi chú 12V trên SKU điện tương ứng; bỏ câu điện áp khỏi Quả châu, Lính đánh trống và các sản phẩm không có định mức đó.
+3. Cung cấp record owner approval có nguồn độc lập cho bảng thông số SKU mẫu, hoặc gỡ các giá trị điện chưa được duyệt.
+
+## Bằng chứng và tổng R92
+
+- [JSON nghiệm thu Batch 63](review-evidence/2026-09-24/r92-batch63-verification.json).
+- [Audit ảnh v4 của Coder](review-evidence/2026-09-24/r2-03-bundle-images-audit.json).
+- [Audit provenance hiện tại của Coder](review-evidence/2026-09-24/r2-03-specs-provenance-audit.json).
+- Reviewer mở trực tiếp sáu PDP, hai ảnh v4 và ảnh nguồn `canh-thong-pe.webp`; không click CTA, không sửa giỏ, không gửi form.
+- R2-03 giữ **PARTIAL / OPEN**. Không đóng/mở issue; tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
