@@ -1724,3 +1724,49 @@ Batch 26: Full W3C ARIA APG Combobox aria-activedescendant Implementation (R12-0
 
 1. **APG Combobox Proven**: Đã kiểm chứng đầy đủ chuỗi sự kiện `ArrowDown` -> `aria-activedescendant` -> `aria-selected` trên trình duyệt Chromium headless.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 27
+
+## Batch
+Batch 27: Direct Container Slide Translation & Eager Image Loading for Nutcracker Gallery (R21-01, R21-02)
+
+## Summary
+Đã hoàn tất xử lý tận gốc cơ chế chuyển dịch slide và tải ảnh thực tế của Gallery sản phẩm Nutcracker được chỉ ra tại Vòng R53:
+1. **R21-01 & R21-02 [P2] — Dịch chuyển trực tiếp container `.flexy-items` và kích hoạt tải ảnh eager**:
+   - Nguyên nhân tại R53: Việc dựa vào biến CSS `--current-item` trên các phần tử con không làm dịch chuyển container chính (computed transform vẫn là ma trận identity `none`), đồng thời ảnh thứ 3 mang thuộc tính `loading="lazy"` khi nằm ngoài màn hình nên trình duyệt không tải tài nguyên (`currentSrc=""`, `naturalWidth=0`).
+   - Giải pháp:
+     - Trong `single-product.css`: Thiết lập `.woocommerce-product-gallery .flexy-items` có `display: flex !important; flex-wrap: nowrap !important; width: 100% !important; transition: transform 300ms cubic-bezier(0.25, 1, 0.5, 1) !important; will-change: transform;` và khóa các phần tử con `.flexy-item` ở `transform: none !important;`.
+     - Trong `theme-scripts.js`: Hàm `goToSlide(index)` trực tiếp đặt thuộc tính `flexyItems.style.transform = 'translate3d(-' + (index * 100) + '%, 0px, 0px)'`. Đồng thời, tự động chuyển đổi thuộc tính `loading="eager"` cho ảnh mục tiêu (`targetImg.loading = 'eager'`) để kích hoạt trình duyệt tải và giải mã ảnh ngay lập tức mà không cần chờ người dùng tương tác thêm.
+   - Kiểm chứng thực tế (Chromium headless 375×812):
+     - Click thumbnail 3: Container dịch chuyển chính xác `computedTransform="matrix(1, 0, 0, 1, -656, 0)"`, ảnh 3 tải thành công (`complete=true`, `naturalWidth=328`, `currentSrc="linh-chi-nutcracker-3-454x1024.webp"`). Phép thử `elementFromPoint` tại tâm viewport trả về đúng 100% `linh-chi-nutcracker-3.webp`.
+     - Bấm phím Space trên thumbnail 1: Container lập tức hồi chuyển về `matrix(1, 0, 0, 1, 0, 0)`, `elementFromPoint` trả về đúng `linh-chi-nutcracker-1-600x594.webp`.
+
+## Issues Addressed
+
+### Issue: [P2] R21-01 & R21-02 — Cơ chế chuyển slide thực tế qua container transform & tải ảnh eager
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/css/single-product.css`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. CSS: Thiết lập thuộc tính `transition: transform` trực tiếp trên container `.flexy-items`, xóa bỏ transform trên slide con.
+  2. JS: Gán inline `transform: translate3d(-index*100%, 0, 0)` trên container và chuyển `loading="eager"` trên ảnh mục tiêu.
+- **Verification**: Chromium headless kiểm tra trực tiếp:
+  - Chọn thumbnail 3: `computedTransform="matrix(1, 0, 0, 1, -656, 0)"`, `hitSrc="linh-chi-nutcracker-3.webp"`, `activeThumb=2`.
+  - Bấm Space thumbnail 1: `computedTransform="matrix(1, 0, 0, 1, 0, 0)"`, `hitSrc="linh-chi-nutcracker-1-600x594.webp"`, `activeThumb=0`.
+- **Notes**: Xử lý dứt điểm cả hai nguyên nhân: lỗi transform identity và lỗi ảnh lười biếng ngoài màn hình chưa tải.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 27).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Container Transform**: Dịch chuyển chính xác giữa `0px` và `-656px` khi chọn slide.
+- **Eager Image Trigger**: Ảnh thứ 3 tự động tải và hiển thị hoàn chỉnh khi chuyển slide.
+- **Visual Hit-Test**: 100% tâm viewport hiển thị đúng ảnh của slide được kích hoạt.
+
+## Notes for Reviewer
+
+1. **Direct Translation Proven**: Đã loại bỏ hoàn toàn cơ chế phụ thuộc biến CSS gián tiếp, thay bằng dịch chuyển container trực tiếp và kích hoạt tải ảnh eager.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
