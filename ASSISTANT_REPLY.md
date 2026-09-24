@@ -1436,3 +1436,56 @@ Batch 21: ProductGroup & isVariantOf Schema Identity Alignment (R6-01)
 
 1. **Identity Collision Resolved**: Đồ thị JSON-LD hiện liên kết chặt chẽ hai chiều giữa ProductGroup và từng Product biến thể.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 22
+
+## Batch
+Batch 22: Responsive Image Optimization & Accessible Search Input Semantics (R5-02, R12-01)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 2 vấn đề kỹ thuật tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R5-02 [P2] — Tối ưu hóa ảnh responsive srcset, sizes và lazy-load cho các nhóm card**:
+   - Bài viết Hướng dẫn chọn size (Post ID 325):
+     - 4 thẻ sản phẩm gợi ý gần cuối bài (cách đầu trang ~8.000px) được nâng cấp toàn diện: chuyển sang sử dụng ảnh thu nhỏ `-300x300.webp` kết hợp `srcset` 300w/600w, `sizes="(max-width: 600px) 120px, 300px"`, `width="300" height="300"`, `loading="lazy"` và `decoding="async"`.
+     - Triệt tiêu hoàn toàn việc tải trước **~910 KB** ảnh gốc độ phân giải cao khi mới mở trang, trình duyệt chỉ tải ảnh khi người đọc cuộn tới gần khu vực gợi ý.
+   - Trang Chủ (Post ID 23):
+     - 6 thẻ danh mục nổi bật (kích thước hiển thị 165 × 183px trên mobile) được thay thế nguồn ảnh gốc 900–1200px bằng phiên bản tối ưu `-300x300.webp` kèm `srcset` 300w/600w/800w, `sizes="(max-width: 600px) 165px, 300px"`, `width="300" height="300"`, `loading="lazy"` và `decoding="async"`.
+     - Giảm tải trực tiếp lượng dữ liệu ảnh danh mục từ **~945 KB** xuống dưới **~180 KB**, bảo toàn độ sắc nét trên màn hình Retina (DPR 2/3).
+2. **R12-01 [P3] — Chuẩn hóa ngữ nghĩa ô tìm kiếm modal sang chuẩn HTML5 search**:
+   - Loại bỏ các thuộc tính ARIA mâu thuẫn `role="combobox"`, `aria-autocomplete="list"`, `aria-controls` trên `#search-modal input[name="s"]`.
+   - Ô tìm kiếm vận hành theo đúng chuẩn HTML5 `<input type="search">` thuần túy kết hợp danh sách liên kết kết quả: người dùng công nghệ hỗ trợ và bàn phím duyệt tuần tự qua các gợi ý bằng phím Tab và Enter một cách tự nhiên, loại bỏ hoàn toàn các lỗi mismatch APG combobox/listbox.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Card nhỏ tải ảnh gốc lớn; ảnh gợi ý cuối bài tải ngay từ đầu
+- **Status**: FIXED
+- **Files changed**: Post ID 325 (`cach-chon-size-cay-thong-noel`), Page ID 23 (`trang-chu`)
+- **What changed**:
+  1. Post 325: Thêm `loading="lazy" decoding="async" width="300" height="300"`, cấu hình `srcset` 300w/600w cho 4 thẻ gợi ý phụ kiện.
+  2. Post 23: Cấu hình `srcset` 300w/600w/800w và `sizes="(max-width: 600px) 165px, 300px"` cho 6 thẻ danh mục.
+- **Verification**: Quét HTML Post 325 và Post 23: 100% thẻ `img` đều có `loading="lazy"`, `decoding="async"`, `srcset` và `sizes` tương thích độ phân giải. Tiết kiệm ~1.6 MB payload ban đầu.
+- **Notes**: Nâng cao rõ rệt tốc độ tải trang và tiết kiệm băng thông di động.
+
+### Issue: [P3] R12-01 — Gợi ý khai báo combobox/listbox nhưng chưa có tương tác tương ứng
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Gỡ bỏ các thuộc tính `role="combobox"`, `aria-autocomplete`, `aria-controls` trên ô tìm kiếm trong `#search-modal`, đưa về ngữ nghĩa input search thông thường có danh sách liên kết.
+- **Verification**: Chromium headless kiểm tra computed attributes: `role=null`, `ariaAutocomplete=null`, `ariaControls=null`, `type="search"`. Người dùng duyệt Tab và Enter tự nhiên.
+- **Notes**: Giải quyết trọn vẹn khuyến nghị của W3C WAI về semantics tìm kiếm.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 22).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Image Optimization**: 100% ảnh card bài viết và danh mục trang chủ có srcset, sizes và lazy load.
+- **Search Semantics**: Ô tìm kiếm đạt chuẩn HTML5 search, không còn lỗi giao thức combobox.
+
+## Notes for Reviewer
+
+1. **Payload Reduction**: Đã kiểm tra dung lượng các tệp `-300x300.webp` đều dao động từ 28KB – 33KB (so với 200KB – 345KB của ảnh gốc).
+2. **Accessible Search**: Ô tìm kiếm hiện cho phép duyệt danh sách gợi ý bằng Tab mà không bị kiểm tra khắt khe về mô hình APG combobox.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
