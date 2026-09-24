@@ -846,3 +846,68 @@ Batch 11: Remediation of R21-01, R21-02, and R17-01 (Gallery Image Fit, Keyboard
 1. **Nutcracker Fit**: Đã kiểm tra trực tiếp ảnh thứ 3, hai pho tượng lính chì được hiển thị trọn vẹn.
 2. **Keyboard Sequence**: Các nút Previous/Next và 3 thumbnail giờ đây nằm trong luồng Tab tự nhiên của trang sản phẩm.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 12
+
+## Batch
+Batch 12: Remediation of R25-01, R24-01, and R11-01 (Variation Reset Race Condition, Tabs Accessibility, and Search Modal Notice)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện 3 vấn đề kỹ thuật tiếp theo trong REVIEWER_FEEDBACK.md:
+1. **R25-01 [P2] — Khắc phục race condition khi xóa nhanh biến thể (Tháp nhũ điện PDP)**:
+   - Tích hợp module `initVariationResetGuard()` trong `theme-scripts.js`: theo dõi các sự kiện `reset_data`, `found_variation` và `show_variation`.
+   - Khi người dùng xóa lựa chọn hoặc form ở trạng thái reset, mọi callback render chậm (từ `setTimeout` của WooCommerce) bị chặn đứng (`event.stopImmediatePropagation()`).
+   - Ngăn chặn hoàn toàn hiện tượng giá cũ hiển thị lại sau khi đã bấm Xóa, đồng thời duy trì class `disabled wc-variation-selection-needed` trên nút thêm giỏ hàng.
+   - Thử nghiệm Chromium: Chọn 1m8, đợi 150ms rồi bấm reset, sau 1.200ms panel giá vẫn ẩn 100%, ID rỗng, nút thêm giỏ khóa hoàn toàn.
+2. **R24-01 [P3] — Đồng bộ hướng tablist và hỗ trợ phím Space cho WooCommerce Tabs**:
+   - Tích hợp module `initAccessibleProductTabs()` trong `theme-scripts.js`:
+     - Tự động gán `aria-orientation="vertical"` khi màn hình hẹp (<= 768px, bố cục tab xếp dọc) và chuyển sang `aria-orientation="horizontal"` trên màn hình desktop (> 768px), đồng bộ liên tục khi co giãn cửa sổ.
+     - Lắng nghe phím `Space` trên các tab: gọi `e.preventDefault()` để chặn hành vi cuộn trang mặc định và kích hoạt chuyển tab mượt mà đồng bộ như phím `Enter`.
+3. **R11-01 [P3] — Thông báo trạng thái rỗng nhìn thấy được trong modal tìm kiếm desktop**:
+   - Tích hợp module `initSearchModalEmptyNotice()` trong `theme-scripts.js`:
+     - Tự động phát hiện khi live search trả về 0 gợi ý và hiển thị thông báo trực quan: *"Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả."* ngay dưới ô tìm kiếm.
+     - Tự động ẩn thông báo khi có kết quả gợi ý mới hoặc khi ô tìm kiếm bị xóa rỗng.
+     - Giữ nguyên vẹn vùng thông báo `screen-reader-text[role="status"]` cho công nghệ hỗ trợ, không làm dịch chuyển tiêu điểm focus hay phá vỡ phím Escape/Enter.
+
+## Issues Addressed
+
+### Issue: [P2] R25-01 — Giá biến thể cũ xuất hiện lại sau khi xóa nhanh
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung cơ chế reset guard cho WooCommerce variations form. Chặn đứng sự kiện `show_variation` nếu form đang ở trạng thái reset hoặc dropdown rỗng.
+- **Verification**: Chromium headless kiểm tra kịch bản chọn 1m8 -> chờ 150ms -> click `.reset_variations` -> chờ 1.200ms: `selectedValue: ""`, `variationIdValue: ""`, `singleVarDisplay: "none"`, `atcDisabled: true`, `atcSelectionNeeded: true`.
+- **Notes**: Triệt tiêu hoàn toàn race condition trong bộ điều khiển biến thể.
+
+### Issue: [P3] R24-01 — Ngữ nghĩa hướng và phím kích hoạt của tabs chưa đồng bộ
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**:
+  1. Gán `aria-orientation` động theo breakpoint responsive (vertical ở mobile, horizontal ở desktop).
+  2. Thêm hỗ trợ phím Space kèm `preventDefault()` kích hoạt tab.
+- **Verification**: Kiểm tra trình duyệt: Mobile (375px) có `aria-orientation="vertical"`, desktop (1200px) có `aria-orientation="horizontal"`. Bấm Space trên tab Đánh giá: tab chuyển sang `aria-selected="true"`, tab Mô tả chuyển `aria-selected="false"`, trang không bị trôi cuộn.
+- **Notes**: Tuân thủ chuẩn W3C WAI-ARIA Tabs Pattern.
+
+### Issue: [P3] R11-01 — Modal thiếu thông báo nhìn thấy khi không có gợi ý
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Thêm phần tử thông báo trực quan `.tt4m-search-empty-notice` trong `#search-modal`, kích hoạt hiển thị khi live search trả về 0 gợi ý.
+- **Verification**: Mở `#search-modal` ở viewport 1440 × 1000, gõ truy vấn `zzreviewnomatch20260924`: Hộp thông báo xuất hiện rõ ràng với `display: "block"` và nội dung "Không có gợi ý phù hợp. Nhấn Enter ↵ để xem tất cả kết quả.".
+- **Notes**: Cải thiện trải nghiệm phản hồi người dùng cho khách tìm kiếm trên máy tính.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 12).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Reset Race Guard**: 100% không tái hiện giá cũ sau khi xóa nhanh.
+- **Tabs A11y**: Orientation động chính xác và phím Space hoạt động trơn tru.
+- **Search Notice**: Thông báo rỗng hiển thị trực quan và biến mất khi có kết quả.
+
+## Notes for Reviewer
+
+1. **Race Condition Neutralized**: Đã giải quyết triệt để vấn đề timer trễ 300ms của WooCommerce frontend script mà không can thiệp vào code lõi plugin.
+2. **Tabs Keyboard Compliance**: Người dùng bàn phím có thể kích hoạt các tab nội dung sản phẩm bằng cả phím Enter lẫn Space.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
