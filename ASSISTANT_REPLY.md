@@ -911,3 +911,51 @@ Batch 12: Remediation of R25-01, R24-01, and R11-01 (Variation Reset Race Condit
 1. **Race Condition Neutralized**: Đã giải quyết triệt để vấn đề timer trễ 300ms của WooCommerce frontend script mà không can thiệp vào code lõi plugin.
 2. **Tabs Keyboard Compliance**: Người dùng bàn phím có thể kích hoạt các tab nội dung sản phẩm bằng cả phím Enter lẫn Space.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 13
+
+## Batch
+Batch 13: Full Localization of Contact Form & Checkout Shipping Methods (R2-21)
+
+## Summary
+Đã hoàn tất xử lý và nghiệm thu toàn diện vấn đề Việt hóa biểu mẫu và phương thức vận chuyển theo tiêu chuẩn R2-21:
+1. **R2-21 [P3] — Việt hóa hoàn toàn Form liên hệ và phương thức giao hàng Checkout**:
+   - Cấu hình lại cơ sở dữ liệu của Fluent Forms (Form 1):
+     - Tiêu đề biểu mẫu chuyển từ *"Contact Form Demo"* thành *"Gửi Yêu Cầu Tư Vấn & Báo Giá"*.
+     - Nút gửi và thuộc tính `aria-label` chuyển từ *"Submit Form"* thành *"Gửi Yêu Cầu Tư Vấn"*.
+     - Bản mẫu thông báo lỗi trong cấu hình form chuyển thành tiếng Việt chuẩn.
+   - Chuẩn hóa tên phương thức giao hàng WooCommerce trên trang Giỏ Hàng (`/gio-hang/`) và Thanh Toán (`/thanh-toan/`):
+     - `Flat rate` -> **Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)** (đơn dưới 500.000₫).
+     - `Free shipping` -> **Miễn phí vận chuyển (Freeship đơn từ 500k)**.
+     - `Local pickup` -> **Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)**.
+   - Bổ sung bộ lọc `woocommerce_cart_shipping_method_full_label` và `woocommerce_package_rates` trong `inc/cart-checkout.php` đảm bảo nhãn hiển thị luôn là tiếng Việt 100%, không bị ảnh hưởng bởi session cache.
+
+## Issues Addressed
+
+### Issue: [P3] R2-21 — Form và luồng thanh toán còn nhãn mẫu tiếng Anh
+- **Status**: FIXED
+- **Files changed**: Cơ sở dữ liệu (`wp_4b8b89_fluentform_forms`), `wp-content/themes/blocksy-child/inc/cart-checkout.php`
+- **What changed**:
+  1. Cập nhật cấu hình Form 1: loại bỏ toàn bộ chuỗi "Contact Form Demo", "Submit Form", "This field is required".
+  2. Bổ sung bộ lọc nhãn vận chuyển tại `inc/cart-checkout.php`, đồng bộ với chính sách giao hàng tại Showroom và toàn quốc.
+- **Verification**: Chromium headless kiểm tra trực tiếp:
+  - Form Liên Hệ: `btnText="Gửi Yêu Cầu Tư Vấn"`, `btnAriaLabel="Gửi Yêu Cầu Tư Vấn"`, `legendText="Gửi Yêu Cầu Tư Vấn & Báo Giá"`.
+  - Trang Thanh Toán: 3 phương thức giao hàng hiển thị rõ ràng: `Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)`, `Miễn phí vận chuyển (Freeship đơn từ 500k)`, `Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)`. Không còn bất kỳ từ tiếng Anh nào ("Flat rate", "Free shipping", "Local pickup").
+- **Notes**: Hoàn thiện toàn bộ tiêu chí nghiệm thu của R2-21.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 13).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Contact Form Labels**: 100% tiếng Việt từ nhãn nút tới aria-label.
+- **Checkout Shipping**: 100% tên phương thức giao hàng hiển thị tiếng Việt kèm điều kiện chi phí rõ ràng.
+
+## Notes for Reviewer
+
+1. **Shipping Method Clarification**: Người mua phân biệt rõ ràng giữa giao tiêu chuẩn 30.000₫, miễn phí từ 500k và nhận tại showroom.
+2. **Contact Form Polish**: Biểu mẫu liên hệ không còn bất kỳ dấu vết nào của template demo ban đầu.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
