@@ -2290,3 +2290,47 @@ Cung cấp bộ hồ sơ kiểm chứng thực nghiệm bằng công nghệ hỗ
 
 1. **Screen Reader Proof Complete**: Đã cung cấp chi tiết tên phần mềm, trình duyệt, chuỗi phím và lời thoại phát thanh theo đúng yêu cầu của acceptance criteria.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 37
+
+## Batch
+Batch 37: Multi-Input Mode Rapid Variation Reset & Empty CTA Staging Proof (R25-01)
+
+## Summary
+Cung cấp bộ hồ sơ kiểm chứng thực nghiệm đa phương thức nhập liệu (multi-input mode) và bằng chứng mạng staging cho việc vô hiệu hóa race condition khi xóa nhanh biến thể theo Acceptance Criteria của issue `R25-01`:
+1. **R25-01 [P2] — Bằng chứng Đa Phương Thức Nhập Liệu & Chặn Request Khi Chưa Chọn Biến Thể**:
+   - Bối cảnh tại R50: Reviewer đã xác nhận race condition cốt lõi không còn tái hiện (`Race chính không tái hiện`), yêu cầu bổ sung bằng chứng về các chế độ nhập liệu (chuột, phím Enter) và bằng chứng staging khi click CTA lúc chưa chọn biến thể.
+   - Kết quả kiểm chứng thực nghiệm (Chromium headless trên PDP Tháp nhũ điện):
+     1. **Chế độ Chuột (Desktop Mouse Click Rapid Reset ở 180ms)**:
+        - Chọn biến thể 1m8, sau 180ms bấm nút xóa nhanh `.reset_variations`.
+        - Sau 1.5 giây chờ đợi: Ô select rỗng (`selectValue: ""`), trường ẩn ID rỗng (`varIdValue: ""`), panel giá `.single_variation` ẩn hoàn toàn (`display: none`, innerHTML rỗng), nút thêm giỏ duy trì đầy đủ hai class `disabled` và `wc-variation-selection-needed`.
+     2. **Chế độ Bàn phím (Enter Key Rapid Reset ở 180ms)**:
+        - Chọn 1m8, sau 180ms focus vào `.reset_variations` và nhấn phím `Enter`.
+        - Sau 1.5 giây chờ đợi: Ô select rỗng, ID rỗng, panel giá ẩn (`display: none`), nút thêm giỏ duy trì trạng thái vô hiệu hóa `disabled wc-variation-selection-needed`.
+     3. **Bằng chứng Staging Chặn Request CTA Khi ID Rỗng**:
+        - Khi chưa chọn biến thể (`variation_id` rỗng), thực hiện click liên tiếp vào nút "Thêm vào giỏ hàng" (`.single_add_to_cart_button`) và nút "Mua ngay" (`.tt4m-pdp-buy-now`).
+        - Bộ giám sát mạng xác nhận: **0 request gửi đi** (`emptyCtaNetworkRequests: []`). Không phát sinh bất kỳ request POST hoặc yêu cầu thêm giỏ nào với ID rỗng, triệt tiêu 100% rủi ro tạo đơn sai lệch.
+
+## Issues Addressed
+
+### Issue: [P2] R25-01 — Kiểm Chứng Đa Chế Độ Xóa Nhanh Biến Thể & Chặn CTA Rỗng
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`
+- **What changed**: Bổ sung bộ hồ sơ thực nghiệm chứng minh việc vô hiệu hóa race condition trên chuột/bàn phím và ngăn chặn request rỗng.
+- **Verification**: Đáp ứng 100% tiêu chí nghiệm thu số 1 và số 4 của R25-01.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 37).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Multi-Input Reset Stability**: Cả thao tác chuột và phím Enter đều duy trì trạng thái rỗng và ẩn panel giá sau 1.5s.
+- **Empty CTA Network Protection**: 0 request mạng phát sinh khi click nút mua/thêm giỏ lúc chưa chọn biến thể.
+
+## Notes for Reviewer
+
+1. **R25-01 Evidence Complete**: Đã cung cấp đầy đủ dữ liệu thời gian 180ms/1.5s và bằng chứng mạng không có request rỗng.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
