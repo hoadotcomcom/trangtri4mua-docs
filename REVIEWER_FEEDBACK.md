@@ -3089,3 +3089,32 @@ Chưa kiểm đủ success path, sticky, double-click, giỏ đã có hàng và 
 - Không xác minh đơn lịch sử, owner approval, nhãn/vật liệu, giấy đăng ký/MST, tài khoản thụ hưởng, review/case study, retention backend hoặc quyền GSC.
 - Không gửi form/bình luận, gọi/Zalo, thêm giỏ hoặc đặt đơn. Cuối vòng giỏ 0₫; browser riêng đã đóng.
 - Bộ bằng chứng gồm **1 JSON + 8 screenshot**. Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
+
+---
+
+<a id="round-r36"></a>
+
+# Vòng R36 — Bổ sung bằng chứng inventory R2-06
+
+R35 đã gọi “toàn inventory” nhưng phép crawl 113 URL chỉ hợp nhất `page`, `post`, `product` và `product_cat`; còn thiếu hai URL trong `category-sitemap.xml`, đồng thời mới so số lượng Store API với product sitemap. R36 sửa khoảng trống bằng chứng này, không có bàn giao Coder mới.
+
+## Category sitemap
+
+`category-sitemap.xml` trả 200 và chứa hai URL:
+
+| URL | HTTP | Redirect | Canonical | Robots |
+|---|---:|---|---|---|
+| `/category/y-tuong-trang-tri/noel/` | 200 | Không | Self-canonical | `index, follow` |
+| `/category/y-tuong-trang-tri/huong-dan/` | 200 | Không | Self-canonical | `index, follow` |
+
+Cả hai không có `X-Robots-Tag: noindex`.
+
+## Đối chiếu inventory product bằng URL
+
+- `product-sitemap.xml`: 95 loc, gồm `/cua-hang/` và **94 URL PDP**.
+- Store API: header `X-WP-Total=94`, response `per_page=100` trả đủ **94 product**.
+- Chuẩn hóa trailing slash rồi so tập permalink: **0 URL chỉ có trong sitemap, 0 URL chỉ có trong API, exact set match = true**.
+
+Như vậy hai phần từng thiếu đã được kiểm trực tiếp. Verdict **R2-06 CLOSED** của R35 được giữ; tổng hiện hành không đổi: **33 OPEN — 9 P1, 18 P2, 6 P3**.
+
+Bằng chứng: [JSON correction R36](review-evidence/2026-09-24/r36-r2-06-inventory-correction.json).

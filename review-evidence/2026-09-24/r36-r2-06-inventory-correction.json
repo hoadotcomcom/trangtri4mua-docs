@@ -1,0 +1,47 @@
+{
+  "observed_at_utc": "2026-09-24T17:07:11.405Z",
+  "category": {
+    "sitemap": {
+      "status": 200,
+      "locs": [
+        "https://trangtri4mua.com/category/y-tuong-trang-tri/noel/",
+        "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/"
+      ]
+    },
+    "pages": [
+      {
+        "url": "https://trangtri4mua.com/category/y-tuong-trang-tri/noel/",
+        "status": 200,
+        "location": null,
+        "canonical": "https://trangtri4mua.com/category/y-tuong-trang-tri/noel/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "xRobots": null
+      },
+      {
+        "url": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+        "status": 200,
+        "location": null,
+        "canonical": "https://trangtri4mua.com/category/y-tuong-trang-tri/huong-dan/",
+        "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        "xRobots": null
+      }
+    ]
+  },
+  "products": {
+    "sitemapStatus": 200,
+    "sitemapTotal": 95,
+    "sitemapProductCount": 94,
+    "containsShopArchive": true,
+    "apiStatus": 200,
+    "apiHeaderTotal": 94,
+    "apiReturned": 94,
+    "onlyInSitemap": [],
+    "onlyInApi": [],
+    "exactSetMatch": true
+  },
+  "conclusion": {
+    "issue": "R2-06",
+    "status": "CLOSED",
+    "reason": "Hai URL category sitemap đều direct 200, self-canonical, index/follow; tập 94 permalink Store API trùng chính xác 94 URL PDP trong product sitemap sau khi loại shop archive."
+  }
+}
