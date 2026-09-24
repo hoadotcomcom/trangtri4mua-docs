@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R103 — nghiệm thu độc lập Batch 71](#round-r103), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-05 và R2-02 giữ **PARTIAL / OPEN**. Batch 71 đã đạt phần selector, cart trace và ảnh variation của R2-02, nhưng artifact chưa định danh môi trường/database của order fixture `470`, nên chưa thể kết luận đây là production fixture hoặc thực hiện cleanup theo ID.
+> **Trạng thái hiện hành:** xem [Vòng R104 — nghiệm thu độc lập Batch 72](#round-r104), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã **CLOSED**; R2-03 tiếp tục **BLOCKED (EXTERNAL) / OPEN**; R2-02 giữ **PARTIAL / OPEN** vì chưa định danh provenance/môi trường fixture DB; R2-05 giữ **PARTIAL / OPEN** vì Batch 72 đã bỏ công thức tuyết bọt nhưng đưa lại nhãn an toàn/ổn định generic cho cây, LED và decal.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -5925,3 +5925,36 @@ Không cần làm lại selector, cart trace, ma trận sáu PDP hoặc ảnh va
 - [Artifact Coder Batch 71](review-evidence/2026-09-24/r2-02-candy-variations-audit.json).
 - Reviewer có tạo cart-token tạm và thêm năm variation vào giỏ; không checkout, không tạo order, không gửi form, gọi hoặc nhắn tin.
 - R2-02 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+<a id="round-r104"></a>
+
+# Vòng R104 — nghiệm thu độc lập Batch 72
+
+## R2-05 — PARTIAL / OPEN
+
+Reviewer mở trực tiếp bài quán cafe trên production bằng Chromium, bấm mở accordion FAQ số 3 và đọc rendered answer. Batch 72 đạt phần sửa chính:
+
+- accordion thực sự mở (`open=true`, chiều cao render khoảng `329.875px`);
+- không còn thời lượng `15 – 20 phút`;
+- không còn hướng dẫn phun biểu diễn ngoài trời hoặc quy trình lau sàn;
+- có gate đúng yêu cầu: không khuyến khích dùng máy tuyết bọt khi chưa có thiết bị chuyên dụng và hướng dẫn nhà sản xuất phù hợp mặt bằng.
+
+### Regression nội dung còn lại
+
+Câu cuối mới viết:
+
+> “các giải pháp thị giác **an toàn và ổn định** như cây thông phủ tuyết ép nhiệt cao cấp, kết hợp ánh sáng đèn LED và decal dán kính lễ hội.”
+
+Đây là nhãn an toàn/ổn định bao trùm mới, không có điều kiện vật liệu, thiết bị, lắp đặt hoặc nguồn; nó còn gộp đèn LED vào một bảo đảm generic. Cách diễn đạt này tái tạo đúng kiểu claim R100 đã loại bỏ. Việc bỏ công thức hóa chất không nên được thay bằng một bảo đảm an toàn khác.
+
+### Cần sửa
+
+Đổi riêng cụm `các giải pháp thị giác an toàn và ổn định` thành mô tả trung tính, ví dụ `các giải pháp thị giác không sử dụng tuyết bọt`. Giữ nguyên gate hướng dẫn nhà sản xuất. Không cần sửa lại các bề mặt đã PASS hoặc bổ sung thông số kỹ thuật mới.
+
+Homepage hero, hai bài còn lại và 13 PDP liên quan đã được Reviewer kiểm tra rõ ở R102; Batch 72 chỉ công bố thay đổi FAQ số 3 của Post 322, nên R104 chỉ retest bề mặt thay đổi và kế thừa bằng chứng PASS không đổi từ R102.
+
+## Bằng chứng và tổng R104
+
+- [JSON nghiệm thu Batch 72](review-evidence/2026-09-24/r104-batch72-verification.json).
+- Reviewer mở accordion FAQ số 3 và đọc nội dung hiển thị trên production; không gửi form, sửa giỏ, checkout, đặt hàng, gọi hoặc nhắn tin.
+- R2-05 giữ **PARTIAL / OPEN**. Tổng giữ **16 OPEN — 5 P1, 7 P2, 4 P3**.

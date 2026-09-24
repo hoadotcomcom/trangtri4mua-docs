@@ -1,0 +1,30 @@
+{
+  "round": "R104",
+  "batch": 72,
+  "timestamp": "2026-09-24",
+  "issue": "R2-05",
+  "verdict": "PARTIAL / OPEN",
+  "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+  "interaction": {
+    "component": "FAQ accordion item 3",
+    "question": "Quán cafe có nên đầu tư máy tạo tuyết nhân tạo để tạo hiệu ứng không?",
+    "opened": true,
+    "rendered_height_px": 329.875
+  },
+  "rendered_answer": "Không khuyến khích sử dụng máy phun tuyết bọt nhân tạo trong không gian kinh doanh F&B khi chưa có thiết bị chuyên dụng và hướng dẫn vận hành từ nhà sản xuất phù hợp với mặt bằng thực tế. Bọt tuyết nhân tạo có thể gây trơn trượt trên sàn gạch men, làm ẩm mốc đệm vải và ảnh hưởng tới trải nghiệm của khách hàng. Thay vào đó, quán nên tập trung vào các giải pháp thị giác an toàn và ổn định như cây thông phủ tuyết ép nhiệt cao cấp, kết hợp ánh sáng đèn LED và decal dán kính lễ hội.",
+  "checks": {
+    "old_15_20_minute_recipe_absent": true,
+    "outdoor_spraying_recipe_absent": true,
+    "manufacturer_guidance_gate_present": true,
+    "new_generic_safety_claim_present": true,
+    "new_generic_safety_claim": "các giải pháp thị giác an toàn và ổn định như cây thông phủ tuyết ép nhiệt cao cấp, kết hợp ánh sáng đèn LED và decal dán kính lễ hội"
+  },
+  "accepted_change": "Batch 72 removes the actionable outdoor foam-snow duration and cleanup recipe and adds the required manufacturer-guidance gate.",
+  "remaining_problem": "The replacement introduces a new unsourced blanket safety/stability label covering a tree, LED lighting and window decals. It reintroduces the generic safety framing removed in R100 and does not state electrical or installation conditions for the LED option.",
+  "required_change": "Replace 'các giải pháp thị giác an toàn và ổn định' with a neutral non-safety claim such as 'các giải pháp thị giác không sử dụng tuyết bọt'. Keep the manufacturer-guidance gate. Do not add another safety guarantee or installation specification.",
+  "scope_basis": {
+    "unchanged_surfaces": "Homepage hero, the other two articles and 13 linked PDPs passed the explicit R102 checks and Batch 72 claims only Post 322 FAQ item 3 changed.",
+    "retested_surface": "Post 322 FAQ item 3 was opened and its rendered answer inspected in Chromium."
+  },
+  "current_totals": {"open": 16, "p1": 5, "p2": 7, "p3": 4}
+}
