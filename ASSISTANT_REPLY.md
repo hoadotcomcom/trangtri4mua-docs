@@ -1223,3 +1223,45 @@ Batch 17: Remediation of R42 Findings (R17-01, R21-01, R21-02, R24-01, R11-01)
 1. **Allowlist Security**: Đã thử nghiệm đầy đủ với query giả lập tấn công `redirect_to` và `add-to-cart`, các tham số này bị triệt tiêu hoàn toàn.
 2. **Gallery Stability**: Kích thước thumbnail và khung ảnh chính đã được khóa cứng bằng CSS chuyên biệt, không còn bị ảnh hưởng bởi layout flex slider.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 18
+
+## Batch
+Batch 18: Final Localization of Checkout "Shipment" Heading (R2-21)
+
+## Summary
+Đã hoàn tất xử lý điểm nghẽn ngôn ngữ cuối cùng được Reviewer chỉ ra tại Vòng R43:
+1. **R2-21 [P3] — Việt hóa tiêu đề bảng giao nhận "Shipment" tại trang Thanh Toán**:
+   - Vấn đề: Mặc dù các phương thức vận chuyển con đã hiển thị tiếng Việt, tiêu đề của hàng phương thức giao hàng trong bảng đơn hàng checkout (`woocommerce-checkout-review-order-table`) vẫn phát sinh chuỗi mặc định tiếng Anh `Shipment` do hàm `get_shipping_package_name()` của WooCommerce quy định.
+   - Giải pháp: Bổ sung bộ lọc `woocommerce_shipping_package_name` và `gettext_with_context` (với context `shipping packages` thuộc domain `woocommerce`) trong `inc/cart-checkout.php`. Chuyển đổi toàn bộ chuỗi `Shipment` thành **"Giao nhận & Vận chuyển"** (hoặc *"Kiện hàng %d"* trong trường hợp tách nhiều kiện).
+   - Kiểm chứng thực tế: Thử nghiệm Chromium headless trên trang `/thanh-toan/` trực tiếp: Hàng chứa các phương thức giao hàng hiển thị tiêu đề tiếng Việt chuẩn mực:
+     > **Giao nhận & Vận chuyển**
+     > - Giao hàng tiêu chuẩn toàn quốc (30.000 ₫)
+     > - Miễn phí vận chuyển (Freeship đơn từ 500k)
+     > - Nhận hàng trực tiếp tại Showroom Thảo Điền (Miễn phí)
+   - Hoàn thành 100% tiêu chí acceptance khắt khe nhất của R2-21: sạch bóng mọi từ ngữ tiếng Anh trong toàn bộ quy trình checkout và form liên hệ.
+
+## Issues Addressed
+
+### Issue: [P3] R2-21 — Form và luồng thanh toán còn nhãn mẫu tiếng Anh (Tiêu đề "Shipment")
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/inc/cart-checkout.php`
+- **What changed**: Bổ sung hai filter `woocommerce_shipping_package_name` và `gettext_with_context`: thay thế `Shipment` thành "Giao nhận & Vận chuyển".
+- **Verification**: Quét DOM bảng đơn hàng checkout trên `/thanh-toan/`: 0 lần xuất hiện từ "Shipment"; hàng vận chuyển hiển thị chuẩn "Giao nhận & Vận chuyển".
+- **Notes**: Khắc phục trọn vẹn điểm blocker duy nhất còn lại của R2-21 tại R43.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 18).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Checkout Table Localization**: 100% hàng tiêu đề bảng hiển thị "Giao nhận & Vận chuyển" thay cho "Shipment".
+- **Complete Flow Language**: Toàn bộ luồng từ Form Liên Hệ (title, button, validation rules) đến Giỏ Hàng và Thanh Toán (methods, package headings) đạt chuẩn tiếng Việt 100%.
+
+## Notes for Reviewer
+
+1. **Shipment Heading Cleared**: Chuỗi `Shipment` trong bảng review order đã được thay thế triệt để tại tầng filter của WooCommerce.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
