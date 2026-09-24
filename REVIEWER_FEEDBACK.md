@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R86 — nghiệm thu độc lập Batch 58](#round-r86), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **16 OPEN — 5 P1, 7 P2, 4 P3**. R5-02 đã FIXED/CLOSED sau khi hai capture desktop được thay đúng và Reviewer tái hiện độc lập DPR1/DPR2 thật; R2-03 vẫn PARTIAL vì thiếu provenance/owner approval và ảnh bundle đúng contract.
+> **Trạng thái hiện hành:** xem [Vòng R87 — correction capture DPR cùng phiên](#round-r87), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 được mở lại: capture cùng phiên chứng minh DPR thật nhưng đồng thời cho thấy `sizes=300px` làm desktop chọn nguồn 300w/600w thấp hơn box 379px × DPR; R2-03 vẫn PARTIAL vì thiếu provenance/owner approval và ảnh bundle đúng contract.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -1013,7 +1013,7 @@ Dùng các kích thước attachment/thumbnail sẵn có của WordPress cho car
 4. Không làm hỏng link card, thay đổi bố cục ngoài ý muốn hoặc gây ảnh trống khi cuộn. Giữ ưu tiên ảnh LCP theo R5-01.
 
 ### Status
-FIXED
+OPEN
 
 ## Bàn giao R5
 
@@ -5203,3 +5203,47 @@ Toàn bộ acceptance R5-02 đã có bằng chứng trực tiếp. Cập nhật 
 - [Desktop DPR2](review-evidence/2026-09-24/r5-02-desktop-1440-dpr2.webp).
 - Không click card/CTA, không sửa giỏ, không gửi form; browser tab đã đóng.
 - Đóng **R5-02 [P2]**. Tổng còn **16 OPEN — 5 P1, 7 P2, 4 P3**.
+
+---
+
+<a id="round-r87"></a>
+
+# Vòng R87 — correction capture DPR cùng phiên
+
+## R5-02 — REOPEN / PARTIAL
+
+Kết luận đóng ở R86 chưa đáp ứng đúng yêu cầu R82: trace DPR và WebP Batch 58 không được tạo trong cùng một lần chạy/hash. `clip.scale` có thể làm raster gấp đôi mà không chứng minh DPR tại thời điểm capture.
+
+Reviewer đã chạy lại bằng Google Chrome/CDP trực tiếp. Trong **mỗi phiên**, cùng trace ghi `window.devicePixelRatio`, viewport, `currentSrc`, `srcset`, `sizes`, kích thước render, resource bytes, trạng thái decode, screenshot path, kích thước file và SHA-256; `Page.captureScreenshot` dùng `clip.scale: 1`.
+
+| Lượt | DPR thật | Raster / hash | Nguồn thực | Payload | Box ảnh CSS |
+|---|---:|---|---|---:|---:|
+| Desktop DPR1 | 1 | 1192×604; `6c865be1cda2b2d0edd9e422ea360754a71aaf02c967dfc1c5c4d4dc962d7021` | sáu file 300w | 180.162 byte | 379,328×288 |
+| Desktop DPR2 | 2 | 2384×1208; `59c4e1156d94ca4853fe60f7c2b8ee5c0afeff2b38df6e97ba2e2bd715fbdf13` | sáu file 600w | 639.974 byte | 379,328×288 |
+
+Cả hai capture cùng phiên hiển thị đủ sáu ảnh, không card rỗng, letterbox hoặc méo tỷ lệ rõ. Phần bằng chứng danh tính DPR/capture vì vậy đã đạt.
+
+Tuy nhiên trace trực tiếp phát hiện blocker chất lượng còn lại:
+
+- markup dùng `sizes="(max-width: 600px) 140px, 300px"`;
+- slot desktop thực rộng **379,328 CSS px**, không phải 300px;
+- DPR1 cần khoảng **379 physical px** nhưng browser chỉ chọn 300w;
+- DPR2 cần khoảng **759 physical px** nhưng browser chỉ có/chọn 600w;
+- nguồn thực ở cả hai DPR chỉ đạt khoảng **79%** chiều rộng render × DPR.
+
+Điều này trái acceptance 2 “nguồn ảnh phù hợp kích thước render × DPR” và trái matrix Batch 58 đang ghi desktop DPR1/DPR2 đều chọn 600w, tổng 639.974 byte. Capture có thể nhìn dùng được ở tỷ lệ xem hiện tại nhưng dữ liệu nguồn chứng minh browser vẫn upscale.
+
+R5-02 trở lại **PARTIAL / OPEN**. Giữ các phần đã đạt: lazy/deep-scroll R76, payload mobile R66, năm capture mobile/tablet R79 và hai capture desktop không rỗng. Phần còn lại:
+
+1. sửa `sizes` desktop phản ánh slot thực khoảng 379px;
+2. cung cấp candidate đủ ít nhất khoảng 379px ở DPR1 và 759px ở DPR2, không quay lại gửi ảnh gốc quá lớn không cần thiết;
+3. chạy lại capture cùng phiên DPR1/DPR2 với `clip.scale: 1`, ghi đầy đủ trace/hash như R87 và xác nhận crop/độ nét trực quan.
+
+## Bằng chứng và tổng R87
+
+- [Trace DPR/capture cùng phiên](review-evidence/2026-09-24/r87-r5-02-paired-dpr-trace.json).
+- [Capture DPR1 cùng phiên](review-evidence/2026-09-24/r87-live-desktop-dpr1.webp).
+- [Capture DPR2 cùng phiên](review-evidence/2026-09-24/r87-live-desktop-dpr2.webp).
+- Đã đối chiếu SHA-256 và raster bằng `sha256sum`/`sips`; cả hai WebP được mở trực tiếp.
+- Không click card/CTA, không sửa giỏ, không gửi form; mọi browser/CDP session đã đóng.
+- Mở lại **R5-02 [P2]**. Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**.
