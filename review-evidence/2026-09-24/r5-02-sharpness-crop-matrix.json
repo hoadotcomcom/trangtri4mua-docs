@@ -1,56 +1,117 @@
 {
-  "timestamp": "2026-09-24T19:57:55.576Z",
+  "timestamp": "2026-09-24T20:04:54.610Z",
+  "buildVersion": "2.3.0-b44",
+  "post325ScrollVerification": {
+    "initial": [
+      {
+        "loading": "lazy",
+        "complete": false,
+        "naturalWidth": 0,
+        "currentSrc": ""
+      },
+      {
+        "loading": "lazy",
+        "complete": false,
+        "naturalWidth": 0,
+        "currentSrc": ""
+      },
+      {
+        "loading": "lazy",
+        "complete": false,
+        "naturalWidth": 0,
+        "currentSrc": ""
+      },
+      {
+        "loading": "lazy",
+        "complete": false,
+        "naturalWidth": 0,
+        "currentSrc": ""
+      }
+    ],
+    "scrollMs": 0,
+    "afterScroll": [
+      {
+        "file": "qua-chau-cuom-300x300.webp",
+        "loading": "eager",
+        "complete": true,
+        "naturalWidth": 120,
+        "encodedBytes": 31410
+      },
+      {
+        "file": "ngoi-sao-nhu-do-bac-300x300.webp",
+        "loading": "eager",
+        "complete": true,
+        "naturalWidth": 120,
+        "encodedBytes": 34224
+      },
+      {
+        "file": "canh-thong-pe-300x300.webp",
+        "loading": "eager",
+        "complete": true,
+        "naturalWidth": 120,
+        "encodedBytes": 34008
+      },
+      {
+        "file": "day-tuyet-300x300.webp",
+        "loading": "eager",
+        "complete": true,
+        "naturalWidth": 120,
+        "encodedBytes": 34558
+      }
+    ]
+  },
   "matrix": [
     {
       "config": "Mobile 375px DPR1",
       "viewport": "375x812",
       "dpr": 1,
+      "totalEncodedBytes": 180162,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-300x300.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31318,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-300x300.webp",
+          "selectedFile": "ong-gia-3-mau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31282,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-300x300.webp",
+          "selectedFile": "canh-thong-pe-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 34008,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 28402,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-300x300.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 23568,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-300x300.webp",
+          "selectedFile": "hop-qua-trau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31584,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -60,52 +121,53 @@
       "config": "Mobile 375px DPR2",
       "viewport": "375x812",
       "dpr": 2,
+      "totalEncodedBytes": 180162,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-300x300.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31318,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-300x300.webp",
+          "selectedFile": "ong-gia-3-mau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31282,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-300x300.webp",
+          "selectedFile": "canh-thong-pe-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 34008,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 28402,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-300x300.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 23568,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-300x300.webp",
+          "selectedFile": "hop-qua-trau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31584,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -115,52 +177,53 @@
       "config": "Mobile 375px DPR3",
       "viewport": "375x812",
       "dpr": 3,
+      "totalEncodedBytes": 180162,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-300x300.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31318,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-300x300.webp",
+          "selectedFile": "ong-gia-3-mau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31282,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-300x300.webp",
+          "selectedFile": "canh-thong-pe-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 34008,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 28402,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-300x300.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 23568,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-300x300.webp",
+          "selectedFile": "hop-qua-trau-300x300.webp",
           "renderedBox": "164.5x183",
           "naturalWidth": 140,
+          "encodedBytes": 31584,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -170,52 +233,53 @@
       "config": "Tablet 768px DPR1",
       "viewport": "768x1024",
       "dpr": 1,
+      "totalEncodedBytes": 639974,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-600x800.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 99670,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-600x520.webp",
+          "selectedFile": "ong-gia-3-mau-600x520.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 87744,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-600x800.webp",
+          "selectedFile": "canh-thong-pe-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 147684,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 107316,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-600x600.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 88576,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-600x800.webp",
+          "selectedFile": "hop-qua-trau-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 108984,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -225,52 +289,53 @@
       "config": "Tablet 768px DPR2",
       "viewport": "768x1024",
       "dpr": 2,
+      "totalEncodedBytes": 639974,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-600x800.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 99670,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-600x520.webp",
+          "selectedFile": "ong-gia-3-mau-600x520.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 87744,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-600x800.webp",
+          "selectedFile": "canh-thong-pe-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 147684,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 107316,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-600x600.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 88576,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-600x800.webp",
+          "selectedFile": "hop-qua-trau-600x800.webp",
           "renderedBox": "349.4x228",
           "naturalWidth": 300,
+          "encodedBytes": 108984,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -280,52 +345,53 @@
       "config": "Desktop 1440px DPR1",
       "viewport": "1440x1000",
       "dpr": 1,
+      "totalEncodedBytes": 639974,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-600x800.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 99670,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-600x520.webp",
+          "selectedFile": "ong-gia-3-mau-600x520.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 87744,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-600x800.webp",
+          "selectedFile": "canh-thong-pe-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 147684,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 107316,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-600x600.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 88576,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-600x800.webp",
+          "selectedFile": "hop-qua-trau-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 108984,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }
@@ -335,52 +401,53 @@
       "config": "Desktop 1440px DPR2",
       "viewport": "1440x1000",
       "dpr": 2,
+      "totalEncodedBytes": 639974,
       "cards": [
         {
-          "src": "qua-chau-sequin-do-bac-300x300.webp",
-          "currentSrc": "qua-chau-sequin-do-bac-600x800.webp",
+          "selectedFile": "qua-chau-sequin-do-bac-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 99670,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "ong-gia-3-mau-300x300.webp",
-          "currentSrc": "ong-gia-3-mau-600x520.webp",
+          "selectedFile": "ong-gia-3-mau-600x520.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 87744,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "canh-thong-pe-300x300.webp",
-          "currentSrc": "canh-thong-pe-600x800.webp",
+          "selectedFile": "canh-thong-pe-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 147684,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
-          "currentSrc": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+          "selectedFile": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 107316,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "nha-go-co-den-trang-tri-300x300.webp",
-          "currentSrc": "nha-go-co-den-trang-tri-600x600.webp",
+          "selectedFile": "nha-go-co-den-trang-tri-600x600.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 88576,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         },
         {
-          "src": "hop-qua-trau-300x300.webp",
-          "currentSrc": "hop-qua-trau-600x800.webp",
+          "selectedFile": "hop-qua-trau-600x800.webp",
           "renderedBox": "379.3x288",
           "naturalWidth": 300,
+          "encodedBytes": 108984,
           "objectFit": "cover",
           "aspectRatio": "auto 300 / 300"
         }

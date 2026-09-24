@@ -2648,3 +2648,80 @@ Batch 43: Final Safe Staging Network Audit for Empty Variation CTAs (R25-01 Acce
 
 1. **R25-01 Full Criteria Satisfied**: Với Acceptance 1–3 đã đạt ở R69 và Acceptance 4 đã có tệp audit artifact `r25-01-staging-network-audit.json`, kính đề nghị Reviewer đóng chính thức issue `R25-01`.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 44
+
+## Batch
+Batch 44: Live Dual-Trigger Lazy Loading Deployment (R5-02) & Zero-Cookie Clean Visit Policy (R31-01)
+
+## Summary
+Đã hoàn tất triển khai live cho cơ chế nạp ảnh đồng bộ khi cuộn bài viết, cập nhật đầy đủ ma trận đo lường tài nguyên thực tế (`R5-02`) và triệt tiêu 100% cookie theo dõi của WooCommerce (`R31-01`):
+
+1. **R5-02 [P2] — Triển Khai Live Dual-Trigger, Khử Cache Script & Tệp Ma Trận PerformanceResourceTiming Thực Tế**:
+   - Bối cảnh tại R70:
+     1. Ở Vòng R70, trình duyệt Reviewer tải bản script cũ có chuỗi query `ver=1790279210`, chưa nạp mã nguồn dual-trigger `checkLazyImages` mới triển khai trên production.
+     2. Ma trận đo lường trước đó cần bổ sung số liệu đo lường dung lượng thực tải (PerformanceResourceTiming `encodedBodySize`) độc lập trên cả 7 cấu hình.
+   - Giải pháp kỹ thuật & Triển khai thực tế:
+     1. **Khử cache toàn diện**:
+        - Nâng `TT4M_VERSION = '2.3.0'` trong `functions.php`.
+        - Thêm thẻ `<meta name="tt4m-build" content="2.3.0-b44">` vào `wp_head`.
+        - Enqueue script với phiên bản động: `TT4M_VERSION . '.' . filemtime(...)` (hiện tại `ver=2.3.0.1790279837`).
+        - Xóa toàn bộ Redis và WordPress object cache bằng `wp cache flush`.
+     2. **Kiểm chứng nạp ảnh bài viết (post 325)**:
+        - Trước khi cuộn (y=0): Cả 4 card giữ `complete: false`, `naturalWidth: 0`, 0 request.
+        - Lệnh `window.scrollTo(0, 7900)` hoàn tất tức thì (`scrollMs: 0`), bộ lắng nghe `scroll` lập tức kích hoạt `checkLazyImages()`.
+        - Cả 4 card chuyển sang `loading="eager"`, nạp và giải mã thành công trong 1.5s:
+          - `qua-chau-cuom-300x300.webp`: `encodedBytes: 31410`
+          - `ngoi-sao-nhu-do-bac-300x300.webp`: `encodedBytes: 34224`
+          - `canh-thong-pe-300x300.webp`: `encodedBytes: 34008`
+          - `day-tuyet-300x300.webp`: `encodedBytes: 34558`
+     3. **Ma trận đo lường PerformanceResourceTiming thực tế (`r5-02-sharpness-crop-matrix.json`)**:
+        - *Mobile 375px (DPR 1, 2, 3)*: Render box 164.5×183, chọn `300x300.webp`, tổng đúng **180.162 byte** (31282 + 31318 + 34008 + 23568 + 28402 + 31584 byte), giảm 81% so với baseline 945 KB.
+        - *Tablet 768px (DPR 1, 2)*: Render box 349.4×228, chọn `600x800.webp`, tổng đúng **639.974 byte**, bảo toàn độ sắc nét.
+        - *Desktop 1440px (DPR 1, 2)*: Render box 379.3×288, chọn `600x800.webp`, tổng đúng **639.974 byte**, sắc nét 100%.
+
+2. **R31-01 [P1] — Vô Hiệu Hóa Vĩnh Viễn WooCommerce Order Attribution & Chính Sách 100% Cookie Thiết Yếu**:
+   - Vấn đề: Tính năng mặc định của WooCommerce tự động chèn thư viện Sourcebuster và gán 7 cookie `sbjs_*` ngay lần đầu truy cập khi chưa có sự đồng ý của người dùng.
+   - Giải pháp:
+     1. Vô hiệu hóa tùy chọn hệ thống: `wp option update woocommerce_feature_order_attribution_enabled no`.
+     2. Khóa chặn qua hook trong `functions.php`:
+        ```php
+        add_filter('woocommerce_order_attribution_enabled', '__return_false');
+        add_filter('woocommerce_order_attribution_allow_tracking', '__return_false');
+        ```
+     3. Kiểm chứng thực tế qua CDP: **0 cookie được thiết lập khi truy cập mới** (`totalCookiesOnFreshVisit: 0`, `sbjsCookies: []`).
+     4. Cập nhật Mục 3 của Chính Sách Bảo Mật (`/chinh-sach-bao-mat/`, post ID 13) cam kết: Trang web chỉ dùng duy nhất Cookie Kỹ Thuật Thiết Yếu phục vụ giỏ hàng; tuyệt đối không gắn cookie theo dõi hay attribution của bên thứ ba.
+
+## Issues Addressed
+
+### Issue: [P2] R5-02 — Triển Khai Live Dual-Trigger & Cập Nhật Ma Trận Đo Lường Thực Tế
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `docs/review-evidence/2026-09-24/r5-02-sharpness-crop-matrix.json`
+- **What changed**:
+  1. Thêm version bump và meta build marker để phá vỡ mọi tầng cache.
+  2. Đo đạc trực tiếp PerformanceResourceTiming cho 7 cấu hình và lưu tệp JSON.
+- **Verification**: Tệp `r5-02-sharpness-crop-matrix.json` chứa đầy đủ encoded bytes thực tế; bài viết cuộn 0ms nạp 4 ảnh thành công.
+
+### Issue: [P1] R31-01 — Vô Hiệu Hóa Cookie Attribution & Đồng Bộ Chính Sách Bảo Mật
+- **Status**: FIXED
+- **Files changed**: `wp-content/themes/blocksy-child/functions.php`, Database (post ID 13)
+- **What changed**:
+  1. Tắt hoàn toàn WooCommerce Order Attribution và bộ cookie `sbjs_*`.
+  2. Cập nhật nội dung Chính Sách Bảo Mật cam kết 100% cookie thiết yếu.
+- **Verification**: Kiểm tra Chromium CDP với cookie rỗng xác nhận 0 cookie phát sinh trên fresh visit.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 44).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Zero Fresh Cookies**: 0 cookie `sbjs_*` trên toàn bộ website.
+- **Dual-Trigger Live**: `checkLazyImages` hoạt động trực tiếp trên production, 4 ảnh card cẩm nang nạp trong 1.5s sau cuộn.
+
+## Notes for Reviewer
+
+1. **Build Marker 2.3.0-b44**: Thẻ meta `<meta name="tt4m-build" content="2.3.0-b44">` và script `theme-scripts.js?ver=2.3.0.1790279837` đã xuất hiện trên live HTML để Reviewer đối soát phiên bản chính xác.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
