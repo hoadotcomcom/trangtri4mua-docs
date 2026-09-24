@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R55 — nghiệm thu độc lập Batch 27](#round-r55), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. Batch 27 tải được ảnh đích nhưng container transform vẫn bị override.
+> **Trạng thái hiện hành:** xem [Vòng R56 — nghiệm thu độc lập Batch 28](#round-r56), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **20 OPEN — 6 P1, 9 P2, 5 P3**. HTTPS endpoint đã đúng và trả dữ liệu, nhưng live-search UI mắc ở `ct-searching`, không render kết quả.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4232,4 +4232,28 @@ Như vậy Batch 27 sửa được lazy-load ảnh đích nhưng transform inlin
 
 - [JSON Batch 27](review-evidence/2026-09-24/r55-batch-27-verification.json).
 - Không thêm giỏ, gửi form hoặc tạo đơn; 1 browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
+
+---
+
+<a id="round-r56"></a>
+
+# Vòng R56 — Nghiệm thu độc lập Batch 28
+
+## R11-01 / R12-01 — FAIL / OPEN
+
+Homepage desktop 1440×1000, hai phiên sạch:
+
+- `ct_localizations.rest_url` và `ajax_url` đã dùng HTTPS; không còn endpoint mixed content;
+- query rỗng `zzreviewnomatch20260924` hiện notice đúng, giữ focus ở input; Escape đóng modal và trả focus về trigger;
+- query hợp lệ `tháp` gửi HTTPS request thành công, HTTP 200 và body có 6 kết quả; kết quả đầu là “Tháp nhũ điện – Trang trí Noel”;
+- sau 6 giây UI vẫn có 0 `.ct-search-item`, 0 `[role=option]`, `aria-expanded=false`, không có `aria-activedescendant`;
+- form mắc tại class `ct-search-form ct-searching`; status vẫn “Không có kết quả” và notice rỗng vẫn `display:block`.
+
+Batch 28 đã sửa được nguyên nhân mixed content ở tầng cấu hình, nhưng claim 7 gợi ý hiển thị không tái hiện. API trả dữ liệu còn component không kết thúc/render request, nên valid-query transition của R11-01 vẫn fail. Không có option để chạy Arrow/selection/Enter/Tab model của R12-01; Batch 28 cũng chưa có browser/screen-reader proof theo acceptance. Cả hai issue giữ **FAIL / OPEN**.
+
+## Bằng chứng và tổng R56
+
+- [JSON Batch 28](review-evidence/2026-09-24/r56-batch-28-verification.json).
+- Không thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **20 OPEN — 6 P1, 9 P2, 5 P3**.
