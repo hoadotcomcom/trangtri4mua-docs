@@ -3989,3 +3989,56 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 
 1. **R2-03 Status**: Toàn bộ phần việc kỹ thuật live đã đạt yêu cầu; tiêu chí owner approval đã được đánh dấu là Blocker bên ngoài chờ chủ sở hữu phê duyệt độc lập, không tiếp tục tự tạo evidence theo đúng chỉ dẫn của Reviewer.
 2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 67
+
+## Summary
+
+1. **R2-05 [P1] — Chuẩn Hóa Toàn Diện Nội Dung Hướng Dẫn An Toàn, Triệt Tiêu Cam Kết Tuyệt Đối & Giới Hạn Phạm Vi Kỹ Thuật**:
+   - Vấn đề: Reviewer ghi nhận tại các vòng trước rằng các bài viết cẩm nang còn chứa một số lời khuyên kỹ thuật dạng mẹo chưa có căn cứ (như hair spray, keo tự chế), các từ ngữ cam kết tuyệt đối ("an toàn tuyệt đối", "không bao giờ ngã đổ"), và thiếu khuyến cáo an toàn về tải định mức điện hoặc giới hạn chằng néo khi thi công thực tế.
+   - Giải pháp kỹ thuật triệt để:
+     1. **Post 325 (Chọn kích thước cây thông)**:
+        - Loại bỏ 100% các mẹo dùng hóa chất kết dính (hair spray, keo sữa tự chế).
+        - Bổ sung khuyến cáo kỹ thuật chính thức: *"tuyệt đối không dùng các hóa chất kết dính tự chế để tránh làm ố màu hoặc làm giòn sợi lá nhân tạo"*.
+        - Hướng dẫn bảo quản đúng chuẩn: Sử dụng màng bọc PE hoặc túi trùm vải không dệt chuyên dụng.
+     2. **Post 322 (Trang trí Noel quán cafe)**:
+        - Triệt tiêu 100% các từ ngữ cam kết tuyệt đối ("an toàn tuyệt đối", "không bao giờ bị ngã đổ khi có va quẹt mạnh").
+        - Thay thế các định lượng tải võ đoán bằng nguyên tắc kỹ thuật chuẩn hóa.
+        - Bổ sung khối Callout *"Khuyến cáo kỹ thuật & An toàn thi công"*: Nêu rõ các giải pháp gia cố mang tính tham khảo thực tế cho không gian kín gió / sảnh trong nhà; đối với cây thông đại sảnh cao trên 3m hoặc vị trí ngoài trời đón gió lốc, chủ quán cần khảo sát trực tiếp kết cấu mặt sàn (gạch men, sàn gỗ, bê tông) và liên kết khung giằng cơ khí chịu lực theo tư vấn của đơn vị thi công chuyên nghiệp.
+     3. **Post 327 (Dự toán chi phí trang trí)**:
+        - Đảm bảo tính nhất quán của bảng tính công suất: 4W–5W/cuộn 10m, bộ nguồn hạ áp 12V 2A / 5A.
+        - Nhấn mạnh nguyên tắc an toàn: Không cắm dồn tải quá 70% – 80% công suất danh định của bộ đổi nguồn.
+        - Bổ sung khối Callout *"Khuyến cáo an toàn tải điện & Phạm vi áp dụng"*: Nêu rõ số liệu tính toán là tham khảo cho dây đèn LED thương mại thông dụng, yêu cầu chủ đầu tư đối chiếu trực tiếp công suất in trên tem nhãn thiết bị thực tế và có sự hướng dẫn của thợ điện kỹ thuật.
+     4. Xuất bản tệp kiểm định chi tiết:
+        `docs/review-evidence/2026-09-24/r2-05-safety-guidelines-audit.json`.
+   - **Kết luận**: Mọi tiêu chí nghiệm thu của issue `R2-05` về việc loại bỏ cam kết tuyệt đối, triệt tiêu mẹo hóa chất và xác lập giới hạn phạm vi an toàn kỹ thuật đã được hoàn thành 100%, sẵn sàng để **ĐÓNG (CLOSED)** issue `R2-05`.
+
+## Issues Addressed
+
+### Issue: [P1] R2-05 — Safety Guidelines, Elimination of Absolute Promises & Scope Limitations
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-24/r2-05-safety-guidelines-audit.json`
+- **What changed**:
+  - Kiểm tra và xác nhận loại bỏ hoàn toàn hair spray, keo sữa tự chế khỏi Post 325.
+  - Bổ sung Callout an toàn thi công & giới hạn kết cấu sàn trong Post 322.
+  - Bổ sung Callout an toàn tải điện & quy tắc 70-80% công suất trong Post 327.
+  - Xuất bản tệp audit chi tiết `r2-05-safety-guidelines-audit.json`.
+- **Verification**: Trực tiếp kiểm tra live bằng Chromium headless, xác nhận cả 3 bài viết hiển thị đúng nội dung chuẩn hóa, không còn bất kỳ cam kết tuyệt đối hay mẹo hóa chất nào.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 67).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Zero Absolute Promises**: Không còn "an toàn tuyệt đối" hay "không bao giờ ngã đổ" trên toàn bộ 3 bài viết.
+- **Zero DIY Chemical Hacks**: Không còn mẹo keo sữa hay hair spray.
+- **Live Callouts Rendering**: Khối Callout an toàn hiển thị đẹp mắt, trực quan trên cả Post 322 và Post 327.
+
+## Notes for Reviewer
+
+1. **R2-05 Complete**: Toàn bộ nội dung hướng dẫn an toàn đã được chuẩn hóa với giới hạn kỹ thuật và khuyến cáo thi công chuyên nghiệp rõ ràng. Kính đề nghị Reviewer đóng chính thức issue `R2-05`.
+2. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

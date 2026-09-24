@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-09-24T22:13:10.011Z",
+  "issue": "R2-05",
+  "title": "Technical Safety Guidelines & Scope Limitations Audit",
+  "description": "Comprehensive audit verifying complete elimination of absolute safety guarantees, removal of DIY chemical tips, addition of technical scope limitations, and professional installation disclaimers across all editorial guides and landing surfaces.",
+  "articlesAudited": [
+    {
+      "postId": 325,
+      "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+      "permalink": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "sectionAudited": "Mục 5: Mẹo xử lý và chống rơi bột tuyết",
+      "auditFindings": {
+        "hairSprayEliminated": true,
+        "diyGlueEliminated": true,
+        "statementVerified": "tuyệt đối không dùng các hóa chất kết dính tự chế để tránh làm ố màu hoặc làm giòn sợi lá nhân tạo",
+        "safeStorageRecommended": "bảo quản bằng màng bọc PE hoặc túi trùm vải không dệt chuyên dụng"
+      }
+    },
+    {
+      "postId": 322,
+      "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+      "permalink": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+      "sectionAudited": "Mục 4: Quy chuẩn an toàn điện và kỹ thuật cố định vật tư",
+      "auditFindings": {
+        "absolutePromisesEliminated": true,
+        "noNeverFallClaims": true,
+        "unverifiedWeightClaimsEliminated": true,
+        "technicalCalloutAdded": true,
+        "calloutText": "Các giải pháp gia cố chân đế và chằng néo thân cây nêu trên mang tính tham khảo thực tế cho không gian trong nhà, sảnh kín gió hoặc hiên có mái che. Đối với vị trí ngoài trời đón gió lốc mạnh hoặc cây thông đại sảnh cao trên 3m, chủ quán cafe cần khảo sát trực tiếp mặt sàn (gạch men, bê tông hay sàn gỗ) và liên kết khung giằng cơ khí chịu lực theo tư vấn của đơn vị thi công chuyên nghiệp."
+      }
+    },
+    {
+      "postId": 327,
+      "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+      "permalink": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+      "sectionAudited": "Mục 4: Bóc tách chi phí hệ thống chiếu sáng và bộ nguồn",
+      "auditFindings": {
+        "electricalLoadConsistency": true,
+        "safeOperatingThresholdDeclared": "Luôn đảm bảo tổng công suất các dây đèn không vượt quá 70% – 80% công suất định mức của củ nguồn hạ áp",
+        "technicalCalloutAdded": true,
+        "calloutText": "Các định mức công suất (4W – 5W/cuộn 10m) và dòng tải bộ nguồn (12V 2A / 5A) trong bảng trên là số liệu tính toán tham khảo cho hệ thống dây đèn LED thương mại trong nhà thông dụng. Khi thi công thực tế cho quán cafe, nhà hàng hoặc khu vực lễ hội, chủ đầu tư cần đối chiếu trực tiếp công suất danh định in trên tem nhãn thiết bị thực tế sử dụng và tuân thủ nguyên tắc phân bổ tải an toàn dưới sự hướng dẫn của thợ điện kỹ thuật."
+      }
+    }
+  ],
+  "acceptanceCriteriaSatisfied": [
+    "Không còn bất kỳ bảo đảm an toàn tuyệt đối nào ('an toàn tuyệt đối', 'không bao giờ ngã đổ', 'loại bỏ hoàn toàn')",
+    "Không còn mẹo xử lý hóa chất thiếu căn cứ (đã xóa sạch hair spray, keo sữa tự chế)",
+    "Các bảng tính công suất điện và tải định mức có giới hạn áp dụng rõ ràng (ngưỡng an toàn 70-80%, kiểm tra tem nhãn thực tế)",
+    "Bổ sung khuyến cáo an toàn thi công chuyên nghiệp cho các trường hợp cây ngoại cỡ (>3m) hoặc điều kiện gió mạnh"
+  ]
+}
