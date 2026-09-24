@@ -1,0 +1,2203 @@
+{
+  "observed_at_utc": "2026-09-24T16:18:22.359Z",
+  "handoff": {
+    "commit": "963c6d3",
+    "assistant_reply_sha256": "555f5a228649a9e469d22c9ac84b43e617741ce70e46113f58be223f80aa3665"
+  },
+  "scope": "Production GET/browser verification; no forms, calls, messages, carts or orders.",
+  "verdicts": {
+    "R2-07": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Both source CTAs scroll to the real B2B section, but target is not focusable and activeElement becomes BODY after cross-page fragment navigation; keyboard user does not retain location."
+    },
+    "R2-08": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Drawer search is visible, named and 44px tall at 375/768 on homepage/PDP/category; keyboard and touch submissions reached found and empty full-search states. Claimed separate header trigger remains hidden but is not required when drawer path works."
+    },
+    "R2-09": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Drawer close button is 44x44, computed icon #1F2937 on #F9FAFB (contrast about 14.05:1); Escape and close button return focus to Menu in tested non-touch runtime. Desktop search modal remains intact."
+    },
+    "R2-12": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Three posts, profile, byline and Person/BlogPosting now identify Ban Biên Tập Trang Trí 4 Mùa and link the accessible profile. Bio is public; expertise remains self-declared."
+    },
+    "R2-13": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Published totals equal row sums: apartment 2,340,000; cafe 6,220,000; showroom 19,240,000 VND; difference zero."
+    },
+    "R2-15": {
+      "verdict": "PARTIAL",
+      "status": "OPEN",
+      "reason": "Visual order is fixed at 375/768 and content begins near y=194 before sidebar; source order remains aside then article, so Tab after skip-link still enters visually distant sidebar first. Fix relies only on CSS order."
+    },
+    "R2-19": {
+      "verdict": "PASS",
+      "status": "CLOSED",
+      "reason": "Random page returns real HTTP 404 with WordPress header/footer, search and recovery links; missing asset still returns 404 from server."
+    },
+    "R2-20": {
+      "verdict": "FAIL",
+      "status": "OPEN",
+      "reason": "Nested main is fixed and Contact map has title, but Showroom iframe remains unnamed and heading hierarchy still jumps H2 to H4."
+    }
+  },
+  "mobile": {
+    "drawer_open": {
+      "open": "ct-panel ct-header active",
+      "ariaHidden": null,
+      "active": {
+        "tag": "BUTTON",
+        "id": "",
+        "class": "ct-toggle-close",
+        "label": "Đóng ngăn"
+      },
+      "focusInside": true,
+      "close": {
+        "rect": {
+          "x": 316,
+          "y": 10,
+          "width": 44,
+          "height": 44,
+          "top": 10,
+          "right": 360,
+          "bottom": 54,
+          "left": 316
+        },
+        "background": "rgb(249, 250, 251)",
+        "color": "rgb(31, 41, 55)",
+        "fill": "rgb(0, 0, 0)",
+        "aria": "Đóng ngăn",
+        "svgFill": "rgb(31, 41, 55)",
+        "svgColor": "rgb(31, 41, 55)"
+      },
+      "searches": [
+        {
+          "name": "s",
+          "placeholder": "Tìm cây thông, phụ kiện, tượng...",
+          "rect": {
+            "x": 54.5,
+            "y": 133.171875,
+            "width": 239.59375,
+            "height": 44,
+            "top": 133.171875,
+            "right": 294.09375,
+            "bottom": 177.171875,
+            "left": 54.5
+          },
+          "aria": "Tìm kiếm sản phẩm",
+          "formAction": "https://trangtri4mua.com/",
+          "method": "get"
+        }
+      ]
+    },
+    "contrast_ratio": 14.046656202460271,
+    "escape_close": {
+      "drawerClass": "ct-panel ct-header",
+      "active": {
+        "tag": "BUTTON",
+        "class": "ct-header-trigger ct-toggle ",
+        "label": "Menu",
+        "text": ""
+      },
+      "focusOnMenu": true
+    },
+    "keyboard_search": {
+      "steps": [
+        {
+          "tag": "BUTTON",
+          "class": "ct-toggle-close",
+          "name": null,
+          "label": "Đóng ngăn",
+          "placeholder": null
+        },
+        {
+          "tag": "A",
+          "class": "tt4m-drawer-brand-link",
+          "name": null,
+          "label": null,
+          "placeholder": null
+        },
+        {
+          "tag": "INPUT",
+          "class": "tt4m-mobile-search-input",
+          "name": "s",
+          "label": "Tìm kiếm sản phẩm",
+          "placeholder": "Tìm cây thông, phụ kiện, tượng..."
+        }
+      ],
+      "focused": true,
+      "url": "https://trangtri4mua.com/?s=c%C3%A2y+th%C3%B4ng+ph%E1%BB%A7+tuy%E1%BA%BFt",
+      "title": "cây thông phủ tuyết - Trang trí 4 mùa"
+    },
+    "search_found_result": {
+      "url": "https://trangtri4mua.com/?s=c%C3%A2y+th%C3%B4ng+ph%E1%BB%A7+tuy%E1%BA%BFt",
+      "h1": "Kết quả tìm kiếm cho cây thông phủ tuyết",
+      "resultTitles": [
+        "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+        "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+        "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+        "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết",
+        "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+        "Hàng rào gỗ trang trí gốc cây – Trang trí Noel",
+        "Hàng rào khúc gỗ trang trí gốc cây – Trang trí Noel",
+        "Nai trắng tuyết điện – Trang trí Noel",
+        "Người tuyết trang trí – Trang trí Noel",
+        "Tượng người tuyết mũ đỏ – Trang trí Noel"
+      ],
+      "empty": false
+    },
+    "touch_empty_search": {
+      "url": "https://trangtri4mua.com/?s=zzzz-no-result-r33",
+      "h1": "Kết quả tìm kiếm cho zzzz-no-result-r33",
+      "emptyText": [
+        "Không có kết quả",
+        "Không có kết quả"
+      ]
+    },
+    "tablet_header": {
+      "viewport": {
+        "w": 768,
+        "h": 1024
+      },
+      "searchTriggers": [
+        {
+          "tag": "BUTTON",
+          "aria": "Đóng cửa sổ tìm kiếm modal",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "visible": false
+        },
+        {
+          "tag": "BUTTON",
+          "aria": "Nút tìm kiếm",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "visible": false
+        },
+        {
+          "tag": "BUTTON",
+          "aria": "Tìm kiếm",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "visible": false
+        },
+        {
+          "tag": "BUTTON",
+          "aria": "Tìm kiếm",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          },
+          "visible": false
+        }
+      ],
+      "menu": [
+        {
+          "rect": {
+            "x": 685.59375,
+            "y": 52.796875,
+            "width": 44,
+            "height": 44,
+            "top": 52.796875,
+            "right": 729.59375,
+            "bottom": 96.796875,
+            "left": 685.59375
+          },
+          "visible": true
+        }
+      ]
+    },
+    "tablet_drawer": {
+      "search": [
+        {
+          "rect": {
+            "x": 285.8125,
+            "y": 135.875,
+            "width": 239.59375,
+            "height": 44,
+            "top": 135.875,
+            "right": 525.40625,
+            "bottom": 179.875,
+            "left": 285.8125
+          },
+          "visible": true,
+          "aria": "Tìm kiếm sản phẩm"
+        }
+      ],
+      "active": {
+        "tag": "BUTTON",
+        "class": "ct-toggle-close",
+        "label": "Đóng ngăn"
+      },
+      "closeRect": {
+        "x": 699,
+        "y": 20,
+        "width": 44,
+        "height": 44,
+        "top": 20,
+        "right": 743,
+        "bottom": 64,
+        "left": 699
+      }
+    },
+    "tablet_search_result": {
+      "viewport": {
+        "w": 768,
+        "h": 1024
+      },
+      "url": "https://trangtri4mua.com/?s=th%C3%A1p+nh%C5%A9",
+      "h1": "Kết quả tìm kiếm cho tháp nhũ",
+      "titles": [
+        "Tháp nhũ điện – Trang trí Noel",
+        "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+        "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+        "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+        "Gấu bò khăn kẻ – Trang trí Noel",
+        "Kẹo hạt nổi – Trang trí Noel",
+        "Trang Chủ",
+        "Chính Sách Bảo Mật"
+      ]
+    },
+    "pdp_drawer_before_close": {
+      "url": "https://trangtri4mua.com/san-pham/thap-nhu-dien/",
+      "drawerClass": "ct-panel ct-header active",
+      "active": {
+        "tag": "A",
+        "class": "tt4m-drawer-brand-link",
+        "label": null
+      },
+      "inside": true
+    },
+    "pdp_close_button": {
+      "drawerClass": "ct-panel ct-header",
+      "active": {
+        "tag": "BUTTON",
+        "class": "ct-header-trigger ct-toggle ",
+        "label": "Menu"
+      },
+      "focusOnTrigger": true
+    },
+    "category_search": {
+      "url": "https://trangtri4mua.com/?s=%C3%B4ng+gi%C3%A0+noel",
+      "h1": "Kết quả tìm kiếm cho ông già noel",
+      "titles": [
+        "Ông già Noel 3 mẫu – Trang trí Noel",
+        "Ông già Noel lắc mông thổi kèn – Trang trí Noel",
+        "Ông già Noel đỏ – Trang trí Noel",
+        "Ông già Noel 1m8 – Trang trí Noel",
+        "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+        "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+        "Ông già trắng xịn – Trang trí Noel",
+        "Ông già vàng xịn 60cm – Trang trí Noel",
+        "Ông già gôn xịn – Trang trí Noel",
+        "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)"
+      ],
+      "empty": false
+    },
+    "desktop_search_modal": {
+      "open": "ct-panel active",
+      "active": {
+        "tag": "INPUT",
+        "name": "s",
+        "aria": "Tìm kiếm cho"
+      },
+      "inside": true,
+      "close": {
+        "rect": {
+          "x": 1373,
+          "y": 20,
+          "width": 42,
+          "height": 42,
+          "top": 20,
+          "right": 1415,
+          "bottom": 62,
+          "left": 1373
+        },
+        "bg": "rgba(255, 255, 255, 0.12)",
+        "color": "rgb(255, 255, 255)",
+        "svgFill": "rgb(255, 255, 255)"
+      },
+      "closed": {
+        "open": "ct-panel",
+        "active": {
+          "tag": "BUTTON",
+          "aria": "Tìm kiếm"
+        },
+        "focusOnTrigger": true
+      }
+    }
+  },
+  "policy": {
+    "mobile375": [
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "viewport": {
+          "w": 375,
+          "h": 812
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 3642.640625,
+            "height": 662.40625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 3412.84375
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 3642.640625,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Bảo Mật"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng 24/7"
+          },
+          {
+            "level": "H4",
+            "text": "Cam Kết Bảo Mật Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "1. Mục Đích Thu Thập Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "2. Phạm Vi Dữ Liệu Thu Thập"
+          },
+          {
+            "level": "H2",
+            "text": "3. Quy Định Về Cookie & Dữ Liệu Nguồn Truy Cập (Attribution Cookies)"
+          },
+          {
+            "level": "H2",
+            "text": "4. Thời Gian Lưu Trữ Thông Tin"
+          },
+          {
+            "level": "H2",
+            "text": "5. Các Đơn Vị Được Tiếp Cận Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân"
+          },
+          {
+            "level": "H3",
+            "text": "Ban Quản Trị Dữ Liệu & Bảo Mật"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "💬 Chat Zalo Hỗ Trợ"
+        ],
+        "tables": [],
+        "docWidth": {
+          "inner": 375,
+          "scroll": 375
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "viewport": {
+          "w": 375,
+          "h": 812
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 3679.125,
+            "height": 662.40625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 3449.328125
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 3679.125,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Vận Chuyển"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Miễn Phí Vận Chuyển Toàn Quốc Cho Đơn Hàng Từ 500.000đ"
+          },
+          {
+            "level": "H2",
+            "text": "1. Biểu Phí Vận Chuyển Chi Tiết & Thời Gian Giao Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "2. Quy Chuẩn Đóng Gói Bảo Vệ Hàng Dễ Vỡ"
+          },
+          {
+            "level": "H2",
+            "text": "3. Quyền Lợi Đồng Kiểm Mở Hộp Khi Nhận Hàng (COD)"
+          },
+          {
+            "level": "H4",
+            "text": "Mở Hộp Kiểm Tra Trước Khi Trả Tiền"
+          },
+          {
+            "level": "H4",
+            "text": "Từ Chối Nhận Miễn Phí Nếu Nứt Vỡ"
+          },
+          {
+            "level": "H2",
+            "text": "4. Khuyến Nghị Đặt Hàng Mùa Cao Điểm Lễ Hội"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Tra Cứu Vận Đơn Hoặc Cần Giao Hỏa Tốc?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 375,
+          "scroll": 375
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "viewport": {
+          "w": 375,
+          "h": 812
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 3563.953125,
+            "height": 662.40625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 3334.15625
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 3563.953125,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Đổi Trả"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Đổi Mới 1-1 Trong 7 Ngày"
+          },
+          {
+            "level": "H4",
+            "text": "Miễn Phí 100% Cước Đổi Trả Lỗi"
+          },
+          {
+            "level": "H4",
+            "text": "Thu Hồi Tận Nhà Thuận Tiện"
+          },
+          {
+            "level": "H4",
+            "text": "Hoàn Tiền Nhanh Trong 1 – 2 Ngày"
+          },
+          {
+            "level": "H2",
+            "text": "1. Điều Kiện Áp Dụng Đổi Trả Sản Phẩm"
+          },
+          {
+            "level": "H4",
+            "text": "Lưu Ý Quan Trọng Khi Nhận Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "2. Quy Trình 3 Bước Đổi Trả Tận Nơi"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 1: Tiếp Nhận Thông Tin Khiếu Nại"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 2: Xác Nhận & Điều Phối Lấy Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 3: Gửi Hàng Mới Hoặc Hoàn Tiền"
+          },
+          {
+            "level": "H2",
+            "text": "3. Phân Định Chi Phí Vận Chuyển Khi Đổi Trả"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Hỗ Trợ Đổi Hàng Hoặc Giải Quyết Sự Cố?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 375,
+          "scroll": 375
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "viewport": {
+          "w": 375,
+          "h": 812
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 4114.59375,
+            "height": 662.40625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 3884.796875
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 4114.59375,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Thanh Toán"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "1. Bảng Tổng Hợp Phương Thức Thanh Toán"
+          },
+          {
+            "level": "H2",
+            "text": "2. Chi Tiết Các Hình Thức Thanh Toán & Quy Trình"
+          },
+          {
+            "level": "H3",
+            "text": "1. Thanh Toán Khi Nhận Hàng (COD – Cash On Delivery)"
+          },
+          {
+            "level": "H3",
+            "text": "2. Thanh Toán Chuyển Khoản Ngân Hàng Napas247 (VietQR)"
+          },
+          {
+            "level": "H4",
+            "text": "Thông Tin Đơn Vị Thụ Hưởng & Doanh Nghiệp Bán Hàng"
+          },
+          {
+            "level": "H3",
+            "text": "3. Thanh Toán Trực Tiếp Tại Showroom"
+          },
+          {
+            "level": "H3",
+            "text": "4. Quy Trình Xuất Hóa Đơn Điện Tử Giá Trị Gia Tăng (VAT)"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Hỗ Trợ Xác Nhận Thanh Toán Hoặc Xuất Hóa Đơn VAT?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 341,
+            "scroll": 580,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 375,
+          "scroll": 375
+        }
+      }
+    ],
+    "tablet768": [
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-bao-mat/",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 2656.28125,
+            "height": 638.390625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 2426.484375
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 2656.28125,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Bảo Mật"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng 24/7"
+          },
+          {
+            "level": "H4",
+            "text": "Cam Kết Bảo Mật Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "1. Mục Đích Thu Thập Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "2. Phạm Vi Dữ Liệu Thu Thập"
+          },
+          {
+            "level": "H2",
+            "text": "3. Quy Định Về Cookie & Dữ Liệu Nguồn Truy Cập (Attribution Cookies)"
+          },
+          {
+            "level": "H2",
+            "text": "4. Thời Gian Lưu Trữ Thông Tin"
+          },
+          {
+            "level": "H2",
+            "text": "5. Các Đơn Vị Được Tiếp Cận Dữ Liệu"
+          },
+          {
+            "level": "H2",
+            "text": "6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân"
+          },
+          {
+            "level": "H3",
+            "text": "Ban Quản Trị Dữ Liệu & Bảo Mật"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "💬 Chat Zalo Hỗ Trợ"
+        ],
+        "tables": [],
+        "docWidth": {
+          "inner": 768,
+          "scroll": 768
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 2701.0625,
+            "height": 638.390625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 2471.265625
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 2701.0625,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Vận Chuyển"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Miễn Phí Vận Chuyển Toàn Quốc Cho Đơn Hàng Từ 500.000đ"
+          },
+          {
+            "level": "H2",
+            "text": "1. Biểu Phí Vận Chuyển Chi Tiết & Thời Gian Giao Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "2. Quy Chuẩn Đóng Gói Bảo Vệ Hàng Dễ Vỡ"
+          },
+          {
+            "level": "H2",
+            "text": "3. Quyền Lợi Đồng Kiểm Mở Hộp Khi Nhận Hàng (COD)"
+          },
+          {
+            "level": "H4",
+            "text": "Mở Hộp Kiểm Tra Trước Khi Trả Tiền"
+          },
+          {
+            "level": "H4",
+            "text": "Từ Chối Nhận Miễn Phí Nếu Nứt Vỡ"
+          },
+          {
+            "level": "H2",
+            "text": "4. Khuyến Nghị Đặt Hàng Mùa Cao Điểm Lễ Hội"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Tra Cứu Vận Đơn Hoặc Cần Giao Hỏa Tốc?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 785,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 768,
+          "scroll": 768
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 2348.359375,
+            "height": 638.390625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 2118.5625
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 2348.359375,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Đổi Trả"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Đổi Mới 1-1 Trong 7 Ngày"
+          },
+          {
+            "level": "H4",
+            "text": "Miễn Phí 100% Cước Đổi Trả Lỗi"
+          },
+          {
+            "level": "H4",
+            "text": "Thu Hồi Tận Nhà Thuận Tiện"
+          },
+          {
+            "level": "H4",
+            "text": "Hoàn Tiền Nhanh Trong 1 – 2 Ngày"
+          },
+          {
+            "level": "H2",
+            "text": "1. Điều Kiện Áp Dụng Đổi Trả Sản Phẩm"
+          },
+          {
+            "level": "H4",
+            "text": "Lưu Ý Quan Trọng Khi Nhận Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "2. Quy Trình 3 Bước Đổi Trả Tận Nơi"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 1: Tiếp Nhận Thông Tin Khiếu Nại"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 2: Xác Nhận & Điều Phối Lấy Hàng"
+          },
+          {
+            "level": "H4",
+            "text": "Bước 3: Gửi Hàng Mới Hoặc Hoàn Tiền"
+          },
+          {
+            "level": "H2",
+            "text": "3. Phân Định Chi Phí Vận Chuyển Khi Đổi Trả"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Hỗ Trợ Đổi Hàng Hoặc Giải Quyết Sự Cố?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 734,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 768,
+          "scroll": 768
+        }
+      },
+      {
+        "url": "https://trangtri4mua.com/chinh-sach-thanh-toan/",
+        "viewport": {
+          "w": 768,
+          "h": 1024
+        },
+        "mainCount": 1,
+        "nestedMainCount": 0,
+        "mainColTag": "ARTICLE",
+        "domChildren": [
+          {
+            "tag": "ASIDE",
+            "class": "tt4m-sidebar-col",
+            "order": "2",
+            "top": 2919.71875,
+            "height": 638.390625
+          },
+          {
+            "tag": "ARTICLE",
+            "class": "tt4m-main-col",
+            "order": "1",
+            "top": 193.796875,
+            "height": 2689.921875
+          }
+        ],
+        "mainTop": 193.796875,
+        "sideTop": 2919.71875,
+        "mainOrder": "1",
+        "sideOrder": "2",
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Chính Sách Thanh Toán"
+          },
+          {
+            "level": "H4",
+            "text": "DANH MỤC CHÍNH SÁCH"
+          },
+          {
+            "level": "H4",
+            "text": "Hỗ Trợ Mua Hàng"
+          },
+          {
+            "level": "H2",
+            "text": "1. Bảng Tổng Hợp Phương Thức Thanh Toán"
+          },
+          {
+            "level": "H2",
+            "text": "2. Chi Tiết Các Hình Thức Thanh Toán & Quy Trình"
+          },
+          {
+            "level": "H3",
+            "text": "1. Thanh Toán Khi Nhận Hàng (COD – Cash On Delivery)"
+          },
+          {
+            "level": "H3",
+            "text": "2. Thanh Toán Chuyển Khoản Ngân Hàng Napas247 (VietQR)"
+          },
+          {
+            "level": "H4",
+            "text": "Thông Tin Đơn Vị Thụ Hưởng & Doanh Nghiệp Bán Hàng"
+          },
+          {
+            "level": "H3",
+            "text": "3. Thanh Toán Trực Tiếp Tại Showroom"
+          },
+          {
+            "level": "H3",
+            "text": "4. Quy Trình Xuất Hóa Đơn Điện Tử Giá Trị Gia Tăng (VAT)"
+          },
+          {
+            "level": "H3",
+            "text": "Bạn Cần Hỗ Trợ Xác Nhận Thanh Toán Hoặc Xuất Hóa Đơn VAT?"
+          },
+          {
+            "level": "H3",
+            "text": "Đồng Kiểm Khi Nhận"
+          },
+          {
+            "level": "H3",
+            "text": "Miễn Phí Vận Chuyển"
+          },
+          {
+            "level": "H3",
+            "text": "Đổi Trả Trong 7 Ngày"
+          },
+          {
+            "level": "H3",
+            "text": "Giao Hàng Hỏa Tốc"
+          },
+          {
+            "level": "H3",
+            "text": "TRANG TRÍ 4 MÙA"
+          }
+        ],
+        "sidebarLinks": [
+          "Chính Sách Đổi Trả",
+          "Chính Sách Vận Chuyển",
+          "Chính Sách Bảo Mật",
+          "Chính Sách Thanh Toán",
+          "0901.234.567",
+          "0901.234.567",
+          "cskh@trangtri4mua.com",
+          "Nhắn Tin Zalo Hỗ Trợ"
+        ],
+        "tables": [
+          {
+            "client": 734,
+            "scroll": 734,
+            "tag": "DIV",
+            "class": "tt4m-table-wrap"
+          }
+        ],
+        "docWidth": {
+          "inner": 768,
+          "scroll": 768
+        }
+      }
+    ],
+    "keyboard_order": {
+      "before": {
+        "tag": "A",
+        "text": "Chuyển đến phần nội dung",
+        "href": "https://trangtri4mua.com/chinh-sach-bao-mat/#main",
+        "rect": {
+          "x": 4,
+          "y": 4,
+          "width": 230.796875,
+          "height": 47,
+          "top": 4,
+          "right": 234.796875,
+          "bottom": 51,
+          "left": 4
+        }
+      },
+      "afterSkip": {
+        "tag": "MAIN",
+        "id": "main",
+        "text": "Chính Sách Bảo Mật\nDANH MỤC CHÍNH SÁCH\nChính Sách Đổi Trả\nChính Sách Vận Chuyển\nChính Sách Bảo Mật\nChính Sách Thanh Toán\nHỗ Trợ Mua Hàng 24/7\n\nHotline: 0901.234.567\n\nZalo CSKH: 0901.234.567\n\nEmail: cskh@trangtri4mua.com\n\nShowroom: 123 Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\n\nGiờ mở cửa: 08:00 – 21:00 hàng ngày\n\n💬 Chat Zalo Hỗ Trợ\n\nTrang Trí 4 Mùa tôn trọng và cam kết bảo vệ dữ liệu cá nhân của quý khách hàng. Chính sách bảo mật này giải thích rõ ràng cách thức chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân theo đúng quy định của Luật An toàn thông tin mạng và Nghị định số 13/2023/NĐ-CP của Chính phủ về Bảo vệ dữ liệu cá nhân.\n\nCam Kết Bảo Mật Dữ Liệu\n\nDữ liệu cá nhân của bạn chỉ được sử dụng nhằm mục đích xử lý đơn hàng, điều phối giao nhận bưu phẩm và chăm sóc khách hàng. Chúng tôi cam kết tuyệt đối KHÔNG mua bán, KHÔNG chia sẻ thông tin cho bên thứ ba trái phép.\n\n1. Mục Đích Thu Thập Dữ Liệu\nXử lý và xác nhận đơn hàng: Liên hệ xác nhận mẫu mã, số lượng và địa chỉ giao hàng.\nĐiều phối giao nhận: Chuyển giao thông tin cần thiết cho đối tác vận chuyển (GHN, GHTK, Viettel Post, Grab) để phát hàng tận nơi.\nChăm sóc và bảo hành: Hướng dẫn lắp đặt, hỗ trợ kích hoạt chính sách đổi trả 7 ngày và giải quyết khiếu nại.\nHóa đơn doanh nghiệp: Xuất hóa đơn điện tử GTGT (VAT) đối với các đơn hàng B2B hoặc khách hàng có nhu cầu.\n2. Phạm Vi Dữ Liệu Thu Thập\n\nThông tin thu thập bao gồm:\n\nHọ và tên người nhận hàng.\nSố điện thoại liên lạc (dùng xác nhận đơn và điều phối giao bưu phẩm).\nĐịa chỉ giao nhận chi tiết (Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố).\nĐịa chỉ email (tùy chọn, nhận thông báo đơn hàng hoặc file hóa đơn VAT điện tử).\nThông tin doanh nghiệp (Tên công ty, MST, Địa chỉ công ty) — chỉ thu thập khi quý khách yêu cầu xuất hóa đơn VAT.\n\n⚠️ Cam Kết Về Dữ Liệu Tài Chính: Trang Trí 4 Mùa tuyệt đối KHÔNG thu thập và KHÔNG lưu trữ số thẻ ngân hàng, số CVV/CVC, mật khẩu Internet Banking hay mã xác thực OTP của quý khách. Mọi giao dịch trực tuyến đều được thực hiện bảo mật qua cổng thanh toán mã hóa của Ngân hàng.\n\n3. Quy Định Về Cookie & Dữ Liệu Nguồn Truy Cập (Attribution Cookies)\n\nKhi bạn truy cập website trangtri4mua.com, hệ thống tự động ghi nhận một số tệp cookie kỹ thuật và phân tích nhằm đảm bảo tính ổn định và nâng cao trải nghiệm mua sắm:\n\nNhóm Cookie Kỹ Thuật Thiết Yếu: Gồm các cookie phiên làm việc của WooCommerce (woocommerce_cart_hash, woocommerce_items_in_cart, wp_woocommerce_session_*) giúp duy trì sản phẩm trong giỏ hàng và đồng bộ quá trình thanh toán. Các cookie này tự động hết hạn khi bạn đóng trình duyệt hoặc hoàn tất đơn hàng.\nNhóm Cookie Ghi Nhận Nguồn Truy Cập (WooCommerce Order Attribution): Sử dụng thư viện Sourcebuster (sbjs_current, sbjs_first, sbjs_session, sbjs_udata…) với thời hạn lưu trữ tối đa 6 tháng. Các cookie này chỉ ghi nhận ẩn danh kênh giới thiệu (Google, Facebook, Zalo, Direct), trang đích đầu tiên và số lượt xem trang để giúp chúng tôi phân tích hiệu quả chiến dịch; tuyệt đối không thu thập địa chỉ IP thực, không lưu trữ thông tin nhận dạng cá nhân.\nQuyền Kiểm Soát & Xóa Cookie: Quý khách có toàn quyền quản lý, chặn hoặc xóa các cookie này bất cứ lúc nào thông qua phần cài đặt quyền riêng tư trên trình duyệt (Chrome, Safari, Firefox, Edge). Việc chặn cookie phân tích không làm ảnh hưởng đến khả năng xem sản phẩm và mua hàng trên website.\n4. Thời Gian Lưu Trữ Thông Tin\n\nDữ liệu đơn hàng được lưu trữ nội bộ an toàn nhằm mục đích tra cứu lịch sử mua hàng, phục vụ đối soát bảo hành đổi trả trong thời hạn tối đa 2 năm. Dữ liệu từ biểu mẫu liên hệ và yêu cầu tư vấn B2B được lưu trữ trong 12 tháng để phục vụ chăm sóc khách hàng, hoặc cho đến khi khách hàng có yêu cầu hủy bỏ.\n\n5. Các Đơn Vị Được Tiếp Cận Dữ Liệu\nNhân viên xử lý đơn hàng và đóng gói kho của Trang Trí 4 Mùa.\nĐơn vị cung cấp dịch vụ vận chuyển chính thức nhằm phục vụ công tác phát hàng.\nCơ quan quản lý nhà nước có thẩm quyền khi có yêu cầu bằng văn bản theo đúng trình tự pháp luật Việt Nam.\n6. Quyền Của Khách Hàng Đối Với Dữ Liệu Cá Nhân\n\nQuý khách có toàn quyền kiểm tra, cập nhật hoặc yêu cầu xóa bỏ vĩnh viễn thông tin cá nhân của mình trên hệ thống bất cứ lúc nào:\n\n• Gửi yêu cầu qua Email: cskh@trangtri4mua.com\n• Hoặc liên hệ trực tiếp Hotline/Zalo: 0901.234.567\n\nBan Quản Trị Dữ Liệu & Bảo Mật\n\nMọi câu hỏi hoặc khiếu nại về an toàn thông tin cá nhân, vui lòng liên hệ trực tiếp bộ phận Quản trị Bảo mật:\n\n📧 Email: cskh@trangtri4mua.com 📞 Hotline: 0901.234.567",
+        "scrollY": 111
+      },
+      "next": {
+        "tag": "A",
+        "text": "Chính Sách Đổi Trả",
+        "href": "https://trangtri4mua.com/chinh-sach-doi-tra/",
+        "rect": {
+          "x": 37,
+          "y": 3190.921875,
+          "width": 301,
+          "height": 45.484375,
+          "top": 3190.921875,
+          "right": 338,
+          "bottom": 3236.40625,
+          "left": 37
+        },
+        "scrollY": 545
+      }
+    },
+    "contact": {
+      "url": "https://trangtri4mua.com/lien-he/",
+      "mainCount": 1,
+      "nestedMain": 0,
+      "iframes": [
+        {
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.060133742416!2d106.73295847480536!3d10.806709889343765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526194b39b56f%3A0x8673f8510f135118!2zMTIzIFh1w6JuIFRo4buneSwgVGjhuqNvIMSQaeG7gW4sIFF14bqtbiAyLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1711200000000!5m2!1svi!2s",
+          "title": "Bản đồ chỉ đường đến showroom Trang Trí 4 Mùa Thảo Điền",
+          "ariaLabel": null,
+          "ariaLabelledby": null,
+          "rect": {
+            "x": 17,
+            "y": 2644.796875,
+            "width": 341,
+            "height": 278,
+            "top": 2644.796875,
+            "right": 358,
+            "bottom": 2922.796875,
+            "left": 17
+          },
+          "tabIndex": 0
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Liên Hệ"
+        },
+        {
+          "level": "H4",
+          "text": "Hỗ Trợ Dự Án B2B & Khách Sỉ"
+        },
+        {
+          "level": "H3",
+          "text": "Gửi Yêu Cầu Tư Vấn & Báo Giá"
+        },
+        {
+          "level": "H2",
+          "text": "Bản Đồ Chỉ Đường Đến Showroom"
+        }
+      ]
+    },
+    "showroom": {
+      "url": "https://trangtri4mua.com/showroom/",
+      "mainCount": 1,
+      "nestedMain": 0,
+      "iframes": [
+        {
+          "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.060133742416!2d106.73295847480536!3d10.806709889343765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317526194b39b56f%3A0x8673f8510f135118!2zMTIzIFh1w6JuIFRo4buneSwgVGjhuqNvIMSQaeG7gW4sIFF14bqtbiAyLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1711200000000!5m2!1svi!2s",
+          "title": "",
+          "ariaLabel": null,
+          "ariaLabelledby": null,
+          "rect": {
+            "x": 17,
+            "y": 3284.609375,
+            "width": 341,
+            "height": 278,
+            "top": 3284.609375,
+            "right": 358,
+            "bottom": 3562.609375,
+            "left": 17
+          },
+          "tabIndex": 0
+        }
+      ],
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Cửa Hàng & Showroom"
+        },
+        {
+          "level": "H2",
+          "text": "1. Trải Nghiệm Thực Tế Tại Showroom"
+        },
+        {
+          "level": "H4",
+          "text": "Không Gian Cây Thông Đủ Kích Cỡ"
+        },
+        {
+          "level": "H4",
+          "text": "Phụ Kiện Bày Trí Theo Tone Màu Chuẩn"
+        },
+        {
+          "level": "H4",
+          "text": "Bàn Phối Thử Phụ Kiện Trực Tiếp"
+        },
+        {
+          "level": "H4",
+          "text": "Nhận Hàng Trực Tiếp (Local Pickup)"
+        },
+        {
+          "level": "H2",
+          "text": "2. Tiện Ích Dành Cho Khách Hàng Ghé Thăm"
+        },
+        {
+          "level": "H4",
+          "text": "Bãi Đỗ Xe Ô Tô & Xe Máy Thuận Tiện"
+        },
+        {
+          "level": "H4",
+          "text": "Thanh Toán Linh Hoạt Không Phụ Phí"
+        },
+        {
+          "level": "H4",
+          "text": "Đóng Gói Chống Sốc Chuyên Nghiệp"
+        },
+        {
+          "level": "H4",
+          "text": "Không Gian Trải Nghiệm Thân Thiện"
+        },
+        {
+          "level": "H2",
+          "text": "3. Thông Tin Địa Chỉ & Giờ Mở Cửa"
+        },
+        {
+          "level": "H4",
+          "text": "Hệ Thống Showroom & Kho Trung Tâm TP. Hồ Chí Minh"
+        },
+        {
+          "level": "H2",
+          "text": "4. Bản Đồ Vị Trí & Hướng Dẫn Di Chuyển"
+        },
+        {
+          "level": "H3",
+          "text": "Bạn Cần Khảo Sát Không Gian Hoặc Báo Giá Dự Án Decor?"
+        }
+      ]
+    }
+  },
+  "editorial": {
+    "author": {
+      "url": "https://trangtri4mua.com/author/ed4f7b/",
+      "title": "Ban Biên Tập Trang Trí 4 Mùa - Trang trí 4 mùa",
+      "h1": "Ban Biên Tập Trang Trí 4 Mùa",
+      "profileText": "Ban Biên Tập Trang Trí 4 Mùa\nĐội ngũ chuyên viên tư vấn và bài trí không gian lễ hội tại Trang Trí 4 Mùa, chia sẻ kinh nghiệm chọn cây thông, phụ kiện decor và dự toán chi phí thực tế cho gia đình và doanh nghiệp.\nTHAM GIA: THÁNG 9 23, 2026 BÀI VIẾT: 3\nHƯỚNG DẪN & KINH NGHIỆM, Ý TƯỞNG TRANG TRÍ NOEL\nDự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian\n\nBảng bóc tách chi tiết chi phí trang trí Giáng Sinh 2026: cây thông, phụ kiện treo, hệ thống chiếu sáng và tiểu cảnh chân cây. Dự toán mẫu cho căn hộ, quán cafe và văn phòng kèm kỹ thuật bảo quản tái sử dụng nhiều năm.\n\nBAN BIÊN TẬP TRANG TRÍ 4 MÙATHÁNG 9 24, 2026\nHƯỚNG DẪN & KINH NGHIỆM, Ý TƯỞNG TRANG TRÍ NOEL\nHướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần\n\nCẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.\n\nBAN BIÊN TẬP TRANG TRÍ 4 MÙATHÁNG 9 24, 2026\nHƯỚNG DẪN & KINH NGHIỆM, Ý TƯỞNG TRANG TRÍ NOEL\n10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026\n\nCẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.\n\nBAN BIÊN TẬP TRANG TRÍ 4 MÙATHÁNG 9 24, 2026",
+      "robots": "follow, noindex",
+      "persons": [
+        {
+          "id": "https://trangtri4mua.com/author/ed4f7b/",
+          "name": "Ban Biên Tập Trang Trí 4 Mùa",
+          "url": "https://trangtri4mua.com/author/ed4f7b/",
+          "worksFor": {
+            "@id": "https://trangtri4mua.com/#organization"
+          }
+        }
+      ]
+    },
+    "post_bylines": [
+      {
+        "text": "BAN BIÊN TẬP TRANG TRÍ 4 MÙA",
+        "href": "https://trangtri4mua.com/author/ed4f7b/"
+      }
+    ],
+    "budget_tables": [
+      {
+        "index": 4,
+        "caption": null,
+        "precedingHeading": null,
+        "rows": [
+          [
+            "Hạng mục vật tư",
+            "Số lượng",
+            "Quy cách & Chất liệu",
+            "Đơn giá dự toán",
+            "Thành tiền (VNĐ)"
+          ],
+          [
+            "Cây thông Noel tán xòe tiêu chuẩn",
+            "01 cây",
+            "Cao 1m80, chất liệu 3 loại lá kèm chân sắt",
+            "1.150.000₫",
+            "1.150.000₫"
+          ],
+          [
+            "Set quả châu chống vỡ phối màu",
+            "02 hộp",
+            "Mỗi hộp 24 quả (phi 6cm – 8cm), tone Đỏ & Vàng Gold",
+            "125.000₫",
+            "250.000₫"
+          ],
+          [
+            "Kẹo gậy sọc xoắn treo cành",
+            "02 set",
+            "Set 6 cái dài 15cm tone đỏ trắng",
+            "45.000₫",
+            "90.000₫"
+          ],
+          [
+            "Nơ nhung đỏ viền chỉ vàng",
+            "01 set",
+            "Set 12 nơ nhung đỏ truyền thống",
+            "65.000₫",
+            "65.000₫"
+          ],
+          [
+            "Ngôi sao nhũ vàng đỉnh cây",
+            "01 cái",
+            "Đường kính 20cm kim tuyến vàng",
+            "75.000₫",
+            "75.000₫"
+          ],
+          [
+            "Đèn LED đom đóm 10m",
+            "03 cuộn",
+            "Lõi đồng 100 bóng, ánh sáng vàng ấm 3000K",
+            "65.000₫",
+            "195.000₫"
+          ],
+          [
+            "Củ nguồn 12V chống quá nhiệt",
+            "01 cái",
+            "Nguồn 12V 2A chịu tải 30m LED",
+            "85.000₫",
+            "85.000₫"
+          ],
+          [
+            "Thảm lông tuyết trắng lót chân",
+            "01 tấm",
+            "Đường kính 90cm lông cừu nhân tạo",
+            "140.000₫",
+            "140.000₫"
+          ],
+          [
+            "Hộp quà trang trí ruy băng",
+            "01 set",
+            "Set 3 hộp quà kraft xếp tầng",
+            "95.000₫",
+            "95.000₫"
+          ],
+          [
+            "Vòng nguyệt quế treo cửa chính",
+            "01 cái",
+            "Đường kính 35cm gắn nơ và quả thông",
+            "195.000₫",
+            "195.000₫"
+          ],
+          [
+            "TỔNG DỰ TOÁN TRỌN GÓI CĂN HỘ:",
+            "2.340.000₫"
+          ]
+        ]
+      },
+      {
+        "index": 5,
+        "caption": null,
+        "precedingHeading": null,
+        "rows": [
+          [
+            "Hạng mục vật tư",
+            "Số lượng",
+            "Quy cách & Chất liệu",
+            "Đơn giá dự toán",
+            "Thành tiền (VNĐ)"
+          ],
+          [
+            "Cây thông Noel phủ tuyết cao cấp",
+            "01 cây",
+            "Chiều cao 2m10, tán xòe tự nhiên, chân sắt chịu lực",
+            "2.550.000₫",
+            "2.550.000₫"
+          ],
+          [
+            "Quả châu cao cấp chống vỡ (phi 8cm – 10cm)",
+            "03 hộp",
+            "Hộp 24 quả tone Champagne Gold, bạc và đỏ đô",
+            "190.000₫",
+            "570.000₫"
+          ],
+          [
+            "Set quả châu bọc nhung và họa tiết vẽ tay",
+            "02 hộp",
+            "Hộp 6 quả phi 10cm tạo điểm nhấn tầm mắt",
+            "165.000₫",
+            "330.000₫"
+          ],
+          [
+            "Kẹo gậy và phụ kiện treo trang trí",
+            "04 set",
+            "Mix kẹo gậy 20cm và quả thông nhúng tuyết",
+            "65.000₫",
+            "260.000₫"
+          ],
+          [
+            "Ngôi sao nhũ đính sequin đỉnh cây",
+            "01 cái",
+            "Đường kính 25cm phản quang lấp lánh",
+            "120.000₫",
+            "120.000₫"
+          ],
+          [
+            "Đèn LED đom đóm vàng ấm 10m",
+            "06 cuộn",
+            "Tổng chiều dài 60m quấn đều từ ngọn tới chân",
+            "65.000₫",
+            "390.000₫"
+          ],
+          [
+            "Đèn rèm mưa thả kính mặt tiền",
+            "01 bộ",
+            "Kích thước 3m x 2m lắp tại cửa kính lối vào",
+            "210.000₫",
+            "210.000₫"
+          ],
+          [
+            "Củ nguồn công nghiệp 12V 5A",
+            "01 cái",
+            "Bộ nguồn vỏ nhôm tản nhiệt bật 16 tiếng/ngày",
+            "160.000₫",
+            "160.000₫"
+          ],
+          [
+            "Hàng rào gỗ trang trí gốc cây",
+            "01 bộ",
+            "Bộ 6 cánh gỗ trắng 30x40cm quây góc chụp hình",
+            "175.000₫",
+            "175.000₫"
+          ],
+          [
+            "Thảm lông tuyết trắng đường kính 1m2",
+            "01 tấm",
+            "Lông cừu nhân tạo dày 2cm",
+            "210.000₫",
+            "210.000₫"
+          ],
+          [
+            "Hộp quà trang trí vintage khổ lớn",
+            "01 set",
+            "Set 5 hộp quà kích thước 15cm đến 35cm thắt ruy băng",
+            "165.000₫",
+            "165.000₫"
+          ],
+          [
+            "Mô hình Nai tuần lộc đứng",
+            "01 con",
+            "Cao 70cm, khung sắt bọc nỉ tuyết phát sáng",
+            "490.000₫",
+            "490.000₫"
+          ],
+          [
+            "Dây thông gắn quả 1,8m trang trí quầy bar",
+            "02 sợi",
+            "Dây thông phủ tuyết gắn quả thông và hạt đỏ",
+            "180.000₫",
+            "360.000₫"
+          ],
+          [
+            "Decal dán kính Noel tĩnh điện 2 mặt",
+            "02 tờ",
+            "Bông tuyết và đàn tuần lộc, bóc dán không dính keo",
+            "115.000₫",
+            "230.000₫"
+          ],
+          [
+            "TỔNG DỰ TOÁN TRỌN GÓI QUÁN CAFE:",
+            "6.220.000₫"
+          ]
+        ]
+      },
+      {
+        "index": 6,
+        "caption": null,
+        "precedingHeading": null,
+        "rows": [
+          [
+            "Hạng mục vật tư",
+            "Số lượng",
+            "Quy cách & Chất liệu",
+            "Đơn giá dự toán",
+            "Thành tiền (VNĐ)"
+          ],
+          [
+            "Cây thông PE Real Touch đại sảnh",
+            "01 cây",
+            "Chiều cao 3m00, lá PE đúc 3D nguyên cành, khung thép đôi",
+            "8.200.000₫",
+            "8.200.000₫"
+          ],
+          [
+            "Quả châu lớn mạ điện (phi 10cm – 12cm)",
+            "05 hộp",
+            "Mỗi hộp 12 quả, mạ điện bóng gương và phủ nhũ cao cấp",
+            "280.000₫",
+            "1.400.000₫"
+          ],
+          [
+            "Quả châu tiêu chuẩn (phi 8cm) phối tầng",
+            "06 hộp",
+            "Mỗi hộp 24 quả nhựa dẻo chống vỡ tone Evergreen & Gold",
+            "175.000₫",
+            "1.050.000₫"
+          ],
+          [
+            "Nơ nhung dạ đại thêu viền chỉ vàng",
+            "03 set",
+            "Set 10 nơ nhung bản to 18cm uốn cành",
+            "140.000₫",
+            "420.000₫"
+          ],
+          [
+            "Ngôi sao pha lê 3D gắn đèn LED đỉnh",
+            "01 cái",
+            "Đường kính 35cm, ánh sáng hắt đa góc",
+            "350.000₫",
+            "350.000₫"
+          ],
+          [
+            "Hệ thống LED đom đóm 100m",
+            "10 cuộn",
+            "Dây đồng phủ men chống nước, 1000 bóng vàng ấm",
+            "75.000₫",
+            "750.000₫"
+          ],
+          [
+            "Đèn rèm thả thông tầng vách kính",
+            "02 bộ",
+            "Kích thước 3m x 3m chuẩn ngoài trời IP65",
+            "290.000₫",
+            "580.000₫"
+          ],
+          [
+            "Bộ tủ nguồn an toàn 12V 20A kèm cầu chì",
+            "01 bộ",
+            "Bộ nguồn công nghiệp hộp kín, aptomat chống giật",
+            "480.000₫",
+            "480.000₫"
+          ],
+          [
+            "Bục gỗ nâng chân cây kèm thảm nhung",
+            "01 bộ",
+            "Bục tròn đk 1m8 cao 20cm, thảm nhung đỏ bo viền",
+            "1.450.000₫",
+            "1.450.000₫"
+          ],
+          [
+            "Set 8 hộp quà bọc nhung và dạ cao cấp",
+            "01 set",
+            "Kích thước lớn từ 20cm đến 45cm xếp tầng đa hướng",
+            "450.000₫",
+            "450.000₫"
+          ],
+          [
+            "Cặp Nai tuần lộc phát sáng nghệ thuật",
+            "01 cặp",
+            "Con lớn cao 1m20, con nhỏ cao 80cm khung hợp kim nhôm",
+            "1.850.000₫",
+            "1.850.000₫"
+          ],
+          [
+            "Tượng Lính chì Nutcracker bằng gỗ",
+            "02 con",
+            "Cao 90cm đặt đối xứng hai bên lối vào photobooth",
+            "680.000₫",
+            "1.360.000₫"
+          ],
+          [
+            "Vòng nguyệt quế đại sảnh lễ tân",
+            "02 cái",
+            "Đường kính 60cm lá PE mix quả chuông đồng",
+            "450.000₫",
+            "900.000₫"
+          ],
+          [
+            "TỔNG DỰ TOÁN TRỌN GÓI SHOWROOM / DOANH NGHIỆP:",
+            "19.240.000₫"
+          ]
+        ]
+      }
+    ],
+    "budget_checks": [
+      {
+        "index": 4,
+        "itemCount": 10,
+        "rowAmounts": [
+          {
+            "item": "Cây thông Noel tán xòe tiêu chuẩn",
+            "amount": 1150000
+          },
+          {
+            "item": "Set quả châu chống vỡ phối màu",
+            "amount": 250000
+          },
+          {
+            "item": "Kẹo gậy sọc xoắn treo cành",
+            "amount": 90000
+          },
+          {
+            "item": "Nơ nhung đỏ viền chỉ vàng",
+            "amount": 65000
+          },
+          {
+            "item": "Ngôi sao nhũ vàng đỉnh cây",
+            "amount": 75000
+          },
+          {
+            "item": "Đèn LED đom đóm 10m",
+            "amount": 195000
+          },
+          {
+            "item": "Củ nguồn 12V chống quá nhiệt",
+            "amount": 85000
+          },
+          {
+            "item": "Thảm lông tuyết trắng lót chân",
+            "amount": 140000
+          },
+          {
+            "item": "Hộp quà trang trí ruy băng",
+            "amount": 95000
+          },
+          {
+            "item": "Vòng nguyệt quế treo cửa chính",
+            "amount": 195000
+          }
+        ],
+        "sum": 2340000,
+        "published": 2340000,
+        "totalLabel": "TỔNG DỰ TOÁN TRỌN GÓI CĂN HỘ:",
+        "difference": 0
+      },
+      {
+        "index": 5,
+        "itemCount": 14,
+        "rowAmounts": [
+          {
+            "item": "Cây thông Noel phủ tuyết cao cấp",
+            "amount": 2550000
+          },
+          {
+            "item": "Quả châu cao cấp chống vỡ (phi 8cm – 10cm)",
+            "amount": 570000
+          },
+          {
+            "item": "Set quả châu bọc nhung và họa tiết vẽ tay",
+            "amount": 330000
+          },
+          {
+            "item": "Kẹo gậy và phụ kiện treo trang trí",
+            "amount": 260000
+          },
+          {
+            "item": "Ngôi sao nhũ đính sequin đỉnh cây",
+            "amount": 120000
+          },
+          {
+            "item": "Đèn LED đom đóm vàng ấm 10m",
+            "amount": 390000
+          },
+          {
+            "item": "Đèn rèm mưa thả kính mặt tiền",
+            "amount": 210000
+          },
+          {
+            "item": "Củ nguồn công nghiệp 12V 5A",
+            "amount": 160000
+          },
+          {
+            "item": "Hàng rào gỗ trang trí gốc cây",
+            "amount": 175000
+          },
+          {
+            "item": "Thảm lông tuyết trắng đường kính 1m2",
+            "amount": 210000
+          },
+          {
+            "item": "Hộp quà trang trí vintage khổ lớn",
+            "amount": 165000
+          },
+          {
+            "item": "Mô hình Nai tuần lộc đứng",
+            "amount": 490000
+          },
+          {
+            "item": "Dây thông gắn quả 1,8m trang trí quầy bar",
+            "amount": 360000
+          },
+          {
+            "item": "Decal dán kính Noel tĩnh điện 2 mặt",
+            "amount": 230000
+          }
+        ],
+        "sum": 6220000,
+        "published": 6220000,
+        "totalLabel": "TỔNG DỰ TOÁN TRỌN GÓI QUÁN CAFE:",
+        "difference": 0
+      },
+      {
+        "index": 6,
+        "itemCount": 13,
+        "rowAmounts": [
+          {
+            "item": "Cây thông PE Real Touch đại sảnh",
+            "amount": 8200000
+          },
+          {
+            "item": "Quả châu lớn mạ điện (phi 10cm – 12cm)",
+            "amount": 1400000
+          },
+          {
+            "item": "Quả châu tiêu chuẩn (phi 8cm) phối tầng",
+            "amount": 1050000
+          },
+          {
+            "item": "Nơ nhung dạ đại thêu viền chỉ vàng",
+            "amount": 420000
+          },
+          {
+            "item": "Ngôi sao pha lê 3D gắn đèn LED đỉnh",
+            "amount": 350000
+          },
+          {
+            "item": "Hệ thống LED đom đóm 100m",
+            "amount": 750000
+          },
+          {
+            "item": "Đèn rèm thả thông tầng vách kính",
+            "amount": 580000
+          },
+          {
+            "item": "Bộ tủ nguồn an toàn 12V 20A kèm cầu chì",
+            "amount": 480000
+          },
+          {
+            "item": "Bục gỗ nâng chân cây kèm thảm nhung",
+            "amount": 1450000
+          },
+          {
+            "item": "Set 8 hộp quà bọc nhung và dạ cao cấp",
+            "amount": 450000
+          },
+          {
+            "item": "Cặp Nai tuần lộc phát sáng nghệ thuật",
+            "amount": 1850000
+          },
+          {
+            "item": "Tượng Lính chì Nutcracker bằng gỗ",
+            "amount": 1360000
+          },
+          {
+            "item": "Vòng nguyệt quế đại sảnh lễ tân",
+            "amount": 900000
+          }
+        ],
+        "sum": 19240000,
+        "published": 19240000,
+        "totalLabel": "TỔNG DỰ TOÁN TRỌN GÓI SHOWROOM / DOANH NGHIỆP:",
+        "difference": 0
+      }
+    ]
+  },
+  "routing": {
+    "http404": {
+      "page": {
+        "url": "https://trangtri4mua.com/reviewer-r33-963c6d3-probe/",
+        "status": 404,
+        "contentType": "text/html; charset=UTF-8",
+        "cache": "no-cache, must-revalidate, max-age=0, no-store, private",
+        "bodyLength": 112138,
+        "title": "Page Not Found - Trang trí 4 mùa",
+        "hasHome": true,
+        "hasShop": true,
+        "hasSearch": true,
+        "hasHeader": true,
+        "hasFooter": true
+      },
+      "asset": {
+        "status": 404,
+        "contentType": "text/html",
+        "bodyLength": 146,
+        "title": "404 Not Found"
+      }
+    },
+    "browser404": {
+      "url": "https://trangtri4mua.com/reviewer-r33-963c6d3-probe/",
+      "title": "Page Not Found - Trang trí 4 mùa",
+      "h1": "Không Tìm Thấy Trang Bạn Yêu Cầu",
+      "body": "LỖI 404 • KHÔNG TÌM THẤY TRANG\nKhông Tìm Thấy Trang Bạn Yêu Cầu\n\nĐường dẫn bạn truy cập có thể đã được cập nhật, thay đổi tên hoặc tạm thời gián đoạn. Quý khách vui lòng thử tìm kiếm sản phẩm hoặc khám phá các danh mục trang trí mùa lễ hội 2026 dưới đây:\n\nTìm Kiếm\n← Về Trang Chủ\n🎄 Xem Cửa Hàng Noel\n💬 Nhắn Zalo Hỗ Trợ (24/7)\nDANH MỤC NỔI BẬT DÀNH CHO BẠN\nCây Thông Noel (Đủ Size)\nPhụ Kiện Treo Cây\nMô Hình & Tượng Noel\nCombo Trang Trí Trọn Gói",
+      "forms": [
+        {
+          "role": "search",
+          "action": "https://trangtri4mua.com/",
+          "inputs": [
+            {
+              "type": "search",
+              "name": "s",
+              "placeholder": "Tìm cây thông, phụ kiện Noel, mô hình, đồ Tết...",
+              "aria": "Tìm kiếm cho"
+            }
+          ]
+        },
+        {
+          "role": "search",
+          "action": "https://trangtri4mua.com/",
+          "inputs": [
+            {
+              "type": "search",
+              "name": "s",
+              "placeholder": "Tìm cây thông, phụ kiện, tượng...",
+              "aria": "Tìm kiếm sản phẩm"
+            }
+          ]
+        },
+        {
+          "role": "search",
+          "action": "https://trangtri4mua.com/",
+          "inputs": [
+            {
+              "type": "search",
+              "name": "s",
+              "placeholder": "Tìm cây thông, quả châu, mô hình Noel...",
+              "aria": null
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "← Về Trang Chủ",
+          "href": "https://trangtri4mua.com/"
+        },
+        {
+          "text": "🎄 Xem Cửa Hàng Noel",
+          "href": "https://trangtri4mua.com/cua-hang/"
+        },
+        {
+          "text": "💬 Nhắn Zalo Hỗ Trợ (24/7)",
+          "href": "https://zalo.me/0901234567"
+        },
+        {
+          "text": "Cây Thông Noel (Đủ Size)",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/"
+        },
+        {
+          "text": "Phụ Kiện Treo Cây",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/"
+        },
+        {
+          "text": "Mô Hình & Tượng Noel",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+        },
+        {
+          "text": "Combo Trang Trí Trọn Gói",
+          "href": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/"
+        }
+      ]
+    },
+    "cta_shop": {
+      "before": {
+        "text": "Khảo Sát Mặt Bằng 24h",
+        "href": "https://trangtri4mua.com/#b2b-consultation",
+        "rect": {
+          "x": 39.5,
+          "y": 810.75,
+          "width": 296,
+          "height": 44,
+          "top": 810.75,
+          "right": 335.5,
+          "bottom": 854.75,
+          "left": 39.5
+        }
+      },
+      "url": "https://trangtri4mua.com/#b2b-consultation",
+      "hash": "#b2b-consultation",
+      "scrollY": 3487,
+      "target": {
+        "exists": true,
+        "tag": "SECTION",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 916.25,
+          "top": 0,
+          "right": 375,
+          "bottom": 916.25,
+          "left": 0
+        },
+        "text": "Dự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn diện từ ý tưởng, khảo sát mặt bằng đến thi công hoàn thiện. Đồng bộ phong cách theo nhận diện thương hiệu với chi phí tối ưu.\n\n✓\nKhảo sát mặt bằng & tư vấn phối cảnh 3D thực tế: Đội ngũ thiết kế hỗ trợ tư vấn concept phù hợp với diện tích và luồng di chuyển của quán & văn phòng.\n✓\nBáo giá minh bạch, dự toán vật tư rõ ràng: Bóc tách chi tiết từng hạng mục cây thông, phụ kiện và ánh sáng, không phát sinh chi phí ngoài dự kiến.\n✓\nHóa đơn GTGT (VAT) điện tử & hợp đồng đầy đủ: Cung cấp chứng từ thanh toán hợp lệ, quy trình nghiệm thu và thanh toán thuận tiện cho doanh nghiệp.\n✓\nThi công đúng hẹn & hỗ trợ tháo dỡ sau lễ: Bàn giao đúng tiến độ, hỗ trợ thu gom và bảo quản phụ kiện gọn gàng sau mùa lễ hội.\nCần Tư Vấn & Dự Toán Chi Phí?\n\nGửi kích thước hoặc ảnh không gian qua Zalo để nhận phối cảnh gợi ý & dự toán chi phí chi tiết trong ngày.\n\nNhắn Zalo Tư Vấn\nGọi: 0901.234.567",
+        "tabIndex": -1
+      },
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "class": "home wp-singular page-template-default page page-id-23 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js",
+        "text": "Chuyển đến phần nội dung\nFreeship đơn từ 500.000đ • Hotline: 0901.234.567\nGiỏ hàng\n0 ₫\n0\nMÙA LỄ HỘI 2026 • COMBO TRỌN GÓI SẴN HÀNG\nCombo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng\n\nKhông cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại Trang Trí 4 Mùa được thiết kế chuẩn tone ấm áp, đầy đủ từ cây thông, quả châu, kẹo xoắn đến hệ thống chiếu sáng an toàn và nơ đỉnh.\n\n✓\nĐầy đủ cây thông chuẩn size (1m5, 1m8, 2m1) kèm chân sắt chịu lực\n✓\nBộ phụ kiện treo 45 – 80 món đồng bộ tone màu (Đỏ – Vàng hoặc Trắng – Bạc)\n✓\nTặng kèm dây đèn LED ánh sáng ấm chống chập cháy & găng tay định hình cành\nXem Set Combo\nTư Vấn Zalo\nTiết Kiệm 20%\nDanh Mục Sản Phẩm\nMua Sắm Theo Nhu Cầu Trang Trí\n\nĐầy đủ mọi phụ kiện từ cây thông, quả châu, tượng mô hình đến các gói combo tiện lợi, giúp bạn dễ dàng hoàn thiện không gian lễ hội.\n\nĐa Dạng Mẫu Mã\nPhụ Kiện Treo Cây\n→\nChất Liệu Cao Cấp\nMô Hình & Tượng Noel\n→\nĐủ Size 1m2 – 2m4\nCây Thông Noel\n→\nPhối Màu Đồng Bộ\nCombo Trọn Gói\n→\nÁnh Sáng Ấm Áp\nĐèn & Nến Trang Trí\n→\nHộp Quà Sang Trọng\nQuà Tặng & Phụ Kiện\n→\nSản Phẩm Trang Trí Được Yêu Thích\n\nTuyển chọn các món phụ kiện & tượng decor được khách hàng lựa chọn nhiều cho mùa lễ hội năm nay.\n\nXem tất cả 89+ sản phẩm Noel\n→\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nCombo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)\n950.000 ₫\nGiá gốc là: 950.000 ₫.\n750.000 ₫\nGiá hiện tại là: 750.000 ₫.\nThêm giỏ\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nSet Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)\n1.550.000 ₫\nGiá gốc là: 1.550.000 ₫.\n1.250.000 ₫\nGiá hiện tại là: 1.250.000 ₫.\nThêm giỏ\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nKHUYẾN MẠI\nSẢN PHẨM ĐANG GIẢM GIÁ\nCombo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)\n4.600.000 ₫\nGiá gốc là: 4.600.000 ₫.\n3.850.000 ₫\nGiá hiện tại là: 3.850.000 ₫.\nThêm giỏ\nCây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên\n850.000 ₫ – 2.650.000 ₫\nKhoảng giá: từ 850.000 ₫ đến 2.650.000 ₫\nChọn mẫu\nCây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết\n750.000 ₫ – 1.650.000 ₫\nKhoảng giá: từ 750.000 ₫ đến 1.650.000 ₫\nChọn mẫu\nÔng già Noel 3 mẫu – Trang trí Noel\n255.000 ₫ – 685.000 ₫\nKhoảng giá: từ 255.000 ₫ đến 685.000 ₫\nChọn mẫu\nBờm kính Noel – Trang trí Noel\n10.000 ₫\nThêm giỏ\nYêu tinh Elf trang trí – Trang trí Noel\n355.000 ₫\nThêm giỏ\nDự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn diện từ ý tưởng, khảo sát mặt bằng đến thi công hoàn thiện. Đồng bộ phong cách theo nhận diện thương hiệu với chi phí tối ưu.\n\n✓\nKhảo sát mặt bằng & tư vấn phối cảnh 3D thực tế: Đội ngũ thiết kế hỗ trợ tư vấn concept phù hợp với diện tích và luồng di chuyển của quán & văn phòng.\n✓\nBáo giá minh bạch, dự toán vật tư rõ ràng: Bóc tách chi tiết từng hạng mục cây thông, phụ kiện và ánh sáng, không phát sinh chi phí ngoài dự kiến.\n✓\nHóa đơn GTGT (VAT) điện tử & hợp đồng đầy đủ: Cung cấp chứng từ thanh toán hợp lệ, quy trình nghiệm thu và thanh toán thuận tiện cho doanh nghiệp.\n✓\nThi công đúng hẹn & hỗ trợ tháo dỡ sau lễ: Bàn giao đúng tiến độ, hỗ trợ thu gom và bảo quản phụ kiện gọn gàng sau mùa lễ hội.\nCần Tư Vấn & Dự Toán Chi Phí?\n\nGửi kích thước hoặc ảnh không gian qua Zalo để nhận phối cảnh gợi ý & dự toán chi phí chi tiết trong ngày.\n\nNhắn Zalo Tư Vấn\nGọi: 0901.234.567\nCẩm Nang Trang Trí\nKinh Nghiệm & Ý Tưởng Trang Trí Không Gian\n\nBí quyết chọn kích cỡ cây thông, phối tone màu phụ kiện chuẩn thẩm mỹ và phân bổ ngân sách hợp lý từ đội ngũ Trang Trí 4 Mùa.\n\nQuán Cafe & Cửa Hàng\n5 phút đọc\n•\nMùa Noel 2026\n10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Tối Ưu Diện Tích & Thu Hút Khách\n\nBí quyết phối màu đỏ – xanh rêu ấm áp kết hợp đèn LED rèm dịu nhẹ tạo góc chụp ảnh tự nhiên thu hút khách hàng ghé thăm.\n\nKhám phá ngay\n→\nHướng Dẫn Mua Sắm\n4 phút đọc\n•\nKinh nghiệm chọn cây\nHướng Dẫn Chọn Kích Thước Cây Thông Noel Chuẩn Nhất Theo Diện Tích Phòng\n\nBảng tra cứu kích thước chi tiết từ cây mini 60cm để bàn đến cây 1m8, 2m1, 2m4 phù hợp cho trần nhà chung cư và sảnh lớn.\n\nXem hướng dẫn\n→\nDự Toán Ngân Sách\n6 phút đọc\n•\nTối ưu chi phí\nDự Toán Chi Phí Trang Trí Noel Trọn Gói 2026: Bảng Giá Chi Tiết & Cách Tối Ưu\n\nCách phân bổ ngân sách mua sắm hợp lý, tận dụng set combo phụ kiện và bí quyết bảo quản để tái sử dụng cho mùa lễ hội sau.\n\nXem bảng giá\n→\nĐánh Giá Thực Tế\nTrải Nghiệm Từ Khách Hàng Thực Tế\n\nHơn 1.200 gia đình, chủ quán cafe và đối tác doanh nghiệp đã tin tưởng lựa chọn Trang Trí 4 Mùa để làm mới không gian lễ hội.\n\n★★★★★\n\n“Set phụ kiện và cây thông Noel giao hỏa tốc đóng gói rất kỹ càng. Quán cafe mình trang trí xong tạo không khí ấm cúng rõ rệt, khách ghé uống cafe chụp ảnh check-in rất thích.”\n\nTR\nThe Rustic Coffee\n✓\n\nQuán Cafe TPHCM • Đã mua Combo cây 2m1\n\n★★★★★\n\n“Tượng lính chì Nutcracker và ông già Noel chi tiết sắc nét, chắc chắn. Khâu đồng kiểm COD mở hàng kiểm tra trước khi trả tiền rất yên tâm, nhân viên tư vấn Zalo hướng dẫn lắp ráp tận tình.”\n\nTH\nChị Thu Hằng\n✓\n\nCăn hộ chung cư Hà Nội • Mua 5 tượng decor\n\n★★★★★\n\n“Cửa hàng mình đặt gói decor trang trí cho shop thời trang, được hỗ trợ xuất hóa đơn VAT điện tử nhanh gọn. Mẫu mã sang trọng, phối màu chuẩn tone ấm áp.”\n\nMB\nMay Boutique\n✓\n\nShop Thời Trang Đà Nẵng • Khách hàng doanh nghiệp\n\nĐồng hành cùng hơn 1.200 gia đình, cửa hàng & doanh nghiệp trên toàn quốc\nHỏi Đáp & Tư Vấn\nGiải Đáp Thắc Mắc Khi Mua Sắm\n\nNhững băn khoăn phổ biến nhất của khách hàng khi chọn mua phụ kiện trang trí Noel & Tết tại Trang Trí 4 Mùa.\n\n1. Sản phẩm trên website có đúng hình ảnh thực tế không?\n▼\nTất cả sản phẩm tại Trang Trí 4 Mùa đều là ảnh thật 100% được quay chụp trực tiếp tại kho và showroom. Quý khách luôn có quyền mở hộp kiểm tra đúng mẫu mã, màu sắc trước khi thanh toán tiền cho nhân viên giao hàng (COD).\n2. Vận chuyển hàng dễ vỡ (quả châu, tháp đèn, tượng sứ) có an toàn không?\n▼\n3. Khách hàng doanh nghiệp, quán cafe có được xuất hóa đơn GTGT (VAT) không?\n▼\n4. Thời gian giao hàng hỏa tốc và tiêu chuẩn trong bao lâu?\n▼\n5. Tôi muốn tư vấn thiết kế trọn gói cho quán cafe thì liên hệ ở đâu?\n▼\nĐồng Kiểm Khi Nhận\n\nKiểm tra đúng mẫu mã và chất lượng trước khi thanh toán\n\nMiễn Phí Vận Chuyển\n\nGiao tận nơi toàn quốc cho tất cả đơn hàng từ 500.000đ\n\nĐổi Trả Trong 7 Ngày\n\nHỗ trợ 1 đổi 1 nhanh chóng nếu sản phẩm có lỗi từ nhà sản xuất\n\nGiao Hàng Hỏa Tốc\n\nHỗ trợ giao siêu tốc 2h – 4h trong khu vực nội thành\n\nPhương thức thanh toán an toàn & bảo mật đa kênh\nVietQR\nVietQR\nnapas247\nNapas 247\nCOD (Tiền mặt)\nmomo\nVí MoMo\nVISA\nVisa / Master\nSSL 256-bit Secured\nTRANG TRÍ 4 MÙA\n\nChuyên đồ trang trí Giáng Sinh, Tết, Trung Thu, Halloween, Sinh Nhật & giải pháp decor trọn gói cho nhà ở, quán cafe, văn phòng.\n\nShowroom: 123 Đường Xuân Thủy, P. Thảo Điền, TP. Thủ Đức, TP.HCM\nMST / ĐKKD: 0318294567\nHotline: 0901.234.567 (08:00 – 21:30)\nZalo: 0901.234.567\nEmail: cskh@trangtri4mua.com\nFreeship đơn từ 500k | Đồng kiểm COD\n\nCHÍNH SÁCH ĐỔI TRẢ\nCHÍNH SÁCH VẬN CHUYỂN\nCHÍNH SÁCH THANH TOÁN\nCHÍNH SÁCH BẢO MẬT\nVỀ CHÚNG TÔI\nHỆ THỐNG SHOWROOM\nGIÁNG SINH – NOEL\nPHỤ KIỆN TREO CÂY\nMÔ HÌNH & TƯỢNG NOEL\nCÂY THÔNG NOEL\nCOMBO TRỌN GÓI\nTRANG TRÍ TẾT\nTƯ VẤN ZALO (24/7)\n© 2026 Trang Trí 4 Mùa — Đồ trang trí theo mùa, giao toàn quốc."
+      }
+    },
+    "cta_category": {
+      "before": {
+        "text": "Khảo Sát Mặt Bằng 24h",
+        "href": "https://trangtri4mua.com/#b2b-consultation",
+        "rect": {
+          "x": 39.5,
+          "y": 973.375,
+          "width": 296,
+          "height": 44,
+          "top": 973.375,
+          "right": 335.5,
+          "bottom": 1017.375,
+          "left": 39.5
+        }
+      },
+      "url": "https://trangtri4mua.com/#b2b-consultation",
+      "hash": "#b2b-consultation",
+      "scrollY": 3487,
+      "target": {
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 375,
+          "height": 916.25,
+          "top": 0,
+          "right": 375,
+          "bottom": 916.25,
+          "left": 0
+        },
+        "text": "Dự Án & Khách Hàng Doanh Nghiệp\nTrang Trí Noel Trọn Gói Cho Quán Cafe, Văn Phòng & Cửa Hàng\n\nGiải pháp trang trí toàn diện từ ý tưởng, khảo sát mặt bằng đến thi công hoàn thiện. Đồng bộ phong cách theo nhận diện thương hiệu với chi phí tối ưu.\n\n✓\nKhảo sát mặt bằng & tư vấn phối cảnh 3D thực tế: Đội ngũ thiết kế hỗ trợ tư vấn concept phù hợp với diện tích và luồng di chuyển của quán & văn phòng.\n✓\nBáo giá minh bạch, dự toán vật tư rõ ràng: Bóc tách chi tiết từng hạng mục cây thông, phụ kiện và ánh sáng, không phát sinh chi phí ngoài dự kiến.\n✓\nHóa đơn GTGT (VAT) điện tử & hợp đồng đầy đủ: Cung ",
+        "tabIndex": -1
+      },
+      "active": {
+        "tag": "BODY",
+        "id": "",
+        "class": "home wp-singular page-template-default page page-id-23 wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-child-theme-blocksy-child theme-blocksy woocommerce-js"
+      }
+    }
+  },
+  "limitations": [
+    "Không xác minh chuyên môn tác giả, giá thị trường hoặc backend.",
+    "Focus drawer được thử trong Chromium mobile-width không mô phỏng đầy đủ touch screen reader.",
+    "Không kích hoạt tel/Zalo hoặc gửi form; CTA B2B chỉ kiểm điều hướng và focus."
+  ]
+}

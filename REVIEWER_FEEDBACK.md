@@ -2776,3 +2776,90 @@ Organization schema đã có `legalName="Hộ Kinh Doanh Trang Trí 4 Mùa"`, `t
 - Không gửi form/bình luận, đăng nhập, gọi/Zalo hoặc đặt đơn. Ba sản phẩm thêm giỏ chỉ phục vụ đọc cart/checkout; tất cả đã xóa và giỏ trở về 0 ₫.
 - Bộ bằng chứng gồm **1 JSON + 7 screenshot**. Browser riêng đã đóng; không sửa code/config/database website.
 - Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
+
+---
+
+<a id="round-r33"></a>
+
+# Vòng R33 — Nghiệm thu độc lập Batch 3
+
+Ngày kiểm tra: **24/09/2026**. Watcher phát hiện và pull commit Coder **`963c6d3`**; `ASSISTANT_REPLY.md` mới có SHA-256 **`555f5a228649a9e469d22c9ac84b43e617741ce70e46113f58be223f80aa3665`**.
+
+Coder công bố `FIXED` cho tám P2 về CTA B2B, search/mobile drawer, tác giả, phép tính dự toán, thứ tự policy, 404 và landmarks. Bốn scout đọc độc lập implementation/acceptance; Main kiểm lại production bằng Chromium ở 375/768/1440px và GET HTTP. Kết quả: **5 issue CLOSED; 3 issue giữ OPEN**. `DONE` trong bảng kiểm chỉ nghĩa là đã kiểm xong.
+
+## Phạm vi và phương pháp
+
+- Mở/tắt drawer bằng pointer và bàn phím; tìm kiếm có kết quả/không kết quả từ homepage, PDP và category; kiểm Escape/click, focus return, kích thước và màu thực của nút đóng. Mở/tắt search modal desktop để bắt regression.
+- Đọc bốn policy ở 375/768px: landmark, vị trí article/sidebar, DOM order, keyboard order, table overflow và link. Đọc Contact/Showroom cho iframe name và heading tree.
+- Đọc author archive, byline và JSON-LD của ba bài; tính lại 37 dòng và ba tổng ngân sách.
+- Gọi một URL ngẫu nhiên không tồn tại và một asset không tồn tại; click CTA B2B thật từ Shop và category Noel. Không kích hoạt tel/Zalo hoặc gửi form.
+
+## Ma trận nghiệm thu tám claim
+
+| Issue | Kết quả R33 | Trạng thái hiện hành | Bằng chứng quyết định |
+|---|---|---|---|
+| R2-07 | **PARTIAL** | OPEN | CTA từ Shop và category đều tới section B2B thật, target nằm đúng đầu viewport. Section không focusable; sau điều hướng `activeElement` là `BODY`, nên vị trí bàn phím không theo nội dung. |
+| R2-08 | **PASS** | **CLOSED** | Search trong drawer hiển thị, có accessible name và cao 44px ở mobile/tablet; submit từ homepage/PDP/category cho cả kết quả có dữ liệu và empty state. Header search riêng vẫn ẩn ở 768px nhưng không còn chặn luồng tìm kiếm. |
+| R2-09 | **PASS** | **CLOSED** | Nút đóng 44×44; icon `#1F2937` trên `#F9FAFB`, contrast tính lại khoảng **14,05:1**. Escape và click đều đóng rồi trả focus về Menu; search modal desktop vẫn mở/focus/đóng đúng. |
+| R2-12 | **PASS** | **CLOSED** | Profile, byline và Person/BlogPosting của ba bài cùng dùng **Ban Biên Tập Trang Trí 4 Mùa** và nối đúng author archive. |
+| R2-13 | **PASS** | **CLOSED** | Tính lại 37/37 dòng: ba tổng công bố khớp tổng dòng, lần lượt **2.340.000₫**, **6.220.000₫**, **19.240.000₫**. |
+| R2-15 | **PARTIAL** | OPEN | Ở 375/768px, article đã hiển thị trước sidebar và bảng cuộn ngang. DOM vẫn là `ASIDE` rồi `ARTICLE`; sau skip-link, Tab đầu tiên vào link sidebar ở cuối trang nhìn thấy. |
+| R2-19 | **PASS** | **CLOSED** | URL ngẫu nhiên trả HTTP **404** và template WordPress đầy đủ header/footer, giải thích, search, Home/Shop/Zalo/category recovery; asset thiếu vẫn trả 404. |
+| R2-20 | **FAIL** | OPEN | Nested `<main>` của policy đã sửa và map Contact có title. Map Showroom vẫn không có `title`/`aria-label`; heading Contact/Showroom vẫn có bước nhảy **H2→H4**. |
+
+## Năm issue đủ điều kiện CLOSED
+
+### R2-08 và R2-09 — search mobile và close control
+
+Drawer search dùng GET `s`, có nhãn **“Tìm kiếm sản phẩm”** và hiển thị 239,59×44px. Từ homepage, query “cây thông phủ tuyết” mở full search có sản phẩm; query vô nghĩa mở H1 **“Không có kết quả”**. PDP tablet tìm “tháp nhũ”; category mobile tìm “ông già noel”; cả hai có kết quả đúng ngữ nghĩa.
+
+Drawer mở với focus ở nút **“Đóng ngăn”**. Escape và click nút đóng trả focus về trigger Menu trong automation đã chạy. Search modal desktop đối chứng vẫn focus input khi mở và trả focus về nút **“Tìm kiếm”** khi Escape. R2-08/R2-09 đủ acceptance riêng.
+
+R26-01 vẫn là P3 OPEN: vòng này không mô phỏng đầy đủ nhánh touch/screen reader của Blocksy, nên kết quả width-mobile không được dùng để đóng regression focus riêng đó.
+
+### R2-12 — định danh tác giả
+
+Author archive có H1, bio, ba bài và Person schema cùng tên **Ban Biên Tập Trang Trí 4 Mùa**. Byline đầu bài nối đúng `/author/ed4f7b/`; BlogPosting/Person dùng cùng identity. Đây là tính nhất quán nội bộ, không phải xác minh chuyên môn hoặc nhân thân ngoài website.
+
+### R2-13 — phép tính bảng dự toán
+
+Ba bảng cần sửa nay có chênh lệch bằng 0:
+
+- căn hộ: 10 dòng, tổng **2.340.000₫**;
+- quán cafe: 14 dòng, tổng **6.220.000₫**;
+- showroom: 13 dòng, tổng **19.240.000₫**.
+
+### R2-19 — custom 404
+
+`/reviewer-r33-963c6d3-probe/` trả status thật 404, H1 **“Không Tìm Thấy Trang Bạn Yêu Cầu”**, search và các lối về Home/Shop/danh mục. Response giữ WordPress header/footer; một file ảnh giả vẫn trả 404 ở tầng server, không bị rewrite thành trang 200.
+
+## Ba issue chưa đủ điều kiện đóng
+
+### R2-07 — anchor đúng nhưng focus vẫn mất
+
+Cả CTA Shop và category Noel có href `/#b2b-consultation`; click thật tải homepage, cuộn tới section B2B với `top=0`. Section có nội dung khảo sát/báo giá/VAT/thi công và CTA tel/Zalo dùng được về mặt liên kết.
+
+Sau điều hướng, section có `tabIndex=-1` mặc định nhưng không nhận focus; `activeElement` là `BODY`. Bàn phím tiếp tục từ đầu tài liệu thay vì vùng vừa mở. Cần cho target/heading nhận focus có quản lý sau navigation; không chỉ thêm fragment đúng.
+
+### R2-15 — sửa visual order nhưng chưa sửa reading/focus order
+
+Ở cả 375 và 768px, article bắt đầu khoảng `y=194`, sidebar xuống sau toàn bộ nội dung; không có tràn viewport. Wrapper bảng có `clientWidth=341`, `scrollWidth=580`, nên horizontal scroll hoạt động; link sidebar vẫn hiện.
+
+Source order vẫn là `ASIDE` trước `ARTICLE`, chỉ đổi bằng CSS `order`. Sau khi kích hoạt skip-link, Tab kế tiếp nhảy vào **“Chính Sách Đổi Trả”** trong sidebar ở khoảng `y=3191`, bỏ qua chuỗi link nội dung đang hiển thị trước đó. Cần đổi DOM/source order, không chỉ visual order.
+
+### R2-20 — Showroom map và heading hierarchy còn lỗi
+
+Bốn policy nay mỗi trang chỉ có một `<main>`, không còn nested main. Contact map có title **“Bản đồ chỉ đường đến showroom Trang Trí 4 Mùa Thảo Điền”**.
+
+Showroom iframe vẫn có `title=""`, không `aria-label`/`aria-labelledby` dù nhận Tab. Heading tree Showroom có nhiều bước **H2→H4**; Contact cũng còn cấu trúc `H1, H4, H3, H2`. Vì acceptance yêu cầu map có tên và hierarchy hợp lệ trên các template liên quan, R2-20 vẫn OPEN.
+
+## Bằng chứng R33
+
+[JSON tổng hợp](review-evidence/2026-09-24/r33-batch3-verification.json) · [drawer mobile](review-evidence/2026-09-24/r33-mobile-drawer.webp) · [policy mobile article trước sidebar](review-evidence/2026-09-24/r33-policy-mobile-main-first.webp) · [Showroom map](review-evidence/2026-09-24/r33-showroom-map.webp) · [author archive](review-evidence/2026-09-24/r33-author-profile.webp) · [custom 404](review-evidence/2026-09-24/r33-404-page.webp) · [CTA B2B sau click](review-evidence/2026-09-24/r33-b2b-anchor-after-click.webp).
+
+## Giới hạn và bàn giao R33
+
+- Đóng **5 P2**: R2-08, R2-09, R2-12, R2-13, R2-19. Tổng hiện hành **36 OPEN — 10 P1, 20 P2, 6 P3**. Không thêm issue mới.
+- Không xác minh chuyên môn tác giả, giá thị trường, database/backend hoặc mọi route. Focus drawer được thử trong Chromium mobile-width, không thay cho touch screen reader; R26-01 không đổi trạng thái.
+- Không gửi form, gọi/Zalo, đặt hàng hoặc thêm giỏ. Bộ bằng chứng gồm **1 JSON + 6 screenshot**; browser riêng đã đóng; không sửa code/config/database website.
+- Báo cáo và bằng chứng chỉ được coi đã bàn giao sau khi commit/push thành công.
