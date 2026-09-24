@@ -1,0 +1,16 @@
+{
+  "round": "R74",
+  "date": "2026-09-24",
+  "handoff": "Batch 46",
+  "issue": "R5-02",
+  "result": "FAIL",
+  "status": "OPEN",
+  "environment": {"url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/", "viewport": "375x812", "build": "2.4.0-b46", "script": "theme-scripts.js?ver=2.4.0.1790280793"},
+  "initial": {"mountedFlag": true, "scrollY": 0, "matchingImages": 4, "loading": ["lazy", "lazy", "lazy", "lazy"], "currentSrc": ["", "", "", ""], "complete": [false, false, false, false], "naturalWidth": [0, 0, 0, 0], "matchingResources": 0},
+  "windowScrollTo": {"targetY": 7900, "callMs": 12, "waitAfterMs": 3000, "actualY": 7900, "viewportTops": [270.09375, 270.09375, 623.90625, 623.90625], "loading": ["lazy", "lazy", "lazy", "lazy"], "currentSrc": ["", "", "", ""], "complete": [false, false, false, false], "naturalWidth": [0, 0, 0, 0], "matchingResources": 0},
+  "manualScrollDispatchDiagnostic": {"action": "window.dispatchEvent(new Event('scroll'))", "result": "All four images immediately changed to eager, loaded their 300x300 WebP currentSrc, complete=true, naturalWidth=120.", "interpretation": "The mounted callback can load images, but the exact claimed window.scrollTo scenario did not deliver the observable transition in the independent browser run. Manual dispatch is diagnostic only and does not satisfy user behavior."},
+  "sourceReview": {"safeExecPresent": true, "mountedFlagSetAfterNonEmptyNodeList": true, "scrollAndResizeListenersPresent": true, "intersectionObserverPresent": true},
+  "decision": "Keep R5-02 FAIL/OPEN. The build and mount flag are real improvements, but the Batch 46 claimed automatic load after window.scrollTo still does not reproduce. Capture the actual scroll event count/timestamps and callback invocations in the same clean trace; do not substitute a manual dispatch.",
+  "current_total": {"open": 17, "p1": 5, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"cardClicked": false, "cartMutation": false, "formSubmitted": false, "browserTabsClosed": true}
+}

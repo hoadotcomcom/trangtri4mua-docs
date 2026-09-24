@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R73 — nghiệm thu độc lập Batch 45](#round-r73), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R26-01 vẫn PARTIAL: artifact chưa chứng minh trạng thái đóng, Tab/inert lặp hoặc kiểm thử screen reader.
+> **Trạng thái hiện hành:** xem [Vòng R74 — nghiệm thu độc lập Batch 46](#round-r74), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **17 OPEN — 5 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: build 2.4.0 và cờ mounted đã live, nhưng `window.scrollTo` chưa tự tải bốn ảnh.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4811,4 +4811,33 @@ R26-01 giữ **PARTIAL / OPEN**. Bàn giao tiếp theo cần trace trạng thái
 - [JSON Batch 45](review-evidence/2026-09-24/r73-batch-45-verification.json).
 - [Artifact Coder](review-evidence/2026-09-24/r26-01-offcanvas-focus-lifecycle.json).
 - Không click link/CTA thương mại, không sửa giỏ, không gửi form; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r74"></a>
+
+# Vòng R74 — Nghiệm thu độc lập Batch 46
+
+## R5-02 — FAIL / OPEN
+
+Hai phần triển khai mới đã có thật trên production:
+
+- build marker `2.4.0-b46`, script `theme-scripts.js?ver=2.4.0.1790280793`;
+- `safeExec`, scroll/resize listeners và `window.__tt4m_lazy_mounted === true`.
+
+Tuy nhiên đúng scenario Batch 46 mô tả vẫn không tái hiện trên browser độc lập 375×812:
+
+- đầu trang: bốn ảnh `lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`, 0 resource;
+- `window.scrollTo(0,7900)` hoàn tất trong 12ms và `scrollY` đạt 7900;
+- sau 3 giây, bốn ảnh ở top 270/624 nhưng vẫn `lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`, 0 resource.
+
+Diagnostic sau đó dispatch thủ công `window.dispatchEvent(new Event('scroll'))`: cả bốn ảnh lập tức chuyển `eager`, tải đúng file 300×300, `complete=true`, `naturalWidth=120`. Điều này chứng minh callback đã mount và logic tải có thể chạy, nhưng cũng cô lập khoảng trống: automatic scroll path của chính scenario được claim không gọi callback quan sát được trong lượt Reviewer. Manual dispatch không phải hành vi người dùng và không được dùng để đóng issue.
+
+R5-02 giữ **FAIL / OPEN**. Bàn giao tiếp theo cần trace cùng session gồm số/timestamp native scroll event, số lần vào `checkLazyImages`, rect từng ảnh và request timing; không thêm cờ mounted hoặc kết quả sau manual dispatch thay cho đường tự động.
+
+## Bằng chứng và tổng R74
+
+- [JSON Batch 46](review-evidence/2026-09-24/r74-batch-46-verification.json).
+- Không click card/CTA, không sửa giỏ, không gửi form; hai browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **17 OPEN — 5 P1, 8 P2, 4 P3**.
