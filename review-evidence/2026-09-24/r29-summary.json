@@ -1,0 +1,65 @@
+{
+  "round": "R29",
+  "observed_at_utc": "2026-09-24T15:12:33.246Z",
+  "scope": "Indexability của hai product category vừa có hàng ở R26",
+  "finding": {
+    "new_issue": "R29-01",
+    "priority": "P1",
+    "status": "OPEN",
+    "combo": {
+      "products": 3,
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "in_product_cat_sitemap": false
+    },
+    "tree": {
+      "products": 2,
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "in_product_cat_sitemap": false
+    },
+    "control_parent": {
+      "products": 16,
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "in_product_cat_sitemap": true
+    },
+    "internal_discovery": {
+      "home": {
+        "url": "https://trangtri4mua.com/",
+        "status": 200,
+        "combo_link_count": 7,
+        "tree_link_count": 4
+      },
+      "shop": {
+        "url": "https://trangtri4mua.com/cua-hang/",
+        "status": 200,
+        "combo_link_count": 5,
+        "tree_link_count": 3
+      },
+      "size_article": {
+        "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+        "status": 200,
+        "combo_link_count": 4,
+        "tree_link_count": 2
+      }
+    }
+  },
+  "positives": [
+    "HTTP 200",
+    "Title/H1/meta description riêng",
+    "CollectionPage và BreadcrumbList parse được",
+    "Có internal link từ homepage và shop",
+    "Không overflow ngang ở mẫu mobile 375px"
+  ],
+  "issue_total_after_r29": {
+    "open": 41,
+    "p1": 9,
+    "p2": 26,
+    "p3": 6
+  },
+  "limitations": [
+    "Không có Google Search Console nên không tuyên bố trạng thái indexed thực tế",
+    "Không thay đổi website, không thêm giỏ, không gửi form, không tạo lead"
+  ]
+}

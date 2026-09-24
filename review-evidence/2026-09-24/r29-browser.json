@@ -1,0 +1,66 @@
+{
+  "observed_at_utc": "2026-09-24T15:12:41.833Z",
+  "desktop": {
+    "combo": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "title": "Combo Trang Trí Noel - Giá Tốt, Giao Toàn Quốc | Trang trí 4 mùa",
+      "h1": "Combo Trang Trí Noel",
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "description": "Combo trọn gói trang trí Noel: set cây thông đủ phụ kiện, gói trang trí quán cafe, văn phòng, cửa hàng.",
+      "products": [
+        "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+        "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+        "Set Phụ Kiện Trang Trí Giáng Sinh Tone Đỏ Vàng Hoàng Gia (70 Món Cao Cấp)"
+      ],
+      "productCards": 3,
+      "resultCount": "Hiển thị tất cả 3 kết quả",
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "documentWidth": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    "tree": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "title": "Cây Thông Noel - Giá Tốt, Giao Toàn Quốc | Trang trí 4 mùa",
+      "h1": "Cây Thông Noel",
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "description": "Cây thông Noel đủ kích thước từ mini để bàn đến cây 2m4 cho sảnh lớn — cây PE cao cấp, cây phủ tuyết, set cây đủ phụ kiện. Kèm hướng dẫn chọn size theo diện tích phòng.",
+      "products": [
+        "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết",
+        "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên"
+      ],
+      "productCards": 2,
+      "resultCount": "Hiển thị tất cả 2 kết quả",
+      "schemaTypes": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "documentWidth": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440
+      }
+    }
+  },
+  "mobile": {
+    "tree": {
+      "url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "h1": "Cây Thông Noel",
+      "robots": "nofollow, noindex",
+      "productCards": 2,
+      "innerWidth": 375,
+      "scrollWidth": 375
+    }
+  }
+}

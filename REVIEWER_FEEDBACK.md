@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R28 — tìm kiếm sản phẩm mới](#round-r28), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **40 OPEN — 8 P1, 26 P2, 6 P3**. R28 không thêm issue; mở rộng R2-14 bằng ba mã SKU không tìm thấy, đồng thời xác nhận tìm theo tên/nhu cầu và intent kiến thức vẫn hoạt động.
+> **Trạng thái hiện hành:** xem [Vòng R29 — indexability category mới có hàng](#round-r29), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **41 OPEN — 9 P1, 26 P2, 6 P3**. R29 thêm R29-01: hai category thương mại đã có sản phẩm nhưng vẫn `nofollow, noindex`, không self-canonical và không có trong product-category sitemap; đồng thời mở rộng bằng chứng sitemap cho R2-06.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6,7 +6,7 @@
 > **Thời điểm thẩm định**: Ngày 24 tháng 09 năm 2026.  
 > **Hội đồng thẩm định**: Hội đồng Đánh giá Kỹ thuật (Code Quality, Desktop Layout, Mobile UX, E-Commerce Flow, Security, Design Taste, SEO & Performance).
 
-> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **40 OPEN**, ghi ở đầu tài liệu.
+> **Phạm vi lịch sử:** phần Tổng quan và Issue 1–15 dưới đây là hồ sơ Batch 1 được Coder chuẩn hóa trên remote, không phải nghiệm thu hiện hành. Các nhãn `[FIXED]` trong phần lịch sử là trạng thái Coder công bố; xem đối chiếu độc lập từ R2 và bổ sung đồng bộ remote ở cuối R24. Trạng thái hiện hành là **41 OPEN**, ghi ở đầu tài liệu.
 
 ---
 
@@ -303,7 +303,7 @@ OPEN
 ## [P1] R2-06 — Sitemap bỏ sót nội dung indexable và chứa URL noindex
 
 ### Location
-`/robots.txt`, `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`, `/product-sitemap.xml`.
+`/robots.txt`, `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`, `/product-sitemap.xml`, `/product_cat-sitemap.xml`.
 
 ### Problem
 Sitemap công khai không nhất quán với nội dung indexable hiện tại.
@@ -316,11 +316,36 @@ Sitemap index chỉ trỏ **page, product, product_cat**, không trỏ `post-sit
 
 **Bổ sung R27:** năm PDP mới đều HTTP 200, `index, follow`, self-canonical và có internal link từ homepage/category, nhưng **0/5** xuất hiện trong `product-sitemap.xml`. Đọc lại sitemap với `Cache-Control: no-cache` vẫn có 90 URL và thiếu cả năm; response ghi `no-cache, no-store`, `cf-cache-status: DYNAMIC`. Sitemap index chỉ có một product sitemap, không có phân mảnh khác chứa chúng. [Response, headers, danh sách sitemap và phép đối chiếu URL](review-evidence/2026-09-24/r27-product-sitemap.json). Không khẳng định Google chưa khám phá vì chưa có GSC.
 
+**Bổ sung R29:** `product_cat-sitemap.xml` trả 200 nhưng chỉ có ba URL. Category Combo và Cây thông đã có lần lượt **3** và **2** sản phẩm nhưng đều không có trong sitemap; category Noel cha là mẫu đối chứng có mặt. Sự thiếu sitemap thuộc issue này; nguyên nhân indexability `nofollow, noindex` của hai category có hàng được tách thành R29-01 để không nhầm với danh mục rỗng nên tiếp tục noindex. [HTTP/meta/internal-link và danh sách sitemap](review-evidence/2026-09-24/r29-http-seo.json).
+
 ### Recommended solution
-Rà cấu hình Rank Math và cache sinh sitemap; thêm sitemap bài viết vào index, loại URL noindex/redirect khỏi sitemap page, đồng thời đưa mọi PDP indexable/canonical đang xuất bản vào product sitemap với `lastmod` phản ánh cập nhật thực. Không chữa bằng mở index cart/account hoặc thêm URL biến thể không có trang riêng.
+Rà cấu hình Rank Math và cache sinh sitemap; thêm sitemap bài viết vào index, loại URL noindex/redirect khỏi sitemap page, đồng thời đưa mọi PDP và product category **được chủ đích index**, canonical, đang xuất bản vào sitemap tương ứng với `lastmod` phản ánh cập nhật thực. Không chữa bằng mở index cart/account, bật index hàng loạt category rỗng hoặc thêm URL biến thể không có trang riêng.
 
 ### Acceptance criteria
-Từ sitemap index khám phá được 3 bài và hub; mọi PDP indexable đang xuất bản có mặt trong product sitemap; mỗi URL sitemap là canonical 200 dự định index, không cart/checkout/account. Kiểm tra cả nội dung sau purge cache; gửi lại sitemap qua GSC khi có quyền.
+Từ sitemap index khám phá được 3 bài và hub; mọi PDP/product category được chủ đích index và đang xuất bản có mặt trong sitemap tương ứng; mỗi URL sitemap là canonical 200 dự định index, không cart/checkout/account/category rỗng. Kiểm tra cả nội dung sau purge cache; gửi lại sitemap qua GSC khi có quyền.
+
+### Status
+OPEN
+
+## [P1] R29-01 — Category thương mại có hàng vẫn bị chặn index
+
+### Location
+`/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/`; `/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/`.
+
+### Problem
+Hai category đã chuyển từ trạng thái rỗng sang có hàng nhưng vẫn phát `nofollow, noindex`; HTML không có self-canonical và cả hai bị loại khỏi `product_cat-sitemap.xml`.
+
+### Why it matters
+Đây là hai landing page thương mại có intent riêng, metadata riêng, listing mua hàng và internal link từ homepage/shop/bài hướng dẫn. `noindex` chủ động ngăn chúng cạnh tranh cho nhu cầu “combo trang trí Noel” và “cây thông Noel”; `nofollow` còn làm yếu đường khám phá sản phẩm qua chính category. Không suy ra Google chưa biết các URL hoặc chưa index PDP vì không có GSC.
+
+### Evidence
+GET không cache lúc **15:12 UTC 24/09/2026**: Combo HTTP 200, 3 card; Cây thông HTTP 200, 2 card. Cả hai có H1/title/meta description riêng và schema `CollectionPage` + `BreadcrumbList`, nhưng robots đều **`nofollow, noindex`**, canonical không có. `product_cat-sitemap.xml` chỉ có ba URL và thiếu cả hai; category Noel cha là đối chứng `index, follow`, self-canonical và có trong sitemap. Homepage, shop và bài chọn size đều có internal link tới các đích này. [Dữ liệu HTTP/sitemap/internal link](review-evidence/2026-09-24/r29-http-seo.json) · [DOM desktop/mobile](review-evidence/2026-09-24/r29-browser.json) · [Combo desktop](review-evidence/2026-09-24/r29-combo-category-desktop.webp) · [Cây thông mobile](review-evidence/2026-09-24/r29-tree-category-mobile.webp).
+
+### Recommended solution
+Tại từng taxonomy term đã sẵn sàng làm landing page, bỏ `noindex`/`nofollow`, phát `index, follow`, self-canonical và đưa URL vào `product_cat-sitemap.xml`; purge cache Rank Math/site/CDN sau đổi. Áp dụng theo term hoặc điều kiện chất lượng rõ ràng, không bật index hàng loạt các category vẫn 0 sản phẩm. Giữ title/H1/description riêng đang có; sửa dữ liệu/ảnh/offer còn sai trong các issue sản phẩm trước khi mở rộng quảng bá.
+
+### Acceptance criteria
+Hai URL trả 200, `index, follow`, self-canonical đúng URL và xuất hiện trong product-category sitemap sau purge cache. Internal link từ homepage/shop/bài viết không bị gắn `nofollow`; schema còn parse được, listing đúng 3/2 sản phẩm hoặc count tồn kho mới. Category 0 sản phẩm tiếp tục noindex cho đến khi có giá trị riêng; không coi việc gửi sitemap là bảo đảm Google index.
 
 ### Status
 OPEN
@@ -1507,6 +1532,7 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
 | Q-NEW-PRODUCT-DATA | R26 mới xác nhận ảnh/URL, chưa thử toàn bộ size, schema và thông số năm SKU | DONE | [R27](#round-r27): 5 PDP HTTP/schema/spec, 2 cây × 2 viewport và Tháp nhũ đối chứng; phát hiện R27-01, mở rộng R2-03/R2-06/R6-01. DONE là đã kiểm, không phải đã sửa. |
 | Q-SEARCH-NEW-SKU | Search cũ mới thử “tháp nhũ”, chưa kiểm SKU/tên/intent của năm sản phẩm mới | DONE | [R28](#round-r28): 7 query HTTP, 5 luồng live→full search, 2 mobile, một lần Tab/Enter mở PDP; mở rộng R2-14, không thêm issue trùng. |
+| Q-CATEGORY-REINDEX | Combo/Cây thông đã có hàng từ R26 nhưng trạng thái SEO sau chuyển đổi chưa được nghiệm thu | DONE | [R29](#round-r29): hai category 200 có 3/2 sản phẩm, metadata/schema riêng nhưng vẫn `nofollow, noindex`, không canonical và vắng product-category sitemap; thêm R29-01, mở rộng R2-06. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
 | Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
@@ -2462,4 +2488,47 @@ Không bắt live suggestion ngắn phải chứa giá; yêu cầu giá/action �
 - Không kiểm trigger search mobile vì việc thiếu search ở mobile đã là R2-08; R28 chỉ đọc trực tiếp full search mobile, không dùng URL trực tiếp để tuyên bố trigger tồn tại.
 - Không coi live suggestion thiếu giá là lỗi riêng. Không thêm giỏ/mua hàng hoặc gửi form ngoài GET search.
 - Bộ bằng chứng gồm **5 JSON + 13 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.
+
+---
+
+<a id="round-r29"></a>
+
+# Vòng R29 — Indexability category mới có hàng
+
+Ngày kiểm tra: **24/09/2026**, timestamp chi tiết trong JSON. Đầu vòng `main` bằng `origin/main`; `ASSISTANT_REPLY.md` vẫn SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**, không có bàn giao Coder mới.
+
+## Phạm vi và phương pháp
+
+- Hai category từng rỗng nhưng R26 đã ghi nhận có hàng: Combo và Cây thông. Mẫu đối chứng: category Noel cha.
+- GET trực tiếp với `Cache-Control: no-cache` để đọc status, robots, canonical, title/H1, header và `product_cat-sitemap.xml`; đối chiếu internal link từ homepage, shop và bài chọn size.
+- Browser thật: hai category ở desktop **1440×1000**; category Cây thông ở mobile mô phỏng **375×812**. Đọc DOM, schema, product count và overflow; không thêm giỏ, không gửi form, không mở Zalo/tel.
+
+## Phần đang hoạt động đúng — giữ nguyên
+
+- Hai URL HTTP 200, H1/title/meta description riêng và đúng intent; Combo có 3 sản phẩm, Cây thông có 2.
+- JSON-LD parse được `CollectionPage` và `BreadcrumbList`. Category Noel cha tiếp tục `index, follow`, self-canonical và có trong sitemap.
+- Các category có internal link từ homepage/shop; bài chọn size cũng liên kết tới Cây thông. Mẫu mobile Cây thông có `scrollWidth=innerWidth=375`, không overflow ngang.
+- Không yêu cầu index mọi taxonomy. Các category rỗng vẫn nên noindex cho tới khi có listing hoặc giá trị landing page đủ rõ.
+
+## Phát hiện R29-01 — P1 OPEN
+
+Cả hai category có hàng vẫn phát **`nofollow, noindex`**, không có self-canonical và vắng khỏi `product_cat-sitemap.xml`. Đây không còn là trạng thái hợp lý cho trang rỗng như R18/R22: mỗi trang nay có listing mua hàng, nội dung mô tả riêng và internal link rõ.
+
+Mẫu đối chứng category Noel cha phát `index, follow`, self-canonical và có trong sitemap. Sai khác cho thấy cần chuyển trạng thái SEO theo term đã sẵn sàng, không phải bật index toàn bộ taxonomy.
+
+[Bằng chứng tổng hợp](review-evidence/2026-09-24/r29-summary.json) · [HTTP/meta/sitemap/internal link](review-evidence/2026-09-24/r29-http-seo.json) · [Combo desktop](review-evidence/2026-09-24/r29-combo-category-desktop.webp) · [Cây thông desktop](review-evidence/2026-09-24/r29-tree-category-desktop.webp) · [Cây thông mobile](review-evidence/2026-09-24/r29-tree-category-mobile.webp).
+
+### Phân ranh issue
+
+- **R29-01** sở hữu robots/canonical của hai category có hàng.
+- **R2-06** tiếp tục sở hữu tính đầy đủ và tính sạch của sitemap; R29 chỉ bổ sung hai URL product-category bị thiếu.
+- **R2-04/R2-11/R27-01** tiếp tục sở hữu lời hứa số lượng, ảnh sai loại hàng và mapping biến thể. Không gọi indexability là cách sửa những lỗi catalog đó.
+
+## Giới hạn và bàn giao R29
+
+- Thêm **1 P1**, tổng hiện hành **41 OPEN — 9 P1, 26 P2, 6 P3**. Không đóng issue cũ.
+- Không có GSC nên không tuyên bố URL đang/không đang nằm trong chỉ mục Google; bằng chứng chỉ kết luận directive công khai và sitemap hiện hành.
+- Không chạy crawler toàn bộ taxonomy; phạm vi là hai category đã đổi trạng thái hàng và một mẫu đối chứng. Không kiểm ranking, impression, cache Google hoặc Core Web Vitals.
+- Bộ bằng chứng gồm **3 JSON + 3 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.

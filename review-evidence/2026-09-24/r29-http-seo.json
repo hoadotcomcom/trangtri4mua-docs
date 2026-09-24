@@ -1,0 +1,77 @@
+{
+  "observed_at_utc": "2026-09-24T15:12:33.246Z",
+  "pages": {
+    "combo": {
+      "requested_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "status": 200,
+      "final_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/combo-trang-tri-noel/",
+      "content_type": "text/html; charset=UTF-8",
+      "x_robots_tag": null,
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "title": "Combo Trang Trí Noel - Giá Tốt, Giao Toàn Quốc | Trang trí 4 mùa",
+      "h1": "Combo Trang Trí Noel",
+      "product_card_markers": 3
+    },
+    "tree": {
+      "requested_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "status": 200,
+      "final_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/cay-thong-noel/",
+      "content_type": "text/html; charset=UTF-8",
+      "x_robots_tag": null,
+      "robots": "nofollow, noindex",
+      "canonical": null,
+      "title": "Cây Thông Noel - Giá Tốt, Giao Toàn Quốc | Trang trí 4 mùa",
+      "h1": "Cây Thông Noel",
+      "product_card_markers": 2
+    },
+    "parent": {
+      "requested_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "status": 200,
+      "final_url": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "content_type": "text/html; charset=UTF-8",
+      "x_robots_tag": null,
+      "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "canonical": "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "title": "Đồ Trang Trí Noel 2026 Đẹp, Đủ Loại Cây &amp; Phụ Kiện Giá Rẻ | Trang Trí 4 Mùa",
+      "h1": "Trang Trí Giáng Sinh - Noel",
+      "product_card_markers": 16
+    }
+  },
+  "sitemap": {
+    "url": "https://trangtri4mua.com/product_cat-sitemap.xml",
+    "status": 200,
+    "content_type": "text/xml; charset=UTF-8",
+    "loc_count": 3,
+    "combo_present": false,
+    "tree_present": false,
+    "parent_present": true,
+    "locs": [
+      "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/",
+      "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/phu-kien-treo-cay/",
+      "https://trangtri4mua.com/danh-muc/trang-tri-theo-mua/giang-sinh-noel/mo-hinh-tuong-noel/"
+    ],
+    "cache_control": "no-cache, no-store, must-revalidate, max-age=0",
+    "cf_cache_status": "DYNAMIC"
+  },
+  "internal_links": {
+    "home": {
+      "url": "https://trangtri4mua.com/",
+      "status": 200,
+      "combo_link_count": 7,
+      "tree_link_count": 4
+    },
+    "shop": {
+      "url": "https://trangtri4mua.com/cua-hang/",
+      "status": 200,
+      "combo_link_count": 5,
+      "tree_link_count": 3
+    },
+    "size_article": {
+      "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+      "status": 200,
+      "combo_link_count": 4,
+      "tree_link_count": 2
+    }
+  }
+}
