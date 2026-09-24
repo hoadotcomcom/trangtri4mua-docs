@@ -1,0 +1,43 @@
+{
+  "round": "R68",
+  "date": "2026-09-24",
+  "handoff": "Batch 40",
+  "issue": "R5-02",
+  "result": "FAIL",
+  "status": "OPEN",
+  "articleMobileDpr2": {
+    "environment": {"viewport": "375x812", "deviceScaleFactor": 2, "cache": "disabled"},
+    "initial": {"computedRootScrollBehavior": "auto", "cardCount": 4, "currentSrc": ["", "", "", ""], "complete": [false, false, false, false], "requests": 0},
+    "scroll": {"action": "window.scrollTo(0,7900)", "callMs": 1, "scrollY": 7900, "waitAfterMs": 3000},
+    "afterScroll": {
+      "viewportTops": [270.09375, 270.09375, 623.90625, 623.90625],
+      "loading": ["lazy", "lazy", "lazy", "lazy"],
+      "currentSrc": ["", "", "", ""],
+      "complete": [false, false, false, false],
+      "naturalWidth": [0, 0, 0, 0],
+      "matchingRequests": 0,
+      "objectFit": ["contain", "contain", "contain", "contain"]
+    },
+    "deployedObserver": "Present with rootMargin 600px; callback sets loading=eager and assigns img.src to itself. It did not fire in the observed production run: loading stayed lazy while all four cards were inside the viewport.",
+    "screenshotAttempt": "Timed out after 20 seconds; no screenshot artifact was claimed. DOM/resource evidence remained readable before the attempt."
+  },
+  "homepageMobileDpr3": {
+    "environment": {"viewport": "375x812", "deviceScaleFactor": 3, "cache": "disabled"},
+    "box": "164.5x183",
+    "sizes": "(max-width: 600px) 140px, 300px",
+    "currentSrcWidths": [600, 600, 600, 600, 600, 600],
+    "objectFit": ["cover", "cover", "cover", "cover", "cover", "cover"],
+    "note": "Contradicts Batch 40 claim that mobile DPR1/2/3 all select 300x300. DPR3 correctly selects 600w candidates for sharpness. The rendered box is not 1:1."
+  },
+  "matrixEvidence": {
+    "coderArtifactCommitted": false,
+    "commit": "569d09c changes ASSISTANT_REPLY.md only",
+    "claimContradictions": [
+      "Mobile DPR3 selects 600w, not 300w.",
+      "Reported boxes 164.5x183, 349.4x228, and 379.3x288 are not square, so the statement that all configurations preserve a 1:1 rendered ratio is false."
+    ]
+  },
+  "conclusion": "The scroll timeout is fixed, but acceptance criterion 1 still fails because in-viewport article images remain blank and unrequested. Criterion 3 remains unsupported by an auditable matrix and contains false source/ratio claims.",
+  "current_total": {"open": 18, "p1": 6, "p2": 8, "p3": 4, "closed_in_round": [], "new_issues": 0},
+  "safety": {"noCardClick": true, "noCart": true, "noForm": true, "noOrder": true, "browsersClosed": true}
+}

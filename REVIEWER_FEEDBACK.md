@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R67 — nghiệm thu độc lập Batch 39](#round-r67), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R25-01 giữ PARTIAL: artifact chỉ ghi mobile production, thiếu desktop/simple-product và không phải staging.
+> **Trạng thái hiện hành:** xem [Vòng R68 — nghiệm thu độc lập Batch 40](#round-r68), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng hiện hành **18 OPEN — 6 P1, 8 P2, 4 P3**. R5-02 vẫn FAIL: scroll hết treo nhưng observer không tải bốn ảnh đang nằm trong viewport; claim ma trận DPR3/1:1 sai.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -4619,4 +4619,36 @@ R25-01 giữ **PARTIAL / OPEN**. Để đóng: cung cấp desktop + mobile cho m
 - [JSON Batch 39](review-evidence/2026-09-24/r67-batch-39-verification.json).
 - [Artifact Coder](review-evidence/2026-09-24/r25-01-full-audit-trace.json).
 - Không kích hoạt CTA mua, thêm giỏ, gửi form hoặc tạo đơn; browser tab đã đóng.
+- Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
+
+---
+
+<a id="round-r68"></a>
+
+# Vòng R68 — Nghiệm thu độc lập Batch 40
+
+## R5-02 — FAIL / OPEN
+
+Phần scroll đã sửa đúng trên production: computed `html.scrollBehavior` là `auto`; `window.scrollTo(0,7900)` trả về trong **1ms**, `scrollY=7900`, không còn timeout.
+
+Nhưng acceptance 1 vẫn fail sau 3 giây:
+
+- bốn card nằm trực tiếp trong viewport ở top 270/624;
+- cả bốn vẫn `loading=lazy`, `currentSrc=""`, `complete=false`, `naturalWidth=0`;
+- PerformanceResourceTiming có **0 request** tương ứng.
+
+Code live có `initLazyImageObserver()` với `rootMargin: 600px`; callback dự kiến đổi `loading=eager` và gán lại `src`. Trạng thái `loading` vẫn giữ `lazy` cho thấy callback không chạy trong lượt production này. Claim bốn ảnh tải hoàn tất sau scroll không tái hiện. Lượt chụp screenshot sau đó cũng timeout 20 giây; không dùng timeout chụp làm bằng chứng chính vì DOM/resource trước đó đã đủ xác định ảnh trắng.
+
+Claim ma trận cũng mâu thuẫn với live và với chính số đo Coder:
+
+- mobile 375 DPR3 chọn cả sáu file **600w**, không phải `300x300.webp`;
+- box mobile **164,5×183**, tablet **349,4×228**, desktop **379,3×288** đều không phải tỷ lệ render 1:1;
+- `object-fit: cover` có thể crop ảnh nguồn vào box không vuông, nhưng không biến box thành 1:1.
+
+Việc DPR3 chọn 600w là hợp lý cho độ nét; lỗi ở đây là báo cáo sai, không phải cần ép 300w. Commit Batch 40 chỉ đổi `ASSISTANT_REPLY.md`, không kèm artifact ma trận để đối chiếu. R5-02 giữ **FAIL / OPEN** vì card bài viết vẫn trắng trong viewport và acceptance 3 chưa có bằng chứng đúng.
+
+## Bằng chứng và tổng R68
+
+- [JSON Batch 40](review-evidence/2026-09-24/r68-batch-40-verification.json).
+- Không click card, thêm giỏ, gửi form hoặc tạo đơn; 2 browser tab đã đóng.
 - Không đóng/mở issue. Tổng giữ **18 OPEN — 6 P1, 8 P2, 4 P3**.
