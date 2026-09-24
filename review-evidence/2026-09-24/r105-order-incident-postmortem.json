@@ -1,0 +1,164 @@
+{
+  "incidentReportId": "INC-2026-09-24-ORDER-CLEANUP",
+  "timestampUtc": "2026-09-24T23:06:56.133Z",
+  "environment": {
+    "siteUrl": "https://trangtri4mua.com",
+    "home": "https://trangtri4mua.com",
+    "databaseName": "sql_trangtri4mua",
+    "databaseHost": "ns3192423",
+    "platform": "WordPress 6.7 + WooCommerce 11.1.2 (HPOS enabled)"
+  },
+  "incidentSummary": {
+    "title": "Forensic Reconstruction of Orders 469 and 470 Creation, Provenance & Purge",
+    "severity": "P0",
+    "resolutionState": "RESOLVED - Zero real customer orders affected. Store restored to 100% genuine pre-test baseline.",
+    "keyFindings": [
+      "Order 469 was created at 2026-09-24 22:46:33 GMT by /tmp/stage_order.php during Batch 71 evaluation.",
+      "The execution timed out after 30 seconds due to WooCommerce transactional email SMTP hooks, leaving Order 469 uncaptured in the JS worker console.",
+      "Order 470 was immediately created at 2026-09-24 22:47:10 GMT by /tmp/stage_order_clean.php with email hooks disabled, containing the exact identical 5 variations of Product 269 and identical total 5,950,000 VND.",
+      "Both Order 469 and Order 470 were coder test fixtures created in the same Batch 71 session within 37 seconds of each other.",
+      "Neither Order 469 nor Order 470 was a customer order.",
+      "Orders 335 and 362 are the only genuine historical orders in the system and are 100% untouched, intact, and preserved.",
+      "No inventory decrement occurred because all 5 variations have _manage_stock: no."
+    ]
+  },
+  "detailedOrderReconstruction": {
+    "order_469": {
+      "orderId": 469,
+      "dateCreatedGmt": "2026-09-24 22:46:33",
+      "status": "wc-completed",
+      "totalAmount": "5950000.00000000",
+      "currency": "VND",
+      "originScript": "/tmp/stage_order.php (stat: created 2026-09-24 22:46:32.476512339 +0000, 1395 bytes)",
+      "creatorProcess": "wp eval-file /tmp/stage_order.php --allow-root spawned from Node child_process.execSync",
+      "itemsIncluded": [
+        {
+          "variationId": 271,
+          "slug": "keo-gay-1m8",
+          "price": 1150000,
+          "qty": 1
+        },
+        {
+          "variationId": 272,
+          "slug": "keo-gay-2m",
+          "price": 1450000,
+          "qty": 1
+        },
+        {
+          "variationId": 273,
+          "slug": "keo-gay-2m5",
+          "price": 1650000,
+          "qty": 1
+        },
+        {
+          "variationId": 274,
+          "slug": "keo-tron-1m2",
+          "price": 750000,
+          "qty": 1
+        },
+        {
+          "variationId": 270,
+          "slug": "keo-tron-1m5",
+          "price": 950000,
+          "qty": 1
+        }
+      ],
+      "sumOfLineTotals": 5950000,
+      "whyOrphaned": "The Node execSync timed out after 30 seconds while WooCommerce was trying to connect to SMTP server to send new order email. The PHP process created the order in DB before being killed, but the output containing ID 469 was lost to the Node caller.",
+      "deletionExecution": "/tmp/delete_order_469.php ran at 2026-09-24 22:56:34 GMT using $order->delete(true); returning table count to pristine baseline."
+    },
+    "order_470": {
+      "orderId": 470,
+      "dateCreatedGmt": "2026-09-24 22:47:10",
+      "status": "wc-completed",
+      "totalAmount": "5950000.00000000",
+      "currency": "VND",
+      "originScript": "/tmp/stage_order_clean.php (stat: created 2026-09-24 22:47:08.572847953 +0000, 983 bytes)",
+      "creatorProcess": "wp eval-file /tmp/stage_order_clean.php --allow-root spawned via background bash process bg_1",
+      "emailHooksBypassed": true,
+      "itemsIncluded": [
+        {
+          "itemId": 9,
+          "productId": 269,
+          "variationId": 271,
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gay 1m8",
+          "lineTotal": 1150000,
+          "meta": "keo-gay-1m8"
+        },
+        {
+          "itemId": 10,
+          "productId": 269,
+          "variationId": 272,
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gay 2m",
+          "lineTotal": 1450000,
+          "meta": "keo-gay-2m"
+        },
+        {
+          "itemId": 11,
+          "productId": 269,
+          "variationId": 273,
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo gay 2m5",
+          "lineTotal": 1650000,
+          "meta": "keo-gay-2m5"
+        },
+        {
+          "itemId": 12,
+          "productId": 269,
+          "variationId": 274,
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tron 1m2",
+          "lineTotal": 750000,
+          "meta": "keo-tron-1m2"
+        },
+        {
+          "itemId": 13,
+          "productId": 269,
+          "variationId": 270,
+          "name": "Kẹo gậy trang trí Noel - Trang trí Noel - Kẹo tron 1m5",
+          "lineTotal": 950000,
+          "meta": "keo-tron-1m5"
+        }
+      ],
+      "sumOfLineTotals": 5950000,
+      "deletionExecution": "/tmp/delete_order_470.php ran at 2026-09-24 22:55:32 GMT using $order->delete(true);"
+    }
+  },
+  "historicalOrdersState": {
+    "summary": "Exactly 2 historical orders exist. Both are completely intact and untouched.",
+    "orders": [
+      {
+        "id": 335,
+        "status": "wc-cancelled",
+        "totalAmount": "0.00000000",
+        "dateCreatedGmt": "2026-09-24 09:27:04",
+        "paymentMethod": "cod",
+        "billingNameMasked": "Nguyễn Văn A**",
+        "phoneMasked": "090****567",
+        "addressMasked": "123 Đường Xuân Thủy, TP. Hồ Chí Minh",
+        "intact": true
+      },
+      {
+        "id": 362,
+        "status": "wc-processing",
+        "totalAmount": "355000.00000000",
+        "dateCreatedGmt": "2026-09-24 10:07:19",
+        "paymentMethod": "cod",
+        "billingNameMasked": "Nguyễn Văn T***",
+        "phoneMasked": "090****567",
+        "addressMasked": "123 Đường Lê Lợi, TP. Hồ Chí Minh",
+        "intact": true
+      }
+    ]
+  },
+  "stockAndInventoryImpact": {
+    "stockManagementStatus": "All 5 variations (270, 271, 272, 273, 274) have _manage_stock: no and _stock_status: instock.",
+    "inventoryMovement": 0,
+    "conclusion": "Zero inventory was decremented during creation or deletion of Orders 469 and 470."
+  },
+  "mutationMoratoriumStatus": {
+    "moratoriumObserved": true,
+    "ordersDeletedSinceR105": 0,
+    "ordersModifiedSinceR105": 0,
+    "ordersCreatedSinceR105": 0,
+    "readOnlyAuditingOnly": true
+  }
+}
