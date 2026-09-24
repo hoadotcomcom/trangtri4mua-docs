@@ -1,0 +1,157 @@
+[
+  {
+    "utc": "2026-09-24T15:07:26.981Z",
+    "test": {
+      "id": "sku-tree",
+      "query": "CT-PE-SNOW"
+    },
+    "state": {
+      "url": "https://trangtri4mua.com/?s=CT-PE-SNOW",
+      "h1": "Kết quả tìm kiếm cho CT-PE-SNOW",
+      "robots": "follow, noindex",
+      "articles": [],
+      "emptyText": "Kết quả tìm kiếm cho CT-PE-SNOW\nKhông có kết quả"
+    },
+    "screenshot": "r28-sku-tree-mobile-page.webp",
+    "documentWidth": 375,
+    "viewportWidth": 375
+  },
+  {
+    "utc": "2026-09-24T15:07:28.301Z",
+    "test": {
+      "id": "name-tree",
+      "query": "cây thông phủ tuyết"
+    },
+    "state": {
+      "url": "https://trangtri4mua.com/?s=c%C3%A2y%20th%C3%B4ng%20ph%E1%BB%A7%20tuy%E1%BA%BFt",
+      "h1": "Kết quả tìm kiếm cho cây thông phủ tuyết",
+      "robots": "follow, noindex",
+      "articles": [
+        {
+          "className": "entry-card card-content post-372 product type-product status-publish has-post-thumbnail product_cat-cay-thong-noel product_cat-giang-sinh-noel product_cat-trang-tri-theo-mua  instock shipping-taxable purchasable product-type-variable",
+          "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "titleHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "categories": [
+            "CÂY THÔNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL",
+            "TRANG TRÍ THEO MÙA"
+          ],
+          "excerpt": "Cây thông Noel lá PE phủ tuyết cao cấp, tán dày tự nhiên, chân sắt vững chãi, dễ dàng lắp ráp.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-383 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel last instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Gói decor Giáng Sinh trọn gói cho quán cafe, nhà hàng, sảnh văn phòng (có hóa đơn VAT).",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-381 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel  instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Set phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-377 product type-product status-publish has-post-thumbnail product_cat-cay-thong-noel product_cat-giang-sinh-noel last instock shipping-taxable purchasable product-type-variable",
+          "title": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết",
+          "titleHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "categories": [
+            "CÂY THÔNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Cây thông cước gắn trái thông rừng tự nhiên và đầu tuyết, dáng chuẩn, cành dẻo dễ uốn.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-325 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-254 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-hang-rao-trang-tri product_tag-tieu-canh-noel  instock shipping-taxable product-type-simple",
+          "title": "Hàng rào gỗ trang trí gốc cây – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Liên hệ Zalo để báo giá. Hàng rào gỗ ván nhọn quây gốc cây thông, khung cảnh Giáng sinh gọn gàng và đậm chất Noel.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-250 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-hang-rao-goc-cay product_tag-trang-tri-cay-thong last instock shipping-taxable product-type-simple",
+          "title": "Hàng rào khúc gỗ trang trí gốc cây – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Liên hệ Zalo để báo giá. Hàng rào khúc gỗ tròn quây quanh gốc cây thông, che chân cây gọn gàng mà vẫn mộc mạc tự nhiên.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-249 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel product_tag-tuong-tuan-loc  instock shipping-taxable purchasable product-type-simple",
+          "title": "Nai trắng tuyết điện – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Tượng nai trắng phủ tuyết cỡ lớn, điểm nhấn sang trọng cho sảnh và tiểu cảnh Giáng sinh.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-248 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel product_tag-nguoi-tuyet last instock shipping-taxable purchasable product-type-simple",
+          "title": "Người tuyết trang trí – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Người tuyết trang trí nhiều size đến 1m5, nhân vật không thể thiếu trong tiểu cảnh Giáng sinh.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-223 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel  instock shipping-taxable purchasable product-type-variable",
+          "title": "Tượng người tuyết mũ đỏ – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Tượng người tuyết mũ đỏ đội bông tuyết, nhiều size tới 1m50 cho sảnh, cửa hàng và góc chụp ảnh Noel.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        }
+      ]
+    },
+    "screenshot": "r28-name-tree-mobile-page.webp",
+    "documentWidth": 375,
+    "viewportWidth": 375
+  }
+]

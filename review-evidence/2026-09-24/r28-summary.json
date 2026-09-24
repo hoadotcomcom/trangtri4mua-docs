@@ -1,0 +1,61 @@
+{
+  "utc": "2026-09-24T15:08:24.398Z",
+  "queries": 7,
+  "httpCases": 7,
+  "browserModalCases": 5,
+  "mobileCases": 2,
+  "findings": {
+    "newIssues": 0,
+    "extendedIssue": "R2-14",
+    "exactSku": {
+      "queries": [
+        "COMBO-GD-50",
+        "SET-HG-70",
+        "CT-PE-SNOW"
+      ],
+      "liveApiCounts": [
+        0,
+        0,
+        0
+      ],
+      "pageArticleCounts": [
+        0,
+        0,
+        0
+      ]
+    },
+    "commercialCards": {
+      "testedQueries": [
+        "cây thông phủ tuyết",
+        "combo 50 món",
+        "trang trí quán cafe"
+      ],
+      "productCardsHavePrice": false,
+      "productCardsHaveCommerceAction": false
+    }
+  },
+  "positive": [
+    "Tên cây và combo tìm được sản phẩm đúng trên live search và trang kết quả.",
+    "Tab hai lần từ input rồi Enter mở đúng CT-PE-SNOW.",
+    "Query kiến thức xếp ba bài hướng dẫn lên trước sản phẩm/page.",
+    "Query quán cafe xếp bài cafe trước, combo B2B thứ hai; giữ khả năng phục vụ intent hỗn hợp.",
+    "Search page tiếp tục noindex; trạng thái rỗng full-page hiển thị được; mobile không overflow trong hai mẫu."
+  ],
+  "existingIssues": {
+    "R11-01": "Modal exact SKU rỗng tiếp tục không có thông báo nhìn thấy; không tạo issue mới.",
+    "R12-01": "Live options vẫn role=option và Tab/Enter hoạt động; không kiểm lại ArrowDown, giữ issue cũ.",
+    "R2-08": "Không kiểm trigger mobile vì search header mobile vắng đã là issue cũ."
+  },
+  "limitations": [
+    "Không yêu cầu live suggestion bắt buộc có giá; vấn đề giá/CTA được chứng minh trên full search template.",
+    "Không đánh giá relevance toàn bộ catalog từ bảy query.",
+    "Ảnh sai ngữ cảnh thuộc R2-11; không tạo lỗi search riêng.",
+    "Không thêm giỏ/mua hàng."
+  ],
+  "totals": {
+    "open": 40,
+    "p1": 8,
+    "p2": 26,
+    "p3": 6
+  }
+}

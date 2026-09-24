@@ -1,0 +1,27 @@
+{
+  "utc": "2026-09-24T15:07:58.350Z",
+  "query": "cây thông phủ tuyết",
+  "steps": [
+    {
+      "tag": "BUTTON",
+      "text": "",
+      "aria": "Nút tìm kiếm",
+      "role": null
+    },
+    {
+      "tag": "A",
+      "text": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+      "aria": null,
+      "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+      "role": "option"
+    }
+  ],
+  "before": "https://trangtri4mua.com/",
+  "result": {
+    "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+    "h1": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+    "sku": "CT-PE-SNOW",
+    "status": "complete"
+  },
+  "screenshot": "r28-live-result-opened.webp"
+}

@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R27 — dữ liệu năm SKU mới](#round-r27), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng **40 OPEN — 8 P1, 26 P2, 6 P3**. R27 thêm P1 vì mọi kích thước của hai cây thông mới đều chọn biến thể/giá thấp nhất. Đồng thời mở rộng R2-03, R2-06 và R6-01; không nghiệm thu giao dịch hoặc nguồn dữ liệu kinh doanh.
+> **Trạng thái hiện hành:** xem [Vòng R28 — tìm kiếm sản phẩm mới](#round-r28), cùng [hàng đợi kiểm chứng](#verification-queue). Tổng giữ **40 OPEN — 8 P1, 26 P2, 6 P3**. R28 không thêm issue; mở rộng R2-14 bằng ba mã SKU không tìm thấy, đồng thời xác nhận tìm theo tên/nhu cầu và intent kiến thức vẫn hoạt động.
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -499,7 +499,7 @@ OPEN
 ## [P2] R2-14 — Kết quả tìm sản phẩm dùng card bài viết, thiếu giá và đường mua rõ
 
 ### Location
-`/?s=th%C3%A1p+nh%C5%A9`, search template.
+Search template `/?s=...` và live search trong `#search-modal`, gồm năm SKU mới quan sát từ R26.
 
 ### Problem
 Search trộn product, post và page cùng một kiểu card.
@@ -510,11 +510,19 @@ Khách tìm tên hàng không thấy giá/biến thể để quyết định, c�
 ### Evidence
 Search “tháp nhũ” có Tháp nhũ điện nhưng card hiển thị category, excerpt và ngày **Tháng 9 23, 2026**, không giá/CTA mua; cùng tập kết quả có 3 bài, Trang Chủ và Chính Sách Bảo Mật. Ảnh `search-desktop.webp`.
 
+**Bổ sung R28:**
+- Ba truy vấn chính xác **`COMBO-GD-50`**, **`SET-HG-70`**, **`CT-PE-SNOW`** đều trả `200 / []` ở live API và **0 article** ở trang kết quả, dù SKU hiển thị trên PDP và sản phẩm đang indexable/internal-linked.
+- Tìm theo tên **“cây thông phủ tuyết”** và **“combo 50 món”** đưa sản phẩm tương ứng lên đầu live search/trang kết quả. Từ input, Tab hai lần rồi Enter mở đúng PDP `CT-PE-SNOW`; vì vậy không báo toàn bộ tìm kiếm sản phẩm hỏng.
+- Trên full search, product mới vẫn dùng card bài viết: category, title, ảnh, excerpt, ngày; **không có giá hoặc hành động xem/chọn mẫu**. Kết quả giống nhau ở desktop và mobile mẫu.
+- Query **“cách chọn size cây thông”** xếp ba bài hướng dẫn trước; **“trang trí quán cafe”** xếp bài cafe đầu và combo B2B thứ hai. Giữ khả năng phục vụ intent kiến thức/hỗn hợp, không ép mọi search chỉ trả product.
+
+[7 query API/full page](review-evidence/2026-09-24/r28-search-http.json) · [5 luồng modal → full search](review-evidence/2026-09-24/r28-search-browser.json) · [mở PDP bằng Tab/Enter](review-evidence/2026-09-24/r28-open-live-result.json) · [ảnh full search tên cây](review-evidence/2026-09-24/r28-name-tree-page.webp).
+
 ### Recommended solution
-Ưu tiên product cho intent mua, hiển thị card thương mại dùng chung giá/biến thể; có phân nhóm “Sản phẩm”/“Cẩm nang”. Giữ tìm bài viết, không ép mọi truy vấn chỉ trả sản phẩm.
+Ưu tiên product cho intent mua, hiển thị card thương mại dùng chung giá và hành động xem/chọn mẫu; có thể phân nhóm “Sản phẩm”/“Cẩm nang”. Bổ sung tìm chính xác theo SKU đang công bố, ưu tiên match exact nhưng vẫn giữ tìm theo title/content và bài viết. Không ép mọi truy vấn chỉ trả sản phẩm hoặc làm index search page.
 
 ### Acceptance criteria
-Truy vấn tên SKU đưa sản phẩm phù hợp lên rõ ràng, có giá và hành động xem/chọn mẫu; truy vấn kiến thức vẫn tìm được bài; trạng thái rỗng và noindex tiếp tục hoạt động.
+Truy vấn exact SKU và tên hàng đưa sản phẩm phù hợp lên rõ ràng; full search có giá cùng hành động xem/chọn mẫu phù hợp product type. Truy vấn kiến thức vẫn ưu tiên bài hữu ích; intent hỗn hợp giữ được cả bài và product liên quan. Trạng thái rỗng, noindex, tìm theo title, Tab/Enter live result và layout mobile tiếp tục hoạt động.
 
 ### Status
 OPEN
@@ -1498,6 +1506,7 @@ Hàng đợi này theo dõi **phép kiểm tra**, không cộng thêm issue. Kh�
 | Q-MODAL-FOCUS-LIFECYCLE | Chưa đối chiếu đầy đủ focus mở/đóng và AX giữa search/menu trên hai template | DONE | [R26](#round-r26): 4 ca/128 snapshot, 104 bước Tab/Shift+Tab, thêm 2 lượt tái hiện tự nhiên; search đạt, menu có R26-01. |
 | Q-CATALOG-DELTA | Năm SKU mới xuất hiện trong khi bàn giao Git chưa đổi | DONE | [R26](#round-r26): 5 PDP + 2 category GET, 5 PDP xem ảnh và click CTA combo; cập nhật một phần R2-04, mở rộng R2-11, không nghiệm thu giao dịch/tồn kho. |
 | Q-NEW-PRODUCT-DATA | R26 mới xác nhận ảnh/URL, chưa thử toàn bộ size, schema và thông số năm SKU | DONE | [R27](#round-r27): 5 PDP HTTP/schema/spec, 2 cây × 2 viewport và Tháp nhũ đối chứng; phát hiện R27-01, mở rộng R2-03/R2-06/R6-01. DONE là đã kiểm, không phải đã sửa. |
+| Q-SEARCH-NEW-SKU | Search cũ mới thử “tháp nhũ”, chưa kiểm SKU/tên/intent của năm sản phẩm mới | DONE | [R28](#round-r28): 7 query HTTP, 5 luồng live→full search, 2 mobile, một lần Tab/Enter mở PDP; mở rộng R2-14, không thêm issue trùng. |
 | Q-SOURCE-HOOKS | Mục Coder 9/10 chưa xác minh `the_title` và enqueue tại nguồn | BLOCKED | Cần source/diff tương ứng; HTML không chứng minh số lần đăng ký/chạy hook. |
 | Q-B2B-HANDLER | Mục Coder 6, handler B2B non-JS chưa đủ bằng chứng | BLOCKED | Cần source hoặc staging; không gửi lead kiểm thử lên production. |
 | Q-FIX-ACCEPTANCE | Nghiệm thu các issue sau sửa và regression liên quan | PARTIAL | R26 ghi nhận Combo/Cây thông không còn rỗng; R27 phát hiện regression dữ liệu trên hai cây mới. R2-04/R2-11 và các issue liên quan vẫn OPEN; không đóng từ lời xác nhận. |
@@ -2395,4 +2404,62 @@ Hai cây mới tiếp tục Product + AggregateOffer, không ProductGroup/Offer 
 - Không mở issue riêng cho `SET-HG-70` chưa định lượng từng nhóm vì thiếu nguồn owner về cơ cấu đúng. Ảnh/nội dung sản phẩm vẫn theo R2-11.
 - Không thêm giỏ, mua hàng hoặc gửi lead. Rủi ro backend của R27-01 là điều cần staging xác minh, không phải kết quả đã quan sát trên production.
 - Bộ bằng chứng gồm **5 JSON + 9 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
+- Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.
+
+---
+
+<a id="round-r28"></a>
+
+# Vòng R28 — Khả năng tìm thấy sản phẩm mới
+
+Ngày kiểm tra: **24/09/2026**, timestamp từng lượt trong JSON. Đầu vòng `main` bằng `origin/main`; `ASSISTANT_REPLY.md` vẫn SHA-256 **`efa000f67c95ccaf46855b2ae71686d6e5e0a9b9abe84443e5ff65b66e090c16`**. Không có bàn giao Coder mới để nghiệm thu.
+
+Mẫu hữu hạn gồm bảy query:
+- Exact SKU: `COMBO-GD-50`, `SET-HG-70`, `CT-PE-SNOW`.
+- Tên/thuộc tính: `cây thông phủ tuyết`, `combo 50 món`.
+- Intent hỗn hợp/kiến thức: `trang trí quán cafe`, `cách chọn size cây thông`.
+
+Đã gọi read-only live search API và full search cho cả bảy; thao tác modal → full search cho năm query ở desktop **1440×1000**; đọc hai full search ở mobile mô phỏng **375×812**; mở một live result bằng Tab/Enter. Không bấm CTA thương mại hoặc thêm giỏ.
+
+## Kết quả hoạt động và cần giữ
+
+- Tìm theo tên hoạt động: cây PE và combo 50 món đứng đầu live/full result. `cây thông phủ tuyết` có sáu gợi ý + “Xem thêm”; `combo 50 món` có bốn gợi ý.
+- Tab từ input → nút tìm → gợi ý đầu, Enter mở đúng URL/H1/SKU `CT-PE-SNOW`. [Trace](review-evidence/2026-09-24/r28-open-live-result.json) · [ảnh đích](review-evidence/2026-09-24/r28-live-result-opened.webp).
+- Intent kiến thức: “cách chọn size cây thông” xếp ba bài cẩm nang trước product/page. Intent quán cafe đưa bài hướng dẫn đầu, combo B2B thứ hai, bài dự toán thứ ba. Đây là kết quả hữu ích; không yêu cầu đổi thành product-only.
+- Full search tiếp tục `noindex`; trạng thái rỗng toàn trang có thông báo nhìn thấy và ô thử lại. Hai mẫu mobile có `documentWidth=viewportWidth=375`, không overflow ngang.
+- Không mở issue mới cho semantics/empty state modal: exact SKU rỗng vẫn tái hiện phạm vi R11-01; live options vẫn dùng đường Tab/Enter đã biết trong R12-01. Không chạy lại ArrowDown nên không tuyên bố R12-01 thay đổi.
+
+## R2-14 — bổ sung bằng chứng hiện hành
+
+### Exact SKU không tìm thấy
+
+Ba mã đang in trên PDP đều không được live/full search tìm thấy:
+
+| Query | Live API | Full search |
+|---|---:|---:|
+| `COMBO-GD-50` | 200, 0 kết quả | HTTP 200, 0 article |
+| `SET-HG-70` | 200, 0 kết quả | HTTP 200, 0 article |
+| `CT-PE-SNOW` | 200, 0 kết quả | HTTP 200, 0 article |
+
+[HTTP/API và DOM parse](review-evidence/2026-09-24/r28-search-http.json) · [modal SKU không gợi ý](review-evidence/2026-09-24/r28-sku-tree-modal.webp) · [full search mobile rỗng](review-evidence/2026-09-24/r28-sku-tree-mobile-page.webp).
+
+Không yêu cầu fuzzy search cho mọi mã nhập sai; tiêu chí là exact SKU đang công bố phải tìm được đúng sản phẩm. Đây là phần acceptance R2-14 chưa đạt, không phải issue mới.
+
+### Product card vẫn là card bài viết
+
+Các query tên/intent tìm thấy product, nhưng mỗi card chỉ có category, title, ảnh, excerpt và ngày. DOM không có `.price`, nút/link “xem/chọn mẫu” hoặc hành động thương mại. [Desktop query tên cây](review-evidence/2026-09-24/r28-name-tree-page.webp) · [mobile cùng query](review-evidence/2026-09-24/r28-name-tree-mobile-page.webp).
+
+Không bắt live suggestion ngắn phải chứa giá; yêu cầu giá/action áp dụng cho full search nơi người dùng đang so sánh kết quả. Ảnh sai loại hàng vẫn thuộc R2-11, không nhân đôi trong search.
+
+### Status
+
+**R2-14 giữ OPEN — P2.** Không có issue mới trong R28.
+
+## Giới hạn và bàn giao R28
+
+- Tổng giữ **40 OPEN — 8 P1, 26 P2, 6 P3**. Không đóng issue cũ.
+- Bảy query không đại diện toàn bộ relevance/catalog. Không kiểm typo, không dấu, từ đồng nghĩa, tải lớn, lỗi mạng hoặc screen reader.
+- Không kiểm trigger search mobile vì việc thiếu search ở mobile đã là R2-08; R28 chỉ đọc trực tiếp full search mobile, không dùng URL trực tiếp để tuyên bố trigger tồn tại.
+- Không coi live suggestion thiếu giá là lỗi riêng. Không thêm giỏ/mua hàng hoặc gửi form ngoài GET search.
+- Bộ bằng chứng gồm **5 JSON + 13 screenshot**. Đã đóng Chrome riêng; không sửa code/config/database website hoặc chạy watcher.
 - Báo cáo và bằng chứng được bàn giao qua commit/push; chỉ xác nhận thành công sau khi remote nhận commit.

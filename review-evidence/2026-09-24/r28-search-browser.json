@@ -1,0 +1,3978 @@
+[
+  {
+    "utc": "2026-09-24T15:06:36.783Z",
+    "test": {
+      "id": "sku-tree",
+      "query": "CT-PE-SNOW"
+    },
+    "api": [
+      {
+        "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=CT-PE-SNOW",
+        "status": 200,
+        "body": []
+      }
+    ],
+    "modal": {
+      "url": "https://trangtri4mua.com/",
+      "input": {
+        "value": "CT-PE-SNOW",
+        "expanded": "false",
+        "activeDescendant": null
+      },
+      "status": [
+        {
+          "text": "Không có kết quả",
+          "className": "screen-reader-text",
+          "visible": true
+        }
+      ],
+      "links": [],
+      "panelVisible": true
+    },
+    "page": {
+      "url": "https://trangtri4mua.com/?s=CT-PE-SNOW",
+      "h1": "Kết quả tìm kiếm cho CT-PE-SNOW",
+      "robots": "follow, noindex",
+      "articles": [],
+      "emptyText": "Kết quả tìm kiếm cho CT-PE-SNOW\nXin lỗi, từ khoá bạn tìm kiếm không có kết quả nào. Vui lòng thử lại với các từ khoá khác.\nKhông có kết quả"
+    },
+    "screenshots": [
+      "r28-sku-tree-modal.webp",
+      "r28-sku-tree-page.webp"
+    ]
+  },
+  {
+    "utc": "2026-09-24T15:06:42.873Z",
+    "test": {
+      "id": "name-tree",
+      "query": "cây thông phủ tuyết"
+    },
+    "api": [
+      {
+        "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=c%C3%A2y+th%C3%B4ng+ph%E1%BB%A7+tuy%E1%BA%BFt",
+        "status": 200,
+        "body": [
+          {
+            "id": 372,
+            "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 46,
+              "date": "2026-09-23T16:42:38",
+              "date_gmt": "2026-09-23T16:42:38",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp"
+              },
+              "modified": "2026-09-23T16:42:38",
+              "modified_gmt": "2026-09-23T16:42:38",
+              "slug": "canh-thong-pe",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/canh-thong-pe/",
+              "title": {
+                "rendered": "Canh Thong Pe"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-46",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp'><img loading=\"lazy\" decoding=\"async\" width=\"225\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-225x300.webp\" class=\"attachment-medium size-medium\" alt=\"Cành thông PE cắm trang trí - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp 900w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Cành thông PE cắm trang trí - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 900,
+                "height": 1200,
+                "file": "2026/09/canh-thong-pe.webp",
+                "filesize": 209454,
+                "sizes": {
+                  "medium": {
+                    "file": "canh-thong-pe-225x300.webp",
+                    "width": 225,
+                    "height": 300,
+                    "filesize": 23288,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-225x300.webp"
+                  },
+                  "large": {
+                    "file": "canh-thong-pe-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 206928,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "canh-thong-pe-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8128,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "canh-thong-pe-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 206928,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-768x1024.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "canh-thong-pe-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 34008,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "canh-thong-pe-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 34008,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "canh-thong-pe-600x800.webp",
+                    "width": 600,
+                    "height": 800,
+                    "filesize": 147684,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-600x800.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "canh-thong-pe-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 3328,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe-100x100.webp"
+                  },
+                  "full": {
+                    "file": "canh-thong-pe.webp",
+                    "width": 900,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/canh-thong-pe.webp",
+              "filename": "canh-thong-pe.webp",
+              "filesize": 209454
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/372",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 381,
+            "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+            "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 75,
+              "date": "2026-09-23T16:42:48",
+              "date_gmt": "2026-09-23T16:42:48",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp"
+              },
+              "modified": "2026-09-23T16:42:48",
+              "modified_gmt": "2026-09-23T16:42:48",
+              "slug": "hop-qua-trau",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/hop-qua-trau/",
+              "title": {
+                "rendered": "Hop Qua Trau"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-75",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp'><img loading=\"lazy\" decoding=\"async\" width=\"225\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp\" class=\"attachment-medium size-medium\" alt=\"Hộp quả trầu treo cây - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp 900w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Hộp quả trầu treo cây - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 900,
+                "height": 1200,
+                "file": "2026/09/hop-qua-trau.webp",
+                "filesize": 128786,
+                "sizes": {
+                  "medium": {
+                    "file": "hop-qua-trau-225x300.webp",
+                    "width": 225,
+                    "height": 300,
+                    "filesize": 26760,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp"
+                  },
+                  "large": {
+                    "file": "hop-qua-trau-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 145676,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "hop-qua-trau-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 10434,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "hop-qua-trau-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 145676,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "hop-qua-trau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31584,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "hop-qua-trau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31584,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "hop-qua-trau-600x800.webp",
+                    "width": 600,
+                    "height": 800,
+                    "filesize": 108984,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "hop-qua-trau-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5128,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-100x100.webp"
+                  },
+                  "full": {
+                    "file": "hop-qua-trau.webp",
+                    "width": 900,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp",
+              "filename": "hop-qua-trau.webp",
+              "filesize": 128786
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/381",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 383,
+            "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe &#038; Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+            "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 71,
+              "date": "2026-09-23T16:42:47",
+              "date_gmt": "2026-09-23T16:42:47",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp"
+              },
+              "modified": "2026-09-23T16:42:47",
+              "modified_gmt": "2026-09-23T16:42:47",
+              "slug": "hang-rao-go-trang-tri-goc-cay",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/hang-rao-go-trang-tri-goc-cay/",
+              "title": {
+                "rendered": "Hang Rao Go Trang Tri Goc Cay"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-71",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp'><img loading=\"lazy\" decoding=\"async\" width=\"225\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp\" class=\"attachment-medium size-medium\" alt=\"Hàng rào gỗ trang trí gốc cây - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp 900w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Hàng rào gỗ trang trí gốc cây - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 900,
+                "height": 1200,
+                "file": "2026/09/hang-rao-go-trang-tri-goc-cay.webp",
+                "filesize": 159290,
+                "sizes": {
+                  "medium": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-225x300.webp",
+                    "width": 225,
+                    "height": 300,
+                    "filesize": 20824,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp"
+                  },
+                  "large": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 151162,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8458,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 151162,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 28402,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 28402,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+                    "width": 600,
+                    "height": 800,
+                    "filesize": 107316,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4148,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-100x100.webp"
+                  },
+                  "full": {
+                    "file": "hang-rao-go-trang-tri-goc-cay.webp",
+                    "width": 900,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp",
+              "filename": "hang-rao-go-trang-tri-goc-cay.webp",
+              "filesize": 159290
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/383",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 377,
+            "title": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &#038; Đầu Tuyết",
+            "url": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 64,
+              "date": "2026-09-23T16:42:44",
+              "date_gmt": "2026-09-23T16:42:44",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+              },
+              "modified": "2026-09-23T16:42:44",
+              "modified_gmt": "2026-09-23T16:42:44",
+              "slug": "day-qua",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/day-qua/",
+              "title": {
+                "rendered": "Day Qua"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-64",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp'><img loading=\"lazy\" decoding=\"async\" width=\"147\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp\" class=\"attachment-medium size-medium\" alt=\"Dây thông gắn quả - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp 147w, https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp 292w\" sizes=\"auto, (max-width: 147px) 100vw, 147px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Dây thông gắn quả - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 292,
+                "height": 596,
+                "file": "2026/09/day-qua.webp",
+                "filesize": 55552,
+                "sizes": {
+                  "medium": {
+                    "file": "day-qua-147x300.webp",
+                    "width": 147,
+                    "height": 300,
+                    "filesize": 17050,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp"
+                  },
+                  "thumbnail": {
+                    "file": "day-qua-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9750,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-150x150.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "day-qua-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4280,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-100x100.webp"
+                  },
+                  "full": {
+                    "file": "day-qua.webp",
+                    "width": 292,
+                    "height": 596,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp",
+              "filename": "day-qua.webp",
+              "filesize": 55552
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/377",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 325,
+            "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 64,
+              "date": "2026-09-23T16:42:44",
+              "date_gmt": "2026-09-23T16:42:44",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+              },
+              "modified": "2026-09-23T16:42:44",
+              "modified_gmt": "2026-09-23T16:42:44",
+              "slug": "day-qua",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/day-qua/",
+              "title": {
+                "rendered": "Day Qua"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-64",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp'><img loading=\"lazy\" decoding=\"async\" width=\"147\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp\" class=\"attachment-medium size-medium\" alt=\"Dây thông gắn quả - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp 147w, https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp 292w\" sizes=\"auto, (max-width: 147px) 100vw, 147px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Dây thông gắn quả - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 292,
+                "height": 596,
+                "file": "2026/09/day-qua.webp",
+                "filesize": 55552,
+                "sizes": {
+                  "medium": {
+                    "file": "day-qua-147x300.webp",
+                    "width": 147,
+                    "height": 300,
+                    "filesize": 17050,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp"
+                  },
+                  "thumbnail": {
+                    "file": "day-qua-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9750,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-150x150.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "day-qua-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4280,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-100x100.webp"
+                  },
+                  "full": {
+                    "file": "day-qua.webp",
+                    "width": 292,
+                    "height": 596,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp",
+              "filename": "day-qua.webp",
+              "filesize": 55552
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/325",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 248,
+            "title": "Người tuyết trang trí &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 114,
+              "date": "2026-09-23T16:43:02",
+              "date_gmt": "2026-09-23T16:43:02",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri.webp"
+              },
+              "modified": "2026-09-23T16:43:02",
+              "modified_gmt": "2026-09-23T16:43:02",
+              "slug": "nguoi-tuyet-trang-tri",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/nguoi-tuyet-trang-tri/",
+              "title": {
+                "rendered": "Nguoi Tuyet Trang Tri"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-114",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri.webp'><img loading=\"lazy\" decoding=\"async\" width=\"205\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-205x300.webp\" class=\"attachment-medium size-medium\" alt=\"Người tuyết trang trí - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-205x300.webp 205w, https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-701x1024.webp 701w, https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-768x1123.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-600x877.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri.webp 821w\" sizes=\"auto, (max-width: 205px) 100vw, 205px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Người tuyết trang trí - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 821,
+                "height": 1200,
+                "file": "2026/09/nguoi-tuyet-trang-tri.webp",
+                "filesize": 134356,
+                "sizes": {
+                  "medium": {
+                    "file": "nguoi-tuyet-trang-tri-205x300.webp",
+                    "width": 205,
+                    "height": 300,
+                    "filesize": 21346,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-205x300.webp"
+                  },
+                  "large": {
+                    "file": "nguoi-tuyet-trang-tri-701x1024.webp",
+                    "width": 701,
+                    "height": 1024,
+                    "filesize": 139650,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-701x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "nguoi-tuyet-trang-tri-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8810,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "nguoi-tuyet-trang-tri-768x1123.webp",
+                    "width": 768,
+                    "height": 1123,
+                    "filesize": 157140,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-768x1123.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "nguoi-tuyet-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 29594,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "nguoi-tuyet-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 29594,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "nguoi-tuyet-trang-tri-600x877.webp",
+                    "width": 600,
+                    "height": 877,
+                    "filesize": 114152,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-600x877.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "nguoi-tuyet-trang-tri-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4386,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri-100x100.webp"
+                  },
+                  "full": {
+                    "file": "nguoi-tuyet-trang-tri.webp",
+                    "width": 821,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nguoi-tuyet-trang-tri.webp",
+              "filename": "nguoi-tuyet-trang-tri.webp",
+              "filesize": 134356
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/248",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "modal": {
+      "url": "https://trangtri4mua.com/",
+      "input": {
+        "value": "cây thông phủ tuyết",
+        "expanded": "true",
+        "activeDescendant": null
+      },
+      "status": [
+        {
+          "text": "Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó.",
+          "className": "screen-reader-text",
+          "visible": true
+        }
+      ],
+      "links": [
+        {
+          "text": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "href": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "href": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết",
+          "href": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Người tuyết trang trí – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Xem thêm",
+          "href": "https://trangtri4mua.com/search/c%C3%A2y%20th%C3%B4ng%20ph%E1%BB%A7%20tuy%E1%BA%BFt/",
+          "role": "option",
+          "className": "ct-search-more",
+          "visible": true
+        }
+      ],
+      "panelVisible": true
+    },
+    "page": {
+      "url": "https://trangtri4mua.com/?s=c%C3%A2y+th%C3%B4ng+ph%E1%BB%A7+tuy%E1%BA%BFt",
+      "h1": "Kết quả tìm kiếm cho cây thông phủ tuyết",
+      "robots": "follow, noindex",
+      "articles": [
+        {
+          "className": "entry-card card-content post-372 product type-product status-publish has-post-thumbnail product_cat-cay-thong-noel product_cat-giang-sinh-noel product_cat-trang-tri-theo-mua  instock shipping-taxable purchasable product-type-variable",
+          "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "titleHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "categories": [
+            "CÂY THÔNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL",
+            "TRANG TRÍ THEO MÙA"
+          ],
+          "excerpt": "Cây thông Noel lá PE phủ tuyết cao cấp, tán dày tự nhiên, chân sắt vững chãi, dễ dàng lắp ráp.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-383 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel last instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Gói decor Giáng Sinh trọn gói cho quán cafe, nhà hàng, sảnh văn phòng (có hóa đơn VAT).",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-381 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel  instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Set phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-377 product type-product status-publish has-post-thumbnail product_cat-cay-thong-noel product_cat-giang-sinh-noel last instock shipping-taxable purchasable product-type-variable",
+          "title": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng & Đầu Tuyết",
+          "titleHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+          "categories": [
+            "CÂY THÔNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Cây thông cước gắn trái thông rừng tự nhiên và đầu tuyết, dáng chuẩn, cành dẻo dễ uốn.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-325 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-254 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-hang-rao-trang-tri product_tag-tieu-canh-noel  instock shipping-taxable product-type-simple",
+          "title": "Hàng rào gỗ trang trí gốc cây – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/hang-rao-go-trang-tri-goc-cay/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Liên hệ Zalo để báo giá. Hàng rào gỗ ván nhọn quây gốc cây thông, khung cảnh Giáng sinh gọn gàng và đậm chất Noel.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-250 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-hang-rao-goc-cay product_tag-trang-tri-cay-thong last instock shipping-taxable product-type-simple",
+          "title": "Hàng rào khúc gỗ trang trí gốc cây – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/hang-rao-khuc-go-trang-tri-goc-cay/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Liên hệ Zalo để báo giá. Hàng rào khúc gỗ tròn quây quanh gốc cây thông, che chân cây gọn gàng mà vẫn mộc mạc tự nhiên.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-249 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel product_tag-tuong-tuan-loc  instock shipping-taxable purchasable product-type-simple",
+          "title": "Nai trắng tuyết điện – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/nai-trang-tuyet-dien/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Tượng nai trắng phủ tuyết cỡ lớn, điểm nhấn sang trọng cho sảnh và tiểu cảnh Giáng sinh.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-248 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel product_tag-nguoi-tuyet last instock shipping-taxable purchasable product-type-simple",
+          "title": "Người tuyết trang trí – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/nguoi-tuyet-trang-tri/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Người tuyết trang trí nhiều size đến 1m5, nhân vật không thể thiếu trong tiểu cảnh Giáng sinh.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-223 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel  instock shipping-taxable purchasable product-type-variable",
+          "title": "Tượng người tuyết mũ đỏ – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Tượng người tuyết mũ đỏ đội bông tuyết, nhiều size tới 1m50 cho sảnh, cửa hàng và góc chụp ảnh Noel.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        }
+      ]
+    },
+    "screenshots": [
+      "r28-name-tree-modal.webp",
+      "r28-name-tree-page.webp"
+    ]
+  },
+  {
+    "utc": "2026-09-24T15:06:48.706Z",
+    "test": {
+      "id": "name-combo",
+      "query": "combo 50 món"
+    },
+    "api": [
+      {
+        "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=combo+50+m%C3%B3n",
+        "status": 200,
+        "body": [
+          {
+            "id": 381,
+            "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+            "url": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 75,
+              "date": "2026-09-23T16:42:48",
+              "date_gmt": "2026-09-23T16:42:48",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp"
+              },
+              "modified": "2026-09-23T16:42:48",
+              "modified_gmt": "2026-09-23T16:42:48",
+              "slug": "hop-qua-trau",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/hop-qua-trau/",
+              "title": {
+                "rendered": "Hop Qua Trau"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-75",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp'><img loading=\"lazy\" decoding=\"async\" width=\"225\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp\" class=\"attachment-medium size-medium\" alt=\"Hộp quả trầu treo cây - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp 900w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Hộp quả trầu treo cây - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 900,
+                "height": 1200,
+                "file": "2026/09/hop-qua-trau.webp",
+                "filesize": 128786,
+                "sizes": {
+                  "medium": {
+                    "file": "hop-qua-trau-225x300.webp",
+                    "width": 225,
+                    "height": 300,
+                    "filesize": 26760,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-225x300.webp"
+                  },
+                  "large": {
+                    "file": "hop-qua-trau-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 145676,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "hop-qua-trau-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 10434,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "hop-qua-trau-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 145676,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-768x1024.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "hop-qua-trau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31584,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "hop-qua-trau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31584,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "hop-qua-trau-600x800.webp",
+                    "width": 600,
+                    "height": 800,
+                    "filesize": 108984,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-600x800.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "hop-qua-trau-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5128,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau-100x100.webp"
+                  },
+                  "full": {
+                    "file": "hop-qua-trau.webp",
+                    "width": 900,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hop-qua-trau.webp",
+              "filename": "hop-qua-trau.webp",
+              "filesize": 128786
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/381",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 322,
+            "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 110,
+              "date": "2026-09-23T16:43:00",
+              "date_gmt": "2026-09-23T16:43:00",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+              },
+              "modified": "2026-09-23T16:43:00",
+              "modified_gmt": "2026-09-23T16:43:00",
+              "slug": "nai-tuan-loc-trang-tri",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/nai-tuan-loc-trang-tri/",
+              "title": {
+                "rendered": "Nai Tuan Loc Trang Tri"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-110",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"225\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp\" class=\"attachment-medium size-medium\" alt=\"Nai tuần lộc trang trí - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Nai tuần lộc trang trí - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 900,
+                "file": "2026/09/nai-tuan-loc-trang-tri.webp",
+                "filesize": 151590,
+                "sizes": {
+                  "medium": {
+                    "file": "nai-tuan-loc-trang-tri-300x225.webp",
+                    "width": 300,
+                    "height": 225,
+                    "filesize": 26320,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp"
+                  },
+                  "large": {
+                    "file": "nai-tuan-loc-trang-tri-1024x768.webp",
+                    "width": 1024,
+                    "height": 768,
+                    "filesize": 158030,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp"
+                  },
+                  "thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 10530,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "nai-tuan-loc-trang-tri-768x576.webp",
+                    "width": 768,
+                    "height": 576,
+                    "filesize": 107396,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "nai-tuan-loc-trang-tri-600x450.webp",
+                    "width": 600,
+                    "height": 450,
+                    "filesize": 82192,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5214,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-100x100.webp"
+                  },
+                  "full": {
+                    "file": "nai-tuan-loc-trang-tri.webp",
+                    "width": 1200,
+                    "height": 900,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp",
+              "filename": "nai-tuan-loc-trang-tri.webp",
+              "filesize": 151590
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/322",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 12,
+            "title": "Chính Sách Vận Chuyển",
+            "url": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+            "type": "post",
+            "subtype": "page",
+            "ct_featured_media": null,
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/pages/12",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/page"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 15,
+            "title": "Giới Thiệu",
+            "url": "https://trangtri4mua.com/gioi-thieu/",
+            "type": "post",
+            "subtype": "page",
+            "ct_featured_media": null,
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/pages/15",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/page"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "modal": {
+      "url": "https://trangtri4mua.com/",
+      "input": {
+        "value": "combo 50 món",
+        "expanded": "true",
+        "activeDescendant": null
+      },
+      "status": [
+        {
+          "text": "Bạn đã nhận được kết quả 4. Vui lòng nhấn Tab để chọn nó.",
+          "className": "screen-reader-text",
+          "visible": true
+        }
+      ],
+      "links": [
+        {
+          "text": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "href": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Chính Sách Vận Chuyển",
+          "href": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Giới Thiệu",
+          "href": "https://trangtri4mua.com/gioi-thieu/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        }
+      ],
+      "panelVisible": true
+    },
+    "page": {
+      "url": "https://trangtri4mua.com/?s=combo+50+m%C3%B3n",
+      "h1": "Kết quả tìm kiếm cho combo 50 món",
+      "robots": "follow, noindex",
+      "articles": [
+        {
+          "className": "entry-card card-content post-381 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel  instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Trang Trí Cây Thông Noel Gia Đình Ấm Cúng (50 Món Phụ Kiện + Đèn LED + Sao Đỉnh)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-trang-tri-cay-thong-noel-gia-dinh-am-cung-50-mon-phu-kien-den-led-sao-dinh/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Set phụ kiện 50 món phối sẵn tone màu ấm cúng, đủ trang trí cây thông 1m5 – 1m8.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-322 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-15 page type-page status-publish hentry",
+          "title": "Giới Thiệu",
+          "titleHref": "https://trangtri4mua.com/gioi-thieu/",
+          "categories": [],
+          "excerpt": "Chào mừng bạn đến với Trang Trí 4 Mùa – thương hiệu chuyên cung cấp cây thông Noel cao cấp, phụ kiện trang trí lễ hội theo mùa và giải pháp decor trọn gói cho không gian sống gia đình,…",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-12 page type-page status-publish hentry",
+          "title": "Chính Sách Vận Chuyển",
+          "titleHref": "https://trangtri4mua.com/chinh-sach-van-chuyen/",
+          "categories": [],
+          "excerpt": "Danh Mục Chính Sách Chính Sách Đổi Trả Chính Sách Vận Chuyển Chính Sách Bảo Mật Chính Sách Thanh Toán Hỗ Trợ Mua Hàng Hotline: 0901.234.567 Zalo CSKH: 0901.234.567 Email: cskh@trangtri4mua.com Showroom: 123 Xuân Thủy, P. Thảo Điền, TP. Thủ…",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        }
+      ]
+    },
+    "screenshots": [
+      "r28-name-combo-modal.webp",
+      "r28-name-combo-page.webp"
+    ]
+  },
+  {
+    "utc": "2026-09-24T15:06:54.853Z",
+    "test": {
+      "id": "intent-cafe",
+      "query": "trang trí quán cafe"
+    },
+    "api": [
+      {
+        "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=trang+tr%C3%AD+qu%C3%A1n+cafe",
+        "status": 200,
+        "body": [
+          {
+            "id": 322,
+            "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 110,
+              "date": "2026-09-23T16:43:00",
+              "date_gmt": "2026-09-23T16:43:00",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+              },
+              "modified": "2026-09-23T16:43:00",
+              "modified_gmt": "2026-09-23T16:43:00",
+              "slug": "nai-tuan-loc-trang-tri",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/nai-tuan-loc-trang-tri/",
+              "title": {
+                "rendered": "Nai Tuan Loc Trang Tri"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-110",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"225\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp\" class=\"attachment-medium size-medium\" alt=\"Nai tuần lộc trang trí - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Nai tuần lộc trang trí - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 900,
+                "file": "2026/09/nai-tuan-loc-trang-tri.webp",
+                "filesize": 151590,
+                "sizes": {
+                  "medium": {
+                    "file": "nai-tuan-loc-trang-tri-300x225.webp",
+                    "width": 300,
+                    "height": 225,
+                    "filesize": 26320,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp"
+                  },
+                  "large": {
+                    "file": "nai-tuan-loc-trang-tri-1024x768.webp",
+                    "width": 1024,
+                    "height": 768,
+                    "filesize": 158030,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp"
+                  },
+                  "thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 10530,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "nai-tuan-loc-trang-tri-768x576.webp",
+                    "width": 768,
+                    "height": 576,
+                    "filesize": 107396,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "nai-tuan-loc-trang-tri-600x450.webp",
+                    "width": 600,
+                    "height": 450,
+                    "filesize": 82192,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5214,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-100x100.webp"
+                  },
+                  "full": {
+                    "file": "nai-tuan-loc-trang-tri.webp",
+                    "width": 1200,
+                    "height": 900,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp",
+              "filename": "nai-tuan-loc-trang-tri.webp",
+              "filesize": 151590
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/322",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 383,
+            "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe &#038; Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+            "url": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 71,
+              "date": "2026-09-23T16:42:47",
+              "date_gmt": "2026-09-23T16:42:47",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp"
+              },
+              "modified": "2026-09-23T16:42:47",
+              "modified_gmt": "2026-09-23T16:42:47",
+              "slug": "hang-rao-go-trang-tri-goc-cay",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/hang-rao-go-trang-tri-goc-cay/",
+              "title": {
+                "rendered": "Hang Rao Go Trang Tri Goc Cay"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-71",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp'><img loading=\"lazy\" decoding=\"async\" width=\"225\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp\" class=\"attachment-medium size-medium\" alt=\"Hàng rào gỗ trang trí gốc cây - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp 225w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp 900w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Hàng rào gỗ trang trí gốc cây - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 900,
+                "height": 1200,
+                "file": "2026/09/hang-rao-go-trang-tri-goc-cay.webp",
+                "filesize": 159290,
+                "sizes": {
+                  "medium": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-225x300.webp",
+                    "width": 225,
+                    "height": 300,
+                    "filesize": 20824,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-225x300.webp"
+                  },
+                  "large": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 151162,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8458,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-768x1024.webp",
+                    "width": 768,
+                    "height": 1024,
+                    "filesize": 151162,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-768x1024.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 28402,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 28402,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-600x800.webp",
+                    "width": 600,
+                    "height": 800,
+                    "filesize": 107316,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-600x800.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "hang-rao-go-trang-tri-goc-cay-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4148,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay-100x100.webp"
+                  },
+                  "full": {
+                    "file": "hang-rao-go-trang-tri-goc-cay.webp",
+                    "width": 900,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/hang-rao-go-trang-tri-goc-cay.webp",
+              "filename": "hang-rao-go-trang-tri-goc-cay.webp",
+              "filesize": 159290
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/383",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 327,
+            "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 116,
+              "date": "2026-09-23T16:43:02",
+              "date_gmt": "2026-09-23T16:43:02",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp"
+              },
+              "modified": "2026-09-23T16:43:02",
+              "modified_gmt": "2026-09-23T16:43:02",
+              "slug": "ong-gia-3-mau",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/ong-gia-3-mau/",
+              "title": {
+                "rendered": "Ong Gia 3 Mau"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-116",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"260\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp\" class=\"attachment-medium size-medium\" alt=\"Ông già Noel 3 mẫu - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-1024x887.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Ông già Noel 3 mẫu - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 1039,
+                "file": "2026/09/ong-gia-3-mau.webp",
+                "filesize": 163180,
+                "sizes": {
+                  "medium": {
+                    "file": "ong-gia-3-mau-300x260.webp",
+                    "width": 300,
+                    "height": 260,
+                    "filesize": 28736,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp"
+                  },
+                  "large": {
+                    "file": "ong-gia-3-mau-1024x887.webp",
+                    "width": 1024,
+                    "height": 887,
+                    "filesize": 173822,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-1024x887.webp"
+                  },
+                  "thumbnail": {
+                    "file": "ong-gia-3-mau-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9794,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "ong-gia-3-mau-768x665.webp",
+                    "width": 768,
+                    "height": 665,
+                    "filesize": 119848,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "ong-gia-3-mau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31282,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "ong-gia-3-mau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31282,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "ong-gia-3-mau-600x520.webp",
+                    "width": 600,
+                    "height": 520,
+                    "filesize": 87744,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "ong-gia-3-mau-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4918,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-100x100.webp"
+                  },
+                  "full": {
+                    "file": "ong-gia-3-mau.webp",
+                    "width": 1200,
+                    "height": 1039,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp",
+              "filename": "ong-gia-3-mau.webp",
+              "filesize": 163180
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/327",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 285,
+            "title": "Ông già Noel lắc mông thổi kèn &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 119,
+              "date": "2026-09-23T16:43:04",
+              "date_gmt": "2026-09-23T16:43:04",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken.webp"
+              },
+              "modified": "2026-09-23T16:43:04",
+              "modified_gmt": "2026-09-23T16:43:04",
+              "slug": "ong-gia-noel-lac-mong-thoi-ken",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/ong-gia-noel-lac-mong-thoi-ken/",
+              "title": {
+                "rendered": "Ong Gia Noel Lac Mong Thoi Ken"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-119",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-300x300.webp\" class=\"attachment-medium size-medium\" alt=\"Ông già Noel lắc mông thổi kèn - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-300x300.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-1024x1024.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-150x150.webp 150w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-768x768.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-600x600.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-100x100.webp 100w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Ông già Noel lắc mông thổi kèn - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 1200,
+                "file": "2026/09/ong-gia-noel-lac-mong-thoi-ken.webp",
+                "filesize": 71786,
+                "sizes": {
+                  "medium": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 18070,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-300x300.webp"
+                  },
+                  "large": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-1024x1024.webp",
+                    "width": 1024,
+                    "height": 1024,
+                    "filesize": 78034,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-1024x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 6782,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-768x768.webp",
+                    "width": 768,
+                    "height": 768,
+                    "filesize": 55494,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-768x768.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 18070,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 18070,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-600x600.webp",
+                    "width": 600,
+                    "height": 600,
+                    "filesize": 43934,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-600x600.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 3682,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken-100x100.webp"
+                  },
+                  "full": {
+                    "file": "ong-gia-noel-lac-mong-thoi-ken.webp",
+                    "width": 1200,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-noel-lac-mong-thoi-ken.webp",
+              "filename": "ong-gia-noel-lac-mong-thoi-ken.webp",
+              "filesize": 71786
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/285",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 223,
+            "title": "Tượng người tuyết mũ đỏ &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 136,
+              "date": "2026-09-23T16:43:11",
+              "date_gmt": "2026-09-23T16:43:11",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do.webp"
+              },
+              "modified": "2026-09-23T16:43:11",
+              "modified_gmt": "2026-09-23T16:43:11",
+              "slug": "tuong-nguoi-tuyet-mu-do",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/tuong-nguoi-tuyet-mu-do/",
+              "title": {
+                "rendered": "Tuong Nguoi Tuyet Mu Do"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-136",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"288\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-300x288.webp\" class=\"attachment-medium size-medium\" alt=\"Tượng người tuyết mũ đỏ - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-300x288.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-768x737.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-600x576.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do.webp 884w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Tượng người tuyết mũ đỏ - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 884,
+                "height": 848,
+                "file": "2026/09/tuong-nguoi-tuyet-mu-do.webp",
+                "filesize": 87776,
+                "sizes": {
+                  "medium": {
+                    "file": "tuong-nguoi-tuyet-mu-do-300x288.webp",
+                    "width": 300,
+                    "height": 288,
+                    "filesize": 28670,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-300x288.webp"
+                  },
+                  "thumbnail": {
+                    "file": "tuong-nguoi-tuyet-mu-do-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9948,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "tuong-nguoi-tuyet-mu-do-768x737.webp",
+                    "width": 768,
+                    "height": 737,
+                    "filesize": 97526,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-768x737.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "tuong-nguoi-tuyet-mu-do-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 29586,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "tuong-nguoi-tuyet-mu-do-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 29586,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "tuong-nguoi-tuyet-mu-do-600x576.webp",
+                    "width": 600,
+                    "height": 576,
+                    "filesize": 72654,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-600x576.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "tuong-nguoi-tuyet-mu-do-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5230,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do-100x100.webp"
+                  },
+                  "full": {
+                    "file": "tuong-nguoi-tuyet-mu-do.webp",
+                    "width": 884,
+                    "height": 848,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/tuong-nguoi-tuyet-mu-do.webp",
+              "filename": "tuong-nguoi-tuyet-mu-do.webp",
+              "filesize": 87776
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/223",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 184,
+            "title": "Chậu kẹo 12cm &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/chau-12cm/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 50,
+              "date": "2026-09-23T16:42:39",
+              "date_gmt": "2026-09-23T16:42:39",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm.webp"
+              },
+              "modified": "2026-09-23T16:42:39",
+              "modified_gmt": "2026-09-23T16:42:39",
+              "slug": "chau-12cm",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/chau-12cm/",
+              "title": {
+                "rendered": "Chau 12cm"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-50",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm.webp'><img loading=\"lazy\" decoding=\"async\" width=\"253\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-253x300.webp\" class=\"attachment-medium size-medium\" alt=\"Chậu kẹo 12cm - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-253x300.webp 253w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-864x1024.webp 864w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-768x910.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-600x711.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm.webp 1013w\" sizes=\"auto, (max-width: 253px) 100vw, 253px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Chậu kẹo 12cm - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1013,
+                "height": 1200,
+                "file": "2026/09/chau-12cm.webp",
+                "filesize": 78762,
+                "sizes": {
+                  "medium": {
+                    "file": "chau-12cm-253x300.webp",
+                    "width": 253,
+                    "height": 300,
+                    "filesize": 14606,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-253x300.webp"
+                  },
+                  "large": {
+                    "file": "chau-12cm-864x1024.webp",
+                    "width": 864,
+                    "height": 1024,
+                    "filesize": 83456,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-864x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "chau-12cm-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 5784,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "chau-12cm-768x910.webp",
+                    "width": 768,
+                    "height": 910,
+                    "filesize": 72440,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-768x910.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "chau-12cm-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 17780,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "chau-12cm-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 17780,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "chau-12cm-600x711.webp",
+                    "width": 600,
+                    "height": 711,
+                    "filesize": 52974,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-600x711.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "chau-12cm-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 3010,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm-100x100.webp"
+                  },
+                  "full": {
+                    "file": "chau-12cm.webp",
+                    "width": 1013,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-12cm.webp",
+              "filename": "chau-12cm.webp",
+              "filesize": 78762
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/184",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "modal": {
+      "url": "https://trangtri4mua.com/",
+      "input": {
+        "value": "trang trí quán cafe",
+        "expanded": "true",
+        "activeDescendant": null
+      },
+      "status": [
+        {
+          "text": "Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó.",
+          "className": "screen-reader-text",
+          "visible": true
+        }
+      ],
+      "links": [
+        {
+          "text": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "href": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Ông già Noel lắc mông thổi kèn – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Tượng người tuyết mũ đỏ – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Chậu kẹo 12cm – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/chau-12cm/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Xem thêm",
+          "href": "https://trangtri4mua.com/search/trang%20tr%C3%AD%20qu%C3%A1n%20cafe/",
+          "role": "option",
+          "className": "ct-search-more",
+          "visible": true
+        }
+      ],
+      "panelVisible": true
+    },
+    "page": {
+      "url": "https://trangtri4mua.com/?s=trang+tr%C3%AD+qu%C3%A1n+cafe",
+      "h1": "Kết quả tìm kiếm cho trang trí quán cafe",
+      "robots": "follow, noindex",
+      "articles": [
+        {
+          "className": "entry-card card-content post-322 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-383 product type-product status-publish has-post-thumbnail product_cat-combo-trang-tri-noel product_cat-giang-sinh-noel  instock sale shipping-taxable purchasable product-type-simple",
+          "title": "Combo Decor Giáng Sinh Trọn Gói Quán Cafe & Văn Phòng (Cây Thông 2m1 + Phụ Kiện + Hàng Rào + Đèn)",
+          "titleHref": "https://trangtri4mua.com/san-pham/combo-decor-giang-sinh-tron-goi-quan-cafe-van-phong-cay-thong-2m1-phu-kien-hang-rao-den/",
+          "categories": [
+            "COMBO TRANG TRÍ NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Gói decor Giáng Sinh trọn gói cho quán cafe, nhà hàng, sảnh văn phòng (có hóa đơn VAT).",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-327 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Bảng bóc tách chi tiết chi phí trang trí Giáng Sinh 2026: cây thông, phụ kiện treo, hệ thống chiếu sáng và tiểu cảnh chân cây. Dự toán mẫu cho căn hộ, quán cafe và văn phòng kèm kỹ thuật bảo quản tái sử dụng nhiều năm.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-285 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel last instock shipping-taxable purchasable product-type-simple",
+          "title": "Ông già Noel lắc mông thổi kèn – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/ong-gia-noel-lac-mong-thoi-ken/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Ông già Noel cỡ lớn biết lắc mông và thổi kèn, món trang trí gây cười và thu hút mọi ánh nhìn.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-223 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel  instock shipping-taxable purchasable product-type-variable",
+          "title": "Tượng người tuyết mũ đỏ – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/tuong-nguoi-tuyet-mu-do/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Tượng người tuyết mũ đỏ đội bông tuyết, nhiều size tới 1m50 cho sảnh, cửa hàng và góc chụp ảnh Noel.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-184 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel product_tag-trang-tri-ban-tiec last instock shipping-taxable purchasable product-type-simple",
+          "title": "Chậu kẹo 12cm – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/chau-12cm/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Chậu kẹo trang trí 12cm, phụ kiện nhỏ gọn đặt bàn hay treo cây thông đều xinh.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-24 page type-page status-publish hentry",
+          "title": "Ý Tưởng Trang Trí",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/",
+          "categories": [],
+          "excerpt": "Khám phá cẩm nang ý tưởng trang trí Giáng Sinh, Tết, không gian quán cafe và căn hộ đẹp mắt, tiết kiệm chi phí tại Trang Trí 4 Mùa.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-23 page type-page status-publish hentry",
+          "title": "Trang Chủ",
+          "titleHref": "https://trangtri4mua.com/",
+          "categories": [],
+          "excerpt": "MÙA LỄ HỘI 2026 • TIẾT KIỆM 15% – 20% Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng Không cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại…",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-372 product type-product status-publish has-post-thumbnail product_cat-cay-thong-noel product_cat-giang-sinh-noel product_cat-trang-tri-theo-mua  instock shipping-taxable purchasable product-type-variable",
+          "title": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên",
+          "titleHref": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+          "categories": [
+            "CÂY THÔNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL",
+            "TRANG TRÍ THEO MÙA"
+          ],
+          "excerpt": "Cây thông Noel lá PE phủ tuyết cao cấp, tán dày tự nhiên, chân sắt vững chãi, dễ dàng lắp ráp.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-325 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        }
+      ]
+    },
+    "screenshots": [
+      "r28-intent-cafe-modal.webp",
+      "r28-intent-cafe-page.webp"
+    ]
+  },
+  {
+    "utc": "2026-09-24T15:07:01.203Z",
+    "test": {
+      "id": "knowledge",
+      "query": "cách chọn size cây thông"
+    },
+    "api": [
+      {
+        "url": "https://trangtri4mua.com/wp-json/wp/v2/search?ct_live_search=true&type=post&subtype=any&per_page=6&search=c%C3%A1ch+ch%E1%BB%8Dn+size+c%C3%A2y+th%C3%B4ng",
+        "status": 200,
+        "body": [
+          {
+            "id": 325,
+            "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng &#038; Chiều Cao Trần",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 64,
+              "date": "2026-09-23T16:42:44",
+              "date_gmt": "2026-09-23T16:42:44",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+              },
+              "modified": "2026-09-23T16:42:44",
+              "modified_gmt": "2026-09-23T16:42:44",
+              "slug": "day-qua",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/day-qua/",
+              "title": {
+                "rendered": "Day Qua"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-64",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp'><img loading=\"lazy\" decoding=\"async\" width=\"147\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp\" class=\"attachment-medium size-medium\" alt=\"Dây thông gắn quả - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp 147w, https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp 292w\" sizes=\"auto, (max-width: 147px) 100vw, 147px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Dây thông gắn quả - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 292,
+                "height": 596,
+                "file": "2026/09/day-qua.webp",
+                "filesize": 55552,
+                "sizes": {
+                  "medium": {
+                    "file": "day-qua-147x300.webp",
+                    "width": 147,
+                    "height": 300,
+                    "filesize": 17050,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-147x300.webp"
+                  },
+                  "thumbnail": {
+                    "file": "day-qua-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9750,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-150x150.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "day-qua-292x300.webp",
+                    "width": 292,
+                    "height": 300,
+                    "filesize": 36036,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-292x300.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "day-qua-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4280,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua-100x100.webp"
+                  },
+                  "full": {
+                    "file": "day-qua.webp",
+                    "width": 292,
+                    "height": 596,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/day-qua.webp",
+              "filename": "day-qua.webp",
+              "filesize": 55552
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/325",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 327,
+            "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 116,
+              "date": "2026-09-23T16:43:02",
+              "date_gmt": "2026-09-23T16:43:02",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp"
+              },
+              "modified": "2026-09-23T16:43:02",
+              "modified_gmt": "2026-09-23T16:43:02",
+              "slug": "ong-gia-3-mau",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/ong-gia-3-mau/",
+              "title": {
+                "rendered": "Ong Gia 3 Mau"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-116",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"260\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp\" class=\"attachment-medium size-medium\" alt=\"Ông già Noel 3 mẫu - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-1024x887.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Ông già Noel 3 mẫu - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 1039,
+                "file": "2026/09/ong-gia-3-mau.webp",
+                "filesize": 163180,
+                "sizes": {
+                  "medium": {
+                    "file": "ong-gia-3-mau-300x260.webp",
+                    "width": 300,
+                    "height": 260,
+                    "filesize": 28736,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x260.webp"
+                  },
+                  "large": {
+                    "file": "ong-gia-3-mau-1024x887.webp",
+                    "width": 1024,
+                    "height": 887,
+                    "filesize": 173822,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-1024x887.webp"
+                  },
+                  "thumbnail": {
+                    "file": "ong-gia-3-mau-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 9794,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "ong-gia-3-mau-768x665.webp",
+                    "width": 768,
+                    "height": 665,
+                    "filesize": 119848,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-768x665.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "ong-gia-3-mau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31282,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "ong-gia-3-mau-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 31282,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "ong-gia-3-mau-600x520.webp",
+                    "width": 600,
+                    "height": 520,
+                    "filesize": 87744,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-600x520.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "ong-gia-3-mau-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4918,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau-100x100.webp"
+                  },
+                  "full": {
+                    "file": "ong-gia-3-mau.webp",
+                    "width": 1200,
+                    "height": 1039,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-3-mau.webp",
+              "filename": "ong-gia-3-mau.webp",
+              "filesize": 163180
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/327",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 322,
+            "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+            "url": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+            "type": "post",
+            "subtype": "post",
+            "ct_featured_media": {
+              "id": 110,
+              "date": "2026-09-23T16:43:00",
+              "date_gmt": "2026-09-23T16:43:00",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+              },
+              "modified": "2026-09-23T16:43:00",
+              "modified_gmt": "2026-09-23T16:43:00",
+              "slug": "nai-tuan-loc-trang-tri",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/nai-tuan-loc-trang-tri/",
+              "title": {
+                "rendered": "Nai Tuan Loc Trang Tri"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-110",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"225\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp\" class=\"attachment-medium size-medium\" alt=\"Nai tuần lộc trang trí - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Nai tuần lộc trang trí - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 900,
+                "file": "2026/09/nai-tuan-loc-trang-tri.webp",
+                "filesize": 151590,
+                "sizes": {
+                  "medium": {
+                    "file": "nai-tuan-loc-trang-tri-300x225.webp",
+                    "width": 300,
+                    "height": 225,
+                    "filesize": 26320,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x225.webp"
+                  },
+                  "large": {
+                    "file": "nai-tuan-loc-trang-tri-1024x768.webp",
+                    "width": 1024,
+                    "height": 768,
+                    "filesize": 158030,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-1024x768.webp"
+                  },
+                  "thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 10530,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "nai-tuan-loc-trang-tri-768x576.webp",
+                    "width": 768,
+                    "height": 576,
+                    "filesize": 107396,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-768x576.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 32666,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "nai-tuan-loc-trang-tri-600x450.webp",
+                    "width": 600,
+                    "height": 450,
+                    "filesize": 82192,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-600x450.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "nai-tuan-loc-trang-tri-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 5214,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri-100x100.webp"
+                  },
+                  "full": {
+                    "file": "nai-tuan-loc-trang-tri.webp",
+                    "width": 1200,
+                    "height": 900,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp",
+              "filename": "nai-tuan-loc-trang-tri.webp",
+              "filesize": 151590
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/posts/322",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/post"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 280,
+            "title": "Ông già trắng xịn &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 121,
+              "date": "2026-09-23T16:43:04",
+              "date_gmt": "2026-09-23T16:43:04",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin.webp"
+              },
+              "modified": "2026-09-23T16:43:04",
+              "modified_gmt": "2026-09-23T16:43:04",
+              "slug": "ong-gia-trang-xin",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/ong-gia-trang-xin/",
+              "title": {
+                "rendered": "Ong Gia Trang Xin"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-121",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin.webp'><img loading=\"lazy\" decoding=\"async\" width=\"200\" height=\"300\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-200x300.webp\" class=\"attachment-medium size-medium\" alt=\"Ông già trắng xịn - mô hình trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-200x300.webp 200w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-682x1024.webp 682w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-768x1153.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-600x901.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin.webp 799w\" sizes=\"auto, (max-width: 200px) 100vw, 200px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Ông già trắng xịn - mô hình trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 799,
+                "height": 1200,
+                "file": "2026/09/ong-gia-trang-xin.webp",
+                "filesize": 103088,
+                "sizes": {
+                  "medium": {
+                    "file": "ong-gia-trang-xin-200x300.webp",
+                    "width": 200,
+                    "height": 300,
+                    "filesize": 18774,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-200x300.webp"
+                  },
+                  "large": {
+                    "file": "ong-gia-trang-xin-682x1024.webp",
+                    "width": 682,
+                    "height": 1024,
+                    "filesize": 109966,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-682x1024.webp"
+                  },
+                  "thumbnail": {
+                    "file": "ong-gia-trang-xin-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8072,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "ong-gia-trang-xin-768x1153.webp",
+                    "width": 768,
+                    "height": 1153,
+                    "filesize": 127328,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-768x1153.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "ong-gia-trang-xin-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 24036,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "ong-gia-trang-xin-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 24036,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "ong-gia-trang-xin-600x901.webp",
+                    "width": 600,
+                    "height": 901,
+                    "filesize": 93114,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-600x901.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "ong-gia-trang-xin-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4114,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin-100x100.webp"
+                  },
+                  "full": {
+                    "file": "ong-gia-trang-xin.webp",
+                    "width": 799,
+                    "height": 1200,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/ong-gia-trang-xin.webp",
+              "filename": "ong-gia-trang-xin.webp",
+              "filesize": 103088
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/280",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 160,
+            "title": "Châu sọc sẫn &#8211; Trang trí Noel",
+            "url": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+            "type": "post",
+            "subtype": "product",
+            "ct_featured_media": {
+              "id": 59,
+              "date": "2026-09-23T16:42:43",
+              "date_gmt": "2026-09-23T16:42:43",
+              "guid": {
+                "rendered": "http://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san.webp"
+              },
+              "modified": "2026-09-23T16:42:43",
+              "modified_gmt": "2026-09-23T16:42:43",
+              "slug": "chau-soc-san",
+              "status": "inherit",
+              "type": "attachment",
+              "link": "https://trangtri4mua.com/chau-soc-san/",
+              "title": {
+                "rendered": "Chau Soc San"
+              },
+              "author": 0,
+              "featured_media": 0,
+              "comment_status": "open",
+              "ping_status": "closed",
+              "template": "",
+              "meta": [],
+              "class_list": [
+                "post-59",
+                "attachment",
+                "type-attachment",
+                "status-inherit",
+                "hentry"
+              ],
+              "description": {
+                "rendered": "<p class=\"attachment\"><a href='https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san.webp'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"211\" src=\"https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x211.webp\" class=\"attachment-medium size-medium\" alt=\"Châu sọc sẫn - đồ trang trí Noel\" srcset=\"https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x211.webp 300w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-1024x720.webp 1024w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-768x540.webp 768w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-600x422.webp 600w, https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san.webp 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+              },
+              "caption": {
+                "rendered": ""
+              },
+              "alt_text": "Châu sọc sẫn - đồ trang trí Noel",
+              "media_type": "image",
+              "mime_type": "image/webp",
+              "media_details": {
+                "width": 1200,
+                "height": 844,
+                "file": "2026/09/chau-soc-san.webp",
+                "filesize": 118264,
+                "sizes": {
+                  "medium": {
+                    "file": "chau-soc-san-300x211.webp",
+                    "width": 300,
+                    "height": 211,
+                    "filesize": 19940,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x211.webp"
+                  },
+                  "large": {
+                    "file": "chau-soc-san-1024x720.webp",
+                    "width": 1024,
+                    "height": 720,
+                    "filesize": 119400,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-1024x720.webp"
+                  },
+                  "thumbnail": {
+                    "file": "chau-soc-san-150x150.webp",
+                    "width": 150,
+                    "height": 150,
+                    "filesize": 8606,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-150x150.webp"
+                  },
+                  "medium_large": {
+                    "file": "chau-soc-san-768x540.webp",
+                    "width": 768,
+                    "height": 540,
+                    "filesize": 83180,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-768x540.webp"
+                  },
+                  "woocommerce_archive_thumbnail": {
+                    "file": "chau-soc-san-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 26446,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x300.webp"
+                  },
+                  "woocommerce_thumbnail": {
+                    "file": "chau-soc-san-300x300.webp",
+                    "width": 300,
+                    "height": 300,
+                    "filesize": 26446,
+                    "uncropped": false,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-300x300.webp"
+                  },
+                  "woocommerce_single": {
+                    "file": "chau-soc-san-600x422.webp",
+                    "width": 600,
+                    "height": 422,
+                    "filesize": 59976,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-600x422.webp"
+                  },
+                  "woocommerce_gallery_thumbnail": {
+                    "file": "chau-soc-san-100x100.webp",
+                    "width": 100,
+                    "height": 100,
+                    "filesize": 4414,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san-100x100.webp"
+                  },
+                  "full": {
+                    "file": "chau-soc-san.webp",
+                    "width": 1200,
+                    "height": 844,
+                    "mime_type": "image/webp",
+                    "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san.webp"
+                  }
+                },
+                "image_meta": {
+                  "aperture": "0",
+                  "credit": "",
+                  "camera": "",
+                  "caption": "",
+                  "created_timestamp": "0",
+                  "copyright": "",
+                  "focal_length": "0",
+                  "iso": "0",
+                  "shutter_speed": "0",
+                  "title": "",
+                  "orientation": "0",
+                  "keywords": [],
+                  "alt": ""
+                }
+              },
+              "post": null,
+              "source_url": "https://trangtri4mua.com/wp-content/uploads/2026/09/chau-soc-san.webp",
+              "filename": "chau-soc-san.webp",
+              "filesize": 118264
+            },
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/product/160",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/product"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          },
+          {
+            "id": 23,
+            "title": "Trang Chủ",
+            "url": "https://trangtri4mua.com/",
+            "type": "post",
+            "subtype": "page",
+            "ct_featured_media": null,
+            "placeholder_image": null,
+            "_links": {
+              "self": [
+                {
+                  "embeddable": true,
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/pages/23",
+                  "targetHints": {
+                    "allow": [
+                      "GET"
+                    ]
+                  }
+                }
+              ],
+              "about": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/types/page"
+                }
+              ],
+              "collection": [
+                {
+                  "href": "https://trangtri4mua.com/wp-json/wp/v2/search"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "modal": {
+      "url": "https://trangtri4mua.com/",
+      "input": {
+        "value": "cách chọn size cây thông",
+        "expanded": "true",
+        "activeDescendant": null
+      },
+      "status": [
+        {
+          "text": "Bạn đã nhận được kết quả 6. Vui lòng nhấn Tab để chọn nó.",
+          "className": "screen-reader-text",
+          "visible": true
+        }
+      ],
+      "links": [
+        {
+          "text": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "href": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Ông già trắng xịn – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Châu sọc sẫn – Trang trí Noel",
+          "href": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Trang Chủ",
+          "href": "https://trangtri4mua.com/",
+          "role": "option",
+          "className": "ct-search-item",
+          "visible": true
+        },
+        {
+          "text": "Xem thêm",
+          "href": "https://trangtri4mua.com/search/c%C3%A1ch%20ch%E1%BB%8Dn%20size%20c%C3%A2y%20th%C3%B4ng/",
+          "role": "option",
+          "className": "ct-search-more",
+          "visible": true
+        }
+      ],
+      "panelVisible": true
+    },
+    "page": {
+      "url": "https://trangtri4mua.com/?s=c%C3%A1ch+ch%E1%BB%8Dn+size+c%C3%A2y+th%C3%B4ng",
+      "h1": "Kết quả tìm kiếm cho cách chọn size cây thông",
+      "robots": "follow, noindex",
+      "articles": [
+        {
+          "className": "entry-card card-content post-325 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Hướng Dẫn Chọn Kích Thước Cây Thông Noel Theo Diện Tích Phòng & Chiều Cao Trần",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/cach-chon-size-cay-thong-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang chọn kích thước cây thông Noel từ 60cm đến 2m4 dựa trên diện tích phòng và chiều cao trần nhà. So sánh thông PE, PVC, phủ tuyết và quy tắc định lượng phụ kiện chuẩn xác.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-327 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "Dự Toán Chi Phí Trang Trí Noel 2026: Bảng Bóc Tách Vật Tư Chi Tiết Cho Từng Không Gian",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/du-toan-chi-phi-trang-tri-noel/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Bảng bóc tách chi tiết chi phí trang trí Giáng Sinh 2026: cây thông, phụ kiện treo, hệ thống chiếu sáng và tiểu cảnh chân cây. Dự toán mẫu cho căn hộ, quán cafe và văn phòng kèm kỹ thuật bảo quản tái sử dụng nhiều năm.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-322 post type-post status-publish format-standard has-post-thumbnail hentry category-huong-dan category-noel",
+          "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+          "titleHref": "https://trangtri4mua.com/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/",
+          "categories": [
+            "HƯỚNG DẪN & KINH NGHIỆM",
+            "Ý TƯỞNG TRANG TRÍ NOEL"
+          ],
+          "excerpt": "Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.",
+          "date": "THÁNG 9 24, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-280 product type-product status-publish has-post-thumbnail product_cat-mo-hinh-tuong-noel product_cat-giang-sinh-noel  instock shipping-taxable purchasable product-type-variable",
+          "title": "Ông già trắng xịn – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/ong-gia-trang-xin/",
+          "categories": [
+            "MÔ HÌNH & TƯỢNG NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Mô hình ông già Noel tông trắng có 3 size 45 – 60 – 90cm, đặt cạnh cây thông phủ tuyết là hết ý.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-160 product type-product status-publish has-post-thumbnail product_cat-phu-kien-treo-cay product_cat-giang-sinh-noel last instock shipping-taxable purchasable product-type-variable",
+          "title": "Châu sọc sẫn – Trang trí Noel",
+          "titleHref": "https://trangtri4mua.com/san-pham/chau-soc-san/",
+          "categories": [
+            "PHỤ KIỆN TREO CÂY NOEL",
+            "TRANG TRÍ GIÁNG SINH - NOEL"
+          ],
+          "excerpt": "Hộp quả châu sọc sẫn màu trầm ấm, phụ kiện treo cây thông cho ai thích tone Noel trầm, sang.",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-23 page type-page status-publish hentry",
+          "title": "Trang Chủ",
+          "titleHref": "https://trangtri4mua.com/",
+          "categories": [],
+          "excerpt": "MÙA LỄ HỘI 2026 • TIẾT KIỆM 15% – 20% Combo Cây Thông & Phụ Kiện Trọn Gói Sẵn Sàng Không cần mất thời gian tự chọn lẻ từng món hay băn khoăn cách phối màu. Các set combo tại…",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        },
+        {
+          "className": "entry-card card-content post-17 page type-page status-publish hentry",
+          "title": "Cửa Hàng & Showroom",
+          "titleHref": "https://trangtri4mua.com/showroom/",
+          "categories": [],
+          "excerpt": "Kính mời quý khách hàng ghé thăm Showroom Trải Nghiệm Trang Trí 4 Mùa tại Thảo Điền (TP. Thủ Đức, TP.HCM) để trực tiếp chạm vào từng tán lá thông, ngắm nhìn ánh sáng đèn ấm áp và cùng đội…",
+          "date": "THÁNG 9 23, 2026",
+          "commerceActions": []
+        }
+      ]
+    },
+    "screenshots": [
+      "r28-knowledge-modal.webp",
+      "r28-knowledge-page.webp"
+    ]
+  }
+]
