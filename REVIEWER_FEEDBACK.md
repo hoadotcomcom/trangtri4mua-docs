@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R117 — nghiệm thu Batch 85](#round-r117), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**. R2-16 đã CLOSED sau khi kiểm chứng live metadata và schema trên 10 URL. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
+> **Trạng thái hiện hành:** xem [Vòng R118 — nghiệm thu Batch 86](#round-r118), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**. R27-01 vẫn PARTIAL / OPEN vì reset còn hiển thị giá biến thể cũ. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6450,3 +6450,42 @@ Commit `df8c567` trong repo tài liệu chỉ chứa `ASSISTANT_REPLY.md` và ar
 - Đóng **R2-16 [P2]**. Tổng giảm còn **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**.
 - Danh sách OPEN: P0 `R2-02`; P1 `R2-01`, `R2-03`, `R27-01`; P2 `R2-11`, `R2-18`, `R21-02`, `R25-01`; P3 `R12-01`, `R16-01`, `R24-01`, `R26-01`.
 - Không thêm giỏ, không mutation order và không chạm `335`/`362`.
+
+<a id="round-r118"></a>
+
+# Vòng R118 — nghiệm thu Batch 86
+
+## R27-01 / Batch 86 — PARTIAL / OPEN
+
+### Phần đã đạt
+
+Reviewer kiểm chứng độc lập cả hai PDP ở desktop 1440×1000 và mobile 375×812:
+
+- cây PE: `1m5→373/850.000`, `1m8→374/1.250.000`, `2m1→375/1.850.000`, `2m4→376/2.650.000`;
+- cây cước: `1m5→378/750.000`, `1m8→379/1.100.000`, `2m1→380/1.650.000`;
+- mỗi lựa chọn cập nhật đúng hidden `variation_id`, giá và trạng thái CTA;
+- hai PDP xuất `ProductGroup`, lần lượt 4/3 `hasVariant`; mỗi variant có SKU, size, Offer VND và `isVariantOf` đúng group.
+
+Reviewer chạy Store API trong cart session cô lập cho cả bảy variation. Cả 7 request trả HTTP 201; line item có đúng giá và `Kích thước`. Mỗi item được xóa ngay sau phép thử; kiểm tra cuối xác nhận **0 item / 0 VND**. Không tạo order và không chạm order lịch sử.
+
+### Blocker còn lại
+
+Claim reset trong Batch 86 chưa đúng hoàn toàn. Trên PDP cây cước mobile, sau khi chọn `1m8` rồi click thật vào `.reset_variations`:
+
+- select và hidden `variation_id` trở về rỗng;
+- CTA có class `disabled wc-variation-selection-needed` và không thêm item;
+- nhưng `.woocommerce-variation-price` vẫn `display: block` và tiếp tục hiển thị **1.100.000 ₫**.
+
+Như vậy reset đã khóa mua nhưng chưa đưa giá, ID, attribute và selection state về cùng một trạng thái. Điều này trái acceptance criterion 2 của R27-01 và trái claim “ẩn panel giá” trong handoff. Không đóng R27-01 ở vòng này.
+
+### Bàn giao chính xác
+
+1. Khi reset, clear hoặc hide `.woocommerce-variation-price` cùng lúc với `variation_id` và select.
+2. Recheck trên cả hai PDP, desktop/mobile, sau khi chọn một size không mặc định rồi reset.
+3. Giữ nguyên bảy mapping, giá Store API và ProductGroup schema đã đạt; không sửa dữ liệu đúng chỉ để tạo diff.
+
+## Bằng chứng và tổng R118
+
+- [JSON nghiệm thu Batch 86](review-evidence/2026-09-25/r118-batch86-verification.json).
+- R27-01 giữ **PARTIAL / OPEN**. Tổng giữ **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**.
+- Cart Reviewer cuối phiên: **0 item / 0 VND**; không mutation order, không chạm `335`/`362`.

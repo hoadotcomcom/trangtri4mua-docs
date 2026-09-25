@@ -1,0 +1,72 @@
+{
+  "round": "R118",
+  "batch": 86,
+  "commit": "b256d60",
+  "issue": "R27-01",
+  "verdict": "PARTIAL_OPEN",
+  "checkedAtUtc": "2026-09-25T00:18:00Z",
+  "accepted": {
+    "desktopAndMobileVariationMapping": true,
+    "allSevenStoreApiCartLines": true,
+    "productGroupSchemaWithPerSizeOffers": true,
+    "reviewerCartCleanedToZero": true,
+    "ordersCreated": false
+  },
+  "uiVariationMatrix": {
+    "viewports": ["1440x1000", "375x812"],
+    "products": [
+      {
+        "path": "/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/",
+        "rows": [
+          {"size":"1m5","variationId":373,"priceVnd":850000,"ctaEnabled":true},
+          {"size":"1m8","variationId":374,"priceVnd":1250000,"ctaEnabled":true},
+          {"size":"2m1","variationId":375,"priceVnd":1850000,"ctaEnabled":true},
+          {"size":"2m4","variationId":376,"priceVnd":2650000,"ctaEnabled":true}
+        ]
+      },
+      {
+        "path": "/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/",
+        "rows": [
+          {"size":"1m5","variationId":378,"priceVnd":750000,"ctaEnabled":true},
+          {"size":"1m8","variationId":379,"priceVnd":1100000,"ctaEnabled":true},
+          {"size":"2m1","variationId":380,"priceVnd":1650000,"ctaEnabled":true}
+        ]
+      }
+    ]
+  },
+  "independentStoreApiTrace": [
+    {"variationId":373,"status":201,"priceVnd":850000,"size":"1m5"},
+    {"variationId":374,"status":201,"priceVnd":1250000,"size":"1m8"},
+    {"variationId":375,"status":201,"priceVnd":1850000,"size":"2m1"},
+    {"variationId":376,"status":201,"priceVnd":2650000,"size":"2m4"},
+    {"variationId":378,"status":201,"priceVnd":750000,"size":"1m5"},
+    {"variationId":379,"status":201,"priceVnd":1100000,"size":"1m8"},
+    {"variationId":380,"status":201,"priceVnd":1650000,"size":"2m1"}
+  ],
+  "schema": {
+    "peProductGroupVariantCount": 4,
+    "pineProductGroupVariantCount": 3,
+    "allVariantsHaveVndOfferAndMatchingIsVariantOf": true
+  },
+  "blockingFinding": {
+    "surface": "Both WooCommerce variation forms; reproduced with a pointer click on .reset_variations on the pine PDP at 375x812 after selecting 1m8.",
+    "attributeAfterReset": "",
+    "variationIdAfterReset": "",
+    "buttonClassesAfterReset": "single_add_to_cart_button button alt disabled wc-variation-selection-needed",
+    "visibleVariationPriceAfterReset": "1.100.000 ₫",
+    "variationPriceDisplayAfterReset": "block",
+    "cartAfterReset": {"items":0,"totalVnd":0},
+    "impact": "Reset clears identity and locks the CTA, but leaves the last selected variation price visibly rendered. Price, variation ID, attribute, and selection state no longer describe the same state, contrary to R27-01 acceptance criterion 2 and the Batch 86 claim that reset hides the price panel."
+  },
+  "requiredFollowUp": [
+    "On reset, clear or hide .woocommerce-variation-price together with variation_id and the attribute selection.",
+    "Recheck both tree PDPs on desktop and mobile after selecting a non-default size, then reset.",
+    "Preserve the now-correct seven mappings, Store API prices, and ProductGroup schema."
+  ],
+  "finalReviewerCart": {"items":0,"totalVnd":0},
+  "currentIssueCount": {
+    "open": 12,
+    "closed": 30,
+    "openByPriority": {"P0":1,"P1":3,"P2":4,"P3":4}
+  }
+}
