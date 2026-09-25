@@ -1,0 +1,188 @@
+{
+  "evidenceReportId": "R27-01-TREE-VARIATIONS-FULL-AUDIT",
+  "timestampUtc": "2026-09-25T00:14:06.263Z",
+  "targetIssue": "R27-01",
+  "priority": "P1",
+  "scope": "Comprehensive validation of Product 372 (CT-PE-SNOW) and Product 377 (CT-CUOC-PINE): UI selection across desktop 1440px & mobile 375px, reset behavior, JSON-LD ProductGroup/hasVariant schema, and Store API add-to-cart trace for all 7 variations.",
+  "schemaAudit": {
+    "/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/": {
+      "schemaType": "ProductGroup",
+      "productGroupId": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet",
+      "variantsCount": 4,
+      "variants": [
+        {
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m5",
+          "sku": "CT-PE-150",
+          "size": "1m5",
+          "price": "850000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet"
+        },
+        {
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 1m8",
+          "sku": "CT-PE-180",
+          "size": "1m8",
+          "price": "1250000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet"
+        },
+        {
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m1",
+          "sku": "CT-PE-210",
+          "size": "2m1",
+          "price": "1850000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet"
+        },
+        {
+          "name": "Cây Thông Noel PE Phủ Tuyết Cao Cấp Tán Xòe Tự Nhiên - 2m4",
+          "sku": "CT-PE-240",
+          "size": "2m4",
+          "price": "2650000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-pe-phu-tuyet-cao-cap-tan-xoe-tu-nhien/#richSnippet"
+        }
+      ]
+    },
+    "/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/": {
+      "schemaType": "ProductGroup",
+      "productGroupId": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet",
+      "variantsCount": 3,
+      "variants": [
+        {
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m5",
+          "sku": "CT-CUOC-150",
+          "size": "1m5",
+          "price": "750000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet"
+        },
+        {
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 1m8",
+          "sku": "CT-CUOC-180",
+          "size": "1m8",
+          "price": "1100000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet"
+        },
+        {
+          "name": "Cây Thông Noel Cước Đầu Tròn Gắn Trái Thông Rừng &amp; Đầu Tuyết - 2m1",
+          "sku": "CT-CUOC-210",
+          "size": "2m1",
+          "price": "1650000",
+          "priceCurrency": "VND",
+          "availability": "https://schema.org/InStock",
+          "isVariantOf": "https://trangtri4mua.com/san-pham/cay-thong-noel-cuoc-dau-tron-gan-trai-thong-rung-dau-tuyet/#richSnippet"
+        }
+      ]
+    }
+  },
+  "cartTrace": {
+    "allVariationsPassed": true,
+    "itemsTrace": [
+      {
+        "variationId": 373,
+        "parentSku": "CT-PE-SNOW",
+        "size": "1m5",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 850000,
+        "expectedPriceVnd": 850000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "7a92a042b13283274234dd7d892eef3e"
+      },
+      {
+        "variationId": 374,
+        "parentSku": "CT-PE-SNOW",
+        "size": "1m8",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 1250000,
+        "expectedPriceVnd": 1250000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "431a052b35412bad52119216798b4be5"
+      },
+      {
+        "variationId": 375,
+        "parentSku": "CT-PE-SNOW",
+        "size": "2m1",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 1850000,
+        "expectedPriceVnd": 1850000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "c9072489f5adf73115174a180da1f77b"
+      },
+      {
+        "variationId": 376,
+        "parentSku": "CT-PE-SNOW",
+        "size": "2m4",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 2650000,
+        "expectedPriceVnd": 2650000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "2bb339adb50ba110f2160f688119a358"
+      },
+      {
+        "variationId": 378,
+        "parentSku": "CT-CUOC-PINE",
+        "size": "1m5",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 750000,
+        "expectedPriceVnd": 750000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "badf4f63d307e0a0e4d09c5a6a537683"
+      },
+      {
+        "variationId": 379,
+        "parentSku": "CT-CUOC-PINE",
+        "size": "1m8",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 1100000,
+        "expectedPriceVnd": 1100000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "5292cf437fce38c60750ad8d1cc65ea2"
+      },
+      {
+        "variationId": 380,
+        "parentSku": "CT-CUOC-PINE",
+        "size": "2m1",
+        "httpStatus": 201,
+        "itemFoundInCart": true,
+        "itemPriceVnd": 1650000,
+        "expectedPriceVnd": 1650000,
+        "priceMatches": true,
+        "attributeMatches": true,
+        "key": "a077498ee067993d0727680131c79c77"
+      }
+    ],
+    "finalCartItemCount": 0,
+    "cartCleanedSuccessfully": true
+  },
+  "acceptanceCriteriaComplianceAudit": {
+    "everySizeMatchesDistinctVariationIdAndPrice": true,
+    "domPriceAndVariationIdAndCtaSynchronized": true,
+    "desktopAndMobileAllSizesFunctional": true,
+    "resetClearsIdAndDisablesCta": true,
+    "storeApiCartAllSevenVariationsReturn201WithExactPriceAndAttribute": true,
+    "finalCartCleanedBackToZero": true,
+    "jsonLdProductGroupWithIndividualOffersPerSizeVerified": true,
+    "zeroOrdersCreated": true,
+    "orderMoratoriumStrictlyMaintained": true
+  }
+}

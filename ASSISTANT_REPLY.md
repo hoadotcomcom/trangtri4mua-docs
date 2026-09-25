@@ -5198,3 +5198,74 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R2-16 Ready for Review**: Toàn bộ metadata và vai trò schema của Trang Chủ cùng các trang tĩnh đã được chuẩn hóa và kiểm chứng độc lập. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-16 [P2]`.
 2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 86
+
+## Summary
+
+1. **R27-01 [P1] — Kiểm Chứng Toàn Diện Biến Thể, Giao Diện Đa Thiết Bị, Dữ Liệu Schema & Store API Cart Trace Cho Hai Cây Thông Noel Mới**:
+   - **Tiếp thu chỉ đạo tại Round R117**:
+     - Reviewer đã kiểm chứng độc lập và chính thức **ĐÓNG issue `R2-16 [P2]`** tại Round R117, đưa danh sách OPEN xuống còn 12 issue.
+     - Chấp hành chỉ đạo lựa chọn issue OPEN tiếp theo từ ledger hiện hành: Coder đã chọn giải quyết dứt điểm issue trọng yếu **`R27-01 [P1]`**.
+   - **Các nội dung kiểm chứng kỹ thuật đã hoàn thành**:
+     1. **Kiểm chứng biến thể UI trên Desktop (1440×1000) và Mobile (375×812)**:
+        - **Product 372 (CT-PE-SNOW — Cây thông PE phủ tuyết cao cấp)**:
+          - 1m5: Chọn đúng ID 373, Giá `850.000₫`, Nút mua Enabled.
+          - 1m8: Chọn đúng ID 374, Giá `1.250.000₫`, Nút mua Enabled.
+          - 2m1: Chọn đúng ID 375, Giá `1.850.000₫`, Nút mua Enabled.
+          - 2m4: Chọn đúng ID 376, Giá `2.650.000₫`, Nút mua Enabled.
+          - Reset: Nút reset đưa ID về rỗng, ẩn panel giá, khóa nút CTA (`disabled`).
+        - **Product 377 (CT-CUOC-PINE — Cây thông cước đầu tròn gắn trái thông)**:
+          - 1m5: Chọn đúng ID 378, Giá `750.000₫`, Nút mua Enabled.
+          - 1m8: Chọn đúng ID 379, Giá `1.100.000₫`, Nút mua Enabled.
+          - 2m1: Chọn đúng ID 380, Giá `1.650.000₫`, Nút mua Enabled.
+          - Reset: Nút reset đưa ID về rỗng, ẩn panel giá, khóa nút CTA (`disabled`).
+     2. **Kiểm chứng dữ liệu có cấu trúc JSON-LD (Schema)**:
+        - Cả hai sản phẩm variable đều xuất đúng mô hình `ProductGroup` chuẩn Google với `@id` hậu tố `#richSnippet`.
+        - Mảng `hasVariant` chứa đầy đủ 4 biến thể (Product 372) và 3 biến thể (Product 377) với `Offer` riêng biệt cho từng kích thước, giá VND chính xác, SKU tương ứng và `isVariantOf` trỏ đúng về `ProductGroup.@id`.
+     3. **Kiểm chứng Store API Cart Trace cho toàn bộ 7 biến thể**:
+        - Đã thực hiện thêm lần lượt cả 7 biến thể vào giỏ hàng qua Store API:
+          - 100% (7/7) request trả về HTTP 201 Created.
+          - Giá trị đơn giá VND (`itemPriceVnd`) khớp 100% với giá công bố (`expectedPriceVnd`): 850k, 1.250k, 1.850k, 2.650k, 750k, 1.100k, 1.650k.
+          - Thuộc tính `kich-thuoc` được gán chính xác vào line item.
+          - Đã xóa sạch các line item sau kiểm thử, giỏ hàng cuối cùng trở về **0 item / 0 VND**.
+          - Tuyệt đối không tạo đơn hàng (bảo toàn 100% moratorium).
+   - **Hồ sơ đối chứng chi tiết**: Đã lưu tại `docs/review-evidence/2026-09-25/r27-01-tree-variations-full-audit.json`.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P1] R27-01 — Tree Variation ID, Price Mapping & Store API Cart Trace
+- **Status**: FIXED
+- **Files changed**:
+  - `docs/review-evidence/2026-09-25/r27-01-tree-variations-full-audit.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Kiểm chứng độc lập 100% các kích thước của Product 372 và 377 trên cả desktop và mobile, xác nhận ID, giá và reset đồng bộ.
+  - Xác thực mô hình JSON-LD ProductGroup + Offer theo size chuẩn W3C/Google.
+  - Chạy Store API add-to-cart trace cho cả 7 biến thể, xác nhận 100% trả HTTP 201, đúng đơn giá và thuộc tính, giỏ hàng được dọn sạch về 0.
+- **Verification**: Bằng chứng tự động hóa kiểm chứng đầy đủ tại `docs/review-evidence/2026-09-25/r27-01-tree-variations-full-audit.json`.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 86).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **UI Variation Matrix**:
+  - CT-PE-SNOW (Desktop & Mobile): 1m5 (373), 1m8 (374), 2m1 (375), 2m4 (376) all pass with exact prices and clean reset.
+  - CT-CUOC-PINE (Desktop & Mobile): 1m5 (378), 1m8 (379), 2m1 (380) all pass with exact prices and clean reset.
+- **Store API Cart Trace**:
+  - 7/7 variations return HTTP 201 Created with exact prices (850k, 1250k, 1850k, 2650k, 750k, 1100k, 1650k) and attribute `kich-thuoc`.
+  - Final cart: 0 items / 0 VND.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R27-01 Ready for Review**: Toàn bộ yêu cầu kiểm chứng biến thể, giá, giao diện đa thiết bị, dữ liệu có cấu trúc và giỏ hàng cho hai cây thông mới đã hoàn tất đầy đủ. Kính đề nghị Reviewer kiểm tra live và đóng issue `R27-01 [P1]`.
+2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
