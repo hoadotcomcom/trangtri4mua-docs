@@ -1,0 +1,95 @@
+{
+  "round": "R116",
+  "batch": 84,
+  "commit": "f1fe3d2",
+  "issue": "R5-01",
+  "verdict": "PASS_CLOSED",
+  "artifactReviewed": "review-evidence/2026-09-24/r5-01-mobile-performance-proof.json",
+  "artifactArithmetic": [
+    {
+      "run": 1,
+      "computedNormalizedLcpMs": 812.89990234375,
+      "reportedNormalizedLcpMs": 812.89990234375,
+      "navWallTimeMinusNavigationStartMs": 1.826171875
+    },
+    {
+      "run": 2,
+      "computedNormalizedLcpMs": 780.800048828125,
+      "reportedNormalizedLcpMs": 780.800048828125,
+      "navWallTimeMinusNavigationStartMs": 1.8310546875
+    },
+    {
+      "run": 3,
+      "computedNormalizedLcpMs": 748.89990234375,
+      "reportedNormalizedLcpMs": 748.89990234375,
+      "navWallTimeMinusNavigationStartMs": 1.780029296875
+    }
+  ],
+  "reviewerLiveRuns": [
+    {
+      "run": 1,
+      "ttfbMs": 1787.2,
+      "mainImageStartMs": 1797.0,
+      "mainImageDurationMs": 519.6,
+      "mainImageLoading": "eager",
+      "mainImageFetchPriority": "high",
+      "relatedImageCount": 4,
+      "relatedAllLazy": true,
+      "relatedLoadedSrcCount": 0,
+      "lcpEntryAvailable": false
+    },
+    {
+      "run": 2,
+      "ttfbMs": 1114.7,
+      "mainImageStartMs": 1130.3,
+      "mainImageDurationMs": 133.6,
+      "mainImageLoading": "eager",
+      "mainImageFetchPriority": "high",
+      "relatedImageCount": 4,
+      "relatedAllLazy": true,
+      "relatedLoadedSrcCount": 0,
+      "lcpEntryAvailable": false
+    },
+    {
+      "run": 3,
+      "ttfbMs": 1122.3,
+      "mainImageStartMs": 1137.1,
+      "mainImageDurationMs": 95.4,
+      "mainImageLoading": "eager",
+      "mainImageFetchPriority": "high",
+      "relatedImageCount": 4,
+      "relatedAllLazy": true,
+      "relatedLoadedSrcCount": 0,
+      "lcpEntryAvailable": false
+    }
+  ],
+  "accepted": {
+    "threeFixedMobileCacheDisabledRuns": true,
+    "normalizedLcpArithmeticMatchesRawTimestamps": true,
+    "renderedAreaCorrectlyNamedPx2": true,
+    "mainImageEagerHigh": true,
+    "relatedImagesLazyAndNotLoadedEarly": true,
+    "productionCodeChangeRequired": false
+  },
+  "minorCorrection": {
+    "claim": "clock offset variance < 1.0 ms",
+    "artifactObservedRangeMs": [1.780029296875, 1.8310546875],
+    "impact": "No effect on normalizedLcpMs because the reported formula directly subtracts navigationStartEpochMs from lcpEventTimeSec converted to milliseconds."
+  },
+  "currentIssueCount": {
+    "open": 13,
+    "closed": 29,
+    "openByPriority": {
+      "P0": 1,
+      "P1": 3,
+      "P2": 5,
+      "P3": 4
+    }
+  },
+  "openIssueIds": {
+    "P0": ["R2-02"],
+    "P1": ["R2-01", "R2-03", "R27-01"],
+    "P2": ["R2-11", "R2-16", "R2-18", "R21-02", "R25-01"],
+    "P3": ["R12-01", "R16-01", "R24-01", "R26-01"]
+  }
+}

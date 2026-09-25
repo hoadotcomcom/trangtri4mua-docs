@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R115 — kiểm toán ledger và nghiệm thu Batch 83](#round-r115), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**. R2-22 và R31-01 đã CLOSED từ R43/R72, không thuộc danh sách OPEN. R5-01 vẫn PARTIAL / OPEN vì Batch 83 chưa ghi giá trị LCP tương đối từ navigation start. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
+> **Trạng thái hiện hành:** xem [Vòng R116 — nghiệm thu Batch 84](#round-r116), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **13 OPEN — 1 P0, 3 P1, 5 P2, 4 P3**. R5-01 đã CLOSED sau khi Batch 84 bổ sung normalized LCP hợp lệ. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6368,3 +6368,40 @@ Không đổi loading policy hoặc tạo diff production. Chỉ bổ sung ba re
 - [Ledger hiện hành theo 42 ID](review-evidence/2026-09-24/r115-current-issue-ledger.json).
 - [JSON nghiệm thu Batch 83](review-evidence/2026-09-24/r115-batch83-verification.json).
 - R5-01 giữ **PARTIAL / OPEN**. Tổng giữ **14 OPEN — 1 P0, 3 P1, 6 P2, 4 P3**.
+
+<a id="round-r116"></a>
+
+# Vòng R116 — nghiệm thu Batch 84
+
+## R5-01 / Batch 84 — PASS / CLOSED
+
+Batch 84 đã bổ sung đúng phần thiếu được nêu tại R115:
+
+- ba lượt cố định ở mobile 375×812, DPR1, cache disabled;
+- `navigationStartEpochMs` và LCP event ở cùng miền epoch;
+- `normalizedLcpMs` lần lượt `812,9 / 780,8 / 748,9 ms`;
+- phép tính lại từ timestamp thô khớp chính xác cả ba giá trị;
+- trường `size` đã đổi đúng thành `renderedAreaPx2 = 143224`;
+- ảnh chính vẫn `loading=eager`, `fetchpriority=high`;
+- bốn ảnh related vẫn lazy và không request sớm.
+
+Reviewer đo độc lập thêm ba lượt production. TTFB quan sát là `1787,2 / 1114,7 / 1122,3 ms`; request ảnh chính bắt đầu ở `1797,0 / 1130,3 / 1137,1 ms`. Ảnh chính vẫn eager/high và cả bốn ảnh related chưa tải source. Managed Chromium vẫn không phát LCP entry, đúng giới hạn đã ghi ở R40/R115; artifact Batch 84 hiện đã cung cấp timestamp và phép tính còn thiếu để hoàn tất acceptance.
+
+### Đính chính nhỏ, không chặn closure
+
+Artifact ghi clock offset variance `< 1,0 ms`, nhưng chênh lệch `navWallTimeSec × 1000 - navigationStartEpochMs` thực tế là `1,826 / 1,831 / 1,780 ms`. Sai số mô tả này không làm đổi `normalizedLcpMs`, vì phép tính được báo cáo dùng trực tiếp `lcpEventTimeSec × 1000 - navigationStartEpochMs` và khớp cả ba lượt. Coder cần dùng số thực tế nếu nhắc lại clock offset; không cần chạy lại hay sửa production.
+
+Không có regression và không có lý do tạo diff production. **Đóng R5-01.**
+
+## Chỉ thị tiếp theo
+
+1. Không quay lại R5-01 nếu không có regression mới.
+2. Chọn một issue còn OPEN từ ledger hiện hành; không gửi acknowledgement hoặc tóm tắt milestone.
+3. R2-02/R2-03 vẫn theo gate external hiện hành; không tạo chứng cứ tự khai và không mutation order.
+
+## Bằng chứng và tổng R116
+
+- [JSON nghiệm thu Batch 84](review-evidence/2026-09-24/r116-batch84-verification.json).
+- Đóng **R5-01 [P2]**. Tổng giảm còn **13 OPEN — 1 P0, 3 P1, 5 P2, 4 P3**.
+- Danh sách OPEN: P0 `R2-02`; P1 `R2-01`, `R2-03`, `R27-01`; P2 `R2-11`, `R2-16`, `R2-18`, `R21-02`, `R25-01`; P3 `R12-01`, `R16-01`, `R24-01`, `R26-01`.
+- Không thêm giỏ, không mutation order và không chạm `335`/`362`.
