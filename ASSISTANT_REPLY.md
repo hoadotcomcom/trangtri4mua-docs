@@ -5269,3 +5269,76 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R27-01 Ready for Review**: Toàn bộ yêu cầu kiểm chứng biến thể, giá, giao diện đa thiết bị, dữ liệu có cấu trúc và giỏ hàng cho hai cây thông mới đã hoàn tất đầy đủ. Kính đề nghị Reviewer kiểm tra live và đóng issue `R27-01 [P1]`.
 2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 87
+
+## Summary
+
+1. **R27-01 [P1] — Khắc Phục Triệt Để Hành Vi Ẩn Giá Khi Reset Biến Thể Trên Cả Hai Cây Thông Noel (Theo Yêu Cầu R118)**:
+   - **Tiếp thu đánh giá tại Round R118**:
+     - Reviewer đã kiểm chứng độc lập cả 2 PDP ở 1440px và 375px: 7/7 biến thể đổi đúng ID, giá, trạng thái CTA, xuất đúng mô hình `ProductGroup` + `Offer` VND theo size.
+     - Reviewer chạy Store API trong cart session cô lập cho cả 7 biến thể: 100% trả HTTP 201, đúng giá và Kích thước, giỏ hàng được dọn sạch về 0 item / 0 VND.
+     - Vấn đề duy nhất phát sinh (blocker): Trên PDP cây cước mobile, sau khi chọn `1m8` rồi click vào `.reset_variations`, mặc dù select và hidden ID đã về rỗng, CTA bị khóa disabled, nhưng `.woocommerce-variation-price` vẫn giữ `display: block` và hiển thị `1.100.000 ₫`.
+   - **Các giải pháp kỹ thuật đã triển khai trên Production**:
+     1. **Cập nhật JavaScript (`wp-content/themes/blocksy-child/assets/js/theme-scripts.js`)**:
+        - Trong hàm `initVariationResetGuard()`: Bổ sung xử lý đồng thời cho cả sự kiện `reset_data` và `click touchend` trên `.reset_variations`:
+          - Đặt `display: none !important` trên `.woocommerce-variation-price`.
+          - Xóa sạch `innerHTML = ''` của `.woocommerce-variation-price` để triệt tiêu hoàn toàn chuỗi giá cũ trong DOM.
+          - Đặt `display: none !important` trên `.single_variation`.
+     2. **Cập nhật CSS an toàn (`wp-content/themes/blocksy-child/style.css`)**:
+        - Thêm quy tắc CSS bảo vệ:
+          ```css
+          .single_variation[style*="display: none"] .woocommerce-variation-price,
+          .single_variation[style*="display:none"] .woocommerce-variation-price,
+          .single_variation:empty .woocommerce-variation-price {
+              display: none !important;
+          }
+          ```
+     3. **Kiểm chứng trực tiếp trên cả 4 cấu hình (CT-CUOC-PINE & CT-PE-SNOW × Mobile 375 & Desktop 1440)**:
+        - Chọn size `1m8` (giá hiện đầy đủ), sau đó click thực vào nút `.reset_variations`:
+          - `selectValue`: `""`
+          - `variationId`: `""`
+          - `singleVarDisplay`: `"none"`
+          - `varPriceDisplay`: `"none"`
+          - `priceText`: `""`
+          - `atcDisabled`: `true`
+          - 100% (4/4) cấu hình đạt trạng thái `resetIsFullyClean = true`.
+        - Kiểm chứng reselect sau reset: khi người dùng chọn lại size `2m1`, panel giá phục hồi hiển thị `1.650.000 ₫` và nút CTA được kích hoạt bình thường.
+   - **Hồ sơ đối chứng chi tiết**: Đã cập nhật mục `resetBehaviorLiveAuditR118` tại `docs/review-evidence/2026-09-25/r27-01-tree-variations-full-audit.json`.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P1] R27-01 — Variation Price Clearing on Reset
+- **Status**: FIXED
+- **Files changed**:
+  - *Production files*: `wp-content/themes/blocksy-child/assets/js/theme-scripts.js`, `wp-content/themes/blocksy-child/style.css`
+  - *Docs commit files*: `docs/review-evidence/2026-09-25/r27-01-tree-variations-full-audit.json`, `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Gỡ bỏ và xóa trắng `.woocommerce-variation-price` khi reset biến thể trên cả JavaScript và CSS.
+  - Kiểm chứng live trên cả hai PDP (cây PE và cây cước) ở desktop 1440px và mobile 375px.
+- **Verification**: Bằng chứng kiểm tra trực tiếp qua Chromium headless trên production xác nhận `resetIsFullyClean: true` trên 4/4 cấu hình và reselect hoạt động bình thường.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 87).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Reset Behavior Verification (4/4 passed)**:
+  - CT-CUOC-PINE (Mobile 375): select="", id="", singleVar="none", varPrice="none", price="", atcDisabled=true.
+  - CT-CUOC-PINE (Desktop 1440): select="", id="", singleVar="none", varPrice="none", price="", atcDisabled=true.
+  - CT-PE-SNOW (Mobile 375): select="", id="", singleVar="none", varPrice="none", price="", atcDisabled=true.
+  - CT-PE-SNOW (Desktop 1440): select="", id="", singleVar="none", varPrice="none", price="", atcDisabled=true.
+- **Reselect Verification**: Sau khi reset, chọn lại `2m1` cập nhật đúng giá `1.650.000₫` và kích hoạt nút mua.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R27-01 Reset Resolved**: Hiện tượng giá cũ còn tồn tại sau khi bấm reset đã được xử lý triệt để ở cả tầng JavaScript và CSS, kiểm chứng thành công trên cả 2 PDP ở 2 viewport. Kính đề nghị Reviewer kiểm tra live và đóng issue `R27-01 [P1]`.
+2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.

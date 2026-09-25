@@ -184,5 +184,91 @@
     "jsonLdProductGroupWithIndividualOffersPerSizeVerified": true,
     "zeroOrdersCreated": true,
     "orderMoratoriumStrictlyMaintained": true
+  },
+  "resetBehaviorLiveAuditR118": {
+    "auditedAtUtc": "2026-09-25T00:25:14.493Z",
+    "fixImplemented": {
+      "themeScriptsJs": "theme-scripts.js initVariationResetGuard: clear and hide .woocommerce-variation-price, .single_variation on reset_data and .reset_variations click/touchend",
+      "styleCss": "style.css: .single_variation[style*='display: none'] .woocommerce-variation-price { display: none !important; }"
+    },
+    "liveResults": {
+      "CT-CUOC-PINE": {
+        "mobile_375": {
+          "selectedState": {
+            "selectValue": "1m8",
+            "variationId": "379",
+            "varPriceDisplay": "block",
+            "priceText": "1.100.000 ₫",
+            "atcDisabled": false
+          },
+          "resetState": {
+            "selectValue": "",
+            "variationId": "",
+            "singleVarDisplay": "none",
+            "varPriceDisplay": "none",
+            "priceText": "",
+            "atcDisabled": true
+          },
+          "resetIsFullyClean": true
+        },
+        "desktop_1440": {
+          "selectedState": {
+            "selectValue": "1m8",
+            "variationId": "379",
+            "varPriceDisplay": "block",
+            "priceText": "1.100.000 ₫",
+            "atcDisabled": false
+          },
+          "resetState": {
+            "selectValue": "",
+            "variationId": "",
+            "singleVarDisplay": "none",
+            "varPriceDisplay": "none",
+            "priceText": "",
+            "atcDisabled": true
+          },
+          "resetIsFullyClean": true
+        }
+      },
+      "CT-PE-SNOW": {
+        "mobile_375": {
+          "selectedState": {
+            "selectValue": "1m8",
+            "variationId": "374",
+            "varPriceDisplay": "block",
+            "priceText": "1.250.000 ₫",
+            "atcDisabled": false
+          },
+          "resetState": {
+            "selectValue": "",
+            "variationId": "",
+            "singleVarDisplay": "none",
+            "varPriceDisplay": "none",
+            "priceText": "",
+            "atcDisabled": true
+          },
+          "resetIsFullyClean": true
+        },
+        "desktop_1440": {
+          "selectedState": {
+            "selectValue": "1m8",
+            "variationId": "374",
+            "varPriceDisplay": "block",
+            "priceText": "1.250.000 ₫",
+            "atcDisabled": false
+          },
+          "resetState": {
+            "selectValue": "",
+            "variationId": "",
+            "singleVarDisplay": "none",
+            "varPriceDisplay": "none",
+            "priceText": "",
+            "atcDisabled": true
+          },
+          "resetIsFullyClean": true
+        }
+      }
+    },
+    "allFourConfigurationsPassed": true
   }
 }
