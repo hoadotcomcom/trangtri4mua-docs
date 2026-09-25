@@ -1,0 +1,164 @@
+{
+  "evidenceReportId": "R2-16-METADATA-SCHEMA-AUDIT",
+  "timestampUtc": "2026-09-25T00:07:47.365Z",
+  "targetIssue": "R2-16",
+  "priority": "P2",
+  "scope": "Metadata and JSON-LD schema role audit across Homepage, About, Showroom, Contact, 4 Policy pages, Content Hub, and Editorial Blog Post.",
+  "homepageMetadata": {
+    "url": "https://trangtri4mua.com/",
+    "title": "Trang Trí 4 Mùa — Cây Thông Noel, Set Phụ Kiện & Combo Decor Trọn Gói 2026",
+    "description": "Trang Trí 4 Mùa chuyên cung cấp cây thông Noel cao cấp, set 50–70 món phụ kiện phối sẵn và combo decor trọn gói cho gia đình, quán cafe, văn phòng. Giao hàng toàn quốc, đồng kiểm COD.",
+    "ogImage": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-do.webp",
+    "ogImageStatus": 200,
+    "ogImageContentLength": 94856
+  },
+  "schemaEntityRoleAudit": {
+    "/": {
+      "title": "Trang Trí 4 Mùa — Cây Thông Noel, Set Phụ Kiện &amp; Combo Decor Trọn Gói 2026",
+      "desc": "Trang Trí 4 Mùa chuyên cung cấp cây thông Noel cao cấp, set 50–70 món phụ kiện phối sẵn và combo decor trọn gói cho gia đình, quán cafe, văn phòng. Giao hàng toàn quốc, đồng kiểm COD.",
+      "ogImage": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-do.webp",
+      "entities": [
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "WebPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/gioi-thieu/": {
+      "title": "Giới Thiệu Về Trang Trí 4 Mùa — Không Gian Lễ Hội Quanh Năm | Trang Trí 4 Mùa",
+      "desc": "Trang Trí 4 Mùa chuyên cung cấp đồ trang trí Giáng Sinh, Tết, Halloween, Trung Thu và giải pháp trang trí trọn gói cho gia đình, quán cafe, văn phòng, cửa hàng.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "AboutPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/showroom/": {
+      "title": "Showroom Trải Nghiệm Không Gian Decor Thực Tế | Trang Trí 4 Mùa",
+      "desc": "Ghé thăm showroom Trang Trí 4 Mùa tại 123 Xuân Thủy, Thảo Điền, TP. Thủ Đức. Trải nghiệm trực tiếp hàng trăm mẫu cây thông Noel, phụ kiện và concept decor theo mùa.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "ContactPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/lien-he/": {
+      "title": "Liên Hệ Trang Trí 4 Mùa — Tư Vấn &amp; Báo Giá Trang Trí Nhanh | Trang Trí 4 Mùa",
+      "desc": "Liên hệ Trang Trí 4 Mùa để được tư vấn cây thông Noel, đồ trang trí Tết và dịch vụ decor trọn gói. Hotline &amp; Zalo: 0901.234.567. Showroom mở cửa 8h - 21h hàng ngày.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "ContactPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/chinh-sach-doi-tra/": {
+      "title": "Chính Sách Đổi Trả 7 Ngày — Bảo Vệ Quyền Lợi Khách Hàng | Trang Trí 4 Mùa",
+      "desc": "Quy định đổi trả hàng trong 7 ngày tại Trang Trí 4 Mùa. Đổi mới 100% miễn phí khi hàng lỗi hoặc vỡ do vận chuyển. Quy trình nhanh chóng, hỗ trợ qua Zalo 0901.234.567.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/chinh-sach-van-chuyen/": {
+      "title": "Chính Sách Vận Chuyển &amp; Giao Hàng Toàn Quốc | Trang Trí 4 Mùa",
+      "desc": "Thông tin thời gian và biểu phí giao hàng toàn quốc tại Trang Trí 4 Mùa. Freeship đơn từ 500.000đ, hỗ trợ giao hỏa tốc 2H-4H tại TP.HCM. Quyền đồng kiểm COD.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/chinh-sach-thanh-toan/": {
+      "title": "Chính Sách &amp; Phương Thức Thanh Toán | Trang Trí 4 Mùa",
+      "desc": "Hướng dẫn thanh toán an toàn tại Trang Trí 4 Mùa: Thanh toán COD kiểm hàng trước khi trả tiền, chuyển khoản VietQR tự động, hỗ trợ xuất hóa đơn VAT doanh nghiệp.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage",
+        "FAQPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/chinh-sach-bao-mat/": {
+      "title": "Chính Sách Bảo Mật Thông Tin Khách Hàng | Trang Trí 4 Mùa",
+      "desc": "Cam kết bảo vệ dữ liệu cá nhân khách hàng theo Nghị định 13/2023/NĐ-CP tại Trang Trí 4 Mùa. Tuyệt đối không chia sẻ thông tin cho bên thứ ba trái phép.",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "WebPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/y-tuong-trang-tri/": {
+      "title": "Ý Tưởng Trang Trí Theo Mùa: Cẩm Nang Decor Đẹp &amp; Tiết Kiệm | Trang Trí 4 Mùa",
+      "desc": "Khám phá cẩm nang ý tưởng trang trí Giáng Sinh, Tết, không gian quán cafe và căn hộ đẹp mắt, tiết kiệm chi phí tại Trang Trí 4 Mùa. Tư vấn combo decor trọn gói!",
+      "ogImage": null,
+      "entities": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "CollectionPage"
+      ],
+      "hasArticle": false,
+      "hasPerson": false
+    },
+    "/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/": {
+      "title": "10+ Ý Tưởng Trang Trí Noel Cho Quán Cafe Hút Khách Check-in 2026",
+      "desc": "Cẩm nang trang trí Noel quán cafe 2026: Hướng dẫn phân bổ bố cục theo diện tích dưới 30m² đến sân vườn, gợi ý 4 vị trí bài trí trọng tâm và bảng dự toán chi phí thực tế.",
+      "ogImage": "https://trangtri4mua.com/wp-content/uploads/2026/09/nai-tuan-loc-trang-tri.webp",
+      "entities": [
+        "Organization",
+        "WebSite",
+        "ImageObject",
+        "BreadcrumbList",
+        "WebPage",
+        "Person",
+        "BlogPosting"
+      ],
+      "hasArticle": false,
+      "hasPerson": true
+    }
+  },
+  "acceptanceCriteriaComplianceAudit": {
+    "homepageMetadataDistinctAndMatchesOffer": true,
+    "homepageOgImageDownloadableAndHttp200": true,
+    "articleStrippedFromHomepageAndStaticPages": true,
+    "personStrippedFromHomepageAndStaticPages": true,
+    "aboutPageTypeApplied": true,
+    "contactPageTypeAppliedToShowroomAndContact": true,
+    "webPageTypeAppliedToHomepageAndPolicies": true,
+    "blogPostingAndAuthorPreservedOnEditorialPost": true,
+    "collectionPagePreservedOnContentHub": true,
+    "organizationAndWebsiteNodesPreserved": true,
+    "orderMoratoriumStrictlyMaintained": true
+  }
+}

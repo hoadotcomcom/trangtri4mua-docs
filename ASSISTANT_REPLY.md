@@ -5121,3 +5121,80 @@ Batch 57: Complete Removal of Generic Origin/Packaging Claims & Addition of Manu
 1. **R5-01 Handover Complete**: Báo cáo hiệu năng đã được bổ sung đầy đủ đồng bộ đồng hồ, normalized LCP ms, và đổi tên trường renderedAreaPx2 đúng chuẩn. Kính đề nghị Reviewer kiểm tra artifact và đóng issue `R5-01 [P2]`.
 2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
 3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
+
+---
+
+# Implementation Report — Batch 85
+
+## Summary
+
+1. **R2-16 [P2] — Chuẩn Hóa Toàn Diện Metadata Homepage & Phân Loại Đúng Vai Trò Schema Graph Các Trang Tĩnh**:
+   - **Tiếp thu chỉ thị tại Round R116**:
+     - Reviewer đã thẩm định và chính thức **ĐÓNG issue `R5-01 [P2]`** tại Round R116, đưa danh sách OPEN xuống còn 13 issue.
+     - Chấp hành chỉ đạo lựa chọn issue OPEN tiếp theo từ ledger hiện hành: Coder đã chọn giải quyết dứt điểm issue **`R2-16 [P2]`**.
+   - **Các giải pháp kỹ thuật đã triển khai**:
+     1. **Chuẩn hóa Metadata & OpenGraph Homepage (Page ID 23)**:
+        - Cập nhật tiêu đề trang đặc thù thương hiệu: `Trang Trí 4 Mùa — Cây Thông Noel, Set Phụ Kiện & Combo Decor Trọn Gói 2026`.
+        - Cập nhật meta description khớp 1:1 với offer thực tế: `Trang Trí 4 Mùa chuyên cung cấp cây thông Noel cao cấp, set 50–70 món phụ kiện phối sẵn và combo decor trọn gói cho gia đình, quán cafe, văn phòng. Giao hàng toàn quốc, đồng kiểm COD.`.
+        - Cấu hình thẻ `og:image` với ảnh đại diện hiện hữu, hợp lệ và tải được: `https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-do.webp` (xác nhận HTTP 200, kích thước 800x680, dung lượng 94.8 KB).
+     2. **Tinh chỉnh Schema Graph JSON-LD (`rank_math/json_ld` & `rank_math/schema/validated_data`)**:
+        - Gỡ bỏ hoàn toàn các thực thể `Article`, `Person` rỗng và `ProfilePage` trên toàn bộ 8 trang tĩnh thương mại và chính sách:
+          - Trang Chủ (`/`)
+          - Trang Giới Thiệu (`/gioi-thieu/`)
+          - Trang Showroom (`/showroom/`)
+          - Trang Liên Hệ (`/lien-he/`)
+          - 4 Trang Chính Sách (`/chinh-sach-doi-tra/`, `/chinh-sach-van-chuyen/`, `/chinh-sach-thanh-toan/`, `/chinh-sach-bao-mat/`).
+        - Gán đúng vai trò trang WebPage tương ứng theo ngữ nghĩa Schema.org:
+          - `/gioi-thieu/`: chuyển thành `AboutPage`.
+          - `/lien-he/` và `/showroom/`: chuyển thành `ContactPage`.
+          - Trang Chủ và các trang chính sách: gán `WebPage` chuẩn (riêng trang thanh toán giữ `FAQPage`).
+        - Bảo toàn 100% các trang nội dung biên tập:
+          - Hub cẩm nang (`/y-tuong-trang-tri/`): giữ nguyên `CollectionPage`.
+          - Bài viết chi tiết (`/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/`): giữ nguyên `BlogPosting` và `Person` tác giả.
+        - Bảo toàn liên kết `@id` giữa các node `Organization` và `WebSite`.
+   - **Kiểm chứng độc lập qua crawl 10 URL**:
+     - Toàn bộ 8 trang tĩnh không còn `Article` và không còn `Person` (`hasArticle: false`, `hasPerson: false`).
+     - Bài viết cẩm nang giữ nguyên `BlogPosting` và `Person` (`hasPerson: true`).
+     - Hub cẩm nang giữ nguyên `CollectionPage`.
+     - `og:image` trả HTTP 200.
+   - **Hồ sơ đối chứng chi tiết**: Đã lưu tại `docs/review-evidence/2026-09-24/r2-16-metadata-schema-audit.json`.
+2. **Tuân thủ moratorium đơn hàng**:
+   - Tuyệt đối không tạo, sửa, xóa, hủy hoặc khôi phục đơn hàng.
+   - Bảo toàn nguyên vẹn 100% hai đơn hàng lịch sử 335 và 362.
+
+## Issues Addressed
+
+### Issue: [P2] R2-16 — Homepage Metadata, OpenGraph & Static Page Schema Roles
+- **Status**: FIXED
+- **Files changed**:
+  - `wp-content/themes/blocksy-child/functions.php`
+  - `docs/review-evidence/2026-09-24/r2-16-metadata-schema-audit.json`
+  - `docs/ASSISTANT_REPLY.md`
+- **What changed**:
+  - Cập nhật title, meta description và og:image cho Trang Chủ trên Page ID 23.
+  - Bổ sung filter Rank Math gỡ bỏ Article/Person rỗng trên Homepage, About, Showroom, Contact và 4 policy pages.
+  - Gán đúng Schema type: AboutPage cho Giới Thiệu, ContactPage cho Liên Hệ & Showroom, WebPage cho Chính Sách & Trang Chủ.
+  - Bảo toàn BlogPosting + Person trên bài viết và CollectionPage trên hub.
+- **Verification**: Quét JSON-LD trên 10 URL thực tế, xác nhận 100% khớp các tiêu chí acceptance.
+
+## New Issues Discovered
+*(Không phát sinh issue mới trong đợt triển khai Batch 85).*
+
+## Verification
+
+- **Build / Lint**: 100% PHP files pass `php -l` và 100% JS files pass `node -c` với 0 lỗi.
+- **Schema Roles Audit**:
+  - Homepage (`/`): Organization, WebSite, ImageObject, WebPage (0 Article, 0 Person).
+  - About (`/gioi-thieu/`): AboutPage (0 Article, 0 Person).
+  - Showroom (`/showroom/`): ContactPage (0 Article, 0 Person).
+  - Contact (`/lien-he/`): ContactPage (0 Article, 0 Person).
+  - Policies (4 pages): WebPage (0 Article, 0 Person).
+  - Hub (`/y-tuong-trang-tri/`): CollectionPage preserved.
+  - Post (`/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/`): BlogPosting + Person preserved.
+- **Moratorium Preserved**: 0 đơn hàng bị chạm; đơn 335 và 362 nguyên vẹn 100%.
+
+## Notes for Reviewer
+
+1. **R2-16 Ready for Review**: Toàn bộ metadata và vai trò schema của Trang Chủ cùng các trang tĩnh đã được chuẩn hóa và kiểm chứng độc lập. Kính đề nghị Reviewer kiểm tra live và đóng issue `R2-16 [P2]`.
+2. **Moratorium Active**: Bảng đơn hàng được bảo tồn nguyên vẹn 100%.
+3. **Watcher**: Tiến trình nền `feedback_watcher` tiếp tục giám sát repository đều đặn mỗi 60 giây.
