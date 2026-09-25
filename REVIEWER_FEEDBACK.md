@@ -1,4 +1,4 @@
-> **Trạng thái hiện hành:** xem [Vòng R116 — nghiệm thu Batch 84](#round-r116), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **13 OPEN — 1 P0, 3 P1, 5 P2, 4 P3**. R5-01 đã CLOSED sau khi Batch 84 bổ sung normalized LCP hợp lệ. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
+> **Trạng thái hiện hành:** xem [Vòng R117 — nghiệm thu Batch 85](#round-r117), cùng [hàng đợi kiểm chứng](#verification-queue). Ledger theo verdict mới nhất xác nhận **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**. R2-16 đã CLOSED sau khi kiểm chứng live metadata và schema trên 10 URL. R2-02 và R2-03 vẫn BLOCKED (EXTERNAL).
 
 # Báo Cáo Phản Hồi & Thẩm Định Kỹ Thuật (Reviewer Feedback Report)
 
@@ -6404,4 +6404,49 @@ Không có regression và không có lý do tạo diff production. **Đóng R5-0
 - [JSON nghiệm thu Batch 84](review-evidence/2026-09-24/r116-batch84-verification.json).
 - Đóng **R5-01 [P2]**. Tổng giảm còn **13 OPEN — 1 P0, 3 P1, 5 P2, 4 P3**.
 - Danh sách OPEN: P0 `R2-02`; P1 `R2-01`, `R2-03`, `R27-01`; P2 `R2-11`, `R2-16`, `R2-18`, `R21-02`, `R25-01`; P3 `R12-01`, `R16-01`, `R24-01`, `R26-01`.
+- Không thêm giỏ, không mutation order và không chạm `335`/`362`.
+
+<a id="round-r117"></a>
+
+# Vòng R117 — nghiệm thu Batch 85
+
+## R2-16 / Batch 85 — PASS / CLOSED
+
+Reviewer kiểm chứng trực tiếp production trên đúng 10 URL thuộc acceptance.
+
+### Homepage metadata
+
+- HTTP 200, canonical `https://trangtri4mua.com/`.
+- Title và description đã đặc thù thương hiệu, mô tả đúng cây thông Noel, set phụ kiện và combo decor.
+- `og:image` trỏ tới `keo-nhung-do.webp`; tải độc lập HTTP 200, MIME `image/webp`, 94.856 bytes.
+
+### Schema static page
+
+- Homepage chỉ còn `Organization`, `WebSite`, `ImageObject`, `WebPage`; không có Article/Person.
+- `/gioi-thieu/` là `AboutPage`.
+- `/showroom/` và `/lien-he/` là `ContactPage`.
+- Bốn trang chính sách có `WebPage`; trang thanh toán giữ thêm `FAQPage`.
+- Cả tám static page đều không còn Article hoặc Person.
+
+### Regression
+
+- Hub `/y-tuong-trang-tri/` vẫn là `CollectionPage`.
+- Bài `/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/` vẫn có một `BlogPosting` và một `Person`.
+- JSON-LD parse được trên cả 10 URL; Organization/WebSite vẫn hiện diện.
+
+Commit `df8c567` trong repo tài liệu chỉ chứa `ASSISTANT_REPLY.md` và artifact; handoff liệt kê `wp-content/themes/blocksy-child/functions.php` nhưng repo này không có path đó. Sai khác manifest không chặn nghiệm thu vì trạng thái production đã được kiểm chứng độc lập, nhưng các handoff sau phải phân biệt rõ file production với file thực sự nằm trong commit docs.
+
+**Đóng R2-16.**
+
+## Chỉ thị tiếp theo
+
+1. Chọn một issue OPEN theo ledger hiện hành; không quay lại R2-16 nếu không có regression.
+2. Không gửi acknowledgement hoặc milestone summary.
+3. R2-02/R2-03 vẫn theo gate external; không tạo bằng chứng tự khai và không mutation order.
+
+## Bằng chứng và tổng R117
+
+- [JSON nghiệm thu Batch 85](review-evidence/2026-09-25/r117-batch85-verification.json).
+- Đóng **R2-16 [P2]**. Tổng giảm còn **12 OPEN — 1 P0, 3 P1, 4 P2, 4 P3**.
+- Danh sách OPEN: P0 `R2-02`; P1 `R2-01`, `R2-03`, `R27-01`; P2 `R2-11`, `R2-18`, `R21-02`, `R25-01`; P3 `R12-01`, `R16-01`, `R24-01`, `R26-01`.
 - Không thêm giỏ, không mutation order và không chạm `335`/`362`.

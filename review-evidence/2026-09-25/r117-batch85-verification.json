@@ -1,0 +1,53 @@
+{
+  "round": "R117",
+  "batch": 85,
+  "commit": "df8c567",
+  "issue": "R2-16",
+  "verdict": "PASS_CLOSED",
+  "checkedAtUtc": "2026-09-25T00:10:00Z",
+  "homepageMetadata": {
+    "status": 200,
+    "title": "Trang Trí 4 Mùa — Cây Thông Noel, Set Phụ Kiện & Combo Decor Trọn Gói 2026",
+    "description": "Trang Trí 4 Mùa chuyên cung cấp cây thông Noel cao cấp, set 50–70 món phụ kiện phối sẵn và combo decor trọn gói cho gia đình, quán cafe, văn phòng. Giao hàng toàn quốc, đồng kiểm COD.",
+    "canonical": "https://trangtri4mua.com/",
+    "ogImage": "https://trangtri4mua.com/wp-content/uploads/2026/09/keo-nhung-do.webp",
+    "ogImageStatus": 200,
+    "ogImageContentType": "image/webp",
+    "ogImageBytes": 94856
+  },
+  "liveSchemaAudit": [
+    {"path":"/","status":200,"types":["Organization","WebSite","ImageObject","WebPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/gioi-thieu/","status":200,"types":["Organization","WebSite","BreadcrumbList","AboutPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/showroom/","status":200,"types":["Organization","WebSite","BreadcrumbList","ContactPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/lien-he/","status":200,"types":["Organization","WebSite","BreadcrumbList","ContactPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/chinh-sach-doi-tra/","status":200,"types":["Organization","WebSite","BreadcrumbList","WebPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/chinh-sach-van-chuyen/","status":200,"types":["Organization","WebSite","BreadcrumbList","WebPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/chinh-sach-thanh-toan/","status":200,"types":["Organization","WebSite","BreadcrumbList","WebPage","FAQPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/chinh-sach-bao-mat/","status":200,"types":["Organization","WebSite","BreadcrumbList","WebPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/y-tuong-trang-tri/","status":200,"types":["Organization","WebSite","BreadcrumbList","CollectionPage"],"articleNodes":0,"personNodes":0},
+    {"path":"/y-tuong-trang-tri/noel/trang-tri-noel-quan-cafe/","status":200,"types":["Organization","WebSite","ImageObject","BreadcrumbList","WebPage","Person","BlogPosting"],"articleNodes":1,"personNodes":1}
+  ],
+  "acceptance": {
+    "homepageMetadataSpecificAndOfferAligned": true,
+    "homepageOgImageDownloadable": true,
+    "staticPagesContainNoArticleOrPerson": true,
+    "aboutPageRoleCorrect": true,
+    "showroomAndContactRolesCorrect": true,
+    "policyPageRolesCorrect": true,
+    "editorialBlogPostingAndPersonPreserved": true,
+    "contentHubCollectionPagePreserved": true,
+    "jsonLdParsedAcrossTenUrls": true
+  },
+  "repositoryNote": "Commit df8c567 contains only ASSISTANT_REPLY.md and the audit artifact; the handoff names wp-content/themes/blocksy-child/functions.php although that path is not present in this documentation repository. Closure is based on independent live production verification, not the file-change claim.",
+  "currentIssueCount": {
+    "open": 12,
+    "closed": 30,
+    "openByPriority": {"P0":1,"P1":3,"P2":4,"P3":4}
+  },
+  "openIssueIds": {
+    "P0": ["R2-02"],
+    "P1": ["R2-01","R2-03","R27-01"],
+    "P2": ["R2-11","R2-18","R21-02","R25-01"],
+    "P3": ["R12-01","R16-01","R24-01","R26-01"]
+  }
+}
